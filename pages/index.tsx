@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Divider, Button, Layout, Space, Row, Col, Image } from 'antd';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
+import StatsPanel from '../components/StatsPanel';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -32,8 +33,7 @@ const IndexPage = () => (
             </Col>
             <Col xs={24} lg={14}>
              <div style={{ padding: "2em" }}>
-
-              <img src="/previews/stats.png" />
+                <StatsPanel />
               </div>
             </Col>
           </Row>
@@ -54,7 +54,7 @@ const IndexPage = () => (
               <p style={{ fontSize: 36 }}>
                 Lend
               </p>
-              <p style={{ width: 400 }}>
+              <p>
                 Earn maximal interest on deposits, protect against inflation, and utilize idle investments. Always maintain custody of your funds.
               </p>
               </div>
