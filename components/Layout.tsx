@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 
 type Props = {
@@ -19,8 +18,8 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <nav>
         <img src="/mango.svg" />
         <a href="/">Mango Markets</a>
-        <a href="/trade">Trade</a>
-        <a href="/stats">Stats</a>
+        <a href="https://trade.mango.markets">Trade</a>
+        <a href="https://trade.mango.markets/#/stats">Stats</a>
         <a href="https://www.notion.so/Mango-Markets-8de7c02f243240769b917c6a500d8693">Help</a>
         <a href="https://medium.com/blockworks-foundation">Blog</a>
       </nav>

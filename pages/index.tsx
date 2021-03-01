@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import { Divider, Button, Layout, Space, Row, Col, Image } from 'antd';
+import { Divider, Button, Layout, Row, Col } from 'antd';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import StatsPanel from '../components/StatsPanel';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 const IndexPage = () => (
   <>

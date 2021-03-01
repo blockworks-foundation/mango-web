@@ -1,4 +1,4 @@
-import { Image, Menu } from "antd";
+import { Menu } from "antd";
 import Logo from "./Logo";
 
 export default function Navigation() {
