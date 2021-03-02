@@ -7,7 +7,7 @@ export default function Navigation() {
       <Menu
         mode="horizontal"
         selectedKeys={[]}
-        style={{ background: "none", borderBottom: "none" }}
+        style={{ background: "none", borderBottom: "none", paddingTop: "1em" }}
       >
         <Logo />
         <Menu.Item key="trade">

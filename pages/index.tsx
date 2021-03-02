@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Divider, Button, Layout, Row, Col } from 'antd';
+import ContactIcons from '../components/ContactIcons';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import StatsPanel from '../components/StatsPanel';
@@ -9,12 +10,22 @@ const { Header, Footer, Content } = Layout;
 const IndexPage = () => (
   <>
     <Head>
-      <title>Mango Margin</title>
+      <title>Mango Markets</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVV22TP9JN"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EVV22TP9JN', {
+            page_path: window.location.pathname,
+          });
+      `
+        }}
       />
     </Head>
     <Layout
@@ -39,9 +50,13 @@ const IndexPage = () => (
                 <Button
                   type="primary"
                   size="large"
-                  style={{ padding: "0px 60px 0px 60px" }}
+                  disabled
+                  style={{ padding: "0px 60px 0px 60px",
+                           fontWeight: 700,
+                           background: "linear-gradient(270deg, #AFD803AA 34.47%, #FECA1AAA 100%)",
+                           "-webkit-font-smoothing": "antialiased" }}
                 >
-                  Start Trading
+                  Coming Soon
                 </Button>
               </div>
             </Col>
@@ -96,7 +111,14 @@ const IndexPage = () => (
       <Footer>
         <Divider />
         <Row align="middle">
-          <Logo />© 2021 Blockworks Foundation
+          <Col xs={24} lg={8}>
+            <Logo />© 2021 Blockworks Foundation
+          </Col>
+          <Col xs={24} lg={8}>
+          </Col>
+          <Col xs={24} lg={8}>
+            <ContactIcons />
+          </Col>
         </Row>
       </Footer>
     </Layout>
