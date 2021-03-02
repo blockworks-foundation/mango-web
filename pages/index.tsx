@@ -1,10 +1,10 @@
-import { Divider, Button, Layout, Row, Col } from 'antd';
-import Head from 'next/head'
-import { CSSProperties } from 'react';
-import ContactIcons from '../components/ContactIcons';
-import Logo from '../components/Logo';
-import Navigation from '../components/Navigation';
-import StatsPanel from '../components/StatsPanel';
+import { Divider, Button, Layout, Row, Col } from "antd";
+import Head from "next/head";
+import { CSSProperties } from "react";
+import ContactIcons from "../components/ContactIcons";
+import Logo from "../components/Logo";
+import Navigation from "../components/Navigation";
+import StatsPanel from "../components/StatsPanel";
 
 const { Header, Footer, Content } = Layout;
 
@@ -18,8 +18,14 @@ const IndexPage = () => (
       <title>Mango Markets</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVV22TP9JN"></script>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-EVV22TP9JN"
+      ></script>
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -29,7 +35,7 @@ const IndexPage = () => (
           gtag('config', 'G-EVV22TP9JN', {
             page_path: window.location.pathname,
           });
-      `
+      `,
         }}
       />
     </Head>
@@ -38,6 +44,7 @@ const IndexPage = () => (
         backgroundImage: "url(background.svg)",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "-20px 0",
+        maxWidth: 1575,
       }}
     >
       <Header style={{ background: "none", marginBottom: "0" }}>
@@ -56,17 +63,22 @@ const IndexPage = () => (
                   type="primary"
                   size="large"
                   disabled
-                  style={{ padding: "0px 60px 0px 60px",
-                           fontWeight: 700,
-                           background: "linear-gradient(270deg, #AFD803AA 34.47%, #FECA1AAA 100%)",
-                           "-webkit-font-smoothing": "antialiased" } as ButtonStyle}
+                  style={
+                    {
+                      padding: "0px 60px 0px 60px",
+                      fontWeight: 700,
+                      background:
+                        "linear-gradient(270deg, #AFD803AA 34.47%, #FECA1AAA 100%)",
+                      "-webkit-font-smoothing": "antialiased",
+                    } as ButtonStyle
+                  }
                 >
                   Coming Soon
                 </Button>
               </div>
             </Col>
             <Col xs={24} lg={14}>
-             <div style={{ padding: "2em" }}>
+              <div style={{ padding: "2em" }}>
                 <StatsPanel />
               </div>
             </Col>
@@ -113,14 +125,13 @@ const IndexPage = () => (
           </Row>
         </Content>
       </Layout>
-      <Footer>
+      <Footer style={{ background: "none" }}>
         <Divider />
         <Row align="middle">
           <Col xs={24} lg={8}>
             <Logo />© 2021 Blockworks Foundation
           </Col>
-          <Col xs={24} lg={8}>
-          </Col>
+          <Col xs={24} lg={8}></Col>
           <Col xs={24} lg={8}>
             <ContactIcons />
           </Col>
