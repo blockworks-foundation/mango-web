@@ -84,7 +84,7 @@ export default function StatsPanel() {
   const { stats } = useMangoStats();
 
   return (
-    <Wrapper style={{ paddingTop: 10 }}>
+    <Wrapper>
       <Row justify="center">
         <Col lg={24} xl={24} xxl={24}>
           <FloatingElement style={{ paddingBottom: 32 }}>

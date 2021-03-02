@@ -78,14 +78,14 @@ const IndexPage = () => (
               </div>
             </Col>
             <Col xs={24} lg={14}>
-              <div style={{ padding: "2em" }}>
+              <div>
                 <StatsPanel />
               </div>
             </Col>
           </Row>
           <Row>
             <Col xs={24} lg={8}>
-              <div style={{ padding: "2em" }}>
+              <div style={{ padding: "0em 2em", marginTop: "2em" }}>
                 <p style={{ fontSize: 36 }}>Trade</p>
                 <p style={{ lineHeight: 2, fontSize: 16 }}>
                   Trade up to 5x margin, leveraged or short, with limit orders
@@ -96,11 +96,10 @@ const IndexPage = () => (
               </div>
             </Col>
             <Col xs={24} lg={8}>
-              <div style={{ padding: "2em" }}>
+              <div style={{ padding: "0em 2em", marginTop: "2em" }}>
                 <p style={{ fontSize: 36 }}>Lend</p>
                 <p
                   style={{
-                    width: 400,
                     lineHeight: 2,
                     fontSize: 16,
                   }}
@@ -112,7 +111,7 @@ const IndexPage = () => (
               </div>
             </Col>
             <Col xs={24} lg={8}>
-              <div style={{ padding: "2em" }}>
+              <div style={{ padding: "0em 2em", marginTop: "2em" }}>
                 <p style={{ fontSize: 36 }}>Fees</p>
                 <p style={{ lineHeight: 2, fontSize: 16 }}>
                   No fees on interests. The only fees you will pay are for
