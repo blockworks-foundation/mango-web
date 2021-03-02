@@ -1,11 +1,16 @@
-import Head from 'next/head'
 import { Divider, Button, Layout, Row, Col } from 'antd';
+import Head from 'next/head'
+import { CSSProperties } from 'react';
 import ContactIcons from '../components/ContactIcons';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import StatsPanel from '../components/StatsPanel';
 
 const { Header, Footer, Content } = Layout;
+
+export interface ButtonStyle extends CSSProperties {
+  "-webkit-font-smoothing": string;
+}
 
 const IndexPage = () => (
   <>
@@ -54,7 +59,7 @@ const IndexPage = () => (
                   style={{ padding: "0px 60px 0px 60px",
                            fontWeight: 700,
                            background: "linear-gradient(270deg, #AFD803AA 34.47%, #FECA1AAA 100%)",
-                           "-webkit-font-smoothing": "antialiased" }}
+                           "-webkit-font-smoothing": "antialiased" } as ButtonStyle}
                 >
                   Coming Soon
                 </Button>
