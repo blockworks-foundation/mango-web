@@ -112,8 +112,8 @@ export default function StatsPanel() {
                     <Col span={3}>{stat.symbol}</Col>
                     <Col span={4}>{stat.totalDeposits.toFixed(2 - i)}</Col>
                     <Col span={4}>{stat.totalBorrows.toFixed(2 - i)}</Col>
-                    <Col span={4}>{stat.depositInterest.toFixed(2)}%</Col>
-                    <Col span={4}>{stat.borrowInterest.toFixed(2)}%</Col>
+                    <Col span={4}>{(100*stat.depositInterest).toFixed(2)}%</Col>
+                    <Col span={4}>{(100*stat.borrowInterest).toFixed(2)}%</Col>
                     <Col span={4}>
                       {(parseFloat(stat.utilization) * 100).toFixed(2)}%
                     </Col>
