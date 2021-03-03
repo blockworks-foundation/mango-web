@@ -1,10 +1,7 @@
-import { Divider, Button, Layout, Row, Col } from "antd";
-import next from "next";
+import { Layout } from "antd";
 import Head from "next/head";
 import Image from "next/image";
 import { CSSProperties } from "react";
-
-const { Header, Footer, Content } = Layout;
 
 export interface ButtonStyle extends CSSProperties {
   "-webkit-font-smoothing": string;
@@ -37,6 +34,7 @@ const IndexPage = () => (
         }}
       />
     </Head>
+    <Layout />
     <div style={{ height: "100vh" }}>
       <div
         style={{
