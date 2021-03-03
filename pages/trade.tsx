@@ -34,28 +34,11 @@ const IndexPage = () => (
       />
     </Head>
     <Layout />
-    <div style={{ height: "100vh" }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "100vh",
-          alignItems: "center",
-        }}
-      >
-        <div>
-          <img src="/mango.png" alt="Mango Markets" width={500} height={500} />
-          <p
-            style={{
-              fontSize: 24,
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -35%)",
-            }}
-          >
-            Coming Soon
-          </p>
+    <div className="flex h-screen">
+      <div className="relative m-auto">
+        <img src="/mango.png" alt="Mango Markets" width={500} height={500} />
+        <div className="absolute inset-0 flex justify-center items-center">
+          <p className="text-xl md:text-3xl mb-0 mt-16">Coming Soon</p>
         </div>
       </div>
     </div>
