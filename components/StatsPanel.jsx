@@ -84,7 +84,7 @@ export default function StatsPanel() {
   const { stats } = useMangoStats();
 
   return (
-    <Wrapper>
+    <Wrapper className="hidden md:inline-block">
       <Row justify="center">
         <Col lg={24} xl={24} xxl={24}>
           <FloatingElement style={{ paddingBottom: 32 }}>
@@ -112,8 +112,12 @@ export default function StatsPanel() {
                     <Col span={3}>{stat.symbol}</Col>
                     <Col span={4}>{stat.totalDeposits.toFixed(2 - i)}</Col>
                     <Col span={4}>{stat.totalBorrows.toFixed(2 - i)}</Col>
-                    <Col span={4}>{(100*stat.depositInterest).toFixed(2)}%</Col>
-                    <Col span={4}>{(100*stat.borrowInterest).toFixed(2)}%</Col>
+                    <Col span={4}>
+                      {(100 * stat.depositInterest).toFixed(2)}%
+                    </Col>
+                    <Col span={4}>
+                      {(100 * stat.borrowInterest).toFixed(2)}%
+                    </Col>
                     <Col span={4}>
                       {(parseFloat(stat.utilization) * 100).toFixed(2)}%
                     </Col>

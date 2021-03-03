@@ -50,12 +50,12 @@ const IndexPage = () => (
       <Header style={{ background: "none", marginBottom: "0" }}>
         <Navigation />
       </Header>
-      <Layout style={{ background: "none" }}>
+      <Layout style={{ background: "none" }} className="p-6">
         <Content style={{ padding: "2em" }}>
           <Row align="middle">
             <Col xs={24} lg={10}>
-              <div style={{ padding: "2em" }}>
-                <p style={{ fontSize: 36, lineHeight: 1.5 }}>
+              <div>
+                <p className="text-2xl md:text-4xl md:leading-normal md:pr-7">
                   Decentralized, cross-margined 5x leveraged trading with
                   lightning speed and near-zero fees powered on Serum.
                 </p>
@@ -63,6 +63,7 @@ const IndexPage = () => (
                   type="primary"
                   size="large"
                   disabled
+                  className="mb-4"
                   style={
                     {
                       padding: "0px 60px 0px 60px",
@@ -85,7 +86,7 @@ const IndexPage = () => (
           </Row>
           <Row>
             <Col xs={24} lg={8}>
-              <div style={{ padding: "0em 2em", marginTop: "2em" }}>
+              <div className="mt-2 md:mr-6">
                 <p style={{ fontSize: 36 }}>Trade</p>
                 <p style={{ lineHeight: 2, fontSize: 16 }}>
                   Trade with up to 5x leverage, long or short, with limit orders
@@ -95,7 +96,7 @@ const IndexPage = () => (
               </div>
             </Col>
             <Col xs={24} lg={8}>
-              <div style={{ padding: "0em 2em", marginTop: "2em" }}>
+              <div className="mt-2 md:mr-6">
                 <p style={{ fontSize: 36 }}>Lend</p>
                 <p
                   style={{
@@ -110,13 +111,13 @@ const IndexPage = () => (
               </div>
             </Col>
             <Col xs={24} lg={8}>
-              <div style={{ padding: "0em 2em", marginTop: "2em" }}>
+              <div className="mt-2 md:mr-6">
                 <p style={{ fontSize: 36 }}>Fees</p>
                 <p style={{ lineHeight: 2, fontSize: 16 }}>
                   No fees on interest. The only fees you will pay are for
-                  trading on Serum DEX. Contribute your SRM into our pool to reduce
-                  the fees for everyone. Let's reach the top Serum fee tier
-                  together 🚀
+                  trading on Serum DEX. Contribute your SRM into our pool to
+                  reduce the fees for everyone. Let's reach the top Serum fee
+                  tier together 🚀
                 </p>
               </div>
             </Col>
