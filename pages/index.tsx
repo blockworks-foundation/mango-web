@@ -79,7 +79,7 @@ const IndexPage = () => (
               </div>
             </Col>
             <Col xs={24} lg={14}>
-              <div className="hidden md:inline-block">
+              <div className="hidden md:block">
                 <StatsPanel />
               </div>
             </Col>
