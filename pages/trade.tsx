@@ -1,6 +1,5 @@
 import { Layout } from "antd";
 import Head from "next/head";
-import Image from "next/image";
 import { CSSProperties } from "react";
 
 export interface ButtonStyle extends CSSProperties {
@@ -45,12 +44,7 @@ const IndexPage = () => (
         }}
       >
         <div>
-          <Image
-            src="/mango.png"
-            alt="Mango Markets"
-            width={500}
-            height={500}
-          />
+          <img src="/mango.png" alt="Mango Markets" width={500} height={500} />
           <p
             style={{
               fontSize: 24,
