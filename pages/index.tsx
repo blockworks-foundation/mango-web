@@ -56,7 +56,7 @@ const IndexPage = () => (
             <Col xs={24} lg={10}>
               <div style={{ padding: "2em" }}>
                 <p style={{ fontSize: 36, lineHeight: 1.5 }}>
-                  Decentralized, cross-margin trading up to 5x leverage with
+                  Decentralized, cross-margined 5x leveraged trading with
                   lightning speed and near-zero fees powered on Serum.
                 </p>
                 <Button
@@ -88,10 +88,9 @@ const IndexPage = () => (
               <div style={{ padding: "0em 2em", marginTop: "2em" }}>
                 <p style={{ fontSize: 36 }}>Trade</p>
                 <p style={{ lineHeight: 2, fontSize: 16 }}>
-                  Trade up to 5x margin, leveraged or short, with limit orders
+                  Trade with up to 5x leverage, long or short, with limit orders
                   on Serum DEX’s fully on-chain order book as a maker or taker
-                  while earning interest on deposits and positions for extra
-                  profit.
+                  while earning interest on deposits and margin positions.
                 </p>
               </div>
             </Col>
@@ -114,9 +113,9 @@ const IndexPage = () => (
               <div style={{ padding: "0em 2em", marginTop: "2em" }}>
                 <p style={{ fontSize: 36 }}>Fees</p>
                 <p style={{ lineHeight: 2, fontSize: 16 }}>
-                  No fees on interests. The only fees you will pay are for
-                  trading on Serum DEX. Stake your SRM into our pool to reduce
-                  the fees for everyone. Let's reach the MegaSerum fee tier
+                  No fees on interest. The only fees you will pay are for
+                  trading on Serum DEX. Contribute your SRM into our pool to reduce
+                  the fees for everyone. Let's reach the top Serum fee tier
                   together 🚀
                 </p>
               </div>
