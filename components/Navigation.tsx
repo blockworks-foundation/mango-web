@@ -1,5 +1,4 @@
 import { Menu } from "antd";
-import Logo from "./Logo";
 
 export default function Navigation() {
   return (
@@ -14,7 +13,6 @@ export default function Navigation() {
           fontSize: 16,
         }}
       >
-        {/* <Logo /> */}
         <Menu.Item key="/" disabled style={{ marginLeft: 0 }}>
           <div className="flex items-center">
             <img
