@@ -19,10 +19,10 @@ export default function Navigation() {
           <a href="/trade">Trade</a>
         </Menu.Item>
         <Menu.Item key="stats">
-          <a href="/stats">Stats</a>
+          <a href="/trade">Stats</a>
         </Menu.Item>
         <Menu.Item key="help">
-          <a href="/help">Help</a>
+          <a href="/trade">Help</a>
         </Menu.Item>
       </Menu>
     </>
