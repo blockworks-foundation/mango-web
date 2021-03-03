@@ -47,15 +47,15 @@ const IndexPage = () => (
         maxWidth: 1575,
       }}
     >
-      <Header style={{ background: "none", marginBottom: "0" }}>
+      <Header style={{ background: "none", padding: 0 }}>
         <Navigation />
       </Header>
-      <Layout style={{ background: "none" }} className="p-6">
-        <Content style={{ padding: "2em" }}>
+      <Layout style={{ background: "none" }} className="p-6 md:p-12">
+        <Content className="mt-6">
           <Row align="middle">
             <Col xs={24} lg={10}>
               <div>
-                <p className="text-2xl md:text-4xl md:leading-normal md:pr-7">
+                <p className="text-2xl sm:text-3xl md:text-4xl leading-normal md:leading-normal md:pr-7">
                   Decentralized, cross-margined 5x leveraged trading with
                   lightning speed and near-zero fees powered on Serum.
                 </p>
@@ -79,15 +79,15 @@ const IndexPage = () => (
               </div>
             </Col>
             <Col xs={24} lg={14}>
-              <div>
+              <div className="hidden md:inline-block">
                 <StatsPanel />
               </div>
             </Col>
           </Row>
-          <Row>
+          <Row className="mt-10 sm:mt-32">
             <Col xs={24} lg={8}>
               <div className="mt-2 md:mr-6">
-                <p style={{ fontSize: 36 }}>Trade</p>
+                <p className="text-2xl md:text-4xl">Trade</p>
                 <p style={{ lineHeight: 2, fontSize: 16 }}>
                   Trade with up to 5x leverage, long or short, with limit orders
                   on Serum DEX’s fully on-chain order book as a maker or taker
@@ -97,7 +97,7 @@ const IndexPage = () => (
             </Col>
             <Col xs={24} lg={8}>
               <div className="mt-2 md:mr-6">
-                <p style={{ fontSize: 36 }}>Lend</p>
+                <p className="text-2xl md:text-4xl">Lend</p>
                 <p
                   style={{
                     lineHeight: 2,
@@ -112,7 +112,7 @@ const IndexPage = () => (
             </Col>
             <Col xs={24} lg={8}>
               <div className="mt-2 md:mr-6">
-                <p style={{ fontSize: 36 }}>Fees</p>
+                <p className="text-2xl md:text-4xl">Fees</p>
                 <p style={{ lineHeight: 2, fontSize: 16 }}>
                   No fees on interest. The only fees you will pay are for
                   trading on Serum DEX. Contribute your SRM into our pool to

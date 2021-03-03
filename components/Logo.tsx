@@ -7,16 +7,16 @@ export default function Logo() {
         src="/mango.png"
         className="inline-block"
       />
-      <span
+      <div
         style={{
           fontWeight: 700,
           marginRight: "1em",
           marginLeft: 8,
         }}
-        className="hidden md:inline-block"
+        className="hidden md:inline-block text-xl pt-2"
       >
         Mango Markets
-      </span>
+      </div>
     </>
   );
 }
