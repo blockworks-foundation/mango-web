@@ -61,14 +61,14 @@ const IndexPage = () => (
                 </h1>
                 <h1 className="text-white leading-tight md:pr-7 font-black mb-1 text-4xl md:hidden">
                   <div>Decentralized,</div>
-                  <div className="">cross-margin trading</div>
+                  <div className="pr-2">cross-margin trading</div>
                 </h1>
-                <p className="pr-8 text-lg sm:text-2xl md:text-3xl lg:text-5xl font-normal sm:font-extralight mt-8 tracking-wide text-light-purple">
+                <p className="pr-8 text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal sm:font-light mt-4 sm:mt-8 sm:tracking-wide text-light-purple">
                   Up to 5x leverage · Lightning Speed · Near-zero fees
                 </p>
-                <div className="mt-16">
+                <div className="mt-6 sm:mt-12">
                   <button
-                    className="rounded-lg py-2 px-10 text-lg md:text-2xl transform hover:scale-105 disabled:opacity-30  font-semibold"
+                    className="rounded-lg py-2 px-8 sm:px-10 text-md sm:text-lg md:text-2xl opacity-90 hover:opacity-100 disabled:opacity-30  font-semibold"
                     style={
                       {
                         background: "linear-gradient(270deg, #afda06 34.47%, #fdca19 100%)",
@@ -80,7 +80,7 @@ const IndexPage = () => (
                       Start Trading
                     </a>
                   </button>
-                  <button className="ml-6 rounded-lg py-1 px-10 text-lg md:text-2xl transform hover:scale-105 disabled:opacity-30 bg-primary-bg border-2 border-primary-green">
+                  <button className="ml-4 sm:ml-6 rounded-lg py-1 px-8 sm:px-10 text-md sm:text-lg md:text-2xl opacity-80 hover:opacity-100 disabled:opacity-30 bg-transparent border-2 border-primary-green">
                     <a href="/trade" className="text-primary-green hover:text-primary-green">
                       Learn More
                     </a>
