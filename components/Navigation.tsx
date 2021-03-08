@@ -1,49 +1,24 @@
-import { Menu } from "antd";
-
 export default function Navigation() {
   return (
-    <div className="pt-4 pl-6 md:pl-8">
-      <Menu
-        mode="horizontal"
-        selectedKeys={[]}
-        style={{
-          background: "none",
-          borderBottom: "none",
-          padding: 0,
-          fontSize: 16,
-        }}
-      >
-        <Menu.Item key="/" disabled style={{ marginLeft: 0 }}>
-          <div className="flex items-center">
-            <img
-              height="40px"
-              width="40px"
-              src="/mango.png"
-              className="inline-block"
-            />
-            <span
-              style={{
-                color: "white",
-                fontWeight: 700,
-                marginRight: "1em",
-                marginLeft: 8,
-              }}
-              className="hidden md:inline-block text-xl"
-            >
-              Mango Markets
-            </span>
-          </div>
-        </Menu.Item>
-        <Menu.Item key="trade">
-          <a href="/trade">Trade</a>
-        </Menu.Item>
-        <Menu.Item key="stats">
-          <a href="/trade">Stats</a>
-        </Menu.Item>
-        <Menu.Item key="help">
-          <a href="/trade">Help</a>
-        </Menu.Item>
-      </Menu>
+    <div className="flex items-center">
+      <div className="flex items-center md:mr-8">
+        <img height="50px" width="50px" src="/mango.png" className="inline-block" />
+        <span className="hidden md:inline-block text-3xl text-white ml-4 font-black">
+          Mango Markets
+        </span>
+      </div>
+
+      <a href="/trade" className="ml-8 sm:ml-16 font-light text-white text-2xl">
+        Trade
+      </a>
+
+      <a href="/trade" className="ml-8 sm:ml-16 font-light text-white text-2xl">
+        Stats
+      </a>
+
+      <a href="/trade" className="ml-8 sm:ml-16 font-light text-white text-2xl">
+        Learn
+      </a>
     </div>
   );
 }
