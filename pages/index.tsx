@@ -53,7 +53,7 @@ const IndexPage = () => (
             <Col>
               <div>
                 <h1
-                  style={{ fontSize: "4vw" }}
+                  style={{ fontSize: "calc(40px + 2.5vw);" }}
                   className="text-white leading-tight md:pr-7 font-black mb-1 hidden md:block"
                 >
                   <div>Decentralized,</div>
