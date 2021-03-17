@@ -49,21 +49,26 @@ const IndexPage = () => (
       </Header>
       <Layout style={{ background: "none" }}>
         <Content className="mt-6">
-          <Row align="middle" style={{ marginTop: "10%", marginLeft: "10%" }} className="mt-1">
-            <Col>
+          <Row
+            align="middle"
+            style={{ marginTop: "10%", marginLeft: "10%" }}
+            className="mt-1 pr-10 sm:pr-18 md:pr-24"
+            wrap={false}
+          >
+            <Col flex={"auto"}>
               <div>
                 <h1
-                  style={{ fontSize: "calc(40px + 2.5vw);" }}
+                  style={{ fontSize: "calc(12px + 2.5vw)" }}
                   className="text-white leading-tight md:pr-7 font-black mb-1 hidden md:block"
                 >
                   <div>Decentralized,</div>
                   <div className="">cross-margin trading</div>
                 </h1>
-                <h1 className="text-white leading-tight md:pr-7 font-black mb-1 text-4xl md:hidden">
+                <h1 className="text-white leading-tight md:pr-7 font-black mb-1 text-2xl md:hidden">
                   <div>Decentralized,</div>
                   <div className="pr-2">cross-margin trading</div>
                 </h1>
-                <p className="pr-8 text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal sm:font-light mt-4 sm:mt-8 sm:tracking-wide text-light-purple">
+                <p className="pr-8 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl font-normal sm:font-light mt-4 sm:mt-8 sm:tracking-wide text-light-purple">
                   Up to 5x leverage · Lightning Speed · Near-zero fees
                 </p>
                 <div className="mt-6 sm:mt-12">
@@ -88,15 +93,13 @@ const IndexPage = () => (
                 </div>
               </div>
             </Col>
-          </Row>
-          <Row style={{ marginLeft: "10%" }} className="sm:mt-16 pr-10 sm:pr-18 md:pr-24">
-            <Col xs={24}>
-              <div className="hidden md:block">
+            <Col flex={0}>
+              <div className="hidden lg:flex">
                 <StatsPanel />
               </div>
             </Col>
           </Row>
-          <Row style={{ marginLeft: "10%" }} className="sm:mt-16 pr-10 sm:pr-18 md:pr-24">
+          <Row style={{ marginLeft: "10%" }} className="mt-10 sm:mt-32 pr-10 sm:pr-18 md:pr-24">
             <Col xs={24} lg={8}>
               <div className="mt-2 md:mr-6">
                 <p className="text-2xl md:text-4xl">Trade</p>
