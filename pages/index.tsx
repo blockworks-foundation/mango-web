@@ -3,7 +3,7 @@ import Head from "next/head";
 import { CSSProperties } from "react";
 import ContactIcons from "../components/ContactIcons";
 import Logo from "../components/Logo";
-import Navigation from "../components/Navigation";
+import { Navigation, TradeUrl, LearnUrl } from "../components/Navigation";
 // import StatsPanel from "../components/StatsPanel";
 
 const { Header, Footer, Content } = Layout;
@@ -68,7 +68,7 @@ const IndexPage = () => (
                 </p>
                 <div className="mt-6 sm:mt-12">
                   <button
-                    className="rounded-lg py-2 px-8 sm:px-10 text-md sm:text-lg md:text-2xl opacity-90 hover:opacity-100 disabled:opacity-30  font-semibold"
+                    className="rounded-lg py-2 px-8 sm:px-10 text-md sm:text-lg md:text-2xl opacity-90 hover:opacity-100 font-semibold"
                     style={
                       {
                         background: "linear-gradient(270deg, #afda06 34.47%, #fdca19 100%)",
@@ -76,12 +76,12 @@ const IndexPage = () => (
                       } as ButtonStyle
                     }
                   >
-                    <a href="/trade" className="text-primary-bg hover:text-primary-bg">
+                    <a href={TradeUrl} className="text-primary-bg hover:text-primary-bg">
                       Start Trading
                     </a>
                   </button>
-                  <button className="ml-4 sm:ml-6 rounded-lg py-1 px-8 sm:px-10 text-md sm:text-lg md:text-2xl opacity-80 hover:opacity-100 disabled:opacity-30 bg-transparent border-2 border-primary-green">
-                    <a href="/trade" className="text-primary-green hover:text-primary-green">
+                  <button className="ml-4 sm:ml-6 rounded-lg py-1 px-8 sm:px-10 text-md sm:text-lg md:text-2xl opacity-80 hover:opacity-100 bg-transparent border-2 border-primary-green">
+                    <a href={LearnUrl} className="text-primary-green hover:text-primary-green">
                       Learn More
                     </a>
                   </button>

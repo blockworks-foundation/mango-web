@@ -12,6 +12,10 @@ export default function ContactIcons() {
           <img height="40px" width="40px" src="/contact/twitter.svg" />
         </a>
 
+        <a href="https://github.com/blockworks-foundation">
+          <img height="40px" width="40px" src="/contact/github.svg" />
+        </a>
+
         <a href="mailto:hello@blockworks.foundation">
           <img height="40px" width="40px" src="/contact/email.svg" />
         </a>
