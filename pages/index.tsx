@@ -4,7 +4,7 @@ import { CSSProperties } from "react";
 import ContactIcons from "../components/ContactIcons";
 import Logo from "../components/Logo";
 import { Navigation, TradeUrl, LearnUrl } from "../components/Navigation";
-// import StatsPanel from "../components/StatsPanel";
+import StatsPanel from "../components/StatsPanel";
 
 const { Header, Footer, Content } = Layout;
 
@@ -88,13 +88,15 @@ const IndexPage = () => (
                 </div>
               </div>
             </Col>
-            {/* <Col xs={24} lg={14}>
+          </Row>
+          <Row style={{ marginLeft: "10%" }} className="sm:mt-16 pr-10 sm:pr-18 md:pr-24">
+            <Col xs={24}>
               <div className="hidden md:block">
                 <StatsPanel />
               </div>
-            </Col> */}
+            </Col>
           </Row>
-          <Row style={{ marginLeft: "10%" }} className="mt-10 sm:mt-32 pr-10 sm:pr-18 md:pr-24">
+          <Row style={{ marginLeft: "10%" }} className="sm:mt-16 pr-10 sm:pr-18 md:pr-24">
             <Col xs={24} lg={8}>
               <div className="mt-2 md:mr-6">
                 <p className="text-2xl md:text-4xl">Trade</p>
