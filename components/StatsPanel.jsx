@@ -25,20 +25,14 @@ const stubStats = {
 };
 
 const useMangoStats = () => {
-  const [stats, setStats] = useState(
-    Object.keys(icons).map((s) => ({ symbol: s, ...stubStats }))
-  );
+  const [stats, setStats] = useState(Object.keys(icons).map((s) => ({ symbol: s, ...stubStats })));
 
   useEffect(() => {
     const getStats = async () => {
       const client = new MangoClient();
-      const connection = new Connection(
-        IDS.cluster_urls[CLUSTER],
-        "singleGossip"
-      );
+      const connection = new Connection(IDS.cluster_urls[CLUSTER], "singleGossip");
       const assets = IDS[CLUSTER].mango_groups?.[DEFAULT_MANGO_GROUP]?.symbols;
-      const mangoGroupId =
-        IDS[CLUSTER].mango_groups?.[DEFAULT_MANGO_GROUP]?.mango_group_pk;
+      const mangoGroupId = IDS[CLUSTER].mango_groups?.[DEFAULT_MANGO_GROUP]?.mango_group_pk;
       if (!mangoGroupId) return;
       const mangoGroupPk = new PublicKey(mangoGroupId);
       const mangoGroup = await client.getMangoGroup(connection, mangoGroupPk);
@@ -103,24 +97,14 @@ export default function StatsPanel() {
                   <Divider />
                   <Row>
                     <Col span={1}>
-                      <img
-                        src={icons[stat.symbol]}
-                        alt={stat.symbol}
-                        width="14px"
-                      />
+                      <img src={icons[stat.symbol]} alt={stat.symbol} width="14px" />
                     </Col>
-                    <Col span={3}>{stat.symbol}</Col>
+                    <Col span={3}>{stat.symbol === "USDT" ? "wUSDT" : stat.symbol}</Col>
                     <Col span={4}>{stat.totalDeposits.toFixed(2 - i)}</Col>
                     <Col span={4}>{stat.totalBorrows.toFixed(2 - i)}</Col>
-                    <Col span={4}>
-                      {(100 * stat.depositInterest).toFixed(2)}%
-                    </Col>
-                    <Col span={4}>
-                      {(100 * stat.borrowInterest).toFixed(2)}%
-                    </Col>
-                    <Col span={4}>
-                      {(parseFloat(stat.utilization) * 100).toFixed(2)}%
-                    </Col>
+                    <Col span={4}>{(100 * stat.depositInterest).toFixed(2)}%</Col>
+                    <Col span={4}>{(100 * stat.borrowInterest).toFixed(2)}%</Col>
+                    <Col span={4}>{(parseFloat(stat.utilization) * 100).toFixed(2)}%</Col>
                   </Row>
                 </div>
               ))}
