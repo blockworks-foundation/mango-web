@@ -99,7 +99,7 @@ export default function StatsPanel() {
                     <Col span={1}>
                       <img src={icons[stat.symbol]} alt={stat.symbol} width="14px" />
                     </Col>
-                    <Col span={3}>{stat.symbol === "USDT" ? "wUSDT" : stat.symbol}</Col>
+                    <Col span={3}>{stat.symbol}</Col>
                     <Col span={4}>{stat.totalDeposits.toFixed(2 - i)}</Col>
                     <Col span={4}>{stat.totalBorrows.toFixed(2 - i)}</Col>
                     <Col span={4}>{(100 * stat.depositInterest).toFixed(2)}%</Col>
