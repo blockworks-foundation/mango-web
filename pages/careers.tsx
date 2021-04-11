@@ -3,8 +3,7 @@ import Head from "next/head";
 import { CSSProperties } from "react";
 import ContactIcons from "../components/ContactIcons";
 import Logo from "../components/Logo";
-import { Navigation, TradeUrl, LearnUrl } from "../components/Navigation";
-import StatsPanel from "../components/StatsPanel";
+import { Navigation } from "../components/Navigation";
 
 const { Header, Footer, Content } = Layout;
 
