@@ -7,6 +7,8 @@ module.exports = {
         "primary-bg": "#141026",
         "light-purple": "#9490A6",
         "primary-green": "#AFD803",
+        "primary-lighter": "#332F46",
+        "primary-light": "#262337",
       },
     },
   },
