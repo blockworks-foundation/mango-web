@@ -60,9 +60,20 @@ const CareersPage = () => (
                 <a href="mailto:hello@blockworks.foundation">hello@blockworks.foundation</a> if you
                 are interested.
               </div>
+              <div className="flex-shrink text-md sm:text-lg sm:font-bold mt-6 px-2 py-2 bg-primary-light mx-6">
+                Read our{" "}
+                <a
+                  href="https://docs.mango.markets/litepaper"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Litepaper
+                </a>{" "}
+                to learn more about the Mango vision.
+              </div>
             </div>
           </Row>
-          <Row align="middle" className="mt-4 sm:mt-10 px-6" wrap={false}>
+          <Row align="middle" className="mt-4 sm:mt-6 px-6" wrap={false}>
             <div className="mx-auto bg-primary-light px-10">
               <div className="divide-solid divide-y divide-primary-lighter">
                 <div className="flex flex-col py-8">
