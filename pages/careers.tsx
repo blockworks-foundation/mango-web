@@ -100,6 +100,9 @@ const CareersPage = () => (
                       6. Excited to offer a centralized exchange feel on top of a fully
                       decentralized platform
                     </div>
+                    <div>
+                      7. Excellent written and spoken english communication skills
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col space-y-2 py-8">
@@ -124,6 +127,9 @@ const CareersPage = () => (
                     <div>
                       5. Exceptional attention to detail and creativity in reasoning about security
                       concerns in dynamic market conditions
+                    </div>
+                    <div>
+                      6. Excellent written and spoken english communication skills
                     </div>
                   </div>
                 </div>
