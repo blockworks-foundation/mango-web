@@ -1,5 +1,5 @@
 export const TradeUrl = "https://trade.mango.markets";
-export const StatsUrl = `${TradeUrl}/#/stats`;
+export const StatsUrl = `${TradeUrl}/stats`;
 export const LearnUrl = "https://docs.mango.markets";
 
 export function Navigation() {
