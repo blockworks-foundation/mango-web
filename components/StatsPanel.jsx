@@ -8,13 +8,24 @@ import { PublicKey, Connection } from "@solana/web3.js";
 import FloatingElement from "./FloatingElement";
 
 const CLUSTER = "mainnet-beta";
-const DEFAULT_MANGO_GROUP = "BTC_ETH_USDT";
+const DEFAULT_MANGO_GROUP = "BTC_ETH_SOL_SRM_USDC";
 
 const icons = {
   BTC: "/tokens/btc.svg",
   ETH: "/tokens/eth.svg",
+  SOL: "/tokens/sol.svg",
+  SRM: "/tokens/srm.svg",
+  USDC: "/tokens/usdc.svg",
   USDT: "/tokens/usdt.svg",
 };
+
+const decimals = {
+  BTC: 2,
+  ETH: 2,
+  SOL: 1,
+  SRM: 0,
+  USDC: 0,
+}
 
 const stubStats = {
   depositInterest: 0,
@@ -81,9 +92,9 @@ export default function StatsPanel() {
     <Wrapper>
       <Row justify="center">
         <Col lg={24} xl={24} xxl={24}>
-          <FloatingElement style={{ paddingBottom: 32 }}>
+          <FloatingElement>
             <React.Fragment>
-              <Divider style={{ color: "#EEEEEE" }}>Mango Stats</Divider>
+              <Divider style={{ color: "#EEEEEE", margin: "10px 0" }}>Mango Stats</Divider>
               <SizeTitle>
                 <Col span={4}>Asset</Col>
                 <Col span={4}>Total Deposits</Col>
@@ -92,7 +103,7 @@ export default function StatsPanel() {
                 <Col span={4}>Borrow Interest</Col>
                 <Col span={4}>Utilization</Col>
               </SizeTitle>
-              {stats.map((stat, i) => (
+              {stats.map((stat) => (
                 <div key={stat.symbol}>
                   <Divider />
                   <Row>
@@ -100,8 +111,8 @@ export default function StatsPanel() {
                       <img src={icons[stat.symbol]} alt={stat.symbol} width="14px" />
                     </Col>
                     <Col span={3}>{stat.symbol}</Col>
-                    <Col span={4}>{stat.totalDeposits.toFixed(2 - i)}</Col>
-                    <Col span={4}>{stat.totalBorrows.toFixed(2 - i)}</Col>
+                    <Col span={4}>{stat.totalDeposits.toFixed(decimals[stat.symbol])}</Col>
+                    <Col span={4}>{stat.totalBorrows.toFixed(decimals[stat.symbol])}</Col>
                     <Col span={4}>{(100 * stat.depositInterest).toFixed(2)}%</Col>
                     <Col span={4}>{(100 * stat.borrowInterest).toFixed(2)}%</Col>
                     <Col span={4}>{(parseFloat(stat.utilization) * 100).toFixed(2)}%</Col>
