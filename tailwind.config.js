@@ -11,8 +11,7 @@ module.exports = {
   darkMode: false,
   theme: {
     fontFamily: {
-      display: ['Lato, sans-serif'],
-      body: ['Lato, sans-serif'],
+      sans: ['Lato', 'sans-serif'],
     },
     extend: {
       backgroundImage: (theme) => ({
