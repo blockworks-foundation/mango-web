@@ -3,26 +3,31 @@ import MangoSale from '../components/MangoSale'
 
 const NavBarBeta = () => {
   return (
-    <div class="">
+    <div className="">
       {/* Main Menu */}
-      <div class="px-10 py-8 bg-transparent">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-            <div class="flex justify-start lg:w-0 lg:flex-1">
+      <div className="px-10 py-8 bg-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+            <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
-                <span class="sr-only">Mango</span>
-                <img class="h-8" src="img/logoMango.png" alt="" width="auto" />
+                <span className="sr-only">Mango</span>
+                <img
+                  className="h-8"
+                  src="img/logoMango.png"
+                  alt=""
+                  width="auto"
+                />
               </a>
             </div>
-            <div class="-mr-2 -my-2 md:hidden">
+            <div className="-mr-2 -my-2 md:hidden">
               <button
                 type="button"
-                class=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
+                className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
                 aria-expanded="false"
               >
-                <span class="sr-only">Open menu</span>
+                <span className="sr-only">Open menu</span>
                 <svg
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -30,50 +35,50 @@ const NavBarBeta = () => {
                   aria-hidden="true"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 </svg>
               </button>
             </div>
-            <nav class="hidden md:flex space-x-10">
-              <div class="relative">
+            <nav className="hidden md:flex space-x-10">
+              <div className="relative">
                 <button
                   type="button"
-                  class="text-gray-500 group  rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
+                  className="text-gray-500 group  rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
                   aria-expanded="false"
                 >
                   <span>Products</span>
 
                   <svg
-                    class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                    className="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     />
                   </svg>
                 </button>
 
-                <div class="hidden absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                  <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div class="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
-                      <h3 class="text-sm tracking-wide font-medium text-yellow-300 uppercase">
+                <div className="hidden absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                      <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                         Trading
                       </h3>
                       <a
                         href="#"
-                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
-                          class="flex-shrink-0 h-6 w-6"
+                          className="flex-shrink-0 h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 22 22"
@@ -83,17 +88,17 @@ const NavBarBeta = () => {
                           <path
                             d="M6 12V15M10 12V15M14 12V15M1 19H19M1 8H19M1 5L10 1L19 5M2 8H18V19H2V8Z"
                             stroke="#4F4C67"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
 
-                        <div class="ml-4">
-                          <p class="text-base font-medium text-white">
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
                             Spot Markets
                           </p>
-                          <p class="mt-1 text-sm text-gray-500">
+                          <p className="mt-1 text-sm text-gray-500">
                             Trade BTC, ETH, SOL, and SRM, cross collateralized
                             with up to 5x leverage.
                           </p>
@@ -102,10 +107,10 @@ const NavBarBeta = () => {
 
                       <a
                         href="#"
-                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
-                          class="flex-shrink-0 h-6 w-6"
+                          className="flex-shrink-0 h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 22 22"
@@ -115,31 +120,31 @@ const NavBarBeta = () => {
                           <path
                             d="M19 10C19 14.9706 14.9706 19 10 19M19 10C19 5.02944 14.9706 1 10 1M19 10H1M10 19C5.02944 19 1 14.9706 1 10M10 19C11.6569 19 13 14.9706 13 10C13 5.02944 11.6569 1 10 1M10 19C8.34315 19 7 14.9706 7 10C7 5.02944 8.34315 1 10 1M1 10C1 5.02944 5.02944 1 10 1"
                             stroke="#4F4C67"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
 
-                        <div class="ml-4">
-                          <p class="text-base font-medium text-white">
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
                             Perpetual Futures <MangoPill />
                           </p>
-                          <p class="mt-1 text-sm text-gray-500">
+                          <p className="mt-1 text-sm text-gray-500">
                             Cross-collateralized decentralized leveraged
                             perpetual futures markets.
                           </p>
                         </div>
                       </a>
-                      <h3 class="text-sm tracking-wide font-medium text-yellow-300 uppercase">
+                      <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                         Defi
                       </h3>
                       <a
                         href="#"
-                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
-                          class="flex-shrink-0 h-6 w-6"
+                          className="flex-shrink-0 h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 22 22"
@@ -149,31 +154,31 @@ const NavBarBeta = () => {
                           <path
                             d="M15 5V3C15 1.89543 14.1046 1 13 1H3C1.89543 1 1 1.89543 1 3V9C1 10.1046 1.89543 11 3 11H5M7 15H17C18.1046 15 19 14.1046 19 13V7C19 5.89543 18.1046 5 17 5H7C5.89543 5 5 5.89543 5 7V13C5 14.1046 5.89543 15 7 15ZM14 10C14 11.1046 13.1046 12 12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8C13.1046 8 14 8.89543 14 10Z"
                             stroke="#4F4C67"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
 
-                        <div class="ml-4">
-                          <p class="text-base font-medium text-white">
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
                             Decentralized Lending
                           </p>
-                          <p class="mt-1 text-sm text-gray-500">
+                          <p className="mt-1 text-sm text-gray-500">
                             Earn interest on deposit, a take out collateralized
                             loans against assets
                           </p>
                         </div>
                       </a>
-                      <h3 class="text-sm tracking-wide font-medium text-yellow-300 uppercase">
+                      <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                         Infrastructure
                       </h3>
                       <a
                         href="#"
-                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
-                          class="flex-shrink-0 h-6 w-6"
+                          className="flex-shrink-0 h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 22 22"
@@ -183,16 +188,16 @@ const NavBarBeta = () => {
                           <path
                             d="M16 17H21V15C21 13.3431 19.6569 12 18 12C17.0444 12 16.1931 12.4468 15.6438 13.1429M16 17H6M16 17V15C16 14.3438 15.8736 13.717 15.6438 13.1429M6 17H1V15C1 13.3431 2.34315 12 4 12C4.95561 12 5.80686 12.4468 6.35625 13.1429M6 17V15C6 14.3438 6.12642 13.717 6.35625 13.1429M6.35625 13.1429C7.0935 11.301 8.89482 10 11 10C13.1052 10 14.9065 11.301 15.6438 13.1429M14 4C14 5.65685 12.6569 7 11 7C9.34315 7 8 5.65685 8 4C8 2.34315 9.34315 1 11 1C12.6569 1 14 2.34315 14 4ZM20 7C20 8.10457 19.1046 9 18 9C16.8954 9 16 8.10457 16 7C16 5.89543 16.8954 5 18 5C19.1046 5 20 5.89543 20 7ZM6 7C6 8.10457 5.10457 9 4 9C2.89543 9 2 8.10457 2 7C2 5.89543 2.89543 5 4 5C5.10457 5 6 5.89543 6 7Z"
                             stroke="#4F4C67"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
-                        <div class="ml-4">
-                          <p class="text-base font-medium text-white">
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
                             Liquidator Program
                           </p>
-                          <p class="mt-1 text-sm text-gray-500">
+                          <p className="mt-1 text-sm text-gray-500">
                             Help safegaurd the mango protocol, become a
                             decentralized liquidator.
                           </p>
@@ -205,43 +210,43 @@ const NavBarBeta = () => {
 
               <a
                 href="#"
-                class="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
+                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
               >
                 Docs
               </a>
 
-              <div class="relative">
+              <div className="relative">
                 <button
                   type="button"
-                  class="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
                   aria-expanded="false"
                 >
                   <span>Support</span>
 
                   <svg
-                    class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                    className="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     />
                   </svg>
                 </button>
 
-                <div class="hidden absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
-                  <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div class="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
-                      <h3 class="text-sm tracking-wide font-medium text-yellow-300 uppercase">
+                <div className="hidden absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
+                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                      <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                         Social
                       </h3>
                       <a
                         href="#"
-                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         {/* Heroicon name: outline/support */}
                         <svg
@@ -257,11 +262,11 @@ const NavBarBeta = () => {
                           />
                         </svg>
 
-                        <div class="ml-4">
-                          <p class="text-base font-medium text-white">
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
                             Discord
                           </p>
-                          <p class="mt-1 text-sm text-gray-500">
+                          <p className="mt-1 text-sm text-gray-500">
                             Get all of your questions answered in our discrod or
                             contact us for developer support.
                           </p>
@@ -270,7 +275,7 @@ const NavBarBeta = () => {
 
                       <a
                         href="#"
-                        class="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
                           width="25"
@@ -284,45 +289,45 @@ const NavBarBeta = () => {
                             fill="#4F4C67"
                           />
                         </svg>
-                        <div class="ml-4">
-                          <p class="text-base font-medium text-white">
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
                             Twitter
                           </p>
-                          <p class="mt-1 text-sm text-gray-500">
+                          <p className="mt-1 text-sm text-gray-500">
                             See what we're up to quicky, and meme with us.
                           </p>
                         </div>
                       </a>
                     </div>
-                    <div class="px-5 py-5 bg-th-fgd-4 sm:px-8 sm:py-8">
+                    <div className="px-5 py-5 bg-th-fgd-4 sm:px-8 sm:py-8">
                       <div>
-                        <h3 class="text-sm tracking-wide font-medium text-yellow-300 uppercase">
+                        <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                           Mango Guides
                         </h3>
-                        <ul class="mt-4 space-y-4">
-                          <li class="text-base truncate">
+                        <ul className="mt-4 space-y-4">
+                          <li className="text-base truncate">
                             <a
                               href="#"
-                              class="font-medium text-white hover:text-gray-700"
+                              className="font-medium text-white hover:text-gray-700"
                             >
                               Setting up a wallet
                             </a>
                           </li>
 
-                          <li class="text-base truncate">
+                          <li className="text-base truncate">
                             <a
                               href="#"
-                              class="font-medium text-white hover:text-gray-700"
+                              className="font-medium text-white hover:text-gray-700"
                             >
                               Getting started with Mango Markets
                             </a>
                           </li>
                         </ul>
                       </div>
-                      <div class="mt-5 text-sm">
+                      <div className="mt-5 text-sm">
                         <a
                           href="#"
-                          class="font-medium text-yellow-300 hover:text-yellow-400"
+                          className="font-medium text-yellow-300 hover:text-yellow-400"
                         >
                           {' '}
                           Learn more about the Mango protocol{' '}
@@ -335,19 +340,18 @@ const NavBarBeta = () => {
               </div>
               <a
                 href="#"
-                class="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
+                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
               >
                 Mango DAO <MangoSale />
               </a>
             </nav>
-            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <div>
                 <button
-                  class="inline-flex items-center px-8 py-2 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
+                  className="inline-flex items-center px-8 py-2 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
  hover:bg-blue-600 rounded-full transition duration-200"
-                  href="#"
                 >
-                  <span class="pr-4">Start trading</span>
+                  <span className="pr-4">Start trading</span>
                   <svg
                     width="9"
                     height="16"
@@ -358,9 +362,9 @@ const NavBarBeta = () => {
                     <path
                       d="M1 1.6665L7.8963 7.99984L1 14.3332"
                       stroke="white"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </button>
@@ -371,26 +375,26 @@ const NavBarBeta = () => {
 
         {/* Mobile menu */}
 
-        <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right z-10 md:hidden">
-          <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-th-bkg-3 divide-y-2 divide-gray-50">
-            <div class="pt-5 pb-6 px-5">
-              <div class="flex items-center justify-between">
+        <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right z-10 md:hidden">
+          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-th-bkg-3 divide-y-2 divide-gray-50">
+            <div className="pt-5 pb-6 px-5">
+              <div className="flex items-center justify-between">
                 <div>
                   <img
-                    class="h-8"
+                    className="h-8"
                     src="img/logoMango.png"
                     alt=""
                     width="auto"
                   />
                 </div>
-                <div class="-mr-2">
+                <div className="-mr-2">
                   <button
                     type="button"
-                    class="bg-th-bkg-3 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-th-bkg-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
+                    className="bg-th-bkg-3 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-th-bkg-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
                   >
-                    <span class="sr-only">Close menu</span>
+                    <span className="sr-only">Close menu</span>
                     <svg
-                      class="h-6 w-6"
+                      className="h-6 w-6"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -398,9 +402,9 @@ const NavBarBeta = () => {
                       aria-hidden="true"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M6 18L18 6M6 6l12 12"
                       />
                     </svg>
@@ -408,14 +412,14 @@ const NavBarBeta = () => {
                 </div>
               </div>
 
-              <div class="mt-6">
-                <nav class="grid gap-y-8">
+              <div className="mt-6">
+                <nav className="grid gap-y-8">
                   <a
                     href="#"
-                    class="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
                   >
                     <svg
-                      class="flex-shrink-0 h-6 w-6"
+                      className="flex-shrink-0 h-6 w-6"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 22 22"
@@ -425,22 +429,22 @@ const NavBarBeta = () => {
                       <path
                         d="M6 12V15M10 12V15M14 12V15M1 19H19M1 8H19M1 5L10 1L19 5M2 8H18V19H2V8Z"
                         stroke="#4F4C67"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
-                    <span class="ml-3 text-base font-medium text-white">
+                    <span className="ml-3 text-base font-medium text-white">
                       Spot Markets
                     </span>
                   </a>
 
                   <a
                     href="#"
-                    class="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
                   >
                     <svg
-                      class="flex-shrink-0 h-6 w-6"
+                      className="flex-shrink-0 h-6 w-6"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 22 22"
@@ -450,22 +454,22 @@ const NavBarBeta = () => {
                       <path
                         d="M19 10C19 14.9706 14.9706 19 10 19M19 10C19 5.02944 14.9706 1 10 1M19 10H1M10 19C5.02944 19 1 14.9706 1 10M10 19C11.6569 19 13 14.9706 13 10C13 5.02944 11.6569 1 10 1M10 19C8.34315 19 7 14.9706 7 10C7 5.02944 8.34315 1 10 1M1 10C1 5.02944 5.02944 1 10 1"
                         stroke="#4F4C67"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
-                    <span class="ml-3 text-base font-medium text-white">
+                    <span className="ml-3 text-base font-medium text-white">
                       Perpetual Futures <MangoPill />
                     </span>
                   </a>
 
                   <a
                     href="#"
-                    class="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
                   >
                     <svg
-                      class="flex-shrink-0 h-6 w-6"
+                      className="flex-shrink-0 h-6 w-6"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 22 22"
@@ -475,22 +479,22 @@ const NavBarBeta = () => {
                       <path
                         d="M15 5V3C15 1.89543 14.1046 1 13 1H3C1.89543 1 1 1.89543 1 3V9C1 10.1046 1.89543 11 3 11H5M7 15H17C18.1046 15 19 14.1046 19 13V7C19 5.89543 18.1046 5 17 5H7C5.89543 5 5 5.89543 5 7V13C5 14.1046 5.89543 15 7 15ZM14 10C14 11.1046 13.1046 12 12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8C13.1046 8 14 8.89543 14 10Z"
                         stroke="#4F4C67"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
-                    <span class="ml-3 text-base font-medium text-white">
+                    <span className="ml-3 text-base font-medium text-white">
                       Decentralized Lending
                     </span>
                   </a>
 
                   <a
                     href="#"
-                    class="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
                   >
                     <svg
-                      class="flex-shrink-0 h-6 w-6"
+                      className="flex-shrink-0 h-6 w-6"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 22 22"
@@ -500,12 +504,12 @@ const NavBarBeta = () => {
                       <path
                         d="M16 17H21V15C21 13.3431 19.6569 12 18 12C17.0444 12 16.1931 12.4468 15.6438 13.1429M16 17H6M16 17V15C16 14.3438 15.8736 13.717 15.6438 13.1429M6 17H1V15C1 13.3431 2.34315 12 4 12C4.95561 12 5.80686 12.4468 6.35625 13.1429M6 17V15C6 14.3438 6.12642 13.717 6.35625 13.1429M6.35625 13.1429C7.0935 11.301 8.89482 10 11 10C13.1052 10 14.9065 11.301 15.6438 13.1429M14 4C14 5.65685 12.6569 7 11 7C9.34315 7 8 5.65685 8 4C8 2.34315 9.34315 1 11 1C12.6569 1 14 2.34315 14 4ZM20 7C20 8.10457 19.1046 9 18 9C16.8954 9 16 8.10457 16 7C16 5.89543 16.8954 5 18 5C19.1046 5 20 5.89543 20 7ZM6 7C6 8.10457 5.10457 9 4 9C2.89543 9 2 8.10457 2 7C2 5.89543 2.89543 5 4 5C5.10457 5 6 5.89543 6 7Z"
                         stroke="#4F4C67"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
-                    <span class="ml-3 text-base font-medium text-white">
+                    <span className="ml-3 text-base font-medium text-white">
                       Liquidator Program
                     </span>
                   </a>
@@ -513,32 +517,32 @@ const NavBarBeta = () => {
               </div>
             </div>
 
-            <div class="py-6 px-5 space-y-6">
-              <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+            <div className="py-6 px-5 space-y-6">
+              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="#"
-                  class="text-base font-medium text-white hover:bg-th-bkg-4"
+                  className="text-base font-medium text-white hover:bg-th-bkg-4"
                 >
                   Twitter
                 </a>
 
                 <a
                   href="#"
-                  class="text-base font-medium text-white hover:bg-th-bkg-4"
+                  className="text-base font-medium text-white hover:bg-th-bkg-4"
                 >
                   Explore the docs
                 </a>
 
                 <a
                   href="#"
-                  class="text-base font-medium text-white hover:bg-th-bkg-4"
+                  className="text-base font-medium text-white hover:bg-th-bkg-4"
                 >
                   Discord
                 </a>
 
                 <a
                   href="#"
-                  class="text-base font-medium text-white hover:bg-th-bkg-4"
+                  className="text-base font-medium text-white hover:bg-th-bkg-4"
                 >
                   Mango Guides
                 </a>

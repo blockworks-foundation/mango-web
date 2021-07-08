@@ -2,32 +2,32 @@ import MangoPill from '../components/MangoPill'
 
 const FooterSection = () => {
   return (
-    <div class="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
-      <div class="max-w-7xl mx-auto ">
-        <section class="py-8 px-4">
-          <div class="flex flex-wrap items-center text-center md:text-left -mx-2">
-            <div class="lg:w-1/2 px-2 mt-10 lg:mt-0 order-1 lg:order-none">
-              <h2 class="text-4xl mb-6 font-semibold font-heading">
+    <div className="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
+      <div className="max-w-7xl mx-auto ">
+        <section className="py-8 px-4">
+          <div className="flex flex-wrap items-center text-center md:text-left -mx-2">
+            <div className="lg:w-1/2 px-2 mt-10 lg:mt-0 order-1 lg:order-none">
+              <h2 className="text-4xl mb-6 font-semibold font-heading">
                 Keep in touch through email.
               </h2>
-              <form class="w-full max-w-lg mx-auto sm:mx-0">
-                <div class="flex flex-wrap">
-                  <div class="w-full md:w-2/3 mb-4">
+              <form className="w-full max-w-lg mx-auto sm:mx-0">
+                <div className="flex flex-wrap">
+                  <div className="w-full md:w-2/3 mb-4">
                     <input
-                      class="appearance-none block w-full py-3 px-4 leading-snug text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-green-500 rounded-l-full focus:outline-none"
+                      className="appearance-none block w-full py-3 px-4 leading-snug text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-green-500 rounded-l-full focus:outline-none"
                       type="text"
                       placeholder="Your email @protnmail.com.."
                     />
                   </div>
-                  <div class="w-full md:w-1/3 mb-4">
+                  <div className="w-full md:w-1/3 mb-4">
                     <button
-                      class="inline-block w-full py-4 px-8 leading-none text-white bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
+                      className="inline-block w-full py-4 px-8 leading-none text-white bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
  hover:bg-indigo-700 font-semibold rounded-r-full"
                     >
                       Subscribe
                     </button>
                   </div>
-                  <div class="w-full">
+                  <div className="w-full">
                     <p>We promise to never spam and only send alpha.</p>
                   </div>
                 </div>
@@ -35,90 +35,116 @@ const FooterSection = () => {
             </div>
           </div>
         </section>
-        <footer class="py-20">
-          <div class="container px-4 mx-auto">
-            <div class="flex flex-wrap -mx-4 mb-8 lg:mb-16">
-              <div class="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
-                <a class="text-gray-600 text-2xl leading-none" href="#">
+        <footer className="py-20">
+          <div className="container px-4 mx-auto">
+            <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">
+              <div className="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
+                <a className="text-gray-600 text-2xl leading-none" href="#">
                   <img
-                    class="h-8"
+                    className="h-8"
                     src="img/logoMango.png"
                     alt=""
                     width="auto"
                   />
                 </a>
-                <p class="mt-5 mb-6 max-w-xs text-gray-500 leading-loose">
+                <p className="mt-5 mb-6 max-w-xs text-gray-500 leading-loose">
                   Mango is a decentralized autonomous organization.{' '}
                 </p>
                 <div>
-                  <a class="inline-block h-6 mr-8" href="#">
-                    <img class="mx-auto" src="socials/github.svg" />
+                  <a className="inline-block h-6 mr-8" href="#">
+                    <img className="mx-auto" src="socials/github.svg" />
                   </a>
-                  <a class="inline-block h-6 mr-8" href="#">
-                    <img class="mx-auto" src="socials/discord.svg" />
+                  <a className="inline-block h-6 mr-8" href="#">
+                    <img className="mx-auto" src="socials/discord.svg" />
                   </a>
-                  <a class="inline-block h-6" href="#">
-                    <img class="mx-auto" src="socials/twitter.svg" />
+                  <a className="inline-block h-6" href="#">
+                    <img className="mx-auto" src="socials/twitter.svg" />
                   </a>
                 </div>
               </div>
-              <div class="w-full lg:w-2/3 px-4">
-                <div class="flex flex-wrap justify-between">
-                  <div class="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                    <h3 class="mb-6 text-lg font-bold font-heading">
+              <div className="w-full lg:w-2/3 px-4">
+                <div className="flex flex-wrap justify-between">
+                  <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
+                    <h3 className="mb-6 text-lg font-bold font-heading">
                       Products
                     </h3>
-                    <ul class="text-sm">
-                      <li class="mb-4">
-                        <a class="text-gray-500 hover:text-gray-600" href="#">
+                    <ul className="text-sm">
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
                           Spot Markets
                         </a>
                       </li>
-                      <li class="mb-4">
-                        <a class="text-gray-500 hover:text-gray-600" href="#">
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
                           Perpetual Futures
                         </a>{' '}
                         <MangoPill />
                       </li>
-                      <li class="mb-4">
-                        <a class="text-gray-500 hover:text-gray-600" href="#">
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
                           Decentralized Lending
                         </a>
                       </li>
-                      <li class="mb-4">
-                        <a class="text-gray-500 hover:text-gray-600" href="#">
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
                           Liquidator Program
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <div class="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                    <h3 class="mb-6 text-lg font-bold font-heading">
+                  <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
+                    <h3 className="mb-6 text-lg font-bold font-heading">
                       Developers
                     </h3>
-                    <ul class="text-sm">
-                      <li class="mb-4">
-                        <a class="text-gray-500 hover:text-gray-600" href="#">
+                    <ul className="text-sm">
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
                           Explore the docs
                         </a>
                       </li>
-                      <li class="mb-4">
-                        <a class="text-gray-500 hover:text-gray-600" href="#">
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
                           Interested in contributing?
                         </a>
                       </li>
                     </ul>
                   </div>
-                  <div class="w-1/2 lg:w-1/4">
-                    <h3 class="mb-6 text-lg font-bold font-heading">Contact</h3>
-                    <ul class="text-sm">
-                      <li class="mb-4">
-                        <a class="text-gray-500 hover:text-gray-600" href="#">
+                  <div className="w-1/2 lg:w-1/4">
+                    <h3 className="mb-6 text-lg font-bold font-heading">
+                      Contact
+                    </h3>
+                    <ul className="text-sm">
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
                           Discord
                         </a>
                       </li>
-                      <li class="mb-4">
-                        <a class="text-gray-500 hover:text-gray-600" href="#">
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
                           Twitter
                         </a>
                       </li>
@@ -127,8 +153,8 @@ const FooterSection = () => {
                 </div>
               </div>
             </div>
-            <div class="pt-8">
-              <p class="lg:text-center text-sm text-gray-400">
+            <div className="pt-8">
+              <p className="lg:text-center text-sm text-gray-400">
                 All rights reserved &copy; Blockworks Foundation 2021
               </p>
             </div>
