@@ -150,8 +150,8 @@ const LandingContent = () => {
                       arbitrary, worthless tasks to get the free value.
                     </p>
                     <p className="text-white font-bold leading-relaxed">
-                      We believe all "excess" value should be captured by token
-                      holders in the DAO.
+                      We believe all &quot;excess&quot; value should be captured
+                      by token holders in the DAO.
                     </p>
                   </div>
                 </div>

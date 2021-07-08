@@ -294,7 +294,7 @@ const NavBarBeta = () => {
                             Twitter
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            See what we're up to quicky, and meme with us.
+                            See what we&apos;re up to quicky, and meme with us.
                           </p>
                         </div>
                       </a>

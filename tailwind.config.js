@@ -14,7 +14,7 @@ module.exports = {
       sans: ['Lato', 'sans-serif'],
     },
     extend: {
-      backgroundImage: (theme) => ({
+      backgroundImage: (_) => ({
         'hero-img': "url('../public/img/Hero_BG.jpeg')",
         'feature-one': "url('../public/img/feature1.png')",
         'feature-two': "url('../public/img/feature2.png')",
