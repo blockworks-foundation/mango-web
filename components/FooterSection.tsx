@@ -51,13 +51,13 @@ const FooterSection = () => {
                   Mango is a decentralized autonomous organization.{' '}
                 </p>
                 <div>
-                  <a className="inline-block h-6 mr-8" href="#">
+                  <a className="inline-block h-6 mr-8" href="https://github.com/blockworks-foundation">
                     <img className="mx-auto" src="socials/github.svg" />
                   </a>
-                  <a className="inline-block h-6 mr-8" href="#">
+                  <a className="inline-block h-6 mr-8" href="https://discord.gg/67jySBhxrg">
                     <img className="mx-auto" src="socials/discord.svg" />
                   </a>
-                  <a className="inline-block h-6" href="#">
+                  <a className="inline-block h-6" href="https://twitter.com/mangomarkets">
                     <img className="mx-auto" src="socials/twitter.svg" />
                   </a>
                 </div>
