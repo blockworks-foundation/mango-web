@@ -209,7 +209,7 @@ const NavBarBeta = () => {
               </div>
 
               <a
-                href="#"
+                href="https://docs.mango.markets/"
                 className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
               >
                 Docs
@@ -326,7 +326,7 @@ const NavBarBeta = () => {
                       </div>
                       <div className="mt-5 text-sm">
                         <a
-                          href="#"
+                          href="https://docs.mango.markets/margin-trading/overview"
                           className="font-medium text-yellow-300 hover:text-yellow-400"
                         >
                           {' '}
