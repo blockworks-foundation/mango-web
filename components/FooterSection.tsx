@@ -72,7 +72,7 @@ const FooterSection = () => {
                       <li className="mb-4">
                         <a
                           className="text-gray-500 hover:text-gray-600"
-                          href="#"
+                          href="https://trade.mango.markets/"
                         >
                           Spot Markets
                         </a>
@@ -89,7 +89,7 @@ const FooterSection = () => {
                       <li className="mb-4">
                         <a
                           className="text-gray-500 hover:text-gray-600"
-                          href="#"
+                          href="https://trade.mango.markets/borrow"
                         >
                           Decentralized Lending
                         </a>
@@ -112,7 +112,7 @@ const FooterSection = () => {
                       <li className="mb-4">
                         <a
                           className="text-gray-500 hover:text-gray-600"
-                          href="#"
+                          href="https://docs.mango.markets/"
                         >
                           Explore the docs
                         </a>
@@ -120,7 +120,7 @@ const FooterSection = () => {
                       <li className="mb-4">
                         <a
                           className="text-gray-500 hover:text-gray-600"
-                          href="#"
+                          href="https://trello.com/c/0iz8GfW6/32-how-to-use-this-board"
                         >
                           Interested in contributing?
                         </a>
@@ -135,7 +135,7 @@ const FooterSection = () => {
                       <li className="mb-4">
                         <a
                           className="text-gray-500 hover:text-gray-600"
-                          href="#"
+                          href="https://discord.gg/67jySBhxrg"
                         >
                           Discord
                         </a>
@@ -143,7 +143,7 @@ const FooterSection = () => {
                       <li className="mb-4">
                         <a
                           className="text-gray-500 hover:text-gray-600"
-                          href="#"
+                          href="https://twitter.com/mangomarkets"
                         >
                           Twitter
                         </a>
