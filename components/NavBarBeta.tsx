@@ -30,6 +30,10 @@ const NavBarBeta = () => {
     setSupportMenuVisible(false)
   }
 
+  const doNothing = (e) => {
+    e.stopPropagation()
+  }
+
   useEffect(() => {
     window.addEventListener('click', closeMenu)
     return () => window.removeEventListener('click', closeMenu)
@@ -144,7 +148,8 @@ const NavBarBeta = () => {
 
                       <a
                         href="#"
-                        className="-m-3 p-3 flex items-start rounded-lg opacity-40"
+                        onClick={doNothing}
+                        className="disabled -m-3 p-3 flex items-start rounded-lg opacity-50"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -487,7 +492,8 @@ const NavBarBeta = () => {
 
                   <a
                     href="#"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    onClick={doNothing}
+                    className="disabled -m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 opacity-50"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
