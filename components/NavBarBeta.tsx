@@ -67,14 +67,14 @@ const NavBarBeta = () => {
                   </svg>
                 </button>
 
-                <div className="hidden absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                <div className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                         Trading
                       </h3>
                       <a
-                        href="#"
+                        href="https://trade.mango.markets/"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
@@ -140,7 +140,7 @@ const NavBarBeta = () => {
                         Defi
                       </h3>
                       <a
-                        href="#"
+                        href="https://trade.mango.markets/borrow"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
@@ -238,14 +238,14 @@ const NavBarBeta = () => {
                   </svg>
                 </button>
 
-                <div className="hidden absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
+                <div className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                         Social
                       </h3>
                       <a
-                        href="#"
+                        href="https://discord.gg/67jySBhxrg"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         {/* Heroicon name: outline/support */}
@@ -274,7 +274,7 @@ const NavBarBeta = () => {
                       </a>
 
                       <a
-                        href="#"
+                        href="https://twitter.com/mangomarkets"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
@@ -307,7 +307,7 @@ const NavBarBeta = () => {
                         <ul className="mt-4 space-y-4">
                           <li className="text-base truncate">
                             <a
-                              href="#"
+                              href="https://docs.mango.markets/tutorials/transfer-funds-to-sollet-wallet"
                               className="font-medium text-white hover:text-gray-700"
                             >
                               Setting up a wallet
@@ -316,7 +316,7 @@ const NavBarBeta = () => {
 
                           <li className="text-base truncate">
                             <a
-                              href="#"
+                              href="https://docs.mango.markets/tutorials/trade-on-mango.markets"
                               className="font-medium text-white hover:text-gray-700"
                             >
                               Getting started with Mango Markets
