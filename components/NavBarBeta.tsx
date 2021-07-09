@@ -1,7 +1,40 @@
+import { useEffect, useState } from 'react'
 import MangoPill from '../components/MangoPill'
 import MangoSale from '../components/MangoSale'
 
 const NavBarBeta = () => {
+  const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
+  const [productMenuVisible, setProductMenuVisible] = useState(false)
+  const [supportMenuVisible, setSupportMenuVisible] = useState(false)
+
+  const toggleMobileMenu = (e) => {
+    setMobileMenuVisible(!mobileMenuVisible)
+    e.stopPropagation()
+  }
+
+  const toggleProducts = (e) => {
+    setProductMenuVisible(!productMenuVisible)
+    setSupportMenuVisible(false)
+    e.stopPropagation()
+  }
+
+  const toggleSupport = (e) => {
+    setSupportMenuVisible(!supportMenuVisible)
+    setProductMenuVisible(false)
+    e.stopPropagation()
+  }
+
+  const closeMenu = () => {
+    setMobileMenuVisible(false)
+    setProductMenuVisible(false)
+    setSupportMenuVisible(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener('click', closeMenu)
+    return () => window.removeEventListener('click', closeMenu)
+  })
+
   return (
     <div className="">
       {/* Main Menu */}
@@ -9,7 +42,7 @@ const NavBarBeta = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="#">
+              <a href="https://mango.markets">
                 <span className="sr-only">Mango</span>
                 <img
                   className="h-8"
@@ -23,7 +56,7 @@ const NavBarBeta = () => {
               <button
                 type="button"
                 className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
-                aria-expanded="false"
+                onClick={toggleMobileMenu}
               >
                 <span className="sr-only">Open menu</span>
                 <svg
@@ -48,7 +81,7 @@ const NavBarBeta = () => {
                 <button
                   type="button"
                   className="text-gray-500 group  rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
-                  aria-expanded="false"
+                  onClick={toggleProducts}
                 >
                   <span>Products</span>
 
@@ -67,7 +100,11 @@ const NavBarBeta = () => {
                   </svg>
                 </button>
 
-                <div className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                <div
+                  className={`${
+                    !productMenuVisible && 'hidden'
+                  } absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
+                >
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
@@ -107,7 +144,7 @@ const NavBarBeta = () => {
 
                       <a
                         href="#"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg opacity-40"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -174,7 +211,7 @@ const NavBarBeta = () => {
                         Infrastructure
                       </h3>
                       <a
-                        href="#"
+                        href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
@@ -219,7 +256,7 @@ const NavBarBeta = () => {
                 <button
                   type="button"
                   className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
-                  aria-expanded="false"
+                  onClick={toggleSupport}
                 >
                   <span>Support</span>
 
@@ -238,7 +275,11 @@ const NavBarBeta = () => {
                   </svg>
                 </button>
 
-                <div className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
+                <div
+                  className={`${
+                    !supportMenuVisible && 'hidden'
+                  } absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0`}
+                >
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
@@ -339,7 +380,7 @@ const NavBarBeta = () => {
                 </div>
               </div>
               <a
-                href="#"
+                href="https://mango-token-sale.netlify.app"
                 className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
               >
                 Mango DAO <MangoSale />
@@ -375,7 +416,11 @@ const NavBarBeta = () => {
 
         {/* Mobile menu */}
 
-        <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right z-10 md:hidden">
+        <div
+          className={`${
+            !mobileMenuVisible && 'hidden'
+          } absolute top-0 inset-x-0 p-2 transition transform origin-top-right z-10`}
+        >
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-th-bkg-3 divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
@@ -391,6 +436,7 @@ const NavBarBeta = () => {
                   <button
                     type="button"
                     className="bg-th-bkg-3 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-th-bkg-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
+                    onClick={closeMenu}
                   >
                     <span className="sr-only">Close menu</span>
                     <svg
@@ -490,7 +536,7 @@ const NavBarBeta = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
                   >
                     <svg
