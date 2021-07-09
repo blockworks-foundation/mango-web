@@ -51,13 +51,22 @@ const FooterSection = () => {
                   Mango is a decentralized autonomous organization.{' '}
                 </p>
                 <div>
-                  <a className="inline-block h-6 mr-8" href="https://github.com/blockworks-foundation">
+                  <a
+                    className="inline-block h-6 mr-8"
+                    href="https://github.com/blockworks-foundation"
+                  >
                     <img className="mx-auto" src="socials/github.svg" />
                   </a>
-                  <a className="inline-block h-6 mr-8" href="https://discord.gg/67jySBhxrg">
+                  <a
+                    className="inline-block h-6 mr-8"
+                    href="https://discord.gg/67jySBhxrg"
+                  >
                     <img className="mx-auto" src="socials/discord.svg" />
                   </a>
-                  <a className="inline-block h-6" href="https://twitter.com/mangomarkets">
+                  <a
+                    className="inline-block h-6"
+                    href="https://twitter.com/mangomarkets"
+                  >
                     <img className="mx-auto" src="socials/twitter.svg" />
                   </a>
                 </div>
@@ -122,7 +131,15 @@ const FooterSection = () => {
                           className="text-gray-500 hover:text-gray-600"
                           href="https://trello.com/c/0iz8GfW6/32-how-to-use-this-board"
                         >
-                          Interested in contributing?
+                          Start contributing
+                        </a>
+                      </li>
+                      <li className="mb-4">
+                        <a
+                          className="text-gray-500 hover:text-gray-600"
+                          href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/mango/marketmaking/simplemarketmaker.py"
+                        >
+                          Become a market maker
                         </a>
                       </li>
                     </ul>
