@@ -21,7 +21,7 @@ const HeroSectionHome = () => {
               </p>
 
               <div>
-                <button className="inline-flex items-center px-8 py-2 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 rounded-full transition duration-100">
+                <button className="inline-flex items-center px-8 py-2 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 hover:from-yellow-100 via-lime-300 to-green-400 rounded-full transition duration-100">
                   <span className="pr-4">Start trading</span>
                   <svg
                     width="9"

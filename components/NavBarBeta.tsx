@@ -283,7 +283,7 @@ const NavBarBeta = () => {
                 <div
                   className={`${
                     !supportMenuVisible && 'hidden'
-                  } absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0`}
+                  } absolute z-50 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0`}
                 >
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
@@ -401,7 +401,7 @@ const NavBarBeta = () => {
               <div>
                 <button
                   className="inline-flex items-center w-48 pr-8 pl-6 py-2 -ml-8 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
- rounded-full transition duration-200"
+                  hover:from-yellow-100 via-lime-300 to-green-400 rounded-full transition duration-200"
                 >
                   <span className="ml-2 pr-4">Start trading</span>
                   <svg
