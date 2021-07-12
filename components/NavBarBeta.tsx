@@ -388,7 +388,13 @@ const NavBarBeta = () => {
                 href="https://mango-token-sale.netlify.app"
                 className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
               >
-                Mango DAO <MangoSale />
+                <div className="flex flex-row">
+                  <p>
+                  Mango DAO 
+                  </p>
+                  <MangoSale />
+                </div>
+                
               </a>
             </nav>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
