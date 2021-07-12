@@ -400,7 +400,7 @@ const NavBarBeta = () => {
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <div>
                 <button
-                  className="inline-flex items-center w-48 pr-8 pl-6 py-3 -ml-8 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
+                  className="inline-flex items-center w-48 pr-8 pl-6 py-2 -ml-8 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
  rounded-full transition duration-200"
                 >
                   <span className="ml-2 pr-4">Start trading</span>
