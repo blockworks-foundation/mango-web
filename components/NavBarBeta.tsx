@@ -178,9 +178,6 @@ const NavBarBeta = () => {
                           </p>
                         </div>
                       </a>
-                      <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
-                        Defi
-                      </h3>
                       <a
                         href="https://trade.mango.markets/borrow"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
