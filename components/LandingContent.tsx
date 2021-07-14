@@ -15,7 +15,7 @@ const LandingContent = () => {
 
         {/* Section 1 */}
         <div className="flex flex-wrap overflow-hidden mb-36 xl:-mx-4">
-          <div className="w-full overflow-hidden xl:my-4 xl:px-4 xl:w-1/2">
+          <div className="w-1/2 overflow-hidden xl:my-4 xl:px-4 md:w-1/2 sm:w-full xs:w-full">
             <h2 className="text-3xl mb-6 leading-tight font-semibold font-heading">
               What is Mango?
             </h2>
@@ -41,7 +41,7 @@ const LandingContent = () => {
             </p>
           </div>
 
-          <div className="w-full overflow-hidden xl:my-4 xl:px-4 xl:w-1/2">
+          <div className="w-1/2 overflow-hidden xl:my-4 xl:px-4 md:w-1/2 sm:w-full xs:w-full">
             <h2 className="text-3xl mb-6 leading-tight font-semibold font-heading">
               What is the{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-yellow-300 to-green-300">
