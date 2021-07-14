@@ -95,7 +95,7 @@ const LandingContent = () => {
         </div>
         <section className="">
           <div className="grid grid-cols-3 gap-6 mb-6">
-            <div>
+            <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
               <div className="bg-th-fgd-4 bg-feature-one bg-cover bg-bottom bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
@@ -110,8 +110,9 @@ const LandingContent = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-2">
-              <div className="bg-th-fgd-4 bg-feature-two bg-cover bg-bottom bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+
+            <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
+              <div className="bg-th-fgd-4 bg-feature-two bg-contain bg-bottom bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
                     <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
@@ -124,6 +125,18 @@ const LandingContent = () => {
                       and <span className="text-th-red italic">Restricted</span>
                       .
                     </p>
+                    <div className="flex flex-wrap overflow-hiddenm mt-8">
+                    <div className="w-full overflow-hidden lg:w-1/2 pr-4">
+                      <p><span className="text-th-green italic">Unrestricted</span></p>
+                      <p>During the unrestricted period users may deposit or withdraw their USDC from the vault. During the unrestricted period price can fluctuate.</p>
+                    </div>
+
+                    <div className="w-full overflow-hidden lg:w-1/2">
+                      <p><span className="text-th-red italic">Restricted</span></p>
+                      <p>After 24 hours deposits will be restricted and only withdrawals allowed. During the restricted period price can only goin down.</p>
+                    </div>
+
+                  </div>
                   </div>
                 </div>
               </div>
@@ -131,7 +144,7 @@ const LandingContent = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-2">
+            <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
               <div className="bg-th-fgd-4 bg-feature-three bg-cover bg-bottom bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
@@ -157,7 +170,7 @@ const LandingContent = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
               <div className="bg-th-fgd-4 bg-feature-four bg-cover bg-bottom bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">

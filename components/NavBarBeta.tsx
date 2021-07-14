@@ -189,7 +189,7 @@ const NavBarBeta = () => {
                           viewBox="0 0 22 22"
                           stroke="currentColor"
                           aria-hidden="true"
-                        >
+                          > 
                           <path
                             d="M15 5V3C15 1.89543 14.1046 1 13 1H3C1.89543 1 1 1.89543 1 3V9C1 10.1046 1.89543 11 3 11H5M7 15H17C18.1046 15 19 14.1046 19 13V7C19 5.89543 18.1046 5 17 5H7C5.89543 5 5 5.89543 5 7V13C5 14.1046 5.89543 15 7 15ZM14 10C14 11.1046 13.1046 12 12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8C13.1046 8 14 8.89543 14 10Z"
                             stroke="#4F4C67"
@@ -394,7 +394,7 @@ const NavBarBeta = () => {
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <div>
                 <button
-                  className="inline-flex items-center w-48 pr-8 pl-6 py-2 -ml-8 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
+                  className="inline-flex items-center w-48 pr-8 pl-6 py-2 -ml-8 text-lg text-white font-bold bg-gradient-to-br from-mango-green via-mango-green to-green-500 
                   hover:from-yellow-100 via-lime-300 to-green-400 rounded-full transition duration-200"
                 >
                   <span className="ml-2 pr-4">Start trading</span>

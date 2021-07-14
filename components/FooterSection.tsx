@@ -5,36 +5,27 @@ const FooterSection = () => {
     <div className="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
       <div className="max-w-7xl mx-auto ">
         <section className="py-8 px-4">
-          <div className="flex flex-wrap items-center text-center md:text-left -mx-2">
-            <div className="lg:w-1/2 px-2 mt-10 lg:mt-0 order-1 lg:order-none">
-              <h2 className="text-4xl mb-6 font-semibold font-heading">
-                Keep in touch through email.
+          
+          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+              <h2 className="inline text-3xl font-extrabold tracking-tight sm:block sm:text-4xl">
+                Want product news and updates? <span className="text-transparent bg-clip-text bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green sm:block sm:text-4xl">Sign up for our newsletter.</span>
               </h2>
-              <form className="w-full max-w-lg mx-auto sm:mx-0">
-                <div className="flex flex-wrap">
-                  <div className="w-full md:w-2/3 mb-4">
-                    <input
-                      className="appearance-none block w-full py-3 px-4 leading-snug text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-green-500 rounded-l-full focus:outline-none"
-                      type="text"
-                      placeholder="Your email @protnmail.com.."
-                    />
-                  </div>
-                  <div className="w-full md:w-1/3 mb-4">
-                    <button
-                      className="inline-block w-full py-4 px-8 leading-none text-white bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 
- hover:bg-indigo-700 font-semibold rounded-r-full"
-                    >
-                      Subscribe
-                    </button>
-                  </div>
-                  <div className="w-full">
-                    <p>We promise to never spam and only send alpha.</p>
-                  </div>
+              
+              <form className="mt-8 sm:flex">
+                <label for="email-address" class="sr-only">Email address</label>
+                <input id="email-address" name="email" type="email" autocomplete="email" required class="w-full px-5 py-3 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs border-gray-300 rounded-full" placeholder="Enter your email"/>
+                <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:relative sm:-left-16">
+                  <button type="submit" className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Sign me up!
+                  </button>
                 </div>
               </form>
+                <div className="w-full mt-4">
+                    <p className="text-xl text-gray-400">We promise to never spam and only send alpha.</p>
+                </div>
             </div>
-          </div>
         </section>
+
         <footer className="py-20">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">

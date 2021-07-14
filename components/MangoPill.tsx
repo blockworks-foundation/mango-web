@@ -1,7 +1,8 @@
 const MangoPill = () => {
   return (
-    <div className="inline-flex items-center px-2 py-1 text-lg text-white text-xs uppercase font-bold bg-gradient-to-br from-red-400 via-yellow-300 to-green-500 rounded-full">
-      <p>Soon</p>
+    <div className="inline-flex items-center relative h-6 -top-3 px-2 py-1 bg-gradient-to-br from-mango-red to-yellow-500
+     rounded-full">
+      <p className="text-white text-xs uppercase font-bold tracking-widest subpixel-antialiased">Soon</p>
     </div>
   )
 }
