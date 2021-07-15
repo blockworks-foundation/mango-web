@@ -49,7 +49,7 @@ module.exports = {
         675: '675px',
         700: '700px',
         750: '750px',
-        2150: '2150px',
+        1750: '1750px',
       },
       cursor: {
         help: 'help',
