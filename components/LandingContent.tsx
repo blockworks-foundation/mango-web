@@ -126,17 +126,30 @@ const LandingContent = () => {
                       .
                     </p>
                     <div className="flex flex-wrap overflow-hiddenm mt-8">
-                    <div className="w-full overflow-hidden lg:w-1/2 pr-4">
-                      <p><span className="text-th-green italic">Unrestricted</span></p>
-                      <p>During the unrestricted period users may deposit or withdraw their USDC from the vault. During the unrestricted period price can fluctuate.</p>
-                    </div>
+                      <div className="w-full overflow-hidden lg:w-1/2 pr-4">
+                        <p>
+                          <span className="text-th-green italic">
+                            Unrestricted
+                          </span>
+                        </p>
+                        <p>
+                          During the unrestricted period users may deposit or
+                          withdraw their USDC from the vault. During the
+                          unrestricted period price can fluctuate.
+                        </p>
+                      </div>
 
-                    <div className="w-full overflow-hidden lg:w-1/2">
-                      <p><span className="text-th-red italic">Restricted</span></p>
-                      <p>After 24 hours deposits will be restricted and only withdrawals allowed. During the restricted period price can only goin down.</p>
+                      <div className="w-full overflow-hidden lg:w-1/2">
+                        <p>
+                          <span className="text-th-red italic">Restricted</span>
+                        </p>
+                        <p>
+                          After 24 hours deposits will be restricted and only
+                          withdrawals allowed. During the restricted period
+                          price can only goin down.
+                        </p>
+                      </div>
                     </div>
-
-                  </div>
                   </div>
                 </div>
               </div>
