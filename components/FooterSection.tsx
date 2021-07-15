@@ -7,7 +7,7 @@ const FooterSection = () => {
         <section className="py-8 px-4">
           
           <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-              <h2 className="inline text-3xl font-extrabold tracking-tight sm:block sm:text-4xl">
+              <h2 className="inline text-3xl font-extrabold sm:block sm:text-4xl">
                 Want product news and updates? <span className="text-transparent bg-clip-text bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green sm:block sm:text-4xl">Sign up for our newsletter.</span>
               </h2>
               
