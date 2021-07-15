@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import MangoPill from '../components/MangoPill'
 import MangoSale from '../components/MangoSale'
+import Button from './Button'
 
 const NavBarBeta = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
@@ -59,7 +60,7 @@ const NavBarBeta = () => {
             <div className="-mr-2 -my-2 md:hidden">
               <button
                 type="button"
-                className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
+                className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-yellow-300"
                 onClick={toggleMobileMenu}
               >
                 <span className="sr-only">Open menu</span>
@@ -84,7 +85,7 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group  rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
+                  className="text-gray-500 group  rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-yellow-300"
                   onClick={toggleProducts}
                 >
                   <span>Products</span>
@@ -107,7 +108,7 @@ const NavBarBeta = () => {
                 <div
                   className={`${
                     !productMenuVisible && 'hidden'
-                  } absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
+                  } absolute z-50 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
                 >
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
@@ -249,7 +250,7 @@ const NavBarBeta = () => {
 
               <a
                 href="https://docs.mango.markets/"
-                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
+                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-yellow-300 rounded-md"
               >
                 Docs
               </a>
@@ -257,7 +258,7 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300"
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-yellow-300"
                   onClick={toggleSupport}
                 >
                   <span>Support</span>
@@ -344,14 +345,14 @@ const NavBarBeta = () => {
                     </div>
                     <div className="px-5 py-5 bg-th-fgd-4 sm:px-8 sm:py-8">
                       <div>
-                        <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
+                        <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                           Mango Guides
                         </h3>
                         <ul className="mt-4 space-y-4">
                           <li className="text-base truncate">
                             <a
                               href="https://docs.mango.markets/tutorials/transfer-funds-to-sollet-wallet"
-                              className="font-medium text-white hover:text-gray-700"
+                              className="font-medium text-white hover:text-gray-400"
                             >
                               Setting up a wallet
                             </a>
@@ -360,7 +361,7 @@ const NavBarBeta = () => {
                           <li className="text-base truncate">
                             <a
                               href="https://docs.mango.markets/tutorials/trade-on-mango.markets"
-                              className="font-medium text-white hover:text-gray-700"
+                              className="font-medium text-white hover:text-gray-400"
                             >
                               Getting started with Mango Markets
                             </a>
@@ -370,7 +371,7 @@ const NavBarBeta = () => {
                       <div className="mt-5 text-sm">
                         <a
                           href="https://docs.mango.markets/margin-trading/overview"
-                          className="font-medium text-yellow-300 hover:text-yellow-400"
+                          className="font-bold text-transparent bg-clip-text bg-mango-yellow hover:bg-gradient-to-br from-mango-yellow via-mango-orange to-mango-green"
                         >
                           {' '}
                           Learn more about the Mango protocol{' '}
@@ -383,7 +384,7 @@ const NavBarBeta = () => {
               </div>
               <a
                 href="https://mango-token-sale.netlify.app"
-                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-300 rounded-md"
+                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-yellow-300 rounded-md"
               >
                 <div className="flex flex-row">
                   <p>Mango DAO</p>
@@ -393,27 +394,7 @@ const NavBarBeta = () => {
             </nav>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <div>
-                <button
-                  className="inline-flex items-center w-48 pr-8 pl-6 py-2 -ml-8 text-lg text-white font-bold bg-gradient-to-br from-mango-green via-mango-green to-green-500 
-                  hover:from-yellow-100 via-lime-300 to-green-400 rounded-full transition duration-200"
-                >
-                  <span className="ml-2 pr-4">Start trading</span>
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1.6665L7.8963 7.99984L1 14.3332"
-                      stroke="white"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
+                <Button>Start trading</Button>
               </div>
             </div>
           </div>

@@ -1,3 +1,6 @@
+import Button from "./Button"
+import Link from "./Link"
+
 const HeroSectionHome = () => {
   return (
     <div className="">
@@ -20,28 +23,9 @@ const HeroSectionHome = () => {
                       Near-zero fees
                     </p>
 
-                    <div>
-                      <button className="inline-flex items-center px-8 py-2 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 hover:from-yellow-100 via-lime-300 to-green-400 rounded-full transition duration-100">
-                        <span className="pr-4">Start trading</span>
-                        <svg
-                          width="9"
-                          height="16"
-                          viewBox="0 0 9 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1 1.6665L7.8963 7.99984L1 14.3332"
-                            stroke="white"
-                            strokeWidth="3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </button>
-                      <button className="inline-flex items-center mx-4 px-8 py-2 text-lg text-gray-400 font-bold bg-gray-600 hover:bg-gray-700 hover:text-gray-100 rounded-full transition duration-100">
-                        Explore the docs
-                      </button>
+                    <div className="flex flex-row">
+                      <Button>Start trading</Button>
+                      <Link>Explore the docs</Link>
                     </div>
 
                     <p className="mt-16 text-sm text-gray-400 uppercase tracking-wide font-semibold sm:mt-16">
@@ -68,7 +52,7 @@ const HeroSectionHome = () => {
                   </div>
                 </div>
 
-                <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+                <div className="mt-16 sm:mt-24 lg:-mt-12 lg:col-span-6">
                   <div className="z-10 relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full">
                     <img
                       className="lg:h-750 lg:w-auto lg:max-w-none"
