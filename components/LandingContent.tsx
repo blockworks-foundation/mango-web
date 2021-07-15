@@ -1,3 +1,5 @@
+import Button from "./Button"
+
 const LandingContent = () => {
   return (
     <div className="bg-th-bkg-3 transform -skew-y-3 pt-12 md:pt-48 pb-32 lg:pb-48 mb-48 lg:mb-48 -mt-64">
@@ -58,24 +60,8 @@ const LandingContent = () => {
               Mango Governance tokens ($MNGO) will serve as the incentive for
               those who can proove their work is useful to the DAO.
             </p>
-            <button className="inline-flex items-center px-8 py-2 text-lg text-white font-bold bg-gradient-to-br from-yellow-200 via-lime-400 to-green-500 hover:bg-blue-600 rounded-full transition duration-200">
-              <span className="pr-4">Check out the whitepaper</span>
-              <svg
-                width="9"
-                height="16"
-                viewBox="0 0 9 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 1.6665L7.8963 7.99984L1 14.3332"
-                  stroke="white"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            <Button>Check out the whitepaper</Button>
+            
             <p className="text-white leading-relaxed py-4">
               <span className="text-yellow-300">$MNGO</span> were only provided
               to developers who helped to build out the protocol.
