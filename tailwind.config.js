@@ -14,21 +14,19 @@ module.exports = {
       sans: ['Lato', 'sans-serif'],
     },
 
-        
     screens: {
-      
-      'xs': '240px',
+      xs: '240px',
       // => @media (min-width: 340px) { ... }
-      'sm': '640px',
+      sm: '640px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      md: '768px',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      lg: '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1280px',
+      xl: '1280px',
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1536px',
@@ -57,6 +55,19 @@ module.exports = {
         help: 'help',
       },
       colors: {
+        primary: { light: '#F2C94C', dark: '#EEB91B' },
+        'secondary-1': { light: '#AFD803', dark: '#6CBF00' },
+        'secondary-2': { light: '#E54033', dark: '#C7251A' },
+        'secondary-3': { light: '#026DF7', dark: '#0259CA' },
+        'secondary-4': { light: '#262145', dark: '#1B1735' },
+        'bkg-1': '#141125',
+        'bkg-2': '#242132',
+        'bkg-3': '#393549',
+        'bkg-4': '#4F4B63',
+        'fgd-1': '#F0EDFF',
+        'fgd-2': '#FCFCFF',
+        'fgd-3': '#B9B5CE',
+        'fgd-4': '#706C81',
         'mango-orange': {
           DEFAULT: '#DFAB01',
           dark: '#CB9C01',
