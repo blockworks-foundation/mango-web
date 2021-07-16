@@ -23,7 +23,7 @@ const HeroSectionHome = () => {
                       Near-zero fees
                     </p>
 
-                    <div className="flex flex-row">
+                    <div className="flex flex-row lg:justify-start md:justify-center sm:justify-center xs:justify-start">
                       <Button>Start trading</Button>
                       <Link>Explore the docs</Link>
                     </div>
@@ -31,7 +31,7 @@ const HeroSectionHome = () => {
                     <p className="mt-16 text-sm text-gray-400 uppercase tracking-wide font-semibold sm:mt-16">
                       Powered by
                     </p>
-                    <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
+                    <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 md:w-1/2 sm:w-1/2">
                       <div className="flex">
                         <div className="flex justify-center">
                           <img
@@ -52,7 +52,7 @@ const HeroSectionHome = () => {
                   </div>
                 </div>
 
-                <div className="mt-16 sm:mt-24 lg:-mt-12 lg:col-span-6">
+                <div className="mt-16 sm:mt-24 mt- lg:-mt-20 lg:col-span-6">
                   <div className="z-10 relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full">
                     <img
                       className="lg:h-750 lg:w-auto lg:max-w-none"

@@ -1,4 +1,5 @@
-import RatePill from '../components/RatePill'
+import LendRate from '../components/LendRate'
+import BorrowRate from '../components/BorrowRate'
 import Button from './Button'
 import Link from './Link'
 import GradientText from './GradientText'
@@ -30,22 +31,22 @@ const LendSection = () => {
           <div className="flex flex-col justify-center items-center text-center">
             <div className="flex flex-col mb-8">
                 <GradientText>                
-                  <span className="text-xl font-bold leading-relaxed">
+                  <span className="text-2xl font-bold leading-relaxed">
                   Totla Value Deposited
                   </span>
                 </GradientText>
-              <div className="mt-4 flex flex-row inline-flex bg-th-fgd-4 rounded-lg py-4 px-6 h-auto w-auto">
+              <div className="mt-4 inline-flex bg-th-fgd-4 shadow-md rounded-xl py-4 px-6 h-auto w-auto">
                 <p className="px-2 text-3xl font-bold">$20,095,025.00</p>
               </div>
             </div>
 
             <div className="flex flex-col mb-12">
                 <GradientText>                
-                  <span className="text-xl font-bold leading-relaxed">
+                  <span className="text-2xl font-bold leading-relaxed">
                   Current Interest Rates
                   </span>
                 </GradientText>
-              <div className="mt-4 flex flex-row bg-th-fgd-4 rounded-lg py-4 px-6 h-auto w-auto divide-x-2 divide-gray-600 text-left">
+              <div className="mt-4 flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto divide-x-4 divide-mango-med-dark text-left">
                 <div className="flex flex-row py-4 px-6 h-auto w-auto">
                   <div className="">
                     <img
@@ -54,9 +55,13 @@ const LendSection = () => {
                       alt="BTC"
                     />
                     <p className="text-gray-500 font-bold py-1">USDC</p>
-                    <div className="flex flex-row">
+                    <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$1.00</p>
-                      <RatePill />
+                      <div>
+                      <LendRate />
+                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
+                      <BorrowRate />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -68,9 +73,13 @@ const LendSection = () => {
                       alt="BTC"
                     />
                     <p className="text-gray-500 font-bold py-1">BTC/USDC</p>
-                    <div className="flex flex-row">
+                    <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$32,234.23</p>
-                      <RatePill />
+                      <div>
+                      <LendRate />
+                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
+                      <BorrowRate />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -82,9 +91,13 @@ const LendSection = () => {
                       alt="BTC"
                     />
                     <p className="text-gray-500 font-bold py-1">ETH/USDC</p>
-                    <div className="flex flex-row">
+                    <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$2,234.23</p>
-                      <RatePill />
+                      <div>
+                      <LendRate />
+                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
+                      <BorrowRate />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -96,9 +109,13 @@ const LendSection = () => {
                       alt="BTC"
                     />
                     <p className="text-gray-500 font-bold py-1">SOL/USDC</p>
-                    <div className="flex flex-row">
+                    <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$34.23</p>
-                      <RatePill />
+                      <div>
+                      <LendRate />
+                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
+                      <BorrowRate />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -110,9 +127,13 @@ const LendSection = () => {
                       alt="BTC"
                     />
                     <p className="text-gray-500 font-bold py-1">SRM/USDC</p>
-                    <div className="flex flex-row">
+                    <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$4.23</p>
-                      <RatePill />
+                      <div>
+                      <LendRate />
+                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
+                      <BorrowRate />
+                      </div>
                     </div>
                   </div>
                 </div>

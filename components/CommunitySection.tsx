@@ -1,4 +1,5 @@
 import Button from './Button'
+import LinkLeft from './LinkLeft'
 import Link from './Link'
 
 const CommunitySection = () => {
@@ -29,7 +30,7 @@ const CommunitySection = () => {
               <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-4">
                 <div className="col-span-1 flex md:col-span-2 lg:col-span-1">
 
-                  <div className="flex flex-col bg-th-fgd-4 rounded-lg py-8 px-8 h-auto w-auto ">
+                  <div className="flex flex-col bg-th-fgd-4 py-8 px-8 h-auto w-auto shadow-md rounded-xl">
                       <svg 
                           width="31" 
                           height="31" 
@@ -51,7 +52,7 @@ const CommunitySection = () => {
                         <p className="text-lg font-bold py-6 pb-2">Open by default</p>
                         <div className="flex flex-col">
                           <p className="text-md text-gray-500 pb-2">All pieces of the mango protocol puzzle are completely open source. Run it, mod it, improve it, we are a community driven organization.</p>
-                          <Link>Find us on github</Link>
+                          <LinkLeft>Find us on github</LinkLeft>
                         </div>
                       </div>
 
@@ -59,7 +60,7 @@ const CommunitySection = () => {
 
                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 
-                  <div className="flex flex-col bg-th-fgd-4 rounded-lg py-8 px-8 h-auto w-auto ">
+                  <div className="flex flex-col bg-th-fgd-4 py-8 px-8 h-auto w-auto shadow-md rounded-xl">
                   <svg 
                           width="31" 
                           height="32" 
@@ -82,7 +83,7 @@ const CommunitySection = () => {
                         <p className="text-lg font-bold py-6 pb-2">Liquidator Program</p>
                         <div className="flex flex-col">
                           <p className="text-md text-gray-500 pb-2">Liquidators are an important part in a trading ecosystem, help ensure the protocol funds stay safe even when borrowers default.</p>
-                          <Link>Become a liquidator</Link>
+                          <LinkLeft>Become a liquidator</LinkLeft>
                         </div>
                       </div>
 
@@ -90,7 +91,7 @@ const CommunitySection = () => {
 
                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 
-                    <div className="flex flex-col bg-th-fgd-4 rounded-lg py-8 px-8 h-auto w-auto ">
+                    <div className="flex flex-col bg-th-fgd-4 py-8 px-8 h-auto w-auto shadow-md rounded-xl">
                     <svg 
                           width="32" 
                           height="32" 
@@ -113,14 +114,14 @@ const CommunitySection = () => {
                         <p className="text-lg font-bold py-6 pb-2">Market Making</p>
                         <div className="flex flex-col">
                           <p className="text-md text-gray-500 pb-2">Learn about market making on the mango protocol and earn $MNGO in return for providing liquidaty and stability to the mango markets.</p>
-                          <Link>Become a market maker</Link>
+                          <LinkLeft>Become a market maker</LinkLeft>
                         </div>
                       </div>
 
                 </div>
                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 
-                    <div className="flex flex-col bg-th-fgd-4 rounded-lg py-8 px-8 h-auto w-auto ">
+                    <div className="flex flex-col bg-th-fgd-4 py-8 px-8 h-auto w-auto shadow-md rounded-xl">
                     <svg 
                           width="32" 
                           height="32" 
@@ -177,8 +178,8 @@ const CommunitySection = () => {
 
                         <p className="text-lg font-bold py-6 pb-2">Want to help build?</p>
                         <div className="flex flex-col">
-                          <p className="text-md text-gray-500 pb-2">Well we are actively looking for motivated contributors to help grow the protocol. Mango is a community driven effort to build comercially viable decentralized trading tools.</p>
-                          <Link>Become a contributor</Link>
+                          <p className="text-md text-gray-500 pb-2">We are happy to onboard new contributs! Mango is community driven effort to build comercially viable decentralized trading products.</p>
+                          <LinkLeft>Become a contributor</LinkLeft>
                         </div>
                       </div>
 
