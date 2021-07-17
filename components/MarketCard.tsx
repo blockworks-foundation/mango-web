@@ -55,40 +55,40 @@ const MarketCard = (props: MarketCardProps) => {
 
   return (
     <div className="col-span-1 flex md:col-span-2 lg:col-span-1">
-      <a href="#">
-        <div className="flex flex-row bg-th-fgd-4 rounded-lg py-4 px-4 h-auto w-auto">
-          <div className="pr-4 border-r-2 border-white border-opacity-10">
-            <img className="h-6" src={props.icon} alt={props.name} />
-            <p className="text-gray-500 font-bold py-1">{props.name}</p>
-            <div className="flex flex-row">
-              <p className="font-bold text-xl pr-2">${formatUsd(price)}</p>
-              <PercentPill value={change} />
-            </div>
-          </div>
-          <div className="flex align-middle pl-4">
-            {graph.length > 0 && (
-              <AreaChart width={90} height={90} data={graph}>
-                <ReferenceLine
-                  y={0}
-                  stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
-                  strokeDasharray="3 3"
-                  strokeOpacity={0.6}
-                />
-                <Area
-                  isAnimationActive={false}
-                  type="monotone"
-                  dataKey="p"
-                  stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
-                  fill={colors[`secondary-${change > 0 ? 1 : 2}`].dark}
-                  fillOpacity={0.1}
-                />
-                <XAxis dataKey="t" hide />
-                <YAxis dataKey="p" hide />
-              </AreaChart>
-            )}
+      {/* <a href="#"> */}
+      <div className="flex flex-row bg-th-fgd-4 rounded-lg py-4 px-4 h-auto w-auto">
+        <div className="pr-4 border-r-2 border-white border-opacity-10">
+          <img className="h-6" src={props.icon} alt={props.name} />
+          <p className="text-gray-500 font-bold py-1">{props.name}</p>
+          <div className="flex flex-row">
+            <p className="font-bold text-xl pr-2">${formatUsd(price)}</p>
+            <PercentPill value={change} />
           </div>
         </div>
-      </a>
+        <div className="flex align-middle pl-4">
+          {graph.length > 0 && (
+            <AreaChart width={90} height={90} data={graph}>
+              <ReferenceLine
+                y={0}
+                stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
+                strokeDasharray="3 3"
+                strokeOpacity={0.6}
+              />
+              <Area
+                isAnimationActive={false}
+                type="monotone"
+                dataKey="p"
+                stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
+                fill={colors[`secondary-${change > 0 ? 1 : 2}`].dark}
+                fillOpacity={0.1}
+              />
+              <XAxis dataKey="t" hide />
+              <YAxis dataKey="p" hide />
+            </AreaChart>
+          )}
+        </div>
+      </div>
+      {/* </a> */}
     </div>
   )
 }
