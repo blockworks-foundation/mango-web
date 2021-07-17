@@ -1,6 +1,6 @@
 import moment from 'moment'
-import { useEffect, useMemo, useState } from 'react'
-import { AreaChart, Area, ReferenceLine, XAxis, YAxis, Tooltip } from 'recharts'
+import { useEffect, useState } from 'react'
+import { AreaChart, Area, ReferenceLine, XAxis, YAxis } from 'recharts'
 import tailwindConfig from '../tailwind.config.js'
 
 import PercentPill from './PercentPill'
@@ -9,14 +9,6 @@ interface MarketCardProps {
   name: string
   icon: string
   decimals: number
-}
-
-interface CandleResponse {
-  t: number[]
-  c: number[]
-  o: number[]
-  h: number[]
-  l: number[]
 }
 
 const MarketCard = (props: MarketCardProps) => {

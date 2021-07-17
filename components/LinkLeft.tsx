@@ -1,7 +1,6 @@
 import { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import tw from 'twin.macro'
-import GradientText from './GradientText'
 
 const StyledButton = styled.a`
   font-weight: 700;
