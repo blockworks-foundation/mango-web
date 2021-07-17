@@ -1,4 +1,4 @@
-import PercentPill from '../components/PercentPill'
+import MarketCard from './MarketCard'
 import Button from './Button'
 import GradientText from './GradientText'
 import Link from './Link'
@@ -11,101 +11,34 @@ const TradeSection = () => {
           <section className="py-12 px-3 lg:mt-0 md: mt-0 sm:mt-28 ">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-4">
-                <div className="col-span-1 flex md:col-span-2 lg:col-span-1">
-                  <a href="#">
-                    <div className="flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto">
-                      <div className="pr-6 border-r-4 border-white border-opacity-10">
-                        <img
-                          className="h-6"
-                          src="../token/icon-btc.svg"
-                          alt="BTC"
-                        />
-                        <p className="text-gray-500 font-bold py-1">BTC/USD</p>
-                        <div className="flex flex-row">
-                          <p className="font-bold text-xl pr-2">$32,234.23</p>
-                          <PercentPill />
-                        </div>
-                      </div>
-                      <div className="flex align-middle pl-6">
-                        <img className="h-auto" src="../graph_red.svg" alt="" />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <a href="#">
-                    <div className="flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto">
-                      <div className="pr-6 border-r-4 border-white border-opacity-10">
-                        <img
-                          className="h-6"
-                          src="../token/icon-eth.svg"
-                          alt="ETH"
-                        />
-                        <p className="text-gray-500 font-bold py-1">ETH/USD</p>
-                        <div className="flex flex-row">
-                          <p className="font-bold text-xl pr-2">$2,234.23</p>
-                          <PercentPill />
-                        </div>
-                      </div>
-                      <div className="flex align-middle pl-6">
-                        <img
-                          className="h-auto"
-                          src="../graph_green.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <a href="#">
-                    <div className="flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto">
-                      <div className="pr-6 border-r-4 border-white border-opacity-10">
-                        <img
-                          className="h-6"
-                          src="../token/icon-sol.svg"
-                          alt="SOL"
-                        />
-                        <p className="text-gray-500 font-bold py-1">SOL/USD</p>
-                        <div className="flex flex-row">
-                          <p className="font-bold text-xl pr-2">$34.23</p>
-                          <PercentPill />
-                        </div>
-                      </div>
-                      <div className="flex align-middle pl-6">
-                        <img className="h-auto" src="../graph_red.svg" alt="" />
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <a href="#">
-                    <div className="flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto">
-                      <div className="pr-6 border-r-4 border-white border-opacity-10">
-                        <img
-                          className="h-6"
-                          src="../token/icon-srm.svg"
-                          alt="SRM"
-                        />
-                        <p className="text-gray-500 font-bold py-1">SRM/USD</p>
-                        <div className="flex flex-row">
-                          <p className="font-bold text-xl pr-3">$4.23</p>
-                          <PercentPill />
-                        </div>
-                      </div>
-                      <div className="flex align-middle pl-6">
-                        <img
-                          className="h-auto"
-                          src="../graph_green.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                <MarketCard
+                  name="BTC/USDC"
+                  icon="../token/icon-btc.svg"
+                  price={32234.23}
+                  decimals={2}
+                  change={1}
+                />
+                <MarketCard
+                  name="ETH/USDC"
+                  icon="../token/icon-eth.svg"
+                  price={2234.23}
+                  decimals={2}
+                  change={-3}
+                />
+                <MarketCard
+                  name="SOL/USDC"
+                  icon="../token/icon-sol.svg"
+                  price={34.23}
+                  decimals={2}
+                  change={3}
+                />
+                <MarketCard
+                  name="SRM/USDC"
+                  icon="../token/icon-srm.svg"
+                  price={32234.23}
+                  decimals={2}
+                  change={-3}
+                />
               </div>
             </div>
           </section>
@@ -124,18 +57,18 @@ const TradeSection = () => {
                   </p>
                 </div>
                 <div className="flex flex-row justify-center">
-                      <Button>Start trading</Button>
-                      <Link>Why choose Mango Markets</Link>
-                    </div>
+                  <Button>Start trading</Button>
+                  <Link>Why choose Mango Markets</Link>
+                </div>
               </div>
             </div>
           </section>
           <section className="px-3">
             <div className="flex flex-wrap justify-center items-center text-center">
               <div className="flex flex-col">
-                <GradientText>                
+                <GradientText>
                   <span className="text-2xl font-bold leading-relaxed">
-                  Volume
+                    Volume
                   </span>
                 </GradientText>
 
