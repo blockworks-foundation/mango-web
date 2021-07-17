@@ -1,6 +1,6 @@
 import MarketCard from './MarketCard'
 import Button from './Button'
-import GradientText from './GradientText'
+//import GradientText from './GradientText'
 import Link from './Link'
 
 const TradeSection = () => {
@@ -55,7 +55,7 @@ const TradeSection = () => {
               </div>
             </div>
           </section>
-          <section className="px-3">
+          {/* <section className="px-3">
             <div className="flex flex-wrap justify-center items-center text-center">
               <div className="flex flex-col">
                 <GradientText>
@@ -82,7 +82,7 @@ const TradeSection = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
           <div className="w-screen relative top-12 -left-40">
             <img alt="modals" src="../img/home_section.png" />
           </div>
