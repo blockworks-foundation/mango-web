@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import tw from 'twin.macro'
 
 export const idleGradient =
-  'bg-gradient-to-r from-secondary-2-light to-primary-light'
+  'bg-gradient-to-r from-secondary-2-light to-primary-dark'
 export const activeGradient =
   'bg-gradient-to-bl from-secondary-1-light via-primary-dark to-secondary-2-light'
 

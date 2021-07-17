@@ -19,7 +19,7 @@ const CommunitySection = () => {
                   and contribute.{' '}
                 </p>
                 <div className="flex flex-row justify-center">
-                  <Button>Joine the discord</Button>
+                  <Button>Join the discord</Button>
                   <Link>Explore the docs</Link>
                 </div>
               </div>
