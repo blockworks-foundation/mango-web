@@ -14,30 +14,22 @@ const TradeSection = () => {
                 <MarketCard
                   name="BTC/USDC"
                   icon="../token/icon-btc.svg"
-                  price={32234.23}
                   decimals={2}
-                  change={1}
                 />
                 <MarketCard
                   name="ETH/USDC"
                   icon="../token/icon-eth.svg"
-                  price={2234.23}
                   decimals={2}
-                  change={-3}
                 />
                 <MarketCard
                   name="SOL/USDC"
                   icon="../token/icon-sol.svg"
-                  price={34.23}
                   decimals={2}
-                  change={3}
                 />
                 <MarketCard
                   name="SRM/USDC"
                   icon="../token/icon-srm.svg"
-                  price={32234.23}
                   decimals={2}
-                  change={-3}
                 />
               </div>
             </div>

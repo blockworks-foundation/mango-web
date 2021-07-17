@@ -1,4 +1,4 @@
-import Button from "./Button"
+import Button from './Button'
 
 const LandingContent = () => {
   return (
@@ -61,7 +61,7 @@ const LandingContent = () => {
               those who can proove their work is useful to the DAO.
             </p>
             <Button>Check out the whitepaper</Button>
-            
+
             <p className="text-white leading-relaxed py-4">
               <span className="text-yellow-300">$MNGO</span> were only provided
               to developers who helped to build out the protocol.

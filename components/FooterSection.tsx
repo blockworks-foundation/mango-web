@@ -26,7 +26,9 @@ const FooterSection = () => {
                 placeholder="Enter your email"
               />
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <Button><span className="">Sign me up!</span></Button>
+                <Button>
+                  <span className="">Sign me up!</span>
+                </Button>
               </div>
             </form>
             <div className="w-full mt-4">

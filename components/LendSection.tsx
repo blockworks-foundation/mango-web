@@ -20,9 +20,9 @@ const LendSection = () => {
                 and the Solana ecosystem.
               </p>
               <div className="flex flex-row justify-center">
-                      <Button>Start Lending & borrowing</Button>
-                      <Link>Why lend & borrow using Mango</Link>
-                    </div>
+                <Button>Start Lending & borrowing</Button>
+                <Link>Why lend & borrow using Mango</Link>
+              </div>
             </div>
           </div>
         </section>
@@ -30,22 +30,22 @@ const LendSection = () => {
         <section className="px-3 mt-28">
           <div className="flex flex-col justify-center items-center text-center">
             <div className="flex flex-col mb-8">
-                <GradientText>                
-                  <span className="text-2xl font-bold leading-relaxed">
+              <GradientText>
+                <span className="text-2xl font-bold leading-relaxed">
                   Totla Value Deposited
-                  </span>
-                </GradientText>
+                </span>
+              </GradientText>
               <div className="mt-4 inline-flex bg-th-fgd-4 shadow-md rounded-xl py-4 px-6 h-auto w-auto">
                 <p className="px-2 text-3xl font-bold">$20,095,025.00</p>
               </div>
             </div>
 
             <div className="flex flex-col mb-12">
-                <GradientText>                
-                  <span className="text-2xl font-bold leading-relaxed">
+              <GradientText>
+                <span className="text-2xl font-bold leading-relaxed">
                   Current Interest Rates
-                  </span>
-                </GradientText>
+                </span>
+              </GradientText>
               <div className="mt-4 flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto divide-x-4 divide-mango-med-dark text-left">
                 <div className="flex flex-row py-4 px-6 h-auto w-auto">
                   <div className="">
@@ -58,9 +58,11 @@ const LendSection = () => {
                     <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$1.00</p>
                       <div>
-                      <LendRate />
-                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
-                      <BorrowRate />
+                        <LendRate />
+                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
+                          |
+                        </span>
+                        <BorrowRate />
                       </div>
                     </div>
                   </div>
@@ -76,9 +78,11 @@ const LendSection = () => {
                     <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$32,234.23</p>
                       <div>
-                      <LendRate />
-                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
-                      <BorrowRate />
+                        <LendRate />
+                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
+                          |
+                        </span>
+                        <BorrowRate />
                       </div>
                     </div>
                   </div>
@@ -94,9 +98,11 @@ const LendSection = () => {
                     <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$2,234.23</p>
                       <div>
-                      <LendRate />
-                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
-                      <BorrowRate />
+                        <LendRate />
+                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
+                          |
+                        </span>
+                        <BorrowRate />
                       </div>
                     </div>
                   </div>
@@ -112,9 +118,11 @@ const LendSection = () => {
                     <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$34.23</p>
                       <div>
-                      <LendRate />
-                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
-                      <BorrowRate />
+                        <LendRate />
+                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
+                          |
+                        </span>
+                        <BorrowRate />
                       </div>
                     </div>
                   </div>
@@ -130,9 +138,11 @@ const LendSection = () => {
                     <div className="flex flex-col">
                       <p className="font-bold text-xl pr-2">$4.23</p>
                       <div>
-                      <LendRate />
-                      <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">|</span>
-                      <BorrowRate />
+                        <LendRate />
+                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
+                          |
+                        </span>
+                        <BorrowRate />
                       </div>
                     </div>
                   </div>

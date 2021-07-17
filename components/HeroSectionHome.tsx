@@ -1,5 +1,5 @@
-import Button from "./Button"
-import Link from "./Link"
+import Button from './Button'
+import Link from './Link'
 
 const HeroSectionHome = () => {
   return (
