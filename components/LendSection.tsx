@@ -1,10 +1,58 @@
-import LendRate from '../components/LendRate'
-import BorrowRate from '../components/BorrowRate'
+import { useEffect, useState } from 'react'
+import BankCard from './BankCard'
 import Button from './Button'
 import Link from './Link'
-import GradientText from './GradientText'
+//import GradientText from './GradientText'
 
 const LendSection = () => {
+  const [stats, setStats] = useState([])
+  const [prices, setPrices] = useState([])
+
+  useEffect(() => {
+    const loadStats = async () => {
+      const response = await fetch(
+        'https://mango-stats.herokuapp.com/?mangoGroup=BTC_ETH_SOL_SRM_USDC'
+      )
+      setStats(await response.json())
+    }
+    loadStats()
+  }, [])
+
+  useEffect(() => {
+    const loadPrices = async () => {
+      const response = await fetch(
+        `https://mango-transaction-log.herokuapp.com/stats/prices/2oogpTYm1sp6LPZAWD3bp2wsFpnV2kXL1s52yyFhW5vp`
+      )
+      const prices = await response.json()
+      setPrices(prices)
+    }
+    loadPrices()
+  }, [])
+
+  const propsFor = (symbol) => {
+    const filtered = stats.filter((s) => s.symbol == symbol)
+    if (filtered.length < 1)
+      return {
+        name: symbol,
+        icon: `../token/icon-${symbol.toLowerCase()}.svg`,
+        interest: { deposit: 0, borrow: 0 },
+        liquidity: { native: 0, usd: 0 },
+      }
+
+    const lastStats = filtered[filtered.length - 1]
+    const lastPrice = symbol == 'USDC' ? 1 : prices[symbol][lastStats.hourly]
+    const native = lastStats.totalDeposits // - lastStats.totalBorrows
+    return {
+      name: symbol,
+      icon: `../token/icon-${symbol.toLowerCase()}.svg`,
+      interest: {
+        deposit: lastStats.depositInterest * 100,
+        borrow: lastStats.borrowInterest * 100,
+      },
+      liquidity: { native, usd: native * lastPrice },
+    }
+  }
+
   return (
     <div className="">
       <div className="max-w-7xl mx-auto px-4">
@@ -20,8 +68,8 @@ const LendSection = () => {
                 and the Solana ecosystem.
               </p>
               <div className="flex flex-row justify-center">
-                <Button>Start Lending & borrowing</Button>
-                <Link>Why lend & borrow using Mango</Link>
+                <Button>Start lending & borrowing</Button>
+                <Link>Learn more</Link>
               </div>
             </div>
           </div>
@@ -29,124 +77,29 @@ const LendSection = () => {
 
         <section className="px-3 mt-28">
           <div className="flex flex-col justify-center items-center text-center">
-            <div className="flex flex-col mb-8">
+            {/* <div className="flex flex-col mb-8">
               <GradientText>
                 <span className="text-2xl font-bold leading-relaxed">
-                  Totla Value Deposited
+                  Total Value Deposited
                 </span>
               </GradientText>
               <div className="mt-4 inline-flex bg-th-fgd-4 shadow-md rounded-xl py-4 px-6 h-auto w-auto">
                 <p className="px-2 text-3xl font-bold">$20,095,025.00</p>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex flex-col mb-12">
-              <GradientText>
+              {/* <GradientText>
                 <span className="text-2xl font-bold leading-relaxed">
-                  Current Interest Rates
+                  Liquidity Available
                 </span>
-              </GradientText>
-              <div className="mt-4 flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto divide-x-4 divide-mango-med-dark text-left">
-                <div className="flex flex-row py-4 px-6 h-auto w-auto">
-                  <div className="">
-                    <img
-                      className="h-6"
-                      src="../token/icon-usdc.svg"
-                      alt="BTC"
-                    />
-                    <p className="text-gray-500 font-bold py-1">USDC</p>
-                    <div className="flex flex-col">
-                      <p className="font-bold text-xl pr-2">$1.00</p>
-                      <div>
-                        <LendRate />
-                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
-                          |
-                        </span>
-                        <BorrowRate />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-row py-4 px-6 h-auto w-auto">
-                  <div className="">
-                    <img
-                      className="h-6"
-                      src="../token/icon-btc.svg"
-                      alt="BTC"
-                    />
-                    <p className="text-gray-500 font-bold py-1">BTC/USDC</p>
-                    <div className="flex flex-col">
-                      <p className="font-bold text-xl pr-2">$32,234.23</p>
-                      <div>
-                        <LendRate />
-                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
-                          |
-                        </span>
-                        <BorrowRate />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-row py-4 px-6 h-auto w-auto">
-                  <div className="">
-                    <img
-                      className="h-6"
-                      src="../token/icon-eth.svg"
-                      alt="BTC"
-                    />
-                    <p className="text-gray-500 font-bold py-1">ETH/USDC</p>
-                    <div className="flex flex-col">
-                      <p className="font-bold text-xl pr-2">$2,234.23</p>
-                      <div>
-                        <LendRate />
-                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
-                          |
-                        </span>
-                        <BorrowRate />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-row py-4 px-6 h-auto w-auto">
-                  <div className="">
-                    <img
-                      className="h-6"
-                      src="../token/icon-sol.svg"
-                      alt="BTC"
-                    />
-                    <p className="text-gray-500 font-bold py-1">SOL/USDC</p>
-                    <div className="flex flex-col">
-                      <p className="font-bold text-xl pr-2">$34.23</p>
-                      <div>
-                        <LendRate />
-                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
-                          |
-                        </span>
-                        <BorrowRate />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex flex-row py-4 px-6 h-auto w-auto">
-                  <div className="">
-                    <img
-                      className="h-6"
-                      src="../token/icon-srm.svg"
-                      alt="BTC"
-                    />
-                    <p className="text-gray-500 font-bold py-1">SRM/USDC</p>
-                    <div className="flex flex-col">
-                      <p className="font-bold text-xl pr-2">$4.23</p>
-                      <div>
-                        <LendRate />
-                        <span className="p-2 font-bold text-2xl relative top-1 text-white text-opacity-10">
-                          |
-                        </span>
-                        <BorrowRate />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </GradientText> */}
+              <div className="mt-4 flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto divide-x-2 divide-mango-med-dark text-left">
+                <BankCard {...propsFor('USDC')} />
+                <BankCard {...propsFor('BTC')} />
+                <BankCard {...propsFor('ETH')} />
+                <BankCard {...propsFor('SOL')} />
+                <BankCard {...propsFor('SRM')} />
               </div>
             </div>
           </div>

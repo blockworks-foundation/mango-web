@@ -12,7 +12,14 @@ interface MarketCardProps {
 }
 
 const MarketCard = (props: MarketCardProps) => {
-  const [candles, setCandles] = useState({ t: [], c: [], o: [], h: [], l: [] })
+  const [candles, setCandles] = useState({
+    t: [],
+    c: [],
+    o: [],
+    h: [],
+    l: [],
+    v: [],
+  })
 
   useEffect(() => {
     const loadCandles = async () => {
@@ -37,6 +44,7 @@ const MarketCard = (props: MarketCardProps) => {
   const price = candles.c.length > 0 ? candles.c[candles.c.length - 1] : 0
   const change =
     candles.o.length > 0 ? ((price - candles.c[0]) / candles.c[0]) * 100 : 0
+  const volume = candles.v.reduce((a, b) => a + b, 0)
   const graph =
     candles.t.length > 0
       ? candles.t.map((t, i) => ({
@@ -45,8 +53,8 @@ const MarketCard = (props: MarketCardProps) => {
         }))
       : []
 
-  const formatUsd = (val: number) => {
-    const significance = Math.pow(10, props.decimals)
+  const format = (val: number, decimals = 0) => {
+    const significance = Math.pow(10, decimals)
     const roundedVal = Math.round(val * significance) / significance
     return new Intl.NumberFormat('en-US').format(roundedVal)
   }
@@ -54,20 +62,28 @@ const MarketCard = (props: MarketCardProps) => {
   const colors = tailwindConfig.theme.extend.colors
 
   return (
-    <div className="col-span-1 flex md:col-span-2 lg:col-span-1">
-      {/* <a href="#"> */}
+    <div className="col-span-2 sm:col-span-1">
       <div className="flex flex-row bg-th-fgd-4 rounded-lg py-4 px-4 h-auto w-auto">
         <div className="pr-4 border-r-2 border-white border-opacity-10">
-          <img className="h-6" src={props.icon} alt={props.name} />
-          <p className="text-gray-500 font-bold py-1">{props.name}</p>
-          <div className="flex flex-row">
-            <p className="font-bold text-xl pr-2">${formatUsd(price)}</p>
+          <div className="">
+            <img
+              className="inline-block h-5 w-5 mr-1"
+              src={props.icon}
+              alt={props.name}
+            />
+            <p className="inline-block align-middle">{props.name}</p>
+          </div>
+          <div className="flex flex-row gap-x-2">
+            <p className="text-xl">${format(price, props.decimals)}</p>
             <PercentPill value={change} />
+          </div>
+          <div className="mt-1 text-xs">
+            Volume: {format(volume)} {props.name.split('/')[0]}
           </div>
         </div>
         <div className="flex align-middle pl-4">
           {graph.length > 0 && (
-            <AreaChart width={90} height={90} data={graph}>
+            <AreaChart width={80} height={80} data={graph}>
               <ReferenceLine
                 y={0}
                 stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
@@ -88,7 +104,6 @@ const MarketCard = (props: MarketCardProps) => {
           )}
         </div>
       </div>
-      {/* </a> */}
     </div>
   )
 }

@@ -1,10 +1,11 @@
 interface PercentPillProps {
   value: number
   className?: string
+  bg?: string
 }
 
 const PercentPill = (props: PercentPillProps) => {
-  const bg = props.value > 0 ? 'bg-green-500' : 'bg-red-500'
+  const bg = props.bg || (props.value > 0 ? 'bg-green-500' : 'bg-mango-red')
   const displayValue = props.value.toFixed(props.value > 10 ? 0 : 1)
 
   return (

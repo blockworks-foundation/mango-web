@@ -50,7 +50,7 @@ const TradeSection = () => {
                 </div>
                 <div className="flex flex-row justify-center">
                   <Button>Start trading</Button>
-                  <Link>Why choose Mango Markets</Link>
+                  <Link>Learn More</Link>
                 </div>
               </div>
             </div>
