@@ -34,18 +34,22 @@ const HeroSectionHome = () => {
                     <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 md:w-1/2 sm:w-1/2">
                       <div className="flex">
                         <div className="flex justify-center">
-                          <img
-                            className="h-8 sm:h-8"
-                            src="../logo_solana.svg"
-                            alt="Solana"
-                          />
+                          <a className="hover:opacity-70" href="https://solana.com/">
+                            <img
+                              className="h-8 sm:h-8"
+                              src="../logo_solana.svg"
+                              alt="Solana"
+                            />
+                          </a>
                         </div>
                         <div className="flex justify-center -my-1 mx-10">
-                          <img
-                            className="h-9 sm:h-10"
-                            src="../logo_serum.svg"
-                            alt="Serum"
-                          />
+                          <a className="hover:opacity-70" href="https://projectserum.com/#/">
+                            <img
+                              className="h-9 sm:h-10"
+                              src="../logo_serum.svg"
+                              alt="Serum"
+                            />
+                          </a>
                         </div>
                       </div>
                     </div>

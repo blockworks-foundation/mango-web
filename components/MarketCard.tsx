@@ -1,6 +1,6 @@
 import moment from 'moment'
 import { useEffect, useState } from 'react'
-import { AreaChart, Area, ReferenceLine, XAxis, YAxis } from 'recharts'
+import { AreaChart, Area, ReferenceLine, XAxis, YAxis, ResponsiveContainer} from 'recharts'
 import tailwindConfig from '../tailwind.config.js'
 
 import PercentPill from './PercentPill'
@@ -62,10 +62,10 @@ const MarketCard = (props: MarketCardProps) => {
   const colors = tailwindConfig.theme.extend.colors
 
   return (
-    <div className="col-span-2 sm:col-span-1">
-      <div className="flex flex-row bg-th-fgd-4 rounded-lg py-4 px-4 h-auto w-auto shadow-md">
-        <div className="pr-4 border-r-2 border-white border-opacity-10">
-          <div className="">
+    <div className="lg:col-span-1 md:col-span-2 sm:col-span-1">
+      <div className="flex lg:flex-row md:flex-row sm:flex-row xs:flex-col-reverse bg-th-fgd-4 rounded-lg py-4 px-4 h-auto w-full shadow-md lg:divide-x-2 md:divide-x-2 sm:divide-x-2 divide-white divide-opacity-10">
+        <div className="p-2">
+          <div className="pr-6">
             <img
               className="inline-block h-5 w-5 mr-1"
               src={props.icon}
@@ -73,34 +73,38 @@ const MarketCard = (props: MarketCardProps) => {
             />
             <p className="inline-block align-middle">{props.name}</p>
           </div>
-          <div className="flex flex-row gap-x-2">
+          <div className="flex flex-row flex-wrap gap-x-2">
             <p className="text-xl">${format(price, props.decimals)}</p>
             <PercentPill value={change} />
           </div>
-          <div className="mt-1 text-xs">
-            Volume: {format(volume)} {props.name.split('/')[0]}
+          <div className="mt-2 text-md">
+            <p className="text-white text-opacity-40">Volume:</p> {format(volume)} {props.name.split('/')[0]}
           </div>
         </div>
         <div className="flex align-middle pl-4">
           {graph.length > 0 && (
-            <AreaChart width={80} height={80} data={graph}>
-              <ReferenceLine
-                y={0}
-                stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
-                strokeDasharray="3 3"
-                strokeOpacity={0.6}
-              />
-              <Area
-                isAnimationActive={false}
-                type="monotone"
-                dataKey="p"
-                stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
-                fill={colors[`secondary-${change > 0 ? 1 : 2}`].dark}
-                fillOpacity={0.1}
-              />
-              <XAxis dataKey="t" hide />
-              <YAxis dataKey="p" hide />
-            </AreaChart>
+            <ResponsiveContainer width={80} height={80}>
+              <AreaChart data={graph}>
+                <ReferenceLine
+                  y={0}
+                  stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
+                  strokeDasharray="3 3"
+                  strokeOpacity={0.6}
+                />
+                <Area
+                  isAnimationActive={false}
+                  type="monotone"
+                  dataKey="p"
+                  stroke={colors[`secondary-${change > 0 ? 1 : 2}`].light}
+                  fill={colors[`secondary-${change > 0 ? 1 : 2}`].dark}
+                  fillOpacity={0.1}
+                />
+                <XAxis dataKey="t" hide />
+                <YAxis dataKey="p" hide />
+              </AreaChart>
+            </ResponsiveContainer>
+
+
           )}
         </div>
       </div>
