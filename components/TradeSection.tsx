@@ -64,7 +64,7 @@ const TradeSection = () => {
                   </span>
                 </GradientText>
 
-                <div className="mt-4 flex flex-row bg-th-fgd-4 shadow-md rounded-xl pt-5 pb-4 px-8 h-auto w-auto divide-x-4 divide-mango-med-dark">
+                <div className="mt-4 flex flex-row bg-th-fgd-4 shadow-md rounded-xl pt-5 pb-4 px-8 h-auto w-auto divide-x-2 divide-white divide-opacity-10">
                   <div className="flex-1 inline-flex pr-4">
                     <p className="px-2">1.3M</p>
                     <p className="text-mango-yellow font-bold py-1 -mt-1">D</p>
