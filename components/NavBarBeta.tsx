@@ -405,7 +405,7 @@ const NavBarBeta = () => {
         <div
           className={`${
             !mobileMenuVisible && 'hidden'
-          } absolute top-0 inset-x-0 p-2 transition transform origin-top-right z-10`}
+          } absolute top-0 inset-x-0 p-2 transition transform origin-top-right z-50`}
         >
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-th-bkg-3">
             <div className="pt-5 pb-6 px-5">
