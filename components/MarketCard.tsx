@@ -62,10 +62,10 @@ const MarketCard = (props: MarketCardProps) => {
   const colors = tailwindConfig.theme.extend.colors
 
   return (
-    <div className="lg:col-span-1 md:col-span-2 sm:col-span-1">
+    <div className="flex-1 m-4">
       <div className="flex lg:flex-row md:flex-row sm:flex-row xs:flex-col-reverse bg-th-fgd-4 rounded-lg py-4 px-4 h-auto w-full shadow-md lg:divide-x-2 md:divide-x-2 sm:divide-x-2 divide-white divide-opacity-10">
-        <div className="p-2">
-          <div className="pr-6">
+        <div className="">
+          <div className="">
             <img
               className="inline-block h-5 w-5 mr-1"
               src={props.icon}
@@ -81,7 +81,7 @@ const MarketCard = (props: MarketCardProps) => {
             <p className="text-white text-opacity-40">Volume:</p> {format(volume)} {props.name.split('/')[0]}
           </div>
         </div>
-        <div className="flex align-middle pl-4">
+        <div className="flex align-middle">
           {graph.length > 0 && (
             <ResponsiveContainer width={80} height={80}>
               <AreaChart data={graph}>

@@ -10,7 +10,7 @@ const TradeSection = () => {
         <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
           <section className="py-12 px-3 lg:mt-0 md:mt-0 sm:mt-28 ">
             <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-4">
+              <div className="flex flex-wrap">
                 <MarketCard
                   name="BTC/USDC"
                   icon="../token/icon-btc.svg"
