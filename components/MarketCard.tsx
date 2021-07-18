@@ -63,7 +63,7 @@ const MarketCard = (props: MarketCardProps) => {
 
   return (
     <div className="col-span-2 sm:col-span-1">
-      <div className="flex flex-row bg-th-fgd-4 rounded-lg py-4 px-4 h-auto w-auto">
+      <div className="flex flex-row bg-th-fgd-4 rounded-lg py-4 px-4 h-auto w-auto shadow-md">
         <div className="pr-4 border-r-2 border-white border-opacity-10">
           <div className="">
             <img
