@@ -69,7 +69,7 @@ const MarketCard = (props: MarketCardProps) => {
   const colors = tailwindConfig.theme.extend.colors
 
   return (
-    <div className="m-4 w-full md:w-60">
+    <div className="flex-1 m-4">
       <div className="flex flex-col bg-th-fgd-4 rounded-xl py-4 px-4 h-auto shadow-md">
         <div className="flex flex-row gap-x-2 align-bottom">
           <div className="flex flex-col flex-auto">
@@ -104,8 +104,8 @@ const MarketCard = (props: MarketCardProps) => {
 
         <div className="flex flex-row gap-x-2 mt-1 items-center">
           <PercentPill value={change} />
-          <p className="text-sm text-white text-opacity-70">
-            Vol: {format(volume)} {props.name.split('/')[0]}
+          <p className="text-sm mt-1">
+            <span className="text-white text-opacity-50">Vol:</span> {format(volume)} {props.name.split('/')[0]}
           </p>
         </div>
       </div>
