@@ -5,8 +5,8 @@ import Link from './Link'
 //import GradientText from './GradientText'
 
 const LendSection = () => {
-  const [stats, setStats] = useState([])
-  const [prices, setPrices] = useState([])
+  const [stats, setStats] = useState(null)
+  const [prices, setPrices] = useState(null)
 
   useEffect(() => {
     const loadStats = async () => {
@@ -30,17 +30,16 @@ const LendSection = () => {
   }, [])
 
   const propsFor = (symbol) => {
-    const filtered = stats.filter((s) => s.symbol == symbol)
-    if (filtered.length < 1)
+    if (!stats || !prices)
       return {
         name: symbol,
         icon: `../token/icon-${symbol.toLowerCase()}.svg`,
         interest: { deposit: 0, borrow: 0 },
         liquidity: { native: 0, usd: 0 },
       }
-
+    const filtered = stats.filter((s) => s.symbol == symbol)
     const lastStats = filtered[filtered.length - 1]
-    const lastPrice = symbol == 'USDC' ? 1 : prices[symbol][lastStats.hourly]
+    const lastPrice = symbol === 'USDC' ? 1 : prices[symbol][lastStats.hourly]
     const native = lastStats.totalDeposits // - lastStats.totalBorrows
     return {
       name: symbol,
