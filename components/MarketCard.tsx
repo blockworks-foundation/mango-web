@@ -73,7 +73,7 @@ const MarketCard = (props: MarketCardProps) => {
       <div className="flex flex-col bg-th-fgd-4 rounded-xl py-4 px-4 h-auto shadow-md">
         <div className="flex flex-row gap-x-2 align-bottom">
           <div className="flex flex-col flex-auto">
-            <p className="text-sm">{props.name}</p>
+            <p className="text-sm text-white text-opacity-50">{props.name}</p>
             <p className="text-2xl">${format(price, props.decimals)}</p>
           </div>
           <div className="flex w-full">
