@@ -59,7 +59,7 @@ const LendSection = () => {
           <div className="flex flex-wrap w-3/4 mx-auto justify-center items-center lg:text-center md:text-center sm:text-left">
             <div className="justify-center px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
               <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl">
-                Lending or borrowing has never been this easy.{' '}
+                Dead simple lending & borrowing.{' '}
               </h2>
               <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                 Earn interest on deposits, and take out fully collateralized
