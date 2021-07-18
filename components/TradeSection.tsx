@@ -55,6 +55,8 @@ const TradeSection = () => {
               </div>
             </div>
           </section>
+
+          {/* 
           <section className="px-3">
             <div className="flex flex-wrap justify-center items-center text-center">
               <div className="flex flex-col">
@@ -83,7 +85,9 @@ const TradeSection = () => {
               </div>
             </div>
           </section>
-          <div className="relative lg:top-32 md:top-16 sm:top-20 xs:top-8">
+          */}
+
+          <div className="relative lg:top-24 md:top-16 sm:top-20 xs:top-8">
             <img className="" alt="modals" src="../img/home_section.png" />
           </div>
         </div>

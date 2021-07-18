@@ -93,7 +93,7 @@ const LendSection = () => {
                   Liquidity Available
                 </span>
               </GradientText> */}
-              <div className="mt-4 flex flex-row bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto divide-x-2 divide-white divide-opacity-10 text-left">
+              <div className="mt-4 flex flex-wrap text-left">
                 <BankCard {...propsFor('USDC')} />
                 <BankCard {...propsFor('BTC')} />
                 <BankCard {...propsFor('ETH')} />

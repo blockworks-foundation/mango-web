@@ -10,7 +10,7 @@ const PercentPill = (props: PercentPillProps) => {
 
   return (
     <div
-      className={`${props.className} ${bg} inline-flex text-xs h-6 mt-1 items-center px-2 py-1 uppercase font-bold rounded-full`}
+      className={`${props.className} ${bg} inline-flex text-xs h-5 mt-1 items-center px-2 py-1 uppercase font-bold rounded-full`}
     >
       <p>{displayValue}%</p>
     </div>

@@ -15,7 +15,7 @@ const BankCard = (props: BankCardProps) => {
   }
 
   return (
-    <div className="flex flex-col py-4 px-6 h-auto w-auto">
+    <div className="flex flex-col bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto m-2">
       <div className="flex flex-row gap-x-2">
         <img className="w-5 h-5 mt-1" src={props.icon} alt={props.name} />
         <p className="text-xl">{props.name}</p>
