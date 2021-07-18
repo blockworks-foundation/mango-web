@@ -10,16 +10,16 @@ const TradeSection = () => {
         <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
           <section className="py-12 px-3 lg:mt-0 md:mt-0 sm:mt-28 ">
             <div className="max-w-7xl mx-auto">
-              <div className="flex flex-wrap">
+              <div className="flex flex-row flex-wrap">
                 <MarketCard
                   name="BTC/USDC"
                   icon="../token/icon-btc.svg"
-                  decimals={2}
+                  decimals={0}
                 />
                 <MarketCard
                   name="ETH/USDC"
                   icon="../token/icon-eth.svg"
-                  decimals={2}
+                  decimals={0}
                 />
                 <MarketCard
                   name="SOL/USDC"
@@ -29,7 +29,7 @@ const TradeSection = () => {
                 <MarketCard
                   name="SRM/USDC"
                   icon="../token/icon-srm.svg"
-                  decimals={2}
+                  decimals={4}
                 />
               </div>
             </div>
