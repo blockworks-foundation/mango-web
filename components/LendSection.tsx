@@ -57,17 +57,17 @@ const LendSection = () => {
     <div className="">
       <div className="max-w-7xl mx-auto px-4">
         <section className="py-12 px-3 mt-60">
-          <div className="flex flex-wrap justify-center items-center text-center">
+          <div className="flex flex-wrap justify-center items-center lg:text-center md:text-center sm:text-left">
             <div className="justify-center px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
-              <h2 className="text-5xl mb-6 leading-tight font-semibold font-heading">
+              <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl">
                 Lending or borrowing has never been this easy.{' '}
               </h2>
-              <p className="mb-8 px-24 text-2xl text-gray-400 leading-relaxed">
+              <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                 Earn interest on deposits, and take out fully collateralized
                 loans against existing assets, all enabled by the mango protocol
                 and the Solana ecosystem.
               </p>
-              <div className="flex flex-row justify-center">
+              <div className="flex lg:flex-row md:flex-row xs:flex-col justify-center">
                 <Button>Start lending & borrowing</Button>
                 <Link>Learn more</Link>
               </div>

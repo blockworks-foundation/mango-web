@@ -11,11 +11,11 @@ const HeroSectionHome = () => {
               <div className="lg:grid lg:grid-cols-12 lg:gap-8">
                 <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:my-24">
                   <div>
-                    <h1 className="mb-3 text-4xl lg:text-5xl text-white font-bold font-heading">
+                    <h1 className="mb-3 lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl text-white font-bold font-heading">
                       Long &amp; short everything.
                     </h1>
 
-                    <p className="mb-8 text-2xl text-gray-400">
+                    <p className="mb-8 text-gray-400 lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                       Community governed{' '}
                       <span className="text-yellow-300 font-bold">·</span>{' '}
                       Lightning fast{' '}
@@ -23,7 +23,7 @@ const HeroSectionHome = () => {
                       Near-zero fees
                     </p>
 
-                    <div className="flex flex-row lg:justify-start md:justify-center sm:justify-center xs:justify-start">
+                    <div className="flex lg:flex-row md:flex-row xs:flex-col lg:justify-start md:justify-center sm:justify-center xs:justify-start">
                       <Button>Start trading</Button>
                       <Link>Explore the docs</Link>
                     </div>

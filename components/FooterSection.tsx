@@ -39,8 +39,8 @@ const FooterSection = () => {
           </div>
         </section>
 
-        <footer className="py-20">
-          <div className="container px-4 mx-auto">
+        <footer className="py-20 px-4">
+          <div className="px-4 py-8 mx-auto">
             <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">
               <div className="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
                 <a className="text-gray-600 text-2xl leading-none" href="#">

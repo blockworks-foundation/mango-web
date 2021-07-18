@@ -44,7 +44,7 @@ const Link: FunctionComponent<LinkProps> = ({
     >
       {children}
       <ChevronRightIcon
-        className={`relative stroke-3 top-1 h-4 w-4 text-fgd-1 ml-1`}
+        className={`relative stroke-2 top-1 h-4 w-4 text-fgd-1 ml-1`}
       />
     </StyledButton>
   )

@@ -8,17 +8,17 @@ const CommunitySection = () => {
       <div className="bg-th-bkg-3 h-2150 transform -skew-y-3 pt-12 md:pt-48 pb-32 lg:pb-48 mb-48 lg:mb-48 -mt-64">
         <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
           <section className="py-12 px-3 mt-60">
-            <div className="flex flex-wrap justify-center items-center text-center">
+            <div className="flex flex-wrap justify-center items-center lg:text-center md:text-center sm:text-left">
               <div className="px-2 order-1 lg:order-none">
-                <h2 className="text-5xl mb-6 leading-tight font-semibold font-heading">
+                <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl">
                   Community driven innovation.{' '}
                 </h2>
-                <p className="mb-8 px-24 text-2xl text-gray-400 leading-relaxed">
+                <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                   Mango is building the infrastructure for the future
                   decentralized web and open sourcing the code for anyone to use
                   and contribute.{' '}
                 </p>
-                <div className="flex flex-row justify-center">
+                <div className="flex lg:flex-row md:flex-row xs:flex-col justify-center">
                   <Button>Join the discord</Button>
                   <Link>Explore the docs</Link>
                 </div>
@@ -27,7 +27,7 @@ const CommunitySection = () => {
           </section>
           <section className="py-12 px-3">
             <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-4 xs:grid-cols-1">
                 <div className="col-span-1 flex md:col-span-2 lg:col-span-1">
                   <div className="flex flex-col bg-th-fgd-4 py-8 px-8 h-auto w-auto shadow-md rounded-xl">
                     <svg
