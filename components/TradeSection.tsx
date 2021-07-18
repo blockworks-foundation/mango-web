@@ -1,6 +1,6 @@
 import MarketCard from './MarketCard'
 import Button from './Button'
-import GradientText from './GradientText'
+// import GradientText from './GradientText'
 import Link from './Link'
 
 const TradeSection = () => {
