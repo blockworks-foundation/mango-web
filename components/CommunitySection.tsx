@@ -242,12 +242,12 @@ const CommunitySection = () => {
             <div className="flex flex-wrap justify-center items-center lg:text-center md:text-center sm:text-left">
               <div className="px-2 order-1 lg:order-none">
                 <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl">
-                  Community Governance
+                  Even better together.
                 </h2>
                 <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
-                  Mango intends to merge the liquidity and usability of CeFi
-                  with the permissionless innovation of DeFi. All our work is
-                  open source for anyone to use and contribute.
+                  Mango wants to merge the liquidity and usability of CeFi with
+                  the permissionless innovation of DeFi. All our work is open
+                  source for anyone to use and contribute.
                 </p>
                 <div className="flex flex-row justify-center">
                   <Button>Join discord</Button>
@@ -291,8 +291,9 @@ const CommunitySection = () => {
                   title="Want to help build?"
                   cta="Become a contributor"
                 >
-                  We always welcome new contributors! Mango is a community
-                  effort to build the best permissionless products for traders.
+                  We always welcome new contributors! We commit to distribute
+                  the largest portion of the DAO’s power and wealth to future
+                  contributors.
                 </CommunityCard>
               </div>
             </div>

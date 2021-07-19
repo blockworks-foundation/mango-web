@@ -38,14 +38,13 @@ const TradeSection = () => {
           <section className="py-12 px-3 lg:mt-56 md:mt-28 sm:mt-24 xs:mt-50">
             <div className="flex flex-wrap items-center lg:text-center md:text-center sm:text-left">
               <div className="px-2 order-1 lg:order-none ">
-                <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl">
-                  Leverage & Derivatives
+                <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl sm:text-4xl xs:text-3xl">
+                  Every market cross&#8209;collateralized.
                 </h2>
                 <div className="">
-                  <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
-                    Cross-collateralized margin trading with up to 5x leverage.
+                  <p className="mb-8 text-gray-400 leading-relaxed sm:text-2xl xs:text-lg">
                     Trade all on-chain, order books included, knowing you
-                    control your funds.
+                    control your funds. Permissionless with up to 5x leverage.
                   </p>
                 </div>
                 <div className="flex flex-row justify-center">
