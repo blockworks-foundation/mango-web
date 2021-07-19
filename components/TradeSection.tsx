@@ -38,17 +38,16 @@ const TradeSection = () => {
           <section className="py-12 px-3 lg:mt-56 md:mt-28 sm:mt-24 xs:mt-50">
             <div className="flex flex-wrap items-center lg:text-center md:text-center sm:text-left">
               <div className="px-2 order-1 lg:order-none ">
-                <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl">
-                  Cross-colloateralized, every market.{' '}
+                <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl sm:text-4xl xs:text-3xl">
+                  Every market cross&#8209;collateralized.
                 </h2>
                 <div className="">
-                  <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
-                    Cross-collateralized margin trading with up to 5x leverage.
-                    Trade knowing you control your funds, no more centralized
-                    counterparty risk.{' '}
+                  <p className="mb-8 text-gray-400 leading-relaxed sm:text-2xl xs:text-lg">
+                    Trade all on-chain, order books included, knowing you
+                    control your funds. Permissionless with up to 5x leverage.
                   </p>
                 </div>
-                <div className="flex lg:flex-row md:flex-row xs:flex-col justify-center">
+                <div className="flex flex-row justify-center">
                   <Button>Start trading</Button>
                   <Link>Learn more</Link>
                 </div>
@@ -86,11 +85,10 @@ const TradeSection = () => {
             </div>
           </section>
           */}
-
         </div>
-          <div className="relative lg:top-32 md:top-16 sm:top-20 xs:top-8 transform skew-y-3">
-            <img className="" alt="modals" src="../img/home_section.png" />
-          </div>
+        <div className="relative lg:top-32 md:top-16 sm:top-20 xs:top-8 transform skew-y-3">
+          <img className="" alt="modals" src="../img/home_section.png" />
+        </div>
       </div>
     </div>
   )

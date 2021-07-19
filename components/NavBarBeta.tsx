@@ -43,7 +43,7 @@ const NavBarBeta = () => {
   return (
     <div className="">
       {/* Main Menu */}
-      <div className="px-10 py-8 bg-transparent">
+      <div className="lg:px-10 lg:py-8 xs:px-6 xs:py-1 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -51,7 +51,7 @@ const NavBarBeta = () => {
                 <span className="sr-only">Mango</span>
                 <img
                   className="h-8"
-                  src="img/logoMango.png"
+                  src="img/logo_mango.svg"
                   alt=""
                   width="auto"
                 />
@@ -405,15 +405,15 @@ const NavBarBeta = () => {
         <div
           className={`${
             !mobileMenuVisible && 'hidden'
-          } absolute top-0 inset-x-0 p-2 transition transform origin-top-right z-50`}
+          } absolute top-1 inset-x-0 px-4 py-2 transition transform origin-top-right z-50`}
         >
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-th-bkg-3">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    className="h-8"
-                    src="img/logoMango.png"
+                    className="h-8 ml-1"
+                    src="img/logo_mango.svg"
                     alt=""
                     width="auto"
                   />
