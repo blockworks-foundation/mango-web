@@ -56,8 +56,8 @@ const LendSection = () => {
     <div className="">
       <div className="max-w-7xl mx-auto px-4">
         <section className="py-12 px-3 mt-60">
-          <div className="flex flex-wrap w-3/4 mx-auto justify-center items-center lg:text-center md:text-center sm:text-left">
-            <div className="justify-center px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
+          <div className="flex flex-wrap mx-auto justify-center items-center lg:text-center md:text-center sm:text-left">
+            <div className="justify-center px-2 order-1 lg:order-none">
               <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl">
                 Dead simple lending & borrowing.{' '}
               </h2>

@@ -87,10 +87,10 @@ const TradeSection = () => {
           </section>
           */}
 
-          <div className="relative lg:top-24 md:top-16 sm:top-20 xs:top-8">
+        </div>
+          <div className="relative lg:top-32 md:top-16 sm:top-20 xs:top-8 transform skew-y-3">
             <img className="" alt="modals" src="../img/home_section.png" />
           </div>
-        </div>
       </div>
     </div>
   )
