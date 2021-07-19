@@ -18,12 +18,12 @@ const BankCard = (props: BankCardProps) => {
     <div className="flex-1 bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2">
         <div className="flex flex-row">
           <div className="pr-4">
-            <div className="flex flex-col gap-x-2">
-              {/* 
-              <img className="w-4 h-4 mt-2" src={props.icon} alt={props.name} />
-              */}
+            <div className="flex flex-row gap-x-2">
+              <img className="w-5 h-5 mt-1" src={props.icon} alt={props.name} />
               <p className="text-xl text-bold">{props.name}</p>
-              <p className="text-xs text-white text-opacity-50 text-bold">Deposits / Borrows</p>
+            </div>
+            <div>
+            <p className="text-xs text-white text-opacity-50 text-bold">Deposits / Borrows</p>
             </div>
             <div className="flex flex-row gap-x-2">
                 <PercentPill value={props.interest.deposit} />
