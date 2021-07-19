@@ -55,7 +55,7 @@ const Button: FunctionComponent<ButtonProps> = ({
 }) => {
   return (
     <StyledButton
-      className={`${className} relative px-6 py-2 rounded-full text-fgd-1 font-bold  ${
+      className={`${className} relative z-10 px-6 py-2 rounded-full text-fgd-1 font-bold  ${
         gray ? 'bg-bkg-4' : idleGradient
       }`}
       gray={gray}
