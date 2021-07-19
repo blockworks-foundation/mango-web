@@ -15,7 +15,7 @@ const BankCard = (props: BankCardProps) => {
   }
 
   return (
-    <div className="flex-1 bg-th-fgd-4 shadow-md rounded-xl py-6 px-8 h-auto w-auto m-2">
+    <div className="flex-1 bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2">
         <div className="flex flex-row">
           <div className="pr-4">
             <div className="flex flex-col gap-x-2">
@@ -33,7 +33,7 @@ const BankCard = (props: BankCardProps) => {
                 {/* Chart goes here */}
             </div>
           </div>
-          <div>
+          <div className="bg-white bg-opacity-5 shadow-md rounded-lg p-4">
             <div className="flex-row">
               <p className="text-white text-opacity-50 text-xs">
                 Total Deposits
