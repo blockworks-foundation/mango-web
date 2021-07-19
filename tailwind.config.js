@@ -36,10 +36,6 @@ module.exports = {
     extend: {
       backgroundImage: (_) => ({
         'hero-img': "url('../public/img/Hero_BG.jpeg')",
-        'feature-one': "url('../public/img/feature1.png')",
-        'feature-two': "url('../public/img/feature2.png')",
-        'feature-three': "url('../public/img/feature3.png')",
-        'feature-four': "url('../public/img/feature4.png')",
         'product-one': "url('../public/img/ProductFeature1.png')",
         'product-two': "url('../public/img/ProductFeature2.png')",
         'product-three': "url('../public/img/ProductFeature3.png')",
