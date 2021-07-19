@@ -105,7 +105,8 @@ const MarketCard = (props: MarketCardProps) => {
         <div className="flex flex-row gap-x-2 mt-1 items-center">
           <PercentPill value={change} />
           <p className="text-sm mt-1">
-            <span className="text-white text-opacity-50">Vol:</span> {format(volume)} {props.name.split('/')[0]}
+            <span className="text-white text-opacity-50">Vol:</span>{' '}
+            {format(volume)} {props.name.split('/')[0]}
           </p>
         </div>
       </div>

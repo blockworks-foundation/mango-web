@@ -55,26 +55,26 @@ const LendSection = () => {
   return (
     <div className="">
       <div className="max-w-7xl mx-auto px-4">
-        <section className="py-12 px-3 mt-60">
+        <section className="py-12 px-3 mt-12 lg:mt-60">
           <div className="flex flex-wrap mx-auto justify-center items-center lg:text-center md:text-center sm:text-left">
             <div className="justify-center px-2 order-1 lg:order-none">
               <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-2xl">
-                Dead simple lending & borrowing.{' '}
+                Lend & Borrow
               </h2>
               <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                 Earn interest on deposits, and take out fully collateralized
-                loans against existing assets, all enabled by the mango protocol
-                and the Solana ecosystem.
+                loans against existing assets. The mango protocol&apos;s
+                liquidity engine allows you to withdraw borrowed capital.
               </p>
-              <div className="flex lg:flex-row md:flex-row xs:flex-col justify-center">
-                <Button>Start lending & borrowing</Button>
+              <div className="flex flex-row justify-center">
+                <Button>Start lending</Button>
                 <Link>Learn more</Link>
               </div>
             </div>
           </div>
         </section>
-        </div>
-        <div className="w-full mx-auto px-4">
+      </div>
+      <div className="w-full mx-auto px-4">
         <section className="px-3 mt-28">
           <div className="flex flex-col justify-center items-center text-center">
             {/* <div className="flex flex-col mb-8">
@@ -104,8 +104,8 @@ const LendSection = () => {
             </div>
           </div>
         </section>
-        </div>
-        <div className="max-w-7xl mx-auto px-4">
+      </div>
+      <div className="max-w-7xl mx-auto px-4">
         <section className="px-3 mt-36">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-6">

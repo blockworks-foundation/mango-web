@@ -16,55 +16,51 @@ const BankCard = (props: BankCardProps) => {
 
   return (
     <div className="flex-1 bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2">
-        <div className="flex flex-row">
-          <div className="pr-4">
-            <div className="flex flex-row gap-x-2">
-              <img className="w-5 h-5 mt-1" src={props.icon} alt={props.name} />
-              <p className="text-xl text-bold">{props.name}</p>
-            </div>
-            <div>
-            <p className="text-xs text-white text-opacity-50 text-bold">Deposits / Borrows</p>
-            </div>
-            <div className="flex flex-row gap-x-2">
-                <PercentPill value={props.interest.deposit} />
-                <PercentPill value={props.interest.borrow} bg="bg-mango-red" />
-            </div>
-            <div className="flex flex-row gap-x-2">
-                {/* Chart goes here */}
-            </div>
+      <div className="flex flex-row">
+        <div className="pr-4">
+          <div className="flex flex-row gap-x-2">
+            <img className="w-5 h-5 mt-1" src={props.icon} alt={props.name} />
+            <p className="text-xl text-bold">{props.name}</p>
           </div>
-          <div className="bg-white bg-opacity-5 shadow-md rounded-lg p-4">
-            <div className="flex-row">
-              <p className="text-white text-opacity-50 text-xs">
-                Total Deposits
-              </p>
-              {/* 
+          <div>
+            <p className="text-xs text-white text-opacity-50 text-bold">
+              Deposits / Borrows
+            </p>
+          </div>
+          <div className="flex flex-row gap-x-2">
+            <PercentPill value={props.interest.deposit} />
+            <PercentPill value={props.interest.borrow} bg="bg-mango-red" />
+          </div>
+          <div className="flex flex-row gap-x-2">{/* Chart goes here */}</div>
+        </div>
+        <div className="bg-white bg-opacity-5 shadow-md rounded-lg p-4">
+          <div className="flex-row">
+            <p className="text-white text-opacity-50 text-xs">Total Deposits</p>
+            {/* 
               <p className="">
                 {format(props.liquidity.native, 0)} {props.name}
               </p>
               */}
-            </div>
-            <div className="flex-row">
-              <p className="">${format(props.liquidity.usd, 0)}</p>
-            </div>
-            <div className="flex-row mt-2">
-              <p className="text-white text-opacity-50 text-xs">
-                Total Borrows
-              </p>
-            </div>
-            <div className="flex-row">
-              <p className="">${format(props.liquidity.usd, 0)}</p>
-            </div>
-            <div className="flex-row mt-2">
-              <p className="text-white text-opacity-50 text-xs">
-                Remaining Liquidity
-              </p>
-            </div>
-            <div className="flex-row">
-              <p className="">${format(props.liquidity.usd, 0)}</p>
-            </div>
+          </div>
+          <div className="flex-row">
+            <p className="">${format(props.liquidity.usd, 0)}</p>
+          </div>
+          <div className="flex-row mt-2">
+            <p className="text-white text-opacity-50 text-xs">Total Borrows</p>
+          </div>
+          <div className="flex-row">
+            <p className="">${format(props.liquidity.usd, 0)}</p>
+          </div>
+          <div className="flex-row mt-2">
+            <p className="text-white text-opacity-50 text-xs">
+              Remaining Liquidity
+            </p>
+          </div>
+          <div className="flex-row">
+            <p className="">${format(props.liquidity.usd, 0)}</p>
           </div>
         </div>
+      </div>
     </div>
   )
 }

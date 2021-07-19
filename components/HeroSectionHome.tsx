@@ -23,7 +23,7 @@ const HeroSectionHome = () => {
                       Near-zero fees
                     </p>
 
-                    <div className="flex lg:flex-row md:flex-row xs:flex-col lg:justify-start md:justify-center sm:justify-center xs:justify-start">
+                    <div className="flex lg:flex-row md:flex-row lg:justify-start md:justify-center sm:justify-center">
                       <Button>Start trading</Button>
                       <Link>Explore the docs</Link>
                     </div>
@@ -34,7 +34,10 @@ const HeroSectionHome = () => {
                     <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 md:w-1/2 sm:w-1/2">
                       <div className="flex">
                         <div className="flex justify-center">
-                          <a className="hover:opacity-70" href="https://solana.com/">
+                          <a
+                            className="hover:opacity-70"
+                            href="https://solana.com/"
+                          >
                             <img
                               className="h-8 sm:h-8"
                               src="../logo_solana.svg"
@@ -43,7 +46,10 @@ const HeroSectionHome = () => {
                           </a>
                         </div>
                         <div className="flex justify-center -my-1 mx-10">
-                          <a className="hover:opacity-70" href="https://projectserum.com/#/">
+                          <a
+                            className="hover:opacity-70"
+                            href="https://projectserum.com/#/"
+                          >
                             <img
                               className="h-9 sm:h-10"
                               src="../logo_serum.svg"
