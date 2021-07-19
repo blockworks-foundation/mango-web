@@ -20,11 +20,11 @@ const BankCard = (props: BankCardProps) => {
         <div className="pr-4">
           <div className="flex flex-row gap-x-2">
             <img className="w-5 h-5 mt-1" src={props.icon} alt={props.name} />
-            <p className="text-xl text-bold">{props.name}</p>
+            <p className="text-xl font-bold">{props.name}</p>
           </div>
           <div>
             <p className="text-xs text-white text-opacity-50 text-bold">
-              Deposits / Borrows
+              Deposit / Borrows
             </p>
           </div>
           <div className="flex flex-row gap-x-2">
@@ -33,18 +33,16 @@ const BankCard = (props: BankCardProps) => {
           </div>
           <div className="flex flex-row gap-x-2">{/* Chart goes here */}</div>
         </div>
-        <div className="bg-white bg-opacity-5 shadow-md rounded-lg p-4">
+        <div className="py-3 px-2">
           <div className="flex-row">
             <p className="text-white text-opacity-50 text-xs">Total Deposits</p>
-            {/* 
-              <p className="">
-                {format(props.liquidity.native, 0)} {props.name}
-              </p>
-              */}
           </div>
           <div className="flex-row">
-            <p className="">${format(props.liquidity.usd, 0)}</p>
+            <p className="font-bold text-lg">${format(props.liquidity.usd, 0)}</p>
           </div>
+          {/* 
+
+
           <div className="flex-row mt-2">
             <p className="text-white text-opacity-50 text-xs">Total Borrows</p>
           </div>
@@ -59,6 +57,7 @@ const BankCard = (props: BankCardProps) => {
           <div className="flex-row">
             <p className="">${format(props.liquidity.usd, 0)}</p>
           </div>
+                        */}
         </div>
       </div>
     </div>
