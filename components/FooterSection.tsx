@@ -54,21 +54,21 @@ const FooterSection = () => {
                 <p className="mt-5 mb-6 max-w-xs text-gray-500 leading-loose">
                   Mango is a decentralized autonomous organization.{' '}
                 </p>
-                <div>
+                <div className="flex flex-row">
                   <a
-                    className="inline-block h-6 mr-8"
+                    className="flex h-6 w-6 m-2"
                     href="https://github.com/blockworks-foundation"
                   >
                     <img className="mx-auto" src="socials/github.svg" />
                   </a>
                   <a
-                    className="inline-block h-6 mr-8"
+                    className="flex h-6 w-6 m-2"
                     href="https://discord.gg/67jySBhxrg"
                   >
                     <img className="mx-auto" src="socials/discord.svg" />
                   </a>
                   <a
-                    className="inline-block h-6"
+                    className="flex h-6 w-6 m-2"
                     href="https://twitter.com/mangomarkets"
                   >
                     <img className="mx-auto" src="socials/twitter.svg" />
