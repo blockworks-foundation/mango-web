@@ -24,7 +24,7 @@ const BankCard = (props: BankCardProps) => {
           </div>
           <div>
             <p className="text-xs text-white text-opacity-50 text-bold">
-              Deposit / Borrows
+              Deposit / Borrow
             </p>
           </div>
           <div className="flex flex-row gap-x-2">
