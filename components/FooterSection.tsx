@@ -46,7 +46,7 @@ const FooterSection = () => {
                 <a className="text-gray-600 text-2xl leading-none" href="#">
                   <img
                     className="h-8"
-                    src="img/logoMango.png"
+                    src="img/logo_mango.svg"
                     alt=""
                     width="auto"
                   />
