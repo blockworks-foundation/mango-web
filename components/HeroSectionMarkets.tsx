@@ -4,12 +4,12 @@ import Link from './Link'
 const HeroSectionMarkets = () => {
   return (
     <div className="">
-      <section className="bg-hero-img bg-no-repeat bg-cover">
+      <section className="bg-hero-img bg-no-repeat bg-cover bg-top">
         <div className="container px-4 mx-auto">
-          <div className="relative pt-12 md:pt-48 pb-32 lg:pb-48 mb-48 lg:mb-48">
+          <div className="relative xs:py-16 sm:py-16 md:py-16 lg:py-16 lg:mb-48 xs:mb-48">
             <div className="max-w-2xl mb-16 mx-auto text-center">
               <h2 className="text-5xl mb-6 leading-tight font-semibold font-heading">
-                Simple, intuitive, and fast.{' '}
+                A better trading experience. {' '}
               </h2>
               <p className="mb-8 text-gray-400 leading-relaxed">
                 The Mango margin protocol is a fully open-source margin trading

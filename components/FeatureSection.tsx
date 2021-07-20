@@ -72,8 +72,8 @@ const FeatureSection = () => {
                 Maximum capital efficiency
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                Utilize all your assets as collateral to trade any other asset
-                with up to 5x leverage.{' '}
+                Every market is cross-collateralized. Utilize all your assets
+                and derivative contracts as collateral.{' '}
               </p>
             </div>
 

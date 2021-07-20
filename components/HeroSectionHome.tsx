@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import Button from './Button'
 import Link from './Link'
-import { gsap, TweenMax, Power3 } from 'gsap'
+import { gsap, Power3 } from 'gsap'
 
 const HeroSectionHome = () => {
   const sideImage = useRef(null)
@@ -11,7 +11,7 @@ const HeroSectionHome = () => {
   let app = useRef(null)
 
   useEffect(() => {
-    TweenMax.to(app.current, 0, {css: {visibility:'visible'}})
+    gsap.to(app.current, 0, {css: {visibility:'visible'}})
 
     /*
       const tagOne = heroText.children[0];
