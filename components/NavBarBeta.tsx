@@ -388,7 +388,7 @@ const NavBarBeta = () => {
               >
                 <div className="flex flex-row">
                   <p>Mango DAO</p>
-                  <MangoSale />
+                  <MangoPill />
                 </div>
               </a>
             </nav>
