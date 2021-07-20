@@ -60,7 +60,7 @@ const NavBarBeta = () => {
             <div className="-mr-2 -my-2 md:hidden">
               <button
                 type="button"
-                className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-yellow-300"
+                className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
                 onClick={toggleMobileMenu}
               >
                 <span className="sr-only">Open menu</span>
@@ -85,7 +85,7 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group  rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-yellow-300"
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none "
                   onClick={toggleProducts}
                 >
                   <span>Products</span>
@@ -250,7 +250,7 @@ const NavBarBeta = () => {
 
               <a
                 href="https://docs.mango.markets/"
-                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-yellow-300 rounded-md"
+                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none rounded-md"
               >
                 Docs
               </a>
@@ -258,7 +258,7 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-yellow-300"
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none"
                   onClick={toggleSupport}
                 >
                   <span>Support</span>
@@ -384,7 +384,7 @@ const NavBarBeta = () => {
               </div>
               <a
                 href="https://mango-token-sale.netlify.app"
-                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-yellow-300 rounded-md"
+                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none rounded-md"
               >
                 <div className="flex flex-row">
                   <p>Mango DAO</p>
