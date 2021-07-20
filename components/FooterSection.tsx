@@ -1,7 +1,6 @@
 import MangoPill from '../components/MangoPill'
 import Button from './Button'
 
-
 const doNothing = (e) => {
   e.stopPropagation()
 }

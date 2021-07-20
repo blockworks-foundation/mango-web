@@ -1,17 +1,16 @@
 import { useRef, useEffect } from 'react'
 import Button from './Button'
 import Link from './Link'
-import { gsap, Power3} from 'gsap'
+import { gsap, Power3 } from 'gsap'
 
 const HeroSectionHome = () => {
-
   const sideImage = useRef(null)
   //let heroText = useRef(null)
 
   const tl = gsap.timeline()
 
   useEffect(() => {
-      /*
+    /*
       const tagOne = heroText.children[0];
       const tagTwo = heroText.children[1];
       const tagThree = heroText.children[2];
@@ -23,13 +22,14 @@ const HeroSectionHome = () => {
         .from(tagThree, .7, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .4}, 'Start')
         .from(tagFour, .7, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .6}, 'Start')
         */
-      //image animation
-      tl.from(sideImage.current, .8, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .4})
-
-        
-
+    //image animation
+    tl.from(sideImage.current, 0.8, {
+      opacity: 0,
+      y: 50,
+      ease: Power3.easeOut,
+      delay: 0.4,
+    })
   }, [])
-
 
   return (
     <div className="">
@@ -57,11 +57,10 @@ const HeroSectionHome = () => {
                       <Link>Explore the docs</Link>
                     </div>
 
-
                     <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 md:w-1/2 sm:w-1/2">
-                    <p className="mt-16 py-4 text-sm text-gray-400 uppercase tracking-wide font-semibold sm:mt-16">
-                      Powered by
-                    </p>
+                      <p className="mt-16 py-4 text-sm text-gray-400 uppercase tracking-wide font-semibold sm:mt-16">
+                        Powered by
+                      </p>
                       <div className="flex">
                         <div className="flex justify-center">
                           <a

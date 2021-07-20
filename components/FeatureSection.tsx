@@ -1,4 +1,4 @@
-import LinkLeft from "./LinkLeft"
+import LinkLeft from './LinkLeft'
 
 const FeatureSection = () => {
   return (
@@ -272,9 +272,7 @@ const FeatureSection = () => {
                 Mango is a fully open-source project built by a global team of
                 contributors. Help build the world’s best exchange, period.
               </p>
-              <LinkLeft>
-                Join the discord
-              </LinkLeft>
+              <LinkLeft>Join the discord</LinkLeft>
             </div>
           </div>
         </section>

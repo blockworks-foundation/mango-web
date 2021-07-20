@@ -1,13 +1,14 @@
 import PercentPill from './PercentPill'
 
-interface BankCardProps {
+interface LendCardProps {
   name: string
   icon: string
+  bg: string
   interest: { deposit: number; borrow: number }
   liquidity: { native: number; usd: number }
 }
 
-const BankCard = (props: BankCardProps) => {
+const LendCard = (props: LendCardProps) => {
   const format = (val: number, digits: number) => {
     return new Intl.NumberFormat('en-US', {
       maximumFractionDigits: digits,
@@ -15,11 +16,20 @@ const BankCard = (props: BankCardProps) => {
   }
 
   return (
-    <div className="flex-1 bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2">
+    <div
+      className="flex-1 bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2"
+      style={{
+        backgroundBlendMode: 'overlay',
+        backgroundImage: `url(${props.bg})`,
+        backgroundPosition: '115% 115%',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+      }}
+    >
       <div className="flex flex-row">
         <div className="pr-4">
           <div className="flex flex-row gap-x-2">
-            <img className="w-5 h-5 mt-1" src={props.icon} alt={props.name} />
+            {/* <img className="w-5 h-5 mt-1" src={props.icon} alt={props.name} /> */}
             <p className="text-xl font-bold">{props.name}</p>
           </div>
           <div>
@@ -38,7 +48,9 @@ const BankCard = (props: BankCardProps) => {
             <p className="text-white text-opacity-50 text-xs">Total Deposits</p>
           </div>
           <div className="flex-row">
-            <p className="font-bold text-lg">${format(props.liquidity.usd, 0)}</p>
+            <p className="font-bold text-lg">
+              ${format(props.liquidity.usd, 0)}
+            </p>
           </div>
           {/* 
 
@@ -64,4 +76,4 @@ const BankCard = (props: BankCardProps) => {
   )
 }
 
-export default BankCard
+export default LendCard

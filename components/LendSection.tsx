@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import BankCard from './BankCard'
+import LendCard from './LendCard'
 import Button from './Button'
 import Link from './Link'
 //import GradientText from './GradientText'
@@ -30,20 +30,20 @@ const LendSection = () => {
   }, [])
 
   const propsFor = (symbol) => {
-    if (!stats || !prices)
-      return {
-        name: symbol,
-        icon: `../token/icon-${symbol.toLowerCase()}.svg`,
-        interest: { deposit: 0, borrow: 0 },
-        liquidity: { native: 0, usd: 0 },
-      }
+    const defaults = {
+      name: symbol,
+      icon: `../token/icon-${symbol.toLowerCase()}.svg`,
+      bg: `/token/mono/${symbol.toLowerCase()}.svg`,
+      interest: { deposit: 0, borrow: 0 },
+      liquidity: { native: 0, usd: 0 },
+    }
+    if (!stats || !prices) return defaults
     const filtered = stats.filter((s) => s.symbol == symbol)
     const lastStats = filtered[filtered.length - 1]
     const lastPrice = symbol === 'USDC' ? 1 : prices[symbol][lastStats.hourly]
     const native = lastStats.totalDeposits // - lastStats.totalBorrows
     return {
-      name: symbol,
-      icon: `../token/icon-${symbol.toLowerCase()}.svg`,
+      ...defaults,
       interest: {
         deposit: lastStats.depositInterest * 100,
         borrow: lastStats.borrowInterest * 100,
@@ -95,12 +95,12 @@ const LendSection = () => {
                 </span>
               </GradientText> */}
               <div className="mt-4 flex flex-wrap text-left">
-                <BankCard {...propsFor('USDC')} />
-                <BankCard {...propsFor('BTC')} />
-                <BankCard {...propsFor('ETH')} />
-                <BankCard {...propsFor('SOL')} />
-                <BankCard {...propsFor('SRM')} />
-                 {/*
+                <LendCard {...propsFor('USDC')} />
+                <LendCard {...propsFor('BTC')} />
+                <LendCard {...propsFor('ETH')} />
+                <LendCard {...propsFor('SOL')} />
+                <LendCard {...propsFor('SRM')} />
+                {/*
                 <div className="flex-1 flex-col bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2 justify-center xl:hidden">
                   <p className="leading-tight font-extrabold font-heading text-5xl text-center">30+</p>
                   <p className="text-md text-white text-opacity-50 text-bold text-center">Assests Available</p>
@@ -134,7 +134,6 @@ const LendSection = () => {
               </div>
             </div>
             */}
-
           </div>
         </section>
       </div>
