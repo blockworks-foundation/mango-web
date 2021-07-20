@@ -26,7 +26,7 @@ const LendCard = (props: LendCardProps) => {
         backgroundSize: 'contain',
       }}
     >
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-center">
         <div className="pr-4">
           <div className="flex flex-row gap-x-2">
             {/* <img className="w-5 h-5 mt-1" src={props.icon} alt={props.name} /> */}
@@ -48,7 +48,7 @@ const LendCard = (props: LendCardProps) => {
             <p className="text-mango-yellow text-xs font-bold">Total Deposits</p>
           </div>
           <div className="flex-row">
-            <p className="font-bold text-lg">
+            <p className="font-bold text-xl">
               ${format(props.liquidity.usd, 0)}
             </p>
           </div>
