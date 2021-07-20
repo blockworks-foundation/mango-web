@@ -1,6 +1,11 @@
 import MangoPill from '../components/MangoPill'
 import Button from './Button'
 
+
+const doNothing = (e) => {
+  e.stopPropagation()
+}
+
 const FooterSection = () => {
   return (
     <div className="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
@@ -91,8 +96,15 @@ const FooterSection = () => {
                         </a>
                       </li>
                       <li className="mb-4">
-                        <a
+                        {/* 
+                          <a
                           className="text-gray-500 hover:text-gray-600"
+                          href="#"
+                        >
+                        */}
+                        <a
+                          onClick={doNothing}
+                          className="text-gray-500 hover:text-gray-600 disabled opacity-50"
                           href="#"
                         >
                           Perpetual Futures
