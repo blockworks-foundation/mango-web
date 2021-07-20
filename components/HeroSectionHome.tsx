@@ -38,7 +38,7 @@ const HeroSectionHome = () => {
           <main className="mt-16 sm:mt-16">
             <div className="mx-auto max-w-7xl">
               <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div className="pl-4 ml-6 sm:pr-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:my-24">
+                <div className="px-2 ml-6 sm:pr-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:my-24">
                   <div /*ref={el => {heroText = el}}*/>
                     <h1 className="mb-3 lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl text-white font-bold font-heading">
                       Long &amp; short everything.
