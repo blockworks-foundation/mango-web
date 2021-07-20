@@ -62,7 +62,7 @@ const LendSection = () => {
                 Never sell your crypto.
               </h2>
               <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
-                Earn interest on deposits, and take out fully collateralized
+                Earn interest on deposits and take out fully collateralized
                 loans against existing assets. The mango protocol&apos;s
                 liquidity engine allows you to withdraw borrowed capital.
               </p>
@@ -100,6 +100,12 @@ const LendSection = () => {
                 <BankCard {...propsFor('ETH')} />
                 <BankCard {...propsFor('SOL')} />
                 <BankCard {...propsFor('SRM')} />
+                 {/*
+                <div className="flex-1 flex-col bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2 justify-center xl:hidden">
+                  <p className="leading-tight font-extrabold font-heading text-5xl text-center">30+</p>
+                  <p className="text-md text-white text-opacity-50 text-bold text-center">Assests Available</p>
+                </div>
+              */}
               </div>
             </div>
           </div>
