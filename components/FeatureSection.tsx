@@ -1,3 +1,4 @@
+import Button from './Button'
 import LinkLeft from './LinkLeft'
 
 const FeatureSection = () => {
@@ -344,6 +345,32 @@ const FeatureSection = () => {
             </div>
           </div>
         </section>
+         
+          <div className="bg-gradient-to-br from-th-fgd-4 to-th-fgd-4 rounded-xl shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4 mt-8">
+              <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+                <div className="lg:self-center">
+                  <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                    <span className="block">Ready to start trading?</span>
+                  </h2>
+                  <p className="mt-4 text-xl leading-6 text-white text-opacity-50">
+                    Check out the exchange, connect your wallet, and experience the future.
+                  </p>
+                  <div className="py-8">
+                    <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
+                      <Button>Start trading now</Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
+                <img
+                  className="transform translate-x-2 translate-y-2 rounded-md object-cover object-left-top sm:translate-x-12 lg:translate-y-16"
+                  src="../img/cta_img.png"
+                  alt="mango markets"
+                />
+              </div>
+            </div>
+
       </div>
     </div>
   )
