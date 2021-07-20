@@ -55,7 +55,7 @@ const LendSection = () => {
   return (
     <div className="">
       <div className="max-w-7xl mx-auto px-4">
-        <section className="py-12 px-3 mt-12 lg:mt-60">
+        <section className="py-12 px-3 lg:mt-60 md:mt-24 sm:mt-36 xs:mt-36">
           <div className="flex flex-wrap mx-auto justify-center items-center lg:text-center md:text-center sm:text-left">
             <div className="justify-center px-2 order-1 lg:order-none">
               <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl">
@@ -112,17 +112,18 @@ const LendSection = () => {
         </section>
       </div>
       <div className="max-w-7xl mx-auto px-4">
-        <section className="px-3 mt-36">
+        <section className="px-3">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-6">
-              <div className="z-10 relative -left-96 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full">
+            <div className="">
+              <div className="z-10 relative">
                 <img
                   className="lg:h-750 lg:w-auto lg:max-w-none"
-                  src="../img/borrow1.png"
+                  src="../img/borrow.png"
                   alt=""
                 />
               </div>
             </div>
+            {/*
             <div className="lg:col-span-6">
               <div className="z-10 relative -right-60 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full">
                 <img
@@ -132,6 +133,8 @@ const LendSection = () => {
                 />
               </div>
             </div>
+            */}
+
           </div>
         </section>
       </div>

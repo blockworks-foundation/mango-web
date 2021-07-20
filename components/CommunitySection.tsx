@@ -236,9 +236,9 @@ const CommunityCard = (props) => (
 const CommunitySection = () => {
   return (
     <div className="">
-      <div className="bg-th-bkg-3 h-2150 transform -skew-y-3 pt-12 md:pt-48 pb-32 lg:pb-48 mb-48 lg:mb-48 -mt-64">
+      <div className="bg-th-bkg-3 h-2150 transform -skew-y-3 pt-12 md:pt-48 pb-32 lg:pb-48 mb-48 lg:mb-48 -mt-40 sm:mt-30">
         <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
-          <section className="py-12 px-3 mt-60">
+          <section className="py-12 px-3 lg:mt-60 md:mt-24 sm:mt-36 xs:mt-60">
             <div className="flex flex-wrap justify-center items-center lg:text-center md:text-center sm:text-left">
               <div className="px-2 order-1 lg:order-none">
                 <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl">
