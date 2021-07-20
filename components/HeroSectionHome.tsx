@@ -1,7 +1,36 @@
+import { useRef, useEffect } from 'react'
 import Button from './Button'
 import Link from './Link'
+import { gsap, Power3} from 'gsap'
 
 const HeroSectionHome = () => {
+
+  let sideImage = useRef(null)
+  //let heroText = useRef(null)
+
+  const tl = gsap.timeline()
+
+  useEffect(() => {
+      /*
+      const tagOne = heroText.children[0];
+      const tagTwo = heroText.children[1];
+      const tagThree = heroText.children[2];
+      const tagFour = heroText.children[3];
+      
+      //content animation
+      tl.from(tagOne, .7, {opacity: 0, y: 50, ease: Power3.easeOut}, 'Start')
+        .from(tagTwo, .7, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .2}, 'Start')
+        .from(tagThree, .7, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .4}, 'Start')
+        .from(tagFour, .7, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .6}, 'Start')
+        */
+      //image animation
+      tl.from(sideImage, .8, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .4})
+
+        
+
+  }, [])
+
+
   return (
     <div className="">
       <div className="relative bg-th-bkg-1 overflow-hidden">
@@ -10,7 +39,7 @@ const HeroSectionHome = () => {
             <div className="mx-auto max-w-7xl">
               <div className="lg:grid lg:grid-cols-12 lg:gap-8">
                 <div className="pl-4 ml-6 sm:pr-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:my-24">
-                  <div>
+                  <div /*ref={el => {heroText = el}}*/>
                     <h1 className="mb-3 lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl text-white font-bold font-heading">
                       Long &amp; short everything.
                     </h1>
@@ -28,10 +57,11 @@ const HeroSectionHome = () => {
                       <Link>Explore the docs</Link>
                     </div>
 
-                    <p className="mt-16 text-sm text-gray-400 uppercase tracking-wide font-semibold sm:mt-16">
+
+                    <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 md:w-1/2 sm:w-1/2">
+                    <p className="mt-16 py-4 text-sm text-gray-400 uppercase tracking-wide font-semibold sm:mt-16">
                       Powered by
                     </p>
-                    <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 md:w-1/2 sm:w-1/2">
                       <div className="flex">
                         <div className="flex justify-center">
                           <a
@@ -65,6 +95,7 @@ const HeroSectionHome = () => {
                 <div className="mt-16 sm:mt-24 mt- lg:-mt-20 lg:col-span-6">
                   <div className="z-10 relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full">
                     <img
+                      ref={el => {sideImage = el}}
                       className="lg:h-750 lg:w-auto lg:max-w-none"
                       src="../img/herp_image_main_flat.png"
                       alt=""

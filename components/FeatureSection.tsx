@@ -1,26 +1,9 @@
-import Button from './Button'
+import LinkLeft from "./LinkLeft"
 
 const FeatureSection = () => {
   return (
-    <div className="bg-th-bkg-3 transform -skew-y-3 pt-12 md:pt-48 pb-32 lg:pb-48 mb-48 lg:mb-48 -mt-64">
+    <div className="bg-th-bkg-3 transform -skew-y-3 pt-16 pb-32 lg:pb-48 mb-48 lg:mb-48 -mt-64">
       <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
-        <section className="py-12 px-3">
-          <div className="flex flex-wrap items-center text-center lg:text-left -mx-2">
-            <div className="lg:w-1/2 px-2 lg:pr-10 mt-10 lg:mt-0 order-1 lg:order-none">
-              <h2 className="text-5xl mb-6 leading-tight font-semibold font-heading">
-                Simple, intuitive, and fast.{' '}
-              </h2>
-              <p className="mb-8 text-gray-400 leading-relaxed">
-                The Mango margin protocol is a fully open-source margin trading
-                exchange. Its best in class user interface provides access to
-                deep liquidity and high leverage for traders, built by traders.{' '}
-              </p>
-              <div>
-                <Button>Start trading</Button>
-              </div>
-            </div>
-          </div>
-        </section>
         <section className="py-28 px-4">
           <div className="flex flex-wrap -mx-4 mb-6">
             <div className="lg:w-1/3 px-4 mb-6">
@@ -245,7 +228,7 @@ const FeatureSection = () => {
               </svg>
 
               <h3 className="text-xl my-3 font-semibold font-heading">
-                Spot & perpetual markets.
+                Spot &amp; perpetual markets.
               </h3>
               <p className="text-gray-400 leading-relaxed">
                 Trade spot markest and derivitive assets all in one unified
@@ -289,16 +272,16 @@ const FeatureSection = () => {
                 Mango is a fully open-source project built by a global team of
                 contributors. Help build the world’s best exchange, period.
               </p>
-              <a className="text-indigo-600 hover:underline" href="#">
-                Join the discord &raquo;
-              </a>
+              <LinkLeft>
+                Join the discord
+              </LinkLeft>
             </div>
           </div>
         </section>
 
         <section className="">
           <div className="grid grid-cols-3 gap-6 mb-6">
-            <div>
+            <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
               <div className="bg-th-fgd-4 bg-product-one bg-cover bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
@@ -313,7 +296,7 @@ const FeatureSection = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-2">
+            <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
               <div className="bg-th-fgd-4 bg-product-two bg-cover bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
@@ -331,7 +314,7 @@ const FeatureSection = () => {
           </div>
 
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-2">
+            <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
               <div className="bg-th-fgd-4 bg-product-three bg-cover bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
@@ -346,7 +329,7 @@ const FeatureSection = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
               <div className="bg-th-fgd-4 bg-product-four bg-cover bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
