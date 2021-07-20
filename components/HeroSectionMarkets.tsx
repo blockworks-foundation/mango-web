@@ -17,8 +17,12 @@ const HeroSectionMarkets = () => {
                 deep liquidity and high leverage for traders, built by traders.{' '}
               </p>
               <div className="flex lg:flex-row md:flex-row justify-center">
+              <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
                 <Button>Start trading</Button>
+              </a>
+              <a rel="noreferrer" target="_blank" href="https://docs.mango.markets/tutorials/trade-on-mango.markets">
                 <Link>Learn to trade on Mango</Link>
+              </a>
               </div>
             </div>
           </div>

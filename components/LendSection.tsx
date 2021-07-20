@@ -67,8 +67,12 @@ const LendSection = () => {
                 liquidity engine allows you to withdraw borrowed capital.
               </p>
               <div className="flex flex-row justify-center">
-                <Button>Start lending</Button>
-                <Link>Learn more</Link>
+                <a rel="noreferrer" target="_blank" href="https://trade.mango.markets/borrow">
+                  <Button>Start lending</Button>
+                </a>
+                <a rel="noreferrer" target="_blank" href="#">  
+                  <Link>Learn more</Link>
+                </a>
               </div>
             </div>
           </div>

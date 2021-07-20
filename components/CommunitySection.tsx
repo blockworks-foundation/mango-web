@@ -250,8 +250,12 @@ const CommunitySection = () => {
                   source for anyone to use and contribute.
                 </p>
                 <div className="flex flex-row justify-center">
-                  <Button>Join discord</Button>
-                  <Link>Learn more</Link>
+                  <a rel="noreferrer" target="_blank" href="https://discord.gg/67jySBhxrg">
+                    <Button>Join discord</Button>
+                  </a>
+                  <a rel="noreferrer" target="_blank" href="https://docs.mango.markets/">
+                    <Link>Learn more</Link>
+                  </a>
                 </div>
               </div>
             </div>

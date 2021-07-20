@@ -402,7 +402,9 @@ const NavBarBeta = () => {
             </nav>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <div>
-                <Button>Start trading</Button>
+                <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
+                  <Button>Start trading</Button>
+                </a>
               </div>
             </div>
           </div>
