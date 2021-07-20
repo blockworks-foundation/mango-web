@@ -22,7 +22,7 @@ const FooterSection = () => {
                 type="email"
                 autoComplete="email"
                 required
-                className="w-full px-5 py-2 placeholder-gray-500 sm:max-w-xs border-gray-300 rounded-full"
+                className="w-full px-5 py-2 placeholder-gray-500 sm:max-w-xs border-gray-300 rounded-full focus:outline-none"
                 placeholder="Enter your email"
               />
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
