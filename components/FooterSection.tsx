@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import MangoPill from '../components/MangoPill'
 import Button from './Button'
 
@@ -6,6 +7,25 @@ const doNothing = (e) => {
 }
 
 const FooterSection = () => {
+  const [done, setDone] = useState(false)
+  const [email, setEmail] = useState('')
+
+  const handleChange = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    await fetch('/api/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    })
+
+    setDone(true)
+  }
+
   return (
     <div className="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
       <div className="max-w-7xl mx-auto ">
@@ -18,22 +38,30 @@ const FooterSection = () => {
               </span>
             </h2>
 
-            <form className="mt-8 sm:flex">
+            <form className="mt-8 sm:flex" onSubmit={handleSubmit}>
               <label className="sr-only">Email address</label>
-              <input
-                id="email-address"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="w-full px-5 py-2 placeholder-gray-400 text-black text-opacity-80 sm:max-w-xs border-gray-300 rounded-full focus:outline-none"
-                placeholder="Drop us your email..."
-              />
-              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <Button>
-                  <span className="">Sign me up!</span>
-                </Button>
-              </div>
+              {done ? (
+                <span>Thank you for signing up!</span>
+              ) : (
+                <>
+                  <input
+                    id="email-address"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    className="w-full px-5 py-2 placeholder-gray-400 text-black text-opacity-80 sm:max-w-xs border-gray-300 rounded-full focus:outline-none"
+                    placeholder="Drop us your email..."
+                    value={email}
+                    onChange={handleChange}
+                  />
+                  <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                    <Button>
+                      <span className="">Sign me up!</span>
+                    </Button>
+                  </div>
+                </>
+              )}
             </form>
             <div className="w-full mt-4">
               <p className="text-xl text-gray-400">
