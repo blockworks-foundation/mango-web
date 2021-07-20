@@ -110,7 +110,7 @@ const FooterSection = () => {
                       <li className="mb-4">
                         <a
                           className="text-gray-500 hover:text-gray-600"
-                          href="#"
+                          href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
                         >
                           Liquidator Program
                         </a>
