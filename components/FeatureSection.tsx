@@ -72,7 +72,7 @@ const FeatureSection = () => {
               <h3 className="text-xl my-3 font-semibold font-heading">
                 Maximum capital efficiency
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed">
                 Every market is cross-collateralized. Utilize all your assets
                 and derivative contracts as collateral.{' '}
               </p>
@@ -111,7 +111,7 @@ const FeatureSection = () => {
               <h3 className="text-xl my-3 font-semibold font-heading">
                 Sub-second latency
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed">
                 Low latency allows market makers to post tight spreads on the
                 books. That means Instant order execution at the price of less
                 than a cent.
@@ -150,7 +150,7 @@ const FeatureSection = () => {
               <h3 className="text-xl my-3 font-semibold font-heading">
                 The lowest fees
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed">
                 Trade with the lowest fee possible. SRM deposits are pooled for
                 a collective discount. Mango is the first protocol to charge
                 zero fees on margin borrowing & lending.
@@ -192,7 +192,7 @@ const FeatureSection = () => {
               <h3 className="text-xl my-3 font-semibold font-heading">
                 Fully decentralized
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed">
                 No more centralized counter party risk to deal with. Non
                 custodial means you control your funds. Every bid & ask is
                 on-chain.
@@ -231,7 +231,7 @@ const FeatureSection = () => {
               <h3 className="text-xl my-3 font-semibold font-heading">
                 Spot &amp; perpetual markets.
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed">
                 Trade spot markest and derivitive assets all in one unified
                 interface. Spot with up to 5x leverage, perpetuals with up to
                 10x.
@@ -269,7 +269,7 @@ const FeatureSection = () => {
               <h3 className="text-xl my-3 font-semibold font-heading">
                 Want to help build Mango?
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed">
                 Mango is a fully open-source project built by a global team of
                 contributors. Help build the world’s best exchange, period.
               </p>
@@ -287,7 +287,7 @@ const FeatureSection = () => {
                     <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
                       Simply connect your wallet.
                     </h2>
-                    <p className="text-gray-500 text-base">
+                    <p className="text-white text-opacity-50 text-lg">
                       Trade knowing you control your funds, no more centralized
                       counter-party risk.
                     </p>
@@ -302,7 +302,7 @@ const FeatureSection = () => {
                     <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
                       Customize your experience.
                     </h2>
-                    <p className="text-gray-500 text-base">
+                    <p className="text-white text-opacity-50 text-lg">
                       Complete control over layout, theme, and your trading
                       view.
                     </p>
@@ -320,7 +320,7 @@ const FeatureSection = () => {
                     <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
                       Measure your results.
                     </h2>
-                    <p className="text-gray-500 text-base">
+                    <p className="text-white text-opacity-50 text-lg">
                       Full overview over trading history and PNL is always
                       tracked.
                     </p>
@@ -335,7 +335,7 @@ const FeatureSection = () => {
                     <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
                       Liquidation alerts
                     </h2>
-                    <p className="text-gray-500 text-base">
+                    <p className="text-white text-opacity-50 text-lg">
                       Sleep knowing you’ll be ready when the market starts
                       moving.{' '}
                     </p>
