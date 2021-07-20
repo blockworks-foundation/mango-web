@@ -69,10 +69,10 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-xl my-3 font-semibold font-heading">
+              <h3 className="text-2xl my-3 font-semibold font-heading">
                 Maximum capital efficiency
               </h3>
-              <p className="text-white text-opacity-50 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 Every market is cross-collateralized. Utilize all your assets
                 and derivative contracts as collateral.{' '}
               </p>
@@ -108,10 +108,10 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-xl my-3 font-semibold font-heading">
+              <h3 className="text-2xl my-3 font-semibold font-heading">
                 Sub-second latency
               </h3>
-              <p className="text-white text-opacity-50 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 Low latency allows market makers to post tight spreads on the
                 books. That means Instant order execution at the price of less
                 than a cent.
@@ -147,10 +147,10 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-xl my-3 font-semibold font-heading">
+              <h3 className="text-2xl my-3 font-semibold font-heading">
                 The lowest fees
               </h3>
-              <p className="text-white text-opacity-50 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 Trade with the lowest fee possible. SRM deposits are pooled for
                 a collective discount. Mango is the first protocol to charge
                 zero fees on margin borrowing & lending.
@@ -189,10 +189,10 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-xl my-3 font-semibold font-heading">
+              <h3 className="text-2xl my-3 font-semibold font-heading">
                 Fully decentralized
               </h3>
-              <p className="text-white text-opacity-50 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 No more centralized counter party risk to deal with. Non
                 custodial means you control your funds. Every bid & ask is
                 on-chain.
@@ -228,10 +228,10 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-xl my-3 font-semibold font-heading">
+              <h3 className="text-2xl my-3 font-semibold font-heading">
                 Spot &amp; perpetual markets.
               </h3>
-              <p className="text-white text-opacity-50 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 Trade spot markest and derivitive assets all in one unified
                 interface. Spot with up to 5x leverage, perpetuals with up to
                 10x.
@@ -266,10 +266,10 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-xl my-3 font-semibold font-heading">
+              <h3 className="text-2xl my-3 font-semibold font-heading">
                 Want to help build Mango?
               </h3>
-              <p className="text-white text-opacity-50 leading-relaxed">
+              <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 Mango is a fully open-source project built by a global team of
                 contributors. Help build the world’s best exchange, period.
               </p>
