@@ -1,15 +1,18 @@
 import { useRef, useEffect } from 'react'
 import Button from './Button'
 import Link from './Link'
-import { gsap, Power3 } from 'gsap'
+import { gsap, TweenMax, Power3 } from 'gsap'
 
 const HeroSectionHome = () => {
   const sideImage = useRef(null)
   //let heroText = useRef(null)
 
   const tl = gsap.timeline()
+  let app = useRef(null)
 
   useEffect(() => {
+    TweenMax.to(app.current, 0, {css: {visibility:'visible'}})
+
     /*
       const tagOne = heroText.children[0];
       const tagTwo = heroText.children[1];
@@ -32,7 +35,7 @@ const HeroSectionHome = () => {
   }, [])
 
   return (
-    <div className="">
+    <div className="App">
       <div className="relative bg-th-bkg-1 overflow-hidden">
         <div className="relative pt-6 pb-16 sm:pb-24">
           <main className="mt-16 sm:mt-16">
