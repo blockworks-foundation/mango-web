@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import MangoPill from '../components/MangoPill'
-import MangoSale from '../components/MangoSale'
+//import MangoSale from '../components/MangoSale'
 import Button from './Button'
 
 const NavBarBeta = () => {
@@ -85,7 +85,7 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none "
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 hover:text-white focus:outline-none "
                   onClick={toggleProducts}
                 >
                   <span>Products</span>
@@ -250,7 +250,7 @@ const NavBarBeta = () => {
 
               <a
                 href="https://docs.mango.markets/"
-                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none rounded-md"
+                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 hover:text-white focus:outline-none rounded-md"
               >
                 Docs
               </a>
@@ -258,7 +258,7 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 focus:outline-none"
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 hover:text-white focus:outline-none"
                   onClick={toggleSupport}
                 >
                   <span>Support</span>
