@@ -5,7 +5,7 @@ import { gsap, Power3} from 'gsap'
 
 const HeroSectionHome = () => {
 
-  let sideImage = useRef(null)
+  const sideImage = useRef(null)
   //let heroText = useRef(null)
 
   const tl = gsap.timeline()
@@ -24,7 +24,7 @@ const HeroSectionHome = () => {
         .from(tagFour, .7, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .6}, 'Start')
         */
       //image animation
-      tl.from(sideImage, .8, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .4})
+      tl.from(sideImage.current, .8, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .4})
 
         
 
@@ -95,7 +95,7 @@ const HeroSectionHome = () => {
                 <div className="mt-16 sm:mt-24 mt- lg:-mt-20 lg:col-span-6">
                   <div className="z-10 relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full">
                     <img
-                      ref={el => {sideImage = el}}
+                      ref={sideImage}
                       className="lg:h-750 lg:w-auto lg:max-w-none"
                       src="../img/herp_image_main_flat.png"
                       alt=""
