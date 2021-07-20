@@ -205,8 +205,7 @@ const NavBarBeta = () => {
                             Decentralized Lending
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Earn interest on deposit, a take out collateralized
-                            loans against assets
+                            Earn interest on deposits and take out collateralized loans against assets
                           </p>
                         </div>
                       </a>
@@ -338,7 +337,7 @@ const NavBarBeta = () => {
                             Twitter
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            See what we&apos;re up to quicky, and meme with us.
+                              Quickly see what we're up to and meme with us.
                           </p>
                         </div>
                       </a>

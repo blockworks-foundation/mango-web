@@ -64,7 +64,7 @@ const LendSection = () => {
               <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                 Earn interest on deposits and take out fully collateralized
                 loans against existing assets. The mango protocol&apos;s
-                liquidity engine allows you to withdraw borrowed capital.
+                risk engine allows you to withdraw borrowed capital.
               </p>
               <div className="flex flex-row justify-center">
                 <a rel="noreferrer" target="_blank" href="https://trade.mango.markets/borrow">

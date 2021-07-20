@@ -41,15 +41,15 @@ const HeroSectionHome = () => {
                 <div className="px-2 ml-6 sm:pr-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:my-24">
                   <div /*ref={el => {heroText = el}}*/>
                     <h1 className="mb-3 lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl text-white font-bold font-heading">
-                      Long &amp; short everything.
+                      Lend, borrow, &amp; trade everything.
                     </h1>
 
                     <p className="mb-8 text-gray-400 lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
-                      Community governed{' '}
-                      <span className="text-yellow-300 font-bold">·</span>{' '}
                       Lightning fast{' '}
                       <span className="text-yellow-300 font-bold">·</span>{' '}
-                      Near-zero fees
+                      Near-zero fees{' '}
+                      <span className="text-yellow-300 font-bold">·</span>{' '}
+                      DAO governed
                     </p>
 
                     <div className="flex lg:flex-row md:flex-row lg:justify-start md:justify-center sm:justify-center">
