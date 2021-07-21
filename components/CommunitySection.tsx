@@ -262,7 +262,7 @@ const CommunitySection = () => {
                   <a
                     rel="noreferrer"
                     target="_blank"
-                    href="https://docs.mango.markets/"
+                    href="https://docs.mango.markets/litepaper"
                   >
                     <Link>Learn more</Link>
                   </a>
