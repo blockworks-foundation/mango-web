@@ -226,7 +226,7 @@ const CommunityCard = (props) => (
       {props.icon}
       <p className="text-lg font-bold py-6 pb-2">{props.title}</p>
       <div className="flex flex-col">
-        <p className="text-md text-gray-500 pb-2">{props.children}</p>
+        <p className="text-md text-white text-opacity-50 pb-2">{props.children}</p>
         <LinkLeft>{props.cta}</LinkLeft>
       </div>
     </div>
