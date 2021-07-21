@@ -70,7 +70,7 @@ const FeatureSection = () => {
               </svg>
 
               <h3 className="text-2xl my-3 font-semibold font-heading">
-                Maximum capital efficiency
+                Maximum capital efficiency.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 Every market is cross-collateralized. Utilize all your assets
@@ -109,7 +109,7 @@ const FeatureSection = () => {
               </svg>
 
               <h3 className="text-2xl my-3 font-semibold font-heading">
-                Sub-second latency
+                Sub-second latency.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 Low latency allows market makers to post tight spreads on the
@@ -148,7 +148,7 @@ const FeatureSection = () => {
               </svg>
 
               <h3 className="text-2xl my-3 font-semibold font-heading">
-                The lowest fees
+                The lowest fees.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 Trade with the lowest fee possible. SRM deposits are pooled for
@@ -190,7 +190,7 @@ const FeatureSection = () => {
               </svg>
 
               <h3 className="text-2xl my-3 font-semibold font-heading">
-                Fully decentralized
+                Fully decentralized.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
                 No more centralized counter party risk to deal with. Non
@@ -333,7 +333,7 @@ const FeatureSection = () => {
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
                     <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
-                      Liquidation alerts
+                      Liquidation alert!
                     </h2>
                     <p className="text-white text-opacity-50 text-lg">
                       Sleep knowing you’ll be ready when the market starts
