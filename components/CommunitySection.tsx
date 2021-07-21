@@ -244,7 +244,7 @@ const CommunitySection = () => {
                 <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl">
                   Even better together.
                 </h2>
-                <p className="mb-8 text-gray-400 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
+                <p className="mb-8 text-white text-opacity-50 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                   Mango wants to merge the liquidity and usability of CeFi with
                   the permissionless innovation of DeFi. All our work is open
                   source for anyone to use and contribute.

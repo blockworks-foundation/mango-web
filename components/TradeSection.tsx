@@ -42,7 +42,7 @@ const TradeSection = () => {
                   Every market cross&#8209;collateralized.
                 </h2>
                 <div className="">
-                  <p className="mb-8 text-gray-400 leading-relaxed sm:text-2xl xs:text-lg">
+                  <p className="mb-8 text-white text-opacity-50 leading-relaxed sm:text-2xl xs:text-lg">
                     Trade all on-chain, order books included, knowing you
                     control your funds. Permissionless with up to 5x leverage.
                   </p>

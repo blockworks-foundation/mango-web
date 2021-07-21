@@ -64,7 +64,7 @@ const FooterSection = () => {
               )}
             </form>
             <div className="w-full mt-4">
-              <p className="text-xl text-gray-400">
+              <p className="text-xl text-white text-opacity-50">
                 We promise to never spam and only send alpha.
               </p>
             </div>
@@ -214,7 +214,7 @@ const FooterSection = () => {
               </div>
             </div>
             <div className="pt-8">
-              <p className="lg:text-center text-sm text-gray-400">
+              <p className="lg:text-center text-sm text-white text-opacity-20">
                 All rights reserved &copy; Blockworks Foundation 2021
               </p>
             </div>

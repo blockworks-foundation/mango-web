@@ -47,7 +47,7 @@ const HeroSectionHome = () => {
                       Long &amp; short everything.
                     </h1>
 
-                    <p className="mb-8 text-gray-400 lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
+                    <p className="mb-8 text-white text-opacity-50 lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                       Lightning fast{' '}
                       <span className="text-yellow-300 font-bold">·</span>{' '}
                       Near-zero fees{' '}
@@ -65,7 +65,7 @@ const HeroSectionHome = () => {
                     </div>
 
                     <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 md:w-1/2 sm:w-1/2">
-                      <p className="mt-16 py-4 text-sm text-gray-400 uppercase tracking-wide font-semibold sm:mt-16">
+                      <p className="mt-16 py-4 text-sm text-white text-opacity-50 uppercase tracking-wide font-semibold sm:mt-16">
                         Powered by
                       </p>
                       <div className="flex">

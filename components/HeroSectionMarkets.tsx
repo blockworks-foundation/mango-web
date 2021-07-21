@@ -11,7 +11,7 @@ const HeroSectionMarkets = () => {
               <h2 className="mb-3 lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl text-white font-bold font-heading">
                 A better trading experience. {' '}
               </h2>
-              <p className="text-gray-400 lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
+              <p className="text-white text-opacity-50 lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                 The Mango margin protocol is a fully open-source margin trading
                 exchange. Its best in class user interface provides access to
                 deep liquidity and high leverage for traders, built by traders.{' '}
