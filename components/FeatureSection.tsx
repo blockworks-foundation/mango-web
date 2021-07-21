@@ -69,7 +69,7 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-2xl my-3 font-semibold font-heading">
+              <h3 className="text-xl my-3 font-semibold font-heading">
                 Maximum capital efficiency.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
@@ -108,7 +108,7 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-2xl my-3 font-semibold font-heading">
+              <h3 className="text-xl my-3 font-semibold font-heading">
                 Sub-second latency.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
@@ -147,7 +147,7 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-2xl my-3 font-semibold font-heading">
+              <h3 className="text-xl my-3 font-semibold font-heading">
                 The lowest fees.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
@@ -189,7 +189,7 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-2xl my-3 font-semibold font-heading">
+              <h3 className="text-xl my-3 font-semibold font-heading">
                 Fully decentralized.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
@@ -228,7 +228,7 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-2xl my-3 font-semibold font-heading">
+              <h3 className="text-xl my-3 font-semibold font-heading">
                 Spot &amp; perpetual markets.
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
@@ -266,7 +266,7 @@ const FeatureSection = () => {
                 </defs>
               </svg>
 
-              <h3 className="text-2xl my-3 font-semibold font-heading">
+              <h3 className="text-xl my-3 font-semibold font-heading">
                 Want to help build Mango?
               </h3>
               <p className="text-white text-opacity-50 leading-relaxed text-lg">
