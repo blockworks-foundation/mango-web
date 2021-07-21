@@ -8,10 +8,10 @@ const HeroSectionHome = () => {
   //let heroText = useRef(null)
 
   const tl = gsap.timeline()
-  let App = useRef(null)
+  //let App = useRef(null)
 
   useEffect(() => {
-    gsap.to(App.current, 0, {css: {visibility:'visible'}})
+    //gsap.to(App.current, 0, {css: {visibility:'visible'}})
 
     /*
       const tagOne = heroText.children[0];
@@ -26,11 +26,11 @@ const HeroSectionHome = () => {
         .from(tagFour, .7, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .6}, 'Start')
         */
     //image animation
-    tl.from(sideImage.current, 0.8, {
-      opacity: 0,
-      y: 50,
+    tl.to(sideImage.current, .7, {
+      opacity: 1,
+      y: 0,
       ease: Power3.easeOut,
-      delay: 0.4,
+      delay: .1
     })
   }, [])
 
@@ -102,7 +102,7 @@ const HeroSectionHome = () => {
                   <div className="z-10 relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full">
                     <img
                       ref={sideImage}
-                      className="lg:h-750 lg:w-auto lg:max-w-none"
+                      className="lg:h-750 lg:w-auto lg:max-w-none opacity-0 transform translate-y-40"
                       src="../img/herp_image_main_flat.png"
                       alt=""
                     />
