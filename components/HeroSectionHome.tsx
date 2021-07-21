@@ -8,10 +8,10 @@ const HeroSectionHome = () => {
   //let heroText = useRef(null)
 
   const tl = gsap.timeline()
-  let app = useRef(null)
+  let App = useRef(null)
 
   useEffect(() => {
-    gsap.to(app.current, 0, {css: {visibility:'visible'}})
+    gsap.to(App.current, 0, {css: {visibility:'visible'}})
 
     /*
       const tagOne = heroText.children[0];
