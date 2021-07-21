@@ -48,7 +48,11 @@ const TradeSection = () => {
                   </p>
                 </div>
                 <div className="flex flex-row justify-center">
-                  <a rel="noreferrer" target="_blank" href="https://trade.mango.markets/">
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://trade.mango.markets/"
+                  >
                     <Button>Start trading</Button>
                   </a>
                   <a rel="noreferrer" target="_blank" href="/markets">

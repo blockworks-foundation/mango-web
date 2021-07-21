@@ -26,11 +26,11 @@ const HeroSectionHome = () => {
         .from(tagFour, .7, {opacity: 0, y: 50, ease: Power3.easeOut, delay: .6}, 'Start')
         */
     //image animation
-    tl.to(sideImage.current, .7, {
+    tl.to(sideImage.current, 0.7, {
       opacity: 1,
       y: 0,
       ease: Power3.easeOut,
-      delay: .1
+      delay: 0.1,
     })
   }, [])
 
@@ -51,17 +51,25 @@ const HeroSectionHome = () => {
                       Lightning fast{' '}
                       <span className="text-yellow-300 font-bold">·</span>{' '}
                       Near-zero fees{' '}
-                      <span className="text-yellow-300 font-bold">·</span>{' '}
-                      DAO governed
+                      <span className="text-yellow-300 font-bold">·</span> DAO
+                      governed
                     </p>
 
                     <div className="flex lg:flex-row md:flex-row lg:justify-start md:justify-center sm:justify-center">
-                    <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
-                      <Button>Start trading</Button>
-                    </a>
-                    <a rel="noreferrer" target="_blank" href="https://docs.mango.markets/">  
-                      <Link>Explore the docs</Link>
-                    </a>
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://trade.mango.markets"
+                      >
+                        <Button>Start trading</Button>
+                      </a>
+                      <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://docs.mango.markets/"
+                      >
+                        <Link>Explore the docs</Link>
+                      </a>
                     </div>
 
                     <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0 md:w-1/2 sm:w-1/2">

@@ -45,15 +45,16 @@ const LendCard = (props: LendCardProps) => {
         </div>
         <div className="py-3 px-2">
           <div className="flex-row">
-            <p className="text-white text-opacity-50 text-xs font-bold">Total Deposits</p>
+            <p className="text-white text-opacity-50 text-xs font-bold">
+              Total Deposits
+            </p>
           </div>
           <div className="flex-row">
             <p className="font-bold text-xl">
               ${format(props.liquidity.usd, 0)}
             </p>
           </div>
-          
-          
+
           {/* 
           <div className="flex-row mt-2">
             <p className="text-white text-opacity-50 text-xs">Total Borrows</p>

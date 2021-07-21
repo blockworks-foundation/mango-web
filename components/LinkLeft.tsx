@@ -30,6 +30,7 @@ const ChevronRightIcon = ({ className }) => (
 
 interface LinkLeftProps {
   className?: string
+  href?: string
 }
 
 const LinkLeft: FunctionComponent<LinkLeftProps> = ({

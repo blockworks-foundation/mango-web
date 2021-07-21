@@ -205,7 +205,8 @@ const NavBarBeta = () => {
                             Decentralized Lending
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Earn interest on deposits and take out collateralized loans against assets
+                            Earn interest on deposits and take out
+                            collateralized loans against assets
                           </p>
                         </div>
                       </a>
@@ -337,7 +338,7 @@ const NavBarBeta = () => {
                             Twitter
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                              Quickly see what we're up to and meme with us.
+                            Quickly see what we're up to and meme with us.
                           </p>
                         </div>
                       </a>
@@ -401,7 +402,11 @@ const NavBarBeta = () => {
             </nav>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <div>
-                <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://trade.mango.markets"
+                >
                   <Button>Start trading</Button>
                 </a>
               </div>

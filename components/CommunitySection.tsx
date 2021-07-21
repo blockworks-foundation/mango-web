@@ -229,7 +229,7 @@ const CommunityCard = (props) => (
         <p className="text-md text-white text-opacity-50 pb-2">
           {props.children}
         </p>
-        <LinkLeft>{props.cta}</LinkLeft>
+        <LinkLeft href={props.href}>{props.cta}</LinkLeft>
       </div>
     </div>
   </div>
@@ -277,6 +277,7 @@ const CommunitySection = () => {
                   icon={<PuzzlePieceIcon />}
                   title="Open by default"
                   cta="Find us on github"
+                  href="https://github.com/blockworks-foundation"
                 >
                   All pieces of the mango protocol puzzle are completely open
                   source. Run it, mod it, improve it, we are a community driven
@@ -286,6 +287,7 @@ const CommunitySection = () => {
                   icon={<ShieldCheckIcon />}
                   title="Liquidator Program"
                   cta="Become a liquidator"
+                  href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
                 >
                   Liquidators protect the capital of lenders. They help ensure
                   the protocol funds stay safe even when the markets move
@@ -295,6 +297,7 @@ const CommunitySection = () => {
                   icon={<ScaleIcon />}
                   title="Market Making"
                   cta="Become a market maker"
+                  href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/mango/marketmaking/simplemarketmaker.py"
                 >
                   Learn about market making on the mango protocol and earn $MNGO
                   in return for providing liquidity to the traders on Mango
@@ -304,6 +307,7 @@ const CommunitySection = () => {
                   icon={<LightBulbIcon />}
                   title="Want to help build?"
                   cta="Become a contributor"
+                  href="https://trello.com/c/0iz8GfW6/32-how-to-use-this-board"
                 >
                   We always welcome new contributors! We commit to distribute
                   the largest portion of the DAO’s power and wealth to future
