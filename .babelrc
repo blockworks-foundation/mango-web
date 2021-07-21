@@ -1,14 +1,14 @@
 {
   "presets": [
-    "next/babel"
-  ],
-  "plugins": [
     [
-      "import",
+      "next/babel",
       {
-        "libraryName": "antd",
-        "style": true
+        "preset-react": {
+          "runtime": "automatic",
+          "importSource": "@emotion/react"
+        }
       }
     ]
-  ]
+  ],
+  "plugins": ["@emotion/babel-plugin", "babel-plugin-macros"]
 }

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-theme='Mango'] {
+  --primary: theme('colors.mango-theme.yellow');
+  --red: theme('colors.mango-theme.red.DEFAULT');
+  --red-dark: theme('colors.mango-theme.red.dark');
+  --green: theme('colors.mango-theme.green.DEFAULT');
+  --green-dark: theme('colors.mango-theme.green.dark');
+  --bkg-1: theme('colors.mango-theme["bkg-1"]');
+  --bkg-2: theme('colors.mango-theme["bkg-2"]');
+  --bkg-3: theme('colors.mango-theme["bkg-3"]');
+  --fgd-1: theme('colors.mango-theme["fgd-1"]');
+  --fgd-2: theme('colors.mango-theme["fgd-2"]');
+  --fgd-3: theme('colors.mango-theme["fgd-3"]');
+  --fgd-4: theme('colors.mango-theme["fgd-4"]');
+}

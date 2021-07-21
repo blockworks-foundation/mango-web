@@ -1,14 +1,15 @@
-/* eslint-disable */
-const withAntdLess = require("next-plugin-antd-less");
-
-module.exports = withAntdLess({
-  // optional
-  lessVarsFilePath: "./styles/theme.less",
-  cssLoaderOptions: {},
-
-  // Other Config Here...
-
+module.exports = {
+  target: 'serverless',
   webpack(config) {
-    return config;
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    })
+    config.node = {
+      fs: 'empty',
+      module: 'empty',
+    }
+
+    return config
   },
-});
+}
