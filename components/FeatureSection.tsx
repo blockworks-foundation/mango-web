@@ -5,7 +5,7 @@ const FeatureSection = () => {
   return (
     <div className="bg-th-bkg-3 transform -skew-y-3 pt-16 pb-32 lg:pb-48 mb-48 lg:mb-48 -mt-64">
       <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
-        <section className="py-28 px-4">
+        <section className="py-16 md:py-28 px-4">
           <div className="flex flex-wrap -mx-4 mb-6">
             <div className="lg:w-1/3 px-4 mb-6">
               <svg
