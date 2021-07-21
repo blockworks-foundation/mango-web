@@ -275,7 +275,9 @@ const FeatureSection = () => {
                 Mango is a fully open-source project built by a global team of
                 contributors. Help build the world’s best exchange, period.
               </p>
-              <LinkLeft>Join the discord</LinkLeft>
+              <LinkLeft href="https://discord.gg/67jySBhxrg">
+                Join the discord
+              </LinkLeft>
             </div>
           </div>
         </section>
@@ -352,11 +354,11 @@ const FeatureSection = () => {
           <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
             <div className="lg:self-center">
               <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                <span className="block">Ready to start trading?</span>
+                <span className="block">What are you waiting for?</span>
               </h2>
               <p className="mt-4 text-xl leading-6 text-white text-opacity-50">
-                Check out the exchange, connect your wallet, and experience the
-                future.
+                Trade with the best in class user interface
+                for&nbsp;traders,&nbsp;built&nbsp;by&nbsp;traders.{' '}
               </p>
               <div className="py-8">
                 <a
