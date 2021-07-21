@@ -41,7 +41,7 @@ const FooterSection = () => {
             <form className="mt-8 sm:flex" onSubmit={handleSubmit}>
               <label className="sr-only">Email address</label>
               {done ? (
-                <span>Thank you for signing up!</span>
+                <span>Thank you for signing up! 🎉</span>
               ) : (
                 <>
                   <input
