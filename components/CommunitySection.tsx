@@ -226,7 +226,9 @@ const CommunityCard = (props) => (
       {props.icon}
       <p className="text-lg font-bold py-6 pb-2">{props.title}</p>
       <div className="flex flex-col">
-        <p className="text-md text-white text-opacity-50 pb-2">{props.children}</p>
+        <p className="text-md text-white text-opacity-50 pb-2">
+          {props.children}
+        </p>
         <LinkLeft>{props.cta}</LinkLeft>
       </div>
     </div>
@@ -250,10 +252,18 @@ const CommunitySection = () => {
                   source for anyone to use and contribute.
                 </p>
                 <div className="flex flex-row justify-center">
-                  <a rel="noreferrer" target="_blank" href="https://discord.gg/67jySBhxrg">
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://discord.gg/67jySBhxrg"
+                  >
                     <Button>Join discord</Button>
                   </a>
-                  <a rel="noreferrer" target="_blank" href="https://docs.mango.markets/">
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://docs.mango.markets/"
+                  >
                     <Link>Learn more</Link>
                   </a>
                 </div>
@@ -287,8 +297,8 @@ const CommunitySection = () => {
                   cta="Become a market maker"
                 >
                   Learn about market making on the mango protocol and earn $MNGO
-                  in return for providing liquidity to the traders on mango
-                  markets.
+                  in return for providing liquidity to the traders on Mango
+                  Markets.
                 </CommunityCard>
                 <CommunityCard
                   icon={<LightBulbIcon />}
