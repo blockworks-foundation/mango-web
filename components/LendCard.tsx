@@ -17,7 +17,7 @@ const LendCard = (props: LendCardProps) => {
 
   return (
     <div
-      className="flex-1 bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2"
+      className="flex-1 bg-th-fgd-4 border border-bkg-3 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2"
       style={{
         backgroundBlendMode: 'overlay',
         backgroundImage: `url(${props.bg})`,
