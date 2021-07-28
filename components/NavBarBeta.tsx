@@ -171,7 +171,7 @@ const NavBarBeta = () => {
 
                         <div className="ml-4">
                           <div className="text-base font-medium text-white">
-                            Perpetual Futures <MangoPill />
+                            Perpetual Futures <MangoPill>SOON</MangoPill>
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
                             Cross-collateralized decentralized leveraged
@@ -389,8 +389,7 @@ const NavBarBeta = () => {
               >
                 <div className="flex flex-row">
                   <p>Mango DAO</p>
-                  <span style={{ width: '55px' }}></span>
-                  {/* <MangoPill /> */}
+                  <MangoPill>WEN</MangoPill>
                 </div>
               </a>
             </nav>
@@ -501,7 +500,7 @@ const NavBarBeta = () => {
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium text-white">
-                      Perpetual Futures <MangoPill />
+                      Perpetual Futures <MangoPill>SOON</MangoPill>
                     </span>
                   </a>
 
