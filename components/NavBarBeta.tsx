@@ -110,7 +110,7 @@ const NavBarBeta = () => {
                     !productMenuVisible && 'hidden'
                   } absolute z-50 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
                 >
-                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                  <div className="rounded-lg border border-bkg-3 shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                         Trading
@@ -311,7 +311,7 @@ const NavBarBeta = () => {
                     !supportMenuVisible && 'hidden'
                   } absolute z-50 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0`}
                 >
-                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                  <div className="rounded-lg border border-bkg-3 shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-medium text-yellow-300 uppercase">
                         Social
@@ -371,7 +371,7 @@ const NavBarBeta = () => {
                         </div>
                       </a>
                     </div>
-                    <div className="px-5 py-5 bg-th-fgd-4 sm:px-8 sm:py-8">
+                    <div className="px-5 py-5 bg-th-fgd-4 -mt-1 sm:px-8 sm:py-8">
                       <div>
                         <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                           Mango Guides
