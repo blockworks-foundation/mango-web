@@ -412,12 +412,23 @@ const NavBarBeta = () => {
               </div>
 
               <a
-                href="https://token.mango.markets"
+                href="https://dao.mango.markets"
                 className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none rounded-md"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <div className="flex flex-row">
                   <p>Mango DAO</p>
-                  <MangoPill>WEN</MangoPill>
+                </div>
+              </a>
+              <a
+                href="https://token.mango.markets"
+                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 focus:outline-none rounded-md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="flex flex-row">
+                  <p>Redeem</p>
                 </div>
               </a>
             </nav>
