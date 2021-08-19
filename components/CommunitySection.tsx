@@ -255,7 +255,7 @@ const CommunitySection = () => {
                   <a
                     rel="noreferrer"
                     target="_blank"
-                    href="https://discord.gg/67jySBhxrg"
+                    href="https://discord.gg/2uwjsBc5yw"
                   >
                     <Button>Join discord</Button>
                   </a>

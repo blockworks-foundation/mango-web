@@ -317,7 +317,7 @@ const NavBarBeta = () => {
                         Social
                       </h3>
                       <a
-                        href="https://discord.gg/67jySBhxrg"
+                        href="https://discord.gg/2uwjsBc5yw"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         {/* Heroicon name: outline/support */}
@@ -620,7 +620,7 @@ const NavBarBeta = () => {
               </h3>
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
-                  href="https://discord.gg/pkyK2aZjrA"
+                  href="https://discord.gg/2uwjsBc5yw"
                   className="text-base font-medium text-white hover:bg-th-bkg-4"
                 >
                   <div className="flex flex-row">

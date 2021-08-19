@@ -95,7 +95,7 @@ const FooterSection = () => {
                   </a>
                   <a
                     className="flex h-6 w-6 m-2"
-                    href="https://discord.gg/67jySBhxrg"
+                    href="https://discord.gg/2uwjsBc5yw"
                   >
                     <img className="mx-auto" src="socials/discord.svg" />
                   </a>
@@ -195,7 +195,7 @@ const FooterSection = () => {
                       <li className="mb-4">
                         <a
                           className="text-gray-500 hover:text-gray-600"
-                          href="https://discord.gg/67jySBhxrg"
+                          href="https://discord.gg/2uwjsBc5yw"
                         >
                           Discord
                         </a>

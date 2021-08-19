@@ -275,7 +275,7 @@ const FeatureSection = () => {
                 Mango is a fully open-source project built by a global team of
                 contributors. Help build the world’s best exchange, period.
               </p>
-              <LinkLeft href="https://discord.gg/67jySBhxrg">
+              <LinkLeft href="https://discord.gg/2uwjsBc5yw">
                 Join the discord
               </LinkLeft>
             </div>
