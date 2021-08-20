@@ -263,7 +263,7 @@ const NavBarBeta = () => {
                       </a>
 
                       <a
-                        href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
+                        href="https://docs.mango.markets/mango-v3/market-making-bot-python"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg 
