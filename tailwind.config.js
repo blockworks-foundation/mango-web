@@ -45,11 +45,16 @@ module.exports = {
       }),
 
       height: {
+        450: '450px',
         650: '650px',
         675: '675px',
         700: '700px',
         750: '750px',
         1750: '1750px',
+      },
+      width: {
+        450: '450px',
+        700: '700px',
       },
       cursor: {
         help: 'help',
@@ -121,6 +126,27 @@ module.exports = {
         'th-red-dark': 'var(--red-dark)',
         'th-green': 'var(--green)',
         'th-green-dark': 'var(--green-dark)',
+      },
+      animation: {
+        blob:"blob 12s infinite"
+ 
+      },
+      keyframes:{
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.2)",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+
+        },
       },
     },
   },
