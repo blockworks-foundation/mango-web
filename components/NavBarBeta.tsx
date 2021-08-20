@@ -808,27 +808,80 @@ const NavBarBeta = () => {
                       Liquidator Program
                     </span>
                   </a>
+                  <a
+                        href="https://docs.mango.markets/mango-v3/market-making-bot-python"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                      >
+                        <svg 
+                        
+                        className="flex-shrink-0 h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 22 22"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                        >
+                        <path d="M1 4L4 5M4 5L1 14C2.77253 15.3334 5.22866 15.3334 7.00119 14M4 5L7.00006 14M4 5L10 3M16 5L19 4M16 5L13 14C14.7725 15.3334 17.2287 15.3334 19.0012 14M16 5L19.0001 14M16 5L10 3M10 1V3M10 19V3M10 19H7M10 19H13" 
+                        stroke="#4E4D65" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"/>
+                        </svg>
 
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
+                            Market Making Program
+                          </p>
+                        </div>
+                      </a>
                   <a
                     href="https://docs.mango.markets/"
                     className="text-base font-medium text-white hover:bg-th-bkg-4"
                   >
                     <div className="flex flex-row">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7 0.804233C5.9428 0.289057 4.75516 0 3.5 0C2.24484 0 1.0572 0.289057 0 0.804233V10.8042C1.0572 10.2891 2.24484 10 3.5 10C5.1686 10 6.71789 10.5108 8 11.3847C9.28211 10.5108 10.8314 10 12.5 10C13.7552 10 14.9428 10.2891 16 10.8042V0.804233C14.9428 0.289057 13.7552 0 12.5 0C11.2448 0 10.0572 0.289057 9 0.804233V8C9 8.55228 8.55229 9 8 9C7.44772 9 7 8.55229 7 8V0.804233Z"
-                          fill="#4F4C67"
-                        />
-                      </svg>
+                    <svg
+                          className="flex-shrink-0 h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 22 22"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M10 2.25278V15.2528M10 2.25278C8.83211 1.47686 7.24649 1 5.5 1C3.75351 1 2.16789 1.47686 1 2.25278V15.2528C2.16789 14.4769 3.75351 14 5.5 14C7.24649 14 8.83211 14.4769 10 15.2528M10 2.25278C11.1679 1.47686 12.7535 1 14.5 1C16.2465 1 17.8321 1.47686 19 2.25278V15.2528C17.8321 14.4769 16.2465 14 14.5 14C12.7535 14 11.1679 14.4769 10 15.2528" 
+                          stroke="#4E4D65" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"/>
+                          </svg>
                       <p className="mx-3 -mt-1">Explore the docs</p>
                     </div>
                   </a>
+                  <a
+                        href="https://token.mango.markets"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                      >
+                        <svg 
+                        
+                        className="flex-shrink-0 h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 22 22"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                        >
+                        <path d="M10 6V19M10 6C10 6 10 4.50722 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6C11.4027 6 10 6 10 6ZM10 6C10 6 10 4.06291 10 3.5C10 2.11929 8.88071 1 7.5 1C6.11929 1 5 2.11929 5 3.5C5 4.88071 6.11929 6 7.5 6C8.3178 6 10 6 10 6ZM3 10H17M3 10C1.89543 10 1 9.10457 1 8C1 6.89543 1.89543 6 3 6H17C18.1046 6 19 6.89543 19 8C19 9.10457 18.1046 10 17 10M3 10L3 17C3 18.1046 3.89543 19 5 19H15C16.1046 19 17 18.1046 17 17V10" 
+                          stroke="#4E4D65" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"/>
+                        </svg>
+
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
+                            Redeem your <GradientText>MNGO</GradientText>
+                          </p>
+                        </div>
+                      </a>
                 </nav>
               </div>
               <h3 className="py-5 text-sm tracking-wide font-medium text-yellow-300 uppercase">
