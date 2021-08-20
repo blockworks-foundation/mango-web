@@ -30,7 +30,6 @@ const HeroSectionHome = () => {
       opacity: 1,
       y: 0,
       ease: Power3.easeOut,
-      delay: 0.1,
     })
   }, [])
 
