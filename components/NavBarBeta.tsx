@@ -857,28 +857,26 @@ const NavBarBeta = () => {
                     </div>
                   </a>
                   <a
-                        href="https://token.mango.markets"
+                        href="https://dao.mango.markets"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
-                        <svg 
-                        
-                        className="flex-shrink-0 h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 22 22"
-                        stroke="currentColor"
-                        aria-hidden="true"
+                        <svg
+                          className="flex-shrink-0 h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 22 22"
+                          stroke="currentColor"
+                          aria-hidden="true"
                         >
-                        <path d="M10 6V19M10 6C10 6 10 4.50722 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6C11.4027 6 10 6 10 6ZM10 6C10 6 10 4.06291 10 3.5C10 2.11929 8.88071 1 7.5 1C6.11929 1 5 2.11929 5 3.5C5 4.88071 6.11929 6 7.5 6C8.3178 6 10 6 10 6ZM3 10H17M3 10C1.89543 10 1 9.10457 1 8C1 6.89543 1.89543 6 3 6H17C18.1046 6 19 6.89543 19 8C19 9.10457 18.1046 10 17 10M3 10L3 17C3 18.1046 3.89543 19 5 19H15C16.1046 19 17 18.1046 17 17V10" 
+                        <path d="M1.05493 9H3C4.10457 9 5 9.89543 5 11V12C5 13.1046 5.89543 14 7 14C8.10457 14 9 14.8954 9 16V18.9451M6 1.93552V3.5C6 4.88071 7.11929 6 8.5 6H9C10.1046 6 11 6.89543 11 8C11 9.10457 11.8954 10 13 10C14.1046 10 15 9.10457 15 8C15 6.89543 15.8954 6 17 6L18.0645 6M13 18.4879V16C13 14.8954 13.8954 14 15 14H18.0645M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" 
                           stroke="#4E4D65" 
                           strokeWidth="2" 
                           strokeLinecap="round" 
                           strokeLinejoin="round"/>
                         </svg>
-
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
-                            Redeem your <GradientText>MNGO</GradientText>
+                            Mango DAO
                           </p>
                         </div>
                       </a>
