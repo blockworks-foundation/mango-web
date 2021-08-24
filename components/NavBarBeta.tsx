@@ -383,7 +383,7 @@ const NavBarBeta = () => {
                             Explore the docs
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Start learning about and integrating and building for the mango protocol. 
+                            Start learning about, integrating, and building for the mango protocol. 
                           </p>
                         </div>
                       </a>
