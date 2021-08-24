@@ -827,7 +827,7 @@ const NavBarBeta = () => {
                         strokeLinejoin="round"/>
                         </svg>
 
-                        <div className="ml-4">
+                        <div className="mx-3">
                           <p className="text-base font-medium text-white">
                             Market Making Program
                           </p>
@@ -852,8 +852,12 @@ const NavBarBeta = () => {
                           strokeLinecap="round" 
                           strokeLinejoin="round"/>
                           </svg>
-                      <p className="mx-3 -mt-1">Explore the docs</p>
-                    </div>
+                          <div className="mx-3">
+                          <p className="text-base font-medium text-white">
+                            Explore the docs                          
+                          </p>
+                        </div>                    
+                        </div>
                   </a>
                   <a
                         href="https://dao.mango.markets"
@@ -873,7 +877,7 @@ const NavBarBeta = () => {
                           strokeLinecap="round" 
                           strokeLinejoin="round"/>
                         </svg>
-                        <div className="ml-4">
+                        <div className="mx-3">
                           <p className="text-base font-medium text-white">
                             Mango DAO
                           </p>
