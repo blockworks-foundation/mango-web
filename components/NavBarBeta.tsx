@@ -383,8 +383,7 @@ const NavBarBeta = () => {
                             Explore the docs
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Trade BTC, ETH, SOL, and SRM, cross collateralized
-                            with up to 5x leverage.
+                            Start learning and integrating mango into your products. 
                           </p>
                         </div>
                       </a>
