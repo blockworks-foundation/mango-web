@@ -86,6 +86,7 @@ const LendSection = () => {
           </div>
         </section>
       </div>
+      
       <div className="w-full mx-auto px-4">
         <section className="px-3 mt-28">
           <div className="flex flex-col justify-center items-center text-center">
@@ -106,7 +107,7 @@ const LendSection = () => {
                   Liquidity Available
                 </span>
               </GradientText> */}
-              <div className="mt-4 flex flex-wrap text-left">
+              <div className="z-10 mt-4 flex flex-wrap text-left">
                 <LendCard {...propsFor('USDC')} />
                 <LendCard {...propsFor('BTC')} />
                 <LendCard {...propsFor('ETH')} />
@@ -120,9 +121,17 @@ const LendSection = () => {
               */}
               </div>
             </div>
+            <div className="z-0 relative -bottom-72 -left-8 lg:-bottom-96 ">
+              <div className="absolute bottom-4 left-8 w-450 h-450 bg-mango-yellow mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob"></div>
+              <div className="absolute bottom-4 w-450 h-450 bg-mango-red mix-blend-screen rounded-full filter blur-2xl opacity-30 animate-blob animation-delay-4000"></div>
+              <div className="absolute bottom-8 left-20 w-450 h-450 bg-mango-green mix-blend-screen rounded-full filter blur-2xl opacity-20 animate-blob animation-delay-2000"></div>
+              </div>
           </div>
+          
         </section>
+        
       </div>
+      
       <div className="max-w-7xl mx-auto px-4">
         <section className="px-3">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
@@ -135,6 +144,7 @@ const LendSection = () => {
                 />
               </div>
             </div>
+            
             {/*
             <div className="lg:col-span-6">
               <div className="z-10 relative -right-60 pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full">
@@ -147,7 +157,9 @@ const LendSection = () => {
             </div>
             */}
           </div>
+
         </section>
+
       </div>
     </div>
   )

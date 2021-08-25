@@ -30,7 +30,6 @@ const HeroSectionHome = () => {
       opacity: 1,
       y: 0,
       ease: Power3.easeOut,
-      delay: 0.1,
     })
   }, [])
 
@@ -41,7 +40,7 @@ const HeroSectionHome = () => {
           <main className="mt-16 sm:mt-16">
             <div className="mx-auto max-w-7xl">
               <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div className="px-2 ml-6 sm:pr-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:my-24">
+                <div className="px-2 ml-6 sm:pr-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:my-24 z-10">
                   <div /*ref={el => {heroText = el}}*/>
                     <h1 className="mb-3 lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl text-white font-bold font-heading">
                       Long &amp; short everything.
@@ -116,6 +115,11 @@ const HeroSectionHome = () => {
                     />
                   </div>
                 </div>
+              </div>
+              <div className="z-0 absolute -bottom-4 left-20 lg:-bottom-4 lg:left-96">
+              <div className="absolute bottom-4 left-8 w-450 h-450 bg-mango-yellow mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob"></div>
+              <div className="absolute bottom-4 w-450 h-450 bg-mango-red mix-blend-screen rounded-full filter blur-2xl opacity-30 animate-blob animation-delay-4000"></div>
+              <div className="absolute bottom-8 left-20 w-450 h-450 bg-mango-green mix-blend-screen rounded-full filter blur-2xl opacity-20 animate-blob animation-delay-2000"></div>
               </div>
             </div>
           </main>
