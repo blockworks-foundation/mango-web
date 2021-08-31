@@ -162,7 +162,7 @@ const NavBarBeta = () => {
 
                       <a
                         href="https://trade.mango.markets/perp/BTC"
-                        className="disabled -m-3 p-3 flex items-start rounded-lg opacity-50"
+                        className="disabled -m-3 p-3 flex items-start rounded-lg"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -733,7 +733,7 @@ const NavBarBeta = () => {
 
                   <a
                     href="https://trade.mango.markets/perp/BTC"
-                    className="disabled -m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 opacity-50"
+                    className="disabled -m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
