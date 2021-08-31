@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import MangoPill from '../components/MangoPill'
+//import MangoPill from '../components/MangoPill'
 import Button from './Button'
 
-const doNothing = (e) => {
-  e.stopPropagation()
-}
+//const doNothing = (e) => {
+//  e.stopPropagation()
+//}
 
 const FooterSection = () => {
   const [done, setDone] = useState(false)
@@ -123,20 +123,12 @@ const FooterSection = () => {
                         </a>
                       </li>
                       <li className="mb-4">
-                        {/* 
-                          <a
-                          className="text-gray-500 hover:text-gray-600"
-                          href="#"
-                        >
-                        */}
                         <a
-                          onClick={doNothing}
-                          className="text-gray-500 hover:text-gray-600 disabled opacity-50"
-                          href="#"
+                          className="text-gray-500 hover:text-gray-600"
+                          href="https://trade.mango.markets/perp/BTC"
                         >
                           Perpetual Futures
-                        </a>{' '}
-                        <MangoPill>SOON</MangoPill>
+                        </a>
                       </li>
                       <li className="mb-4">
                         <a

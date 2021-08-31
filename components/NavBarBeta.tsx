@@ -161,8 +161,7 @@ const NavBarBeta = () => {
                       </a>
 
                       <a
-                        href="#"
-                        onClick={doNothing}
+                        href="https://trade.mango.markets/perp/BTC"
                         className="disabled -m-3 p-3 flex items-start rounded-lg opacity-50"
                       >
                         <svg
@@ -184,7 +183,7 @@ const NavBarBeta = () => {
 
                         <div className="ml-4">
                           <div className="text-base font-medium text-white">
-                            Perpetual Futures <MangoPill>SOON</MangoPill>
+                            Perpetual Futures
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
                             Cross-collateralized decentralized leveraged
@@ -733,8 +732,7 @@ const NavBarBeta = () => {
                   </a>
 
                   <a
-                    href="#"
-                    onClick={doNothing}
+                    href="https://trade.mango.markets/perp/BTC"
                     className="disabled -m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 opacity-50"
                   >
                     <svg
@@ -754,7 +752,7 @@ const NavBarBeta = () => {
                       />
                     </svg>
                     <span className="ml-3 text-base font-medium text-white">
-                      Perpetual Futures <MangoPill>SOON</MangoPill>
+                      Perpetual Futures
                     </span>
                   </a>
 
