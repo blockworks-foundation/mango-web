@@ -162,7 +162,7 @@ const NavBarBeta = () => {
 
                       <a
                         href="https://trade.mango.markets/perp/BTC"
-                        className="disabled -m-3 p-3 flex items-start rounded-lg"
+                        className="disabled -m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
