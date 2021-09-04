@@ -1,21 +1,23 @@
-import Button from './Button'
-import Link from './Link'
+//import Button from './Button'
+//import Link from './Link'
+
+import GradientText from "./GradientText"
 
 const HeroSectionMarkets = () => {
   return (
     <div className="">
       <section className="bg-hero-img bg-no-repeat bg-cover bg-top">
         <div className="sm:px-4 px-2 mx-auto">
-          <div className="relative py-16 mb-48">
+          <div className="relative py-24 mb-56">
             <div className="max-w-4xl mb-16 mx-auto text-center">
               <h2 className="mb-3 lg:text-5xl sm:text-4xl text-3xl text-white font-bold font-heading">
-                You will love trading here.
+                Trading &amp; lending <GradientText>Mangofied.</GradientText>
               </h2>
               <p className="text-gray-400 sm:px-0 px-2 lg:text-2xl sm:text-xl text-lg">
-                Mango Markets provides access to deep&nbsp;liquidity, leverage
-                and derivatives
-                for&nbsp;traders,&nbsp;built&nbsp;by&nbsp;traders.
+                Mango provides markets with deep&nbsp;liquidity, spot margin, leveraged derivatives, and risk management tools
+                for&nbsp;traders all while earning interest on collateral.
               </p>
+              {/*
               <div className="flex lg:flex-row md:flex-row sm: flex-row xs:flex-col justify-center py-8">
                 <a
                   rel="noreferrer"
@@ -30,10 +32,11 @@ const HeroSectionMarkets = () => {
                   href="https://docs.mango.markets/tutorials/trade-on-mango.markets"
                 >
                   <div className="xs:relative mt-2 sm:mt-0 left-12 sm:left-0">
-                    <Link>Learn to trade on Mango</Link>
+                    <Link>Learn how to trade on Mango</Link>
                   </div>
                 </a>
               </div>
+            */}
             </div>
           </div>
         </div>

@@ -39,13 +39,16 @@ module.exports = {
         'product-one': "url('../public/img/ProductFeature1.png')",
         'product-two': "url('../public/img/ProductFeature2.png')",
         'product-three': "url('../public/img/ProductFeature3.png')",
-        'product-four': "url('../public/img/ProductFeature4.png')",
+        'product-four': "url('../public/img/redeem4.png')",
         'bg-texture': "url('../public/img/bgtexture.png')",
+        'bg-cta': "url('../public/img/bgcta.jpeg')",
         'home-bg': "url('../public/img/home_section.png')",
       }),
-
       height: {
         450: '450px',
+        500: '500px',
+        550: '550px',
+        600: '600px',
         650: '650px',
         675: '675px',
         700: '700px',
@@ -55,6 +58,7 @@ module.exports = {
       width: {
         450: '450px',
         700: '700px',
+        900: '900px',
       },
       cursor: {
         help: 'help',
