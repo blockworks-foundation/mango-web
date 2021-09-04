@@ -1,4 +1,6 @@
 import Button from './Button'
+import ButtonWhite from './ButtonWhite'
+
 import { ReceiptTaxIcon, LightningBoltIcon, CurrencyDollarIcon, LibraryIcon } from '@heroicons/react/outline'
 import LinkLeft from './LinkLeft'
 
@@ -309,7 +311,7 @@ const FeatureSection = () => {
                               target="_blank"
                               href="https://discord.gg/67jySBhxrgs"
                             >
-                              <Button>Start trading now</Button>
+                              <ButtonWhite>Start trading now</ButtonWhite>
                             </a>
                           </div>
                         </div>
