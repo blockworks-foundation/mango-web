@@ -279,9 +279,6 @@ const FeatureSection = () => {
                         </h2>
                         <p className="text-white text-opacity-50 text-lg">
                           Mango markets are grown organically with no pesticides, trade and manage your assets with the best in class user interface, built by traders for traders.
-                          <br />
-                          <br />
-                          Mango is full opensourced, runable locally. 
                         </p>
                         <br />
                         <a
@@ -299,11 +296,11 @@ const FeatureSection = () => {
             </section>
     
             <div className="z-50 mx-auto max-w-7xl py-16 px-8 my-16">
-              <div className=" h-80 bg-bkg-2 border border-bkg-3 rounded-xl shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-bg-cta bg-cover bg-bottom bg-no-repeat">
+              <div className=" h-80 bg-bkg-2 border border-mango-orange rounded-xl shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-bg-cta bg-cover bg-bottom bg-no-repeat">
                       <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
                         <div className="lg:self-center">
                           <h2 className="text-5xl font-extrabold text-white">
-                            <span className="block">Every market, cross-collateralized.</span>
+                            <span className="block">Every market cross-collateralized.</span>
                           </h2>
 
                           <div className="pt-8">
