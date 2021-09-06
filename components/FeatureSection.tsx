@@ -286,9 +286,9 @@ const FeatureSection = () => {
                         <a
                               rel="noreferrer"
                               target="_blank"
-                              href="https://discord.gg/67jySBhxrgs"
+                              href="https://github.com/blockworks-foundation/mango-ui-v3"
                             >
-                              <LinkLeft>Check out the github</LinkLeft>
+                              <LinkLeft>Run it yourself locally</LinkLeft>
                             </a>                      
                       </div>
                     </div>
