@@ -657,7 +657,6 @@ const NavBarBeta = () => {
               */}
             </nav>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <ThemeSwitch />
               <div>
                 <a
                   rel="noreferrer"
@@ -667,6 +666,10 @@ const NavBarBeta = () => {
                   <Button>Start trading</Button>
                 </a>
               </div>
+              <div className="bg-th-bkg-3 rounded-full ml-6 p-1 shadow-lg">
+              <ThemeSwitch />
+              </div>
+
             </div>
           </div>
         </div>
