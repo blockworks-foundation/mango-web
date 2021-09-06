@@ -113,6 +113,7 @@ const LendSection = () => {
                 <LendCard {...propsFor('ETH')} />
                 <LendCard {...propsFor('SOL')} />
                 <LendCard {...propsFor('SRM')} />
+                
                 {/*
                 <div className="flex-1 flex-col bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2 justify-center xl:hidden">
                   <p className="leading-tight font-extrabold font-heading text-5xl text-center">30+</p>
@@ -138,7 +139,7 @@ const LendSection = () => {
             <div className="">
               <div className="z-10 relative">
                 <img
-                  className="lg:h-750 lg:w-auto lg:max-w-none"
+                  className="lg:h-1450 lg:w-auto lg:max-w-none"
                   src="../img/borrow.png"
                   alt=""
                 />
