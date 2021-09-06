@@ -126,7 +126,7 @@ const NavBarBeta = () => {
                   <div className="w-700 grid grid-cols-2 rounded-lg border border-bkg-3 shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
-                        Trading
+                        Markets
                       </h3>
                       <a
                         href="https://trade.mango.markets/"
@@ -151,11 +151,10 @@ const NavBarBeta = () => {
 
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
-                            Spot Markets
+                            Spot Margin
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Trade BTC, ETH, SOL, and SRM, cross collateralized
-                            with up to 5x leverage.
+                            Trade BTC, ETH, SOL, SRM, and MNGO with up to 5x margin.
                           </p>
                         </div>
                       </a>
@@ -186,11 +185,14 @@ const NavBarBeta = () => {
                             Perpetual Futures
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
-                            Cross-collateralized decentralized leveraged
-                            perpetual futures markets.
+                            Permisionless leveraged
+                            perpetual futures markets with up to 10x.
                           </p>
                         </div>
                       </a>
+                      <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
+                        Defi
+                      </h3>
                       <a
                         href="https://trade.mango.markets/borrow"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
@@ -214,7 +216,7 @@ const NavBarBeta = () => {
 
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
-                            Decentralized Lending
+                          Borrow &amp; Lend 
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
                             Earn interest on deposits and take out
