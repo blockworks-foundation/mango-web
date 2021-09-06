@@ -43,7 +43,8 @@ const TradeSection = () => {
                 </h2>
                 <div className="">
                   <p className="mb-8 text-white text-opacity-50 leading-relaxed sm:text-2xl xs:text-lg">
-                    Trade spot margined and perpetual futures markets, permissionless and all on-chain.
+                    Trade spot margined and perpetual futures markets,
+                    permissionless and all on-chain.
                   </p>
                 </div>
                 <div className="flex flex-row justify-center">

@@ -1,4 +1,4 @@
-import FourOhfour from "../components/FourOhFour"
+import FourOhfour from '../components/FourOhFour'
 
 const FourOh = () => {
   return (

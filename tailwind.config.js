@@ -107,6 +107,30 @@ module.exports = {
           darker: '#072428',
           darkest: '#061f23',
         },
+        'light-theme': {
+          yellow: '#F58700',
+          red: { DEFAULT: '#CC2929', dark: '#AA2222' },
+          green: { DEFAULT: '#5EBF4D', dark: '#4BA53B' },
+          'bkg-1': '#f7f7f7',
+          'bkg-2': '#FFFFFF',
+          'bkg-3': '#F0F0F0',
+          'fgd-1': '#061f23',
+          'fgd-2': '#0C3F45',
+          'fgd-3': '#446065',
+          'fgd-4': '#B0B0B0',
+        },
+        'dark-theme': {
+          yellow: '#E4AF11',
+          red: { DEFAULT: '#CC2929', dark: '#AA2222' },
+          green: { DEFAULT: '#5EBF4D', dark: '#4BA53B' },
+          'bkg-1': '#101012',
+          'bkg-2': '#1B1B1F',
+          'bkg-3': '#27272B',
+          'fgd-1': '#FFFFFF',
+          'fgd-2': '#F7F7F7',
+          'fgd-3': '#E7E7E7',
+          'fgd-4': '#878787',
+        },
         'mango-theme': {
           yellow: '#F2C94C',
           red: { DEFAULT: '#E54033', dark: '#C7251A' },
@@ -133,24 +157,22 @@ module.exports = {
         'th-green-dark': 'var(--green-dark)',
       },
       animation: {
-        blob:"blob 12s infinite"
- 
+        blob: 'blob 12s infinite',
       },
-      keyframes:{
+      keyframes: {
         blob: {
-          "0%": {
-            transform: "translate(0px, 0px) scale(1)",
+          '0%': {
+            transform: 'translate(0px, 0px) scale(1)',
           },
-          "33%": {
-            transform: "translate(30px, -50px) scale(1.2)",
+          '33%': {
+            transform: 'translate(30px, -50px) scale(1.2)',
           },
-          "66%": {
-            transform: "translate(-20px, 20px) scale(0.9)",
+          '66%': {
+            transform: 'translate(-20px, 20px) scale(0.9)',
           },
-          "100%": {
-            transform: "translate(0px, 0px) scale(1)",
+          '100%': {
+            transform: 'translate(0px, 0px) scale(1)',
           },
-
         },
       },
     },

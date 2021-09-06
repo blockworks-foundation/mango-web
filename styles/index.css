@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme */
+
+:root {
+  --primary: theme('colors.light-theme.yellow');
+  --red: theme('colors.light-theme.red.DEFAULT');
+  --red-dark: theme('colors.light-theme.red.dark');
+  --green: theme('colors.light-theme.green.DEFAULT');
+  --green-dark: theme('colors.light-theme.green.dark');
+  --bkg-1: theme('colors.light-theme["bkg-1"]');
+  --bkg-2: theme('colors.light-theme["bkg-2"]');
+  --bkg-3: theme('colors.light-theme["bkg-3"]');
+  --fgd-1: theme('colors.light-theme["fgd-1"]');
+  --fgd-2: theme('colors.light-theme["fgd-2"]');
+  --fgd-3: theme('colors.light-theme["fgd-3"]');
+  --fgd-4: theme('colors.light-theme["fgd-4"]');
+}
+
+[data-theme='Dark'] {
+  --primary: theme('colors.dark-theme.yellow');
+  --red: theme('colors.dark-theme.red.DEFAULT');
+  --red-dark: theme('colors.dark-theme.red.dark');
+  --green: theme('colors.dark-theme.green.DEFAULT');
+  --green-dark: theme('colors.dark-theme.green.dark');
+  --bkg-1: theme('colors.dark-theme["bkg-1"]');
+  --bkg-2: theme('colors.dark-theme["bkg-2"]');
+  --bkg-3: theme('colors.dark-theme["bkg-3"]');
+  --fgd-1: theme('colors.dark-theme["fgd-1"]');
+  --fgd-2: theme('colors.dark-theme["fgd-2"]');
+  --fgd-3: theme('colors.dark-theme["fgd-3"]');
+  --fgd-4: theme('colors.dark-theme["fgd-4"]');
+}
+
 [data-theme='Mango'] {
   --primary: theme('colors.mango-theme.yellow');
   --red: theme('colors.mango-theme.red.DEFAULT');

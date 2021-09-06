@@ -1,7 +1,7 @@
 //import Button from './Button'
 //import Link from './Link'
 
-import GradientText from "./GradientText"
+import GradientText from './GradientText'
 
 const HeroSectionMarkets = () => {
   return (
@@ -14,7 +14,8 @@ const HeroSectionMarkets = () => {
                 Trading &amp; lending <GradientText>Mangofied.</GradientText>
               </h2>
               <p className="text-gray-400 sm:px-0 px-2 lg:text-2xl sm:text-xl text-lg">
-                Mango provides markets with deep&nbsp;liquidity, spot margin, leveraged derivatives, and risk management tools
+                Mango provides markets with deep&nbsp;liquidity, spot margin,
+                leveraged derivatives, and risk management tools
                 for&nbsp;traders all while earning interest on collateral.
               </p>
               {/*
