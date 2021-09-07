@@ -185,8 +185,7 @@ const NavBarBeta = () => {
                             Perpetual Futures
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
-                            Permisionless leveraged
-                            perpetual futures markets with up to 10x.
+                            Permisionless perpetual futures markets with up to 10x leverage.
                           </p>
                         </div>
                       </a>
