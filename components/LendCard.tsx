@@ -28,7 +28,7 @@ const LendCard = (props: LendCardProps) => {
     >
       <div className="flex flex-row justify-center">
         <div className="pr-4">
-          <div className="flex flex-col gap-x-2">
+          <div className="flex flex-row gap-x-2">
             <img className="w-6 h-6 mt-1 mb-2" src={props.icon} alt={props.name} />
             
             <p className="text-xl font-bold">{props.name}</p>
@@ -56,14 +56,14 @@ const LendCard = (props: LendCardProps) => {
             </p>
           </div>
 
-
+         {/* 
           <div className="flex-row mt-2">
             <p className="text-white text-opacity-50 text-xs">Total Borrows</p>
           </div>
           <div className="flex-row">
             <p className="">${format(props.liquidity.usd, 0)}</p>
           </div>
-         {/* 
+
           <div className="flex-row mt-2">
             <p className="text-white text-opacity-50 text-xs">
               Remaining Liquidity
