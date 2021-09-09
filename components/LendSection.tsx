@@ -77,7 +77,7 @@ const LendSection = () => {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href="https://trade.mango.markets/"
+                  href="/markets"
                 >
                   <Link>Learn more</Link>
                 </a>
