@@ -78,7 +78,7 @@ const HeroSectionHome = () => {
                       <div className="flex">
                         <div className="flex justify-center">
                           <a
-                            className="hover:opacity-70"
+                            className="hover:opacity-70 transition duration-200 ease-in-out"
                             href="https://solana.com/"
                           >
                             <img
@@ -90,7 +90,7 @@ const HeroSectionHome = () => {
                         </div>
                         <div className="flex justify-center -my-1 mx-10">
                           <a
-                            className="hover:opacity-70"
+                            className="hover:opacity-70 transition duration-200 ease-in-out"
                             href="https://projectserum.com/#/"
                           >
                             <img
