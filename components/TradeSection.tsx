@@ -8,11 +8,12 @@ import React from 'react'
 const TradeSection = () => {
   return (
     <div className="">
-      <div className="bg-gradient-to-br border border-bkg-3 from-th-bkg-3 via-th-bkg-3 to-th-bkg-2 h-auto transform -skew-y-3 lg:mb-48 lg:-mt-64 md:pt-48 md:mb-48 md:-mt-64 xs:my-0">
+      <div className="bg-gradient-to-br border border-bkg-3 from-th-bkg-3 via-th-bkg-3 to-th-bkg-2 h-auto transform -skew-y-3 lg:mb-48 lg:-mt-64 md:pt-48 md:mb-48 md:-mt-64 xs:my-0 overflow-hidden">
         <div className="mx-auto px-4 transform skew-y-3">
         <section className="py-12 px-3 lg:mt-0 md:mt-0 sm:mt-28 ">
           <Marquee
               gradient={true}
+              direction={'right'}
               gradientColor={[36, 35, 54]}
               >
               <div className="mx-auto">
@@ -123,7 +124,7 @@ const TradeSection = () => {
           </section>
           */}
         </div>
-        <div className="relative lg:top-32 md:top-16 sm:top-20 xs:top-8 transform skew-y-3">
+        <div className="relative lg:top-14 md:top-16 sm:top-20 xs:top-8 transform skew-y-3">
           <img className="" alt="modals" src="../img/home_section.png" />
         </div>
       </div>
