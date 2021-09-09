@@ -70,7 +70,7 @@ const MarketCard = (props: MarketCardProps) => {
 
   return (
     <div className="flex-1 m-2">
-      <div className="flex flex-col bg-th-fgd-4 border border-bkg-3 rounded-xl py-4 px-4 h-auto shadow-md">
+      <div className="flex flex-col bg-th-fgd-4 border border-bkg-3 rounded-xl py-4 px-4 h-auto shadow-md transform transition duration-200 ease-in-out hover:-translate-y-2 hover:shadow-lg">
         <div className="flex flex-row gap-x-2 align-bottom">
           <div className="flex flex-col flex-auto">
             <p className="text-sm text-white text-opacity-50">{props.name}</p>

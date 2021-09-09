@@ -59,12 +59,12 @@ const LendSection = () => {
           <div className="flex flex-wrap mx-auto justify-center items-center lg:text-center md:text-center sm:text-left">
             <div className="justify-center px-2 order-1 lg:order-none">
               <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl">
-                Never sell your crypto.
+                Never sell, just utilize.
               </h2>
               <p className="mb-8 text-white text-opacity-50 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                 Earn interest on deposits and take out fully collateralized
                 loans against existing assets. The mango protocol&apos;s risk
-                engine allows you to withdraw borrowed capital.
+                engine allows you to withdraw borrowed capital when you need.
               </p>
               <div className="flex flex-row justify-center">
                 <a
@@ -77,7 +77,7 @@ const LendSection = () => {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href="https://docs.mango.markets/tutorials/trade-on-mango.markets#how-to-withdraw-borrowed-funds"
+                  href="https://trade.mango.markets/"
                 >
                   <Link>Learn more</Link>
                 </a>
@@ -101,7 +101,7 @@ const LendSection = () => {
               </div>
             </div> */}
 
-            <div className="flex flex-col mb-12">
+            <div className="flex flex-col mb-12 max-w-5xl">
               {/* <GradientText>
                 <span className="text-2xl font-bold leading-relaxed">
                   Liquidity Available
@@ -113,13 +113,21 @@ const LendSection = () => {
                 <LendCard {...propsFor('ETH')} />
                 <LendCard {...propsFor('SOL')} />
                 <LendCard {...propsFor('SRM')} />
-
-                {/*
-                <div className="flex-1 flex-col bg-th-fgd-4 shadow-md rounded-xl py-4 px-4 h-auto w-auto m-2 justify-center xl:hidden">
-                  <p className="leading-tight font-extrabold font-heading text-5xl text-center">30+</p>
-                  <p className="text-md text-white text-opacity-50 text-bold text-center">Assests Available</p>
+                <LendCard {...propsFor('SRM')} />
+                <LendCard {...propsFor('SRM')} />
+                <LendCard {...propsFor('SRM')} />
+                <LendCard {...propsFor('SRM')} />
+                <LendCard {...propsFor('SRM')} />
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://trade.mango.markets/borrow"
+                >
+                <div className="min-w-full flex-1 bg-th-fgd-4 border border-bkg-3 shadow-md rounded-xl py-4 px-4 h-auto m-2 transform transition duration-200 ease-in-out hover:-translate-y-2 hover:shadow-lg hover:bg-bkg-3">
+                  <p className="leading-tight font-extrabold font-heading text-5xl text-center">16+</p>
+                  <p className="text-md text-white text-opacity-50 text-bold text-center">assets coming soon</p>
                 </div>
-              */}
+                </a>
               </div>
             </div>
             <div className="z-0 relative -bottom-72 -left-8 lg:-bottom-96 ">
@@ -131,7 +139,7 @@ const LendSection = () => {
         </section>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 mt-20">
         <section className="px-3">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="">

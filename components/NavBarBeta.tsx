@@ -3,7 +3,7 @@ import MangoPill from '../components/MangoPill'
 //import MangoSale from '../components/MangoSale'
 import Button from './Button'
 import GradientText from './GradientText'
-import ThemeSwitch from './ThemeSwitch'
+//import ThemeSwitch from './ThemeSwitch'
 
 const NavBarBeta = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
@@ -667,10 +667,11 @@ const NavBarBeta = () => {
                   <Button>Start trading</Button>
                 </a>
               </div>
+              {/* 
               <div className="bg-th-bkg-3 rounded-full ml-6 p-1 shadow-lg">
               <ThemeSwitch />
               </div>
-
+              */}
             </div>
           </div>
         </div>

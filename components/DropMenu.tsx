@@ -41,13 +41,13 @@ const DropMenu: FunctionComponent<DropMenuProps> = ({
               leaveTo="opacity-0 translate-y-1"
             >
               <Listbox.Options
-                className={`absolute z-10 mt-4 p-1 right-0 w-24 bg-th-bkg-1 divide-y divide-th-bkg-3 shadow-lg outline-none rounded-md`}
+                className={`absolute z-50 mt-4 py-2 px-2 right-0 w-auto bg-th-bkg-2 shadow-lg rounded-md`}
               >
                 {options.map((option) => (
                   <Listbox.Option key={option.name} value={option.name}>
                     {({ selected }) => (
                       <div
-                        className={`p-2 hover:bg-th-bkg-2 hover:cursor-pointer tracking-wider ${
+                        className={`p-2  hover:bg-th-bkg-3 hover:cursor-pointer hover:rounded-md hover:shadow-md tracking-wider ${
                           selected && `text-th-primary`
                         } ${option.icon && `flex items-center`}`}
                       >
