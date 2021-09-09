@@ -17,7 +17,7 @@ const LendCard = (props: LendCardProps) => {
 
   return (
     <div
-      className="max-w-xs flex-1 bg-th-fgd-4 border border-bkg-3 shadow-md rounded-xl py-4 px-2 h-auto w-auto m-2 transform transition duration-200 ease-in-out hover:-translate-y-2 hover:shadow-lg"
+      className="max-w-xs flex-1 bg-th-fgd-4 border border-bkg-3 shadow-md rounded-xl py-4 px-2 h-auto w-auto m-2 transform transition duration-200 ease-in-out hover:-translate-y-2 hover:shadow-lg hover:bg-bkg-3"
       style={{
         backgroundBlendMode: 'overlay',
         backgroundImage: `url(${props.bg})`,
@@ -29,12 +29,12 @@ const LendCard = (props: LendCardProps) => {
       <div className="flex flex-row justify-center">
         <div className="pr-4">
           <div className="flex flex-row gap-x-2">
-            <img className="w-6 h-6 mt-1 mb-2" src={props.icon} alt={props.name} />
+            <img className="w-5 h-5 mt-1 mb-2" src={props.icon} alt={props.name} />
             
             <p className="text-xl font-bold">{props.name}</p>
           </div>
           <div>
-            <p className="pt-2 text-xs text-white text-opacity-50 text-bold">
+            <p className="text-xs text-white text-opacity-50 text-bold">
               Deposit / Borrow
             </p>
           </div>

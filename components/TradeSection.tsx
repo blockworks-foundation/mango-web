@@ -2,15 +2,41 @@ import MarketCard from './MarketCard'
 import Button from './Button'
 // import GradientText from './GradientText'
 import Link from './Link'
+import Marquee from 'react-fast-marquee'
+import React from 'react'
 
 const TradeSection = () => {
   return (
     <div className="">
       <div className="bg-gradient-to-br border border-bkg-3 from-th-bkg-3 via-th-bkg-3 to-th-bkg-2 h-auto transform -skew-y-3 lg:mb-48 lg:-mt-64 md:pt-48 md:mb-48 md:-mt-64 xs:my-0 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
-          <section className="py-12 px-3 lg:mt-0 md:mt-0 sm:mt-28 ">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex flex-row flex-wrap">
+        <div className="mx-auto px-4 transform skew-y-3">
+        <section className="py-12 px-3 lg:mt-0 md:mt-0 sm:mt-28 ">
+          <Marquee
+              gradient={true}
+              gradientColor={[36, 35, 54]}
+              >
+              <div className="mx-auto">
+              <div className="flex flex-row">
+                <MarketCard
+                  name="BTC/USDC"
+                  icon="../token/icon-btc.svg"
+                  decimals={0}
+                />
+                <MarketCard
+                  name="ETH/USDC"
+                  icon="../token/icon-eth.svg"
+                  decimals={0}
+                />
+                <MarketCard
+                  name="SOL/USDC"
+                  icon="../token/icon-sol.svg"
+                  decimals={2}
+                />
+                <MarketCard
+                  name="SRM/USDC"
+                  icon="../token/icon-srm.svg"
+                  decimals={4}
+                />
                 <MarketCard
                   name="BTC/USDC"
                   icon="../token/icon-btc.svg"
@@ -33,8 +59,11 @@ const TradeSection = () => {
                 />
               </div>
             </div>
-          </section>
+            </Marquee>
 
+          </section>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
           <section className="py-12 px-3 lg:mt-56 md:mt-28 sm:mt-24 xs:mt-50">
             <div className="flex flex-wrap items-center lg:text-center md:text-center sm:text-left">
               <div className="px-2 order-1 lg:order-none mx-auto">

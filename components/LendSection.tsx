@@ -3,6 +3,9 @@ import LendCard from './LendCard'
 import Button from './Button'
 import Link from './Link'
 //import GradientText from './GradientText'
+import Marquee from 'react-fast-marquee'
+import React from 'react'
+
 
 const LendSection = () => {
   const [stats, setStats] = useState(null)
@@ -59,7 +62,7 @@ const LendSection = () => {
           <div className="flex flex-wrap mx-auto justify-center items-center lg:text-center md:text-center sm:text-left">
             <div className="justify-center px-2 order-1 lg:order-none">
               <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl md:text-4xl sm:text-4xl xs:text-3xl">
-                Never sell, just utilize.
+                Don&apos;t sell, utilize.
               </h2>
               <p className="mb-8 text-white text-opacity-50 leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl xs:text-lg">
                 Earn interest on deposits and take out fully collateralized
@@ -72,7 +75,7 @@ const LendSection = () => {
                   target="_blank"
                   href="https://trade.mango.markets/borrow"
                 >
-                  <Button>Start lending</Button>
+                  <Button>Open a 🥭 account</Button>
                 </a>
                 <a
                   rel="noreferrer"
@@ -101,23 +104,28 @@ const LendSection = () => {
               </div>
             </div> */}
 
-            <div className="flex flex-col mb-12 max-w-5xl">
+            <div className="flex flex-col mb-12">
               {/* <GradientText>
                 <span className="text-2xl font-bold leading-relaxed">
                   Liquidity Available
                 </span>
               </GradientText> */}
+              <Marquee
+                gradient={true}
+                gradientColor={[19, 17, 37]}
+              >
               <div className="z-10 mt-4 flex flex-wrap text-left">
                 <LendCard {...propsFor('USDC')} />
                 <LendCard {...propsFor('BTC')} />
                 <LendCard {...propsFor('ETH')} />
                 <LendCard {...propsFor('SOL')} />
-                <LendCard {...propsFor('SRM')} />
-                <LendCard {...propsFor('SRM')} />
-                <LendCard {...propsFor('SRM')} />
-                <LendCard {...propsFor('SRM')} />
-                <LendCard {...propsFor('SRM')} />
-                <LendCard {...propsFor('SRM')} />
+                <LendCard {...propsFor('SRM')} /> 
+                <LendCard {...propsFor('SRM')} />  {/* MNGO  */}
+                <LendCard {...propsFor('SRM')} />  {/* USDT  */}
+                <LendCard {...propsFor('SRM')} />  {/* COPE  */}
+                <LendCard {...propsFor('SRM')} />  {/* RAY  */}
+                <LendCard {...propsFor('SRM')} />  {/* SBR  */}
+                {/*
                 <a
                   rel="noreferrer"
                   target="_blank"
@@ -128,7 +136,9 @@ const LendSection = () => {
                   <p className="text-md text-white text-opacity-50 text-bold text-center">assets coming soon</p>
                 </div>
                 </a>
+                 */}
               </div>
+              </Marquee>
             </div>
             <div className="z-0 relative -bottom-72 -left-8 lg:-bottom-96 ">
               <div className="absolute bottom-4 left-8 w-450 h-450 bg-mango-yellow mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob"></div>
