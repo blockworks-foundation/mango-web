@@ -151,7 +151,7 @@ const FooterSection = () => {
                     <ul className="text-sm">
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://trade.mango.markets/"
                         >
                           Spot Markets
@@ -159,7 +159,7 @@ const FooterSection = () => {
                       </li>
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://trade.mango.markets/perp/BTC"
                         >
                           Perpetual Futures
@@ -167,7 +167,7 @@ const FooterSection = () => {
                       </li>
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://trade.mango.markets/borrow"
                         >
                           Decentralized Lending
@@ -175,7 +175,7 @@ const FooterSection = () => {
                       </li>
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
                         >
                           Liquidator Program
@@ -190,7 +190,7 @@ const FooterSection = () => {
                     <ul className="text-sm">
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://docs.mango.markets/"
                         >
                           Explore the docs
@@ -198,7 +198,7 @@ const FooterSection = () => {
                       </li>
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://trello.com/c/0iz8GfW6/32-how-to-use-this-board"
                         >
                           Start contributing
@@ -206,7 +206,7 @@ const FooterSection = () => {
                       </li>
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/mango/marketmaking/simplemarketmaker.py"
                         >
                           Become a market maker
@@ -221,7 +221,7 @@ const FooterSection = () => {
                     <ul className="text-sm">
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://discord.gg/2uwjsBc5yw"
                         >
                           Discord
@@ -229,7 +229,7 @@ const FooterSection = () => {
                       </li>
                       <li className="mb-4">
                         <a
-                          className="text-gray-500 hover:text-gray-600 transition duration-200 ease-in-out"
+                          className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                           href="https://twitter.com/mangomarkets"
                         >
                           Twitter
