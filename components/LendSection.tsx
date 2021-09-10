@@ -90,8 +90,8 @@ const LendSection = () => {
         </section>
       </div>
 
-      <div className="w-full mx-auto px-4">
-        <section className="px-3 mt-28">
+      <div className="w-full mx-auto px-0">
+        <section className="px-0 mt-28">
           <div className="flex flex-col justify-center items-center text-center">
             {/* <div className="flex flex-col mb-8">
               <GradientText>
@@ -111,7 +111,7 @@ const LendSection = () => {
                 </span>
               </GradientText> */}
               <Marquee
-                gradient={true}
+                gradient={false}
                 gradientColor={[19, 17, 37]}
               >
               <div className="z-10 mt-4 flex flex-wrap text-left">

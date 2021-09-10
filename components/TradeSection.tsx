@@ -9,10 +9,10 @@ const TradeSection = () => {
   return (
     <div className="">
       <div className="bg-gradient-to-br border border-bkg-3 from-th-bkg-3 via-th-bkg-3 to-th-bkg-2 h-auto transform -skew-y-3 lg:mb-48 lg:-mt-64 md:pt-48 md:mb-48 md:-mt-64 xs:my-0 overflow-hidden">
-        <div className="mx-auto px-4 transform skew-y-3">
-        <section className="py-12 px-3 lg:mt-0 md:mt-0 sm:mt-28 ">
+        <div className="mx-auto px-0 transform skew-y-3">
+        <section className="py-12 px-0 lg:mt-0 md:mt-0 sm:mt-28 ">
           <Marquee
-              gradient={true}
+              gradient={false}
               direction={'right'}
               gradientColor={[36, 35, 54]}
               >
