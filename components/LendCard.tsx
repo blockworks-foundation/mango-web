@@ -29,8 +29,9 @@ const LendCard = (props: LendCardProps) => {
       <div className="flex flex-row justify-center">
         <div className="pr-4">
           <div className="flex flex-row gap-x-2">
+            {/* 
             <img className="w-5 h-5 mt-1 mb-2" src={props.icon} alt={props.name} />
-            
+            */}
             <p className="text-xl font-bold">{props.name}</p>
           </div>
           <div>
