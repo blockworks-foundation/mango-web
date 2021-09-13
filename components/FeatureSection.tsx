@@ -278,7 +278,7 @@ const FeatureSection = () => {
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
-                    Fully control your experience.
+                    Fully customize your experience.
                   </h2>
                   <p className="text-white text-opacity-50 text-lg">
                     Complete control over layout, theme, and your trading view.
