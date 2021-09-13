@@ -6,7 +6,6 @@ import Link from './Link'
 import Marquee from 'react-fast-marquee'
 import React from 'react'
 
-
 const LendSection = () => {
   const [stats, setStats] = useState(null)
   const [prices, setPrices] = useState(null)
@@ -14,7 +13,7 @@ const LendSection = () => {
   useEffect(() => {
     const loadStats = async () => {
       const response = await fetch(
-        'https://mango-stats.herokuapp.com/?mangoGroup=BTC_ETH_SOL_SRM_USDC'
+        'https://mango-stats-v3.herokuapp.com/spot?mangoGroup=mainnet.1'
       )
       setStats(await response.json())
     }
@@ -41,15 +40,16 @@ const LendSection = () => {
       liquidity: { native: 0, usd: 0 },
     }
     if (!stats || !prices) return defaults
-    const filtered = stats.filter((s) => s.symbol == symbol)
+    const filtered = stats.filter((s) => s.name == symbol)
+    if (filtered.length == 0) return defaults
     const lastStats = filtered[filtered.length - 1]
-    const lastPrice = symbol === 'USDC' ? 1 : prices[symbol][lastStats.hourly]
+    const lastPrice = 1 //symbol === 'USDC' ? 1 : prices[symbol][lastStats.hourly]
     const native = lastStats.totalDeposits // - lastStats.totalBorrows
     return {
       ...defaults,
       interest: {
-        deposit: lastStats.depositInterest * 100,
-        borrow: lastStats.borrowInterest * 100,
+        deposit: lastStats.depositRate * 100,
+        borrow: lastStats.borrowRate * 100,
       },
       liquidity: { native, usd: native * lastPrice },
     }
@@ -77,11 +77,7 @@ const LendSection = () => {
                 >
                   <Button>Open a 🥭 account</Button>
                 </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="/markets"
-                >
+                <a rel="noreferrer" target="_blank" href="/markets">
                   <Link>Learn more</Link>
                 </a>
               </div>
@@ -110,22 +106,20 @@ const LendSection = () => {
                   Liquidity Available
                 </span>
               </GradientText> */}
-              <Marquee
-                gradient={false}
-                gradientColor={[19, 17, 37]}
-              >
-              <div className="z-10 mt-4 flex flex-wrap text-left">
-                <LendCard {...propsFor('USDC')} />
-                <LendCard {...propsFor('BTC')} />
-                <LendCard {...propsFor('ETH')} />
-                <LendCard {...propsFor('SOL')} />
-                <LendCard {...propsFor('SRM')} /> 
-                <LendCard {...propsFor('SRM')} />  {/* MNGO  */}
-                <LendCard {...propsFor('SRM')} />  {/* USDT  */}
-                <LendCard {...propsFor('SRM')} />  {/* COPE  */}
-                <LendCard {...propsFor('SRM')} />  {/* RAY  */}
-                <LendCard {...propsFor('SRM')} />  {/* SBR  */}
-                {/*
+              <Marquee gradient={false}>
+                <div className="z-10 mt-4 flex flex-wrap text-left">
+                  <LendCard {...propsFor('USDC')} />
+                  <LendCard {...propsFor('USDT')} />
+                  <LendCard {...propsFor('MNGO')} />
+                  <LendCard {...propsFor('BTC')} />
+                  <LendCard {...propsFor('ETH')} />
+                  <LendCard {...propsFor('SRM')} />
+                  <LendCard {...propsFor('SOL')} />
+                  <LendCard {...propsFor('COPE')} />
+                  <LendCard {...propsFor('RAY')} />
+                  <LendCard {...propsFor('SBR')} />
+
+                  {/*
                 <a
                   rel="noreferrer"
                   target="_blank"
@@ -137,7 +131,7 @@ const LendSection = () => {
                 </div>
                 </a>
                  */}
-              </div>
+                </div>
               </Marquee>
             </div>
             <div className="z-0 relative -bottom-72 -left-8 lg:-bottom-96 ">

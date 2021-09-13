@@ -21,7 +21,7 @@ const LendCard = (props: LendCardProps) => {
       style={{
         backgroundBlendMode: 'overlay',
         backgroundImage: `url(${props.bg})`,
-        backgroundPosition: '115% 115%',
+        backgroundPosition: '150px 1em',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
       }}
@@ -57,7 +57,7 @@ const LendCard = (props: LendCardProps) => {
             </p>
           </div>
 
-         {/* 
+          {/* 
           <div className="flex-row mt-2">
             <p className="text-white text-opacity-50 text-xs">Total Borrows</p>
           </div>

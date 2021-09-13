@@ -31,7 +31,7 @@ const MarketCard = (props: MarketCardProps) => {
   useEffect(() => {
     const loadCandles = async () => {
       const symbol = props.name
-      const resolution = '60'
+      const resolution = '60' // hourly
       const from = moment().subtract(24, 'hours').format('X')
       const to = moment().format('X')
       const query = new URLSearchParams({
