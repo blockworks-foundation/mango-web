@@ -263,10 +263,10 @@ const FeatureSection = () => {
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
-                    Completely self-custododied.
+                    You are in control.
                   </h2>
                   <p className="text-white text-opacity-50 text-lg">
-                    You are in control of your assets; no more centralized
+                    You have self-custody of your assets; no more centralized
                     counter-party risk.
                   </p>
                 </div>
