@@ -122,6 +122,7 @@ const FeatureSection = () => {
                     <h2 className="lg:text-4xl sm:text-3xl text-3xl text-white font-bold font-heading">
                       Love trading again.
                     </h2>
+                    {/*
                     <div className="pt-6">
                       <blockquote>
                         <div>
@@ -147,6 +148,7 @@ const FeatureSection = () => {
                         </footer>
                       </blockquote>
                     </div>
+                    */}
                   </div>
 
                   <dl className="mt-10 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:mt-0 lg:col-span-2">
@@ -200,6 +202,7 @@ const FeatureSection = () => {
                       </a>
                     </div>
                   </div>
+                  {/* 
                   <div className="mt-8 pt-6">
                     <blockquote>
                       <div>
@@ -230,6 +233,12 @@ const FeatureSection = () => {
                       </footer>
                     </blockquote>
                   </div>
+                  */}
+                      <div className="z-0 relative -bottom-72 -right-96 lg:-bottom-96 ">
+                        <div className="absolute bottom-4 left-8 w-450 h-450 bg-mango-yellow mix-blend-screen rounded-full filter blur-3xl opacity-5 animate-blob"></div>
+                        <div className="absolute bottom-4 w-450 h-450 bg-mango-red mix-blend-screen rounded-full filter blur-2xl opacity-20 animate-blob animation-delay-4000"></div>
+                        <div className="absolute bottom-8 left-20 w-450 h-450 bg-mango-green mix-blend-screen rounded-full filter blur-2xl opacity-10 animate-blob animation-delay-2000"></div>
+                      </div>
                 </div>
               </div>
 
