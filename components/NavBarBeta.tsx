@@ -661,7 +661,7 @@ const NavBarBeta = () => {
                         <ul className="mt-4 space-y-4">
                           <li className="text-base truncate">
                             <a
-                              href="https://docs.mango.markets/tutorials/transfer-funds-to-sollet-wallet"
+                              href="https://docs.mango.markets/tutorials/creating-a-wallet"
                               className="font-medium text-white hover:text-gray-400 transition duration-100 ease-in-out"
                             >
                               Setting up a wallet
@@ -670,10 +670,10 @@ const NavBarBeta = () => {
 
                           <li className="text-base truncate">
                             <a
-                              href="https://docs.mango.markets/tutorials/trade-on-mango.markets"
+                              href="https://docs.mango.markets/tutorials/getting-started"
                               className="font-medium text-white hover:text-gray-400 transition duration-100 ease-in-out"
                             >
-                              Getting started with Mango Markets
+                              Getting started with Mango 🥭
                             </a>
                           </li>
                         </ul>
@@ -681,7 +681,7 @@ const NavBarBeta = () => {
                       <div className="mt-5 text-sm">
                         <a
                           href="https://docs.mango.markets/margin-trading/overview"
-                          className="font-bold text-transparent bg-clip-text bg-mango-yellow hover:bg-gradient-to-br from-mango-yellow via-mango-orange to-mango-green transition duration-100 ease-in-out"
+                          className="font-bold text-transparent bg-clip-text bg-mango-orange hover:bg-mango-yellow transition duration-100 ease-in-out"
                         >
                           {' '}
                           Learn more about the Mango protocol{' '}
