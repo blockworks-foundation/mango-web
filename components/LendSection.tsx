@@ -117,7 +117,7 @@ const LendSection = () => {
                   <LendCard {...propsFor('SOL')} />
                   <LendCard {...propsFor('COPE')} />
                   <LendCard {...propsFor('RAY')} />
-                  <LendCard {...propsFor('SBR')} />
+                  {/* <LendCard {...propsFor('SBR')} /> */}
 
                   {/*
                 <a
