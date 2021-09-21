@@ -154,7 +154,8 @@ const NavBarBeta = () => {
                             Spot Margin
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Trade BTC, ETH, SOL, SRM, and MNGO with up to 5x margin.
+                            Trade BTC, ETH, SOL, SRM, and MNGO with up to 5x
+                            margin.
                           </p>
                         </div>
                       </a>
@@ -185,7 +186,8 @@ const NavBarBeta = () => {
                             Perpetual Futures
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
-                            Permisionless perpetual futures markets with up to 10x leverage.
+                            Permisionless perpetual futures markets with up to
+                            10x leverage.
                           </p>
                         </div>
                       </a>
@@ -215,7 +217,7 @@ const NavBarBeta = () => {
 
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
-                          Borrow &amp; Lend 
+                            Borrow &amp; Lend
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
                             Earn interest on deposits and take out
@@ -407,20 +409,22 @@ const NavBarBeta = () => {
                           stroke="currentColor"
                           aria-hidden="true"
                         >
-                          <path d="M7 17V11C7 9.89543 6.10457 9 5 9H3C1.89543 9 1 9.89543 1 11V17C1 18.1046 1.89543 19 3 19H5C6.10457 19 7 18.1046 7 17ZM7 17V7C7 5.89543 7.89543 5 9 5H11C12.1046 5 13 5.89543 13 7V17M7 17C7 18.1046 7.89543 19 9 19H11C12.1046 19 13 18.1046 13 17M13 17V3C13 1.89543 13.8954 1 15 1H17C18.1046 1 19 1.89543 19 3V17C19 18.1046 18.1046 19 17 19H15C13.8954 19 13 18.1046 13 17Z" 
-                          stroke="#4E4D65" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"/>
-                          </svg>
-
+                          <path
+                            d="M7 17V11C7 9.89543 6.10457 9 5 9H3C1.89543 9 1 9.89543 1 11V17C1 18.1046 1.89543 19 3 19H5C6.10457 19 7 18.1046 7 17ZM7 17V7C7 5.89543 7.89543 5 9 5H11C12.1046 5 13 5.89543 13 7V17M7 17C7 18.1046 7.89543 19 9 19H11C12.1046 19 13 18.1046 13 17M13 17V3C13 1.89543 13.8954 1 15 1H17C18.1046 1 19 1.89543 19 3V17C19 18.1046 18.1046 19 17 19H15C13.8954 19 13 18.1046 13 17Z"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
 
                         <div className="ml-4">
                           <div className="text-base font-medium text-white">
                             Protocol Stats
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
-                            Total Value Deposited, Current rates for borrowing/lending, and other valuable stats.
+                            Total Value Deposited, Current rates for
+                            borrowing/lending, and other valuable stats.
                           </p>
                         </div>
                       </a>
@@ -505,11 +509,13 @@ const NavBarBeta = () => {
                           stroke="currentColor"
                           aria-hidden="true"
                         >
-                          <path d="M6 7H6.01M10 7H10.01M14 7H14.01M7 13H3C1.89543 13 1 12.1046 1 11V3C1 1.89543 1.89543 1 3 1H17C18.1046 1 19 1.89543 19 3V11C19 12.1046 18.1046 13 17 13H12L7 18V13Z" 
-                          stroke="#4E4D65" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"/>
+                          <path
+                            d="M6 7H6.01M10 7H10.01M14 7H14.01M7 13H3C1.89543 13 1 12.1046 1 11V3C1 1.89543 1.89543 1 3 1H17C18.1046 1 19 1.89543 19 3V11C19 12.1046 18.1046 13 17 13H12L7 18V13Z"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
 
                         <div className="ml-4">
@@ -517,7 +523,8 @@ const NavBarBeta = () => {
                             Mango Forum
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Discuss governance proposals, new listings, improvements to Mango, all in one place.
+                            Discuss governance proposals, new listings,
+                            improvements to Mango, all in one place.
                           </p>
                         </div>
                       </a>
