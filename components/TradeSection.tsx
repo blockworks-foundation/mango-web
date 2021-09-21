@@ -2,49 +2,81 @@ import MarketCard from './MarketCard'
 import Button from './Button'
 // import GradientText from './GradientText'
 import Link from './Link'
+import Marquee from 'react-fast-marquee'
+import React from 'react'
 
 const TradeSection = () => {
   return (
     <div className="">
       <div className="bg-gradient-to-br border border-bkg-3 from-th-bkg-3 via-th-bkg-3 to-th-bkg-2 h-auto transform -skew-y-3 lg:mb-48 lg:-mt-64 md:pt-48 md:mb-48 md:-mt-64 xs:my-0 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
-          <section className="py-12 px-3 lg:mt-0 md:mt-0 sm:mt-28 ">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex flex-row flex-wrap">
-                <MarketCard
-                  name="BTC/USDC"
-                  icon="../token/icon-btc.svg"
-                  decimals={0}
-                />
-                <MarketCard
-                  name="ETH/USDC"
-                  icon="../token/icon-eth.svg"
-                  decimals={0}
-                />
-                <MarketCard
-                  name="SOL/USDC"
-                  icon="../token/icon-sol.svg"
-                  decimals={2}
-                />
-                <MarketCard
-                  name="SRM/USDC"
-                  icon="../token/icon-srm.svg"
-                  decimals={4}
-                />
+        <div className="mx-auto px-0 transform skew-y-3">
+          <section className="py-12 px-0 lg:mt-0 md:mt-0 sm:mt-28 ">
+            <Marquee gradient={false} direction={'left'}>
+              <div className="mx-auto">
+                <div className="flex flex-row">
+                  <MarketCard
+                    name="MNGO/USDC"
+                    icon="../token/icon-mngo.svg"
+                    decimals={4}
+                  />
+                  <MarketCard
+                    name="BTC/USDC"
+                    icon="../token/icon-btc.svg"
+                    decimals={0}
+                  />
+                  <MarketCard
+                    name="ETH/USDC"
+                    icon="../token/icon-eth.svg"
+                    decimals={0}
+                  />
+                  <MarketCard
+                    name="SOL/USDC"
+                    icon="../token/icon-sol.svg"
+                    decimals={2}
+                  />
+                  <MarketCard
+                    name="SRM/USDC"
+                    icon="../token/icon-srm.svg"
+                    decimals={4}
+                  />
+                  {/*<MarketCard
+                    name="USDT/USDC"
+                    icon="../token/icon-usdt.svg"
+                    decimals={5}
+                  />*/}
+                  <MarketCard
+                    name="RAY/USDC"
+                    icon="../token/icon-ray.svg"
+                    decimals={4}
+                  />
+                  {/*
+                  <MarketCard
+                    name="SBR/USDC"
+                    icon="../token/icon-sbr.svg"
+                    decimals={4}
+                  />
+                  */}
+                  <MarketCard
+                    name="COPE/USDC"
+                    icon="../token/icon-cope.svg"
+                    decimals={4}
+                  />
+                </div>
               </div>
-            </div>
+            </Marquee>
           </section>
-
+        </div>
+        <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
           <section className="py-12 px-3 lg:mt-56 md:mt-28 sm:mt-24 xs:mt-50">
             <div className="flex flex-wrap items-center lg:text-center md:text-center sm:text-left">
-              <div className="px-2 order-1 lg:order-none ">
+              <div className="px-2 order-1 lg:order-none mx-auto">
                 <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl sm:text-4xl xs:text-3xl">
                   Every market cross&#8209;collateralized.
                 </h2>
                 <div className="">
                   <p className="mb-8 text-white text-opacity-50 leading-relaxed sm:text-2xl xs:text-lg">
-                    Trade all on-chain, order books included, knowing you
-                    control your funds. Permissionless with up to 5x leverage.
+                    Trade spot margined and perpetual futures markets,
+                    permissionless and all on-chain.
                   </p>
                 </div>
                 <div className="flex flex-row justify-center">
@@ -94,7 +126,7 @@ const TradeSection = () => {
           </section>
           */}
         </div>
-        <div className="relative lg:top-32 md:top-16 sm:top-20 xs:top-8 transform skew-y-3">
+        <div className="relative lg:top-14 md:top-16 sm:top-20 xs:top-8 transform skew-y-3">
           <img className="" alt="modals" src="../img/home_section.png" />
         </div>
       </div>

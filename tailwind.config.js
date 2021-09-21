@@ -39,22 +39,27 @@ module.exports = {
         'product-one': "url('../public/img/ProductFeature1.png')",
         'product-two': "url('../public/img/ProductFeature2.png')",
         'product-three': "url('../public/img/ProductFeature3.png')",
-        'product-four': "url('../public/img/ProductFeature4.png')",
+        'product-four': "url('../public/img/redeem4.png')",
         'bg-texture': "url('../public/img/bgtexture.png')",
+        'bg-cta': "url('../public/img/bgcta.jpeg')",
         'home-bg': "url('../public/img/home_section.png')",
       }),
-
       height: {
         450: '450px',
+        500: '500px',
+        550: '550px',
+        600: '600px',
         650: '650px',
         675: '675px',
         700: '700px',
         750: '750px',
+        1450: '1200px',
         1750: '1750px',
       },
       width: {
         450: '450px',
         700: '700px',
+        900: '900px',
       },
       cursor: {
         help: 'help',
@@ -102,6 +107,30 @@ module.exports = {
           darker: '#072428',
           darkest: '#061f23',
         },
+        'light-theme': {
+          yellow: '#F58700',
+          red: { DEFAULT: '#CC2929', dark: '#AA2222' },
+          green: { DEFAULT: '#5EBF4D', dark: '#4BA53B' },
+          'bkg-1': '#f7f7f7',
+          'bkg-2': '#FFFFFF',
+          'bkg-3': '#F0F0F0',
+          'fgd-1': '#061f23',
+          'fgd-2': '#0C3F45',
+          'fgd-3': '#446065',
+          'fgd-4': '#B0B0B0',
+        },
+        'dark-theme': {
+          yellow: '#E4AF11',
+          red: { DEFAULT: '#CC2929', dark: '#AA2222' },
+          green: { DEFAULT: '#5EBF4D', dark: '#4BA53B' },
+          'bkg-1': '#101012',
+          'bkg-2': '#1B1B1F',
+          'bkg-3': '#27272B',
+          'fgd-1': '#FFFFFF',
+          'fgd-2': '#F7F7F7',
+          'fgd-3': '#E7E7E7',
+          'fgd-4': '#878787',
+        },
         'mango-theme': {
           yellow: '#F2C94C',
           red: { DEFAULT: '#E54033', dark: '#C7251A' },
@@ -128,24 +157,22 @@ module.exports = {
         'th-green-dark': 'var(--green-dark)',
       },
       animation: {
-        blob:"blob 12s infinite"
- 
+        blob: 'blob 12s infinite',
       },
-      keyframes:{
+      keyframes: {
         blob: {
-          "0%": {
-            transform: "translate(0px, 0px) scale(1)",
+          '0%': {
+            transform: 'translate(0px, 0px) scale(1)',
           },
-          "33%": {
-            transform: "translate(30px, -50px) scale(1.2)",
+          '33%': {
+            transform: 'translate(30px, -50px) scale(1.2)',
           },
-          "66%": {
-            transform: "translate(-20px, 20px) scale(0.9)",
+          '66%': {
+            transform: 'translate(-20px, 20px) scale(0.9)',
           },
-          "100%": {
-            transform: "translate(0px, 0px) scale(1)",
+          '100%': {
+            transform: 'translate(0px, 0px) scale(1)',
           },
-
         },
       },
     },

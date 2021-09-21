@@ -221,7 +221,7 @@ const LightBulbIcon = () => (
 
 const CommunityCard = (props) => (
   <div className="flex col-span-2 xl:col-span-1">
-    <div className="flex flex-col bg-th-fgd-4 border border-bkg-3 py-8 px-8 h-auto w-auto shadow-md rounded-xl">
+    <div className="flex flex-col bg-th-fgd-4 border border-bkg-3 py-8 px-8 h-auto w-auto shadow-md rounded-xl transform transition duration-200 ease-in-out hover:-translate-y-2 hover:shadow-lg hover:bg-bkg-3">
       {' '}
       {props.icon}
       <p className="text-lg font-bold py-6 pb-2">{props.title}</p>

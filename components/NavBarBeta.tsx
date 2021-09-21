@@ -3,6 +3,7 @@ import MangoPill from '../components/MangoPill'
 //import MangoSale from '../components/MangoSale'
 import Button from './Button'
 import GradientText from './GradientText'
+//import ThemeSwitch from './ThemeSwitch'
 
 const NavBarBeta = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
@@ -10,7 +11,6 @@ const NavBarBeta = () => {
   const [supportMenuVisible, setSupportMenuVisible] = useState(false)
   const [communityMenuVisible, setCommunityMenuVisible] = useState(false)
 
-  
   const toggleMobileMenu = (e) => {
     setMobileMenuVisible(!mobileMenuVisible)
     e.stopPropagation()
@@ -73,7 +73,7 @@ const NavBarBeta = () => {
             <div className="-mr-2 -my-2 md:hidden">
               <button
                 type="button"
-                className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+                className=" rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none transition duration-100 ease-in-out"
                 onClick={toggleMobileMenu}
               >
                 <span className="sr-only">Open menu</span>
@@ -98,13 +98,13 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 hover:text-white focus:outline-none "
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 hover:text-white focus:outline-none transition duration-100 ease-in-out "
                   onClick={toggleProducts}
                 >
                   <span>Products</span>
 
                   <svg
-                    className="text-gray-400 ml-2 h-5 w-5 group-hover:text-mango-yellow"
+                    className="text-gray-400 ml-2 h-5 w-5 group-hover:text-mango-yellow transition duration-100 ease-in-out"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -126,11 +126,11 @@ const NavBarBeta = () => {
                   <div className="w-700 grid grid-cols-2 rounded-lg border border-bkg-3 shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
-                        Trading
+                        Markets
                       </h3>
                       <a
                         href="https://trade.mango.markets/"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -151,18 +151,18 @@ const NavBarBeta = () => {
 
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
-                            Spot Markets
+                            Spot Margin
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Trade BTC, ETH, SOL, and SRM, cross collateralized
-                            with up to 5x leverage.
+                            Trade BTC, ETH, SOL, SRM, and MNGO with up to 5x
+                            margin.
                           </p>
                         </div>
                       </a>
 
                       <a
                         href="https://trade.mango.markets/perp/BTC"
-                        className="disabled -m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="disabled -m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -186,14 +186,17 @@ const NavBarBeta = () => {
                             Perpetual Futures
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
-                            Cross-collateralized decentralized leveraged
-                            perpetual futures markets.
+                            Permisionless perpetual futures markets with up to
+                            10x leverage.
                           </p>
                         </div>
                       </a>
+                      <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
+                        Defi
+                      </h3>
                       <a
                         href="https://trade.mango.markets/borrow"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -214,7 +217,7 @@ const NavBarBeta = () => {
 
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
-                            Decentralized Lending
+                            Borrow &amp; Lend
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
                             Earn interest on deposits and take out
@@ -222,17 +225,16 @@ const NavBarBeta = () => {
                           </p>
                         </div>
                       </a>
-
                     </div>
 
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                         Infrastructure
                       </h3>
-                      
+
                       <a
-                        href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -262,23 +264,24 @@ const NavBarBeta = () => {
                       </a>
 
                       <a
-                        href="https://docs.mango.markets/mango-v3/market-making-bot-python"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
-                        <svg 
-                        
-                        className="flex-shrink-0 h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 22 22"
-                        stroke="currentColor"
-                        aria-hidden="true"
+                        <svg
+                          className="flex-shrink-0 h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 22 22"
+                          stroke="currentColor"
+                          aria-hidden="true"
                         >
-                        <path d="M1 4L4 5M4 5L1 14C2.77253 15.3334 5.22866 15.3334 7.00119 14M4 5L7.00006 14M4 5L10 3M16 5L19 4M16 5L13 14C14.7725 15.3334 17.2287 15.3334 19.0012 14M16 5L19.0001 14M16 5L10 3M10 1V3M10 19V3M10 19H7M10 19H13" 
-                        stroke="#4E4D65" 
-                        strokeWidth="2" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"/>
+                          <path
+                            d="M1 4L4 5M4 5L1 14C2.77253 15.3334 5.22866 15.3334 7.00119 14M4 5L7.00006 14M4 5L10 3M16 5L19 4M16 5L13 14C14.7725 15.3334 17.2287 15.3334 19.0012 14M16 5L19.0001 14M16 5L10 3M10 1V3M10 19V3M10 19H7M10 19H13"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
 
                         <div className="ml-4">
@@ -297,30 +300,33 @@ const NavBarBeta = () => {
                       </h3>
                       <a
                         href="https://initialcapoffering.com/"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
-                        <svg 
+                        <svg
                           className="flex-shrink-0 h-6 w-6"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 22 22"
                           stroke="currentColor"
                           aria-hidden="true"
-                          >
-                            <path d="M14.5 2.50029C15.8333 3.06167 18 5.91603 16 12.8424M14.5 2.50029C14.141 2.45542 13.7301 2.43894 13.2858 2.46255M14.5 2.50029C15.04 2.60153 15.539 2.72783 16 2.8758M5.5 11.0003C5.83333 10.8336 6.9 10.6002 8.5 11.0003C10.1027 11.401 13.6319 12.4439 16 12.8424M5.5 11.0003L1.5 14.0004C1.16667 14.3337 0.800001 14.9004 2 14.5004C3.5 14.0004 6 14.0004 9 16.0004C12 18.0004 16.5 15.0005 17.5 13.0004M5.5 11.0003C6.19231 4.42331 10.4294 2.61435 13.2858 2.46255M17.5 13.0004C19.1 13.0004 20 13.5004 20 13.5004C20.5 13.6671 21.5 13.7004 21.5 12.5004C21.5 11.1016 22.3696 4.92012 16 2.8758M17.5 13.0004C17.1027 13.0004 16.587 12.9412 16 12.8424M13.2858 2.46255C13.5 1 15 1.49993 15 1.49993C15 1.49993 16 1.49979 16 2.8758" stroke="#4F4C67" strokeWidth="2"/>
+                        >
+                          <path
+                            d="M14.5 2.50029C15.8333 3.06167 18 5.91603 16 12.8424M14.5 2.50029C14.141 2.45542 13.7301 2.43894 13.2858 2.46255M14.5 2.50029C15.04 2.60153 15.539 2.72783 16 2.8758M5.5 11.0003C5.83333 10.8336 6.9 10.6002 8.5 11.0003C10.1027 11.401 13.6319 12.4439 16 12.8424M5.5 11.0003L1.5 14.0004C1.16667 14.3337 0.800001 14.9004 2 14.5004C3.5 14.0004 6 14.0004 9 16.0004C12 18.0004 16.5 15.0005 17.5 13.0004M5.5 11.0003C6.19231 4.42331 10.4294 2.61435 13.2858 2.46255M17.5 13.0004C19.1 13.0004 20 13.5004 20 13.5004C20.5 13.6671 21.5 13.7004 21.5 12.5004C21.5 11.1016 22.3696 4.92012 16 2.8758M17.5 13.0004C17.1027 13.0004 16.587 12.9412 16 12.8424M13.2858 2.46255C13.5 1 15 1.49993 15 1.49993C15 1.49993 16 1.49979 16 2.8758"
+                            stroke="#4F4C67"
+                            strokeWidth="2"
+                          />
                         </svg>
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
                             Mango Market Caps
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            The premier fashion choice for Mango lovers, 
-                            traders, and lenders. 
+                            The premier fashion choice for Mango lovers,
+                            traders, and lenders.
                           </p>
                         </div>
                       </a>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -328,11 +334,11 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 hover:text-white focus:outline-none "
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 hover:text-white focus:outline-none transition duration-100 ease-in-out "
                   onClick={toggleCommunity}
                 >
                   <span>Community</span>
-                  
+
                   <svg
                     className="text-gray-400 ml-2 h-5 w-5 group-hover:text-mango-yellow"
                     xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +365,7 @@ const NavBarBeta = () => {
                       </h3>
                       <a
                         href="https://docs.mango.markets/"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -369,20 +375,56 @@ const NavBarBeta = () => {
                           stroke="currentColor"
                           aria-hidden="true"
                         >
-                          <path d="M10 2.25278V15.2528M10 2.25278C8.83211 1.47686 7.24649 1 5.5 1C3.75351 1 2.16789 1.47686 1 2.25278V15.2528C2.16789 14.4769 3.75351 14 5.5 14C7.24649 14 8.83211 14.4769 10 15.2528M10 2.25278C11.1679 1.47686 12.7535 1 14.5 1C16.2465 1 17.8321 1.47686 19 2.25278V15.2528C17.8321 14.4769 16.2465 14 14.5 14C12.7535 14 11.1679 14.4769 10 15.2528" 
-                          stroke="#4E4D65" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"/>
-                          </svg>
-
+                          <path
+                            d="M10 2.25278V15.2528M10 2.25278C8.83211 1.47686 7.24649 1 5.5 1C3.75351 1 2.16789 1.47686 1 2.25278V15.2528C2.16789 14.4769 3.75351 14 5.5 14C7.24649 14 8.83211 14.4769 10 15.2528M10 2.25278C11.1679 1.47686 12.7535 1 14.5 1C16.2465 1 17.8321 1.47686 19 2.25278V15.2528C17.8321 14.4769 16.2465 14 14.5 14C12.7535 14 11.1679 14.4769 10 15.2528"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
 
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
                             Explore the docs
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Start learning about, integrating, and building for the mango protocol. 
+                            Start learning about, integrating, and building for
+                            the mango protocol.
+                          </p>
+                        </div>
+                      </a>
+                      <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
+                        Stats
+                      </h3>
+                      <a
+                        href="https://trade.mango.markets/stats"
+                        className="disabled -m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
+                      >
+                        <svg
+                          className="flex-shrink-0 h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 22 22"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M7 17V11C7 9.89543 6.10457 9 5 9H3C1.89543 9 1 9.89543 1 11V17C1 18.1046 1.89543 19 3 19H5C6.10457 19 7 18.1046 7 17ZM7 17V7C7 5.89543 7.89543 5 9 5H11C12.1046 5 13 5.89543 13 7V17M7 17C7 18.1046 7.89543 19 9 19H11C12.1046 19 13 18.1046 13 17M13 17V3C13 1.89543 13.8954 1 15 1H17C18.1046 1 19 1.89543 19 3V17C19 18.1046 18.1046 19 17 19H15C13.8954 19 13 18.1046 13 17Z"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+
+                        <div className="ml-4">
+                          <div className="text-base font-medium text-white">
+                            Protocol Stats
+                          </div>
+                          <p className="mt-1 text-sm text-gray-500">
+                            Total Value Deposited, Current rates for
+                            borrowing/lending, and other valuable stats.
                           </p>
                         </div>
                       </a>
@@ -399,33 +441,35 @@ const NavBarBeta = () => {
                           stroke="currentColor"
                           aria-hidden="true"
                         >
-                          <path d="M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z" 
-                            stroke="#4E4D65" 
-                            strokeWidth="2" 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round"/>
-                          </svg>
+                          <path
+                            d="M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
 
                         <div className="ml-4">
                           <div className="text-base font-medium text-white">
                             Protocol Status <MangoPill>SOON</MangoPill>
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
-                            Uptime, API status, check to make sure Mango is running.
+                            Uptime, API status, check to make sure Mango is
+                            running.
                           </p>
                         </div>
                       </a>
-
                     </div>
 
                     <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                         Governance
                       </h3>
-                      
+
                       <a
-                        href="https://dao.mango.markets"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        href="https://dao-beta.mango.markets"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
                           className="flex-shrink-0 h-6 w-6"
@@ -435,40 +479,74 @@ const NavBarBeta = () => {
                           stroke="currentColor"
                           aria-hidden="true"
                         >
-                        <path d="M1.05493 9H3C4.10457 9 5 9.89543 5 11V12C5 13.1046 5.89543 14 7 14C8.10457 14 9 14.8954 9 16V18.9451M6 1.93552V3.5C6 4.88071 7.11929 6 8.5 6H9C10.1046 6 11 6.89543 11 8C11 9.10457 11.8954 10 13 10C14.1046 10 15 9.10457 15 8C15 6.89543 15.8954 6 17 6L18.0645 6M13 18.4879V16C13 14.8954 13.8954 14 15 14H18.0645M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" 
-                          stroke="#4E4D65" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"/>
+                          <path
+                            d="M1.05493 9H3C4.10457 9 5 9.89543 5 11V12C5 13.1046 5.89543 14 7 14C8.10457 14 9 14.8954 9 16V18.9451M6 1.93552V3.5C6 4.88071 7.11929 6 8.5 6H9C10.1046 6 11 6.89543 11 8C11 9.10457 11.8954 10 13 10C14.1046 10 15 9.10457 15 8C15 6.89543 15.8954 6 17 6L18.0645 6M13 18.4879V16C13 14.8954 13.8954 14 15 14H18.0645M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
                         <div className="ml-4">
                           <p className="text-base font-medium text-white">
                             Mango DAO
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Mango is building a decentralized ecosystem, have a stake in it.
+                            Mango is building a decentralized ecosystem, have a
+                            stake in it.
                           </p>
                         </div>
                       </a>
+                      <a
+                        href="https://forum.mango.markets/"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
+                      >
+                        <svg
+                          className="flex-shrink-0 h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 22 22"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M6 7H6.01M10 7H10.01M14 7H14.01M7 13H3C1.89543 13 1 12.1046 1 11V3C1 1.89543 1.89543 1 3 1H17C18.1046 1 19 1.89543 19 3V11C19 12.1046 18.1046 13 17 13H12L7 18V13Z"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
 
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-white">
+                            Mango Forum
+                          </p>
+                          <p className="mt-1 text-sm text-gray-500">
+                            Discuss governance proposals, new listings,
+                            improvements to Mango, all in one place.
+                          </p>
+                        </div>
+                      </a>
                       <a
                         href="https://token.mango.markets"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
-                        <svg 
-                        
-                        className="flex-shrink-0 h-6 w-6"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 22 22"
-                        stroke="currentColor"
-                        aria-hidden="true"
+                        <svg
+                          className="flex-shrink-0 h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 22 22"
+                          stroke="currentColor"
+                          aria-hidden="true"
                         >
-                        <path d="M10 6V19M10 6C10 6 10 4.50722 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6C11.4027 6 10 6 10 6ZM10 6C10 6 10 4.06291 10 3.5C10 2.11929 8.88071 1 7.5 1C6.11929 1 5 2.11929 5 3.5C5 4.88071 6.11929 6 7.5 6C8.3178 6 10 6 10 6ZM3 10H17M3 10C1.89543 10 1 9.10457 1 8C1 6.89543 1.89543 6 3 6H17C18.1046 6 19 6.89543 19 8C19 9.10457 18.1046 10 17 10M3 10L3 17C3 18.1046 3.89543 19 5 19H15C16.1046 19 17 18.1046 17 17V10" 
-                          stroke="#4E4D65" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"/>
+                          <path
+                            d="M10 6V19M10 6C10 6 10 4.50722 10 4C10 2.89543 10.8954 2 12 2C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6C11.4027 6 10 6 10 6ZM10 6C10 6 10 4.06291 10 3.5C10 2.11929 8.88071 1 7.5 1C6.11929 1 5 2.11929 5 3.5C5 4.88071 6.11929 6 7.5 6C8.3178 6 10 6 10 6ZM3 10H17M3 10C1.89543 10 1 9.10457 1 8C1 6.89543 1.89543 6 3 6H17C18.1046 6 19 6.89543 19 8C19 9.10457 18.1046 10 17 10M3 10L3 17C3 18.1046 3.89543 19 5 19H15C16.1046 19 17 18.1046 17 17V10"
+                            stroke="#4E4D65"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
 
                         <div className="ml-4">
@@ -476,18 +554,17 @@ const NavBarBeta = () => {
                             Redeem your <GradientText>MNGO</GradientText>
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Participated in the launch of the DAO? Redeem your tokens here.
+                            Participated in the launch of the DAO? Redeem your
+                            tokens here.
                           </p>
                         </div>
                       </a>
-                      
                     </div>
-
                   </div>
                 </div>
               </div>
 
-{/* 
+              {/* 
               <a
                 href="https://docs.mango.markets/"
                 className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 hover:text-white focus:outline-none rounded-md"
@@ -498,7 +575,7 @@ const NavBarBeta = () => {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 hover:text-white focus:outline-none"
+                  className="text-gray-500 group rounded-md p-1 px-2 inline-flex items-center text-base font-medium hover:bg-th-fgd-4 hover:text-white focus:outline-none transition duration-100 ease-in-out"
                   onClick={toggleSupport}
                 >
                   <span>Support</span>
@@ -530,7 +607,7 @@ const NavBarBeta = () => {
                       </h3>
                       <a
                         href="https://discord.gg/2uwjsBc5yw"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         {/* Heroicon name: outline/support */}
                         <svg
@@ -559,7 +636,7 @@ const NavBarBeta = () => {
 
                       <a
                         href="https://twitter.com/mangomarkets"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
+                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
                           width="25"
@@ -591,8 +668,8 @@ const NavBarBeta = () => {
                         <ul className="mt-4 space-y-4">
                           <li className="text-base truncate">
                             <a
-                              href="https://docs.mango.markets/tutorials/transfer-funds-to-sollet-wallet"
-                              className="font-medium text-white hover:text-gray-400"
+                              href="https://docs.mango.markets/tutorials/creating-a-wallet"
+                              className="font-medium text-white hover:text-gray-400 transition duration-100 ease-in-out"
                             >
                               Setting up a wallet
                             </a>
@@ -600,10 +677,10 @@ const NavBarBeta = () => {
 
                           <li className="text-base truncate">
                             <a
-                              href="https://docs.mango.markets/tutorials/trade-on-mango.markets"
-                              className="font-medium text-white hover:text-gray-400"
+                              href="https://docs.mango.markets/tutorials/getting-started"
+                              className="font-medium text-white hover:text-gray-400 transition duration-100 ease-in-out"
                             >
-                              Getting started with Mango Markets
+                              Getting started with Mango 🥭
                             </a>
                           </li>
                         </ul>
@@ -611,7 +688,7 @@ const NavBarBeta = () => {
                       <div className="mt-5 text-sm">
                         <a
                           href="https://docs.mango.markets/margin-trading/overview"
-                          className="font-bold text-transparent bg-clip-text bg-mango-yellow hover:bg-gradient-to-br from-mango-yellow via-mango-orange to-mango-green"
+                          className="font-bold text-transparent bg-clip-text bg-mango-orange hover:bg-mango-yellow transition duration-100 ease-in-out"
                         >
                           {' '}
                           Learn more about the Mango protocol{' '}
@@ -656,6 +733,11 @@ const NavBarBeta = () => {
                   <Button>Start trading</Button>
                 </a>
               </div>
+              {/* 
+              <div className="bg-th-bkg-3 rounded-full ml-6 p-1 shadow-lg">
+              <ThemeSwitch />
+              </div>
+              */}
             </div>
           </div>
         </div>
@@ -681,7 +763,7 @@ const NavBarBeta = () => {
                 <div className="-mr-2">
                   <button
                     type="button"
-                    className="bg-th-bkg-3 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-th-bkg-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
+                    className="bg-th-bkg-3 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-th-bkg-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300 transition duration-100 ease-in-out"
                     onClick={closeMenu}
                   >
                     <span className="sr-only">Close menu</span>
@@ -708,7 +790,7 @@ const NavBarBeta = () => {
                 <nav className="grid gap-y-8">
                   <a
                     href="https://trade.mango.markets"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
@@ -733,7 +815,7 @@ const NavBarBeta = () => {
 
                   <a
                     href="https://trade.mango.markets/perp/BTC"
-                    className="disabled -m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    className="disabled -m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
@@ -758,7 +840,7 @@ const NavBarBeta = () => {
 
                   <a
                     href="https://trade.mango.markets/borrow"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
@@ -782,8 +864,8 @@ const NavBarBeta = () => {
                   </a>
 
                   <a
-                    href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4"
+                    href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
@@ -806,81 +888,86 @@ const NavBarBeta = () => {
                     </span>
                   </a>
                   <a
-                        href="https://docs.mango.markets/mango-v3/market-making-bot-python"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
-                      >
-                        <svg 
-                        
+                    href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
+                    className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
+                  >
+                    <svg
+                      className="flex-shrink-0 h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 22 22"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M1 4L4 5M4 5L1 14C2.77253 15.3334 5.22866 15.3334 7.00119 14M4 5L7.00006 14M4 5L10 3M16 5L19 4M16 5L13 14C14.7725 15.3334 17.2287 15.3334 19.0012 14M16 5L19.0001 14M16 5L10 3M10 1V3M10 19V3M10 19H7M10 19H13"
+                        stroke="#4E4D65"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+
+                    <div className="mx-3">
+                      <p className="text-base font-medium text-white">
+                        Market Making Program
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    href="https://docs.mango.markets/"
+                    className="text-base font-medium text-white hover:bg-th-bkg-4 transition duration-100 ease-in-out"
+                  >
+                    <div className="flex flex-row">
+                      <svg
                         className="flex-shrink-0 h-6 w-6"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 22 22"
                         stroke="currentColor"
                         aria-hidden="true"
-                        >
-                        <path d="M1 4L4 5M4 5L1 14C2.77253 15.3334 5.22866 15.3334 7.00119 14M4 5L7.00006 14M4 5L10 3M16 5L19 4M16 5L13 14C14.7725 15.3334 17.2287 15.3334 19.0012 14M16 5L19.0001 14M16 5L10 3M10 1V3M10 19V3M10 19H7M10 19H13" 
-                        stroke="#4E4D65" 
-                        strokeWidth="2" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"/>
-                        </svg>
-
-                        <div className="mx-3">
-                          <p className="text-base font-medium text-white">
-                            Market Making Program
-                          </p>
-                        </div>
-                      </a>
-                  <a
-                    href="https://docs.mango.markets/"
-                    className="text-base font-medium text-white hover:bg-th-bkg-4"
-                  >
-                    <div className="flex flex-row">
-                    <svg
-                          className="flex-shrink-0 h-6 w-6"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 22 22"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path d="M10 2.25278V15.2528M10 2.25278C8.83211 1.47686 7.24649 1 5.5 1C3.75351 1 2.16789 1.47686 1 2.25278V15.2528C2.16789 14.4769 3.75351 14 5.5 14C7.24649 14 8.83211 14.4769 10 15.2528M10 2.25278C11.1679 1.47686 12.7535 1 14.5 1C16.2465 1 17.8321 1.47686 19 2.25278V15.2528C17.8321 14.4769 16.2465 14 14.5 14C12.7535 14 11.1679 14.4769 10 15.2528" 
-                          stroke="#4E4D65" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"/>
-                          </svg>
-                          <div className="mx-3">
-                          <p className="text-base font-medium text-white">
-                            Explore the docs                          
-                          </p>
-                        </div>                    
-                        </div>
+                      >
+                        <path
+                          d="M10 2.25278V15.2528M10 2.25278C8.83211 1.47686 7.24649 1 5.5 1C3.75351 1 2.16789 1.47686 1 2.25278V15.2528C2.16789 14.4769 3.75351 14 5.5 14C7.24649 14 8.83211 14.4769 10 15.2528M10 2.25278C11.1679 1.47686 12.7535 1 14.5 1C16.2465 1 17.8321 1.47686 19 2.25278V15.2528C17.8321 14.4769 16.2465 14 14.5 14C12.7535 14 11.1679 14.4769 10 15.2528"
+                          stroke="#4E4D65"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="mx-3">
+                        <p className="text-base font-medium text-white">
+                          Explore the docs
+                        </p>
+                      </div>
+                    </div>
                   </a>
                   <a
-                        href="https://dao.mango.markets"
-                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4"
-                      >
-                        <svg
-                          className="flex-shrink-0 h-6 w-6"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 22 22"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                        <path d="M1.05493 9H3C4.10457 9 5 9.89543 5 11V12C5 13.1046 5.89543 14 7 14C8.10457 14 9 14.8954 9 16V18.9451M6 1.93552V3.5C6 4.88071 7.11929 6 8.5 6H9C10.1046 6 11 6.89543 11 8C11 9.10457 11.8954 10 13 10C14.1046 10 15 9.10457 15 8C15 6.89543 15.8954 6 17 6L18.0645 6M13 18.4879V16C13 14.8954 13.8954 14 15 14H18.0645M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" 
-                          stroke="#4E4D65" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"/>
-                        </svg>
-                        <div className="mx-3">
-                          <p className="text-base font-medium text-white">
-                            Mango DAO
-                          </p>
-                        </div>
-                      </a>
+                    href="https://dao-beta.mango.markets"
+                    className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
+                  >
+                    <svg
+                      className="flex-shrink-0 h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 22 22"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M1.05493 9H3C4.10457 9 5 9.89543 5 11V12C5 13.1046 5.89543 14 7 14C8.10457 14 9 14.8954 9 16V18.9451M6 1.93552V3.5C6 4.88071 7.11929 6 8.5 6H9C10.1046 6 11 6.89543 11 8C11 9.10457 11.8954 10 13 10C14.1046 10 15 9.10457 15 8C15 6.89543 15.8954 6 17 6L18.0645 6M13 18.4879V16C13 14.8954 13.8954 14 15 14H18.0645M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                        stroke="#4E4D65"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <div className="mx-3">
+                      <p className="text-base font-medium text-white">
+                        Mango DAO
+                      </p>
+                    </div>
+                  </a>
                 </nav>
               </div>
               <h3 className="py-5 text-sm tracking-wide font-medium text-yellow-300 uppercase">
@@ -889,7 +976,7 @@ const NavBarBeta = () => {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="https://discord.gg/2uwjsBc5yw"
-                  className="text-base font-medium text-white hover:bg-th-bkg-4"
+                  className="text-base font-medium text-white hover:bg-th-bkg-4 transition duration-100 ease-in-out"
                 >
                   <div className="flex flex-row">
                     <svg
@@ -910,7 +997,7 @@ const NavBarBeta = () => {
 
                 <a
                   href="https://twitter.com/mangomarkets"
-                  className="text-base font-medium text-white hover:bg-th-bkg-4"
+                  className="text-base font-medium text-white hover:bg-th-bkg-4 transition duration-100 ease-in-out"
                 >
                   <div className="flex flex-row">
                     <svg

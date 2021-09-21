@@ -50,8 +50,8 @@ const HeroSectionHome = () => {
                       Lightning fast{' '}
                       <span className="text-yellow-300 font-bold">·</span>{' '}
                       Near-zero fees{' '}
-                      <span className="text-yellow-300 font-bold">·</span> DAO
-                      governed
+                      <span className="text-yellow-300 font-bold">·</span>{' '}
+                      Permissionless
                     </p>
 
                     <div className="flex lg:flex-row md:flex-row lg:justify-start md:justify-center sm:justify-center">
@@ -78,7 +78,7 @@ const HeroSectionHome = () => {
                       <div className="flex">
                         <div className="flex justify-center">
                           <a
-                            className="hover:opacity-70"
+                            className="hover:opacity-70 transition duration-200 ease-in-out"
                             href="https://solana.com/"
                           >
                             <img
@@ -90,7 +90,7 @@ const HeroSectionHome = () => {
                         </div>
                         <div className="flex justify-center -my-1 mx-10">
                           <a
-                            className="hover:opacity-70"
+                            className="hover:opacity-70 transition duration-200 ease-in-out"
                             href="https://projectserum.com/#/"
                           >
                             <img
@@ -117,9 +117,9 @@ const HeroSectionHome = () => {
                 </div>
               </div>
               <div className="z-0 absolute -bottom-4 left-20 lg:-bottom-4 lg:left-96">
-              <div className="absolute bottom-4 left-8 w-450 h-450 bg-mango-yellow mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob"></div>
-              <div className="absolute bottom-4 w-450 h-450 bg-mango-red mix-blend-screen rounded-full filter blur-2xl opacity-30 animate-blob animation-delay-4000"></div>
-              <div className="absolute bottom-8 left-20 w-450 h-450 bg-mango-green mix-blend-screen rounded-full filter blur-2xl opacity-20 animate-blob animation-delay-2000"></div>
+                <div className="absolute bottom-4 left-8 w-450 h-450 bg-mango-yellow mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob"></div>
+                <div className="absolute bottom-4 w-450 h-450 bg-mango-red mix-blend-screen rounded-full filter blur-2xl opacity-30 animate-blob animation-delay-4000"></div>
+                <div className="absolute bottom-8 left-20 w-450 h-450 bg-mango-green mix-blend-screen rounded-full filter blur-2xl opacity-20 animate-blob animation-delay-2000"></div>
               </div>
             </div>
           </main>

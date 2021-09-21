@@ -14,7 +14,6 @@ const StyledButton = styled.a`
     ${tw`cursor-not-allowed opacity-60`}
   }
 `
-
 // default heroicon does not allow customizing stroke
 const ChevronRightIcon = ({ className }) => (
   <svg
