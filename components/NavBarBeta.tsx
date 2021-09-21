@@ -233,7 +233,7 @@ const NavBarBeta = () => {
                       </h3>
 
                       <a
-                        href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
+                        href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
@@ -264,7 +264,7 @@ const NavBarBeta = () => {
                       </a>
 
                       <a
-                        href="https://docs.mango.markets/mango-v3/market-making-bot-python"
+                        href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
@@ -468,7 +468,7 @@ const NavBarBeta = () => {
                       </h3>
 
                       <a
-                        href="https://dao.mango.markets"
+                        href="https://dao-beta.mango.markets"
                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                       >
                         <svg
@@ -864,7 +864,7 @@ const NavBarBeta = () => {
                   </a>
 
                   <a
-                    href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
+                    href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
@@ -888,7 +888,7 @@ const NavBarBeta = () => {
                     </span>
                   </a>
                   <a
-                    href="https://docs.mango.markets/mango-v3/market-making-bot-python"
+                    href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
                     className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                   >
                     <svg
@@ -943,7 +943,7 @@ const NavBarBeta = () => {
                     </div>
                   </a>
                   <a
-                    href="https://dao.mango.markets"
+                    href="https://dao-beta.mango.markets"
                     className="-m-3 p-3 flex items-start rounded-lg hover:bg-th-fgd-4 transition duration-100 ease-in-out"
                   >
                     <svg

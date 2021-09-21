@@ -175,7 +175,7 @@ const FooterSection = () => {
                         <li className="mb-4">
                           <a
                             className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
-                            href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/Quickstart.md"
+                            href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
                           >
                             Liquidator Program
                           </a>
@@ -206,7 +206,7 @@ const FooterSection = () => {
                         <li className="mb-4">
                           <a
                             className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
-                            href="https://gitlab.com/OpinionatedGeek/mango-explorer/-/blob/master/mango/marketmaking/simplemarketmaker.py"
+                            href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
                           >
                             Become a market maker
                           </a>
