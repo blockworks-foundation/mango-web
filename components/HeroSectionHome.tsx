@@ -50,8 +50,8 @@ const HeroSectionHome = () => {
                       Lightning fast{' '}
                       <span className="text-yellow-300 font-bold">·</span>{' '}
                       Near-zero fees{' '}
-                      <span className="text-yellow-300 font-bold">·</span> DAO
-                      governed
+                      <span className="text-yellow-300 font-bold">·</span>{' '}
+                      Permissionless
                     </p>
 
                     <div className="flex lg:flex-row md:flex-row lg:justify-start md:justify-center sm:justify-center">
