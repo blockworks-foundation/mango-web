@@ -49,11 +49,13 @@ const TradeSection = () => {
                     icon="../token/icon-ray.svg"
                     decimals={4}
                   />
+                  {/*
                   <MarketCard
                     name="SBR/USDC"
                     icon="../token/icon-sbr.svg"
                     decimals={4}
                   />
+                  */}
                   <MarketCard
                     name="COPE/USDC"
                     icon="../token/icon-cope.svg"
