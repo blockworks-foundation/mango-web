@@ -8,7 +8,6 @@ import React from 'react'
 
 const LendSection = () => {
   const [stats, setStats] = useState(null)
-  const [prices, setPrices] = useState(null)
 
   useEffect(() => {
     const loadStats = async () => {
@@ -20,17 +19,6 @@ const LendSection = () => {
     loadStats()
   }, [])
 
-  useEffect(() => {
-    const loadPrices = async () => {
-      const response = await fetch(
-        `https://mango-transaction-log.herokuapp.com/stats/prices/2oogpTYm1sp6LPZAWD3bp2wsFpnV2kXL1s52yyFhW5vp`
-      )
-      const prices = await response.json()
-      setPrices(prices)
-    }
-    loadPrices()
-  }, [])
-
   const propsFor = (symbol) => {
     const defaults = {
       name: symbol,
@@ -39,12 +27,12 @@ const LendSection = () => {
       interest: { deposit: 0, borrow: 0 },
       liquidity: { native: 0, usd: 0 },
     }
-    if (!stats || !prices) return defaults
+    if (!stats) return defaults
     const filtered = stats.filter((s) => s.name == symbol)
     if (filtered.length == 0) return defaults
     const lastStats = filtered[filtered.length - 1]
-    const lastPrice = 1 //symbol === 'USDC' ? 1 : prices[symbol][lastStats.hourly]
-    const native = lastStats.totalDeposits // - lastStats.totalBorrows
+    const lastPrice = lastStats.baseOraclePrice
+    const native = lastStats.totalDeposits
     return {
       ...defaults,
       interest: {
@@ -109,15 +97,14 @@ const LendSection = () => {
               <Marquee gradient={false}>
                 <div className="z-10 mt-4 flex flex-wrap text-left">
                   <LendCard {...propsFor('USDC')} />
-                  <LendCard {...propsFor('USDT')} />
                   <LendCard {...propsFor('MNGO')} />
                   <LendCard {...propsFor('BTC')} />
                   <LendCard {...propsFor('ETH')} />
-                  <LendCard {...propsFor('SRM')} />
                   <LendCard {...propsFor('SOL')} />
-                  <LendCard {...propsFor('COPE')} />
+                  <LendCard {...propsFor('SRM')} />
                   <LendCard {...propsFor('RAY')} />
-                  {/* <LendCard {...propsFor('SBR')} /> */}
+                  <LendCard {...propsFor('COPE')} />
+                  <LendCard {...propsFor('USDT')} />
 
                   {/*
                 <a

@@ -39,13 +39,17 @@ const LendCard = (props: LendCardProps) => {
               Deposit / Borrow
             </p>
           </div>
-          <div className="flex flex-row gap-x-2">
+          <div className="flex flex-row">
             <PercentPill value={props.interest.deposit} />
-            <PercentPill value={props.interest.borrow} bg="bg-mango-red" />
+            <PercentPill
+              className="ml-2"
+              value={props.interest.borrow}
+              bg="bg-mango-red"
+            />
           </div>
           <div className="flex flex-row gap-x-2">{/* Chart goes here */}</div>
         </div>
-        <div className="py-3 px-2">
+        <div className="px-2 mt-4">
           <div className="flex-row">
             <p className="text-white text-opacity-50 text-xs font-bold">
               Total Deposits
