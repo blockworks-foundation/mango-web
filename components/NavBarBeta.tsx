@@ -257,7 +257,7 @@ const NavBarBeta = () => {
                             Liquidator Program
                           </p>
                           <p className="mt-1 text-sm text-gray-500">
-                            Help safegaurd the mango protocol, become a
+                            Help safeguard the mango protocol, become a
                             decentralized liquidator.
                           </p>
                         </div>
