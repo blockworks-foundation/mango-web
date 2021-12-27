@@ -31,7 +31,10 @@ function App({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mango Markets" />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="/twitter-image.png" />
+        <meta
+          name="twitter:image"
+          content="https://www.mango.markets/socials/twitter-image-1200x600.png?34567878"
+        />
 
         <link rel="manifest" href="/manifest.json"></link>
       </Head>
