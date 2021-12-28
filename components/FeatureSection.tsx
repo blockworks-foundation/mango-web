@@ -31,7 +31,7 @@ const features = [
   {
     name: 'Spot & perpetual markets.',
     description:
-      'Trade spot markets and derivitive assets all in one unified experience. Spot margin with up to 5x leverage, perpetuals futures with up to 10x.',
+      'Trade spot markets and derivitive assets all in one unified experience. Spot margin with up to 5x leverage, perpetuals futures with up to 20x.',
     icon: LibraryIcon,
   },
 ]
