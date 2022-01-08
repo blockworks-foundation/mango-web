@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
 
       # Run Trivy to fail the job on critical vulnerabiliies with fix available
-      - name: Run Trivy
+      - name: Run Trivy for critical vulnerabilities
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs' # Filesystem mode
@@ -29,13 +29,9 @@ jobs:
           format: 'table' # Table output mode as next step will report in security tab
           severity: 'CRITICAL' # Error only on critical vulnerabilities
           exit-code: '1' # Fail the job if a critical vulnerability with fix available is found
-      - name: Failure feedback
-        run: |
-          echo "This table contains the vulnerabilities that failed the job."
-          echo "Vulnerabilities lower than critical are reported in the security tab."
 
       # Run Trivy reporting all vulnerabilities to the security tab
-      - name: Run Trivy
+      - name: Run Trivy for reporting all vulnerabilities
         uses: aquasecurity/trivy-action@master
         if: always() # Run this step even if job fails due to critical vuln
         with:
