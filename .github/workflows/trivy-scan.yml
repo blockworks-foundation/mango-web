@@ -29,6 +29,9 @@ jobs:
           format: 'table' # Table output mode as next step will report in security tab
           severity: 'CRITICAL' # Error only on critical vulnerabilities
           exit-code: '1' # Fail the job if a critical vulnerability with fix available is found
+          run: |
+            echo "This table contains the vulnerabilities that failed the job."
+            echo "Vulnerabilities lower than critical are reported in the security tab."
 
       # Run Trivy reporting all vulnerabilities to the security tab
       - name: Run Trivy
