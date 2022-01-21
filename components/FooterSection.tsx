@@ -43,7 +43,7 @@ const FooterSection = () => {
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href="https://discord.gg/67jySBhxrgs"
+                  href="https://trade.mango.markets/market?name=BTC-PERP"
                 >
                   <ButtonWhite>Start trading now</ButtonWhite>
                 </a>
