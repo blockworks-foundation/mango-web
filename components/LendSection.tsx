@@ -12,7 +12,7 @@ const LendSection = () => {
   useEffect(() => {
     const loadStats = async () => {
       const response = await fetch(
-        'https://mango-stats-v3.herokuapp.com/spot?mangoGroup=mainnet.1'
+        'https://mango-transaction-log.herokuapp.com/v3/stats/spot_stats_hourly?mango-group=mainnet.1'
       )
       setStats(await response.json())
     }
