@@ -1,15 +1,15 @@
-import MarketCard from './MarketCard'
+// import MarketCard from './MarketCard'
 import Button from './Button'
 // import GradientText from './GradientText'
 import Link from './Link'
-import Marquee from 'react-fast-marquee'
+// import Marquee from 'react-fast-marquee'
 import React from 'react'
 
 const TradeSection = () => {
   return (
     <div className="">
       <div className="bg-gradient-to-br border border-bkg-3 from-th-bkg-3 via-th-bkg-3 to-th-bkg-2 h-auto transform -skew-y-3 lg:mb-48 lg:-mt-64 md:pt-48 md:mb-48 md:-mt-64 xs:my-0 overflow-hidden">
-        <div className="mx-auto px-0 transform skew-y-3">
+        {/* <div className="mx-auto px-0 transform skew-y-3">
           <section className="py-12 px-0 lg:mt-0 md:mt-0 sm:mt-28 ">
             <Marquee gradient={false} direction={'left'}>
               <div className="mx-auto">
@@ -39,23 +39,11 @@ const TradeSection = () => {
                     icon="../token/icon-srm.svg"
                     decimals={4}
                   />
-                  {/*<MarketCard
-                    name="USDT/USDC"
-                    icon="../token/icon-usdt.svg"
-                    decimals={5}
-                  />*/}
                   <MarketCard
                     name="RAY/USDC"
                     icon="../token/icon-ray.svg"
                     decimals={4}
                   />
-                  {/*
-                  <MarketCard
-                    name="SBR/USDC"
-                    icon="../token/icon-sbr.svg"
-                    decimals={4}
-                  />
-                  */}
                   <MarketCard
                     name="COPE/USDC"
                     icon="../token/icon-cope.svg"
@@ -65,9 +53,9 @@ const TradeSection = () => {
               </div>
             </Marquee>
           </section>
-        </div>
+        </div> */}
         <div className="max-w-7xl mx-auto px-4 transform skew-y-3">
-          <section className="py-12 px-3 lg:mt-56 md:mt-28 sm:mt-24 xs:mt-50">
+          <section className="py-12 px-3 lg:mt-28 md:mt-28 sm:mt-24 xs:mt-50">
             <div className="flex flex-wrap items-center lg:text-center md:text-center sm:text-left">
               <div className="px-2 order-1 lg:order-none mx-auto">
                 <h2 className="mb-6 leading-tight font-semibold font-heading lg:text-5xl sm:text-4xl xs:text-3xl">
