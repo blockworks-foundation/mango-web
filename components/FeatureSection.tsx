@@ -52,10 +52,7 @@ const FeatureSection = () => {
                           Completely permissionless.
                         </h2>
                         <p className="mt-4 text-xl text-gray-400">
-                          No KYC, no personal information held, all data is
-                          on-chain. Trade spot margined markets and leveraged
-                          perpetual futures all cross-collateralized with up to
-                          10x leverage.
+                          Open source, all data is on-chain. Trade spot margined markets and leveraged perpetual futures all cross-collateralized with up to 10x leverage.
                         </p>
                         <div className="mt-6">
                           <a
