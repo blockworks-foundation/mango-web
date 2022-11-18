@@ -57,3 +57,8 @@
     animation-delay: 4s;
   }
 }
+
+.radial-gradient-bg {
+  background-image: radial-gradient(at 300% 100%, #5b48ad 0, transparent 75%);
+  @apply bg-th-bkg-1;
+}

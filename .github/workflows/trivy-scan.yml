@@ -5,9 +5,9 @@ name: Trivy Scan
 # Events that triggers Trivy to run
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
