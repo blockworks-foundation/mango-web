@@ -31,7 +31,7 @@ const HeroSectionHome = () => {
             DeFi shop.
           </p>
           <p className="mb-8 opacity-80 text-lg">
-            Join our communtiy and stay up-to-date on Discord.
+            Join our community and stay up-to-date on Discord.
           </p>
 
           <div className="flex justify-start">
