@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react'
 import Button from './Button'
-import Link from './Link'
 import { gsap, Power3 } from 'gsap'
 
 const HeroSectionHome = () => {
