@@ -48,13 +48,6 @@ const HeroSectionHome = () => {
                 <span>Join Discord</span>
               </Button>
             </a>
-            <a
-              rel="noreferrer"
-              target="_blank"
-              href="https://jup.ag/swap/USDC-MNGO"
-            >
-              <Link>Buy MNGO</Link>
-            </a>
           </div>
         </div>
         <div>
