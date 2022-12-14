@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import MangoPill from '../components/MangoPill'
+import MangoPill from './MangoPill'
 //import MangoSale from '../components/MangoSale'
 import Button from './Button'
 import GradientText from './GradientText'
 //import ThemeSwitch from './ThemeSwitch'
 
-const NavBarBeta = () => {
+const NavBarAlpha = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   const [productMenuVisible, setProductMenuVisible] = useState(false)
   const [supportMenuVisible, setSupportMenuVisible] = useState(false)
@@ -54,7 +54,7 @@ const NavBarBeta = () => {
   })
 
   return (
-    <div className="">
+    <div className="z-20">
       {/* Main Menu */}
       <div className="lg:px-10 lg:py-8 xs:px-6 xs:py-1 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -124,7 +124,7 @@ const NavBarBeta = () => {
                   } absolute z-50 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
                 >
                   <div className="w-700 grid grid-cols-2 rounded-lg border border-bkg-3 shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                    <div className="relative grid gap-6 bg-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                         Markets
                       </h3>
@@ -227,7 +227,7 @@ const NavBarBeta = () => {
                       </a>
                     </div>
 
-                    <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                    <div className="relative grid gap-6 bg-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                         Infrastructure
                       </h3>
@@ -359,7 +359,7 @@ const NavBarBeta = () => {
                   } absolute z-50 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`}
                 >
                   <div className="w-700 grid grid-cols-2 rounded-lg border border-bkg-3 shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                    <div className="relative grid gap-6 bg-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                         Developers
                       </h3>
@@ -462,7 +462,7 @@ const NavBarBeta = () => {
                       </a>
                     </div>
 
-                    <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                    <div className="relative grid gap-6 bg-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                         Governance
                       </h3>
@@ -601,7 +601,7 @@ const NavBarBeta = () => {
                   } absolute z-50 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0`}
                 >
                   <div className="rounded-lg border border-bkg-3 shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                    <div className="relative grid gap-6 bg-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                       <h3 className="text-sm tracking-wide font-bold text-yellow-300 uppercase">
                         Social
                       </h3>
@@ -730,11 +730,11 @@ const NavBarBeta = () => {
                   target="_blank"
                   href="https://trade.mango.markets"
                 >
-                  <Button>Start trading</Button>
+                  <Button>Check out 🥭</Button>
                 </a>
               </div>
               {/* 
-              <div className="bg-th-bkg-3 rounded-full ml-6 p-1 shadow-lg">
+              <div className="bg-bkg-3 rounded-full ml-6 p-1 shadow-lg">
               <ThemeSwitch />
               </div>
               */}
@@ -749,7 +749,7 @@ const NavBarBeta = () => {
             !mobileMenuVisible && 'hidden'
           } absolute top-1 inset-x-0 px-4 py-2 transition transform origin-top-right z-50`}
         >
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-th-bkg-3">
+          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-bkg-3">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
@@ -763,7 +763,7 @@ const NavBarBeta = () => {
                 <div className="-mr-2">
                   <button
                     type="button"
-                    className="bg-th-bkg-3 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-th-bkg-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300 transition duration-100 ease-in-out"
+                    className="bg-bkg-3 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-bkg-4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300 transition duration-100 ease-in-out"
                     onClick={closeMenu}
                   >
                     <span className="sr-only">Close menu</span>
@@ -790,7 +790,7 @@ const NavBarBeta = () => {
                 <nav className="grid gap-y-8">
                   <a
                     href="https://trade.mango.markets"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
@@ -815,7 +815,7 @@ const NavBarBeta = () => {
 
                   <a
                     href="https://trade.mango.markets/perp/BTC"
-                    className="disabled -m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
+                    className="disabled -m-3 p-3 flex items-center rounded-md hover:bg-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
@@ -840,7 +840,7 @@ const NavBarBeta = () => {
 
                   <a
                     href="https://trade.mango.markets/borrow"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
@@ -865,7 +865,7 @@ const NavBarBeta = () => {
 
                   <a
                     href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
-                    className="-m-3 p-3 flex items-center rounded-md hover:bg-th-bkg-4 transition duration-100 ease-in-out"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-bkg-4 transition duration-100 ease-in-out"
                   >
                     <svg
                       className="flex-shrink-0 h-6 w-6"
@@ -916,7 +916,7 @@ const NavBarBeta = () => {
                   </a>
                   <a
                     href="https://docs.mango.markets/"
-                    className="text-base font-medium text-white hover:bg-th-bkg-4 transition duration-100 ease-in-out"
+                    className="text-base font-medium text-white hover:bg-bkg-4 transition duration-100 ease-in-out"
                   >
                     <div className="flex flex-row">
                       <svg
@@ -976,7 +976,7 @@ const NavBarBeta = () => {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="https://discord.gg/2uwjsBc5yw"
-                  className="text-base font-medium text-white hover:bg-th-bkg-4 transition duration-100 ease-in-out"
+                  className="text-base font-medium text-white hover:bg-bkg-4 transition duration-100 ease-in-out"
                 >
                   <div className="flex flex-row">
                     <svg
@@ -997,7 +997,7 @@ const NavBarBeta = () => {
 
                 <a
                   href="https://twitter.com/mangomarkets"
-                  className="text-base font-medium text-white hover:bg-th-bkg-4 transition duration-100 ease-in-out"
+                  className="text-base font-medium text-white hover:bg-bkg-4 transition duration-100 ease-in-out"
                 >
                   <div className="flex flex-row">
                     <svg
@@ -1024,4 +1024,4 @@ const NavBarBeta = () => {
   )
 }
 
-export default NavBarBeta
+export default NavBarAlpha
