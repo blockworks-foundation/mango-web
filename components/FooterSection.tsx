@@ -118,7 +118,9 @@ const FooterSection = () => {
                     />
                   </a>
                   <p className="mt-5 mb-6 max-w-xs text-gray-500 leading-loose">
-                    Mango is a decentralized autonomous organization.{' '}
+                    Mango is a decentralized autonomous organization helping
+                    build the next generation of decentralied trading products
+                    and infratructure.{' '}
                   </p>
                   <div className="flex flex-row">
                     <a

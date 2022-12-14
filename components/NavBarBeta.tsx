@@ -17,7 +17,7 @@ const NavBarBeta = () => {
           </div>
           <div className="flex flex-row">
             <a
-              className="flex h-6 w-6 m-2"
+              className="flex h-6 w-6 m-2 hover:opacity-50 transition-opacity duration-200"
               href="https://github.com/blockworks-foundation"
               target="_blank"
               rel="noopener noreferrer"
@@ -25,7 +25,7 @@ const NavBarBeta = () => {
               <img className="mx-auto" src="socials/github.svg" />
             </a>
             <a
-              className="flex h-6 w-6 m-2"
+              className="flex h-6 w-6 m-2 hover:opacity-50 transition-opacity duration-200"
               href="https://discord.gg/2uwjsBc5yw"
               target="_blank"
               rel="noopener noreferrer"
@@ -33,7 +33,7 @@ const NavBarBeta = () => {
               <img className="mx-auto" src="socials/discord.svg" />
             </a>
             <a
-              className="flex h-6 w-6 m-2"
+              className="flex h-6 w-6 m-2 hover:opacity-50 transition-opacity duration-200"
               href="https://twitter.com/mangomarkets"
               target="_blank"
               rel="noopener noreferrer"
