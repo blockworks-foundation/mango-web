@@ -15,7 +15,7 @@ const NavBarBeta = () => {
               />
             </a>
           </div>
-          <div className="flex flex-row">
+          <div className="flex flex-row z-20">
             <a
               className="flex h-6 w-6 m-2 hover:opacity-50 transition-opacity duration-200"
               href="https://github.com/blockworks-foundation"
