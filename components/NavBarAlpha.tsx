@@ -61,7 +61,7 @@ const NavBarAlpha = () => {
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="https://mango.markets">
-                <span className="sr-only">Mango</span>
+                <span className="sr-only">Mango0</span>
                 <img
                   className="h-8"
                   src="img/logo_mango.svg"
