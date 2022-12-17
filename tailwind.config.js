@@ -20,6 +20,21 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      height: {
+        450: '450px',
+        500: '500px',
+        550: '550px',
+        600: '600px',
+        650: '650px',
+        675: '675px',
+        700: '700px',
+        750: '750px',
+      },
+      width: {
+        450: '450px',
+        700: '700px',
+        900: '900px',
+      },
       colors: {
         mango: {
           active: {

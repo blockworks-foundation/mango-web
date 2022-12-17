@@ -5,8 +5,7 @@ const Hero = () => {
     <div>
       <p className="font-display xs:text-3xl mb-3 text-center font-bold text-white sm:text-4xl md:text-4xl lg:text-5xl">
         Every market, all the power.
-      </p>
-      <p className="font-display xs:text-3xl mb-4 text-center font-bold text-white sm:text-4xl md:text-4xl lg:text-5xl">
+        <br />
         <GradientText>None of the fuss.</GradientText>
       </p>
     </div>
