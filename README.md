@@ -2,11 +2,11 @@
 
 ### Getting started
 
-Run the following command on your local environment:
+Download or clone repo
+
+In terminal run the following command on your local dev environment:
 
 ```shell
-git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
-cd my-project-name
 yarn install
 ```
 
