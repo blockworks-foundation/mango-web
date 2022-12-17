@@ -746,8 +746,9 @@ const Nav = () => {
                     target="_blank"
                     href="https://trade.mango.markets"
                   >
-                    <Button>Check out 🥭</Button>
+                   <Button>Check out 🥭</Button>
                   </a>
+
                 </div>
                 {/* 
               <div className="bg-mango-bkg-3 rounded-full ml-6 p-1 shadow-lg">

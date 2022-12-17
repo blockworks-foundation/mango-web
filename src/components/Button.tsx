@@ -1,12 +1,70 @@
-const Button = (props: any) => (
-  <div
-    className="xs:-top-2 relative z-20 mb-4 inline-flex h-6 items-center rounded-full bg-gradient-to-br from-mango-red
- to-mango-orange p-4 sm:-top-3 md:-top-3 lg:-top-3"
-  >
-    <p className="text-xs font-bold uppercase tracking-widest text-white subpixel-antialiased">
-      {props.children}
-    </p>
-  </div>
-);
+import { FunctionComponent } from 'react';
+import styled from '@emotion/styled';
+import tw from 'twin.macro';
 
-export default Button;
+export const idleGradient =
+  'bg-gradient-to-r from-mango-yellow to-mango-red'
+export const activeGradient =
+  'bg-gradient-to-bl from-mango-green via-mango-yellow to-mango-orange'
+
+const StyledButton = styled.button<ButtonProps>`
+  :before {
+    ${tw`absolute left-0 top-0 opacity-0 h-full w-full block transition-opacity duration-300`}
+    ${({ gray }) => (gray ? tw`bg-mango-bkg-3` : tw`${activeGradient}`)}
+    border-radius: inherit;
+    content: '';
+    z-index: -10;
+  }
+
+  :hover {
+    :before {
+      ${tw`opacity-100`}
+    }
+  }
+
+  :focus {
+    ${tw`ring-2 ring-mango-green ring-opacity-40 outline-none`}
+  }
+
+  :active {
+    :before {
+      ${tw`ring-2 ring-mango-green ring-opacity-40`}
+    }
+  }
+
+  :disabled {
+    ${tw`cursor-not-allowed opacity-60`}
+    :before {
+      ${tw`hidden`}
+    }
+  }
+`
+
+interface ButtonProps {
+  className?: string
+  children: React.ReactNode
+  gray?: boolean
+  onClick?: () => void
+  disabled?: boolean
+}
+
+const Button: FunctionComponent<ButtonProps> = ({
+  children,
+  className,
+  gray,
+  ...props
+}) => {
+  return (
+    <StyledButton
+      className={`${className} relative z-10 px-6 py-2 rounded-full text-white font-display  ${
+        gray ? 'bg-mango-bkg-4' : idleGradient
+      }`}
+      gray={gray}
+      {...props}
+    >
+      {children}
+    </StyledButton>
+  )
+}
+
+export default Button
