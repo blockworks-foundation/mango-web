@@ -39,7 +39,7 @@ const StyledButton = styled.button<ButtonProps>`
     }
   }
 `
-
+// added "children: react.reactnode" and fixed errors, but don't know what its actually doing lol
 interface ButtonProps {
   className?: string
   children: React.ReactNode
