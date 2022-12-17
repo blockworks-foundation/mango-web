@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 
 import MangoPill from '@/components/MangoPill';
 
-import Button from './Button';
-import GradientText from './GradientText';
+import Button from '@/components/Button';
+import GradientText from '@/components/GradientText';
+import Logo from './Logo';
+// import Logo from '@/components/Logo';
 // import GradientText from '@/components/GradientText';
 // import Button from '@/components/Button';
 
@@ -64,12 +66,7 @@ const Nav = () => {
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <a href="https://mango.markets">
                   <span className="sr-only">Mango</span>
-                  <img
-                    className="h-8"
-                    src="img/logo_mango.svg"
-                    alt=""
-                    width="auto"
-                  />
+                  <Logo />
                 </a>
               </div>
               <div className="-my-2 -mr-2 md:hidden">
