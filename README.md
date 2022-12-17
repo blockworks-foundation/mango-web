@@ -4,16 +4,20 @@
 
 Download or clone repo
 
-In terminal run the following command on your local dev environment:
+```shell
+Git clone https://github.com/blockworks-foundation/mango-web.git
+```
+
+In terminal navigate to cloned repot and run command:
 
 ```shell
 yarn install
 ```
 
-Then, you can run locally in development mode with live reload:
+Now, you can run locally in development mode with live reload:
 
 ```shell
 yarn dev
 ```
 
-Open http://localhost:3000 with your favorite browser to see your project.
+Open http://localhost:3000 with your preferred browser to see your project.
