@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 // import { useRouter } from 'next/router';
 
 import MangoPill from '@/components/MangoPill';
-
 import Button from '@/components/Button';
 import GradientText from '@/components/GradientText';
 import Logo from '@/components/Logo';

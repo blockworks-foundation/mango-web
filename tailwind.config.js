@@ -2,6 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      display: ['TT Commons Expanded, sans-serif'],
+      body: 'TT Commons, sans-serif',
+      mono: ['TT Mono, mono'],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
