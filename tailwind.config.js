@@ -77,6 +77,7 @@ module.exports = {
           yellow: 'hsl(46, 99%, 55%)',
           green: 'hsl(72, 97%, 43%)',
           orange: 'hsl(29, 86%, 59%)',
+          purple: 'hsl(250, 39%, 47%)',
         },
       },
     },

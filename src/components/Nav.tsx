@@ -364,7 +364,7 @@ const Nav = () => {
                   >
                     <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-mango-bkg-3 shadow-lg">
                       <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-mango-yellow">
+                        <h3 className="text-sm font-bold uppercase tracking-wide text-mango-fgd-4">
                           Developers
                         </h3>
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
@@ -399,7 +399,7 @@ const Nav = () => {
                               </div>
                           </a>
                         </button>
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-mango-yellow">
+                        <h3 className="text-sm font-bold uppercase tracking-wide text-mango-fgd-4">
                           Stats
                         </h3>
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
@@ -471,7 +471,7 @@ const Nav = () => {
                       </div>
 
                       <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-mango-yellow">
+                        <h3 className="text-sm font-bold uppercase tracking-wide text-mango-fgd-4">
                           Governance
                         </h3>
 
@@ -616,7 +616,7 @@ const Nav = () => {
                   >
                     <div className="overflow-hidden rounded-lg border border-mango-bkg-3 shadow-lg">
                       <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-mango-yellow">
+                        <h3 className="text-sm font-bold uppercase tracking-wide text-mango-fgd-4">
                           Social
                         </h3>
                         <button className="text-left hover:fill-mango-yellow">
