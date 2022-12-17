@@ -1,7 +1,7 @@
 {
   "name": "mango-web",
   "version": "2.0",
-  "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +11,7 @@
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next out",
     "lint": "next lint",
-    "typecheck": "tsc",
+    "type-check": "tsc",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write",
     "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
     "test": "jest",
