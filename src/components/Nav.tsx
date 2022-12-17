@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
+// import { useRouter } from 'next/router';
 
 import MangoPill from '@/components/MangoPill';
 
 import Button from '@/components/Button';
 import GradientText from '@/components/GradientText';
-import Logo from './Logo';
-// import Logo from '@/components/Logo';
-// import GradientText from '@/components/GradientText';
-// import Button from '@/components/Button';
+import Logo from '@/components/Logo';
 
 const Nav = () => {
+// const router = useRouter();
+
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [productMenuVisible, setProductMenuVisible] = useState(false);
   const [supportMenuVisible, setSupportMenuVisible] = useState(false);
