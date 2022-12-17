@@ -1,6 +1,7 @@
 {
-  "name": "next-js-boilerplate",
-  "version": "3.6.0",
+  "name": "mango-web",
+  "version": "2.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +11,7 @@
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next out",
     "lint": "next lint",
+    "typecheck": "tsc",
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write",
     "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
     "test": "jest",
