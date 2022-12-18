@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 // import { useRouter } from 'next/router';
 
 import MangoPill from '@/components/MangoPill';
@@ -71,7 +72,7 @@ const Nav = () => {
               <div className="-my-2 -mr-2 md:hidden">
                 <button
                   type="button"
-                  className=" inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-100 ease-in-out hover:bg-gray-100 hover:text-gray-500 focus:outline-none"
+                  className=" inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-150 ease-in-out hover:bg-gray-150 hover:text-gray-500 focus:outline-none"
                   onClick={toggleMobileMenu}
                 >
                   <span className="sr-only">Open menu</span>
@@ -96,13 +97,13 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-gray-500 transition duration-100 ease-in-out hover:bg-mango-bkg-4 hover:text-white focus:outline-none "
+                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-gray-500 transition duration-150 ease-in-out hover:bg-mango-bkg-4 hover:text-white focus:outline-none "
                     onClick={toggleProducts}
                   >
                     <span>Products</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-gray-400 transition duration-100 ease-in-out group-hover:text-mango-yellow"
+                      className="ml-2 h-5 w-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-mango-yellow"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -121,7 +122,7 @@ const Nav = () => {
                       !productMenuVisible && 'hidden'
                     } absolute z-50 -ml-4 mt-3 w-screen max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
                   >
-                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-mango-bkg-3 shadow-lg">
+                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-mango-bkg-3 shadow-lg ">
                       <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-mango-fgd-4">
                           Markets
@@ -129,7 +130,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://trade.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0 stroke-current"
@@ -162,7 +163,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://trade.mango.markets/perp/BTC"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -196,7 +197,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://trade.mango.markets/borrow"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -235,7 +236,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -267,7 +268,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -304,7 +305,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://initialcapoffering.com/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -338,7 +339,7 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-gray-500 transition duration-100 ease-in-out hover:bg-mango-bkg-4 hover:text-white focus:outline-none "
+                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-gray-500 transition duration-150 ease-in-out hover:bg-mango-bkg-4 hover:text-white focus:outline-none "
                     onClick={toggleCommunity}
                   >
                     <span>Community</span>
@@ -370,7 +371,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://docs.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                               <svg
                                 className="h-6 w-6 shrink-0"
@@ -405,7 +406,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://trade.mango.markets/stats"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -478,7 +479,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://dao-beta.mango.markets"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -510,7 +511,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://forum.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -543,7 +544,7 @@ const Nav = () => {
                           <button className="text-left hover:text-mango-yellow text-mango-fgd-5">
                           <a
                             href="https://token.mango.markets"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             <svg
                               className="h-6 w-6 shrink-0"
@@ -578,18 +579,18 @@ const Nav = () => {
                   </div>
                 </div>
 
-                {/* 
-              <a
-                href="https://docs.mango.markets/"
-                className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 hover:text-white focus:outline-none rounded-md"
-              >
-                Docs
-              </a>
-              */}
+                  {/* 
+                <a
+                  href="https://docs.mango.markets/"
+                  className="text-base font-medium text-gray-500 p-1 px-2 hover:bg-th-fgd-4 hover:text-white focus:outline-none rounded-md"
+                >
+                  Docs
+                </a>
+                */}
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-gray-500 transition duration-100 ease-in-out hover:bg-mango-bkg-4 hover:text-white focus:outline-none"
+                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-gray-500 transition duration-150 ease-in-out hover:bg-mango-bkg-4 hover:text-white focus:outline-none"
                     onClick={toggleSupport}
                   >
                     <span>Support</span>
@@ -622,7 +623,7 @@ const Nav = () => {
                         <button className="text-left hover:fill-mango-yellow">
                           <a
                             href="https://discord.gg/2uwjsBc5yw"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                           >
                             {/* Heroicon name: outline/support */}
                             <svg
@@ -651,7 +652,7 @@ const Nav = () => {
                         </button>
                         <a
                           href="https://twitter.com/mangomarkets"
-                          className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                          className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                         >
                           <svg
                             width="25"
@@ -685,7 +686,7 @@ const Nav = () => {
                             <li className="truncate text-base">
                               <a
                                 href="https://docs.mango.markets/tutorials/creating-a-wallet"
-                                className="font-medium text-white transition duration-100 ease-in-out hover:text-gray-400"
+                                className="font-medium text-white transition duration-150 ease-in-out hover:text-gray-400"
                               >
                                 Setting up a wallet
                               </a>
@@ -694,7 +695,7 @@ const Nav = () => {
                             <li className="truncate text-base">
                               <a
                                 href="https://docs.mango.markets/tutorials/getting-started"
-                                className="font-medium text-white transition duration-100 ease-in-out hover:text-gray-400"
+                                className="font-medium text-white transition duration-150 ease-in-out hover:text-gray-400"
                               >
                                 Getting started with Mango 🥭
                               </a>
@@ -704,7 +705,7 @@ const Nav = () => {
                         <div className="mt-5 text-sm">
                           <a
                             href="https://docs.mango.markets/margin-trading/overview"
-                            className="bg-mango-orange bg-clip-text font-bold text-transparent transition duration-100 ease-in-out hover:bg-mango-yellow"
+                            className="bg-mango-orange bg-clip-text font-bold text-transparent transition duration-150 ease-in-out hover:bg-mango-yellow"
                           >
                             {' '}
                             Learn more about the Mango protocol{' '}
@@ -780,7 +781,7 @@ const Nav = () => {
                   <div className="-mr-2">
                     <button
                       type="button"
-                      className="inline-flex items-center justify-center rounded-md bg-mango-bkg-3 p-2 text-gray-400 transition duration-100 ease-in-out hover:bg-mango-bkg-4 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
+                      className="inline-flex items-center justify-center rounded-md bg-mango-bkg-3 p-2 text-gray-400 transition duration-150 ease-in-out hover:bg-mango-bkg-4 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-300"
                       onClick={closeMenu}
                     >
                       <span className="sr-only">Close menu</span>
@@ -807,7 +808,7 @@ const Nav = () => {
                   <nav className="grid gap-y-8">
                     <a
                       href="https://trade.mango.markets"
-                      className="-m-3 flex items-center rounded-md p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                      className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
                         className="h-6 w-6 shrink-0"
@@ -832,7 +833,7 @@ const Nav = () => {
 
                     <a
                       href="https://trade.mango.markets/perp/BTC"
-                      className="-m-3 flex items-center rounded-md p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                      className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
                         className="h-6 w-6 shrink-0"
@@ -857,7 +858,7 @@ const Nav = () => {
 
                     <a
                       href="https://trade.mango.markets/borrow"
-                      className="-m-3 flex items-center rounded-md p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                      className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
                         className="h-6 w-6 shrink-0"
@@ -882,7 +883,7 @@ const Nav = () => {
 
                     <a
                       href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
-                      className="-m-3 flex items-center rounded-md p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                      className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
                         className="h-6 w-6 shrink-0"
@@ -906,7 +907,7 @@ const Nav = () => {
                     </a>
                     <a
                       href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
-                      className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                      className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
                         className="h-6 w-6 shrink-0"
@@ -933,7 +934,7 @@ const Nav = () => {
                     </a>
                     <a
                       href="https://docs.mango.markets/"
-                      className="text-base font-medium text-white transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                      className="text-base font-medium text-white transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <div className="flex flex-row">
                         <svg
@@ -961,7 +962,7 @@ const Nav = () => {
                     </a>
                     <a
                       href="https://dao-beta.mango.markets"
-                      className="-m-3 flex items-start rounded-lg p-3 transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                      className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
                         className="h-6 w-6 shrink-0"
@@ -993,7 +994,7 @@ const Nav = () => {
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                   <a
                     href="https://discord.gg/2uwjsBc5yw"
-                    className="text-base font-medium text-white transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                    className="text-base font-medium text-white transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                   >
                     <div className="flex flex-row">
                       <svg
@@ -1014,7 +1015,7 @@ const Nav = () => {
 
                   <a
                     href="https://twitter.com/mangomarkets"
-                    className="text-base font-medium text-white transition duration-100 ease-in-out hover:bg-mango-bkg-4"
+                    className="text-base font-medium text-white transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                   >
                     <div className="flex flex-row">
                       <svg

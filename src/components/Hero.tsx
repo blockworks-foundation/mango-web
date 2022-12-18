@@ -29,13 +29,13 @@ const Hero = () => {
                         <Linkie>Explore the docs</Linkie>
                       </a>
         </div>
-      <div>
+        <div>
         <img
-          className="z-0 hidden md:block absolute left-0 top-96 mt-40 w-full h-auto"
+          className="z-0 hidden md:block reletive left-0 top-96 mt-20 w-full h-auto"
           src={`/assets/images/hero_desktop.png`}          
           alt=""
           />
-      </div>
+        </div>
     </>
   );
 };

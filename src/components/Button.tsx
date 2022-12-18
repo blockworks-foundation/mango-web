@@ -64,7 +64,7 @@ const Button: FunctionComponent<ButtonProps> = ({
     >
       {children}
     </StyledButton>
-  )
-}
+  );
+};
 
 export default Button
