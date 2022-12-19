@@ -89,6 +89,7 @@ const closeMenu = () => {
                   <span className="sr-only">Mango</span>
                   <Logo />
                 </a>
+                
                 <div
                     className={`${
                       !logoMenuVisible && 'hidden'

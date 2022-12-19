@@ -29,7 +29,7 @@ const Linkie: FunctionComponent<LinkieProps> = ({
   return (
     
     <>
-      <div className="text-mango-fgd-3 hover:text-white duration-150">
+      <div className="text-white text-opacity-40 hover:text-opacity-100 duration-150">
         <StyledButton
           className={`${className} pr-5 flex z-10 px-8 py-2 relative rounded-full group`}
           {...props}
