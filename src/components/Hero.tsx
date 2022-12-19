@@ -19,7 +19,7 @@ const Hero = () => {
                         target="_blank"
                         href="https://trade.mango.markets"
                       >
-                        <Button>Check out 🥭</Button>
+                        <Button>Check out</Button>
                       </a>
                       <a
                         rel="noreferrer"
