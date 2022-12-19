@@ -6,47 +6,67 @@ import { useEffect, useState } from 'react';
 import Button from '@/components/Button';
 import GradientText from '@/components/GradientText';
 import Logo from '@/components/Logo';
+import StyleGuideMenu from './StyleGuideMenu';
 
 const Nav = () => {
 // const router = useRouter();
 
-  const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
-  const [productMenuVisible, setProductMenuVisible] = useState(false);
-  const [supportMenuVisible, setSupportMenuVisible] = useState(false);
-  const [communityMenuVisible, setCommunityMenuVisible] = useState(false);
+  
+const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
+const [productMenuVisible, setProductMenuVisible] = useState(false);
+const [supportMenuVisible, setSupportMenuVisible] = useState(false);
+const [communityMenuVisible, setCommunityMenuVisible] = useState(false);
+const [logoMenuVisible, setLogoMenuVisible] = useState(false);
 
-  const toggleMobileMenu = (e: any) => {
-    setMobileMenuVisible(!mobileMenuVisible);
-    e.stopPropagation();
-  };
 
-  const toggleProducts = (e: any) => {
-    setProductMenuVisible(!productMenuVisible);
-    setSupportMenuVisible(false);
-    setCommunityMenuVisible(false);
-    e.stopPropagation();
-  };
-  const toggleCommunity = (e: any) => {
-    setCommunityMenuVisible(!communityMenuVisible);
-    setSupportMenuVisible(false);
-    setProductMenuVisible(false);
-    e.stopPropagation();
-  };
+const toggleMobileMenu = (e: any) => {
+  setMobileMenuVisible(!mobileMenuVisible);
+  e.stopPropagation();
+};
 
-  const toggleSupport = (e: any) => {
-    setSupportMenuVisible(!supportMenuVisible);
-    setProductMenuVisible(false);
-    setCommunityMenuVisible(false);
+const toggleProducts = (e: any) => {
+  setProductMenuVisible(!productMenuVisible);
+  setSupportMenuVisible(false);
+  setCommunityMenuVisible(false);
+  setLogoMenuVisible(false);
 
-    e.stopPropagation();
-  };
+  e.stopPropagation();
+};
+const toggleCommunity = (e: any) => {
+  setCommunityMenuVisible(!communityMenuVisible);
+  setSupportMenuVisible(false);
+  setProductMenuVisible(false);
+  setLogoMenuVisible(false);
 
-  const closeMenu = () => {
-    setMobileMenuVisible(false);
-    setProductMenuVisible(false);
-    setSupportMenuVisible(false);
-    setCommunityMenuVisible(false);
-  };
+  e.stopPropagation();
+};
+
+const toggleSupport = (e: any) => {
+  setSupportMenuVisible(!supportMenuVisible);
+  setProductMenuVisible(false);
+  setCommunityMenuVisible(false);
+  setLogoMenuVisible(false);
+
+  e.stopPropagation();
+};
+
+const toggleLogo = (e: any) => {
+  setLogoMenuVisible(!logoMenuVisible);
+  setProductMenuVisible(false);
+  setCommunityMenuVisible(false);
+  setSupportMenuVisible(false);
+
+  e.stopPropagation();
+};
+
+const closeMenu = () => {
+  setMobileMenuVisible(false);
+  setProductMenuVisible(false);
+  setSupportMenuVisible(false);
+  setCommunityMenuVisible(false);
+  setLogoMenuVisible(false);
+
+};
 
   const doNothing = (e: any) => {
     e.stopPropagation();
@@ -58,16 +78,24 @@ const Nav = () => {
   });
   return (
     <>
-      <div className="z-20">
+      <div className="h-2 w-screen fixed bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div>
+      <div className="z-20 w-screen fixed bg-mango-bkg-1 backdrop-blur-xl bg-opacity-50 mt-2">
         {/* Main Menu */}
         <div className="xs:px-6 xs:py-1 bg-transparent lg:px-10 lg:py-8">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
-                <a href="https://mango.markets">
+                <a onClick={toggleLogo} href="#">
                   <span className="sr-only">Mango</span>
                   <Logo />
                 </a>
+                <div
+                    className={`${
+                      !logoMenuVisible && 'hidden'
+                    } reletive z-50 mt-20 max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
+                  >
+                  <StyleGuideMenu />
+                  </div>
               </div>
               <div className="-my-2 -mr-2 md:hidden">
                 <button
@@ -97,13 +125,13 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-50 transition duration-150 ease-in-out hover:bg-mango-bkg-2 hover:opacity-100 focus:opacity-100 focus:bg-mango-bkg-2 active:bg-mango-bkg-3 focus:outline-none "
+                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleProducts}
                   >
                     <span>Explore</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow"
+                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -115,6 +143,7 @@ const Nav = () => {
                         clipRule="evenodd"
                       />
                     </svg>
+
                   </button>
 
                   <div
@@ -334,13 +363,13 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-50 transition duration-150 ease-in-out hover:bg-mango-bkg-2  hover:opacity-100 focus:opacity-100 focus:outline-none focus:bg-mango-bkg-2 active:bg-mango-bkg-3"
+                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleCommunity}
                   >
                     <span>Community</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow"
+                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -581,13 +610,13 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-50 transition duration-150 ease-in-out hover:bg-mango-bkg-2  hover:opacity-100 focus:opacity-100 focus:outline-none focus:bg-mango-bkg-2 active:bg-mango-bkg-3"
+                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleSupport}
                   >
                     <span>Support</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow"
+                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
