@@ -6,7 +6,7 @@ import Linkie from '@/components/Linkie';
 const Hero = () => {
   return (
     <>
-      <div className="mt-20 mb-8 z-10">
+      <div className="mt-72 mb-8 z-10">
         <p className="font-display xs:text-3xl mb-3 text-center font-bold text-white sm:text-4xl md:text-4xl lg:text-5xl">
           Every market, all the power.
           <br />
