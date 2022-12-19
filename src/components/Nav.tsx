@@ -122,15 +122,15 @@ const Nav = () => {
                       !productMenuVisible && 'hidden'
                     } absolute z-50 -ml-4 mt-3 w-screen max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
                   >
-                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-mango-bkg-3 shadow-lg">
-                      <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
+                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-white border-opacity-10 shadow-lg">
+                      <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-50">
+                        <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40"> 
                           Products
                         </h3>
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://trade.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -162,7 +162,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://trade.mango.markets/perp/BTC"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                           
                             <svg className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -194,7 +194,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://trade.mango.markets/borrow"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg 
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -231,7 +231,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -263,7 +263,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -300,7 +300,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://initialcapoffering.com/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -358,15 +358,15 @@ const Nav = () => {
                       !communityMenuVisible && 'hidden'
                     } absolute z-50 -ml-4 mt-3 w-screen max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
                   >
-                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-mango-bkg-3 shadow-lg">
-                      <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-white border-opacity-10 shadow-lg">
+                      <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-50">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
                           Developers
                         </h3>
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://docs.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                               <svg
                                 className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -400,7 +400,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://trade.mango.markets/stats"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg 
                                 className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -473,7 +473,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://dao-beta.mango.markets"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg className="h-5 w-5 shrink-0 stroke-current mt-1"
                               xmlns="http://www.w3.org/2000/svg"
@@ -503,7 +503,7 @@ const Nav = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://forum.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg 
                                 className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -535,7 +535,7 @@ const Nav = () => {
                           <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://token.mango.markets"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -606,21 +606,21 @@ const Nav = () => {
                       !supportMenuVisible && 'hidden'
                     } absolute left-1/2 z-50 mt-3 w-screen max-w-md -translate-x-1/2 px-2 sm:px-0`}
                   >
-                    <div className="overflow-hidden rounded-lg border border-mango-bkg-3 shadow-lg">
-                      <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                    <div className="overflow-hidden rounded-lg border border-white border-opacity-10 shadow-lg">
+                      <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-50">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
                           Social
                         </h3>
-                        <button className="text-left hover:fill-mango-yellow group">
+                        <button className="text-left group">
                           <a
                             href="https://discord.gg/2uwjsBc5yw"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             {/* Heroicon name: outline/support */}
                             <svg
-                              className="fill-mango-fgd-5"
-                              width="35"
-                              height="35"
+                              className="fill-mango-fgd-5 group-hover:fill-mango-yellow"
+                              width="30"
+                              height="30"
                               viewBox="0 0 28 28"
                               fill="currentColor"
                               xmlns="http://www.w3.org/2000/svg"
@@ -641,20 +641,21 @@ const Nav = () => {
                             </div>
                           </a>
                         </button>
+                        <button className="text-left group">
                         <a
                           href="https://twitter.com/mangomarkets"
-                          className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                          className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                         >
                           <svg
-                            width="25"
-                            height="25"
+                            className="fill-mango-fgd-5 group-hover:fill-mango-yellow mt-1"
+                            width="20"
+                            height="20"
                             viewBox="0 0 28 28"
-                            fill="none"
+                            fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
                               d="M8.78874 23C5.55374 23 2.53817 22.0591 0 20.4356C2.15499 20.5751 5.95807 20.2411 8.32358 17.9848C4.76508 17.8215 3.16026 15.0923 2.95094 13.926C3.25329 14.0426 4.6953 14.1826 5.50934 13.856C1.4159 12.8296 0.787928 9.23732 0.927477 8.14097C1.695 8.67749 2.99745 8.8641 3.50913 8.81744C-0.305207 6.08823 1.06703 1.98276 1.74151 1.09635C4.47882 4.88867 8.5812 7.01857 13.6564 7.13704C13.5607 6.71736 13.5102 6.28042 13.5102 5.83164C13.5102 2.61092 16.1134 0 19.3247 0C21.0025 0 22.5144 0.712754 23.5757 1.85284C24.6969 1.59011 26.3843 0.975068 27.2092 0.443205C26.7934 1.93611 25.4989 3.18149 24.7159 3.64308C24.7224 3.65878 24.7095 3.62731 24.7159 3.64308C25.4037 3.53904 27.2648 3.18137 28 2.68256C27.6364 3.52125 26.264 4.91573 25.1377 5.69642C25.3473 14.9381 18.2765 23 8.78874 23Z"
-                              fill="#4F4C67"
                             />
                           </svg>
                           <div className="ml-4 group">
@@ -667,6 +668,7 @@ const Nav = () => {
                             </p>
                           </div>
                         </a>
+                        </button>
                       </div>
                       <div className="-mt-1 bg-mango-bkg-4 p-5 sm:p-8">
                         <div>
@@ -997,7 +999,7 @@ const Nav = () => {
                       >
                         <path
                           d="M23.7187 1.67497C21.9061 0.89249 19.9681 0.323786 17.9421 0C17.6932 0.41511 17.4025 0.973432 17.2021 1.4176C15.0482 1.11872 12.9142 1.11872 10.8 1.4176C10.5996 0.973432 10.3023 0.41511 10.0513 0C8.02293 0.323786 6.08271 0.894565 4.27023 1.67912C0.614418 6.77668 -0.376613 11.7477 0.118903 16.648C2.54363 18.3188 4.89347 19.3337 7.20367 19.9979C7.77407 19.2736 8.2828 18.5036 8.72106 17.692C7.88639 17.3993 7.08696 17.0382 6.33156 16.6189C6.53197 16.482 6.72798 16.3387 6.91738 16.1914C11.5246 18.1797 16.5304 18.1797 21.0826 16.1914C21.2741 16.3387 21.4701 16.482 21.6683 16.6189C20.9107 17.0402 20.1091 17.4014 19.2744 17.6941C19.7127 18.5036 20.2192 19.2757 20.7918 20C23.1042 19.3358 25.4563 18.3209 27.881 16.648C28.4624 10.9672 26.8878 6.04193 23.7187 1.67497ZM9.34871 13.6343C7.96567 13.6343 6.83149 12.4429 6.83149 10.9922C6.83149 9.54132 7.94144 8.34791 9.34871 8.34791C10.756 8.34791 11.8901 9.53924 11.8659 10.9922C11.8682 12.4429 10.756 13.6343 9.34871 13.6343ZM18.6512 13.6343C17.2682 13.6343 16.1339 12.4429 16.1339 10.9922C16.1339 9.54132 17.2439 8.34791 18.6512 8.34791C20.0584 8.34791 21.1926 9.53924 21.1684 10.9922C21.1684 12.4429 20.0584 13.6343 18.6512 13.6343Z"
-                          fill="#4F4C67"
+                          
                         />
                       </svg>
                       <p className="mx-4 -mt-1">Discord</p>

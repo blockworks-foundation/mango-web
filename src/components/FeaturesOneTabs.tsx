@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 function FeaturesOneTabs() {
   return (
     <Tab.Group vertical>
-      <Tab.List className={"text-white bg-slate-500 flex flex-col"}>
+      <Tab.List className={"text-white bg-white bg-opacity-5 flex flex-col w-auto"}>
         <Tab className={"hover:bg-slate-700 focus:bg-mango-yellow "}>
           <p>Maximum capital efficiency</p>
           <p>Utilize all your assets as collateral to trade any other asset with up to 5x leverage. </p>
@@ -47,6 +47,7 @@ function FeaturesOneTabs() {
         </Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
+    
   )
 }
 
