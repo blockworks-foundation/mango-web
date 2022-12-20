@@ -9,12 +9,12 @@ const ProductTwo = () => {
   return (
     <>
       <div className="mt-72 mb-8 z-10 max-w-7xl m-auto">
-        <p className="font-display xs:text-3xl mb-3 text-left font-bold text-white sm:text-4xl md:text-4xl lg:text-5xl">
+        <p className="z-20 font-display xs:text-3xl mb-3 text-left font-bold text-white sm:text-4xl md:text-4xl lg:text-5xl">
           Pay, send, receive globally.
           <br />
           <GradientText>The simple way to pay. </GradientText>
         </p>
-        <div className="mt-4 flex flex-row justify-left">
+        <div className="z-20 mt-4 flex flex-row justify-left">
                       
                       <button className="mr-4 hover:opacity-50 transition duration-75 ease-in transform translate-y-3">
                         <a
@@ -152,10 +152,8 @@ const ProductTwo = () => {
               
 
         </div>
-
-      </div>
-        <div className="flex flex-col">
-          <div className="z-0 transform translate-x-96 -translate-y-96">
+        <div className="z-0 reletive transform translate-x-1/4 -translate-y-3/4">
+          <div className="">
             <img
               className="w-auto h-auto"
               src={`/assets/images/product_iphone.png`}          
@@ -163,6 +161,9 @@ const ProductTwo = () => {
               />
           </div>
         </div>
+
+      </div>
+        
         
 
     </>
