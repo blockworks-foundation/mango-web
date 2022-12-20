@@ -101,7 +101,7 @@ const closeMenu = () => {
               <div className="-my-2 -mr-2 md:hidden">
                 <button
                   type="button"
-                  className=" inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-150 ease-in-out hover:bg-gray-150 hover:text-white opacity-50 focus:outline-none"
+                  className=" inline-flex items-center justify-center rounded-xl p-2 text-gray-400 transition duration-150 ease-in-out hover:bg-gray-150 hover:text-white opacity-50 focus:outline-none"
                   onClick={toggleMobileMenu}
                 >
                   <span className="sr-only">Open menu</span>
@@ -126,7 +126,7 @@ const closeMenu = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
+                    className="group inline-flex items-center rounded-xl p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleProducts}
                   >
                     <span>Explore</span>
@@ -152,7 +152,7 @@ const closeMenu = () => {
                       !productMenuVisible && 'hidden'
                     } absolute z-50 -ml-4 mt-3 w-screen max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
                   >
-                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-white border-opacity-10 shadow-lg">
+                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
                       <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-50">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40"> 
                           Products
@@ -160,7 +160,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://trade.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -192,7 +192,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://trade.mango.markets/perp/BTC"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                           
                             <svg className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -224,7 +224,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://trade.mango.markets/borrow"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg 
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -261,7 +261,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -293,7 +293,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -330,7 +330,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://initialcapoffering.com/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -388,7 +388,7 @@ const closeMenu = () => {
                       !communityMenuVisible && 'hidden'
                     } absolute z-50 -ml-4 mt-3 w-screen max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
                   >
-                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-lg border border-white border-opacity-10 shadow-lg">
+                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
                       <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-50">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
                           Developers
@@ -396,7 +396,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://docs.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                               <svg
                                 className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -430,7 +430,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://trade.mango.markets/stats"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg 
                                 className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -459,11 +459,12 @@ const closeMenu = () => {
                             </div>
                           </a>
                         </button>
+
                         <button className="opacity-0 text-left hover:text-mango-yellow text-mango-fgd-5 group">
                         <a
                           href="#"
                           onClick={doNothing}
-                          className="-m-3 flex items-start rounded-lg p-3 opacity-50"
+                          className="-m-3 flex items-start rounded-xl p-3 opacity-50"
                         >
                           <svg
                             className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -493,6 +494,7 @@ const closeMenu = () => {
                           </div>
                         </a>
                       </button>
+                      
                       </div>
 
                       <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
@@ -503,7 +505,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://dao-beta.mango.markets"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg className="h-5 w-5 shrink-0 stroke-current mt-1"
                               xmlns="http://www.w3.org/2000/svg"
@@ -533,7 +535,7 @@ const closeMenu = () => {
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://forum.mango.markets/"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg 
                                 className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -565,7 +567,7 @@ const closeMenu = () => {
                           <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
                           <a
                             href="https://token.mango.markets"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
                               className="h-5 w-5 shrink-0 stroke-current mt-1"
@@ -636,7 +638,7 @@ const closeMenu = () => {
                       !supportMenuVisible && 'hidden'
                     } absolute left-1/2 z-50 mt-3 w-screen max-w-md -translate-x-1/2 px-2 sm:px-0`}
                   >
-                    <div className="overflow-hidden rounded-lg border border-white border-opacity-10 shadow-lg">
+                    <div className="overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
                       <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-50">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
                           Social
@@ -644,7 +646,7 @@ const closeMenu = () => {
                         <button className="text-left group">
                           <a
                             href="https://discord.gg/2uwjsBc5yw"
-                            className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             {/* Heroicon name: outline/support */}
                             <svg
@@ -674,7 +676,7 @@ const closeMenu = () => {
                         <button className="text-left group">
                         <a
                           href="https://twitter.com/mangomarkets"
-                          className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
+                          className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                         >
                           <svg
                             className="fill-mango-fgd-5 group-hover:fill-mango-yellow mt-1"
@@ -728,17 +730,18 @@ const closeMenu = () => {
                         <div className="mt-5 text-sm group">
                           <a
                             href="https://docs.mango.markets/margin-trading/overview"
-                            className="text-mango-yellow bg-clip-text font-bold text-transparent transition duration-150 ease-in-out hover:bg-yellow-300"
+                            className="text-mango-yellow font-bold transition duration-150 ease-in-out hover:text-yellow-300"
                           >
                             {' '}
                             Learn more about Mango protocol{' '}
-                            <span className="text-mango-bkg-4 transition duration-150 ease-in group-hover:text-mango-yellow" aria-hidden="true">&rarr;</span>
+                            <span className="text-mango-bkg-4 transition duration-150 ease-in group-hover:text-yellow-300" aria-hidden="true">&rarr;</span>
                           </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                
                 {/* 
               <a
                 href="https://dao.mango.markets"
@@ -790,7 +793,7 @@ const closeMenu = () => {
               !mobileMenuVisible && 'hidden'
             } absolute inset-x-0 top-1 z-50 origin-top-right px-4 py-2 transition`}
           >
-            <div className="rounded-lg bg-mango-bkg-3 shadow-lg">
+            <div className="rounded-xl bg-mango-bkg-3 shadow-lg">
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -930,7 +933,7 @@ const closeMenu = () => {
                     </a>
                     <a
                       href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
-                      className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                      className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
                         className="h-6 w-6 shrink-0"
@@ -985,7 +988,7 @@ const closeMenu = () => {
                     </a>
                     <a
                       href="https://dao-beta.mango.markets"
-                      className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
+                      className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
                         className="h-6 w-6 shrink-0"

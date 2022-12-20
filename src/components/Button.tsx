@@ -56,7 +56,7 @@ const Button: FunctionComponent<ButtonProps> = ({
 }) => {
   return (
     <StyledButton
-      className={`${className} relative z-10 px-6 py-2 rounded-full text-white font-display  ${
+      className={`${className} relative z-10 px-6 py-2 rounded-xl text-white font-display hover:shadow-lg hover:-translate-y-1 transition duration-150 ease-in-out ${
         gray ? 'bg-mango-bkg-4' : idleGradient
       }`}
       gray={gray}

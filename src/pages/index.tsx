@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import Nav from '@/components/Nav';
 import FeaturesOne from '@/components/FeaturesOne'
+import FeaturesTwo from '@/components/FeaturesTwo';
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
       <Nav />
       <Hero />
       <FeaturesOne />
+      <FeaturesTwo />
     </div>
   );
 };
