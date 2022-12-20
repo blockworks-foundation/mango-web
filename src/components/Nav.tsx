@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import Button from '@/components/Button';
 import GradientText from '@/components/GradientText';
 import Logo from '@/components/Logo';
-import StyleGuideMenu from './StyleGuideMenu';
+import StyleGuideMenu from '@/components/StyleGuideMenu';
+import MangoPill from './MangoPill';
 
 const Nav = () => {
 // const router = useRouter();
@@ -190,11 +191,12 @@ const closeMenu = () => {
                         </button>
 
                         <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                          <div className="z-30 relative left-16 transform translate-y-6 translate-x-11 opacity-0 group-hover:opacity-100"><MangoPill>NEW</MangoPill></div>
+
                           <a
                             href="https://trade.mango.markets/perp/BTC"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
-                          
                             <svg className="h-5 w-5 shrink-0 stroke-current mt-1"
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -525,8 +527,8 @@ const closeMenu = () => {
                                 Mango DAO<span className="text-white opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2" aria-hidden="true">&rarr;</span>
                               </p>
                               <p className="mt-1 text-sm text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Mango is building a decentralized financial ecosystem, have
-                                a stake in our publick governance.
+                                Mango DAO is building a distributed way to organize like minded builders, have
+                                a stake in the protocol.
                               </p>
                             </div>
                           </a>

@@ -34,8 +34,8 @@ const featureThree = [
 function FeaturesOneTabs() {
   return (
     <>
-    <Tab.Group vertical>
-      <Tab.List className={"text-white flex flex-col w-450"}>
+    <Tab.Group manual>
+      <Tab.List className={"text-white grid grid-cols-3 gap-8 max-w-7xl m-auto"}>
           <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4"}>
         
           <dl className="">
