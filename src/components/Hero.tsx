@@ -2,6 +2,7 @@
 import GradientText from '@/components/GradientText';
 import Button from '@/components/Button';
 import Linkie from '@/components/Linkie';
+import MangoBlob from '@/components/MangoBlob';
 
 const Hero = () => {
   return (
@@ -29,13 +30,20 @@ const Hero = () => {
                         <Linkie>Explore the docs</Linkie>
                       </a>
         </div>
-        <div>
-        <img
-          className="z-0 hidden md:block reletive left-0 top-96 mt-20 w-full h-auto"
-          src={`/assets/images/hero_desktop.png`}          
-          alt=""
-          />
+        <div className="flex flex-col">
+          <div className="z-50 hidden md:block reletive left-0 top-96 mt-20 ">
+            <img
+              className="w-full h-auto"
+              src={`/assets/images/hero_desktop.png`}          
+              alt="desktop"
+              />
+          </div>
+          <div className="">
+            <MangoBlob />
+          </div> 
+
         </div>
+
     </>
   );
 };
