@@ -35,7 +35,8 @@ const Hero = () => {
                         >
                         Explore the docs
                         </a>
-                      </Linkie>
+                
+                    </Linkie>
 
         </div>
         <div className="flex flex-col">

@@ -3,7 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import tw from 'twin.macro';
 
-const StyledButton = styled.a`
+const StyledButton = styled.button`
   font-weight: 700;
   cursor: pointer;
 
