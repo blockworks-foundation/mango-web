@@ -158,7 +158,7 @@ const closeMenu = () => {
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40"> 
                           Products
                         </h3>
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20 group">
                           <a
                             href="https://trade.mango.markets/"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -190,7 +190,7 @@ const closeMenu = () => {
                           </a>
                         </button>
 
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <div className="z-30 relative left-16 transform translate-y-6 translate-x-11 opacity-0 group-hover:opacity-100"><MangoPill>NEW</MangoPill></div>
 
                           <a
@@ -223,7 +223,7 @@ const closeMenu = () => {
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
                           Defi
                         </h3>
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://trade.mango.markets/borrow"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -260,7 +260,7 @@ const closeMenu = () => {
                           Infrastructure
                         </h3>
 
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -292,7 +292,7 @@ const closeMenu = () => {
                           </a>
                         </button>
 
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -329,7 +329,7 @@ const closeMenu = () => {
                           MERCH
                         </h3>
 
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://initialcapoffering.com/"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -395,7 +395,7 @@ const closeMenu = () => {
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
                           Developers
                         </h3>
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://docs.mango.markets/"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -429,7 +429,7 @@ const closeMenu = () => {
                         <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
                           Stats
                         </h3>
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://trade.mango.markets/stats"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -462,7 +462,7 @@ const closeMenu = () => {
                           </a>
                         </button>
 
-                        <button className="opacity-0 text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="opacity-0 text-left hover:text-mango-yellow text-white text-opacity-20  group">
                         <a
                           href="#"
                           onClick={doNothing}
@@ -504,7 +504,7 @@ const closeMenu = () => {
                           Governance
                         </h3>
 
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://dao-beta.mango.markets"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -534,7 +534,7 @@ const closeMenu = () => {
                           </a>
                         </button>
 
-                        <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://forum.mango.markets/"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -566,7 +566,7 @@ const closeMenu = () => {
                           </a>
                         </button>
 
-                          <button className="text-left hover:text-mango-yellow text-mango-fgd-5 group">
+                          <button className="text-left hover:text-mango-yellow text-white text-opacity-20  group">
                           <a
                             href="https://token.mango.markets"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -652,7 +652,7 @@ const closeMenu = () => {
                           >
                             {/* Heroicon name: outline/support */}
                             <svg
-                              className="fill-mango-fgd-5 group-hover:fill-mango-yellow"
+                              className="fill-white opacity-20 group-hover:opacity-100 group-hover:fill-mango-yellow"
                               width="30"
                               height="30"
                               viewBox="0 0 28 28"
@@ -681,7 +681,7 @@ const closeMenu = () => {
                           className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                         >
                           <svg
-                            className="fill-mango-fgd-5 group-hover:fill-mango-yellow mt-1"
+                            className="fill-white opacity-20 group-hover:opacity-100 group-hover:fill-mango-yellow mt-1"
                             width="20"
                             height="20"
                             viewBox="0 0 28 28"
