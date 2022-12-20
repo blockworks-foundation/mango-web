@@ -36,9 +36,9 @@ function FeaturesOneTabs() {
     <>
     <Tab.Group vertical>
       <Tab.List className={"text-white flex flex-col w-450"}>
-          <Tab className={"bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4"}>
         
-          <dl className="group">
+          <dl className="">
             {featureOne.map((featureOne) => (
               <div className="text-left" key={featureOne.name}>
                 <dt>
@@ -55,7 +55,7 @@ function FeaturesOneTabs() {
                   <span className="text-mango-yellow opacity-0 transition duration-150 ease-in group-hover:opacity-100 ml-2" aria-hidden="true">&rarr;</span>
                   </p>
                 </dt>
-                <dd className="mt-2 text-base text-white opacity-50">
+                <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
                   {featureOne.description}
                 </dd>
               </div>
@@ -63,9 +63,9 @@ function FeaturesOneTabs() {
           </dl>
 
           </Tab>
-          <Tab className={"bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4"}>
         
-          <dl className="group">
+          <dl className="">
             {featureTwo.map((featureTwo) => (
               <div className="text-left" key={featureTwo.name}>
                 <dt>
@@ -82,7 +82,7 @@ function FeaturesOneTabs() {
                   <span className="text-mango-yellow opacity-0 transition duration-150 ease-in group-hover:opacity-100 ml-2" aria-hidden="true">&rarr;</span>
                   </p>
                 </dt>
-                <dd className="mt-2 text-base text-white opacity-50">
+                <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
                   {featureTwo.description}
                 </dd>
               </div>
@@ -90,9 +90,9 @@ function FeaturesOneTabs() {
           </dl>
 
           </Tab>
-          <Tab className={"bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4"}>
 
-          <dl className="group">
+          <dl className="">
             {featureThree.map((featureThree) => (
               <div className="text-left" key={featureThree.name}>
                 <dt>
@@ -109,7 +109,7 @@ function FeaturesOneTabs() {
                   <span className="text-mango-yellow opacity-0 transition duration-150 ease-in group-hover:opacity-100 ml-2" aria-hidden="true">&rarr;</span>
                   </p>
                 </dt>
-                <dd className="mt-2 text-base text-white opacity-50">
+                <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
                   {featureThree.description}
                 </dd>
               </div>

@@ -31,7 +31,7 @@ const Hero = () => {
                       </a>
         </div>
         <div className="flex flex-col">
-          <div className="z-50 hidden md:block reletive left-0 top-96 mt-20 ">
+          <div className="z-10 hidden md:block reletive left-0 top-96 mt-20 ">
             <img
               className="w-full h-auto"
               src={`/assets/images/hero_desktop.png`}          
