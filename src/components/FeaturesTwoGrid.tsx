@@ -1,5 +1,4 @@
 // import { Tab } from '@headlessui/react'
-import Linkie from "./Linkie";
 
 //import {
 //  ReceiptTaxIcon,
@@ -15,7 +14,7 @@ function FeaturesTwoGrid() {
        <section className="max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-3 gap-6 mb-6">
           <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
-            <div className="z-10 bg-th-fgd-4 border border-bkg-3 bg-product-one bg-cover bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+            <div className="z-10 bg-mango-bkg-2 border border-mango-bkg-3 bg-product-one bg-cover bg-no-repeat h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
@@ -30,7 +29,7 @@ function FeaturesTwoGrid() {
             </div>
           </div>
           <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
-            <div className="z-50 bg-th-fgd-4 border border-bkg-3 bg-product-two bg-cover bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+            <div className="z-50 bg-mango-bkg-2 border border-mango-bkg-3 bg-product-two bg-cover bg-no-repeat h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
@@ -47,7 +46,7 @@ function FeaturesTwoGrid() {
 
         <div className="grid grid-cols-3 gap-6">
           <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
-            <div className="z-10 bg-th-fgd-4 border border-bkg-3 bg-product-three bg-cover bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+            <div className="z-10 bg-mango-bkg-2 border border-mango-bkg-3 bg-product-three bg-cover bg-no-repeat h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
@@ -62,7 +61,7 @@ function FeaturesTwoGrid() {
             </div>
           </div>
           <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
-            <div className="z-10 bg-th-fgd-4 border border-bkg-3 bg-product-four bg-cover bg-no-repeat h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+            <div className="z-10 bg-mango-bkg-2 border border-mango-bkg-3 bg-product-four bg-cover bg-no-repeat h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
@@ -74,13 +73,6 @@ function FeaturesTwoGrid() {
                     interface, built by traders for traders.
                   </p>
                   <br />
-                  <a
-                    rel="noreferrer"
-                    target="_blank"
-                    href="https://github.com/blockworks-foundation/mango-ui-v3"
-                  >
-                    <Linkie>Run it yourself locally</Linkie>
-                  </a>
                 </div>
               </div>
             </div>
