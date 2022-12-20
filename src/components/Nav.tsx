@@ -768,13 +768,16 @@ const closeMenu = () => {
               </nav>
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                 <div>
-                  <a
-                    rel="noreferrer"
-                    target="_blank"
-                    href="https://trade.mango.markets"
-                  >
-                   <Button>Check out 🥭</Button>
-                  </a>
+
+                   <Button>
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://trade.mango.markets"
+                      >
+                      Check out 🥭
+                    </a>
+                  </Button>
 
                 </div>
                 {/* 

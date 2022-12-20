@@ -14,20 +14,25 @@ const FeaturesTwo = () => {
           <GradientText>Paint your own trades.</GradientText>
         </p>
         <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
-                      <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://trade.mango.markets"
-                      >
-                        <Button>Check out 🥭</Button>
-                      </a>
-                      <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://docs.mango.markets/"
-                      >
-                        <Linkie>Explore the docs</Linkie>
-                      </a>
+                        <Button>
+                          <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://trade.mango.markets"
+                          >
+                            Check out 🥭
+                          </a>
+                        </Button>
+
+                        <Linkie>
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://docs.mango.markets/"
+                          >
+                            Explore the docs
+                          </a>
+                        </Linkie>
         </div>
       </div>
       <div className="mt-42 p-10 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">

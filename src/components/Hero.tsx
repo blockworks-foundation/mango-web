@@ -15,20 +15,28 @@ const Hero = () => {
         </p>
       </div>
         <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
-                      <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://trade.mango.markets"
-                      >
-                        <Button>Check out 🥭</Button>
-                      </a>
-                      <a
+                      
+                      <Button>
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://trade.mango.markets"
+                        >
+                          Check out 🥭
+                        </a>
+                      </Button>
+                      
+
+                      <Linkie>
+                        <a
                         rel="noreferrer"
                         target="_blank"
                         href="https://docs.mango.markets/"
-                      >
-                        <Linkie>Explore the docs</Linkie>
-                      </a>
+                        >
+                        Explore the docs
+                        </a>
+                      </Linkie>
+
         </div>
         <div className="flex flex-col">
           <div className="z-10 hidden md:block reletive left-0 top-96 mt-20 ">
