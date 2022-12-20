@@ -6,7 +6,38 @@
 //  CurrencyDollarIcon,
 // } from '@heroicons/react/outline'
 
-
+const gridItemOne = [
+  {
+    name: 'Maximum capital efficiency.',
+    description:
+      "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+    //icon: CurrencyDollarIcon,
+  },
+]
+const gridItemTwo = [
+  {
+    name: 'LOL.',
+    description:
+      "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+    //icon: CurrencyDollarIcon,
+  },
+]
+const gridItemThree = [
+  {
+    name: 'Nice.',
+    description:
+      "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+    //icon: CurrencyDollarIcon,
+  },
+]
+const gridItemFour = [
+  {
+    name: 'Maximum capital efficiency.',
+    description:
+      "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+    //icon: CurrencyDollarIcon,
+  },
+]
 
 function FeaturesTwoGrid() {
   return (
@@ -17,13 +48,30 @@ function FeaturesTwoGrid() {
             <div className="z-10 bg-mango-bkg-2 border border-mango-bkg-3 bg-product-one bg-cover bg-no-repeat h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
-                  <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
-                    You are in control.
-                  </h2>
-                  <p className="text-white text-opacity-50 text-lg">
-                    You have self-custody of your assets; no more centralized
-                    counter-party risk.
-                  </p>
+
+                  <dl className="">
+                      {gridItemOne.map((gridItemOne) => (
+                        <div className="text-left" key={gridItemOne.name}>
+                          <dt>
+                            {/* 
+                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-bkg-3 text-mango-yellow">
+                              <feature.icon
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
+                            </div>
+                            */}
+                            <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
+                            {gridItemOne.name}
+                            </h2>
+                          </dt>
+                          <dd className="text-white text-opacity-50 text-lg">
+                            {gridItemOne.description}
+                            </dd>
+                        </div>
+                      ))}
+                    </dl>
+
                 </div>
               </div>
             </div>
@@ -32,12 +80,30 @@ function FeaturesTwoGrid() {
             <div className="z-50 bg-mango-bkg-2 border border-mango-bkg-3 bg-product-two bg-cover bg-no-repeat h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
-                  <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
-                    Fully customize your experience.
-                  </h2>
-                  <p className="text-white text-opacity-50 text-lg">
-                    Complete control over layout, theme, and your trading view.
-                  </p>
+                  
+                <dl className="">
+                      {gridItemTwo.map((gridItemTwo) => (
+                        <div className="text-left" key={gridItemTwo.name}>
+                          <dt>
+                            {/* 
+                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-bkg-3 text-mango-yellow">
+                              <feature.icon
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
+                            </div>
+                            */}
+                            <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
+                            {gridItemTwo.name}
+                            </h2>
+                          </dt>
+                          <dd className="text-white text-opacity-50 text-lg">
+                            {gridItemTwo.description}
+                            </dd>
+                        </div>
+                      ))}
+                    </dl>
+
                 </div>
               </div>
             </div>
@@ -49,13 +115,30 @@ function FeaturesTwoGrid() {
             <div className="z-10 bg-mango-bkg-2 border border-mango-bkg-3 bg-product-three bg-cover bg-no-repeat h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
-                  <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
-                    Trade management simplified.
-                  </h2>
-                  <p className="text-white text-opacity-50 text-lg">
-                    Track your futures positions, liabilities, create
-                    sub-accounts and track progress overtime.
-                  </p>
+                  
+                <dl className="">
+                      {gridItemThree.map((gridItemThree) => (
+                        <div className="text-left" key={gridItemThree.name}>
+                          <dt>
+                            {/* 
+                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-bkg-3 text-mango-yellow">
+                              <feature.icon
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
+                            </div>
+                            */}
+                            <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
+                            {gridItemThree.name}
+                            </h2>
+                          </dt>
+                          <dd className="text-white text-opacity-50 text-lg">
+                            {gridItemThree.description}
+                            </dd>
+                        </div>
+                      ))}
+                    </dl>
+
                 </div>
               </div>
             </div>
@@ -64,15 +147,30 @@ function FeaturesTwoGrid() {
             <div className="z-10 bg-mango-bkg-2 border border-mango-bkg-3 bg-product-four bg-cover bg-no-repeat h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
-                  <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
-                    Organically grown, fully opensource.
-                  </h2>
-                  <p className="text-white text-opacity-50 text-lg">
-                    Mango markets are grown organically with no pesticides,
-                    trade and manage your assets with the best in class user
-                    interface, built by traders for traders.
-                  </p>
-                  <br />
+                  
+                <dl className="">
+                      {gridItemFour.map((gridItemFour) => (
+                        <div className="text-left" key={gridItemFour.name}>
+                          <dt>
+                            {/* 
+                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-bkg-3 text-mango-yellow">
+                              <feature.icon
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
+                            </div>
+                            */}
+                            <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
+                            {gridItemFour.name}
+                            </h2>
+                          </dt>
+                          <dd className="text-white text-opacity-50 text-lg">
+                            {gridItemFour.description}
+                            </dd>
+                        </div>
+                      ))}
+                    </dl>
+
                 </div>
               </div>
             </div>
