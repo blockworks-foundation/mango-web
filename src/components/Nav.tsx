@@ -136,15 +136,15 @@ const closeMenu = () => {
                           viewBox="0 0 24 24"
                           fill="currentColor"
                           aria-hidden="true">
-                          
-                      <path 
-                        d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+                     <path 
+                          d="M11.6096 0.733894L8.58716 8.64865L0.737179 11.8111C0.480655 11.9145 0.488718 12.2804 0.749546 12.3723L8.58716 15.1351L11.6088 23.2454C11.7058 23.5058 12.074 23.5058 12.171 23.2454L15.1927 15.1351L23.2291 12.373C23.493 12.2824 23.501 11.9121 23.2413 11.8101L15.1927 8.64865L12.1702 0.733893C12.0719 0.476594 11.7079 0.476595 11.6096 0.733894Z" 
+                          />
                       </svg>
 
                     <span>Explore</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow group-focus:rotate-180"
+                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -397,7 +397,7 @@ const closeMenu = () => {
                     <span>Community</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow group-focus:rotate-180"
+                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -658,7 +658,7 @@ const closeMenu = () => {
                     <span>Support</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-mango-yellow group-focus:text-mango-yellow group-focus:rotate-180"
+                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
