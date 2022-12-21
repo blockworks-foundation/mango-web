@@ -7,7 +7,7 @@ import Button from '@/components/Button';
 import GradientText from '@/components/GradientText';
 import Logo from '@/components/Logo';
 import StyleGuideMenu from '@/components/StyleGuideMenu';
-import MangoPill from './MangoPill';
+import MangoPill from '@/components/MangoPill';
 
 const Nav = () => {
 // const router = useRouter();

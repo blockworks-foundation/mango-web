@@ -1,6 +1,6 @@
 
 import GradientText from '@/components/GradientText';
-import MangoPill from './MangoPill';
+import MangoPill from '@/components/MangoPill';
 // import Button from '@/components/Button';
 // import Linkie from '@/components/Linkie';
 // import MangoBlob from '@/components/MangoBlob';

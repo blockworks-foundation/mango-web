@@ -2,7 +2,7 @@
 import GradientText from '@/components/GradientText';
 import Button from '@/components/Button';
 import Linkie from '@/components/Linkie';
-import FeaturesOneTabs from './FeaturesOneTabs';
+import FeaturesOneTabs from '@/components/FeaturesOneTabs';
 
 const FeaturesOne = () => {
   return (

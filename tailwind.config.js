@@ -20,6 +20,10 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      backgroundImage: (_) => ({
+        'bg-texture': "url('/assets/images/bg_texture.png')",
+        'bg-cta': "url('/assets/images/bgcta.jpeg')",
+      }),
       height: {
         350: '350px',
         450: '450px',
