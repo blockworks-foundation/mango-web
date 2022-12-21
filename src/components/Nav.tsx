@@ -130,6 +130,17 @@ const closeMenu = () => {
                     className="group inline-flex items-center rounded-xl p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleProducts}
                   >
+                    <svg 
+                          className="mr-2 h-5 w-5 text-white text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true">
+                          
+                      <path 
+                        d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+                      </svg>
+
                     <span>Explore</span>
 
                     <svg
@@ -369,6 +380,20 @@ const closeMenu = () => {
                     className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleCommunity}
                   >
+                    <svg 
+                          className="mr-2 h-5 w-5  text-white text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true">
+                          
+                        <path 
+                          fillRule="evenodd" 
+                          d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" 
+                          clipRule="evenodd" />
+                        <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
+                    </svg>
+
                     <span>Community</span>
 
                     <svg
@@ -618,6 +643,18 @@ const closeMenu = () => {
                     className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleSupport}
                   >
+                    <svg 
+                          className="mr-2 h-5 w-5  text-white text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true">
+                         
+                      <path 
+                        fillRule="evenodd" 
+                        d="M19.449 8.448L16.388 11a4.52 4.52 0 010 2.002l3.061 2.55a8.275 8.275 0 000-7.103zM15.552 19.45L13 16.388a4.52 4.52 0 01-2.002 0l-2.55 3.061a8.275 8.275 0 007.103 0zM4.55 15.552L7.612 13a4.52 4.52 0 010-2.002L4.551 8.45a8.275 8.275 0 000 7.103zM8.448 4.55L11 7.612a4.52 4.52 0 012.002 0l2.55-3.061a8.275 8.275 0 00-7.103 0zm8.657-.86a9.776 9.776 0 011.79 1.415 9.776 9.776 0 011.414 1.788 9.764 9.764 0 010 10.211 9.777 9.777 0 01-1.415 1.79 9.777 9.777 0 01-1.788 1.414 9.764 9.764 0 01-10.212 0 9.776 9.776 0 01-1.788-1.415 9.776 9.776 0 01-1.415-1.788 9.764 9.764 0 010-10.212 9.774 9.774 0 011.415-1.788A9.774 9.774 0 016.894 3.69a9.764 9.764 0 0110.211 0zM14.121 9.88a2.985 2.985 0 00-1.11-.704 3.015 3.015 0 00-2.022 0 2.985 2.985 0 00-1.11.704c-.326.325-.56.705-.704 1.11a3.015 3.015 0 000 2.022c.144.405.378.785.704 1.11.325.326.705.56 1.11.704.652.233 1.37.233 2.022 0a2.985 2.985 0 001.11-.704c.326-.325.56-.705.704-1.11a3.016 3.016 0 000-2.022 2.985 2.985 0 00-.704-1.11z" 
+                        clipRule="evenodd" />
+                    </svg>
                     <span>Support</span>
 
                     <svg
