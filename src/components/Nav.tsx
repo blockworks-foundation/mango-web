@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 // import { useRouter } from 'next/router';
 
 // import MangoPill from '@/components/MangoPill';
-import Button from '@/components/Button';
+import ButtonTwo from '@/components/ButtonTwo';
 import GradientText from '@/components/GradientText';
 import Logo from '@/components/Logo';
 import StyleGuideMenu from '@/components/StyleGuideMenu';
@@ -808,15 +808,15 @@ const closeMenu = () => {
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                 <div>
 
-                   <Button>
+                   <ButtonTwo>
                     <a
                       rel="noreferrer"
                       target="_blank"
                       href="https://trade.mango.markets"
                       >
-                      Check out 🥭
+                      Discover 🥭
                     </a>
-                  </Button>
+                  </ButtonTwo>
 
                 </div>
                 {/* 

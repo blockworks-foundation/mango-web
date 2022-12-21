@@ -38,29 +38,29 @@ function FeaturesOneTabs() {
       <Tab.List className={"text-white grid grid-cols-3 gap-8 max-w-7xl m-auto"}>
           <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4 align-top"}>
         
-          <dl className="">
-            {featureOne.map((featureOne) => (
-              <div className="text-left" key={featureOne.name}>
-                <dt>
-                  {/* 
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-bkg-3 text-mango-yellow">
-                    <feature.icon
-                      className="h-6 w-6"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  */}
-                  <p className="text-xl font-semibold font-heading">
-                    {featureOne.name}
-                  <span className="text-mango-yellow opacity-0 transition duration-150 ease-in group-hover:opacity-100 ml-2" aria-hidden="true">&rarr;</span>
-                  </p>
-                </dt>
-                <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                  {featureOne.description}
-                </dd>
-              </div>
-            ))}
-          </dl>
+            <dl className="">
+              {featureOne.map((featureOne) => (
+                <div className="text-left" key={featureOne.name}>
+                  <dt>
+                    {/* 
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-bkg-3 text-mango-yellow">
+                      <feature.icon
+                        className="h-6 w-6"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    */}
+                    <p className="text-xl font-semibold font-heading">
+                      {featureOne.name}
+                    <span className="text-mango-yellow opacity-0 transition duration-150 ease-in group-hover:opacity-100 ml-2" aria-hidden="true">&rarr;</span>
+                    </p>
+                  </dt>
+                  <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
+                    {featureOne.description}
+                  </dd>
+                </div>
+              ))}
+            </dl>
 
           </Tab>
           <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-lg mt-4 mb-4"}>
@@ -122,15 +122,15 @@ function FeaturesOneTabs() {
       <Tab.Panels className={"text-white"}>
         <Tab.Panel>
 
-        <div className="mt-20 max-w-7xl m-auto">
-           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl">
+        <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
+           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
               <ul className="flex flex-row space-x-4">
                 <li className="bg-mango-red h-4 w-4 rounded-full"></li>
                 <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
                 <li className="bg-mango-green h-4 w-4 rounded-full"></li>
               </ul>
           </div>
-          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl">
+          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
           <img
             className="z-0 reletive w-full h-auto rounded-b-2xl"
             src={`/assets/images/feature_screen_one.png`}          
@@ -138,18 +138,19 @@ function FeaturesOneTabs() {
             />
           </div>
         </div>
+
         </Tab.Panel>
         <Tab.Panel>
 
-        <div className="mt-20 max-w-7xl m-auto">
-           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl">
+        <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
+           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
               <ul className="flex flex-row space-x-4">
                 <li className="bg-mango-red h-4 w-4 rounded-full"></li>
                 <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
                 <li className="bg-mango-green h-4 w-4 rounded-full"></li>
               </ul>
           </div>
-          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl">
+          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
           <img
             className="z-0 reletive w-full h-auto rounded-b-2xl"
             src={`/assets/images/feature_screen_two.png`}          
@@ -161,15 +162,15 @@ function FeaturesOneTabs() {
         </Tab.Panel>
         <Tab.Panel>
 
-        <div className="mt-20 max-w-7xl m-auto">
-           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl">
+        <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
+           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
               <ul className="flex flex-row space-x-4">
                 <li className="bg-mango-red h-4 w-4 rounded-full"></li>
                 <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
                 <li className="bg-mango-green h-4 w-4 rounded-full"></li>
               </ul>
           </div>
-          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl">
+          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
           <img
             className="z-0 reletive w-full h-auto rounded-b-2xl"
             src={`/assets/images/feature_screen_three.png`}          
