@@ -1,10 +1,11 @@
 import Button from "@/components/Button";
+import Linkie from "@/components/Linkie";
 
 const CallToAction = () => {
   return (
     <>
 
-<div className="z-50 mx-auto max-w-7xl pt-0 pb-16 px-8 my-16 mt-0">
+<div className="z-50 mx-auto max-w-7xl pt-0 pb-16 my-16 mt-0">
     <div className="transform transition duration-200 ease-in-out hover:-translate-y-2 h-80 bg-mango-bkg-2 border border-mango-orange rounded-xl shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-bg-cta bg-cover bg-bottom bg-no-repeat">
     <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
         <div className="lg:self-center">
@@ -14,14 +15,30 @@ const CallToAction = () => {
             </span>
         </h2>
 
-        <div className="pt-8">
-            <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://trade.mango.markets/market?name=BTC-PERP"
-            >
-            <Button>Start trading now</Button>
-            </a>
+        <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
+                      
+                      <Button>
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://trade.mango.markets"
+                        >
+                          Check out 🥭
+                        </a>
+                      </Button>
+                      
+
+                      <Linkie>
+                        <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://docs.mango.markets/"
+                        >
+                        Explore the docs
+                        </a>
+                
+                    </Linkie>
+
         </div>
         </div>
     </div>
