@@ -46,7 +46,7 @@ const gridItemOne = [
           <div className="z-20 grid grid-cols-3 gap-6 mb-6 overflow-hidden">
   
             <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
-              <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+              <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-450 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
   
@@ -78,7 +78,7 @@ const gridItemOne = [
               </div>
             </div>
             <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
-              <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+              <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-450 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
                     
@@ -115,7 +115,7 @@ const gridItemOne = [
   
           <div className="z-20 grid grid-cols-3 gap-6">
             <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
-              <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+              <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-450 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
                     
@@ -148,7 +148,7 @@ const gridItemOne = [
             </div>
             
             <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
-              <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-650 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+              <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-450 w-full shadow-md rounded-xl overflow-hidden mx-auto">
                 <div className="py-4 px-8 mt-3">
                   <div className="flex flex-col mb-8">
                     
