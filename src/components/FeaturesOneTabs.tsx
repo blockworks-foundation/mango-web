@@ -121,31 +121,63 @@ function FeaturesOneTabs() {
 
       <Tab.Panels className={"text-white"}>
         <Tab.Panel>
-        <div>
+
+        <div className="">
+           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl">
+              <ul className="flex flex-row space-x-4">
+                <li className="bg-mango-red h-4 w-4 rounded-full"></li>
+                <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
+                <li className="bg-mango-green h-4 w-4 rounded-full"></li>
+              </ul>
+          </div>
+          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl">
           <img
-            className="z-0 reletive w-full h-auto"
-            src={`/assets/images/ipad_one.png`}          
+            className="z-0 reletive w-full h-auto rounded-b-2xl"
+            src={`/assets/images/feature_screen_one.png`}          
             alt=""
             />
+          </div>
         </div>
         </Tab.Panel>
         <Tab.Panel>
-        <div>
+
+        <div className="">
+           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl">
+              <ul className="flex flex-row space-x-4">
+                <li className="bg-mango-red h-4 w-4 rounded-full"></li>
+                <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
+                <li className="bg-mango-green h-4 w-4 rounded-full"></li>
+              </ul>
+          </div>
+          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl">
           <img
-            className="z-0 reletive w-full h-auto"
-            src={`/assets/images/ipad_two.png`}          
+            className="z-0 reletive w-full h-auto rounded-b-2xl"
+            src={`/assets/images/feature_screen_two.png`}          
             alt=""
             />
+          </div>
         </div>
+
         </Tab.Panel>
         <Tab.Panel>
-        <div>
+
+        <div className="">
+           <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl">
+              <ul className="flex flex-row space-x-4">
+                <li className="bg-mango-red h-4 w-4 rounded-full"></li>
+                <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
+                <li className="bg-mango-green h-4 w-4 rounded-full"></li>
+              </ul>
+          </div>
+          <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl">
           <img
-            className="z-0 reletive w-full h-auto"
-            src={`/assets/images/ipad_three.png`}          
+            className="z-0 reletive w-full h-auto rounded-b-2xl"
+            src={`/assets/images/feature_screen_three.png`}          
             alt=""
             />
+          </div>
         </div>
+
         </Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
