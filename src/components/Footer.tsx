@@ -2,7 +2,7 @@
 //import Button from '@/components/Button'
 import CallToAction from '@/components/CallToAction'
 import Logo from '@/components/Logo'
-import EmailForm from '@/components/EmailForm'
+import EmailForm from './EmailForm'
 
 
 //const doNothing = (e) => {
@@ -17,7 +17,6 @@ const Footer = () => {
       <div className="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
         <div className="max-w-7xl mx-auto ">
             <EmailForm />
-
           <footer className="py-20 px-4">
             <div className="px-4 py-8 mx-auto">
               <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">
