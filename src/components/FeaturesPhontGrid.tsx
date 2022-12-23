@@ -1,4 +1,5 @@
 // import { Tab } from '@headlessui/react'
+import MangoBlob from "@/components/MangoBlob"
 
 //import {
 //  ReceiptTaxIcon,
@@ -43,6 +44,11 @@ const gridItemOne = [
     return (
       <>
          <section className="max-w-7xl mx-auto -mt-[750px]">
+
+          <div className="z-0 transform -translate-y-40 translate-x-32">
+           <MangoBlob />
+          </div> 
+
           <div className="z-20 grid grid-cols-3 gap-6 mb-6 overflow-hidden">
   
             <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">

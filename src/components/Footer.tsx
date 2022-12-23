@@ -5,10 +5,6 @@ import Logo from '@/components/Logo'
 import EmailForm from './EmailForm'
 
 
-//const doNothing = (e) => {
-//  e.stopPropagation()
-//}
-
 const Footer = () => {
 
   return (

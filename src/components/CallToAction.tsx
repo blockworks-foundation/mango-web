@@ -7,7 +7,7 @@ const CallToAction = () => {
 
 <div className="z-50 mx-auto max-w-7xl pt-0 pb-16 my-16 mt-0">
     <div className="transform transition duration-200 ease-in-out hover:-translate-y-2 h-80 bg-mango-bkg-2 border border-mango-orange rounded-xl shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-bg-cta bg-cover bg-bottom bg-no-repeat">
-    <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+    <div className="pt-10 pb-12 px-5 sm:pt-16 sm:px-16 lg:py-4 lg:pr-0 xl:py-20 xl:px-20">
         <div className="lg:self-center">
         <h2 className="text-3xl font-extrabold text-white">
             <span className="block">
@@ -15,7 +15,7 @@ const CallToAction = () => {
             </span>
         </h2>
 
-        <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-right md:justify-right sm:justify-center">
+        <div className="mt-8 flex flex-row">
                       
                       <ButtonTwo>
                         <a
@@ -36,8 +36,7 @@ const CallToAction = () => {
                         >
                         Explore the docs
                         </a>
-                
-                    </Linkie>
+                      </Linkie>
 
         </div>
         </div>
