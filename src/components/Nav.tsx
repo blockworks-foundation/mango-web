@@ -90,14 +90,6 @@ const closeMenu = () => {
                   <span className="sr-only">Mango</span>
                   <Logo />
                 </a>
-                
-                <div
-                    className={`${
-                      !logoMenuVisible && 'hidden'
-                    } reletive z-50 mt-20 max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
-                  >
-                  <StyleGuideMenu />
-                  </div>
               </div>
               <div className="-my-2 -mr-2 md:hidden">
                 <button
@@ -839,12 +831,7 @@ const closeMenu = () => {
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <img
-                      className="ml-1 h-8"
-                      src="img/logo_mango.svg"
-                      alt=""
-                      width="auto"
-                    />
+                    <Logo />
                   </div>
                   <div className="-mr-2">
                     <button
@@ -1107,6 +1094,15 @@ const closeMenu = () => {
           </div>
         </div>
       </div>
+      <div className="z-10 transform translate-y-[169px] mx-auto max-w-7xl" >
+      <div
+                    className={`${
+                      !logoMenuVisible && 'hidden'
+                    } w-48 absolute `}
+                  >
+                  <StyleGuideMenu />
+                  </div>
+        </div>                        
     </>
   );
 };
