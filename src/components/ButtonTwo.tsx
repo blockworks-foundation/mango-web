@@ -19,7 +19,7 @@ const ButtonTwo: FunctionComponent<ButtonProps> = ({
     <div className="group">
 
       <div className="">
-        <button className="hover:-mt-1 transition-all duration-100 ease-in-out">
+        <button className="hover:-mt-1 transition-all duration-100 ease-in-out bg-white bg-opacity-20 rounded-xl">
             <a 
               href="#_" 
               className="z-30 relative inline-flex items-center justify-center p-4 px-[3px] py-[3px] overflow-hidden font-bold font-display rounded-xl shadow-2xl group">
@@ -28,15 +28,15 @@ const ButtonTwo: FunctionComponent<ButtonProps> = ({
               <span className="absolute bottom-0 left-0 w-24 h-24 -ml-10 group-hover:bg-mango-green rounded-full blur-xl"></span>
               <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 group-hover:bg-mango-red rounded-full blur-xl"></span>
               </span>
-              <span className="relative text-white text-opacity-50 bg-mango-bkg-3 py-2 px-7 rounded-lg hover:bg-mango-bkg-1 hover:text-opacity-100 transition-all duration-150 ease-in">
+              <span className="relative text-white text-opacity-40 bg-mango-bkg-3 py-2 px-7 rounded-lg hover:bg-mango-bkg-1 hover:text-opacity-100 transition-all duration-150 ease-in">
 
           {children}
           </span>
           </a>  
         </button>
         </div>
-        <div className="p-1 -mt-3 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-green to-mango-red rounded-sm blur-xl opacity-5 group-hover:opacity-100 transition duration-700 group-hover:duration-700 animate-tilt"></div>
-        <div className="p-1 -mt-3 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-green to-mango-red rounded-sm blur-xl opacity-5 group-hover:opacity-50 transition duration-300 group-hover:duration-700 animate-tilt"></div>
+        <div className="p-1 -mt-3 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-100 transition duration-700 group-hover:duration-700 animate-tilt"></div>
+        <div className="p-1 -mt-3 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-50 transition duration-300 group-hover:duration-700 animate-tilt"></div>
     </div>
 
 
