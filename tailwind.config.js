@@ -2,6 +2,9 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    debugScreens: {
+      position: ['bottom', 'left'],
+    },
     fontFamily: {
       display: ['TT Commons Expanded, sans-serif'],
       body: 'TT Commons, sans-serif',
@@ -108,5 +111,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
 };

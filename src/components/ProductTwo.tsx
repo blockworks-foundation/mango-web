@@ -16,7 +16,7 @@ const ProductTwo = () => {
         </p>
         <div className="z-20 mt-4 flex flex-row justify-left">
                       
-                      <button className="mr-4 hover:opacity-50 transition duration-75 ease-in transform translate-y-5">
+                      <button className="mr-4 opacity-60 hover:opacity-100 transition duration-75 ease-in transform translate-y-5">
                         <a
                           rel="noreferrer"
                           target="_blank"
