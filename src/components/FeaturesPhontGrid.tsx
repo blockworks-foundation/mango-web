@@ -43,7 +43,7 @@ const gridItemOne = [
   function FeaturesPhoneGrid() {
     return (
       <>
-         <section className="max-w-7xl mx-auto -mt-[750px]">
+         <section className="max-w-7xl mx-auto -mt-[750px] px-8">
 
           <div className="z-0 transform -translate-y-40 translate-x-32">
            <MangoBlob />

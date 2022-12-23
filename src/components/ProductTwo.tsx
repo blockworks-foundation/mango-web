@@ -8,7 +8,7 @@ import MangoPill from '@/components/MangoPill';
 const ProductTwo = () => {
   return (
     <>
-      <div className="mt-72 mb-8 z-10 max-w-7xl m-auto">
+      <div className="mt-72 mb-8 z-10 max-w-7xl m-auto px-8">
         <p className="z-20 font-mono xs:text-3xl mb-3 text-left font-bold text-white sm:text-4xl md:text-4xl lg:text-5xl">
           Pay, send, receive globally.
           <br />

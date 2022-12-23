@@ -9,12 +9,13 @@ const Footer = () => {
 
   return (
     <>
-    <CallToAction /> 
+
       <div className="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
-        <div className="max-w-7xl mx-auto ">
+        <div className="max-w-7xl mx-auto px-8">
+        <CallToAction /> 
             <EmailForm />
-          <footer className="py-20 px-4">
-            <div className="px-4 py-8 mx-auto">
+          <footer className="py-20">
+            <div className="py-8 mx-auto">
               <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">
                 <div className="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
                   <a className="text-gray-600 text-2xl leading-none" href="#">
