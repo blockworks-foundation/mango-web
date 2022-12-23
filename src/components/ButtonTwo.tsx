@@ -35,4 +35,4 @@ const ButtonTwo: FunctionComponent<ButtonProps> = ({
   );
 };
 
-export default ButtonTwo
+export default ButtonTwo;
