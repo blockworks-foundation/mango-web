@@ -18,11 +18,17 @@ const Footer = () => {
               <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">
                 <div className="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
                   <a className="text-gray-600 text-2xl leading-none" href="#">
-                    <Logo />
+                   <Logo /> {/*
+                    <img
+                      className="h-1/4 w-auto"
+                      src="/assets/images/mango-rainbow.png"
+                      alt=""
+                      width="auto"
+                    />*/} 
                   </a>
                   <p className="mt-5 mb-6 max-w-xs text-white opacity-50 leading-loose">
-                    Mango is a decentralized autonomous organization helping
-                    build the next generation of decentralied trading products
+                    Mango is a decentralized organization building the 
+                    next generation of decentralied trading products
                     and infratructure.{' '}
                   </p>
                   <div className="flex flex-row">
