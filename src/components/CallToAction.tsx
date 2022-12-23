@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import ButtonTwo from "@/components/ButtonTwo";
 import Linkie from "@/components/Linkie";
 
 const CallToAction = () => {
@@ -9,15 +9,15 @@ const CallToAction = () => {
     <div className="transform transition duration-200 ease-in-out hover:-translate-y-2 h-80 bg-mango-bkg-2 border border-mango-orange rounded-xl shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-bg-cta bg-cover bg-bottom bg-no-repeat">
     <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
         <div className="lg:self-center">
-        <h2 className="text-5xl font-extrabold text-white">
+        <h2 className="text-3xl font-extrabold text-white">
             <span className="block">
             Access to what you need. No approvals needed.
             </span>
         </h2>
 
-        <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
+        <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-right md:justify-right sm:justify-center">
                       
-                      <Button>
+                      <ButtonTwo>
                         <a
                           rel="noreferrer"
                           target="_blank"
@@ -25,7 +25,7 @@ const CallToAction = () => {
                         >
                           Check out 🥭
                         </a>
-                      </Button>
+                      </ButtonTwo>
                       
 
                       <Linkie>

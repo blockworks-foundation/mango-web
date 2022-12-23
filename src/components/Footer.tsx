@@ -1,91 +1,31 @@
-import { useState } from 'react'
-import Button from '@/components/Button'
+//import { useState } from 'react'
+//import Button from '@/components/Button'
 import CallToAction from '@/components/CallToAction'
+import Logo from '@/components/Logo'
+import EmailForm from '@/components/EmailForm'
+
 
 //const doNothing = (e) => {
 //  e.stopPropagation()
 //}
 
 const Footer = () => {
-  const [done, setDone] = useState(false)
-  const [email, setEmail] = useState('')
-
-  const handleChange = (e: any) => {
-    setEmail(e.target.value)
-  }
-
-  const handleSubmit = async (e: any) => {
-    e.preventDefault()
-
-    await fetch('/api/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email }),
-    })
-
-    setDone(true)
-  }
 
   return (
     <>
-    <CallToAction />
+    <CallToAction /> 
       <div className="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
         <div className="max-w-7xl mx-auto ">
-          <section className="py-8 px-4">
-            <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-              <h2 className="inline text-3xl font-extrabold sm:block sm:text-4xl">
-                Want product news and updates?{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green sm:block sm:text-4xl">
-                  Sign up for our newsletter.
-                </span>
-              </h2>
-
-              <form className="mt-8 sm:flex" onSubmit={handleSubmit}>
-                <label className="sr-only">Email address</label>
-                {done ? (
-                  <span>Thank you for signing up! 🎉</span>
-                ) : (
-                  <>
-                    <input
-                      id="email-address"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      required
-                      className="w-full px-5 py-2 placeholder-gray-400 text-black text-opacity-80 sm:max-w-xs border-gray-300 rounded-full focus:outline-none"
-                      placeholder="Drop us your email..."
-                      value={email}
-                      onChange={handleChange}
-                    />
-                    <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                      <Button>
-                        <span className="">Sign me up!</span>
-                      </Button>
-                    </div>
-                  </>
-                )}
-              </form>
-              <div className="w-full mt-4">
-                <p className="text-xl text-white text-opacity-50">
-                  We promise to never spam and only send alpha.
-                </p>
-              </div>
-            </div>
-          </section>
+            <EmailForm />
 
           <footer className="py-20 px-4">
             <div className="px-4 py-8 mx-auto">
               <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">
                 <div className="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
                   <a className="text-gray-600 text-2xl leading-none" href="#">
-                    <img
-                      className="h-8"
-                      src="img/logo_mango.svg"
-                      alt=""
-                      width="auto"
-                    />
+                    <Logo />
                   </a>
-                  <p className="mt-5 mb-6 max-w-xs text-gray-500 leading-loose">
+                  <p className="mt-5 mb-6 max-w-xs text-white opacity-50 leading-loose">
                     Mango is a decentralized autonomous organization helping
                     build the next generation of decentralied trading products
                     and infratructure.{' '}
@@ -114,8 +54,8 @@ const Footer = () => {
                 <div className="w-full lg:w-2/3 px-4">
                   <div className="flex flex-wrap justify-between">
                     <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                      <h3 className="mb-6 text-lg font-bold font-heading">
-                        Products
+                      <h3 className="mb-6 text-lg font-mono text-white opacity-80">
+                        Explore
                       </h3>
                       <ul className="text-sm">
                         <li className="mb-4">
@@ -123,7 +63,7 @@ const Footer = () => {
                             className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/"
                           >
-                            Spot Markets
+                            Markets
                           </a>
                         </li>
                         <li className="mb-4">
@@ -131,7 +71,7 @@ const Footer = () => {
                             className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/perp/BTC"
                           >
-                            Perpetual Futures
+                            Redacted
                           </a>
                         </li>
                         <li className="mb-4">
@@ -139,21 +79,42 @@ const Footer = () => {
                             className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/borrow"
                           >
-                            Decentralized Lending
+                            Earn
+                          </a>
+                        </li>
+                      </ul>
+                      <h3 className="mb-6 text-lg font-mono text-white opacity-80">
+                        Infrastructure
+                      </h3>
+                      <ul className="text-sm">
+                        <li className="mb-4">
+                          <a
+                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            href="https://trade.mango.markets/"
+                          >
+                            Liquidator Program
                           </a>
                         </li>
                         <li className="mb-4">
                           <a
                             className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
-                            href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
+                            href="https://trade.mango.markets/perp/BTC"
                           >
-                            Liquidator Program
+                            Become a Market Maker
+                          </a>
+                        </li>
+                        <li className="mb-4">
+                          <a
+                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            href="https://trade.mango.markets/borrow"
+                          >
+                            Run it locally
                           </a>
                         </li>
                       </ul>
                     </div>
                     <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                      <h3 className="mb-6 text-lg font-bold font-heading">
+                      <h3 className="mb-6 text-lg font-mono text-white opacity-80">
                         Developers
                       </h3>
                       <ul className="text-sm">
@@ -184,7 +145,7 @@ const Footer = () => {
                       </ul>
                     </div>
                     <div className="w-1/2 lg:w-1/4">
-                      <h3 className="mb-6 text-lg font-bold font-heading">
+                      <h3 className="mb-6 text-lg font-mono text-white opacity-80">
                         Contact
                       </h3>
                       <ul className="text-sm">
