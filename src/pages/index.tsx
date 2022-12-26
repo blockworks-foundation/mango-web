@@ -6,10 +6,11 @@ import ProductTwo from '@/components/ProductTwo';
 import FeaturesPhoneGrid from '@/components/FeaturesPhontGrid';
 import Footer from '@/components/Footer';
 
+
 const Index = () => {
   return (
     <div
-      className={"debug-screens h-auto w-screen overflow-hidden bg-gradient-to-t from-mango-bkg-5 to-mango-bkg-1 transition-all"}
+      className={"debug-screens h-auto w-screen overflow-hidden bg-gradient-to-t from-th-bkg-2 to-th-bkg-1"}
     >
       <Nav />
       <Hero />
