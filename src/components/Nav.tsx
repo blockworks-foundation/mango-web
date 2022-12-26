@@ -78,7 +78,7 @@ const Nav = () => {
   return (
     <>
       <div className="z-20 h-2 w-screen fixed bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div>
-      <div className="z-20 w-screen fixed bg-gradient-to-b from-mango-bkg-1 backdrop-blur-xl bg-opacity-50 mt-2">
+      <div className="z-20 w-screen fixed bg-gradient-to-b from-th-bkg-1 backdrop-blur-xl bg-opacity-50 mt-2">
         {/* Main Menu */}
         <div className="xs:px-6 xs:py-1 bg-transparent lg:px-10 lg:py-8">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -117,11 +117,11 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-xl p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
+                    className="group inline-flex items-center rounded-xl p-1 px-2 text-base font-medium text-th-fgd-5 opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleProducts}
                   >
                     <svg
-                      className="mr-2 h-5 w-5 text-white text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
+                      className="mr-2 h-5 w-5 text-th-fgd-3 text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -133,7 +133,7 @@ const Nav = () => {
                     <span>Explore</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
+                      className="ml-2 h-5 w-5 text-th-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -153,11 +153,11 @@ const Nav = () => {
                     } absolute z-50 -ml-4 mt-3 w-screen max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
                   >
                     <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                      <div className="relative grid gap-6 bg-mango-bkg-3 px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-50">
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-white opacity-40">
+                      <div className="relative grid gap-6 bg-th-bkg-1 px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-10">
+                        <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                           Products
                         </h3>
-                        <button className="text-left hover:text-mango-yellow text-white text-opacity-20 group">
+                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
                           <a
                             href="https://trade.mango.markets/"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
@@ -411,11 +411,11 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
+                    className="group inline-flex items-center rounded-xl p-1 px-2 text-base font-medium text-th-fgd-5 opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleCommunity}
                   >
                     <svg
-                      className="mr-2 h-5 w-5  text-white text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
+                      className="mr-2 h-5 w-5  text-th-fgd-3 text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -432,7 +432,7 @@ const Nav = () => {
                     <span>Community</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
+                      className="ml-2 h-5 w-5 text-th-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -709,11 +709,11 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     type="button"
-                    className="group inline-flex items-center rounded-md p-1 px-2 text-base font-medium text-white opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
+                    className="group inline-flex items-center rounded-xl p-1 px-2 text-base font-medium text-th-fgd-5 opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
                     onClick={toggleSupport}
                   >
                     <svg
-                      className="mr-2 h-5 w-5  text-white text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
+                      className="mr-2 h-5 w-5  text-th-fgd-3 text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -728,7 +728,7 @@ const Nav = () => {
                     <span>Support</span>
 
                     <svg
-                      className="ml-2 h-5 w-5 text-mango-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
+                      className="ml-2 h-5 w-5 text-th-bkg-1 transition duration-150 ease-in group-hover:text-white group-hover:opacity-50 group-focus:text-mango-yellow group-focus:rotate-180"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -900,11 +900,10 @@ const Nav = () => {
                     </a>
                   </ButtonTwo>
                 </div>
-
-                <div className="bg-mango-bkg-3 rounded-full ml-6 p-1 shadow-lg">
+              </div>
+              <div className="bg-th-bkg-4 mt-1 rounded-full ml-6 p-1 shadow-lg">
                   <ThemeSwitcher />
                 </div>
-              </div>
             </div>
           </div>
 

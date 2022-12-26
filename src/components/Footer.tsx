@@ -27,7 +27,7 @@ const Footer = () => {
                       width="auto"
                     />*/} 
                   </a>
-                  <p className="mt-5 mb-6 max-w-xs text-white opacity-50 leading-loose">
+                  <p className="font-body mt-5 mb-6 max-w-xs text-th-fgd-4 opacity-50 leading-loose">
                     Mango is a decentralized organization building the 
                     next generation of decentralied trading products
                     and infratructure.{' '}
@@ -56,13 +56,13 @@ const Footer = () => {
                 <div className="w-full lg:w-2/3 px-4">
                   <div className="flex flex-wrap justify-between">
                     <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                      <h3 className="mb-6 text-lg font-mono text-white opacity-80">
+                      <h3 className="mb-6 text-lg font-mono text-th-fgd-4 opacity-80">
                         Explore
                       </h3>
                       <ul className="text-sm">
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/"
                           >
                             Markets
@@ -70,7 +70,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/perp/BTC"
                           >
                             Redacted
@@ -78,20 +78,20 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/borrow"
                           >
                             Earn
                           </a>
                         </li>
                       </ul>
-                      <h3 className="mb-6 text-lg font-mono text-white opacity-80">
+                      <h3 className="mb-6 text-lg font-mono text-th-fgd-4 opacity-80">
                         Infrastructure
                       </h3>
                       <ul className="text-sm">
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/"
                           >
                             Liquidator Program
@@ -99,7 +99,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/perp/BTC"
                           >
                             Become a Market Maker
@@ -107,7 +107,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/borrow"
                           >
                             Run it locally
@@ -116,13 +116,13 @@ const Footer = () => {
                       </ul>
                     </div>
                     <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                      <h3 className="mb-6 text-lg font-mono text-white opacity-80">
+                      <h3 className="mb-6 text-lg font-mono text-th-fgd-4 opacity-80">
                         Developers
                       </h3>
                       <ul className="text-sm">
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://docs.mango.markets/"
                           >
                             Explore the docs
@@ -130,7 +130,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://trello.com/c/0iz8GfW6/32-how-to-use-this-board"
                           >
                             Start contributing
@@ -138,7 +138,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
                           >
                             Become a market maker
@@ -147,13 +147,13 @@ const Footer = () => {
                       </ul>
                     </div>
                     <div className="w-1/2 lg:w-1/4">
-                      <h3 className="mb-6 text-lg font-mono text-white opacity-80">
+                      <h3 className="mb-6 text-lg font-mono text-th-fgd-4 opacity-80">
                         Contact
                       </h3>
                       <ul className="text-sm">
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://discord.gg/2uwjsBc5yw"
                           >
                             Discord
@@ -161,7 +161,7 @@ const Footer = () => {
                         </li>
                         <li className="mb-4">
                           <a
-                            className="text-gray-500 hover:text-gray-600 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
                             href="https://twitter.com/mangomarkets"
                           >
                             Twitter
@@ -174,7 +174,7 @@ const Footer = () => {
               </div>
               <div className="pt-8">
                 {/* Do we still want to go with blockworks foundation? should we start up a mango foundation or can we copywrite mango DAO? */}
-                <p className="lg:text-center text-sm text-white text-opacity-20">
+                <p className="lg:text-center text-sm text-th-fgd-4 text-opacity-20">
                   All rights reserved &copy; Blockworks Foundation 2023
                 </p>
               </div>

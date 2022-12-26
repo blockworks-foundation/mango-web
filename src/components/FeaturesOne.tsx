@@ -8,7 +8,7 @@ const FeaturesOne = () => {
   return (
     <>
       <div className="mt-72 mb-8 z-10">
-        <p className="font-mono xs:text-3xl mb-3 text-center font-bold text-white sm:text-4xl md:text-4xl lg:text-5xl">
+        <p className="font-mono xs:text-3xl mb-3 text-center font-bold text-th-fgd-4 sm:text-4xl md:text-4xl lg:text-5xl">
           Trade, leverage, and utilize.
           <br />
           <GradientText>All from one hub.</GradientText>

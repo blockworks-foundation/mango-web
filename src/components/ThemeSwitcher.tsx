@@ -21,9 +21,9 @@ const ThemeSwitcher = () => {
   return (
     <Popover>
       {({ open }) => (
-        <div className="relative">
+        <div className="relative ">
           <Popover.Button
-            className={`flex h-10 w-10 default-transition items-center justify-center rounded-full border border-th-button text-th-fgd-1 md:hover:border-th-button-hover md:hover:text-th-fgd-1`}
+            className={`flex h-10 w-10 default-transition items-center justify-center bg-th-bkg-2 rounded-full text-th-fgd-2 hover:text-mango-yellow transition duration-100 ease-in-out`}
           >
             {open ? (
               <XMarkIcon className="h-6 w-6" />
@@ -47,8 +47,8 @@ const ThemeSwitcher = () => {
             >
               {THEMES.map((value) => (
                 <button
-                  className={`whitespace-nowrap font-normal no-underline md:hover:text-th-fgd-1 w-full text-left ${
-                    value === theme ? 'text-th-active' : ''
+                  className={`whitespace-nowrap font-body no-underline text-th-fgd-3 md:hover:text-th-fgd-5 w-full text-left ${
+                    value === theme ? 'text-th-fgd-4' : ''
                   }`}
                   onClick={() => setTheme(value)}
                   key={value}
