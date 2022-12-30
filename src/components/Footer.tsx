@@ -3,6 +3,7 @@
 import CallToAction from '@/components/CallToAction'
 import Logo from '@/components/Logo'
 import EmailForm from './EmailForm'
+import GradientText from './GradientText'
 
 
 const Footer = () => {
@@ -174,8 +175,11 @@ const Footer = () => {
               </div>
               <div className="pt-8">
                 {/* Do we still want to go with blockworks foundation? should we start up a mango foundation or can we copywrite mango DAO? */}
-                <p className="lg:text-center text-sm text-th-fgd-4 text-opacity-20">
-                  All rights reserved &copy; Blockworks Foundation 2023
+                <p className="font-mono lg:text-center text-md text-th-fgd-4 mb-2">
+                🥭 is made with ❤️ in <GradientText><span className="type-footer text-opacity-100"></span></GradientText>
+                </p>
+                <p className="font-mono lg:text-center text-sm text-th-fgd-3 text-opacity-20">
+                  All rights reserved &copy; 2023
                 </p>
               </div>
             </div>

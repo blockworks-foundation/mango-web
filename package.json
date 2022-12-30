@@ -35,6 +35,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swr": "^2.0.0",
+    "tailwind-typewriter": "^1.0.1",
     "tailwindcss-debug-screens": "^2.2.1",
     "twin.macro": "^3.1.0",
     "type-check": "^0.4.0"

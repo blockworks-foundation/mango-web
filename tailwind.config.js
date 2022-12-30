@@ -250,5 +250,17 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-debug-screens')],
-}
+  plugins: [
+    require('tailwindcss-debug-screens'),
+    require('tailwind-typewriter')({
+      wordsets: {
+          footer: {
+              words: ['Germany.', 'India.', 'United Kingdom.', 'Mexico.', 'Peru.', 'Colombia.', 'United States.', 'Australia', 'Japan'],
+              delay: 1
+          }
+      }
+  }),
+  
+    ],
+};
+
