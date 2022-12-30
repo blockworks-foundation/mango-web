@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <>
 
-      <div className="bg-bg-texture bg-cover bg-bottom bg-no-repeat">
+      <div className="bg-mangobottom bg-contain bg-bottom bg-no-repeat">
         <div className="max-w-7xl mx-auto px-8">
         <CallToAction /> 
             <EmailForm />

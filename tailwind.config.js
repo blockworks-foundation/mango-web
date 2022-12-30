@@ -24,7 +24,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: (_) => ({
-        'bg-texture': "url('/assets/images/bg-texture.png')",
+        'mangotop': "url('/assets/images/mango-top.svg')",
+        'mangobottom': "url('/assets/images/mango-bottom.svg')",
         'bg-cta': "url('/assets/images/bgcta.jpeg')",
       }),
       height: {

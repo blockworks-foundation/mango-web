@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div
-      className={"debug-screens h-auto w-screen overflow-hidden bg-gradient-to-t from-th-bkg-2 to-th-bkg-1"}
+      className={"debug-screens h-auto w-screen overflow-hidden bg-gradient-to-t from-th-bkg-2 to-th-bkg-1 "}
     >
       <Nav />
       <Hero />
