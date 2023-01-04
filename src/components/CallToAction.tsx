@@ -17,7 +17,7 @@ const CallToAction = () => {
         </h2>
         <div className="py-8">
 
-        <div className="flex flex-row bg-th-bkg-2 border-2 border-th-fgd-3 rounded-[10px]">
+        <div className="flex flex-row bg-dark-theme-bkg-3 border-2 border-th-fgd-3 rounded-[10px]">
                         <span className="p-2 bg-white bg-opacity-10 border-r-2 border-th-fgd-3 rounded-l-[8px]">
                         <svg 
                           xmlns="http://www.w3.org/2000/svg" 
@@ -30,7 +30,7 @@ const CallToAction = () => {
 
                         </span>
                           <span>
-                            <p className=" text-xs font-mono text-th-fgd-4 w-screen p-3">
+                            <p className=" text-xs font-mono text-white text-opacity-60 w-screen p-3">
                               https://github.com/blockworks-foundation/mango-v4-ui.git
                             </p>
                           </span>
