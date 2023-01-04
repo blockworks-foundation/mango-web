@@ -255,7 +255,7 @@ module.exports = {
     require('tailwind-typewriter')({
       wordsets: {
           footer: {
-              words: ['Berlin.', 'India.', 'United Kingdom.', 'Mexico City.', 'Peru.', 'Bogota.', 'New york.', 'California.', 'Australia', 'Japan.'],
+              words: ['Germany.', 'France.', 'England.', 'Mexico.', 'Peru.', 'Colombia.', 'New york.', 'California.', 'Australia', 'Japan.'],
               delay: 1
           }
       }

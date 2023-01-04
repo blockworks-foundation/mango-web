@@ -3,8 +3,9 @@ import Nav from '@/components/Nav';
 import FeaturesOne from '@/components/FeaturesOne'
 import FeaturesTwo from '@/components/FeaturesTwo';
 import ProductTwo from '@/components/ProductTwo';
-import FeaturesPhoneGrid from '@/components/FeaturesPhontGrid';
+import FeaturesPhoneGrid from '@/components/FeaturesPhoneGrid';
 import Footer from '@/components/Footer';
+import PhoneFeaturesTabs from '@/components/PhoneFeaturesTab';
 
 
 const Index = () => {
@@ -18,6 +19,8 @@ const Index = () => {
       <FeaturesOne />
       <ProductTwo />
       <FeaturesPhoneGrid />
+      <PhoneFeaturesTabs />
+
       <Footer />
     </div>
   );
