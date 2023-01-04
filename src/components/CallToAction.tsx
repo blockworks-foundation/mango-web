@@ -1,4 +1,4 @@
-import ButtonTwo from "@/components/ButtonTwo";
+import ButtonWhite from "@/components/ButtonWhite";
 import Linkie from "@/components/Linkie";
 
 const CallToAction = () => {
@@ -17,15 +17,15 @@ const CallToAction = () => {
 
         <div className="mt-8 flex flex-row">
                       
-                      <ButtonTwo>
+                      <ButtonWhite>
                         <a
                           rel="noreferrer"
                           target="_blank"
                           href="https://trade.mango.markets"
                         >
-                          Check out 🥭
+                          Discover 🥭
                         </a>
-                      </ButtonTwo>
+                      </ButtonWhite>
                       
 
                       <Linkie>
