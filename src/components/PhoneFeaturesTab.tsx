@@ -37,8 +37,8 @@ function PhoneFeaturesTabs() {
     <div className="grid grid-cols-2 max-w-7xl mx-auto py-20">
         <Tab.Group vertical>
             <div className="">
-            <Tab.List className={"text-th-fgd-5 flex flex-col gap-8 max-w-xl m-auto border-l-4 border-th-bkg-2 border-opacity-5"}>
-                <Tab className={"group -ml-1 bg-white bg-opacity-0 hover:bg-th-bkg-2 focus:bg-th-bkg-2 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-red focus:border-opacity-100"}>
+            <Tab.List className={"text-th-fgd-5 flex flex-col max-w-xl m-auto border-l-4 border-th-bkg-3 border-opacity-5"}>
+                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-red focus:border-opacity-100"}>
                 
                     <dl className="">
                     {featureOne.map((featureOne) => (
@@ -73,7 +73,7 @@ function PhoneFeaturesTabs() {
                     ))}
                     </dl>
                 </Tab>
-                <Tab className={"group -ml-1 bg-white bg-opacity-0 hover:bg-th-bkg-2 focus:bg-th-bkg-2 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100 "}>
+                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100 "}>
                 
                 <dl className="">
                     {featureTwo.map((featureTwo) => (
@@ -108,7 +108,7 @@ function PhoneFeaturesTabs() {
                 </dl>
 
                 </Tab>
-                <Tab className={"group -ml-1 bg-white bg-opacity-0 hover:bg-th-bkg-2 focus:bg-th-bkg-2 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-green focus:border-opacity-100"}>
+                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-green focus:border-opacity-100"}>
 
                 <dl className="">
                     {featureThree.map((featureThree) => (
