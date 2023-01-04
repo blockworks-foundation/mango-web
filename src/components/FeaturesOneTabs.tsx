@@ -162,10 +162,10 @@ function FeaturesOneTabs() {
         </Tab>
       </Tab.List>
 
-      <Tab.Panels className={"text-white"}>
+      <Tab.Panels className={"max-w-7xl mx-auto"}>
         <Tab.Panel>
 
-        <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
+        <div className="mt-20 w-screen m-auto rounded-2xl shadow-xl">
            <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
               <ul className="flex flex-row space-x-4">
                 <li className="bg-mango-red h-4 w-4 rounded-full"></li>
@@ -185,7 +185,7 @@ function FeaturesOneTabs() {
         </Tab.Panel>
         <Tab.Panel>
 
-        <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
+        <div className="mt-20 w-screen m-auto rounded-2xl shadow-xl">
            <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
               <ul className="flex flex-row space-x-4">
                 <li className="bg-mango-red h-4 w-4 rounded-full"></li>
@@ -205,7 +205,7 @@ function FeaturesOneTabs() {
         </Tab.Panel>
         <Tab.Panel>
 
-        <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
+        <div className="mt-20 w-screen m-auto rounded-2xl shadow-xl">
            <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
               <ul className="flex flex-row space-x-4">
                 <li className="bg-mango-red h-4 w-4 rounded-full"></li>
