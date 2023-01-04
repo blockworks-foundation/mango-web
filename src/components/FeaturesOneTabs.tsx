@@ -35,7 +35,7 @@ function FeaturesOneTabs() {
   return (
     <>
     <Tab.Group manual>
-      <div className="border-t-4 border-white border-opacity-5 w-screen 2xl:ml-44 xl:ml-16">
+      <div className="border-t-4 border-th-bkg-2 border-opacity-5 w-screen 2xl:ml-44 xl:ml-16">
 
       </div>
       <Tab.List className={"text-white grid grid-cols-3 max-w-7xl m-auto"}>
