@@ -39,7 +39,7 @@ function FeaturesOneTabs() {
 
       </div>
       <Tab.List className={"text-white grid grid-cols-3 max-w-7xl m-auto"}>
-          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-red focus:border-opacity-100"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-red focus:border-opacity-100"}>
         
             <dl className="">
               {featureOne.map((featureOne) => (
@@ -80,7 +80,7 @@ function FeaturesOneTabs() {
               ))}
             </dl>
           </Tab>
-          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-yellow focus:border-opacity-100"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-green focus:border-opacity-100"}>
         
           <dl className="">
             {featureTwo.map((featureTwo) => (
@@ -120,7 +120,7 @@ function FeaturesOneTabs() {
           </dl>
 
           </Tab>
-          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-green focus:border-opacity-100"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-green focus:border-opacity-100"}>
 
           <dl className="">
             {featureThree.map((featureThree) => (
