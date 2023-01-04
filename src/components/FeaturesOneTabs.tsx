@@ -45,8 +45,8 @@ function FeaturesOneTabs() {
               {featureOne.map((featureOne) => (
                 <div className="text-left" key={featureOne.name}>
                   <dt>
-                    <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
-                      <svg 
+                    <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-th-fgd-5 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                      <svg
                       xmlns="http://www.w3.org/2000/svg" 
                       viewBox="0 0 24 24" 
                       fill="currentColor"
@@ -60,7 +60,7 @@ function FeaturesOneTabs() {
                     </div>
                                         
                     <div className="flex flex-row">
-                        <p className="text-xl font-semibold font-heading">
+                      <p className="text-xl font-display text-th-fgd-5">
                           {featureOne.name}
                         </p>
                       <svg 
@@ -73,7 +73,7 @@ function FeaturesOneTabs() {
                       </div>
 
                   </dt>
-                  <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
+                  <dd className="mt-2 text-base text-th-fgd-4 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
                     {featureOne.description}
                   </dd>
                 </div>
@@ -86,7 +86,7 @@ function FeaturesOneTabs() {
             {featureTwo.map((featureTwo) => (
               <div className="text-left" key={featureTwo.name}>
                 <dt>
-                  <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                   <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-th-fgd-5 group-hover:shadow-lg transition-all duration-150 ease-in-out">
                       <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       viewBox="0 0 24 24" 
@@ -99,7 +99,7 @@ function FeaturesOneTabs() {
                       </svg>
                     </div>
                   <div className="flex flex-row">
-                      <p className="text-xl font-semibold font-heading">
+                      <p className="text-xl font-display text-th-fgd-5">
                         {featureTwo.name}
                       </p>
                     <svg 
@@ -112,7 +112,7 @@ function FeaturesOneTabs() {
                     </div>
 
                 </dt>
-                <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
+                <dd className="mt-2 text-base text-th-fgd-4 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
                   {featureTwo.description}
                 </dd>
               </div>
@@ -126,7 +126,7 @@ function FeaturesOneTabs() {
             {featureThree.map((featureThree) => (
               <div className="text-left" key={featureThree.name}>
                 <dt>
-                  <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                   <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-th-fgd-5 group-hover:shadow-lg transition-all duration-150 ease-in-out">
                     <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     viewBox="0 0 24 24" 
@@ -140,7 +140,7 @@ function FeaturesOneTabs() {
                   </div>
 
                   <div className="flex flex-row">
-                      <p className="text-xl font-semibold font-heading">
+                   <p className="text-xl font-display text-th-fgd-5">
                         {featureThree.name}
                       </p>
                     <svg 
@@ -152,7 +152,7 @@ function FeaturesOneTabs() {
                       </svg>
                     </div>
                 </dt>
-                <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
+                <dd className="mt-2 text-base text-th-fgd-4 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
                   {featureThree.description}
                 </dd>
               </div>

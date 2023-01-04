@@ -46,8 +46,8 @@ function FeaturesTwoGrid() {
         <div className="z-20 grid grid-cols-3 gap-6 mb-6 overflow-hidden">
 
           <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
-            <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
-              <div className="py-4 px-8 mt-3">
+          <div className="z-10 p-3 bg-th-bkg-3 backdrop-blur-xl bg-opacity-5 border border-th-fgd-1 border-opacity-5 h-350 w-full shadow-md rounded-2xl">
+                <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
 
                   <dl className="">
@@ -62,11 +62,11 @@ function FeaturesTwoGrid() {
                               />
                             </div>
                             */}
-                            <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
+                            <h2 className="text-th-fgd-5 font-display text-xl mb-2">
                             {gridItemOne.name}
                             </h2>
                           </dt>
-                          <dd className="text-white text-opacity-50 text-lg">
+                          <dd className="text-th-fgd-3 text-md">
                             {gridItemOne.description}
                             </dd>
                         </div>
@@ -78,7 +78,7 @@ function FeaturesTwoGrid() {
             </div>
           </div>
           <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
-            <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+          <div className="z-10 p-3 bg-th-bkg-3 backdrop-blur-xl bg-opacity-5 border border-th-fgd-1 border-opacity-5 h-350 w-full shadow-md rounded-2xl">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   
@@ -94,11 +94,11 @@ function FeaturesTwoGrid() {
                               />
                             </div>
                             */}
-                            <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
+                            <h2 className="text-th-fgd-5 font-display text-xl mb-2">
                             {gridItemTwo.name}
                             </h2>
                           </dt>
-                          <dd className="text-white text-opacity-50 text-lg">
+                          <dd className="text-th-fgd-3 text-md">
                             {gridItemTwo.description}
                             </dd>
                         </div>
@@ -115,7 +115,7 @@ function FeaturesTwoGrid() {
 
         <div className="z-20 grid grid-cols-3 gap-6">
           <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
-            <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+          <div className="z-10 p-3 bg-th-bkg-3 backdrop-blur-xl bg-opacity-5 border border-th-fgd-1 border-opacity-5 h-350 w-full shadow-md rounded-2xl">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   
@@ -131,11 +131,11 @@ function FeaturesTwoGrid() {
                               />
                             </div>
                             */}
-                            <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
+                            <h2 className="text-th-fgd-5 font-display text-xl mb-2">
                             {gridItemThree.name}
                             </h2>
                           </dt>
-                          <dd className="text-white text-opacity-50 text-lg">
+                          <dd className="text-th-fgd-3 text-md">
                             {gridItemThree.description}
                             </dd>
                         </div>
@@ -148,7 +148,7 @@ function FeaturesTwoGrid() {
           </div>
           
           <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
-            <div className="z-10 p-3 bg-white backdrop-blur-xl bg-opacity-5 border border-white border-opacity-5 h-350 w-full shadow-md rounded-xl overflow-hidden mx-auto">
+           <div className="z-10 p-3 bg-th-bkg-3 backdrop-blur-xl bg-opacity-5 border border-th-fgd-1 border-opacity-5 h-350 w-full shadow-md rounded-2xl">
               <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
                   
@@ -164,11 +164,11 @@ function FeaturesTwoGrid() {
                               />
                             </div>
                             */}
-                            <h2 className="text-yellow-300 font-semibold text-xl tracking-wide mb-2">
+                            <h2 className="text-th-fgd-5 font-display text-xl mb-2">
                             {gridItemFour.name}
                             </h2>
                           </dt>
-                          <dd className="text-white text-opacity-50 text-lg">
+                          <dd className="text-th-fgd-3 text-md">
                             {gridItemFour.description}
                             </dd>
                         </div>
