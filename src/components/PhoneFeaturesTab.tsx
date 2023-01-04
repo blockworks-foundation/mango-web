@@ -37,14 +37,14 @@ function PhoneFeaturesTabs() {
     <div className="grid grid-cols-2 max-w-7xl mx-auto py-20">
         <Tab.Group vertical>
             <div className="">
-            <Tab.List className={"text-white flex flex-col gap-8 max-w-xl m-auto"}>
-                <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-xl mt-4 mb-4 align-top hover:shadow-xl transition-shadow duration-300 ease-in-out"}>
+            <Tab.List className={"text-th-fgd-5 flex flex-col gap-8 max-w-xl m-auto border-l-4 border-th-bkg-2 border-opacity-5"}>
+                <Tab className={"group -ml-1 bg-white bg-opacity-0 hover:bg-th-bkg-2 focus:bg-th-bkg-2 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-red focus:border-opacity-100"}>
                 
                     <dl className="">
                     {featureOne.map((featureOne) => (
                         <div className="text-left  align-top" key={featureOne.name}>
                         <dt>
-                            <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                            <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg group-focus:text-opacity-100 transition-all duration-150 ease-in-out">
                             
                             <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -66,20 +66,20 @@ function PhoneFeaturesTabs() {
                             </div>
 
                         </dt>
-                        <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
+                        <dd className="mt-2 text-base text-th-fgd-3 transition duration-75 ease-in group-hover:text-th-fgd-5">
                             {featureOne.description}
                         </dd>
                         </div>
                     ))}
                     </dl>
                 </Tab>
-                <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-xl mt-4 mb-4 hover:shadow-xl transition-shadow duration-300 ease-in-out"}>
+                <Tab className={"group -ml-1 bg-white bg-opacity-0 hover:bg-th-bkg-2 focus:bg-th-bkg-2 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100 "}>
                 
                 <dl className="">
                     {featureTwo.map((featureTwo) => (
                     <div className="text-left" key={featureTwo.name}>
                         <dt>
-                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg group-focus:text-opacity-100 transition-all duration-150 ease-in-out">
                             
                             <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -100,7 +100,7 @@ function PhoneFeaturesTabs() {
                             </div>
 
                         </dt>
-                        <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
+                        <dd className="mt-2 text-base text-th-fgd-3 transition duration-75 ease-in group-hover:text-th-fgd-5">
                         {featureTwo.description}
                         </dd>
                     </div>
@@ -108,13 +108,13 @@ function PhoneFeaturesTabs() {
                 </dl>
 
                 </Tab>
-                <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-xl mt-4 mb-4 hover:shadow-xl transition-shadow duration-300 ease-in-out"}>
+                <Tab className={"group -ml-1 bg-white bg-opacity-0 hover:bg-th-bkg-2 focus:bg-th-bkg-2 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-green focus:border-opacity-100"}>
 
                 <dl className="">
                     {featureThree.map((featureThree) => (
                     <div className="text-left" key={featureThree.name}>
                         <dt>
-                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg group-focus:text-opacity-100 transition-all duration-150 ease-in-out">
                             <svg 
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 24 24" 
@@ -132,7 +132,7 @@ function PhoneFeaturesTabs() {
 
                             </div>
                         </dt>
-                        <dd className="mt-2 text-base text-white opacity-40 transition duration-75 ease-in group-hover:opacity-80">
+                        <dd className="mt-2 text-base text-th-fgd-3 transition duration-75 ease-in group-hover:text-th-fgd-5">
                         {featureThree.description}
                         </dd>
                     </div>
