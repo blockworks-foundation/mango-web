@@ -9,7 +9,7 @@ export const activeGradient =
 
 const StyledButton = styled.button<ButtonProps>`
   :before {
-    ${tw`absolute left-0 top-0 opacity-0 h-full w-full block transition-opacity duration-300`}
+    ${tw`absolute left-0 top-0 opacity-0 h-full w-full block transition-opacity duration-300 `}
     ${({ gray }) => (gray ? tw`bg-mango-bkg-3` : tw`${activeGradient}`)}
     border-radius: inherit;
     content: '';

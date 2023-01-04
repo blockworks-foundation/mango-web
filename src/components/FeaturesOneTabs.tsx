@@ -35,14 +35,17 @@ function FeaturesOneTabs() {
   return (
     <>
     <Tab.Group manual>
-      <Tab.List className={"text-white grid grid-cols-3 gap-8 max-w-7xl m-auto"}>
-          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-xl mt-4 mb-4 align-top"}>
+      <div className="border-t-4 border-white border-opacity-5 w-screen 2xl:ml-44 xl:ml-16">
+
+      </div>
+      <Tab.List className={"text-white grid grid-cols-3 max-w-7xl m-auto"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-red focus:border-opacity-100"}>
         
             <dl className="">
               {featureOne.map((featureOne) => (
-                <div className="text-left  align-top" key={featureOne.name}>
+                <div className="text-left" key={featureOne.name}>
                   <dt>
-                    <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                    <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
                       <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       viewBox="0 0 24 24" 
@@ -77,13 +80,13 @@ function FeaturesOneTabs() {
               ))}
             </dl>
           </Tab>
-          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-xl mt-4 mb-4"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-yellow focus:border-opacity-100"}>
         
           <dl className="">
             {featureTwo.map((featureTwo) => (
               <div className="text-left" key={featureTwo.name}>
                 <dt>
-                  <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                  <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
                       <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       viewBox="0 0 24 24" 
@@ -117,13 +120,13 @@ function FeaturesOneTabs() {
           </dl>
 
           </Tab>
-          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 rounded-xl mt-4 mb-4"}>
+          <Tab className={"group bg-white bg-opacity-0 hover:bg-opacity-5 focus:bg-opacity-5 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-green focus:border-opacity-100"}>
 
           <dl className="">
             {featureThree.map((featureThree) => (
               <div className="text-left" key={featureThree.name}>
                 <dt>
-                  <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                  <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-opacity-90 group-hover:shadow-lg transition-all duration-150 ease-in-out">
                     <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     viewBox="0 0 24 24" 

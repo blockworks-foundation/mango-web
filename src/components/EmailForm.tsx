@@ -52,7 +52,7 @@ const EmailForm = () => {
                       value={email}
                       onChange={handleChange}
                     />
-                    <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                    <div className="mt-3 rounded-xl sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                       <Button>
                         <span className="">Sign me up!</span>
                       </Button>
