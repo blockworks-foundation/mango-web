@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 import tw from 'twin.macro';
 
 export const idleGradient =
-  'bg-gradient-to-r from-mango-yellow to-mango-red'
+  'bg-gradient-to-bl from-yellow-50 via-mango-yellow to-mango-green '
 export const activeGradient =
-  'bg-gradient-to-bl from-mango-green via-mango-yellow to-mango-orange'
+  'bg-gradient-to-r from-yellow-100 to-white'
 
 const StyledButton = styled.button<ButtonProps>`
   :before {
@@ -56,7 +56,7 @@ const ButtonWhite: FunctionComponent<ButtonProps> = ({
 }) => {
   return (
     <StyledButton
-      className={`${className} relative z-10 px-6 py-2 rounded-xl text-white font-display hover:shadow-lg hover:-translate-y-1 transition duration-150 ease-in-out ${
+      className={`${className} relative z-10 px-6 py-2 rounded-xl text-black text-opacity-60 hover:text-opacity-100 font-display hover:shadow-lg hover:-translate-y-0 transition duration-150 ease-in-out ${
         gray ? 'bg-th-bkg-3' : idleGradient
       }`}
       gray={gray}
