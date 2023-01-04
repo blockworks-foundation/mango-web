@@ -147,17 +147,15 @@ function PhoneFeaturesTabs() {
             <Tab.Panels className={"text-white"}>
                 <Tab.Panel>
 
-                <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
-                <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
-                    <ul className="flex flex-row space-x-4">
-                        <li className="bg-mango-red h-4 w-4 rounded-full"></li>
-                        <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
-                        <li className="bg-mango-green h-4 w-4 rounded-full"></li>
+                <div className="mt-20 m-auto rounded-[50px] w-450 shadow-xl">
+                <div className="bg-white bg-opacity-0 h-750 w-450 rounded-[50px] backdrop-blur-xl border-[5px] border-solid border-white border-opacity-10">
+                <div className="flex items-center flex-col">
+                    <ul className="absolute">
+                        <li className="bg-mango-bkg-4 h-8 w-28 rounded-full mt-8"></li>
                     </ul>
                 </div>
-                <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
                 <img
-                    className="z-0 reletive w-full h-auto rounded-b-2xl"
+                    className="z-0 reletive w-full h-auto rounded-[50px]"
                     src={`/assets/images/feature_screen_one.png`}          
                     alt=""
                     />
