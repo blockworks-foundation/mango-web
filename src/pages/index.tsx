@@ -20,7 +20,6 @@ const Index = () => {
       <ProductTwo />
       <FeaturesPhoneGrid />
       <PhoneFeaturesTabs />
-
       <Footer />
     </div>
   );
