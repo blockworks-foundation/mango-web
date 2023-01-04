@@ -1,4 +1,3 @@
-import ButtonWhite from "@/components/ButtonWhite";
 import GradientText from "@/components/GradientText";
 
 const CallToAction = () => {
@@ -11,23 +10,33 @@ const CallToAction = () => {
         <div className="lg:self-center">
         <h2 className="text-4xl font-mono text-white w-screen">
             <span className="block">
-            Access to what you need. 
+            Doesnt matter where you are. 
             <br />
-            <GradientText>No approvals needed.</GradientText>
+            <GradientText>We open-source everything.</GradientText>
             </span>
         </h2>
+        <div className="py-8">
 
-        <div className="mt-8 flex flex-row">
-                      
-                      <ButtonWhite>
-                        <a
-                          rel="noreferrer"
-                          target="_blank"
-                          href="https://trade.mango.markets"
-                        >
-                          Discover 🥭
-                        </a>
-                      </ButtonWhite>
+        <div className="flex flex-row bg-th-bkg-2 border-2 border-th-fgd-3 rounded-[10px]">
+                        <span className="p-2 bg-white bg-opacity-10 border-r-2 border-th-fgd-3 rounded-l-[8px]">
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          viewBox="0 0 24 24" 
+                          fill="currentColor" 
+                          className="w-6 h-6 text-white text-opacity-50 group-hover:text-mango-yellow">
+                          <path fillRule="evenodd" d="M10.5 3A1.501 1.501 0 009 4.5h6A1.5 1.5 0 0013.5 3h-3zm-2.693.178A3 3 0 0110.5 1.5h3a3 3 0 012.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 01-3 3H6.75a3 3 0 01-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15z" 
+                          clipRule="evenodd" />
+                        </svg>
+
+                        </span>
+                          <span>
+                            <p className=" text-xs font-mono text-th-fgd-4 w-screen p-3">
+                              https://github.com/blockworks-foundation/mango-v4-ui.git
+                            </p>
+                          </span>
+
+        </div>
+
         </div>
         </div>
     </div>
