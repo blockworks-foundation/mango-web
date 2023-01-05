@@ -261,7 +261,11 @@ module.exports = {
           footer: {
               words: ['Germany.', 'France.', 'England.', 'Mexico.', 'Peru.', 'Colombia.', 'New york.', 'California.', 'Australia.', 'Japan.'],
               delay: 1
-          }
+          },
+          url: {
+            words: ['https://trade.mango.markets'],
+            delay: 1
+        },
       }
   }),
   
