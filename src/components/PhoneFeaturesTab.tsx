@@ -34,11 +34,11 @@ const featureThree = [
 function PhoneFeaturesTabs() {
   return (
     <>
-    <div className="grid grid-cols-2 max-w-7xl mx-auto py-20">
+    <div className="grid grid-cols-2 max-w-7xl mx-auto py-40 space-y-0 mt-40">
         <Tab.Group vertical>
             <div className="">
-            <Tab.List className={"text-th-fgd-5 flex flex-col max-w-xl m-auto border-l-4 border-th-bkg-3 border-opacity-5"}>
-                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-red focus:border-opacity-100"}>
+            <Tab.List className={"text-th-fgd-5 flex flex-col max-w-xl m-auto border-l-4 border-th-bkg-3 border-opacity-5 "}>
+                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8 my-0 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-red focus:border-opacity-100"}>
                 
                     <dl className="">
                     {featureOne.map((featureOne) => (
@@ -73,7 +73,7 @@ function PhoneFeaturesTabs() {
                     ))}
                     </dl>
                 </Tab>
-                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100 "}>
+                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8  my-0 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100 "}>
                 
                 <dl className="">
                     {featureTwo.map((featureTwo) => (
@@ -108,7 +108,7 @@ function PhoneFeaturesTabs() {
                 </dl>
 
                 </Tab>
-                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8  mt-4 mb-4 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-green focus:border-opacity-100"}>
+                <Tab className={"group -ml-1 hover:bg-th-bkg-3 p-8  my-0 align-top transition-shadow duration-300 ease-in-out focus:border-l-4 focus:border-mango-green focus:border-opacity-100"}>
 
                 <dl className="">
                     {featureThree.map((featureThree) => (
@@ -146,61 +146,92 @@ function PhoneFeaturesTabs() {
             <div className="">
             <Tab.Panels className={"text-white"}>
                 <Tab.Panel>
+                    {/* PHone in CSS */}
+                        <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-xl">
+                            <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
+                            <span className="transform translate-y-56 translate-x-[450px] h-[70px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
+                            <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>
+                            <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[300px] rounded-l-full -ml-1"></span>
 
-                <div className="mt-20 m-auto rounded-[50px] w-450 shadow-xl">
-                <div className="bg-white bg-opacity-0 h-750 w-450 rounded-[50px] backdrop-blur-xl border-[5px] border-solid border-white border-opacity-10">
-                <div className="flex items-center flex-col">
-                    <ul className="absolute">
-                        <li className="bg-mango-bkg-4 h-8 w-28 rounded-full mt-8"></li>
-                    </ul>
-                </div>
-                <img
-                    className="z-0 reletive w-full h-auto rounded-[50px]"
-                    src={`/assets/images/feature_screen_one.png`}          
-                    alt=""
-                    />
-                </div>
-                </div>
-
-                </Tab.Panel>
-                <Tab.Panel>
-
-                <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
-                <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
-                    <ul className="flex flex-row space-x-4">
-                        <li className="bg-mango-red h-4 w-4 rounded-full"></li>
-                        <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
-                        <li className="bg-mango-green h-4 w-4 rounded-full"></li>
-                    </ul>
-                </div>
-                <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
-                <img
-                    className="z-0 reletive w-full h-auto rounded-b-2xl"
-                    src={`/assets/images/feature_screen_two.png`}          
-                    alt=""
-                    />
-                </div>
-                </div>
+                            <div className="bg-th-fgd-1 bg-opacity-0 h-900 w-450 rounded-[50px] backdrop-blur-xl border-[5px] border-solid border-th-bkg-4 border-opacity-10">           
+                                <div className="h-901 border-[5px] border-solid border-th-bkg-3 rounded-[46px]">
+                                    <div className="flex items-center flex-col">
+                                        <ul className="absolute">
+                                            <li className="bg-black bg-opacity-80 h-[25px] w-[130px] rounded-full mt-6"></li>
+                                        </ul>
+                                    </div>
+                                        <img
+                                            className="z-0 reletive w-full h-full rounded-[41px]"
+                                            src={`/assets/images/iphone-1.jpg`}          
+                                            alt=""
+                                            />
+                                    <div className="flex items-center flex-col">
+                                        <ul className="absolute">
+                                            <li className="bg-white bg-opacity-80 h-[6px] w-[125px] rounded-full -mt-6 animate-bounce"></li>
+                                        </ul>
+                                    </div>   
+                                </div>
+                                </div> 
+                        </div>
 
                 </Tab.Panel>
                 <Tab.Panel>
 
-                <div className="mt-20 max-w-7xl m-auto rounded-2xl shadow-xl">
-                <div className="bg-white bg-opacity-5 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
-                    <ul className="flex flex-row space-x-4">
-                        <li className="bg-mango-red h-4 w-4 rounded-full"></li>
-                        <li className="bg-mango-yellow h-4 w-4 rounded-full"></li>
-                        <li className="bg-mango-green h-4 w-4 rounded-full"></li>
-                    </ul>
-                </div>
-                <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-white border-opacity-10">
-                <img
-                    className="z-0 reletive w-full h-auto rounded-b-2xl"
-                    src={`/assets/images/feature_screen_three.png`}          
-                    alt=""
-                    />
-                </div>
-                </div>
+                        <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-xl">
+                                    <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
+                                    <span className="transform translate-y-56 translate-x-[450px] h-[70px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
+                                    <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>
+                                    <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[300px] rounded-l-full -ml-1"></span>
+
+                                    <div className="bg-th-fgd-1 bg-opacity-0 h-900 w-450 rounded-[50px] backdrop-blur-xl border-[5px] border-solid border-th-bkg-4 border-opacity-10">           
+                                        <div className="h-901 border-[5px] border-solid border-th-bkg-3 rounded-[46px]">
+                                            <div className="flex items-center flex-col">
+                                                <ul className="absolute">
+                                                    <li className="bg-black bg-opacity-80 h-[25px] w-[130px] rounded-full mt-6"></li>
+                                                </ul>
+                                            </div>
+                                                <img
+                                                    className="z-0 reletive w-full h-full rounded-[41px]"
+                                                    src={`/assets/images/iphone-2.jpg`}          
+                                                    alt=""
+                                                    />
+                                            <div className="flex items-center flex-col">
+                                                <ul className="absolute">
+                                                    <li className="bg-white bg-opacity-80 h-[6px] w-[125px] rounded-full -mt-6 animate-bounce"></li>
+                                                </ul>
+                                            </div>   
+                                        </div>
+                                        </div> 
+                                </div>
+                </Tab.Panel>
+                <Tab.Panel>
+
+                        <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-xl">
+                                    <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
+                                    <span className="transform translate-y-56 translate-x-[450px] h-[70px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
+                                    <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>
+                                    <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[300px] rounded-l-full -ml-1"></span>
+
+                                    <div className="bg-th-fgd-1 bg-opacity-0 h-900 w-450 rounded-[50px] backdrop-blur-xl border-[5px] border-solid border-th-bkg-4 border-opacity-10">           
+                                        <div className="h-901 border-[5px] border-solid border-th-bkg-3 rounded-[46px]">
+                                            <div className="flex items-center flex-col">
+                                                <ul className="absolute">
+                                                    <li className="bg-black bg-opacity-80 h-[25px] w-[130px] rounded-full mt-6"></li>
+                                                </ul>
+                                            </div>
+                                                <img
+                                                    className="z-0 reletive w-full h-full rounded-[41px]"
+                                                    src={`/assets/images/iphone-3.jpg`}          
+                                                    alt=""
+                                                    />
+                                            <div className="flex items-center flex-col">
+                                                <ul className="absolute">
+                                                    <li className="bg-white bg-opacity-80 h-[6px] w-[125px] rounded-full -mt-6 animate-bounce"></li>
+                                                </ul>
+                                            </div>   
+                                        </div>
+                                        </div> 
+                                </div>
 
                 </Tab.Panel>
             </Tab.Panels>
