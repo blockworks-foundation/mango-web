@@ -23,7 +23,7 @@ const ThemeSwitcher = () => {
       {({ open }) => (
         <div className="relative group">
           <Popover.Button
-            className={`flex z-30 relative items-center justify-center p-1 overflow-hidden rounded-full shadow-2xl group`}
+            className={`flex z-30 relative items-center justify-center p-[3px] overflow-hidden rounded-full shadow-2xl group`}
           >
               <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-300 group-hover:bg-mango-green rounded-xl blur-md ease-in-out"></span>
               <span className="absolute inset-0 w-full h-full transition duration-300 group-hover:rotate-180 ease-in-out">
@@ -32,9 +32,9 @@ const ThemeSwitcher = () => {
               </span>
             <span className="relative text-th-fgd-3 bg-th-bkg-3 p-2 rounded-full hover:bg-th-bkg-1 group-hover:text-mango-green transition-all duration-100 ease-in-out">
             {open ? (
-              <XMarkIcon className="h-5 w-5" />
+              <XMarkIcon className="h-6 w-6" />
             ) : (
-              <SwatchIcon className="h-5 w-5" />
+              <SwatchIcon className="h-6 w-6" />
             )}
             </span>  
           </Popover.Button>
