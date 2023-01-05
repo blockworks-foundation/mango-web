@@ -8,7 +8,7 @@
 
 const gridItemOne = [
   {
-    name: 'Maximum capital efficiency.',
+    name: 'Maximum Capital Efficiency.',
     description:
       "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
     //icon: CurrencyDollarIcon,
@@ -16,7 +16,7 @@ const gridItemOne = [
 ]
 const gridItemTwo = [
   {
-    name: 'LOL.',
+    name: 'Trustless Markets.',
     description:
       "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
     //icon: CurrencyDollarIcon,
@@ -24,7 +24,7 @@ const gridItemTwo = [
 ]
 const gridItemThree = [
   {
-    name: 'Nice.',
+    name: 'Permissionless Futures & Spot.',
     description:
       "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
     //icon: CurrencyDollarIcon,
@@ -32,7 +32,7 @@ const gridItemThree = [
 ]
 const gridItemFour = [
   {
-    name: 'Maximum capital efficiency.',
+    name: 'Complete Control.',
     description:
       "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
     //icon: CurrencyDollarIcon,
@@ -62,7 +62,7 @@ function FeaturesTwoGrid() {
                               />
                             </div>
                             */}
-                            <h2 className="text-th-fgd-5 font-display text-xl mb-2">
+                            <h2 className="text-th-fgd-5 font-display tracking-tighter text-xl mb-2">
                             {gridItemOne.name}
                             </h2>
                           </dt>
