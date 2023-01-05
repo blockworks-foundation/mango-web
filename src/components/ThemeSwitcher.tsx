@@ -54,7 +54,7 @@ const ThemeSwitcher = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute right-0 top-16 thin-scroll z-20 max-h-screen w-36 space-y-1 overflow-auto rounded-xl bg-th-bkg-3 border border-th-bkg-4 p-2`}
+              className={`absolute right-0 top-16 thin-scroll z-20 max-h-screen w-36 space-y-1 overflow-auto rounded-xl shadow-lg bg-th-bkg-3 border border-th-fgd-1 p-2`}
             >
               {THEMES.map((value) => (
                 <button
