@@ -21,7 +21,7 @@ const ThemeSwitcher = () => {
   return (
     <Popover>
       {({ open }) => (
-        <div className="relative">
+        <div className="relative group">
           <Popover.Button
             className={`flex relative items-center justify-center p-1 overflow-hidden rounded-full shadow-2xl group`}
           >
@@ -38,6 +38,10 @@ const ThemeSwitcher = () => {
             )}
             </span>  
           </Popover.Button>
+
+          <div className="p-1 -mt-3 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-100 transition duration-700 group-hover:duration-700 animate-tilt"></div>
+          <div className="p-2 -mt-3 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-50 transition duration-300 group-hover:duration-700 animate-tilt"></div>
+
           <Transition
             appear={true}
             show={open}
@@ -66,6 +70,7 @@ const ThemeSwitcher = () => {
             </Popover.Panel>
           </Transition>
         </div>
+        
       )}
     </Popover>
   )
