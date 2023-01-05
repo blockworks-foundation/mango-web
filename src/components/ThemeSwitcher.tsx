@@ -21,15 +21,22 @@ const ThemeSwitcher = () => {
   return (
     <Popover>
       {({ open }) => (
-        <div className="relative ">
+        <div className="relative">
           <Popover.Button
-            className={`flex h-10 w-10 default-transition items-center justify-center bg-th-bkg-3 rounded-full text-th-fgd-2 hover:text-mango-yellow transition duration-100 ease-in-out`}
+            className={`flex relative items-center justify-center p-1 overflow-hidden rounded-full shadow-2xl group`}
           >
+              <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-300 group-hover:bg-mango-green rounded-xl blur-md ease-in-out"></span>
+              <span className="absolute inset-0 w-full h-full transition duration-300 group-hover:rotate-180 ease-in-out">
+              <span className="absolute bottom-0 left-0 w-24 h-24 -ml-10 group-hover:bg-mango-yellow rounded-full blur-lg"></span>
+              <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 group-hover:bg-mango-orange rounded-full blur-lg"></span>
+              </span>
+            <span className="relative text-th-fgd-3 bg-th-bkg-3 p-2 rounded-full hover:bg-th-bkg-1 hover:text-mango-yellow transition-all duration-100 ease-in-out">
             {open ? (
               <XMarkIcon className="h-6 w-6" />
             ) : (
               <SunIcon className="h-6 w-6" />
             )}
+            </span>  
           </Popover.Button>
           <Transition
             appear={true}
@@ -43,7 +50,7 @@ const ThemeSwitcher = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute right-0 top-16 thin-scroll z-20 max-h-screen w-36 space-y-2 overflow-auto rounded-xl bg-th-bkg-3 border border-th-bkg-4 p-2`}
+              className={`absolute right-0 top-16 thin-scroll z-20 max-h-screen w-36 space-y-1 overflow-auto rounded-xl bg-th-bkg-3 border border-th-bkg-4 p-2`}
             >
               {THEMES.map((value) => (
                 <button

@@ -901,7 +901,7 @@ const Nav = () => {
                   </ButtonTwo>
                 </div>
               </div>
-              <div className="bg-th-bkg-4 mt-1 rounded-full ml-6 p-1 shadow-lg">
+              <div className="bg-th-fgd-2 mt-1 rounded-full ml-6 shadow-lg">
                   <ThemeSwitcher />
                 </div>
             </div>
