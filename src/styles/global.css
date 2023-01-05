@@ -113,16 +113,16 @@ th {
   --fgd-5: theme('colors.light-theme.fgd-5');
 }
 
-[data-theme='Dark'] {
-  --bkg-1: theme('colors.dark-theme.bkg-1');
-  --bkg-2: theme('colors.dark-theme.bkg-2');
-  --bkg-3: theme('colors.dark-theme.bkg-3');
-  --bkg-4: theme('colors.dark-theme.bkg-4');
-  --fgd-1: theme('colors.dark-theme.fgd-1');
-  --fgd-2: theme('colors.dark-theme.fgd-2');
-  --fgd-3: theme('colors.dark-theme.fgd-3');
-  --fgd-4: theme('colors.dark-theme.fgd-4');
-  --fgd-5: theme('colors.dark-theme.fgd-5');
+[data-theme='Darker'] {
+  --bkg-1: theme('colors.darker-theme.bkg-1');
+  --bkg-2: theme('colors.darker-theme.bkg-2');
+  --bkg-3: theme('colors.darker-theme.bkg-3');
+  --bkg-4: theme('colors.darker-theme.bkg-4');
+  --fgd-1: theme('colors.darker-theme.fgd-1');
+  --fgd-2: theme('colors.darker-theme.fgd-2');
+  --fgd-3: theme('colors.darker-theme.fgd-3');
+  --fgd-4: theme('colors.darker-theme.fgd-4');
+  --fgd-5: theme('colors.darker-theme.fgd-5');
 }
 
 [data-theme='Mango'] {
@@ -137,16 +137,16 @@ th {
   --fgd-5: theme('colors.mango.fgd-5');
 }
 
-[data-theme='Medium'] {
-  --bkg-1: theme('colors.medium-theme.bkg-1');
-  --bkg-2: theme('colors.medium-theme.bkg-2');
-  --bkg-3: theme('colors.medium-theme.bkg-3');
-  --bkg-4: theme('colors.medium-theme.bkg-4');
-  --fgd-1: theme('colors.medium-theme.fgd-1');
-  --fgd-2: theme('colors.medium-theme.fgd-2');
-  --fgd-3: theme('colors.medium-theme.fgd-3');
-  --fgd-4: theme('colors.medium-theme.fgd-4');
-  --fgd-5: theme('colors.medium-theme.fgd-5');
+[data-theme='Dark'] {
+  --bkg-1: theme('colors.dark-theme.bkg-1');
+  --bkg-2: theme('colors.dark-theme.bkg-2');
+  --bkg-3: theme('colors.dark-theme.bkg-3');
+  --bkg-4: theme('colors.dark-theme.bkg-4');
+  --fgd-1: theme('colors.dark-theme.fgd-1');
+  --fgd-2: theme('colors.dark-theme.fgd-2');
+  --fgd-3: theme('colors.dark-theme.fgd-3');
+  --fgd-4: theme('colors.dark-theme.fgd-4');
+  --fgd-5: theme('colors.dark-theme.fgd-5');
 }
 
 [data-theme='High Contrast'] {

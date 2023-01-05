@@ -77,7 +77,7 @@ module.exports = {
           'fgd-4': 'hsl(0, 0%, 0%, 70%)',
           'fgd-5': 'hsl(0, 0%, 0%)',
         },
-        'dark-theme': {
+        'darker-theme': {
           'bkg-1': 'hsl(240, 6%, 7%)',
           'bkg-2': 'hsl(240, 6%, 12%)',
           'bkg-3': 'hsl(240, 6%, 17%)',
@@ -88,7 +88,7 @@ module.exports = {
           'fgd-4': 'hsl(0, 0%, 100%, 80%)',
           'fgd-5': 'hsl(0, 0%, 100%)',
         },
-        'medium-theme': {
+        'dark-theme': {
           'bkg-1': 'hsl(240, 6%, 12%)',
           'bkg-2': 'hsl(240, 6%, 17%)',
           'bkg-3': 'hsl(240, 6%, 22%)',

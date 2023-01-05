@@ -3,17 +3,20 @@ import { useTheme } from 'next-themes'
 import { SwatchIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Fragment } from 'react'
 
-const THEMES = [
-  'Light',
-  'Medium',
+const THEMESDARK = [
   'Dark',
+  'Darker',
   'High Contrast',
   'Mango',
-  'Avocado',
-  'Banana',
   'Blueberry',
-  'Lychee',
   'Olive',
+]
+
+const THEMESLIGHT = [
+  'Light',
+  'Banana',
+  'Lychee',
+  'Avocado',
 ]
 
 const ThemeSwitcher = () => {
@@ -54,11 +57,16 @@ const ThemeSwitcher = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute right-0 top-16 thin-scroll z-20 max-h-screen w-36 space-y-1 overflow-auto rounded-xl shadow-lg bg-th-bkg-3 border border-th-fgd-1 p-2`}
+              className={`absolute right-0 top-16 thin-scroll z-20 max-h-screen w-72 overflow-auto rounded-xl shadow-lg bg-th-bkg-3 border border-th-fgd-1 p-4`}
             >
-              {THEMES.map((value) => (
+              <div className="grid grid-cols-2">
+              <div className="col-span-1 px-1"> 
+              <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-4">
+                Light
+              </h3>              
+              {THEMESLIGHT.map((value) => (
                 <button
-                  className={`whitespace-nowrap font-body no-underline text-th-fgd-3 md:hover:text-th-fgd-5 w-full text-left hover:bg-th-fgd-1 focus:bg-th-fgd-1 rounded-lg p-[5px] pl-2 ${
+                  className={`whitespace-nowrap font-body no-underline text-th-fgd-3 md:hover:text-th-fgd-5 w-full text-left hover:bg-th-fgd-1 focus:bg-th-fgd-1 rounded-lg p-[5px] pl-2 mb-1 ${
                     value === theme ? 'text-th-fgd-4' : ''
                   }`}
                   onClick={() => setTheme(value)}
@@ -67,7 +75,26 @@ const ThemeSwitcher = () => {
                   {value}
                 </button>
               ))}
-            </Popover.Panel>
+              </div>
+              <div className="col-span-1 px-1">                
+              <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-4">
+                Dark
+              </h3>
+             {THEMESDARK.map((value) => (
+                <button
+                  className={`whitespace-nowrap font-body no-underline text-th-fgd-3 md:hover:text-th-fgd-5 w-full text-left hover:bg-th-fgd-1 focus:bg-th-fgd-1 rounded-lg p-[5px] pl-2 mb-1  ${
+                    value === theme ? 'text-th-fgd-4' : ''
+                  }`}
+                  onClick={() => setTheme(value)}
+                  key={value}
+                >
+                  {value}
+                </button>
+              ))}
+              </div>
+
+              </div>
+             </Popover.Panel>
           </Transition>
         </div>
         
