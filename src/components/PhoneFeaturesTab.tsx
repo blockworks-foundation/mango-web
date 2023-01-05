@@ -149,7 +149,7 @@ function PhoneFeaturesTabs() {
                     {/* PHone in CSS */}
                         <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-xl">
                             <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
-                            <span className="transform translate-y-56 translate-x-[450px] h-[70px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
+                            <span className="transform translate-y-56 translate-x-[450px] h-[110px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
                             <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>
                             <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[300px] rounded-l-full -ml-1"></span>
 
@@ -157,7 +157,7 @@ function PhoneFeaturesTabs() {
                                 <div className="h-901 border-[5px] border-solid border-th-bkg-3 rounded-[46px]">
                                     <div className="flex items-center flex-col">
                                         <ul className="absolute">
-                                            <li className="bg-black bg-opacity-80 h-[25px] w-[130px] rounded-full mt-6"></li>
+                                            <li className="bg-black bg-opacity-80 h-[30px] w-[130px] rounded-full mt-6"></li>
                                         </ul>
                                     </div>
                                         <img
@@ -179,7 +179,7 @@ function PhoneFeaturesTabs() {
 
                         <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-xl">
                                     <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
-                                    <span className="transform translate-y-56 translate-x-[450px] h-[70px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
+                                    <span className="transform translate-y-56 translate-x-[450px] h-[110px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
                                     <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>
                                     <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[300px] rounded-l-full -ml-1"></span>
 
@@ -187,7 +187,7 @@ function PhoneFeaturesTabs() {
                                         <div className="h-901 border-[5px] border-solid border-th-bkg-3 rounded-[46px]">
                                             <div className="flex items-center flex-col">
                                                 <ul className="absolute">
-                                                    <li className="bg-black bg-opacity-80 h-[25px] w-[130px] rounded-full mt-6"></li>
+                                                    <li className="bg-black bg-opacity-80 h-[30px] w-[130px] rounded-full mt-6"></li>
                                                 </ul>
                                             </div>
                                                 <img
@@ -208,7 +208,7 @@ function PhoneFeaturesTabs() {
 
                         <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-xl">
                                     <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
-                                    <span className="transform translate-y-56 translate-x-[450px] h-[70px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
+                                    <span className="transform translate-y-56 translate-x-[450px] h-[110px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
                                     <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>
                                     <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[300px] rounded-l-full -ml-1"></span>
 
@@ -216,7 +216,7 @@ function PhoneFeaturesTabs() {
                                         <div className="h-901 border-[5px] border-solid border-th-bkg-3 rounded-[46px]">
                                             <div className="flex items-center flex-col">
                                                 <ul className="absolute">
-                                                    <li className="bg-black bg-opacity-80 h-[25px] w-[130px] rounded-full mt-6"></li>
+                                                    <li className="bg-black bg-opacity-80 h-[30px] w-[130px] rounded-full mt-6"></li>
                                                 </ul>
                                             </div>
                                                 <img

@@ -45,7 +45,7 @@ function FeaturesOneTabs() {
               {featureOne.map((featureOne) => (
                 <div className="text-left" key={featureOne.name}>
                   <dt>
-                    <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-th-fgd-5 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                    <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white group-hover:shadow-lg transition-all duration-150 ease-in-out">
                       <svg
                       xmlns="http://www.w3.org/2000/svg" 
                       viewBox="0 0 24 24" 
@@ -86,7 +86,7 @@ function FeaturesOneTabs() {
             {featureTwo.map((featureTwo) => (
               <div className="text-left" key={featureTwo.name}>
                 <dt>
-                   <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-th-fgd-5 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                   <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white group-hover:shadow-lg transition-all duration-150 ease-in-out">
                       <svg 
                       xmlns="http://www.w3.org/2000/svg" 
                       viewBox="0 0 24 24" 
@@ -126,7 +126,7 @@ function FeaturesOneTabs() {
             {featureThree.map((featureThree) => (
               <div className="text-left" key={featureThree.name}>
                 <dt>
-                   <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-th-fgd-5 group-hover:shadow-lg transition-all duration-150 ease-in-out">
+                   <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 bg-opacity-5 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white group-hover:shadow-lg transition-all duration-150 ease-in-out">
                     <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     viewBox="0 0 24 24" 

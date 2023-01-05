@@ -8,7 +8,7 @@ const CallToAction = () => {
            <MangoBlob />
           </div> 
 <div className="z-50 mx-auto max-w-7xl pt-0 pb-16 my-16 mt-0">
-    <div className="group h-72 transform transition duration-200 ease-in-out hover:-translate-y-2 bg-th-bkg-4 border border-th-fgd-2 rounded-[40px] shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-mangotop bg-fit bg-top bg-no-repeat">
+    <div className="group h-72 transform transition duration-200 ease-in-out hover:-translate-y-2 border border-th-fgd-2 rounded-[40px] shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-mangocpu bg-cover bg-bottom bg-no-repeat">
     <div className="pt-10 pb-12 px-5 sm:pt-16 sm:px-16 lg:py-4 lg:pr-0 xl:py-12 xl:px-16">
         <div className="lg:self-center">
         <h2 className="text-4xl font-mono text-th-fgd-5 w-screen">
@@ -48,7 +48,7 @@ const CallToAction = () => {
     <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
         <img
         className="transform translate-x-2 translate-y-2 object-cover"
-        src="assets/images/mango_cpu.png"
+        src="assets/images/cpu-mango.png"
         alt="mango markets"
         />
     </div>

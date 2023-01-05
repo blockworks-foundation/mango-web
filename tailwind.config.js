@@ -26,7 +26,7 @@ module.exports = {
       backgroundImage: (_) => ({
         'mangotop': "url('/assets/images/mango-top.svg')",
         'mangobottom': "url('/assets/images/mango-bottom.svg')",
-        'bg-cta': "url('/assets/images/bgcta.jpeg')",
+        'mangocpu': "url('/assets/images/bg-cta.svg')",
       }),
       height: {
         350: '350px',
