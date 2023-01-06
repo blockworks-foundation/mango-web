@@ -35,9 +35,9 @@ const ThemeSwitcher = () => {
               </span>
             <span className="relative text-th-fgd-3 bg-th-bkg-3 p-2 rounded-full hover:bg-th-bkg-1 group-hover:text-mango-green transition-all duration-100 ease-in-out">
             {open ? (
-              <XMarkIcon className="h-6 w-6" />
+              <XMarkIcon className="h-5 w-5" />
             ) : (
-              <SwatchIcon className="h-6 w-6" />
+              <SwatchIcon className="h-5 w-5" />
             )}
             </span>  
           </Popover.Button>
