@@ -1,6 +1,6 @@
 import { Popover, Transition } from '@headlessui/react'
 import { useTheme } from 'next-themes'
-import { SwatchIcon, XMarkIcon } from '@heroicons/react/20/solid'
+import { StarIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Fragment } from 'react'
 
 const THEMESDARK = [
@@ -33,11 +33,11 @@ const ThemeSwitcher = () => {
               <span className="absolute bottom-0 left-0 w-24 h-24 -ml-10 group-hover:bg-mango-yellow rounded-full blur-lg"></span>
               <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 group-hover:bg-mango-orange rounded-full blur-lg"></span>
               </span>
-            <span className="relative text-th-fgd-3 bg-th-bkg-3 p-2 rounded-full hover:bg-th-bkg-1 group-hover:text-mango-green transition-all duration-100 ease-in-out">
+            <span className="relative text-th-fgd-3 bg-th-bkg-3 p-2 rounded-full hover:bg-th-bkg-1 group-hover:text-mango-green transition-all duration-100 ease-in-out ">
             {open ? (
               <XMarkIcon className="h-5 w-5" />
             ) : (
-              <SwatchIcon className="h-5 w-5" />
+              <StarIcon className="h-5 w-5" />
             )}
             </span>  
           </Popover.Button>
