@@ -44,7 +44,7 @@ function PhoneFeaturesTabs() {
                     {featureOne.map((featureOne) => (
                         <div className="text-left  align-top" key={featureOne.name}>
                         <dt>
-                            <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg group-focus:text-opacity-100 transition-all duration-150 ease-in-out">
+                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
                             
                             <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -79,7 +79,7 @@ function PhoneFeaturesTabs() {
                     {featureTwo.map((featureTwo) => (
                     <div className="text-left" key={featureTwo.name}>
                         <dt>
-                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg group-focus:text-opacity-100 transition-all duration-150 ease-in-out">
+                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
                             
                             <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -114,7 +114,7 @@ function PhoneFeaturesTabs() {
                     {featureThree.map((featureThree) => (
                     <div className="text-left" key={featureThree.name}>
                         <dt>
-                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-white text-opacity-40 bg-white bg-opacity-10 group-focus:bg-gradient-to-tr group-hover:bg-gradient-to-tr from-mango-green to-mango-orange group-hover:text-opacity-90 group-hover:shadow-lg group-focus:text-opacity-100 transition-all duration-150 ease-in-out">
+                        <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
                             <svg 
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 24 24" 
