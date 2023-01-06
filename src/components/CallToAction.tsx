@@ -12,9 +12,9 @@ const CallToAction = () => {
     <div className="pt-10 pb-12 px-5 sm:pt-16 sm:px-16 lg:py-4 lg:pr-0 xl:py-12 xl:px-16">
         <div className="lg:self-center">
         <h2 className="text-4xl font-display text-th-fgd-5 w-screen">
-            <span className="block">
               Doesnt matter where you are. 
             <br />
+            <span className="text-th-fgd-3">
               We open-source everything.
             </span>
         </h2>
