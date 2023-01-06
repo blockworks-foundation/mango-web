@@ -150,7 +150,7 @@ function PhoneFeaturesTabs() {
                         </div> 
                 <Tab.Panel>
                     {/* PHone in CSS */}
-                        <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-xl">
+                        <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-[0_8px_42px_-5px_rgba(0,0,0,0.35)]">
                             <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
                             <span className="transform translate-y-56 translate-x-[450px] h-[110px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
                             <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>
@@ -179,7 +179,7 @@ function PhoneFeaturesTabs() {
 
                 </Tab.Panel>
                 <Tab.Panel>
-                        <div className="z-20 -mt-24 m-auto rounded-[50px] w-450 shadow-xl">
+                <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-[0_8px_42px_-5px_rgba(0,0,0,0.35)]">
                                     <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
                                     <span className="transform translate-y-56 translate-x-[450px] h-[110px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
                                     <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>
@@ -210,7 +210,7 @@ function PhoneFeaturesTabs() {
                 </Tab.Panel>
                 <Tab.Panel>
 
-                        <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-xl">
+                <div className="-mt-24 m-auto rounded-[50px] w-450 shadow-[0_8px_42px_-5px_rgba(0,0,0,0.35)]">
                                     <span className="h-[30px] w-1 absolute bg-th-fgd-3 mt-[150px] rounded-l-full -ml-1"></span>
                                     <span className="transform translate-y-56 translate-x-[450px] h-[110px] w-1 absolute bg-th-fgd-3 rounded-r-full"></span>
                                     <span className="h-[80px] w-1 absolute bg-th-fgd-2 mt-[200px] rounded-l-full -ml-1"></span>

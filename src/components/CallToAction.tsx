@@ -8,7 +8,7 @@ const CallToAction = () => {
            <MangoBlob />
           </div> 
 <div className="z-50 mx-auto max-w-7xl pt-0 pb-16 my-16 mt-0">
-    <div className="group h-72 transform transition duration-200 ease-in-out hover:-translate-y-2 border border-th-fgd-2 rounded-[40px] shadow-md overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-mangotop bg-cover bg-top bg-no-repeat bg-th-bkg-3">
+    <div className="group h-72 transform transition duration-200 ease-in-out hover:-translate-y-2 border border-th-fgd-2 rounded-[40px] shadow-lg hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.1)] overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-mangotop bg-cover bg-top bg-no-repeat bg-th-bkg-3">
     <div className="pt-10 pb-12 px-5 sm:pt-16 sm:px-16 lg:py-4 lg:pr-0 xl:py-12 xl:px-16">
         <div className="lg:self-center">
         <h2 className="text-4xl font-display text-th-fgd-5 w-screen">
@@ -22,7 +22,7 @@ const CallToAction = () => {
         
         <div
                           onClick={() =>  navigator.clipboard.writeText('git clone https://github.com/blockworks-foundation/mango-v4-ui.git')}
-                          className="group cursor-pointer overflow-hidden inline-flex max-w-md shadow-[inset_0_0_30px_rgba(0,0,0,0.6)] bg-dark-theme-bkg-3 border-2 border-th-fgd-3 hover:border-mango-yellow rounded-[12px] transition-all duration-150 ease-in-out">
+                          className="group cursor-pointer overflow-hidden inline-flex max-w-md shadow-[inset_0_0_30px_rgba(0,0,0,0.3)] bg-dark-theme-bkg-3 border-2 border-th-fgd-3 hover:border-mango-yellow rounded-[12px] transition-all duration-150 ease-in-out">
                         <span className="p-2 bg-black bg-opacity-40 group-hover:bg-opacity-0 border-r-2 border-th-fgd-3 rounded-l-[8px]">
                         <svg 
                           xmlns="http://www.w3.org/2000/svg" 
