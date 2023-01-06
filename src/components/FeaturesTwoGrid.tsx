@@ -10,7 +10,7 @@ const gridItemOne = [
   {
     name: 'Maximum Capital Efficiency.',
     description:
-      "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+      "Cross-collateralized means more oppertunity. Mango's risk engine let's you utilize all your assets so you don't have to think.",
     //icon: CurrencyDollarIcon,
   },
 ]
@@ -42,11 +42,11 @@ const gridItemFour = [
 function FeaturesTwoGrid() {
   return (
     <>
-       <section className="max-w-7xl mx-auto px-8">
+       <section className="max-w-7xl mx-auto px-4">
         <div className="z-20 grid grid-cols-3 gap-6 mb-6">
 
           <div className="lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
-          <div className="z-10 p-3 bg-th-bkg-3 backdrop-blur-xl bg-opacity-5 border border-th-fgd-1 border-opacity-5 h-350 w-full shadow-2xl rounded-2xl">
+          <div className="z-10 bg-th-bkg-3 backdrop-blur-xl bg-opacity-5 border border-th-fgd-1 border-opacity-5 h-350 w-full shadow-2xl rounded-2xl bg-mangocard bg-contain bg-bottom bg-no-repeat">
                 <div className="py-4 px-8 mt-3">
                 <div className="flex flex-col mb-8">
 
@@ -78,9 +78,9 @@ function FeaturesTwoGrid() {
             </div>
           </div>
           <div className="lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3">
-          <div className="z-10 p-3 bg-th-bkg-3 backdrop-blur-xl bg-opacity-5 border border-th-fgd-1 border-opacity-5 h-350 w-full shadow-2xl rounded-2xl">
+          <div className="z-10 bg-th-bkg-3 backdrop-blur-xl bg-opacity-5 border border-th-fgd-1 border-opacity-5 h-350 w-full shadow-2xl rounded-2xl bg-mangocardtwo bg-contain bg-right bg-no-repeat">
               <div className="py-4 px-8 mt-3">
-                <div className="flex flex-col mb-8">
+                <div className="flex flex-col mb-8 w-96">
                   
                 <dl className="">
                       {gridItemTwo.map((gridItemTwo) => (

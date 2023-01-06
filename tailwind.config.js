@@ -27,6 +27,9 @@ module.exports = {
         'mangotop': "url('/assets/images/mango-top.svg')",
         'mangobottom': "url('/assets/images/mango-bottom.svg')",
         'mangocpu': "url('/assets/images/bg-cta.svg')",
+        'mangocard': "url('/assets/images/card-bg-test.svg')",
+        'mangocardtwo': "url('/assets/images/card-bg-two.svg')",
+
       }),
       height: {
         350: '350px',

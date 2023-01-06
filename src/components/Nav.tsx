@@ -159,7 +159,7 @@ const Nav = () => {
                         </h3>
                         <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
                           <a
-                            href="https://trade.mango.markets/"
+                            href="https://alpha.mango.markets/"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
@@ -202,7 +202,7 @@ const Nav = () => {
                           </div>
 
                           <a
-                            href="https://trade.mango.markets/perp/BTC"
+                            href="https://alpha.mango.markets/perp/BTC"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
@@ -243,7 +243,7 @@ const Nav = () => {
                         </h3>
                         <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
                           <a
-                            href="https://trade.mango.markets/borrow"
+                            href="https://alpha.mango.markets/borrow"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
@@ -498,7 +498,7 @@ const Nav = () => {
                         </h3>
                         <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
                           <a
-                            href="https://trade.mango.markets/stats"
+                            href="https://alpha.mango.markets/stats"
                             className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
                           >
                             <svg
@@ -894,7 +894,7 @@ const Nav = () => {
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      href="https://trade.mango.markets"
+                      href="https://alpha.mango.markets"
                     >
                       Discover 🥭
                     </a>
@@ -974,7 +974,7 @@ const Nav = () => {
                     </a>
 
                     <a
-                      href="https://trade.mango.markets/perp/BTC"
+                      href="https://alpha.mango.markets/perp/BTC"
                       className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
@@ -999,7 +999,7 @@ const Nav = () => {
                     </a>
 
                     <a
-                      href="https://trade.mango.markets/borrow"
+                      href="https://alpha.mango.markets/borrow"
                       className="-m-3 flex items-center rounded-md p-3 transition duration-150 ease-in-out hover:bg-mango-bkg-4"
                     >
                       <svg
