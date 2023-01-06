@@ -219,7 +219,7 @@ function FeaturesOneTabs() {
               </div>
 
               <div className="flex flex-row bg-dark-theme-bkg-3 border-2 border-th-fgd-2 rounded-[10px] ml-6">
-                          <span className="p-[5px] bg-white bg-opacity-10 border-r-2 border-th-fgd-2 rounded-l-[8px]">
+                          <span className="p-[5px] bg-black bg-opacity-20 border-r-2 border-th-fgd-2 rounded-l-[8px]">
                           <svg 
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 24 24" 
@@ -304,7 +304,7 @@ function FeaturesOneTabs() {
               </div>
 
               <div className="flex flex-row bg-dark-theme-bkg-3 border-2 border-th-fgd-2 rounded-[10px] ml-6">
-                          <span className="p-[5px] bg-white bg-opacity-10 border-r-2 border-th-fgd-2 rounded-l-[8px]">
+                          <span className="p-[5px] bg-black bg-opacity-20 border-r-2 border-th-fgd-2 rounded-l-[8px]">
                           <svg 
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 24 24" 
@@ -390,7 +390,7 @@ function FeaturesOneTabs() {
               </div>
 
               <div className="flex flex-row bg-dark-theme-bkg-3 border-2 border-th-fgd-2 rounded-[10px] ml-6">
-                          <span className="p-[5px] bg-white bg-opacity-10 border-r-2 border-th-fgd-2 rounded-l-[8px]">
+                          <span className="p-[5px] bg-black bg-opacity-20 border-r-2 border-th-fgd-2 rounded-l-[8px]">
                           <svg 
                             xmlns="http://www.w3.org/2000/svg" 
                             viewBox="0 0 24 24" 
@@ -403,7 +403,7 @@ function FeaturesOneTabs() {
                           </svg>
                           </span>
                             <span>
-                              <p className="type-url text-xs font-mono ml-1 text-white text-opacity-60 w-screen p-[5px]">
+                              <p className="text-xs font-mono ml-1 text-white text-opacity-60 w-screen p-[5px]">
                               </p>
                             </span>
 
