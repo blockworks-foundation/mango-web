@@ -35,7 +35,7 @@ const Footer = () => {
                   </p>
                   <div className="flex flex-col p-0 -ml-2">
                     <a
-                      className="group flex h-6 w-6 m-2 hover:text-opacity-90 transition ease-in-out duration-150 text-white text-opacity-30"
+                      className="group flex h-6 w-6 m-2 hover:text-th-fgd-5 transition ease-in-out duration-150 text-th-fgd-3"
                       href="https://github.com/blockworks-foundation"
                     >
                       <div className="flex flex-row space-x-2">
@@ -44,18 +44,18 @@ const Footer = () => {
                           height="23" 
                           viewBox="0 0 30 30" 
                           fill="currentColor" 
-                          className="group-hover:text-mango-yellow"
+                          className="group-hover:text-slate-400"
                           xmlns="http://www.w3.org/2000/svg">
                         <path 
                           d="M14 0C6.26967 0 0 6.19744 0 13.8413C0 19.9568 4.011 25.145 9.57483 26.9755C10.2737 27.1035 10.5 26.6745 10.5 26.31V23.7332C6.60567 24.5706 5.79483 22.0999 5.79483 22.0999C5.15783 20.5001 4.23967 20.0745 4.23967 20.0745C2.96917 19.2152 4.3365 19.2336 4.3365 19.2336C5.74233 19.3305 6.482 20.6604 6.482 20.6604C7.73033 22.7758 9.75683 22.1645 10.556 21.8104C10.6808 20.9165 11.0437 20.3052 11.445 19.9603C8.33583 19.6085 5.06683 18.4216 5.06683 13.1192C5.06683 11.6071 5.614 10.3729 6.50883 9.404C6.36417 9.05451 5.88467 7.64616 6.64533 5.74067C6.64533 5.74067 7.82133 5.36926 10.4965 7.1594C11.613 6.85259 12.81 6.69918 14 6.69341C15.19 6.69918 16.3882 6.85259 17.507 7.1594C20.1798 5.36926 21.3535 5.74067 21.3535 5.74067C22.1153 7.64731 21.6358 9.05566 21.4912 9.404C22.3895 10.3729 22.932 11.6082 22.932 13.1192C22.932 18.4354 19.6572 19.6062 16.5398 19.9488C17.0415 20.3778 17.5 21.2198 17.5 22.5117V26.31C17.5 26.6779 17.724 27.1105 18.4345 26.9744C23.9937 25.1415 28 19.9545 28 13.8413C28 6.19744 21.7315 0 14 0Z" 
                           />
                         </svg>
-                        <p className="-mt-1 font-mono text-sm">@Github</p>
+                        <p className=" font-mono text-sm">@Github</p>
                       </div>
                     </a>
                     
                     <a
-                      className="group flex h-6 w-6 m-2 hover:text-opacity-90 transition ease-in-out duration-150 text-white text-opacity-30"
+                      className="group flex h-6 w-6 m-2 hover:text-th-fgd-5 transition ease-in-out duration-150 text-th-fgd-3"
                       href="https://discord.gg/2uwjsBc5yw"
                     >
                     <div className="flex flex-row space-x-2">
@@ -73,7 +73,7 @@ const Footer = () => {
 
                     </a>
                     <a
-                      className="group flex h-6 w-6 m-2 hover:text-opacity-90 transition ease-in-out duration-150 text-white text-opacity-30"
+                      className="group flex h-6 w-6 m-2 hover:text-th-fgd-5 transition ease-in-out duration-150 text-th-fgd-3"
                       href="https://twitter.com/mangomarkets"
                     >
                     <div className="flex flex-row space-x-2">
@@ -94,115 +94,153 @@ const Footer = () => {
                 <div className="w-full lg:w-2/3 px-4">
                   <div className="flex flex-wrap justify-between">
                     <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                      <h3 className="mb-6 text-lg font-mono text-th-fgd-4 opacity-80">
+                      <ul className="">
+                      <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-th-fgd-2 group-hover:border-l-mango-red pl-4 transition duration-100 ease-in-out">
                         Explore
                       </h3>
-                      <ul className="text-sm">
-                        <li className="mb-4">
+                        <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/"
                           >
                             Markets
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
-                        <li className="mb-4">
+                        <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/perp/BTC"
                           >
                             Redacted
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
-                        <li className="mb-4">
+                        <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/borrow"
                           >
                             Earn
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
                       </ul>
-                      <h3 className="mb-6 text-lg font-mono text-th-fgd-4 opacity-80">
+                      <ul className="">
+                      <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-th-fgd-2 group-hover:border-l-mango-yellow pl-4 transition duration-100 ease-in-out">
                         Infrastructure
                       </h3>
-                      <ul className="text-sm">
-                        <li className="mb-4">
+                      <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/"
                           >
-                            Liquidator Program
+                            Liquidator
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
-                        <li className="mb-4">
+                        <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/perp/BTC"
                           >
-                            Become a Market Maker
-                          </a>
-                        </li>
-                        <li className="mb-4">
-                          <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/borrow"
-                          >
-                            Run it locally
+                            Market Maker
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
                       </ul>
                     </div>
                     <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                      <h3 className="mb-6 text-lg font-mono text-th-fgd-4 opacity-80">
+                    <ul className="">
+                      <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-th-fgd-2 group-hover:border-l-mango-green pl-4 transition duration-100 ease-in-out">
                         Developers
                       </h3>
-                      <ul className="text-sm">
-                        <li className="mb-4">
+                      <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://docs.mango.markets/"
                           >
                             Explore the docs
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
-                        <li className="mb-4">
+                        <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trello.com/c/0iz8GfW6/32-how-to-use-this-board"
                           >
                             Start contributing
-                          </a>
-                        </li>
-                        <li className="mb-4">
-                          <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
-                            href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
-                          >
-                            Become a market maker
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
                       </ul>
                     </div>
                     <div className="w-1/2 lg:w-1/4">
-                      <h3 className="mb-6 text-lg font-mono text-th-fgd-4 opacity-80">
+                    <ul className="">
+                      <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-th-fgd-2 group-hover:border-l-mango-yellow pl-4 transition duration-100 ease-in-out">
                         Contact
                       </h3>
-                      <ul className="text-sm">
-                        <li className="mb-4">
+                      <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://discord.gg/2uwjsBc5yw"
                           >
                             Discord
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
-                        <li className="mb-4">
+                        <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-4 transition duration-100 ease-in-out"
+                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://twitter.com/mangomarkets"
                           >
                             Twitter
+                            <span
+                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
+                                  aria-hidden="true"
+                                >
+                                  &rarr;
+                                </span>
                           </a>
                         </li>
                       </ul>
