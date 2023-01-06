@@ -5,7 +5,7 @@ import tw from 'twin.macro';
 export const idleGradient =
   'bg-gradient-to-r from-mango-yellow to-mango-red'
 export const activeGradient =
-  'bg-gradient-to-bl from-mango-green via-mango-yellow to-mango-orange'
+  'bg-gradient-to-bl from-mango-green via-mango-yellow to-mango-yellow'
 
 const StyledButton = styled.button<ButtonProps>`
   :before {

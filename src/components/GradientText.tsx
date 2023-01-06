@@ -1,5 +1,5 @@
 const GradientText = (props: any) => (
-  <span className="bg-gradient-to-bl from-mango-green via-mango-yellow to-mango-red bg-clip-text text-transparent">
+  <span className="bg-gradient-to-tl from-mango-red via-mango-orange to-mango-yellow bg-clip-text text-transparent">
     {props.children}
   </span>
 );
