@@ -403,7 +403,7 @@ function FeaturesOneTabs() {
                           </svg>
                           </span>
                             <span>
-                              <p className="text-xs font-mono ml-1 text-white text-opacity-60 w-screen p-[5px]">
+                              <p className="type-url text-xs font-mono ml-1 text-white text-opacity-60 w-screen p-[5px]">
                               </p>
                             </span>
 

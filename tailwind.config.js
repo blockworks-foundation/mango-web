@@ -224,11 +224,11 @@ module.exports = {
           url: {
             words: ['https://trade.mango.markets'],
             delay: 1
-        },
-        clone: {
-          words: ['git clone https://github.com/blockworks-foundation/'],
-          delay: 1
-      },
+          },
+          clone: {
+            words: ['git clone https://github.com/blockworks-foundation/m..'],
+            delay: 1
+          },
       }
   }),
   

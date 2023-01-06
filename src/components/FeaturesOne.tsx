@@ -28,8 +28,8 @@ const FeaturesOne = () => {
 
                         <div
                           onClick={() =>  navigator.clipboard.writeText('git clone https://github.com/blockworks-foundation/mango-v4-ui.git')}
-                          className="group cursor-pointer overflow-hidden inline-flex w-72 -ml-[130px] shadow-[inset_0_0_30px_rgba(0,0,0,0.6)] bg-dark-theme-bkg-3 border-2 border-th-fgd-3 hover:border-mango-yellow rounded-[12px] transition-all duration-150 ease-in-out">
-                        <span className="p-2 bg-black bg-opacity-20 border-r-2 border-th-fgd-3 rounded-l-[8px]">
+                          className="group cursor-pointer overflow-hidden inline-flex max-w-md -ml-[130px] shadow-[inset_0_0_30px_rgba(0,0,0,0.6)] bg-dark-theme-bkg-3 border-2 border-th-fgd-3 hover:border-mango-yellow rounded-[12px] transition-all duration-150 ease-in-out">
+                        <span className="p-2 bg-black bg-opacity-40 group-hover:bg-opacity-0 border-r-2 border-th-fgd-3 rounded-l-[8px]">
                         <svg 
                           xmlns="http://www.w3.org/2000/svg" 
                           viewBox="0 0 24 24" 
