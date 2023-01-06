@@ -3,7 +3,7 @@ import GradientText from '@/components/GradientText';
 import MangoPill from '@/components/MangoPill';
 // import Button from '@/components/Button';
 // import Linkie from '@/components/Linkie';
-// import MangoBlob from '@/components/MangoBlob';
+import MangoBlob from '@/components/MangoBlob';
 
 const ProductTwo = () => {
   return (
@@ -152,6 +152,9 @@ const ProductTwo = () => {
               
 
         </div>
+        <div className="z-10 transform -translate-y-[666px] translate-x-96">
+           <MangoBlob />
+          </div> 
         <div className="z-0 reletive transform translate-x-1/4 -translate-y-3/4">
           <div className="">
             <img
