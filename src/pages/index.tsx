@@ -21,6 +21,7 @@ const Index = () => {
       <PhoneFeatureGrid />
       <PhoneFeaturesTabs />
       <Footer />
+
     </div>
   );
 };
