@@ -11,7 +11,6 @@ const featureOne = [
     name: 'Maximum capital efficiency.',
     description:
       "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
-    icon: FireIcon,
   },
 ]
 const featureTwo = [
@@ -19,7 +18,6 @@ const featureTwo = [
     name: 'Sub-second latency.',
     description:
       'Instant order execution at the price of less than a cent. Low latency allows market makers to post tight spreads on the books. Oh, and liquidations are instant as well, so watch your exposure.',
-   //icon: FireIcon,
   },
 ]
 const featureThree = [
@@ -27,7 +25,6 @@ const featureThree = [
     name: 'The lowest fees.',
     description:
       'Trade with the lowest fee possible. SRM deposits are pooled for a collective discount. Mango is the first protocol to charge zero fees on margin borrowing & lending.',
-   // icon: FiriIcon,
   },
 ]
 
