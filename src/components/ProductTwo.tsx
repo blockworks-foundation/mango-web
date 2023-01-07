@@ -9,7 +9,7 @@ const ProductTwo = () => {
   return (
     <>
       <div className="mt-72 mb-8 z-10 max-w-7xl m-auto px-8">
-      <p className="z-20 font-mono text-2xl mb-3 text-left font-bold text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+      <p className="z-20 font-mono text-2xl mb-3 text-left font-bold text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
           Pay, send, receive globally.
           <br />
           <GradientText>The simple way to pay. </GradientText>

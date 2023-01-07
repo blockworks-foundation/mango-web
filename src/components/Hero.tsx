@@ -7,7 +7,7 @@ import MangoBlob from '@/components/MangoBlob';
 const Hero = () => {
   return (
     <div className="mt-72 mb-8 z-10">
-        <p className="font-mono font-bold text-2xl mb-3 text-center text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+        <p className="font-mono font-bold text-2xl mb-3 text-center text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
           Every market, all the power.
           <br />
           <GradientText>None of the fuss.</GradientText>
