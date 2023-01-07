@@ -6,6 +6,7 @@ import ProductTwo from '@/components/ProductTwo';
 import PhoneFeatureGrid from '@/components/PhoneFeatureGrid';
 import Footer from '@/components/Footer';
 import PhoneFeaturesTabs from '@/components/PhoneFeaturesTab';
+import HomeCtaFour from '@/components/HomeCtaFour';
 
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
       <ProductTwo />
       <PhoneFeatureGrid />
       <PhoneFeaturesTabs />
+      <HomeCtaFour />
       <Footer />
 
     </div>

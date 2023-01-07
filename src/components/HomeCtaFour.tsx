@@ -7,8 +7,9 @@ import Linkie from '@/components/Linkie';
 const HomeCtaFour = () => {
   return (
     <>
-      <div className="mt-72 mb-8 z-10">
-        <p className="font-display xs:text-3xl mb-3 text-center font-bold text-white sm:text-4xl md:text-4xl lg:text-5xl">
+     <div className="my-72">
+      <div className="z-10">
+         <p className="font-mono font-bold text-2xl mb-3 text-center text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
           Access to what you need.
           <br />
           <GradientText>No approvals needed.</GradientText>
@@ -22,7 +23,7 @@ const HomeCtaFour = () => {
                           target="_blank"
                           href="https://trade.mango.markets"
                         >
-                          Check out 🥭
+                          Discover 🥭
                         </a>
                       </Button>
                       
@@ -39,7 +40,6 @@ const HomeCtaFour = () => {
                     </Linkie>
 
         </div>
-        <div className="">
           <div className="z-10 mt-0 ">
             <img
               className="m-auto h-auto relative right-12"
