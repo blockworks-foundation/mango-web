@@ -37,7 +37,7 @@ function PhoneFeaturesTabs() {
         <Tab.Group vertical>
             <div className="">
             <Tab.List className={"text-th-fgd-5 flex flex-col max-w-xl m-auto border-l-4 border-th-bkg-2 border-opacity-5 "}>
-                <Tab className="group hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-l-4 focus:border-mango-red focus:border-opacity-100">
+                <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-red focus:border-opacity-100">
                     <dl>
                     {featureOne.map((feature) => (
                         <div className="text-left" key={feature.name}>
@@ -58,7 +58,7 @@ function PhoneFeaturesTabs() {
                     </dl>
                 </Tab>
 
-                <Tab className="group hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100">
+                <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100">
                     <dl>
                     {featureTwo.map((feature) => (
                         <div className="text-left" key={feature.name}>
@@ -79,7 +79,7 @@ function PhoneFeaturesTabs() {
                     </dl>
                 </Tab>
 
-                <Tab className="group hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-l-4 focus:border-mango-green focus:border-opacity-100">
+                <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-green focus:border-opacity-100">
                     <dl>
                     {featureThree.map((feature) => (
                         <div className="text-left" key={feature.name}>
