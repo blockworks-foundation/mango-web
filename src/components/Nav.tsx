@@ -18,7 +18,7 @@ import ButtonTwo from '@/components/ButtonTwo'
 import GradientText from '@/components/GradientText'
 import Logo from '@/components/Logo'
 import StyleGuideMenu from '@/components/StyleGuideMenu'
-import ThemeSwitcher from './ThemeSwitcher'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 
 const Nav = () => {
 
@@ -710,7 +710,6 @@ const Nav = () => {
               </nav>
               
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                <div>
                   <ButtonTwo>
                     <a
                       rel="noreferrer"
@@ -720,7 +719,6 @@ const Nav = () => {
                       Discover 🥭
                     </a>
                   </ButtonTwo>
-                </div>
               </div>
               <div className="bg-th-fgd-2 mt-1 rounded-full ml-6 shadow-lg">
                   <ThemeSwitcher />
@@ -1007,4 +1005,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Nav;
