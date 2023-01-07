@@ -1,7 +1,7 @@
 
 import GradientText from '@/components/GradientText';
-import FeaturesTwoGrid from './FeaturesTwoGrid';
 import MangoBlob from "@/components/MangoBlob"
+import DesktopFeatureGrid from '@/components/DesktopFeatureGrid';
 
 const FeaturesTwo = () => {
   return (
@@ -19,7 +19,7 @@ const FeaturesTwo = () => {
         </div> 
 
       <div className="mt-42 p-10 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
-          <FeaturesTwoGrid />
+          <DesktopFeatureGrid/>
       </div>
     </>
   );

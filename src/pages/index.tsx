@@ -3,7 +3,7 @@ import Nav from '@/components/Nav';
 import FeaturesOne from '@/components/FeaturesOne'
 import FeaturesTwo from '@/components/FeaturesTwo';
 import ProductTwo from '@/components/ProductTwo';
-import FeaturesPhoneGrid from '@/components/FeaturesPhoneGrid';
+import PhoneFeatureGrid from '@/components/PhoneFeatureGrid';
 import Footer from '@/components/Footer';
 import PhoneFeaturesTabs from '@/components/PhoneFeaturesTab';
 
@@ -18,7 +18,7 @@ const Index = () => {
       <FeaturesTwo />
       <FeaturesOne />
       <ProductTwo />
-      <FeaturesPhoneGrid />
+      <PhoneFeatureGrid />
       <PhoneFeaturesTabs />
       <Footer />
     </div>
