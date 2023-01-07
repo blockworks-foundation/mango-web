@@ -122,7 +122,10 @@ const Nav = () => {
                   </svg>
                 </button>
               </div>
+
+              {/* NavContainer */}
               <nav className="hidden space-x-10 md:flex">
+                {/* ProductsNav */}
                 <div className="relative">
                   <button
                     type="button"
@@ -331,7 +334,7 @@ const Nav = () => {
                     </div>
                   </div>
                 </div>
-
+                {/* CommunityNav */}
                 <div className="relative">
                   <button
                     type="button"
@@ -546,7 +549,7 @@ const Nav = () => {
                     </div>
                   </div>
                 </div>
-
+                {/* SupportNav */}
                 <div className="relative">
                   <button
                     type="button"
@@ -704,7 +707,6 @@ const Nav = () => {
                     </div>
                   </div>
                 </div>
-
               </nav>
               
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
@@ -727,7 +729,6 @@ const Nav = () => {
           </div>
 
           {/* Mobile menu */}
-
           <div
             className={`${
               !mobileMenuVisible && 'hidden'
