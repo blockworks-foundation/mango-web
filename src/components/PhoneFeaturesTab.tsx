@@ -1,12 +1,12 @@
 import { Tab } from '@headlessui/react'
 import MangoBlob from '@/components/MangoBlob'
+import IphoneMockup from '@/components/mockups/IphoneMockup'
 
 import { 
     FireIcon,
     ArrowSmallRightIcon,
   
     } from '@heroicons/react/20/solid'
-import IphoneMockup from '@/components/mockups/IphoneMockup'
 
 const featureOne = [
   {

@@ -1,11 +1,11 @@
 import { Tab } from '@headlessui/react'
+import BrowserMockup from './mockups/BrowserMockup'
 
 import { 
   FireIcon,
   ArrowSmallRightIcon,
 
   } from '@heroicons/react/20/solid'
-import BrowserMockup from './mockups/BrowserMockup'
 
 const featureOne = [
   {
