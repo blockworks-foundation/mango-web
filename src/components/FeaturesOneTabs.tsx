@@ -37,7 +37,7 @@ function FeaturesOneTabs() {
       <div className="border-t-4 border-th-bkg-2 border-opacity-5 w-screen 2xl:ml-44 xl:ml-16">
 
       </div>
-      <Tab.List className={"text-white grid grid-cols-3 max-w-7xl m-auto"}>
+      <Tab.List className={"text-white grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 max-w-7xl m-auto"}>
           <Tab className="group hover:bg-th-bkg-1 hover:border-t-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-red focus:border-opacity-100">
             <dl>
               {featureOne.map((feature) => (
