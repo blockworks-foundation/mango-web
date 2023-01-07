@@ -13,18 +13,19 @@ const Hero = () => {
           <GradientText>None of the fuss.</GradientText>
         </p>
 
-      <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
-        <Button>
-          <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
-            Discover 🥭
-          </a>
-        </Button>
-        <Linkie>
-          <a rel="noreferrer" target="_blank" href="https://docs.mango.markets/">
-            Explore the docs
-          </a>
-        </Linkie>
-      </div>
+        <div className="mt-8 flex flex-col lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
+  <Button>
+    <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
+      Discover 🥭
+    </a>
+  </Button>
+  <Linkie>
+    <a rel="noreferrer" target="_blank" href="https://docs.mango.markets/">
+      Explore the docs
+    </a>
+  </Linkie>
+</div>
+
       <div className="flex flex-col">
         <div className="z-0 transform -translate-y-64 translate-x-56">
           <MangoBlob />
