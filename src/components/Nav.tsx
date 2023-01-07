@@ -14,9 +14,6 @@ import {
 
   } from '@heroicons/react/20/solid'
 
-// import { useRouter } from 'next/router';
-
-// import MangoPill from '@/components/MangoPill';
 import ButtonTwo from '@/components/ButtonTwo'
 import GradientText from '@/components/GradientText'
 import Logo from '@/components/Logo'
@@ -24,7 +21,6 @@ import StyleGuideMenu from '@/components/StyleGuideMenu'
 import ThemeSwitcher from './ThemeSwitcher'
 
 const Nav = () => {
-  // const router = useRouter();
 
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   const [productMenuVisible, setProductMenuVisible] = useState(false)
@@ -551,14 +547,6 @@ const Nav = () => {
                   </div>
                 </div>
 
-                {/* 
-                <a
-                  href="https://docs.mango.markets/"
-                  className="text-base font-medium text-white opacity-50 p-1 px-2 hover:bg-th-fgd-4 hover:text-white focus:outline-none rounded-md"
-                >
-                  Docs
-                </a>
-                */}
                 <div className="relative">
                   <button
                     type="button"
@@ -717,30 +705,8 @@ const Nav = () => {
                   </div>
                 </div>
 
-                {/* 
-              <a
-                href="https://dao.mango.markets"
-                className="text-base font-medium text-white opacity-50 p-1 px-2 hover:bg-mango-bkg-4 focus:outline-none rounded-md"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="flex flex-row">
-                  <p>Mango DAO</p>
-                </div>
-              </a>
-
-              <a
-                href="https://token.mango.markets"
-                className="text-base font-medium text-white opacity-50 p-1 px-2 hover:bg-mango-bkg-4 focus:outline-none rounded-md"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="flex flex-row">
-                  <p>Redeem</p>
-                </div>
-              </a>
-              */}
               </nav>
+              
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                 <div>
                   <ButtonTwo>
