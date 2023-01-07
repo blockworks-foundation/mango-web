@@ -7,7 +7,7 @@ const FeaturesTwo = () => {
   return (
     <>
       <div className="mb-8 z-10">
-        <p className="font-mono xs:text-3xl mb-3 text-center font-bold text-th-fgd-4 sm:text-4xl md:text-4xl lg:text-5xl">
+      <p className="font-mono font-bold text-2xl mb-3 text-center text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
           The defi power tool.
           <br />
           <GradientText>Paint your own trades.</GradientText>

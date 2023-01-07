@@ -9,11 +9,12 @@ const ProductTwo = () => {
   return (
     <>
       <div className="mt-72 mb-8 z-10 max-w-7xl m-auto px-8">
-        <p className="z-20 font-mono xs:text-3xl mb-3 text-left font-bold text-th-fgd-4 sm:text-4xl md:text-4xl lg:text-5xl">
+      <p className="z-20 font-mono text-2xl mb-3 text-left font-bold text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
           Pay, send, receive globally.
           <br />
           <GradientText>The simple way to pay. </GradientText>
         </p>
+
         <div className="z-20 mt-4 flex flex-row justify-left">
                       
                       <button className="mr-4 opacity-60 hover:opacity-100 transition duration-75 ease-in transform hover:-translate-y-1">

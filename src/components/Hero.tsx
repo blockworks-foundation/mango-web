@@ -7,11 +7,12 @@ import MangoBlob from '@/components/MangoBlob';
 const Hero = () => {
   return (
     <div className="mt-72 mb-8 z-10">
-      <p className="font-mono font-bold xs:text-3xl mb-3 text-center text-th-fgd-4 sm:text-4xl md:text-4xl lg:text-5xl">
-        Every market, all the power.
-        <br />
-        <GradientText>None of the fuss.</GradientText>
-      </p>
+        <p className="font-mono font-bold text-2xl mb-3 text-center text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+          Every market, all the power.
+          <br />
+          <GradientText>None of the fuss.</GradientText>
+        </p>
+
       <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
         <Button>
           <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
