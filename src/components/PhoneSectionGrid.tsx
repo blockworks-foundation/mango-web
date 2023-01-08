@@ -23,7 +23,7 @@ const gridItemOne: any = [
   ]; 
   
 
-function PhoneFeatureGrid() {
+function PhoneSectionGrid() {
   return (
     <section className="max-w-7xl mx-auto -mt-[750px] px-8">
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -45,5 +45,5 @@ function PhoneFeatureGrid() {
 }
 
   
-  export default PhoneFeatureGrid;
+  export default PhoneSectionGrid;
   

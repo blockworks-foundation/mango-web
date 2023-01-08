@@ -29,7 +29,7 @@ const featureThree = [
   },
 ]
 
-function FeaturesOneTabs() {
+function DesktopFeaturesTabs() {
 
   return (
     <>
@@ -116,4 +116,4 @@ function FeaturesOneTabs() {
   )
 }
 
-export default FeaturesOneTabs;
+export default DesktopFeaturesTabs;

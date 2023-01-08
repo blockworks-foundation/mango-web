@@ -3,7 +3,7 @@ import GradientText from '@/components/GradientText';
 import MangoPill from '@/components/MangoPill';
 import MangoBlob from '@/components/MangoBlob';
 
-const ProductTwo = () => {
+const PhoneSectionOne = () => {
   return (
     <>
       <div className="mt-72 mb-8 z-10 max-w-7xl m-auto px-8">
@@ -170,4 +170,4 @@ const ProductTwo = () => {
   );
 };
 
-export default ProductTwo;
+export default PhoneSectionOne;

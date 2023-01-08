@@ -2,7 +2,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import DaoHero from '@/components/DaoHero';
 import DaoGrid from '@/components/DaoGrid';
-import HomeCtaFour from '@/components/HomeCtaFour';
+import HomeCtaFour from '@/components/SectionCta';
 
 const Dao = () => {
   return (

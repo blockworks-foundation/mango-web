@@ -1,12 +1,12 @@
-import Hero from '@/components/Hero';
+import HomeHero from '@/components/HomeHero';
 import Nav from '@/components/Nav';
-import FeaturesOne from '@/components/FeaturesOne'
-import FeaturesTwo from '@/components/FeaturesTwo';
-import ProductTwo from '@/components/ProductTwo';
-import PhoneFeatureGrid from '@/components/PhoneFeatureGrid';
+import DesktopSectionTwo from '@/components/DesktopSectionTwo'
+import DesktopSectionOne from '@/components/DesktopSectionOne';
+import PhoneSectionOne from '@/components/PhoneSectionOne';
+import PhoneSectionGrid from '@/components/PhoneSectionGrid';
 import Footer from '@/components/Footer';
-import PhoneFeaturesTabs from '@/components/PhoneFeaturesTab';
-import HomeCtaFour from '@/components/HomeCtaFour';
+import PhoneSectionTab from '@/components/PhoneSectionTab';
+import SectionCta from '@/components/SectionCta';
 
 
 const Index = () => {
@@ -15,13 +15,13 @@ const Index = () => {
       className={"debug-screens h-auto w-screen overflow-hidden bg-gradient-to-b from-th-bkg-1 to-th-bkg-2 "}
     >
       <Nav />
-      <Hero />
-      <FeaturesTwo />
-      <FeaturesOne />
-      <ProductTwo />
-      <PhoneFeatureGrid />
-      <PhoneFeaturesTabs />
-      <HomeCtaFour />
+      <HomeHero />
+      <DesktopSectionOne />
+      <DesktopSectionTwo />
+      <PhoneSectionOne />
+      <PhoneSectionGrid />
+      <PhoneSectionTab />
+      <SectionCta />
       <Footer />
 
     </div>

@@ -4,7 +4,7 @@ import Button from '@/components/Button';
 import Linkie from '@/components/Linkie';
 // import MangoBlob from '@/components/MangoBlob';
 
-const HomeCtaFour = () => {
+const SectionCta = () => {
   return (
     <>
      <div className="my-72">
@@ -53,4 +53,4 @@ const HomeCtaFour = () => {
   );
 };
 
-export default HomeCtaFour ;
+export default SectionCta ;

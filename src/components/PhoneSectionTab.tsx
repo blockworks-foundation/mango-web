@@ -30,7 +30,7 @@ const featureThree = [
   },
 ]
 
-function PhoneFeaturesTabs() {
+function PhoneSectionTab() {
   return (
     <>
     <div className="grid grid-cols-2 max-w-7xl mx-auto py-40 space-y-0 mt-40">
@@ -127,4 +127,4 @@ function PhoneFeaturesTabs() {
   )
 }
 
-export default PhoneFeaturesTabs;
+export default PhoneSectionTab;

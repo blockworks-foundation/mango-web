@@ -17,9 +17,9 @@ import {
 import ButtonTwo from '@/components/ButtonTwo'
 import GradientText from '@/components/GradientText'
 import Logo from '@/components/Logo'
-import StyleGuideMenu from '@/components/StyleGuideMenu'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import NavvyLink from '@/components/navigation/NavvyLink'
+import StyleGuideDrop from './StyleGuideDrop'
 
 
 // Explore Links...
@@ -138,7 +138,6 @@ const Nav = () => {
   const [productMenuVisible, setProductMenuVisible] = useState(false)
   const [supportMenuVisible, setSupportMenuVisible] = useState(false)
   const [communityMenuVisible, setCommunityMenuVisible] = useState(false)
-  const [logoMenuVisible, setLogoMenuVisible] = useState(false)
 
   const toggleMobileMenu = (e: any) => {
     setMobileMenuVisible(!mobileMenuVisible)
@@ -149,7 +148,6 @@ const Nav = () => {
     setProductMenuVisible(!productMenuVisible)
     setSupportMenuVisible(false)
     setCommunityMenuVisible(false)
-    setLogoMenuVisible(false)
 
     e.stopPropagation()
   }
@@ -157,7 +155,6 @@ const Nav = () => {
     setCommunityMenuVisible(!communityMenuVisible)
     setSupportMenuVisible(false)
     setProductMenuVisible(false)
-    setLogoMenuVisible(false)
 
     e.stopPropagation()
   }
@@ -166,16 +163,6 @@ const Nav = () => {
     setSupportMenuVisible(!supportMenuVisible)
     setProductMenuVisible(false)
     setCommunityMenuVisible(false)
-    setLogoMenuVisible(false)
-
-    e.stopPropagation()
-  }
-
-  const toggleLogo = (e: any) => {
-    setLogoMenuVisible(!logoMenuVisible)
-    setProductMenuVisible(false)
-    setCommunityMenuVisible(false)
-    setSupportMenuVisible(false)
 
     e.stopPropagation()
   }
@@ -185,7 +172,6 @@ const Nav = () => {
     setProductMenuVisible(false)
     setSupportMenuVisible(false)
     setCommunityMenuVisible(false)
-    setLogoMenuVisible(false)
   }
 
   useEffect(() => {
@@ -201,10 +187,7 @@ const Nav = () => {
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
-                <a onClick={toggleLogo} href="#">
-                  <span className="sr-only">Mango</span>
-                  <Logo />
-                </a>
+                <StyleGuideDrop />
               </div>
               <div className="-my-2 -mr-2 md:hidden">
                 <button
@@ -821,11 +804,6 @@ const Nav = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="z-10 transform translate-y-[169px] mx-auto max-w-7xl">
-        <div className={`${!logoMenuVisible && 'hidden'} w-48 absolute `}>
-          <StyleGuideMenu />
         </div>
       </div>
     </>

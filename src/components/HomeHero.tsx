@@ -4,7 +4,7 @@ import Button from '@/components/Button';
 import Linkie from '@/components/Linkie';
 import MangoBlob from '@/components/MangoBlob';
 
-const Hero = () => {
+const HomeHero = () => {
   return (
     <div className="mt-72 mb-8 z-10">
         <p className="font-mono font-bold text-2xl mb-3 text-center text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
@@ -42,4 +42,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomeHero;

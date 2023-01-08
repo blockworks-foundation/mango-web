@@ -1,9 +1,9 @@
 
 import GradientText from '@/components/GradientText';
 import Button from '@/components/Button';
-import FeaturesOneTabs from '@/components/FeaturesOneTabs';
+import DesktopFeaturesTabs from '@/components/DesktopFeaturesTabs';
 
-const FeaturesOne = () => {
+const DesktopSectionTwo = () => {
   return (
     <>
       <div className="mt-72 mb-8 z-10 max-w-7xl mx-auto p-8">
@@ -51,10 +51,10 @@ const FeaturesOne = () => {
         </div>
       </div>
       <div className="mt-42 p-10">
-          <FeaturesOneTabs />
+          <DesktopFeaturesTabs />
       </div>
     </>
   );
 };
 
-export default FeaturesOne;
+export default DesktopSectionTwo;
