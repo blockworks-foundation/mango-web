@@ -71,7 +71,7 @@ const NavSupport = () => {
             show={open}
             as={Fragment}
             enter="transition ease-in duration-100"
-            enterFrom="scale-900"
+            enterFrom="scale-90"
             enterTo="scale-100"
             leave="transition ease-out duration-100"
             leaveFrom="opacity-100"
