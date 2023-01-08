@@ -19,6 +19,118 @@ import GradientText from '@/components/GradientText'
 import Logo from '@/components/Logo'
 import StyleGuideMenu from '@/components/StyleGuideMenu'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
+import NavvyLink from '@/components/navigation/NavvyLink'
+
+
+// Explore Links...
+const navLinkOne: any = [
+  {
+    url:'https://alpha.mango.markets',
+    name: 'Markets',
+    description:
+      "Trade spot margin or permisionless perpectual futures on up to 20x leverage.",
+  },
+];
+const navLinkTwo: any = [
+  {
+    url:'https://alpha.mango.markets',
+    name: 'Redacted',
+    description:
+      "Move money globally without borders. Pay, send, swap, receive, and earn all from your device.",
+  },
+]; 
+const navLinkThree: any = [
+  {
+    url:'https://alpha.mango.markets',
+    name: 'Earn',
+    description:
+      "Automatically earn yeild from auto lending in your earn account.",
+  },
+]; 
+const navLinkFour: any = [
+  {
+    url:'https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md',
+    name: 'Liquidator Program',
+    description:
+      "Help safeguard the mango protocol, become a decentralized liquidator and earn on fees.",
+  },
+]; 
+const navLinkFive: any = [
+  {
+    url:'https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md',
+    name: 'Market Maker Program',
+    description:
+      "Provide liquidity and participate in decentralized markets, become a market maker today.",
+  },
+]; 
+const navLinkSix: any = [
+  {
+    url:'https://initialcapoffering.com/',
+    name: 'Mango Market Caps',
+    description:
+      "The premier fashion choice for Mango lovers, traders, and lenders.",
+  },
+]; 
+
+// Community Links...
+const navLinkSeven: any = [
+  {
+    url:'https://alpha.mango.markets',
+    name: 'Exlpore the docs',
+    description:
+      "Learn about the protocol on a deaper level and start composing and integrating today.",
+  },
+];
+const navLinkEight: any = [
+  {
+    url:'https://alpha.mango.markets',
+    name: 'Protocol Stats',
+    description:
+      "Total Value Deposited, Current rates for borrowing/lending, and other valuable stats.",
+  },
+]; 
+const navLinkNine: any = [
+  {
+    url:'https://alpha.mango.markets',
+    name: 'Mango DAO',
+    description:
+    "Mango DAO is building a distributed way to organize like minded builders, have a stake in the protocol.",
+  },
+]; 
+const navLinkTen: any = [
+  {
+    url:'https://forum.mango.markets/',
+    name: 'Mango Forum',
+    description:
+      "Discuss proposals, partnerships, and improvements to Mango, all in one place.",
+  },
+]; 
+const navLinkEleven: any = [
+  {
+    url:'https://token.mango.markets',
+    name: 'Redeem your MNGO',
+    description:
+      "Participated in the launch of the DAO? Redeem your governance tokens here.",
+  },
+]; 
+
+// Support Links...
+const navLinkTwelve: any = [
+  {
+    url:'https://discord.gg/2uwjsBc5yw',
+    name: 'Discords',
+    description:
+      "Get all of your questions answered in our discrod or contact us for developer support.",
+  },
+];
+const navLinkThirteen: any = [
+  {
+    url:'https://twitter.com/mangomarkets',
+    name: 'Twitter',
+    description:
+      "Quickly see what we&apos;re up to and meme with us.",
+  },
+]; 
 
 const Nav = () => {
 
@@ -74,10 +186,6 @@ const Nav = () => {
     setSupportMenuVisible(false)
     setCommunityMenuVisible(false)
     setLogoMenuVisible(false)
-  }
-
-  const doNothing = (e: any) => {
-    e.stopPropagation()
   }
 
   useEffect(() => {
@@ -165,171 +273,63 @@ const Nav = () => {
                     } absolute z-50 mt-5 transform -translate-x-[200px]`}
                   >
                     <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                    <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
-                          Products
-                        </h3>
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://alpha.mango.markets/"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <BuildingLibraryIcon className="h-12 w-12 -mt-3 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Markets
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Trade spot margin or permisionless perpectual
-                                futures on up to 20x leverage.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
+                      <div className="relative grid gap-1 bg-black px-1 py-1 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
+                        
+                          <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
+                            Products
+                          </h3>
+                          <NavvyLink 
+                            url={navLinkOne[0].url}
+                            icon={<BuildingLibraryIcon />}
+                            name={navLinkOne[0].name}
+                            description={navLinkOne[0].description}
+                          />
+                          <NavvyLink 
+                            url={navLinkTwo[0].url}
+                            icon={<DevicePhoneMobileIcon />}
+                            name={navLinkTwo[0].name}
+                            description={navLinkTwo[0].description}
+                          />
 
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          {/*
-                          <div className="z-30 relative left-16 transform translate-y-6 translate-x-11 opacity-0 group-hover:opacity-100">
-                            <MangoPill>NEW</MangoPill>
-                          </div>
-                          */}
-                          <a
-                            href="https://alpha.mango.markets/perp/BTC"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <DevicePhoneMobileIcon className="h-14 w-14 -mt-4 p-0" />
-                            <div className="ml-3">
-                              <div className="text-base font-medium text-th-fgd-5">
-                                Lassi
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </div>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Move money globally without borders. Pay, send,
-                                swap, receive, and earn all from your device.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
-                          Defi
-                        </h3>
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://alpha.mango.markets/borrow"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <BanknotesIcon className="h-10 w-10 -mt-1 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Earn
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Automatically earn yeild from auto lending in
-                                your earn account.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
-                      </div>
+                          <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
+                            Defi
+                          </h3>
+                          <NavvyLink 
+                            url={navLinkThree[0].url}
+                            icon={<BanknotesIcon />}
+                            name={navLinkThree[0].name}
+                            description={navLinkThree[0].description}
+                          />
+                        </div>
 
                       <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Infrastructure
                         </h3>
+                        <NavvyLink 
+                            url={navLinkFour[0].url}
+                            icon={<UsersIcon />}
+                            name={navLinkFour[0].name}
+                            description={navLinkFour[0].description}
+                          />
+                          <NavvyLink 
+                            url={navLinkFive[0].url}
+                            icon={<PuzzlePieceIcon />}
+                            name={navLinkFive[0].name}
+                            description={navLinkFive[0].description}
+                          />
 
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <UsersIcon className="h-14 w-14 -mt-4 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Liquidator Program
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Help safeguard the mango protocol, become a
-                                decentralized liquidator and earn on fees.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
-
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <PuzzlePieceIcon className="h-16 w-16 -mt-4 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Market Making Program
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Provide liquidity and participatein
-                                decentralized markets, become a market maker
-                                today.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
 
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           MERCH
                         </h3>
+                        <NavvyLink 
+                            url={navLinkSix[0].url}
+                            icon={<AcademicCapIcon />}
+                            name={navLinkSix[0].name}
+                            description={navLinkSix[0].description}
+                          />
 
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://initialcapoffering.com/"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <AcademicCapIcon className="h-12 w-12 -mt-3 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Mango Market Caps
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                The premier fashion choice for Mango lovers,
-                                traders, and lenders.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -378,174 +378,51 @@ const Nav = () => {
                     } absolute z-50 mt-5 transform -translate-x-[200px]`}
                     >
                     <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                    <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
+                      <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Developers
                         </h3>
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://docs.mango.markets/"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <BookOpenIcon className="h-14 w-14 -mt-4 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Explore the docs
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Learn about the protocol on a deaper level and
-                                start composing and integrating today.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
+                        <NavvyLink 
+                            url={navLinkSeven[0].url}
+                            icon={<BookOpenIcon />}
+                            name={navLinkSeven[0].name}
+                            description={navLinkSeven[0].description}
+                          />
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Stats
                         </h3>
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://alpha.mango.markets/stats"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <PresentationChartLineIcon className="h-14 w-14 -mt-4 p-0" />
-                            <div className="ml-3">
-                              <div className="text-base font-medium text-th-fgd-5">
-                                Protocol Stats
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </div>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Total Value Deposited, Current rates for
-                                borrowing/lending, and other valuable stats.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
-
-                        <button className="hidden xstext-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="#"
-                            onClick={doNothing}
-                            className="-m-3 flex items-start rounded-xl p-3 opacity-50"
-                          >
-                            <svg
-                              className="h-5 w-5 shrink-0 stroke-current mt-1"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 22 22"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                d="M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z"
-                                stroke="#4E4D65"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-
-                            <div className="ml-4">
-                              <div className="text-base font-medium text-th-fgd-5">
-                                Protocol Status
-                              </div>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40">
-                                Uptime, API status, check to make sure Mango is
-                                running.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
+                        <NavvyLink 
+                            url={navLinkEight[0].url}
+                            icon={<PresentationChartLineIcon />}
+                            name={navLinkEight[0].name}
+                            description={navLinkEight[0].description}
+                          />
                       </div>
 
                       <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Governance
                         </h3>
-
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://dao-beta.mango.markets"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <UserGroupIcon className="h-16 w-16 -mt-5 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Mango DAO
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Mango DAO is building a distributed way to
-                                organize like minded builders, have a stake in
-                                the protocol.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
-
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://forum.mango.markets/"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <ChatBubbleLeftRightIcon className="h-14 w-14 -mt-4 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Mango Forum
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Discuss proposals, partnerships, and
-                                improvements to Mango, all in one place.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
-
-                        <button className="text-left hover:text-mango-yellow text-th-fgd-2 group">
-                          <a
-                            href="https://token.mango.markets"
-                            className="inline-flex rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <GiftIcon className="h-14 w-14 -mt-4 p-0" />
-                            <div className="ml-3">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Redeem your <GradientText>MNGO</GradientText>
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Participated in the launch of the DAO? Redeem
-                                your governance tokens here.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
+                          <NavvyLink 
+                              url={navLinkNine[0].url}
+                              icon={<UserGroupIcon />}
+                              name={navLinkNine[0].name}
+                              description={navLinkNine[0].description}
+                            />
+                          <NavvyLink 
+                              url={navLinkTen[0].url}
+                              icon={<ChatBubbleLeftRightIcon />}
+                              name={navLinkTen[0].name}
+                              description={navLinkTen[0].description}
+                            />
+                          <NavvyLink 
+                              url={navLinkEleven[0].url}
+                              icon={<GiftIcon />}
+                              name={navLinkEleven[0].name}
+                              description={navLinkEleven[0].description}
+                            />
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -596,72 +473,18 @@ const Nav = () => {
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Social
                         </h3>
-                        <button className="text-left group">
-                          <a
-                            href="https://discord.gg/2uwjsBc5yw"
-                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            {/* Heroicon name: outline/support */}
-                            <svg
-                              className="fill-white opacity-20 group-hover:opacity-100 group-hover:fill-mango-yellow"
-                              width="30"
-                              height="30"
-                              viewBox="0 0 28 28"
-                              fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M23.7187 1.67497C21.9061 0.89249 19.9681 0.323786 17.9421 0C17.6932 0.41511 17.4025 0.973432 17.2021 1.4176C15.0482 1.11872 12.9142 1.11872 10.8 1.4176C10.5996 0.973432 10.3023 0.41511 10.0513 0C8.02293 0.323786 6.08271 0.894565 4.27023 1.67912C0.614418 6.77668 -0.376613 11.7477 0.118903 16.648C2.54363 18.3188 4.89347 19.3337 7.20367 19.9979C7.77407 19.2736 8.2828 18.5036 8.72106 17.692C7.88639 17.3993 7.08696 17.0382 6.33156 16.6189C6.53197 16.482 6.72798 16.3387 6.91738 16.1914C11.5246 18.1797 16.5304 18.1797 21.0826 16.1914C21.2741 16.3387 21.4701 16.482 21.6683 16.6189C20.9107 17.0402 20.1091 17.4014 19.2744 17.6941C19.7127 18.5036 20.2192 19.2757 20.7918 20C23.1042 19.3358 25.4563 18.3209 27.881 16.648C28.4624 10.9672 26.8878 6.04193 23.7187 1.67497ZM9.34871 13.6343C7.96567 13.6343 6.83149 12.4429 6.83149 10.9922C6.83149 9.54132 7.94144 8.34791 9.34871 8.34791C10.756 8.34791 11.8901 9.53924 11.8659 10.9922C11.8682 12.4429 10.756 13.6343 9.34871 13.6343ZM18.6512 13.6343C17.2682 13.6343 16.1339 12.4429 16.1339 10.9922C16.1339 9.54132 17.2439 8.34791 18.6512 8.34791C20.0584 8.34791 21.1926 9.53924 21.1684 10.9922C21.1684 12.4429 20.0584 13.6343 18.6512 13.6343Z" />
-                            </svg>
-
-                            <div className="ml-4">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Discord
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Get all of your questions answered in our
-                                discrod or contact us for developer support.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
-                        <button className="text-left group">
-                          <a
-                            href="https://twitter.com/mangomarkets"
-                            className="-m-3 flex items-start rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white hover:backdrop-blur-xl hover:bg-opacity-5"
-                          >
-                            <svg
-                              className="fill-white opacity-20 group-hover:opacity-100 group-hover:fill-mango-yellow mt-1"
-                              width="20"
-                              height="20"
-                              viewBox="0 0 28 28"
-                              fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M8.78874 23C5.55374 23 2.53817 22.0591 0 20.4356C2.15499 20.5751 5.95807 20.2411 8.32358 17.9848C4.76508 17.8215 3.16026 15.0923 2.95094 13.926C3.25329 14.0426 4.6953 14.1826 5.50934 13.856C1.4159 12.8296 0.787928 9.23732 0.927477 8.14097C1.695 8.67749 2.99745 8.8641 3.50913 8.81744C-0.305207 6.08823 1.06703 1.98276 1.74151 1.09635C4.47882 4.88867 8.5812 7.01857 13.6564 7.13704C13.5607 6.71736 13.5102 6.28042 13.5102 5.83164C13.5102 2.61092 16.1134 0 19.3247 0C21.0025 0 22.5144 0.712754 23.5757 1.85284C24.6969 1.59011 26.3843 0.975068 27.2092 0.443205C26.7934 1.93611 25.4989 3.18149 24.7159 3.64308C24.7224 3.65878 24.7095 3.62731 24.7159 3.64308C25.4037 3.53904 27.2648 3.18137 28 2.68256C27.6364 3.52125 26.264 4.91573 25.1377 5.69642C25.3473 14.9381 18.2765 23 8.78874 23Z" />
-                            </svg>
-                            <div className="ml-4 group">
-                              <p className="text-base font-medium text-th-fgd-5">
-                                Twitter
-                                <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-150 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                              </p>
-                              <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
-                                Quickly see what we&apos;re up to and meme with
-                                us.
-                              </p>
-                            </div>
-                          </a>
-                        </button>
+                        <NavvyLink 
+                              url={navLinkTwelve[0].url}
+                              icon={<GiftIcon />}
+                              name={navLinkTwelve[0].name}
+                              description={navLinkTwelve[0].description}
+                            />
+                          <NavvyLink 
+                              url={navLinkThirteen[0].url}
+                              icon={<GiftIcon />}
+                              name={navLinkThirteen[0].name}
+                              description={navLinkThirteen[0].description}
+                            />
                       </div>
                       <div className="-mt-1 bg-th-bkg-3 p-5 sm:p-8">
                         <div>
