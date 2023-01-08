@@ -8,10 +8,10 @@ function NavvyLink(props: any) {
       href={props.url}
       className="inline-flex"
     >
-      <div className="h-10 w-10 p-0">
+      <div className="h-12 w-12 p-0 m-0">
         {props.icon}
       </div>
-      <div className="ml-3">
+      <div className="ml-2">
         <p className="text-base font-medium text-th-fgd-5">
             {props.name}
           <span
@@ -21,7 +21,7 @@ function NavvyLink(props: any) {
             &rarr;
           </span>
         </p>
-        <p className="mt-1 text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
+        <p className=" text-sm text-th-fgd-5 opacity-40 transition duration-75 ease-in group-hover:opacity-80">
             {props.description}
         </p>
       </div>

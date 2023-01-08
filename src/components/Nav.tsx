@@ -275,7 +275,7 @@ const Nav = () => {
                     } absolute z-50 mt-8 transform -translate-x-[200px]`}
                   >
                     <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                      <div className=" space-y-3 bg-black p-6 backdrop-blur-3xl bg-opacity-[.05]">
+                      <div className=" space-y-3 bg-black p-4 px-5 backdrop-blur-3xl bg-opacity-[.05]">
                         
                           <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                             Products
@@ -300,7 +300,7 @@ const Nav = () => {
                           />
                         </div>
 
-                      <div className=" space-y-3 bg-th-bkg-3 p-6">
+                      <div className=" space-y-3 bg-th-bkg-3 p-4 px-5">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Infrastructure
                         </h3>
@@ -378,7 +378,7 @@ const Nav = () => {
                     } absolute z-50 mt-8 transform -translate-x-[200px]`}
                     >
                       <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                        <div className=" space-y-3 bg-black p-6 backdrop-blur-3xl bg-opacity-[.05]">
+                        <div className=" space-y-3 bg-black p-4 px-5 backdrop-blur-3xl bg-opacity-[.05]">
                           
                          <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                           Developers
@@ -400,7 +400,7 @@ const Nav = () => {
                           />
                       </div>
 
-                      <div className=" space-y-3 bg-th-bkg-3 p-6">
+                      <div className=" space-y-3 bg-th-bkg-3 p-4 px-5">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Governance
                         </h3>
@@ -472,7 +472,7 @@ const Nav = () => {
                     } absolute z-50 mt-8 w-96 transform -translate-x-[200px]`}
                     >
                       <div className="grid grid-cols-1 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                        <div className=" space-y-3 bg-black p-6 backdrop-blur-3xl bg-opacity-[.05]">
+                        <div className=" space-y-3 bg-black p-4 px-5 backdrop-blur-3xl bg-opacity-[.05]">
                           
                          <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                           Social
