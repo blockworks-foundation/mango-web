@@ -233,6 +233,8 @@ const Nav = () => {
 
               {/* NavContainer */}
               <nav className="hidden space-x-10 md:flex">
+
+
                 {/* ProductsNav */}
                 <div className="relative">
                   <button
@@ -270,10 +272,10 @@ const Nav = () => {
                   <div
                     className={`${
                       !productMenuVisible && 'hidden'
-                    } absolute z-50 mt-5 transform -translate-x-[200px]`}
+                    } absolute z-50 mt-8 transform -translate-x-[200px]`}
                   >
                     <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                      <div className="relative grid gap-1 bg-black px-1 py-1 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
+                      <div className=" space-y-3 bg-black p-6 backdrop-blur-3xl bg-opacity-[.05]">
                         
                           <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                             Products
@@ -290,10 +292,6 @@ const Nav = () => {
                             name={navLinkTwo[0].name}
                             description={navLinkTwo[0].description}
                           />
-
-                          <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
-                            Defi
-                          </h3>
                           <NavvyLink 
                             url={navLinkThree[0].url}
                             icon={<BanknotesIcon />}
@@ -302,7 +300,7 @@ const Nav = () => {
                           />
                         </div>
 
-                      <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                      <div className=" space-y-3 bg-th-bkg-3 p-6">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Infrastructure
                         </h3>
@@ -334,6 +332,8 @@ const Nav = () => {
                     </div>
                   </div>
                 </div>
+
+
                 {/* CommunityNav */}
                 <div className="relative">
                   <button
@@ -375,11 +375,12 @@ const Nav = () => {
                   <div
                     className={`${
                       !communityMenuVisible && 'hidden'
-                    } absolute z-50 mt-5 transform -translate-x-[200px]`}
+                    } absolute z-50 mt-8 transform -translate-x-[200px]`}
                     >
-                    <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                      <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
+                      <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
+                        <div className=" space-y-3 bg-black p-6 backdrop-blur-3xl bg-opacity-[.05]">
+                          
+                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                           Developers
                         </h3>
                         <NavvyLink 
@@ -399,7 +400,7 @@ const Nav = () => {
                           />
                       </div>
 
-                      <div className="relative grid gap-6 bg-th-bkg-3 px-5 py-6 sm:gap-8 sm:p-8">
+                      <div className=" space-y-3 bg-th-bkg-3 p-6">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Governance
                         </h3>
@@ -426,6 +427,8 @@ const Nav = () => {
                     </div>
                   </div>
                 </div>
+
+
                 {/* SupportNav */}
                 <div className="relative">
                   <button
@@ -466,11 +469,12 @@ const Nav = () => {
                   <div
                     className={`${
                       !supportMenuVisible && 'hidden'
-                    } absolute left-1/2 z-50 mt-5 w-96 transform -translate-x-1/2`}
-                  >
-                    <div className="overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
-                    <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
-                        <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
+                    } absolute z-50 mt-8 w-96 transform -translate-x-[200px]`}
+                    >
+                      <div className="grid grid-cols-1 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
+                        <div className=" space-y-3 bg-black p-6 backdrop-blur-3xl bg-opacity-[.05]">
+                          
+                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                           Social
                         </h3>
                         <NavvyLink 
@@ -486,7 +490,7 @@ const Nav = () => {
                               description={navLinkThirteen[0].description}
                             />
                       </div>
-                      <div className="-mt-1 bg-th-bkg-3 p-5 sm:p-8">
+                      <div className=" space-y-3 bg-th-bkg-3 p-6">
                         <div>
                           <h3 className="text-sm font-bold uppercase tracking-wide">
                             <GradientText>Mango Guides</GradientText>
