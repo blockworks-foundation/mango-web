@@ -78,7 +78,7 @@ const NavSupport = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute transform -translate-x-20 translate-y-5 w-96 grid grid-cols-1 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg`}
+              className={`absolute transform -translate-x-20 translate-y-5 w-96 grid grid-cols-1 overflow-hidden rounded-[18px] border border-white border-opacity-10 shadow-lg`}
             >
                         <div className=" space-y-3 bg-black p-4 px-5 backdrop-blur-3xl bg-opacity-[.05]">
                           
