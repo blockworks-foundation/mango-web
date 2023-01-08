@@ -12,7 +12,7 @@ const HomeCtaFour = () => {
          <p className="font-mono font-bold text-2xl mb-3 text-center text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
           Access to what you need.
           <br />
-          <GradientText>No approvals needed.</GradientText>
+          <GradientText>The quick brown fox jumped.</GradientText>
         </p>
       </div>
         <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
@@ -37,7 +37,7 @@ const HomeCtaFour = () => {
                         Explore the docs
                         </a>
                 
-                    </Linkie>
+                     </Linkie>
 
         </div>
           <div className="z-10 mt-0 ">

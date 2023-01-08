@@ -162,7 +162,7 @@ const Nav = () => {
                   <div
                     className={`${
                       !productMenuVisible && 'hidden'
-                    } absolute z-50 -ml-4 mt-3 w-screen max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
+                    } absolute z-50 mt-5 transform -translate-x-[200px]`}
                   >
                     <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
                     <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
@@ -375,8 +375,8 @@ const Nav = () => {
                   <div
                     className={`${
                       !communityMenuVisible && 'hidden'
-                    } absolute z-50 -ml-4 mt-3 w-screen max-w-md px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2`}
-                  >
+                    } absolute z-50 mt-5 transform -translate-x-[200px]`}
+                    >
                     <div className="w-700 grid grid-cols-2 overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
                     <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
@@ -589,7 +589,7 @@ const Nav = () => {
                   <div
                     className={`${
                       !supportMenuVisible && 'hidden'
-                    } absolute left-1/2 z-50 mt-3 w-screen max-w-md -translate-x-1/2 px-2 sm:px-0`}
+                    } absolute left-1/2 z-50 mt-5 w-96 transform -translate-x-1/2`}
                   >
                     <div className="overflow-hidden rounded-xl border border-white border-opacity-10 shadow-lg">
                     <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8 backdrop-blur-3xl bg-opacity-[.05]">
