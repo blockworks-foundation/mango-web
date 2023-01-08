@@ -91,7 +91,7 @@ const navLinkEight: any = [
 ]; 
 const navLinkNine: any = [
   {
-    url:'https://alpha.mango.markets',
+    url:'/dao',
     name: 'Mango DAO',
     description:
     "Mango DAO is building a distributed way to organize like minded builders, have a stake in the protocol.",
