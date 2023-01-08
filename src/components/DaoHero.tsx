@@ -16,12 +16,12 @@ const DaoHero = () => {
         <div className="mt-8 flex flex-col lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
   <Button>
     <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
-       Proposals 🥭
+       Learn about 🥭 DAO
     </a>
   </Button>
   <Linkie>
     <a rel="noreferrer" target="_blank" href="https://docs.mango.markets/">
-      Explore the DAO.
+      Explore the proposals.
     </a>
   </Linkie>
 </div>
