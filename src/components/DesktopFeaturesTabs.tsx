@@ -6,6 +6,7 @@ import {
   ArrowSmallRightIcon,
 
   } from '@heroicons/react/20/solid'
+// import BrowserMockupAbstract from './mockups/BrowserMockupAbstract'
 
 const featureOne = [
   {
