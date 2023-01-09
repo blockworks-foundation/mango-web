@@ -25,7 +25,7 @@ const gridItemOne: any = [
 
 function PhoneSectionGrid() {
   return (
-    <section className="max-w-7xl mx-auto -mt-[750px] px-8">
+    <div className="max-w-7xl mx-auto -mt-[750px] px-8">
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         <GridItemShort
           name={gridItemOne[0].name}
@@ -40,7 +40,7 @@ function PhoneSectionGrid() {
           description={gridItemThree[0].description}
         />              
         </div>
-    </section>
+    </div>
   );
 }
 

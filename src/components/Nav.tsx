@@ -63,14 +63,14 @@ const Nav = () => {
               </div>
 
               {/* NavContainer */}
-              <nav className="inline-flex">
+              <div className="inline-flex">
                 {/* ProductsNav */}
                   <NavExplore />
                 {/* CommunityNav */}
                   <NavCommunity />
                 {/* SupportNav */}
                   <NavSupport />
-              </nav>
+              </div>
               
               <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                   <ButtonTwo>

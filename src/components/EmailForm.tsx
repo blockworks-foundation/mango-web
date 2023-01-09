@@ -26,7 +26,7 @@ const EmailForm = () => {
 
   return (
     <> 
-    <section className="py-8 px-4">
+    <div className="py-8 px-4">
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
               <h2 className="inline text-3xl text-th-fgd-4 font-mono font-extrabold sm:block sm:text-4xl">
                 Want product news and updates?{' '}
@@ -66,7 +66,7 @@ const EmailForm = () => {
                 </p>
               </div>
             </div>
-          </section>
+        </div>
     </>
   )
 }

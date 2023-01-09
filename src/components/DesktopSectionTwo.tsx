@@ -7,7 +7,7 @@ const DesktopSectionTwo = () => {
   return (
     <>
       <div className="mt-72 mb-8 z-10 max-w-7xl mx-auto p-8">
-      <p className="z-20 font-mono text-2xl mb-3 text-left font-bold text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
+        <p className="z-20 font-mono text-2xl mb-3 text-left font-bold text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
           Trade, leverage, and utilize.
           <br />
           <GradientText>All from one hub.</GradientText>
@@ -16,7 +16,7 @@ const DesktopSectionTwo = () => {
                         <div className="w-72">
                             <Button>
                                     <a
-                                    rel="noreferrer"
+                                  rel="noreferrer"
                                   target="_blank"
                                   href="https://trade.mango.markets"
                                   >
@@ -41,11 +41,11 @@ const DesktopSectionTwo = () => {
                             d="M15 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0017.25 7.5h-1.875A.375.375 0 0115 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 009.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V7.875C3 6.839 3.84 6 4.875 6z" />
                           </svg>
                         </span>
+                        <p className="type-clone text-xs font-mono text-white text-opacity-60 group-hover:text-opacity-100 w-screen p-2 transition duration-150 ease-in-out">
                           <span>
-                            <p className="type-clone text-xs font-mono text-white text-opacity-60 group-hover:text-opacity-100 w-screen p-2 transition duration-150 ease-in-out">
                               {/* git clone https://github.com/blockworks-foundation/mango-v4-ui.git */}
-                            </p>
-                          </span>
+                           </span>
+                          </p>
                   </div>
         
         </div>

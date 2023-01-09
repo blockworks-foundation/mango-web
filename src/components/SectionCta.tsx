@@ -6,7 +6,6 @@ import Linkie from '@/components/Linkie';
 
 const SectionCta = () => {
   return (
-    <>
      <div className="my-72">
       <div className="z-10">
          <p className="font-mono font-bold text-2xl mb-3 text-center text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
@@ -48,8 +47,6 @@ const SectionCta = () => {
               />
           </div>
         </div>
-
-    </>
   );
 };
 

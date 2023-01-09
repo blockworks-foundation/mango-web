@@ -32,7 +32,6 @@ const featureThree = [
 
 function PhoneSectionTab() {
   return (
-    <>
     <div className="grid grid-cols-2 max-w-7xl mx-auto py-40 space-y-0 mt-40">
         <Tab.Group vertical>
             <div className="">
@@ -120,10 +119,8 @@ function PhoneSectionTab() {
             </Tab.Panels>
 
         </div>          
-    </Tab.Group>
-
-    </div>
-    </>
+``    </Tab.Group>
+``  </div>
   )
 }
 

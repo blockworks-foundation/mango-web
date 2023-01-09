@@ -32,11 +32,11 @@ const Linkie: FunctionComponent<LinkieProps> = ({
         {...props}
       >
         {children}
-        <div>
+        <span>
           <ArrowSmallRightIcon
             className="w-6 h-6 group-hover:opacity-100 text-mango-yellow opacity-0 transform -translate-x-6 group-hover:translate-x-0 transition duration-150 ease-in"
           />
-        </div>
+        </span>
       </StyledButton>
     </div>
   );
