@@ -23,10 +23,10 @@ const StyleGuideDrop = () => {
             appear={true}
             show={open}
             as={Fragment}
-            enter="transition ease-in duration-100"
-            enterFrom="scale-90"
-            enterTo="scale-100"
-            leave="transition ease-out duration-100"
+            enter="transition ease-in-out duration-150"
+            enterFrom="-translate-y-3"
+            enterTo=""
+            leave="transition ease-out duration-150"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >

@@ -95,23 +95,27 @@ const NavExplore = () => {
                         clipRule="evenodd"
                       />
                     </svg>
+                    
           </Popover.Button>
 
           <Transition
             appear={true}
             show={open}
             as={Fragment}
-            enter="transition ease-in duration-100"
-            enterFrom="scale-90"
-            enterTo="scale-100"
-            leave="transition ease-out duration-100"
+            enter="transition ease-in-out duration-150"
+            enterFrom="-translate-y-3"
+            enterTo=""
+            leave="transition ease-out duration-150"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
+            
             <Popover.Panel
-              className={`absolute transform -translate-x-44 translate-y-5 w-700 grid grid-cols-2 overflow-hidden rounded-[18px] border border-white border-opacity-10 shadow-lg`}
-            >
-                      <div className=" space-y-3 bg-black p-4 px-5 backdrop-blur-3xl bg-opacity-[.05]">
+              className={`absolute transform -translate-x-44 translate-y-4`}
+            >  
+                      <div className="overflow-hidden w-700 grid grid-cols-2 rounded-[18px] border border-white border-opacity-10 shadow-lg ">
+
+                      <div className=" space-y-3  p-4 px-5 backdrop-blur-3xl bg-opacity-[.05] rounded-l-[18px]">
                         
                           <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                             Products
@@ -136,7 +140,7 @@ const NavExplore = () => {
                           />
                         </div>
 
-                      <div className=" space-y-3 bg-th-bkg-3 p-4 px-5">
+                      <div className=" space-y-3 bg-th-bkg-3 p-4 px-5 rounded-r-[18px]">
                         <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-5 opacity-40">
                           Infrastructure
                         </h3>
@@ -165,6 +169,8 @@ const NavExplore = () => {
                           />
 
                       </div>
+                      </div>
+
              </Popover.Panel>
           </Transition>
         </div>
