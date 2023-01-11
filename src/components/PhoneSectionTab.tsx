@@ -119,8 +119,8 @@ function PhoneSectionTab() {
             </Tab.Panels>
 
         </div>          
-``    </Tab.Group>
-``  </div>
+    </Tab.Group>
+  </div>
   )
 }
 
