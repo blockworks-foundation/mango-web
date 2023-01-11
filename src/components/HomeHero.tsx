@@ -16,7 +16,7 @@ const HomeHero = () => {
         <div className="mt-8 flex flex-col lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
           <Button>
             <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
-              Discover 🥭
+              Join the alpha 🥭
             </a>
           </Button>
           <Linkie>
