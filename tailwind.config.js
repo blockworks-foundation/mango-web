@@ -58,8 +58,8 @@ module.exports = {
           'bkg-2': 'hsl(256, 18%, 17%)',
           'bkg-3': 'hsl(256, 18%, 22%)',
           'bkg-4': 'hsl(256, 18%, 27%)',
-          'fgd-1': 'hsl(0, 0%, 100%, 10%)',
-          'fgd-2': 'hsl(0, 0%, 100%, 5%)',
+          'fgd-1': 'hsl(0, 0%, 100%, 5%)',
+          'fgd-2': 'hsl(0, 0%, 100%, 10%)',
           'fgd-3': 'hsl(0, 0%, 100%, 40%)',
           'fgd-4': 'hsl(0, 0%, 100%, 80%)',
           'fgd-5': 'hsl(0, 0%, 100%)',
@@ -151,8 +151,8 @@ module.exports = {
           'bkg-2': 'hsl(51, 16%, 24%)',
           'bkg-3': 'hsl(51, 16%, 29%)',
           'bkg-4': 'hsl(51, 16%, 34%)',
-          'fgd-1': 'hsl(0, 0%, 100%, 10%)',
-          'fgd-2': 'hsl(0, 0%, 100%, 20%)',
+          'fgd-1': 'hsl(0, 0%, 100%, 5%)',
+          'fgd-2': 'hsl(0, 0%, 100%, 10%)',
           'fgd-3': 'hsl(0, 0%, 100%, 40%)',
           'fgd-4': 'hsl(0, 0%, 100%, 80%)',
           'fgd-5': 'hsl(0, 0%, 100%)',
@@ -226,7 +226,7 @@ module.exports = {
             delay: 1
           },
           clone: {
-            words: ['git clone https://github.com/blockworks-foundation/m..'],
+            words: ['git clone https://github.com/blockworks-foundation/m...'],
             delay: 1
           },
       }

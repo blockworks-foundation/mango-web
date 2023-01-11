@@ -109,7 +109,7 @@ const NavCommunity = () => {
             <Popover.Panel
               className={`absolute transform -translate-x-44 translate-y-5 w-700 grid grid-cols-2 overflow-hidden rounded-[18px] border border-white border-opacity-10 shadow-lg`}
             >
-                        <div className=" space-y-3 bg-black p-4 px-5 backdrop-blur-3xl bg-opacity-[.05]">
+                        <div className=" space-y-3 p-4 px-5 bg-th-bkg-4">
                           
                          <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                           Developers

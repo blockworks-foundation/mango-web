@@ -115,7 +115,7 @@ const NavExplore = () => {
             >  
                       <div className="overflow-hidden w-700 grid grid-cols-2 rounded-[18px] border border-white border-opacity-10 shadow-lg ">
 
-                      <div className=" space-y-3  p-4 px-5 backdrop-blur-3xl bg-opacity-[.05] rounded-l-[18px]">
+                      <div className=" space-y-3  p-4 px-5 bg-th-bkg-4 rounded-l-[18px]">
                         
                           <h3 className="text-sm font-bold uppercase tracking-wide text-th-fgd-3">
                             Products
