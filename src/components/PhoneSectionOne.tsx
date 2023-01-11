@@ -6,7 +6,7 @@ import MangoBlob from '@/components/MangoBlob';
 const PhoneSectionOne = () => {
   return (
       <div className="mt-72 mb-8 z-10 max-w-7xl m-auto px-8">
-          <p className="z-20 font-mono text-2xl mb-3 text-left font-bold text-th-fgd-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
+          <p className="z-20 font-mono text-2xl mb-3 text-left font-bold text-th-fgd-5 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
               Pay, send, receive globally.
               <br />
               <GradientText>The simple way to pay. </GradientText>
@@ -146,7 +146,7 @@ const PhoneSectionOne = () => {
                       </button>
             
         </div>
-        <div className="z-10 transform -translate-y-[666px] translate-x-96">
+        <div className="z-0 transform -translate-y-[666px] translate-x-96">
            <MangoBlob />
           </div> 
         <div className="z-0 reletive transform translate-x-1/4 -translate-y-3/4">
