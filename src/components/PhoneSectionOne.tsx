@@ -7,7 +7,7 @@ const PhoneSectionOne = () => {
   return (
     <>
       <div className="z-20 mt-72 mb-8 max-w-7xl m-auto px-8">
-          <p className=" font-mono text-2xl mb-3 text-left font-bold text-th-fgd-5 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
+          <p className=" font-display text-2xl mb-3 text-left font-bold text-th-fgd-5 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
               Pay, send, receive globally.
               <br />
               <GradientText>A wallet without borders. </GradientText>
