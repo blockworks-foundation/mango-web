@@ -5,7 +5,7 @@ function BrowserMockupAbstract() {
   return (
     <div>
         {/* Browser in CSS */}
-        <div className="w-[1300px] mt-20 m-auto rounded-2xl shadow-[0_8px_62px_-5px_rgba(0,0,0,0.25)]">
+        <div className="w-[1100px] mt-20 m-auto rounded-2xl shadow-[0_8px_62px_-5px_rgba(0,0,0,0.25)]">
             <div className="bg-th-bkg-3 h-14 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-th-fgd-1">
                 <ul className="flex flex-row space-x-4">
                   <li className="bg-mango-red h-5 w-5 rounded-full"></li>

@@ -24,9 +24,9 @@ const HomeHero = () => {
           Trade, spend, and earn crypto like never before.
         </p>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
-          <li className="mb-2 inline-flex"><BoltIcon className="w-6 h-6 text-mango-yellow m-1 mr-2" />Blazingly fast</li>
-          <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Open-source first</li>
-          <li className="mb-2 inline-flex"><GlobeEuropeAfricaIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"/>Without borders</li>
+          <li className="mb-2 inline-flex"><BoltIcon className="w-6 h-6 text-mango-yellow m-1 mr-2" />Blazingly fast, all on-chain.</li>
+          <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Verify, don&apos;t trust, open-source first.</li>
+          <li className="mb-2 inline-flex"><GlobeEuropeAfricaIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"/>Access globally, with out borders.</li>
         </ul>
 
         <div className="mt-8 inline-flex">
@@ -48,7 +48,7 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-[150px] -translate-x-[125px]">
           <MangoBlob />
         </div>
-        <div className="z-10 block reletive transform -translate-y-[600px] translate-x-[777px] -rotate-[9deg] ">
+        <div className="z-0 block reletive transform -translate-y-[510px] translate-x-[650px] -rotate-[9deg] ">
           <BrowserMockupAbstract />
 {/* 
           <img
@@ -58,7 +58,7 @@ const HomeHero = () => {
           />
 */}          
         </div>
-        <div className="z-10 block reletive transform -translate-y-[1050px] translate-x-[77px] -rotate-[9deg] ">
+        <div className="z-10 block reletive transform -translate-y-[910px] translate-x-[77px] -rotate-[9deg] ">
             <IphoneAbstract src="assets/images/iphone-screen.jpg" />
 {/* 
           <img

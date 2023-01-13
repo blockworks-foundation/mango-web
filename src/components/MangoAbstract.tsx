@@ -39,7 +39,7 @@ const mainModalVariant: AnimationProps = {
 const MangoAbstract = () => {
     return (
       <div className="">
-            <svg width="1300" height="auto" viewBox="0 0 1727 993" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="1100" height="auto" viewBox="0 0 1727 993" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="1727" height="993" fill="url(#paint0_linear_4966_7852)" fillOpacity="0.1"/>
             <rect x="0.5" y="0.5" width="1726" height="992" stroke="url(#paint1_linear_4966_7852)" strokeOpacity="0.5"/>
             <mask id="mask0_4966_7852" className="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1727" height="993">
