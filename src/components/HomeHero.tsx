@@ -20,10 +20,10 @@ const HomeHero = () => {
         <h1 className="font-display text-5xl mb-3 text-left font-bold text-th-fgd-5 leading-tight">
           <GradientText>Freedom is not needing <br />permission to move.</GradientText>
         </h1>
-        <p className="font-body text-3xl mb-6 text-left text-th-fgd-3">
-          Trade, spend, and earn crypto like never before.
+        <p className="font-body text-2xl mb-6 text-left text-th-fgd-3">
+          Building decentralized financial products for the internet. <br />Trade, spend, and earn crypto like never before.
         </p>
-        <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
+        <ul className="flex flex-col z-20 font-body text-lg mb-3 text-left text-th-fgd-4">
           <li className="mb-2 inline-flex"><BoltIcon className="w-6 h-6 text-mango-yellow m-1 mr-2" />Blazingly fast and all on-chain.</li>
           <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Verify. Don&apos;t trust us, open-source first.</li>
           <li className="mb-2 inline-flex"><GlobeEuropeAfricaIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"/>Access globally, with out borders.</li>
