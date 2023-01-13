@@ -25,7 +25,7 @@ const HomeHero = () => {
         </p>
         <ul className="flex flex-col z-20 font-body text-lg mb-3 text-left text-th-fgd-4">
           <li className="mb-2 inline-flex"><BoltIcon className="w-6 h-6 text-mango-yellow m-1 mr-2" />Blazingly fast and all on-chain.</li>
-          <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Verify. Don&apos;t trust us, open-source first.</li>
+          <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Verify, Don&apos;t trust. We&apos;re open-source first.</li>
           <li className="mb-2 inline-flex"><GlobeEuropeAfricaIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"/>Access globally, with out borders.</li>
         </ul>
 
