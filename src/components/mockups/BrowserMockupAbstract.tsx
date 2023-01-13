@@ -5,7 +5,7 @@ function BrowserMockupAbstract() {
   return (
     <div>
         {/* Browser in CSS */}
-        <div className="mt-20 w-screen m-auto rounded-2xl shadow-[0_8px_62px_-5px_rgba(0,0,0,0.25)]">
+        <div className="w-[1300px] mt-20 m-auto rounded-2xl shadow-[0_8px_62px_-5px_rgba(0,0,0,0.25)]">
             <div className="bg-th-bkg-3 h-14 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-th-fgd-1">
                 <ul className="flex flex-row space-x-4">
                   <li className="bg-mango-red h-5 w-5 rounded-full"></li>
@@ -58,7 +58,7 @@ function BrowserMockupAbstract() {
                   </ul>
               </div>
 
-              <div className="flex flex-row bg-dark-theme-bkg-3 border-2 border-th-fgd-2 rounded-[10px] ml-6">
+              <div className="flex flex-row bg-dark-theme-bkg-3 border-2 border-th-fgd-2 rounded-[10px] ml-6 w-[1000px]">
                           <span className="p-[5px] bg-black bg-opacity-20 border-r-2 border-th-fgd-2 rounded-l-[8px]">
                           <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -79,7 +79,7 @@ function BrowserMockupAbstract() {
           </div>
             </div>
 
-            <div className=" overflow-hidden h-auto w-full rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-th-fgd-1">
+            <div className=" overflow-hidden rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-th-fgd-1">
                 <MangoAbstract />
           </div>
         </div>

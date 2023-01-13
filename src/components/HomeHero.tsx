@@ -3,7 +3,7 @@ import GradientText from '@/components/GradientText';
 import Button from '@/components/Button';
 import Linkie from '@/components/Linkie';
 import MangoBlob from '@/components/MangoBlob';
-import MangoAbstract from './MangoAbstract';
+import BrowserMockupAbstract from '@/components/mockups/BrowserMockupAbstract';
 
 const HomeHero = () => {
   return (
@@ -31,8 +31,8 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-64 translate-x-56">
           <MangoBlob />
         </div>
-        <div className="z-10 hidden md:block reletive left-0 top-96 mt-20 ">
-          <MangoAbstract />
+        <div className="z-10 hidden md:block reletive left-0 top-96 mt-0 ">
+          <BrowserMockupAbstract />
 {/* 
           <img
             className="w-full h-auto"
