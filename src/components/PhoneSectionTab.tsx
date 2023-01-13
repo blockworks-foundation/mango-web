@@ -40,17 +40,17 @@ function PhoneSectionTab() {
                     <dl>
                     {featureOne.map((feature) => (
                         <div className="text-left" key={feature.name}>
-                            <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
+                            <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
                                 <FireIcon className="h-6 w-6" />
-                            </div>
-                        <dt className="inline-flex">
-                            <dd className="text-xl font-display text-th-fgd-5">{feature.name}</dd>
-                            <div>
+                            </span>
+                        <div className="inline-flex">
+                            <dt className="text-xl font-display text-th-fgd-5">{feature.name}</dt>
+                            <span>
                             <ArrowSmallRightIcon
                                 className="mt-[1px] w-8 h-8 group-hover:opacity-100 text-mango-yellow opacity-0 transform -translate-x-6 group-hover:translate-x-0 transition duration-150 ease-in"
                             />
-                            </div>
-                        </dt>
+                            </span>
+                        </div>
                         <dd className="mt-2 text-base text-th-fgd-4 opacity-40 transition duration-75 ease-in group-hover:opacity-80">{feature.description}</dd>
                         </div>
                     ))}
@@ -61,17 +61,17 @@ function PhoneSectionTab() {
                     <dl>
                     {featureTwo.map((feature) => (
                         <div className="text-left" key={feature.name}>
-                            <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
+                            <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
                                 <FireIcon className="h-6 w-6" />
-                            </div>
-                        <dt className="inline-flex">
-                            <dd className="text-xl font-display text-th-fgd-5">{feature.name}</dd>
-                            <div>
+                            </span>
+                        <div className="inline-flex">
+                            <dt className="text-xl font-display text-th-fgd-5">{feature.name}</dt>
+                            <span>
                             <ArrowSmallRightIcon
                                 className="mt-[1px] w-8 h-8 group-hover:opacity-100 text-mango-yellow opacity-0 transform -translate-x-6 group-hover:translate-x-0 transition duration-150 ease-in"
                             />
-                            </div>
-                        </dt>
+                            </span>
+                        </div>
                         <dd className="mt-2 text-base text-th-fgd-4 opacity-40 transition duration-75 ease-in group-hover:opacity-80">{feature.description}</dd>
                         </div>
                     ))}
@@ -82,17 +82,17 @@ function PhoneSectionTab() {
                     <dl>
                     {featureThree.map((feature) => (
                         <div className="text-left" key={feature.name}>
-                            <div className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
+                            <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-3 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
                                 <FireIcon className="h-6 w-6" />
-                            </div>
-                        <dt className="inline-flex">
-                            <dd className="text-xl font-display text-th-fgd-5">{feature.name}</dd>
-                            <div>
+                            </span>
+                        <div className="inline-flex">
+                            <dt className="text-xl font-display text-th-fgd-5">{feature.name}</dt>
+                            <span>
                             <ArrowSmallRightIcon
                                 className="mt-[1px] w-8 h-8 group-hover:opacity-100 text-mango-yellow opacity-0 transform -translate-x-6 group-hover:translate-x-0 transition duration-150 ease-in"
                             />
-                            </div>
-                        </dt>
+                            </span>
+                        </div>
                         <dd className="mt-2 text-base text-th-fgd-4 opacity-40 transition duration-75 ease-in group-hover:opacity-80">{feature.description}</dd>
                         </div>
                     ))}
