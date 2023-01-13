@@ -14,7 +14,7 @@ function IphoneAbstract(props: any) {
                                 <div className="h-[611px] border-[5px] border-solid border-th-bkg-3 rounded-[46px]">
                                     <div className="flex items-center flex-col">
                                         <ul className="absolute">
-                                            <li className="bg-black bg-opacity-80 h-[20px] w-[90px] rounded-full mt-6"></li>
+                                            <li className="bg-black bg-opacity-80 h-[20px] w-[90px] rounded-full mt-3"></li>
                                         </ul>
                                     </div>
                                      <img 

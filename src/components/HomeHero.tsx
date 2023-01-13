@@ -17,28 +17,28 @@ const HomeHero = () => {
       <div className="flex flex-col max-w-7xl mt-[190px] mb-8 z-10 mx-auto p-8 py-20">
 
         <div className="z-20 flex flex-col">
-        <p className="font-mono text-2xl mb-3 text-left text-th-fgd-5">
+        <p className="font-mono text-2xl mb-3 text-left">
           <span className="type-hero text-th-fgd-3"></span>
         </p>
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          <GradientText>Decentralized financial <br />products for the internet <br />generation.</GradientText>
+          <GradientText>Decentralized finance for the internet generation.</GradientText>
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
           <li className="mb-2 inline-flex">
-            <FireIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
-            Blazingly fast and all on-chain.
+            <GlobeAltIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"/>
+            Accessable globally, without borders.
           </li>
           <li className="mb-2 inline-flex">
             <CodeBracketIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"   />
             Fully verifiable, open-source first.
           </li>
           <li className="mb-2 inline-flex">
-            <GlobeAltIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"/>
-            Accessable globally, without borders.
+            <FireIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
+            Blazingly fast and all on-chain.
           </li>
         </ul>
 
-        <div className="mt-8 inline-flex">
+        <div className="mt-4 inline-flex">
           <Button>
             <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
               Discover 🥭
