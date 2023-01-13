@@ -14,19 +14,19 @@ import {
 
 const HomeHero = () => {
   return (
-      <div className="flex flex-col max-w-7xl mt-56 mb-8 z-10 mx-auto p-8 py-20">
+      <div className="flex flex-col max-w-7xl mt-[200px] mb-8 z-10 mx-auto p-8 py-20">
 
         <div className="z-20 flex flex-col">
-        <h1 className="font-display text-6xl mb-3 text-left font-bold text-th-fgd-5 leading-tight">
-          <GradientText>Freedom is not needing <br />permission to move.</GradientText>
-        </h1>
-        <p className="font-body text-3xl mb-6 text-left text-th-fgd-4">
-          Mango is building decentralized financial products <br />for the internet generation.
+        <p className="font-mono text-2xl mb-3 text-left text-th-fgd-5">
+          <span className="type-hero text-th-fgd-3"></span>
         </p>
-        <ul className="flex flex-col z-20 font-body text-lg mb-3 text-left text-th-fgd-3">
+        <h2 className="font-display text-6xl font-bold mb-6 text-left text-th-fgd-5 leading-tight">
+          <GradientText>Building decentralized financial <br />products for the internet generation.</GradientText>
+        </h2>
+        <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
           <li className="mb-2 inline-flex"><BoltIcon className="w-6 h-6 text-mango-yellow m-1 mr-2" />Blazingly fast and all on-chain.</li>
           <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Verify, Don&apos;t trust. We&apos;re open-source first.</li>
-          <li className="mb-2 inline-flex"><GlobeEuropeAfricaIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"/>Access globally, with out borders.</li>
+          <li className="mb-2 inline-flex"><GlobeEuropeAfricaIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"/>Access globally, without borders.</li>
         </ul>
 
         <div className="mt-8 inline-flex">
@@ -48,7 +48,7 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-[400px] translate-x-[25px]">
           <MangoBlob />
         </div>
-        <div className="z-0 block reletive transform -translate-y-[542px] translate-x-[725px] -rotate-[9deg] ">
+        <div className="z-0 block reletive transform -translate-y-[462px] translate-x-[750px] -rotate-[9deg] ">
           <BrowserMockupAbstract />
 {/* 
           <img
@@ -58,7 +58,7 @@ const HomeHero = () => {
           />
 */}          
         </div>
-        <div className="z-10 block reletive transform -translate-y-[942px] translate-x-[0px] -rotate-[9deg] ">
+        <div className="z-10 block reletive transform -translate-y-[952px] translate-x-[20px] -rotate-[9deg] ">
             <IphoneAbstract src="assets/images/iphone-screen.jpg" />
 {/* 
           <img

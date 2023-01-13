@@ -229,6 +229,10 @@ module.exports = {
             words: ['git clone https://github.com/blockworks-foundation/m...'],
             delay: 1
           },
+          hero: {
+            words: ['//freedom is not needing permission to move..', '//freedom is making it accessable to everyone..'],
+            delay: 1
+          },
       }
   }),
   
