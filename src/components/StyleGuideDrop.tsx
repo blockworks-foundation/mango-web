@@ -12,7 +12,7 @@ const StyleGuideDrop = () => {
         <div className="relative group">
 
           <Popover.Button
-            className={`group flex z-30 overflow-hidden rounded-full`}
+            className={`group flex z-30 overflow-hidden`}
           >
             <Logo /> 
           </Popover.Button>

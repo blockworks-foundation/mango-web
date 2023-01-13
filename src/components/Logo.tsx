@@ -1,7 +1,7 @@
 const Logo = () => {
   return (
     <div className="text-th-fgd-5">
-      <svg width="150" height="auto" viewBox="0 0 2870 863" fill="currentColor">
+      <svg width="135" height="auto" viewBox="0 0 2870 863" fill="currentColor">
         <path 
           d="M1215.68 571.83L1372.97 284H1426.47V658.5H1362.27V422.03L1229.59 658.5H1197.49L1066.95 424.705V658.5H1002.75V284H1057.32L1215.68 571.83Z" 
           fill="currentColor"/>
