@@ -8,7 +8,7 @@ import IphoneAbstract from '@/components/mockups/IphoneAbstract';
 import { 
   BoltIcon,
   CodeBracketIcon,
-  GlobeEuropeAfricaIcon,
+  GlobeAltIcon,
 
   } from '@heroicons/react/20/solid'
 
@@ -21,12 +21,12 @@ const HomeHero = () => {
           <span className="type-hero text-th-fgd-3"></span>
         </p>
         <h2 className="font-display text-6xl font-bold mb-6 text-left text-th-fgd-5 leading-tight">
-          <GradientText>Building decentralized financial <br />products for the internet generation.</GradientText>
+          <GradientText>Decentralized financial <br />products for the internet generation.</GradientText>
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
-          <li className="mb-2 inline-flex"><BoltIcon className="w-6 h-6 text-mango-yellow m-1 mr-2" />Blazingly fast and all on-chain.</li>
-          <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Verify, Don&apos;t trust. We&apos;re open-source first.</li>
-          <li className="mb-2 inline-flex"><GlobeEuropeAfricaIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"/>Access globally, without borders.</li>
+          <li className="mb-2 inline-flex"><BoltIcon className="bg-white bg-opacity-10 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2" />Blazingly fast and all on-chain.</li>
+          <li className="mb-2 inline-flex"><CodeBracketIcon className="bg-white bg-opacity-10 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2"   />Fully verifiable and open-source first.</li>
+          <li className="mb-2 inline-flex"><GlobeAltIcon className="bg-white bg-opacity-10 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2"/>Access globally, without borders.</li>
         </ul>
 
         <div className="mt-8 inline-flex">
