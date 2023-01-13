@@ -18,7 +18,7 @@ const FeaturesTwo = () => {
          <MangoBlob />
         </div> 
 
-      <div className="mt-42 p-10 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
+      <div className="p-10 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
           <DesktopFeatureGrid/>
       </div>
     </>

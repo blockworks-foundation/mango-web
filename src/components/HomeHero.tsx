@@ -44,7 +44,7 @@ const HomeHero = () => {
         </div>
 
 
-      <div className="">
+      <div className=" h-[700px]">
         <div className="z-0 transform -translate-y-[400px] translate-x-[25px]">
           <MangoBlob />
         </div>
