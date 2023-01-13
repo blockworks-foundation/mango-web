@@ -24,8 +24,8 @@ const HomeHero = () => {
           Trade, spend, and earn crypto like never before.
         </p>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
-          <li className="mb-2 inline-flex"><BoltIcon className="w-6 h-6 text-mango-yellow m-1 mr-2" />Blazingly fast, all on-chain.</li>
-          <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Verify, don&apos;t trust, open-source first.</li>
+          <li className="mb-2 inline-flex"><BoltIcon className="w-6 h-6 text-mango-yellow m-1 mr-2" />Blazingly fast and all on-chain.</li>
+          <li className="mb-2 inline-flex"><CodeBracketIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"   />Verify. Don&apos;t trust us, open-source first.</li>
           <li className="mb-2 inline-flex"><GlobeEuropeAfricaIcon className="w-6 h-6 text-mango-yellow m-1 mr-2"/>Access globally, with out borders.</li>
         </ul>
 
@@ -45,7 +45,7 @@ const HomeHero = () => {
 
 
       <div className="">
-        <div className="z-0 transform -translate-y-[150px] -translate-x-[125px]">
+        <div className="z-0 transform -translate-y-[400px] translate-x-[25px]">
           <MangoBlob />
         </div>
         <div className="z-0 block reletive transform -translate-y-[510px] translate-x-[650px] -rotate-[9deg] ">
