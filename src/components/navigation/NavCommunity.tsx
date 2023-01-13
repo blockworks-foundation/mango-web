@@ -60,7 +60,7 @@ const NavCommunity = () => {
       {({ open }) => (
         <div className="relative">
           <Popover.Button
-            className={`group inline-flex items-center rounded-xl p-1 px-2 text-base font-medium text-th-fgd-5 opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none`}
+            className={`group inline-flex items-center rounded-xl p-1 px-2 text-sm font-medium text-th-fgd-5 opacity-40 transition duration-150 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none`}
           >
                     <svg
                       className="mr-2 h-5 w-5  text-th-fgd-3 text-opacity-40 transition duration-150 ease-in group-hover:text-mango-yellow group-active:text-mango-orange group-focus:text-mango-green"
