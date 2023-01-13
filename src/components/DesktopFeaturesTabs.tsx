@@ -6,6 +6,7 @@ import {
   ArrowSmallRightIcon,
 
   } from '@heroicons/react/20/solid'
+//import MangoAbstract from './MangoAbstract'
 // import BrowserMockupAbstract from './mockups/BrowserMockupAbstract'
 
 const featureOne = [
@@ -103,7 +104,7 @@ function DesktopFeaturesTabs() {
 
       <Tab.Panels className={"max-w-7xl mx-auto"}>
       <Tab.Panel>
-           <BrowserMockup src="/assets/images/feature_screen_one.png" />
+      <BrowserMockup src="/assets/images/feature_screen_one.png" />
         </Tab.Panel>
         <Tab.Panel>
            <BrowserMockup src="/assets/images/feature_screen_two.png" />

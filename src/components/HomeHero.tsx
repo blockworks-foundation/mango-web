@@ -3,6 +3,7 @@ import GradientText from '@/components/GradientText';
 import Button from '@/components/Button';
 import Linkie from '@/components/Linkie';
 import MangoBlob from '@/components/MangoBlob';
+import MangoAbstract from './MangoAbstract';
 
 const HomeHero = () => {
   return (
@@ -31,11 +32,14 @@ const HomeHero = () => {
           <MangoBlob />
         </div>
         <div className="z-10 hidden md:block reletive left-0 top-96 mt-20 ">
+          <MangoAbstract />
+{/* 
           <img
             className="w-full h-auto"
             src="/assets/images/hero_desktop.png"
             alt="desktop"
           />
+*/}          
         </div>
       </div>
     </div>
