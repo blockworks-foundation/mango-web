@@ -25,16 +25,16 @@ const HomeHero = () => {
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
           <li className="mb-2 inline-flex">
-            <BoltIcon className="bg-white bg-opacity-10 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2" />
+            <BoltIcon className="bg-th-fgd-2 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2" />
             Blazingly fast and all on-chain.
           </li>
           <li className="mb-2 inline-flex">
-            <CodeBracketIcon className="bg-white bg-opacity-10 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2"   />
-            Fully verifiable and open-source first.
+            <CodeBracketIcon className="bg-th-fgd-2 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2"   />
+            Fully verifiable, open-source first.
           </li>
           <li className="mb-2 inline-flex">
-            <GlobeAltIcon className="bg-white bg-opacity-10 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2"/>
-            Access globally, without borders.
+            <GlobeAltIcon className="bg-th-fgd-2 rounded-md p-1 w-6 h-6 text-mango-yellow m-1 mr-3 mb-2"/>
+            Accessable globally, without borders.
           </li>
         </ul>
 
