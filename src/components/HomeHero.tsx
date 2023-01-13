@@ -48,7 +48,7 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-[400px] translate-x-[25px]">
           <MangoBlob />
         </div>
-        <div className="z-0 block reletive transform -translate-y-[510px] translate-x-[650px] -rotate-[9deg] ">
+        <div className="z-0 block reletive transform -translate-y-[590px] translate-x-[680px] -rotate-[9deg] ">
           <BrowserMockupAbstract />
 {/* 
           <img
@@ -58,7 +58,7 @@ const HomeHero = () => {
           />
 */}          
         </div>
-        <div className="z-10 block reletive transform -translate-y-[910px] translate-x-[77px] -rotate-[9deg] ">
+        <div className="z-10 block reletive transform -translate-y-[930px] translate-x-[77px] -rotate-[9deg] ">
             <IphoneAbstract src="assets/images/iphone-screen.jpg" />
 {/* 
           <img
