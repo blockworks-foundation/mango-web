@@ -20,8 +20,8 @@ const HomeHero = () => {
         <p className="font-mono text-2xl mb-3 text-left text-th-fgd-5">
           <span className="type-hero text-th-fgd-3"></span>
         </p>
-        <h2 className="font-display text-6xl mb-6 text-left text-th-fgd-5 leading-tight">
-          <GradientText>Decentralized financial <br />products for the internet generation.</GradientText>
+        <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
+          <GradientText>Decentralized financial <br />products for the internet <br />generation.</GradientText>
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
           <li className="mb-2 inline-flex">
@@ -57,7 +57,7 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-[400px] translate-x-[25px]">
           <MangoBlob />
         </div>
-        <div className="z-10 block reletive transform -translate-y-[462px] translate-x-[730px] -rotate-[9deg] ">
+        <div className="z-10 block reletive transform -translate-y-[482px] translate-x-[730px] -rotate-[9deg] ">
           <BrowserMockupAbstract />
 {/* 
           <img
