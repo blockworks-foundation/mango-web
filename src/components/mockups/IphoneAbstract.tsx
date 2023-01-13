@@ -22,7 +22,7 @@ function IphoneAbstract(props: any) {
                                         src={props.src} />
                                     <div className="flex items-center flex-col">
                                         <ul className="absolute">
-                                            <li className="bg-white bg-opacity-80 h-[6px] w-[125px] rounded-full -mt-6 animate-bounce"></li>
+                                            <li className="bg-white bg-opacity-80 h-[4px] w-[66px] rounded-full -mt-6 animate-bounce"></li>
                                         </ul>
                                     </div>   
                                 </div>
