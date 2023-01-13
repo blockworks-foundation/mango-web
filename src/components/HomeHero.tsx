@@ -14,7 +14,7 @@ import {
 
 const HomeHero = () => {
   return (
-      <div className="flex flex-col max-w-7xl mt-[200px] mb-8 z-10 mx-auto p-8 py-20">
+      <div className="flex flex-col max-w-7xl mt-[190px] mb-8 z-10 mx-auto p-8 py-20">
 
         <div className="z-20 flex flex-col">
         <p className="font-mono text-2xl mb-3 text-left text-th-fgd-5">
@@ -57,7 +57,7 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-[400px] translate-x-[25px]">
           <MangoBlob />
         </div>
-        <div className="z-10 block reletive transform -translate-y-[462px] translate-x-[750px] -rotate-[9deg] ">
+        <div className="z-10 block reletive transform -translate-y-[462px] translate-x-[730px] -rotate-[9deg] ">
           <BrowserMockupAbstract />
 {/* 
           <img
@@ -67,7 +67,7 @@ const HomeHero = () => {
           />
 */}          
         </div>
-        <div className="z-10 block reletive transform -translate-y-[952px] translate-x-[20px] -rotate-[9deg] ">
+        <div className="z-10 block reletive transform -translate-y-[952px] translate-x-[0px] -rotate-[9deg] ">
             <IphoneAbstract src="assets/images/iphone-screen.jpg" />
 {/* 
           <img

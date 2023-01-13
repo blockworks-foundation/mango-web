@@ -183,6 +183,7 @@ module.exports = {
       animation: {
         blob: 'blob 12s infinite',
         tilt: 'tilt 10s infinite linear',
+        text:'text 12s ease infinite',
       },
       keyframes: {
         blob: {
@@ -210,6 +211,16 @@ module.exports = {
             transform: 'rotate(-0.5deg)',
           },
         },
+        text: {
+          '0%, 100%': {
+             'background-size':'200% 200%',
+              'background-position': 'left center'
+          },
+          '50%': {
+             'background-size':'200% 200%',
+              'background-position': 'right center'
+          }
+      },
       },
     },
   },
