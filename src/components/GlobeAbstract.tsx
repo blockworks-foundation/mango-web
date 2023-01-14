@@ -54,21 +54,21 @@ const GlobalAbstract = () => {
  
    
           
- <motion.g 
+            <motion.g 
                     {...mainModalVariant}
                           initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
+                          whileInView={{ opacity: 1 }}
                           transition={{
                             duration: 2,
                             ease: "easeInOut"
                           }} >
-           <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 266.719 447.635)" fill="#FECA1A"/>
-            <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 115.086 273.748)" fill="#FECA1A"/>
-            <ellipse rx="5.66648" ry="5.90258" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 266.719 447.636)" fill="#FECA1A"/>
-            <ellipse rx="5.66648" ry="5.90258" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 115.087 273.75)" fill="#FECA1A"/>
+                    <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 266.719 447.635)" fill="#FECA1A"/>
+                    <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 115.086 273.748)" fill="#FECA1A"/>
+                    <ellipse rx="5.66648" ry="5.90258" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 266.719 447.636)" fill="#FECA1A"/>
+                    <ellipse rx="5.66648" ry="5.90258" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 115.087 273.75)" fill="#FECA1A"/>
            </motion.g>
            <motion.path {...mainPathVariant}
-                          animate="visible"
+                          whileInView="visible"
                           initial="hidden"
                           transition={{
                             duration: 1.5,
@@ -83,7 +83,7 @@ const GlobalAbstract = () => {
             <motion.g 
                     {...mainModalVariant}
                           initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
+                          whileInView={{ opacity: 1 }}
                           transition={{
                             delay:.5,
                             duration: 2,
@@ -96,7 +96,7 @@ const GlobalAbstract = () => {
             <circle cx="261" cy="247" r="5" fill="#559600"/>
             </motion.g>
             <motion.path {...mainPathVariant}
-                          animate="visible"
+                          whileInView="visible"
                           initial="hidden"
                           transition={{
                             delay:.5,
@@ -111,7 +111,7 @@ const GlobalAbstract = () => {
              <motion.g 
                     {...mainModalVariant}
                           initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
+                          whileInView={{ opacity: 1 }}
                           transition={{
                             delay:2,
                             duration: 1.5,
@@ -123,7 +123,7 @@ const GlobalAbstract = () => {
             <ellipse rx="5.66648" ry="5.90258" transform="matrix(0.973499 -0.228693 -0.228693 -0.973499 573.143 210.305)" fill="#E54033"/>
             </motion.g>
             <motion.path {...mainPathVariant}
-                          animate="visible"
+                          whileInView="visible"
                           initial="hidden"
                           transition={{
                             delay: 1.5,

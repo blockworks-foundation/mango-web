@@ -13,7 +13,7 @@ import GlobalAbstract from './GlobeAbstract';
 const PhoneSectionOne = () => {
   return (
     <>
-      <div className="z-20 mt-0 mb-8 max-w-7xl m-auto px-8">
+      <div className="z-20 -mt-[100px] mb-8 max-w-7xl m-auto px-8">
       <p className="font-phone text-2xl mb-3 text-left">
           <span className="type-phone font-mono text-th-fgd-3"></span>
         </p>
@@ -31,7 +31,7 @@ const PhoneSectionOne = () => {
           </li>
           <li className="mb-2 inline-flex">
             <PhoneIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
-            Forget wallets, use your phone number.
+            Forget wallets, pay with your phone number.
           </li>
         </ul>
         <div className="flex flex-row">
