@@ -244,6 +244,10 @@ module.exports = {
             words: ['//freedom is not needing permission to move..', '//freedom is making it accessable to everyone..'],
             delay: 1
           },
+          phone: {
+            words: ['//freedom is not needing permission to move..'],
+            delay: 1
+          },
       }
   }),
   

@@ -6,12 +6,14 @@ import MangoBlob from '@/components/MangoBlob';
 const PhoneSectionOne = () => {
   return (
     <>
-      <div className="z-20 mt-72 mb-8 max-w-7xl m-auto px-8">
-          <p className=" font-display text-2xl mb-3 text-left font-bold text-th-fgd-5 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
-              Pay, send, receive globally.
-              <br />
-              <GradientText>A wallet without borders. </GradientText>
-          </p>
+      <div className="z-20 mt-0 mb-8 max-w-7xl m-auto px-8">
+      <p className="font-phone text-2xl mb-3 text-left">
+          <span className="type-hero font-mono text-th-fgd-3"></span>
+        </p>
+        <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
+          Pay anyone, anywhere. <br  /><GradientText>A digital wallet without <br  />borders.</GradientText>
+        </h2>
+
         <div className="flex flex-row">
         <div className="z-20 mt-4 justify-left w-[175px]">
                       <div className="group ">
