@@ -43,8 +43,8 @@ const QrCodeDrop = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute left-0 top-16 thin-scroll z-20 max-h-screen w-48 overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 p-4`}
-            >
+              className={`absolute right-0 top-16 thin-scroll z-30 max-h-screen w-72 overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 p-4`}
+              >
               <div className="grid grid-cols-1">
               <div className="col-span-1 px-1">    
               <h3 className="mb-2 text-sm font-display uppercase tracking-tight text-th-fgd-3">

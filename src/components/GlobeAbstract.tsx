@@ -40,7 +40,7 @@ const GlobalAbstract = () => {
                           animate="visible"
                           initial="hidden"
                           transition={{
-                            duration: 1,
+                            duration: 4,
                             ease: "easeInOut"
                           }}d="M261.094 247.251C261.097 247.251 266.95 204.757 297 175.5C326.323 146.95 354.827 147.172 354.827 147.172" stroke="#6CBF00" strokeWidth="5" strokeLinecap="round"></motion.path>
             <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 266.719 447.635)" fill="#FECA1A"/>
@@ -51,7 +51,7 @@ const GlobalAbstract = () => {
                           animate="visible"
                           initial="hidden"
                           transition={{
-                            duration: 1,
+                            duration: 4,
                             ease: "easeInOut"
                           }} d="M114.592 274.214C114.597 274.214 100.307 307.512 138.524 364.785C187.677 438.446 266.695 447.773 266.695 447.773" stroke="#E2AF00" strokeWidth="5" strokeLinecap="round"></motion.path>
             <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.973499 -0.228693 -0.228693 -0.973499 315.311 567.292)" fill="#E54033"/>
@@ -62,7 +62,7 @@ const GlobalAbstract = () => {
                           animate="visible"
                           initial="hidden"
                           transition={{
-                            duration: 1,
+                            duration: 4,
                             ease: "easeInOut"
                           }} d="M315.672 566.967C315.671 566.957 393.12 550.826 472.919 459.456C579.966 336.89 573.739 209.896 573.739 209.896" stroke="#FF5B4E" strokeWidth="5" strokeLinecap="round"></motion.path>
             <defs>
