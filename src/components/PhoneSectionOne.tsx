@@ -8,6 +8,7 @@ import {
   KeyIcon,
 
   } from '@heroicons/react/20/solid';
+import GlobalAbstract from './GlobeAbstract';
 
 const PhoneSectionOne = () => {
   return (
@@ -180,11 +181,14 @@ const PhoneSectionOne = () => {
         <div className="z-10 transform -translate-y-[700px] translate-x-[700px]">
         <MangoBlob />
        </div> 
-     <div className="z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
-       <div className="">
+     <div className="flex flex-col z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
+      <div className="z-10 transform translate-x-[300px]">
+          <GlobalAbstract />
+       </div>
+       <div className="z-0 transform -translate-y-[550px]">
          <img
            className="w-auto h-[900px]"
-           src={`/assets/images/iphone-globe.svg`}          
+           src={`/assets/images/phonelights.svg`}          
            alt="iphone"
            />
        </div>
