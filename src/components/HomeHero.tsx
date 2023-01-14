@@ -26,17 +26,17 @@ const HomeHero = () => {
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
         <li className="mb-2 inline-flex">
             <FireIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
-            Blazingly fast and all on-chain.
+            Blazingly fast products, all on-chain.
           </li>
 
           <li className="mb-2 inline-flex">
             <CodeBracketIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"   />
-            Fully verifiable, open-source first.
+            Open-source, community driven and fully verifiable.
           </li>
           
           <li className="mb-2 inline-flex">
             <GlobeAltIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"/>
-            Accessable globally, without borders.
+            Accessible globally, without borders.
           </li>
         </ul>
 
@@ -59,7 +59,7 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-[550px] translate-x-[25px]">
           <MangoBlob />
         </div>
-        <div className="z-10 block reletive transform -translate-y-[652px] translate-x-[730px] -rotate-[9deg] ">
+        <div className="z-10 block reletive transform -translate-y-[700px] translate-x-[730px] -rotate-[9deg] ">
           <BrowserMockupAbstract />
 {/* 
           <img
@@ -69,7 +69,7 @@ const HomeHero = () => {
           />
 */}          
         </div>
-        <div className="z-10 block reletive transform -translate-y-[1052px] translate-x-[0px] -rotate-[9deg] ">
+        <div className="z-10 block reletive transform -translate-y-[1052px] translate-x-[125px] -rotate-[9deg] ">
             <IphoneAbstract src="assets/images/iphone-screen.jpg" />
 {/* 
           <img
