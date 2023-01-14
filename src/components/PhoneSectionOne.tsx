@@ -6,6 +6,7 @@ import {
   PhoneIcon,
   CurrencyDollarIcon,
   KeyIcon,
+  PaperAirplaneIcon,
 
   } from '@heroicons/react/20/solid';
 import GlobalAbstract from './GlobeAbstract';
@@ -101,10 +102,12 @@ const PhoneSectionOne = () => {
                             fill="white"/>
                         </svg>
                         </a>
+                        <div className="p-1 -mt-5 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-100 transition duration-700 group-hover:duration-700 animate-tilt"></div>
+                        <div className="p-2 -mt-5 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-50 transition duration-300 group-hover:duration-700 animate-tilt"></div>
                       </button>
                       <div className="tranform translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-100 ease-in-out">
-                        <p className="animate-pulse flex flex-row text-sm font-mono text-th-fgd-4 group-hover:text-opacity-100 w-screen transition duration-150 ease-in-out">
-                          Join the testflight!
+                        <p className="animate-pulse ml-1 mt-5 flex flex-row text-sm font-mono text-th-fgd-4 group-hover:text-opacity-100 w-screen transition duration-150 ease-in-out">
+                          Join the testflight! <PaperAirplaneIcon className="w-4 h-4 m-1" />
                         </p>
                       </div>
                       </div>
