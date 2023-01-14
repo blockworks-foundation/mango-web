@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import ButtonTwo from '@/components/ButtonTwo'
 import Logo from '@/components/Logo'
-import ThemeSwitcher from '@/components/ThemeSwitcher'
+import QrCodeDrop from '@/components/QrCodeDrop'
 import StyleGuideDrop from '@/components/StyleGuideDrop'
 import NavExplore from '@/components/navigation/NavExplore'
 import NavCommunity from './navigation/NavCommunity'
@@ -78,7 +78,7 @@ const Nav = () => {
                   </ButtonTwo>
               </div>
               <div className="z-30 bg-th-fgd-2 mt-1 rounded-full ml-6 shadow-lg">
-                  <ThemeSwitcher />
+                  <QrCodeDrop />
               </div>
             </div>
           </div>

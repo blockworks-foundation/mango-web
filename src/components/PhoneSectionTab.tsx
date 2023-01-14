@@ -57,7 +57,7 @@ function PhoneSectionTab() {
                     </dl>
                 </Tab>
 
-                <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100">
+                <Tab className="group -ml-1 hover:-ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100">
                     <dl>
                     {featureTwo.map((feature) => (
                         <div className="text-left" key={feature.name}>

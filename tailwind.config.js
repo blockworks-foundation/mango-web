@@ -241,11 +241,15 @@ module.exports = {
             delay: 1
           },
           hero: {
-            words: ['//freedom is not needing permission to move..', '//freedom is making it accessable to everyone..'],
+            words: ['//freedom is making it accessable to everyone..'],
             delay: 1
           },
           phone: {
             words: ['//freedom is not needing permission to move..'],
+            delay: 1
+          },
+          desktop: {
+            words: ['//freedom is power over your financees..'],
             delay: 1
           },
       }

@@ -158,14 +158,14 @@ const PhoneSectionOne = () => {
         </div>
 
       </div>
-        <div className="z-0 transform -translate-y-[666px] translate-x-96">
+        <div className="z-10 transform -translate-y-[700px] translate-x-[700px]">
         <MangoBlob />
        </div> 
-     <div className="reletive transform translate-x-1/3 -translate-y-3/4">
-       <div className="z-0">
+     <div className="z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
+       <div className="">
          <img
-           className="w-auto h-auto"
-           src={`/assets/images/product_iphone.png`}          
+           className="w-auto h-[900px]"
+           src={`/assets/images/iphone-globe.svg`}          
            alt="iphone"
            />
        </div>
