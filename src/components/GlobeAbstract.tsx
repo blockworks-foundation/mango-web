@@ -39,7 +39,13 @@ const GlobalAbstract = () => {
     
     return (
       <div className="">
-            <svg width="440" height="440" viewBox="0 0 740 740" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <motion.svg 
+            width="440" 
+            height="440" 
+            viewBox="0 0 740 740" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg">
+            
             <path d="M476.085 633.014C621.51 574.258 691.769 408.738 633.013 263.314C574.258 117.89 408.738 47.6306 263.314 106.386C117.89 165.141 47.6305 330.661 106.386 476.085C165.141 621.51 330.661 691.769 476.085 633.014Z" fill="url(#paint0_radial_4991_8470)"/>
             <mask id="mask0_4991_8470" className="mask-type:alpha" maskUnits="userSpaceOnUse" x="85" y="85" width="569" height="569">
             <path d="M476.085 633.014C621.51 574.258 691.769 408.738 633.013 263.314C574.258 117.89 408.738 47.6306 263.314 106.386C117.89 165.141 47.6305 330.661 106.386 476.085C165.141 621.51 330.661 691.769 476.085 633.014Z" fill="url(#paint1_radial_4991_8470)"/>
@@ -170,7 +176,7 @@ const GlobalAbstract = () => {
             <stop offset="1" stopColor="#4B4358"/>
             </radialGradient>
             </defs>
-            </svg>
+            </motion.svg>
 
       </div>
     );

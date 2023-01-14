@@ -1,6 +1,6 @@
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import {ShieldCheckIcon, QrCodeIcon } from '@heroicons/react/20/solid'
+import {ShieldCheckIcon, QrCodeIcon, } from '@heroicons/react/20/solid'
 
 
 
@@ -43,58 +43,33 @@ const QrCodeDrop = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute right-0 top-16 thin-scroll z-30 max-h-screen w-72 overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 p-4`}
+              className={`absolute right-0 top-16 z-30 max-h-screen w-72 overflow-auto rounded-[18px] shadow-lg bg-th-bkg-4 border border-th-fgd-1 p-1`}
               >
-              <div className="grid grid-cols-1">
-              <div className="col-span-1 px-1">    
-              <h3 className="mb-2 text-sm font-display uppercase tracking-tight text-th-fgd-3">
-                        Style & Press
+              <div className="flex flex-col">
+              <div className="inline-flex bg-white bg-opacity-5 rounded-md pt-2 px-1">  
+              <svg 
+                id="bold" 
+                width="22"
+                height="22" 
+                viewBox="0 0 24 24" 
+                className="fill-white p-1 bg-white bg-opacity-5 rounded-md"
+                xmlns="http://www.w3.org/2000/svg">
+                <path 
+                    d="m23 8c-.552 0-1-.447-1-1v-4c0-.552-.449-1-1-1h-4c-.552 0-1-.447-1-1s.448-1 1-1h4c1.654 0 3 1.346 3 3v4c0 .553-.448 1-1 1z"/>
+                <path 
+                    d="m21 24h-4c-.552 0-1-.447-1-1s.448-1 1-1h4c.551 0 1-.448 1-1v-4c0-.553.448-1 1-1s1 .447 1 1v4c0 1.654-1.346 3-3 3z"/>
+                <path 
+                    d="m7 24h-4c-1.654 0-3-1.346-3-3v-4c0-.553.448-1 1-1s1 .447 1 1v4c0 .552.449 1 1 1h4c.552 0 1 .447 1 1s-.448 1-1 1z"/>
+                <path 
+                    d="m1 8c-.552 0-1-.447-1-1v-4c0-1.654 1.346-3 3-3h4c.552 0 1 .447 1 1s-.448 1-1 1h-4c-.551 0-1 .448-1 1v4c0 .553-.448 1-1 1z"/>
+                <path 
+                    d="m18 11c-.552 0-1-.447-1-1v-3h-10v3c0 .553-.448 1-1 1s-1-.447-1-1v-3c0-1.103.897-2 2-2h10c1.103 0 2 .897 2 2v3c0 .553-.448 1-1 1z"/>
+                <path 
+                    d="m21 14c0 .553-.448 1-1 1h-1v2c0 1.103-.897 2-2 2h-10c-1.103 0-2-.897-2-2v-2h-1c-.552 0-1-.447-1-1s.448-1 1-1h16c.552 0 1 .447 1 1z"/>
+                </svg> 
+              <h3 className="mb-2 ml-2 text-sm font-display text-th-fgd-3">
+                        Scan this!
                </h3>            
-              <ul className="">
-                        <li className="group mb-4 text-sm">
-                          <a
-                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/"
-                          >
-                           Logo Zip
-                            <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                          </a>
-                        </li>
-                        <li className="group mb-4 text-sm">
-                          <a
-                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/"
-                          >
-                           Styleguide
-                            <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                          </a>
-                        </li>
-                        <li className="group mb-4 text-sm">
-                          <a
-                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/"
-                          >
-                           Press Pack
-                            <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
-                          </a>
-                        </li>
-                        </ul>
-
               </div>
               </div>
              </Popover.Panel>
