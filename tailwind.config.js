@@ -241,7 +241,7 @@ module.exports = {
             delay: 1
           },
           hero: {
-            words: ['//freedom is making it accessable to everyone..'],
+            words: ['//freedom is making it accessible to everyone..'],
             delay: 1
           },
           phone: {
@@ -249,7 +249,7 @@ module.exports = {
             delay: 1
           },
           desktop: {
-            words: ['//freedom is power over your financees..'],
+            words: ['//freedom is power over your finances..'],
             delay: 1
           },
       }

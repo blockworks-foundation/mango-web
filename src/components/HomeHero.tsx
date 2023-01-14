@@ -10,7 +10,7 @@ import {
   CodeBracketIcon,
   GlobeAltIcon,
 
-  } from '@heroicons/react/20/solid'
+  } from '@heroicons/react/20/solid';
 
 const HomeHero = () => {
   return (
@@ -24,17 +24,19 @@ const HomeHero = () => {
           <GradientText>Decentralized finance <br />for the internet <br />generation.</GradientText>
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
-          <li className="mb-2 inline-flex">
-            <GlobeAltIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"/>
-            Accessable globally, without borders.
+        <li className="mb-2 inline-flex">
+            <FireIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
+            Blazingly fast and all on-chain.
           </li>
+
           <li className="mb-2 inline-flex">
             <CodeBracketIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"   />
             Fully verifiable, open-source first.
           </li>
+          
           <li className="mb-2 inline-flex">
-            <FireIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
-            Blazingly fast and all on-chain.
+            <GlobeAltIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"/>
+            Accessable globally, without borders.
           </li>
         </ul>
 

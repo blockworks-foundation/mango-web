@@ -2,18 +2,37 @@
 import GradientText from '@/components/GradientText';
 import MangoPill from '@/components/MangoPill';
 import MangoBlob from '@/components/MangoBlob';
+import { 
+  IdentificationIcon,
+  CurrencyDollarIcon,
+  KeyIcon,
+
+  } from '@heroicons/react/20/solid';
 
 const PhoneSectionOne = () => {
   return (
     <>
       <div className="z-20 mt-0 mb-8 max-w-7xl m-auto px-8">
       <p className="font-phone text-2xl mb-3 text-left">
-          <span className="type-hero font-mono text-th-fgd-3"></span>
+          <span className="type-phone font-mono text-th-fgd-3"></span>
         </p>
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          Pay anyone, anywhere. <br  /><GradientText>A digital wallet without <br  />borders.</GradientText>
+          Pay anyone, anywhere. <br  /><GradientText>A global digital wallet<br  /> without borders.</GradientText>
         </h2>
-
+        <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
+          <li className="mb-2 inline-flex">
+            <KeyIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"/>
+              Your keys, youre money.
+          </li>
+          <li className="mb-2 inline-flex">
+            <CurrencyDollarIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"   />
+            Fiat to crypto, crypto to fiat.
+          </li>
+          <li className="mb-2 inline-flex">
+            <IdentificationIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
+            Forget wallets, use your phone number.
+          </li>
+        </ul>
         <div className="flex flex-row">
         <div className="z-20 mt-4 justify-left w-[175px]">
                       <div className="group ">
