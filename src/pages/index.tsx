@@ -5,7 +5,7 @@ import DesktopSectionOne from '@/components/DesktopSectionOne';
 import PhoneSectionOne from '@/components/PhoneSectionOne';
 import PhoneSectionGrid from '@/components/PhoneSectionGrid';
 import Footer from '@/components/Footer';
-import PhoneSectionTab from '@/components/PhoneSectionTab';
+// import PhoneSectionTab from '@/components/PhoneSectionTab';
 import SectionCta from '@/components/SectionCta';
 import DesktopHero from '@/components/DesktopHero';
 
@@ -19,7 +19,6 @@ const Index = () => {
       <HomeHero />
       <PhoneSectionOne />
       <PhoneSectionGrid />
-      <PhoneSectionTab />
       <DesktopHero />
       <DesktopSectionOne />
       <SectionCta />
