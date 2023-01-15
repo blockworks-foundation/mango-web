@@ -10,7 +10,7 @@ import {
 
 const featureOne = [
   {
-    name: 'Feature',
+    name: 'Pay anyone in your contacts.',
     description:
       "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
   },
@@ -24,7 +24,7 @@ const featureTwo = [
 ]
 const featureThree = [
   {
-    name: 'Feature',
+    name: 'Auto-Lending through Earn.',
     description:
       'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
   },

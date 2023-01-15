@@ -252,6 +252,10 @@ module.exports = {
             words: ['//freedom is power over your finances..'],
             delay: 1
           },
+          dao: {
+            words: ['//freedom is community driven..'],
+            delay: 1
+          },
       }
   }),
   

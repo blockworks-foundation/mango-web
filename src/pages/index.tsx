@@ -1,7 +1,7 @@
 import HomeHero from '@/components/HomeHero';
 import Nav from '@/components/Nav';
-import DesktopSectionTwo from '@/components/DesktopSectionTwo'
-import DesktopSectionOne from '@/components/DesktopSectionOne';
+// import DesktopSectionTwo from '@/components/DesktopSectionTwo'
+// import DesktopSectionOne from '@/components/DesktopSectionOne';
 import PhoneSectionOne from '@/components/PhoneSectionOne';
 import PhoneSectionGrid from '@/components/PhoneSectionGrid';
 import Footer from '@/components/Footer';
@@ -16,8 +16,6 @@ const Index = () => {
     >
       <Nav />
       <HomeHero />
-      <DesktopSectionOne />
-      <DesktopSectionTwo />
       <PhoneSectionOne />
       <PhoneSectionGrid />
       <PhoneSectionTab />
