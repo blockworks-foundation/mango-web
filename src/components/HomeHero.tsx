@@ -70,7 +70,7 @@ const HomeHero = () => {
 */}          
         </div>
         <div className="z-10 block reletive transform -translate-y-[1100px] translate-x-[125px] -rotate-[3deg]">
-            <IphoneAbstract src="assets/images/iphone-screen.jpg" />
+            <IphoneAbstract src="assets/images/hero-screen.jpg" />
 {/* 
           <img
             className="w-full h-auto"

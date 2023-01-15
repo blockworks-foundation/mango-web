@@ -16,11 +16,11 @@ const Index = () => {
     >
       <Nav />
       <HomeHero />
+      <DesktopSectionOne />
+      <DesktopSectionTwo />
       <PhoneSectionOne />
       <PhoneSectionGrid />
       <PhoneSectionTab />
-      <DesktopSectionOne />
-      <DesktopSectionTwo />
       <SectionCta />
       <Footer />
 
