@@ -32,7 +32,7 @@ const PhoneSectionOne = () => {
           </li>
           <li className="mb-2 inline-flex">
             <PhoneIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
-            Forget wallets, pay with your phone number.
+            Pay with your number, forget wallet addresses.
           </li>
         </ul>
         <div className="flex flex-row">

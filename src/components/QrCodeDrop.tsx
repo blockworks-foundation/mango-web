@@ -1,6 +1,6 @@
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import {ShieldCheckIcon, QrCodeIcon, } from '@heroicons/react/20/solid'
+import {QrCodeIcon, DevicePhoneMobileIcon, } from '@heroicons/react/20/solid'
 
 
 
@@ -21,7 +21,7 @@ const QrCodeDrop = () => {
               </span>
             <span className="relative text-th-fgd-3 bg-th-bkg-3 p-2 rounded-full hover:bg-th-bkg-1 group-hover:text-mango-green transition-all duration-100 ease-in-out ">
             {open ? (
-              <ShieldCheckIcon className="h-5 w-5" />
+              <DevicePhoneMobileIcon className="h-5 w-5" />
             ) : (
               <QrCodeIcon className="h-5 w-5" />
             )}

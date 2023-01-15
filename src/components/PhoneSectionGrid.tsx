@@ -1,10 +1,11 @@
 import GridItemShort from "@/components/cards/GridItemShort";
+import GridItemFees from "@/components/cards/GridItemFees";
 
 const gridItemOne: any = [
     {
-      name: 'Maximum capital efficiency.',
+      name: 'Digital cash made easy.',
       description:
-        "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+        "Pay, send, receive globally.",
     },
   ]; 
   const gridItemTwo: any = [
@@ -27,7 +28,7 @@ function PhoneSectionGrid() {
   return (
     <div className="max-w-7xl mx-auto -mt-[750px] px-8">
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-        <GridItemShort
+        <GridItemFees
           name={gridItemOne[0].name}
           description={gridItemOne[0].description}
         />  
