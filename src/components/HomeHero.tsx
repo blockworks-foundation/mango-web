@@ -21,7 +21,7 @@ const HomeHero = () => {
           <span className="type-hero text-th-fgd-3"></span>
         </p>
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          <GradientText>Building open finance <br />for the internet <br />generation.</GradientText>
+          Building open finance <br /><GradientText>for the internet <br />generation.</GradientText>
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
         <li className="mb-2 inline-flex">
