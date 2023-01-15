@@ -1,34 +1,18 @@
 
 import GradientText from '@/components/GradientText';
-import Button from '@/components/Button';
 import DesktopFeaturesTabs from '@/components/DesktopFeaturesTabs';
 
 const DesktopSectionTwo = () => {
   return (
     <>
       <div className="mt-72 mb-8 z-10 max-w-7xl mx-auto p-8">
-        <p className="z-20 font-display text-2xl mb-3 text-left font-bold text-th-fgd-5 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
-          Trade, leverage, and utilize.
-          <br />
-          <GradientText>All from one hub.</GradientText>
-        </p>
+        <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
+          <GradientText>Take control over your money.</GradientText>
+        </h2>
         <div className="mt-8 inline-flex">
-                        <div className="w-72">
-                            <Button>
-                                    <a
-                                  rel="noreferrer"
-                                  target="_blank"
-                                  href="https://trade.mango.markets"
-                                  >
-                                Discover 🥭
-                            </a>
-                        </Button>           
-                        </div>
-
-
                      <div
                           onClick={() =>  navigator.clipboard.writeText('git clone https://github.com/blockworks-foundation/mango-v4-ui.git')}
-                          className="group cursor-pointer inline-flex overflow-hidden max-w-md -ml-[80px] shadow-[inset_0_0_30px_rgba(0,0,0,0.3)] bg-dark-theme-bkg-3 border-2 border-th-fgd-3 hover:border-mango-yellow rounded-[12px] transition-all duration-150 ease-in-out">
+                          className="group cursor-pointer inline-flex overflow-hidden max-w-lg shadow-[inset_0_0_30px_rgba(0,0,0,0.3)] bg-dark-theme-bkg-3 border-2 border-th-fgd-3 hover:border-mango-yellow rounded-[12px] transition-all duration-150 ease-in-out">
                         <span className="p-2 bg-black bg-opacity-40 group-hover:bg-opacity-0 border-r-2 border-th-fgd-3 rounded-l-[8px]">
                         <svg 
                           xmlns="http://www.w3.org/2000/svg" 

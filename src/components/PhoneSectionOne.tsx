@@ -196,7 +196,7 @@ const PhoneSectionOne = () => {
            />
        </div>
      </div>        
-        </>
+    </>
   );
 };
 
