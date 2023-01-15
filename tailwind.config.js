@@ -249,7 +249,7 @@ module.exports = {
             delay: 1
           },
           desktop: {
-            words: ['//freedom is power over your finances..'],
+            words: ['//freedom is control over your finances..'],
             delay: 1
           },
           dao: {
