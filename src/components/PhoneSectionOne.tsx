@@ -19,7 +19,7 @@ const PhoneSectionOne = () => {
           <span className="type-phone font-mono text-th-fgd-3"></span>
         </p>
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          Pay anyone, anywhere. <br  /><GradientText>A digital, global wallet<br  /> without borders.</GradientText>
+          Pay anyone, anywhere. <br  /><GradientText>Digital global payments<br  /> without borders.</GradientText>
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
           <li className="mb-2 inline-flex">
