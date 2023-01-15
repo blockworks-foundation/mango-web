@@ -29,12 +29,12 @@ const DesktopHero = () => {
 
           <li className="mb-2 inline-flex">
             <TableCellsIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"   />
-            Swap spot and trade futures on leverage.
+            Swap spot and trade futures with leverage.
           </li>
           
           <li className="mb-2 inline-flex">
             <ReceiptPercentIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"/>
-            Auto-lending earns you yield. 
+            Auto-lending earns you yield right into your account. 
           </li>
         </ul>
 
