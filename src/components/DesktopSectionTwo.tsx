@@ -7,7 +7,7 @@ const DesktopSectionTwo = () => {
     <>
       <div className="mt-72 mb-8 z-10 max-w-7xl mx-auto p-8">
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          <GradientText>Take control over your money.</GradientText>
+          Run Mango locally. <GradientText><br />No one can stop you.</GradientText>
         </h2>
         <div className="mt-8 inline-flex">
                      <div

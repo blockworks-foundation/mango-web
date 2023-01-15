@@ -8,7 +8,6 @@ import Footer from '@/components/Footer';
 import PhoneSectionTab from '@/components/PhoneSectionTab';
 import SectionCta from '@/components/SectionCta';
 import DesktopHero from '@/components/DesktopHero';
-import DesktopSectionTwo from '@/components/DesktopSectionTwo';
 
 
 const Index = () => {
@@ -23,7 +22,6 @@ const Index = () => {
       <PhoneSectionTab />
       <DesktopHero />
       <DesktopSectionOne />
-      <DesktopSectionTwo />
       <SectionCta />
       <Footer />
 

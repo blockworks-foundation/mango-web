@@ -8,11 +8,11 @@ const SectionCta = () => {
   return (
      <div className="my-72">
       <div className="z-10">
-         <p className="font-display font-bold text-2xl mb-3 text-center text-th-fgd-5 sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl">
+      <h2 className="text-center font-display text-6xl tracking-tight mb-6 text-th-fgd-5 leading-tight">
           Access to what you need.
           <br />
           <GradientText>The quick brown fox jumped.</GradientText>
-        </p>
+        </h2>
       </div>
         <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
                       

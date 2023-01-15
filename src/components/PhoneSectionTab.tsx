@@ -103,7 +103,7 @@ function PhoneSectionTab() {
             </div>
             <div className="">
             <Tab.Panels className={"text-white"}>
-            <div className="absolute z-0 transform -translate-x-72 translate-y-36">
+            <div className="absolute z-0 transform -translate-x-72 -translate-y-[100px]">
                             <MangoBlob />
                         </div> 
                 <Tab.Panel>

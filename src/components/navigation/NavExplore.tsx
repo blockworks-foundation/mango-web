@@ -16,7 +16,7 @@ import NavvyLink from '@/components/navigation/NavvyLink'
 // Explore Links...
 const navLinkOne: any = [
     {
-      url:'https://alpha.mango.markets',
+      url:'/markets',
       name: 'Markets',
       description:
         "Trade spot margin or permisionless perpectual futures on up to 20x leverage.",
@@ -24,7 +24,7 @@ const navLinkOne: any = [
   ];
   const navLinkTwo: any = [
     {
-      url:'https://alpha.mango.markets',
+      url:'/redacted',
       name: 'Redacted',
       description:
         "Move money globally without borders. Pay, send, swap, receive, and earn all from your device.",

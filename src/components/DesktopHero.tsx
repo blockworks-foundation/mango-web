@@ -54,7 +54,7 @@ const DesktopHero = () => {
 
 
       <div className=" h-[700px]">
-        <div className="z-0 transform -translate-y-[550px] translate-x-[25px]">
+        <div className="z-0 transform -translate-y-[500px] translate-x-[600px]">
           <MangoBlob />
         </div>
         <div className="z-10 block reletive transform -translate-y-[400px] translate-x-[600px]">
