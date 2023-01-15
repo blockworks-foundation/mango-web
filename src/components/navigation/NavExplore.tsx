@@ -113,7 +113,7 @@ const NavExplore = () => {
             <Popover.Panel
               className={`absolute transform -translate-x-44 translate-y-4`}
             >  
-                      <div className="overflow-hidden w-700 grid grid-cols-2 rounded-[18px] border border-white border-opacity-10 shadow-lg ">
+                      <div className="overflow-hidden w-700 grid grid-cols-2 rounded-[19px] border border-white border-opacity-10 shadow-lg ">
 
                       <div className=" space-y-3  p-4 px-5 bg-th-bkg-4 rounded-l-[18px]">
                         
