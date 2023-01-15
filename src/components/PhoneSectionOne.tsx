@@ -1,5 +1,6 @@
 
 import GradientText from '@/components/GradientText';
+// import GradientTextTwo from '@/components/GradientTextTwo';
 import MangoPill from '@/components/MangoPill';
 import MangoBlob from '@/components/MangoBlob';
 import { 
