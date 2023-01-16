@@ -9,9 +9,9 @@ const Footer = () => {
 
   return (
     <>
+      <div className="max-w-7xl h-[2px] mx-auto bg-gradient-to-r from-th-fgd-2 mt-10"></div>
       <div className="bg-mangobottom bg-contain bg-bottom bg-no-repeat">
         <div className="max-w-7xl mx-auto border-l-[2px] border-th-fgd-2 border-solid px-8">
-        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mt-10"></div>
 
             <EmailForm />
             <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mt-10"></div>
