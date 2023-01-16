@@ -19,7 +19,7 @@ const DesktopHero = () => {
           <span className="type-desktop text-th-fgd-3"></span>
         </p>
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          Utilize your digital goods.<br /> <GradientText>Trade, manage, earn <br />all from one hub.</GradientText>
+          Utilize your digital money.<br /> <GradientText>Trade, manage, earn <br />all from one hub.</GradientText>
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
         <li className="mb-2 inline-flex">
