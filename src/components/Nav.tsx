@@ -63,7 +63,7 @@ const Nav = () => {
               </div>
 
               {/* NavContainer */}
-              <div className="inline-flex">
+              <div className="inline-flex z-50">
                 {/* ProductsNav */}
                   <NavExplore />
                 {/* CommunityNav */}
