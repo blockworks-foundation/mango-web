@@ -26,7 +26,7 @@ const gridItemOne: any = [
 
 function PhoneSectionGrid() {
   return (
-    <div className="max-w-7xl mx-auto -mt-[0px] px-8 border-l-[2px] border-th-fgd-2 border-solid py-[150px]">
+    <div className="max-w-7xl mx-auto -mt-[0px] px-8 border-l-[4px] border-th-fgd-2 border-solid py-[150px]">
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         <GridItemFees
           name={gridItemOne[0].name}

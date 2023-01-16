@@ -366,7 +366,7 @@ const Nav = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto h-[2px] bg-gradient-to-r from-th-fgd-2 transform mt-4"></div>
+        <div className="h-[4px] bg-gradient-to-r from-th-fgd-2 transform mt-4"></div>
 
       </div>
       
