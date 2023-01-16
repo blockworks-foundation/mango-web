@@ -1,4 +1,7 @@
 import React from 'react';
+import { 
+  FireIcon,
+  } from '@heroicons/react/20/solid';
 
 function GridItemFees(props: any) {
 
@@ -9,14 +12,9 @@ function GridItemFees(props: any) {
           <div className="flex flex-col mb-8">
             <dl className="text-left">
                 <dt>
-                  {/* 
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-bkg-3 text-mango-yellow">
-                    <feature.icon
-                      className="h-6 w-6"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  */}
+                <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-xl text-th-fgd-5 bg-white bg-opacity-10 transition-all duration-150 ease-in-out">
+                        <FireIcon className="h-6 w-6" />
+                  </span>
                   <h2 className="text-th-fgd-4 font-display tracking-tighter text-xl mb-2">
                     {props.name}
                   </h2>

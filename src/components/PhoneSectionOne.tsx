@@ -39,13 +39,14 @@ const PhoneSectionOne = () => {
         <div className="flex flex-row">
         <div className="z-20 mt-4 justify-left w-[175px]">
                       <div className="group ">
-                      <button className="mr-4 opacity-60 hover:opacity-90 transition duration-75 ease-in transform hover:-translate-y-1">
+                      <button className="mr-4 opacity-60 hover:opacity-100 transition duration-75 ease-in transform hover:-translate-y-1">
                         <a
                           rel="noreferrer"
                           target="_blank"
                           href="https://trade.mango.markets"
                         >
-                        <svg 
+                        <svg
+                            className="z-10" 
                             width="164" 
                             height="47" 
                             viewBox="0 0 164 47" 
@@ -103,8 +104,8 @@ const PhoneSectionOne = () => {
                             fill="white"/>
                         </svg>
                         </a>
-                        <div className="p-1 -mt-5 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-100 transition duration-700 group-hover:duration-700 animate-tilt"></div>
-                        <div className="p-2 -mt-5 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-50 transition duration-300 group-hover:duration-700 animate-tilt"></div>
+                        <div className=" z-0 p-1 -mt-5 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-100 transition duration-700 group-hover:duration-700 animate-tilt"></div>
+                        <div className="z-0 p-2 -mt-5 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-sm blur-xl opacity-5 group-hover:opacity-50 transition duration-300 group-hover:duration-700 animate-tilt"></div>
                       </button>
                       <div className="tranform translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-100 ease-in-out">
                         <p className="group animate-pulse ml-1 mt-5 flex flex-row text-sm font-mono text-th-fgd-4 group-hover:text-opacity-100 w-screen transition duration-150 ease-in-out">

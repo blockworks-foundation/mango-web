@@ -1,6 +1,7 @@
 import GridItemShort from "@/components/cards/GridItemShort";
 import GridItemLong from "@/components/cards/GridItemLong";
 
+
 const gridItemOne: any = [
     {
       name: 'Maximum capital efficiency.',

@@ -5,7 +5,7 @@ import ButtonCopyGit from "./ButtonCopyGit";
 const CallToAction = () => {
   return (
     <>
-      <div className="z-0 transform -translate-y-40 translate-x-32">
+      <div className="z-0 transform -translate-y-[300px] translate-x-[0px]">
          <MangoBlob />
       </div> 
         <div className="z-50 mx-auto max-w-7xl pt-0 pb-16 my-16 mt-0">
