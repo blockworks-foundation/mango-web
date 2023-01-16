@@ -24,7 +24,7 @@ const ButtonNew: FunctionComponent<LinkieProps> = ({
   ...props
 }) => {
   return (
-    <div className="relative flex w-[218px] text-th-fgd-3 hover:text-th-fgd-5 bg-th-bkg-2 hover:bg-th-bkg-3 py-2 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-th-bkg-4 before:to-transparent before:opacity-0 hover:overflow-hidden hover:before:-translate-x-full hover:before:animate-[shimmer_0.75s_normal] hover:before:opacity-100">
+    <div className="cursor-pointer transitions duration-150 ease-in-out relative flex w-[218px] text-th-fgd-3 hover:text-th-fgd-5 bg-th-bkg-2 hover:bg-th-bkg-3 py-2 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-th-bkg-4 before:to-transparent before:opacity-0 hover:overflow-hidden hover:before:-translate-x-full hover:before:animate-[shimmer_0.75s_normal] hover:before:opacity-100">
                   <div className="default-transition relative z-10 flex h-full items-center justify-center space-x-3 px-12">
 
     <StyledButton
