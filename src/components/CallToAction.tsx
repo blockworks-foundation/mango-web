@@ -4,7 +4,6 @@ import ButtonCopyGit from "./ButtonCopyGit";
 const CallToAction = () => {
   return (
     <>
-
         <div className="z-50 mx-auto max-w-7xl pt-0 pb-16 mt-0 px-8 ">
 
             <div className="group h-72 transform transition duration-200 ease-in-out hover:-translate-y-2 border border-th-fgd-2 rounded-[40px] shadow-lg hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.1)] overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-mangotop bg-cover bg-top bg-no-repeat bg-th-bkg-3">

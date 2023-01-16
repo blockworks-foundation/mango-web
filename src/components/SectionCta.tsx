@@ -13,7 +13,7 @@ const SectionCta = () => {
       <h2 className="text-center font-display text-6xl tracking-tight mb-6 text-th-fgd-5 leading-tight">
           Powered by a fruit.
           <br />
-          <GradientText>For everyone to enjoy.</GradientText>
+          <GradientText>This is money with mango.</GradientText>
         </h2>
       </div>
         <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">

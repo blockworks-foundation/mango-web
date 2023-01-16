@@ -6,6 +6,7 @@ import StyleGuideDrop from '@/components/StyleGuideDrop'
 import NavExplore from '@/components/navigation/NavExplore'
 import NavCommunity from './navigation/NavCommunity'
 import NavSupport from '@/components/navigation/NavSuport'
+// import ThemeSwitcher from './ThemeSwitcher'
 
 
 const Nav = () => {
@@ -79,6 +80,9 @@ const Nav = () => {
               </div>
               <div className="z-30 bg-th-fgd-2 mt-1 rounded-full ml-6 shadow-lg">
                   <QrCodeDrop />
+                  {/* 
+                  <ThemeSwitcher /> 
+                  */}
               </div>
             </div>
           </div>
