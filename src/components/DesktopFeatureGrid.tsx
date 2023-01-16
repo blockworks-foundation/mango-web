@@ -33,7 +33,9 @@ const gridItemOne: any = [
 
 function DesktopFeatureGrid() {
   return (
-    <section className="max-w-7xl mx-auto px-8 border-l-[2px] border-th-fgd-2 border-solid -mt-[32px]">
+  <>
+    <section className="max-w-7xl mx-auto">
+      <div className="px-8 pb-4 border-l-[2px] border-th-fgd-2 border-solid -mt-[32px]">
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         <GridItemShort
           name={gridItemOne[0].name}
@@ -52,7 +54,12 @@ function DesktopFeatureGrid() {
           description={gridItemOne[0].description}
         />              
         </div>
+      </div>
+      <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2"></div>
+      <div className="h-1/2 w-[2px] bg-gradient-to-b from-th-fgd-2"></div>
+
     </section>
+</>
   );
 }
 

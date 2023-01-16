@@ -6,7 +6,7 @@ import Linkie from '@/components/Linkie';
 
 const SectionCta = () => {
   return (
-     <div className="my-72">
+     <div className="py-40">
       <div className="z-10">
       <h2 className="text-center font-display text-6xl tracking-tight mb-6 text-th-fgd-5 leading-tight">
           Powered by a fruit.
