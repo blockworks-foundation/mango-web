@@ -29,12 +29,12 @@ const HomeHero = () => {
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
         <li className="mb-2 inline-flex">
             <FireIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
-            Blazingly fast products, all on-chain.
+            Blazingly fast products, all on-chain and fully transparent.
           </li>
 
           <li className="mb-2 inline-flex">
             <CodeBracketIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4"   />
-            Open-source, community driven and fully verifiable.
+            Open-source, community driven and verifiable.
           </li>
           
           <li className="mb-2 inline-flex">
