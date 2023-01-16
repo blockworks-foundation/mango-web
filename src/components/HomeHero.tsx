@@ -1,6 +1,6 @@
 import React from 'react';
 import GradientText from '@/components/GradientText';
-import Button from '@/components/Button';
+import ButtonNew from '@/components/ButtonNew';
 import Linkie from '@/components/Linkie';
 import MangoBlob from '@/components/MangoBlob';
 import BrowserMockupAbstract from '@/components/mockups/BrowserMockupAbstract';
@@ -46,15 +46,15 @@ const HomeHero = () => {
           </li>
         </ul>
 
-        <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
+        <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
-        <div className="mt-4 inline-flex">
+        <div className="inline-flex -ml-8">
           
-          <Button>
+          <ButtonNew>
             <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
               Discover 🥭
             </a>
-          </Button>
+          </ButtonNew>
           <Linkie>
             <a rel="noreferrer" target="_blank" href="https://docs.mango.markets/">
               Explore the docs
@@ -62,10 +62,10 @@ const HomeHero = () => {
           </Linkie>
         </div>
         </div>
-        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mt-7"></div>
+        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
 
-      <div className=" h-[700px]">
+      <div className=" h-[500px]">
         
         <div className="z-0 transform -translate-y-[550px] translate-x-[225px]">
           <MangoBlob />

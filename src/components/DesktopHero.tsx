@@ -1,6 +1,6 @@
 import React from 'react';
 import GradientText from '@/components/GradientText';
-import Button from '@/components/Button';
+import ButtonNew from '@/components/ButtonNew';
 import MangoBlob from '@/components/MangoBlob';
 import { 
   AdjustmentsVerticalIcon,
@@ -41,22 +41,23 @@ const DesktopHero = () => {
             Auto-lending earns you transparent yield from pooled capital. 
           </li>
         </ul>
-        <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
+        
+        <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
-        <div className="mt-4 grid grid-cols-6 gap-4 ">
-          <Button className="col-span-1 max-h-[41px]">
+        <div className="flex -ml-8">
+          <ButtonNew className="">
             <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
               Discover 🥭
             </a>
-          </Button>
+          </ButtonNew>
           <div>
             <ButtonCopyGit />
           </div>
         </div>
         </div>
-
-        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] -mt-3"></div>
-
+        
+        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+      
       <div className=" h-[100px]">
         <div className="z-0 transform -translate-y-[500px] translate-x-[600px]">
           <MangoBlob />

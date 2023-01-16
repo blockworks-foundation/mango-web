@@ -1,7 +1,7 @@
 
 import GradientText from '@/components/GradientText';
-import Button from '@/components/Button';
-import Linkie from '@/components/Linkie';
+import ButtonTwo from '@/components/ButtonTwo';
+import LinkieTwo from '@/components/LinkieTwo';
 import CallToAction from '@/components/CallToAction'
 // import MangoBlob from '@/components/MangoBlob';
 
@@ -18,7 +18,7 @@ const SectionCta = () => {
       </div>
         <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
                       
-                      <Button>
+                      <ButtonTwo>
                         <a
                           rel="noreferrer"
                           target="_blank"
@@ -26,10 +26,10 @@ const SectionCta = () => {
                         >
                           Discover 🥭
                         </a>
-                      </Button>
+                      </ButtonTwo>
                       
 
-                      <Linkie>
+                      <LinkieTwo>
                         <a
                         rel="noreferrer"
                         target="_blank"
@@ -38,7 +38,7 @@ const SectionCta = () => {
                         Explore the docs
                         </a>
                 
-                     </Linkie>
+                     </LinkieTwo>
 
         </div>
           <div className="z-10 mt-0 ">

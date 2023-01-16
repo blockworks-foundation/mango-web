@@ -20,7 +20,7 @@ interface LinkieProps {
   children: React.ReactNode;
 }
 
-const Linkie: FunctionComponent<LinkieProps> = ({
+const LinkieTwo: FunctionComponent<LinkieProps> = ({
   children,
   className,
   ...props
@@ -28,13 +28,13 @@ const Linkie: FunctionComponent<LinkieProps> = ({
   return (
     <div className="text-th-fgd-3 hover:text-th-fgd-5 duration-150">
       <StyledButton
-        className={`${className} pr-5 flex z-10 p-[24px] relative text-lg group border-l-[2px] border-th-fgd-2 border-solid`}
+        className={`${className} ml-2 pr-6 flex z-10 p-3 relative group`}
         {...props}
       >
         {children}
         <span>
           <ArrowSmallRightIcon
-            className="w-8 h-8 group-hover:opacity-100 text-mango-yellow opacity-0 transform -translate-x-6 group-hover:translate-x-0 transition duration-150 ease-in"
+            className="w-6 h-6 group-hover:opacity-100 text-mango-yellow opacity-0 transform -translate-x-6 group-hover:translate-x-0 transition duration-150 ease-in"
           />
         </span>
       </StyledButton>
@@ -42,4 +42,4 @@ const Linkie: FunctionComponent<LinkieProps> = ({
   );
 };
 
-export default Linkie;
+export default LinkieTwo;
