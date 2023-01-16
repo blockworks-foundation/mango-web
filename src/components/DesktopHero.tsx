@@ -28,7 +28,7 @@ const DesktopHero = () => {
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
         <li className="mb-2 inline-flex">
             <AdjustmentsVerticalIcon className="bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] text-mango-yellow mr-3 mb-4" />
-            Full control over your coin, no middle man, just you and the contract.
+            Full control over your coin, no middle man. Just you and the contract.
           </li>
 
           <li className="mb-2 inline-flex">
