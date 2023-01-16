@@ -186,6 +186,7 @@ module.exports = {
         text:'text 12s ease infinite',
       },
       keyframes: {
+      
         blob: {
           '0%': {
             transform: 'translate(0px, 0px) scale(1)',
@@ -198,6 +199,11 @@ module.exports = {
           },
           '100%': {
             transform: 'translate(0px, 0px) scale(1)',
+          },
+        },
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
           },
         },
         tilt: {
