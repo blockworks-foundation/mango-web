@@ -15,10 +15,13 @@ import GlobalAbstract from './GlobeAbstract';
 const PhoneSectionOne = () => {
   return (
     <>
-      <div className="z-20 mb-8 max-w-7xl m-auto px-8">
+      <div className="z-20 max-w-7xl m-auto px-8 border-l-[2px] border-th-fgd-2 border-solid h-auto -mt-[32px]">
+      <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
       <p className="font-phone text-2xl mb-3 text-left">
           <span className="type-phone font-mono text-th-fgd-3"></span>
         </p>
+        <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-3"></div>
+
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
           Pay anyone, anywhere. <br  /><GradientText>Digital global payments<br  /> without borders.</GradientText>
         </h2>
@@ -36,6 +39,7 @@ const PhoneSectionOne = () => {
             Pay with your number, forget wallet addresses.
           </li>
         </ul>
+        <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-3"></div>
         <div className="flex flex-row">
         <div className="z-20 mt-4 justify-left w-[175px]">
                       <div className="group ">
@@ -179,18 +183,20 @@ const PhoneSectionOne = () => {
                               </svg>
                           </a>
                         </button>
-                      </div>          
+                      </div>     
+                           
         </div>
+        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
       </div>
         <div className="z-10 transform -translate-y-[750px] translate-x-[600px]">
         <MangoBlob />
        </div> 
      <div className="flex flex-col z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
-      <div className="z-10 transform translate-x-[300px]">
+      <div className="h-0 z-10 transform translate-x-[300px] translate-y-[50px]">
           <GlobalAbstract />
        </div>
-       <div className="z-0 transform -translate-y-[550px]">
+       <div className="z-0 h-0">
          <img
            className="w-auto h-[900px]"
            src={`/assets/images/phonelights.svg`}          
