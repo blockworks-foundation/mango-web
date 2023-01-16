@@ -31,7 +31,7 @@ const Nav = () => {
       <div className="z-50 h-2 w-screen fixed bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div>
       <div className="z-50 w-screen fixed backdrop-blur-xl bg-opacity-50 mt-2">
         {/* Main Menu */}
-        <div className="xs:px-6 xs:py-1 bg-transparent lg:px-10 lg:py-8 ">
+        <div className="xs:px-6 xs:py-1 bg-transparent lg:px-10 pt-2 ">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 ">
             <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
