@@ -8,7 +8,6 @@ import {
   ReceiptPercentIcon,
 
   } from '@heroicons/react/20/solid';
-import ButtonCopyGit from './ButtonCopyGit';
 
 const DesktopHero = () => {
   return (
@@ -44,16 +43,14 @@ const DesktopHero = () => {
         
         <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
-        <div className="flex -ml-8">
-          <ButtonNew className="">
+        <div className="inline-flex -ml-8">
+          <ButtonNew className="w-[218px] py-6">
             <a rel="noreferrer" target="_blank" href="https://trade.mango.markets">
               Discover 🥭
             </a>
           </ButtonNew>
-          <div>
-            <ButtonCopyGit />
-          </div>
         </div>
+        
         </div>
         
         <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
