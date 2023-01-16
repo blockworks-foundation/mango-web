@@ -20,7 +20,9 @@ const Index = () => {
       <DesktopHero />
       <DesktopSectionOne />
       <SectionCta />
-      <Footer /></div>
+      <Footer />
+      
+      </div>
 
   );
 };

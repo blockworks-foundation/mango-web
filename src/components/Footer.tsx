@@ -1,6 +1,5 @@
 //import { useState } from 'react'
 //import Button from '@/components/Button'
-import CallToAction from '@/components/CallToAction'
 import Logo from '@/components/Logo'
 import EmailForm from '@/components/EmailForm'
 import GradientText from '@/components/GradientText'
@@ -10,27 +9,28 @@ const Footer = () => {
 
   return (
     <>
-
       <div className="bg-mangobottom bg-contain bg-bottom bg-no-repeat">
-        <div className="max-w-7xl mx-auto px-8">
-        <CallToAction /> 
+        <div className="max-w-7xl mx-auto border-l-[2px] border-th-fgd-2 border-solid px-8">
+        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mt-10"></div>
+
             <EmailForm />
+            <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mt-10"></div>
+
           <div className="py-20">
             <div className="py-8 mx-auto">
               <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">
                 <div className="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
-                   <Logo /> {/*
-                    <img
-                      className="h-1/4 w-auto"
-                      src="/assets/images/mango-rainbow.png"
-                      alt=""
-                      width="auto"
-                    />*/} 
+                  <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-4"></div>
+                     <Logo />         
+                   <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-4"></div>
+ 
                   <p className="font-body mt-5 mb-6 max-w-xs text-th-fgd-4 opacity-50 leading-loose">
                     Mango is a decentralized organization building the 
                     next generation of decentralied trading products
                     and infratructure.{' '}
                   </p>
+                  <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-4"></div>
+
                   <div className="flex flex-col p-0 -ml-2">
                       <div className="flex flex-row group h-6 w-6 m-2 hover:text-th-fgd-5 transition ease-in-out duration-150 text-th-fgd-3">
                          <a

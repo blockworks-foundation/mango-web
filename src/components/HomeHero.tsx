@@ -17,9 +17,9 @@ const HomeHero = () => {
   return (
     <section className=" ">
       <Nav />
+      
       <div className="flex flex-col max-w-7xl mb-8 z-10 mx-auto p-8 border-l-[2px] border-th-fgd-2 border-solid">
-
-        <div className="z-20 flex flex-col mt-[245px]">
+        <div className="z-20 flex flex-col pt-[205px] ">
         <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
         <p className="font-mono text-2xl mb-3 text-left">
@@ -46,7 +46,7 @@ const HomeHero = () => {
           </li>
         </ul>
 
-        <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+        <div className="w-1/2 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
         <div className="mt-4 inline-flex">
           
@@ -62,7 +62,7 @@ const HomeHero = () => {
           </Linkie>
         </div>
         </div>
-        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mt-4"></div>
+        <div className="w-1/3 h-[2px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mt-7"></div>
 
 
       <div className=" h-[700px]">
