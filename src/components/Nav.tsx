@@ -29,7 +29,7 @@ const Nav = () => {
   return (
     <>
       <div className="z-50 h-2 w-screen fixed bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div>
-      <div className="z-50 w-screen fixed bg-gradient-to-b from-th-bkg-1 backdrop-blur-xl bg-opacity-50 mt-2">
+      <div className="z-50 w-screen fixed backdrop-blur-xl bg-opacity-50 mt-2">
         {/* Main Menu */}
         <div className="xs:px-6 xs:py-1 bg-transparent lg:px-10 lg:py-8">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">

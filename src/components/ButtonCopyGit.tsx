@@ -2,9 +2,7 @@
 
 const ButtonCopyGit = () => {
     return (
-      <>
-        <div className="py-8">
-        
+      <>        
         <div
                           onClick={() =>  navigator.clipboard.writeText('git clone https://github.com/blockworks-foundation/mango-v4-ui.git')}
                           className="group cursor-pointer overflow-hidden inline-flex max-w-md shadow-[inset_0_0_30px_rgba(0,0,0,0.3)] bg-dark-theme-bkg-3 border-2 border-th-fgd-3 hover:border-mango-yellow rounded-[12px] transition-all duration-150 ease-in-out">
@@ -45,7 +43,6 @@ const ButtonCopyGit = () => {
                     </span> 
             </p>
           </div>
-        </div>
         </>
   );
 };

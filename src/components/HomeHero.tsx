@@ -5,6 +5,7 @@ import Linkie from '@/components/Linkie';
 import MangoBlob from '@/components/MangoBlob';
 import BrowserMockupAbstract from '@/components/mockups/BrowserMockupAbstract';
 import IphoneAbstract from '@/components/mockups/IphoneAbstract';
+import Nav from './Nav';
 import { 
   FireIcon,
   CodeBracketIcon,
@@ -14,14 +15,16 @@ import {
 
 const HomeHero = () => {
   return (
-      <div className="flex flex-col max-w-7xl mt-[190px] mb-8 z-10 mx-auto p-8 py-20">
+    <section className="">
+      <Nav />
+      <div className="flex flex-col max-w-7xl mb-8 z-10 mx-auto p-8">
 
-        <div className="z-20 flex flex-col">
+        <div className="z-20 flex flex-col mt-[245px]">
         <p className="font-mono text-2xl mb-3 text-left">
           <span className="type-hero text-th-fgd-3"></span>
         </p>
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          Building open finance <br /><GradientText>for the internet <br />generation.</GradientText>
+        <GradientText>Building open finance <br />for the internet <br />generation.</GradientText>
         </h2>
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
         <li className="mb-2 inline-flex">
@@ -56,7 +59,7 @@ const HomeHero = () => {
 
 
       <div className=" h-[700px]">
-        <div className="z-0 transform -translate-y-[550px] translate-x-[25px]">
+        <div className="z-0 transform -translate-y-[550px] translate-x-[225px]">
           <MangoBlob />
         </div>
         <div className="z-10 block reletive transform -translate-y-[700px] translate-x-[730px] -rotate-[9deg] ">
@@ -81,6 +84,8 @@ const HomeHero = () => {
         </div>
       </div>
     </div>
+    </section>
+
   );
 };
 

@@ -1,5 +1,4 @@
 import HomeHero from '@/components/HomeHero';
-import Nav from '@/components/Nav';
 // import DesktopSectionTwo from '@/components/DesktopSectionTwo'
 import DesktopSectionOne from '@/components/DesktopSectionOne';
 import PhoneSectionOne from '@/components/PhoneSectionOne';
@@ -15,16 +14,14 @@ const Index = () => {
     <div
       className={"debug-screens w-screen overflow-hidden bg-gradient-to-b from-th-bkg-1 to-th-bkg-2"}
     >
-      <Nav />
       <HomeHero />
       <PhoneSectionOne />
       <PhoneSectionGrid />
       <DesktopHero />
       <DesktopSectionOne />
       <SectionCta />
-      <Footer />
+      <Footer /></div>
 
-    </div>
   );
 };
 
