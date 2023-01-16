@@ -17,7 +17,7 @@ const StyleGuideDrop = () => {
             <Logo /> 
           </Popover.Button>
 
-          <div className="p-1 -mt-3 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-300 group-hover:duration-300 animate-tilt"></div>
+          <div className="p-1 -mt-6 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-300 group-hover:duration-300 animate-tilt"></div>
           </div>
           <Transition
             appear={true}
