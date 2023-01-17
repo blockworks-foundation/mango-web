@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-function GridItemFees(props: any) {
+function GridItemSend(props: any) {
 
   return (
     <div className="group lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3 cursor-pointer">
@@ -11,12 +10,13 @@ function GridItemFees(props: any) {
             <dl className="text-left">
                 <dt>
 
-                  <h2 className="text-th-fgd-4 group-hover:text-th-fgd-5 font-display tracking-tighter text-xl mb-2 transition duration-150 ease-in-out">
+                  <h2 className="text-th-fgd-4 group-hover:text-mango-yellow font-display tracking-tighter text-xl mb-2 transition duration-150 ease-in-out">
                     {props.name}
                   </h2>
+
                 </dt>
 
-                  <dd className="text-th-fgd-3 group-hover:text-th-fgd-4 text-md transition duration-150 ease-in-out">
+                  <dd className="font-body text-th-fgd-3 group-hover:text-th-fgd-4 text-md transition duration-150 ease-in-out">
                   {props.description}
                 </dd>
 
@@ -28,4 +28,4 @@ function GridItemFees(props: any) {
   );
 }
 
-export default GridItemFees;
+export default GridItemSend;

@@ -1,23 +1,24 @@
 import GridItemShort from "@/components/cards/GridItemShort";
+import GridItemSend from "@/components/cards/GridItemSend";
 import GridItemFees from "@/components/cards/GridItemFees";
 
 const gridItemOne: any = [
     {
-      name: 'Digital cash made easy.',
+      name: "Payments made simple.",
       description:
-        "Pay, send, receive globally.",
+        "There is no middle man here. Pay, request, send, and receive globally all through a mobile phone number linked to your own self-controlled wallet.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: 'Maximum capital efficiency.',
+      name: "Maximum capital efficiency.",
       description:
         "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
     },
   ]; 
   const gridItemThree: any = [
     {
-      name: 'Maximum capital efficiency.',
+      name: "Maximum capital efficiency.",
       description:
         "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
     },
@@ -27,19 +28,25 @@ const gridItemOne: any = [
 function PhoneSectionGrid() {
   return (
     <div className="max-w-7xl mx-auto -mt-[0px] px-8 border-l-[4px] border-th-fgd-2 border-solid py-[150px]">
-      <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-        <GridItemFees
-          name={gridItemOne[0].name}
-          description={gridItemOne[0].description}
-        />  
-        <GridItemShort
-          name={gridItemTwo[0].name}
-          description={gridItemTwo[0].description}
-        />  
-        <GridItemShort
-          name={gridItemThree[0].name}
-          description={gridItemThree[0].description}
-        />              
+      <div className="z-20 flex gap-6 mb-6">
+        <div className="flex-1">
+          <GridItemSend
+            name={gridItemOne[0].name}
+            description={gridItemOne[0].description}
+          /> 
+        </div>
+        <div className="flex-1">
+          <GridItemFees
+            name={gridItemTwo[0].name}
+            description={gridItemTwo[0].description}
+          />  
+        </div>
+        <div className="flex-1">
+          <GridItemShort
+            name={gridItemThree[0].name}
+            description={gridItemThree[0].description}
+          />    
+        </div>          
         </div>
     </div>
   );
