@@ -6,7 +6,7 @@ const gridItemOne: any = [
     {
       name: "Self-custody, for people.",
       description:
-        "Pay, request, send, and receive all through a mobile phone number linked to your own digital crypto currency payments wallet.",
+        "Pay, request, send, and receive all through a mobile phone number linked to your own digital crypto currency wallet for payments.",
     },
   ]; 
   const gridItemTwo: any = [
@@ -20,7 +20,7 @@ const gridItemOne: any = [
     {
       name: "Move where you want.",
       description:
-      "An open-source global payments platform for mobile. Take your money with you. Pay anyone, anywhere.",
+      "An open-source global payments platform for the people. Discover a new way to move money around.",
     },
   ]; 
   
