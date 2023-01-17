@@ -4,16 +4,16 @@ import GridItemFees from "@/components/cards/GridItemFees";
 
 const gridItemOne: any = [
     {
-      name: "Payments made simple.",
+      name: "Global payments made simple.",
       description:
-        "There is no middle man here. Pay, request, send, and receive all through a mobile phone number linked to your own self-controlled wallet.",
+        "There is no middle man here. Pay, request, send, and receive all through a mobile phone number linked to your own digital payments wallet.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Put your money to work.",
+      name: "Put your coin to work.",
       description:
-        "Auto-lending allows you to take advantage of pooled lending markets on Mango. Earn variable interest for you digital assets transparently and all on-chain.",
+        "Auto-lending allows you to take advantage of pooled lending markets. Earn a variable interest rate for your digital assets, transparently and all on-chain.",
     },
   ]; 
   const gridItemThree: any = [
