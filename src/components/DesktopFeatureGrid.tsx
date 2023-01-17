@@ -19,9 +19,9 @@ const gridItemOne: any = [
   ]; 
   const gridItemThree: any = [
     {
-      name: "All cool in the lending pool. ",
+      name: "All cool in the lending pool.",
       description:
-        "",
+        "Variable interests come from pooled capitaled from user deposits. With power comes great responsibility.",
     },
   ]; 
   const gridItemFour: any = [
