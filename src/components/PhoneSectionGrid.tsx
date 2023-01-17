@@ -11,9 +11,9 @@ const gridItemOne: any = [
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Maximum capital efficiency.",
+      name: "Earn on your crypto.",
       description:
-        "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+        "Auto-lending allows you to take advantage of pooled lending markets. Earn variable interest for you digital assets transparently and all on-chain.",
     },
   ]; 
   const gridItemThree: any = [
