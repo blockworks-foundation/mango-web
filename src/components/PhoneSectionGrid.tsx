@@ -11,7 +11,7 @@ const gridItemOne: any = [
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Earn on your crypto.",
+      name: "Earn interest from you money.",
       description:
         "Auto-lending allows you to take advantage of pooled lending markets. Earn variable interest for you digital assets transparently and all on-chain.",
     },
