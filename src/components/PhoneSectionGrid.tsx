@@ -18,9 +18,9 @@ const gridItemOne: any = [
   ]; 
   const gridItemThree: any = [
     {
-      name: "self-custody simplified.",
+      name: "Self-custody, for the people.",
       description:
-      "Auto-lending allows you to take advantage of pooled lending markets on Mango. Earn variable interest for you digital assets transparently and all on-chain.",
+      "Mango[redacted] is an open-source global payments platform for mobile devices. ",
     },
   ]; 
   
@@ -28,20 +28,20 @@ const gridItemOne: any = [
 function PhoneSectionGrid() {
   return (
     <div className="max-w-7xl mx-auto -mt-[0px] px-8 border-l-[4px] border-th-fgd-2 border-solid py-[150px]">
-      <div className="z-20 inline-flex gap-6 mb-6">
-        <div className="">
+      <div className="z-20 flex gap-6 mb-6">
+        <div className="flex-1">
           <GridItemSend
             name={gridItemOne[0].name}
             description={gridItemOne[0].description}
           /> 
         </div>
-        <div className="">
+        <div className="flex-1">
           <GridItemFees
             name={gridItemTwo[0].name}
             description={gridItemTwo[0].description}
           />  
         </div>
-        <div className="">
+        <div className="flex-1">
           <GridItemShort
             name={gridItemThree[0].name}
             description={gridItemThree[0].description}
