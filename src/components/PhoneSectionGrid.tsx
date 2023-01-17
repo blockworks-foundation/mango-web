@@ -4,21 +4,21 @@ import GridItemFees from "@/components/cards/GridItemFees";
 
 const gridItemOne: any = [
     {
-      name: "Global payments made simple.",
+      name: "Self-custody, made for people.",
       description:
-        "There is no middle man here. Pay, request, send, and receive all through a mobile phone number linked to your own digital payments wallet.",
+        "Pay, request, send, and receive all through a mobile phone number linked to your own digital payments wallet.",
     },
   ]; 
   const gridItemTwo: any = [
     {
       name: "Put your coin to work.",
       description:
-        "Auto-lending allows you to take advantage of pooled lending markets. Earn a variable interest rate for your digital assets, transparently and all on-chain.",
+        "Earn a variable interest rate for your money. Auto-lending allows you to take advantage of pooled lending markets. ",
     },
   ]; 
   const gridItemThree: any = [
     {
-      name: "Self-custody, for the people.",
+      name: "Global payments made simple.",
       description:
       "Mango[redacted] is an open-source global payments platform for mobile devices. ",
     },
