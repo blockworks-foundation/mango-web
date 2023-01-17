@@ -12,7 +12,7 @@ const gridItemOne: any = [
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Permisionless trading & open markets.",
+      name: "Permisionless & open markets.",
       description:
         "Trade spot and derivitives markets all on-chain. Enjoy the power and versatility of decentralized leveraged defi products.",
     },
