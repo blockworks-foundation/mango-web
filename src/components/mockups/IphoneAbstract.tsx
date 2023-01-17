@@ -1,10 +1,19 @@
 import React from 'react';
+import {motion} from 'framer-motion';
+
 
 function IphoneAbstract(props: any) {
   return (
     <div>
                     {/* PHone in CSS */}
-                    <div className="-mt-24 m-auto rounded-[50px] w-[310px] shadow-[0_8px_42px_-5px_rgba(0,0,0,0.35)]">
+                    <motion.div 
+                        initial={{ opacity: 0, }}
+                        animate={{ y: -30, scale: 1, opacity: 1, }}
+                        transition={{
+                            delay: .2,
+                            duration: .3,
+                            ease: "easeInOut",
+                        }}className="-mt-24 m-auto rounded-[50px] w-[310px] shadow-[0_8px_42px_-5px_rgba(0,0,0,0.35)]">
                             <span className="h-[30px] w-1 absolute bg-th-fgd-2 mt-[120px] rounded-l-full -ml-1"></span>
                             <span className="transform translate-y-[150px] translate-x-[310px] h-[80px] w-1 absolute bg-th-fgd-2 rounded-r-full"></span>
                             <span className="h-[60px] w-1 absolute bg-th-fgd-3 mt-[160px] rounded-l-full -ml-1"></span>
@@ -27,7 +36,7 @@ function IphoneAbstract(props: any) {
                                     </div>   
                                 </div>
                                 </div> 
-                        </div>
+                        </motion.div>
 
     </div>
   );
