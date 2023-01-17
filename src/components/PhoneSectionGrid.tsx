@@ -6,21 +6,21 @@ const gridItemOne: any = [
     {
       name: "Payments made simple.",
       description:
-        "There is no middle man here. Pay, request, send, and receive globally all through a mobile phone number linked to your own self-controlled wallet.",
+        "There is no middle man here. Pay, request, send, and receive all through a mobile phone number linked to your own self-controlled wallet.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Earn interest from you money.",
+      name: "Put your money to work.",
       description:
-        "Auto-lending allows you to take advantage of pooled lending markets. Earn variable interest for you digital assets transparently and all on-chain.",
+        "Auto-lending allows you to take advantage of pooled lending markets on Mango. Earn variable interest for you digital assets transparently and all on-chain.",
     },
   ]; 
   const gridItemThree: any = [
     {
-      name: "Maximum capital efficiency.",
+      name: "self-custody simplified.",
       description:
-        "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+      "Auto-lending allows you to take advantage of pooled lending markets on Mango. Earn variable interest for you digital assets transparently and all on-chain.",
     },
   ]; 
   

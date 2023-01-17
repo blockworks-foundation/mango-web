@@ -28,7 +28,8 @@ const HomeHero = () => {
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
         <GradientText>Building open finance <br />for the internet <br />generation.</GradientText>
         </h2>
-        
+        <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
+
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left">
          <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
             <FireIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4" />
