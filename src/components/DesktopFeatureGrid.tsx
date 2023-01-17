@@ -21,7 +21,7 @@ const gridItemOne: any = [
     {
       name: "All cool in the lending pool. ",
       description:
-        "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+        "",
     },
   ]; 
   const gridItemFour: any = [
@@ -37,7 +37,7 @@ function DesktopFeatureGrid() {
   <>
     <section className="max-w-7xl mx-auto z-30">
       <div className="px-8 pb-4 border-l-[4px] border-th-fgd-2 border-solid -mt-[32px]">
-      <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
         <GridItemLever
           name={gridItemOne[0].name}
           description={gridItemOne[0].description}
