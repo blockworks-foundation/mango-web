@@ -104,7 +104,7 @@ const PhoneSectionOne = () => {
                       </div>
                       <div className="w-1/3 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] -mt-[6px]"></div>
                       <div className="tranform translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-100 ease-in-out">
-                        <p className="w-[220px] group animate-pulse ml-1 mt-5 flex flex-row text-sm font-mono text-th-fgd-4 group-hover:text-opacity-100 transition duration-150 ease-in-out">
+                        <p className="w-[220px] group animate-pulse -ml-[20px] mt-2 flex flex-row text-sm font-mono text-th-fgd-4 group-hover:text-opacity-100 transition duration-150 ease-in-out">
                           Join the testflight! <PaperAirplaneIcon className="w-4 h-4 m-1 rotate-0 group-hover:-rotate-45 transistion delay-100 duration-150 text-mango-yellow" />
                         </p>
                       </div>
