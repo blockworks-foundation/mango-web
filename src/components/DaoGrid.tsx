@@ -1,5 +1,5 @@
 import GridItemShort from "@/components/cards/GridItemGlobe";
-import GridItemLong from "@/components/cards/GridItemLong";
+import GridItemLong from "@/components/cards/GridItemMarkets";
 
 const gridItemOne: any = [
     {

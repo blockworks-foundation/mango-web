@@ -1,57 +1,58 @@
 import GridItemLever from "@/components/cards/GridItemLever";
-import GridItemLong from "@/components/cards/GridItemLong";
-
+import GridItemMarkets from "@/components/cards/GridItemMarkets";
+import GridItemLending from "@/components/cards/GridItemLending";
+import GridItemPaint from "@/components/cards/GridItemPaint";
 
 const gridItemOne: any = [
     {
-      name: "The power is yours.",
+      name: "The power is all yours.",
       description:
-        "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+        "Every market is cross-collateralized. Mango let's you utilize protocol approved assets as collateral across spot and derivitive markets.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Maximum capital efficiency.",
+      name: "Permisionless trading & open markets.",
       description:
-        "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+        "Trade spot and derivitives markets all on-chain. Enjoy the power and versatility of decentralized leveraged defi products.",
     },
   ]; 
   const gridItemThree: any = [
     {
-      name: "Maximum capital efficiency.",
+      name: "All cool in the lending pool. ",
       description:
         "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
     },
   ]; 
   const gridItemFour: any = [
     {
-      name: "Maximum capital efficiency.",
+      name: "Paint your own trades.",
       description:
-        "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+        "Mango is a power tool for the power user. Use it how you wish, every trade is different, mango is tailored for you.",
     },
   ]; 
 
 function DesktopFeatureGrid() {
   return (
   <>
-    <section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto z-30">
       <div className="px-8 pb-4 border-l-[4px] border-th-fgd-2 border-solid -mt-[32px]">
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         <GridItemLever
           name={gridItemOne[0].name}
           description={gridItemOne[0].description}
         />  
-        <GridItemLong
+        <GridItemMarkets
           name={gridItemTwo[0].name}
           description={gridItemTwo[0].description}
         />  
-        <GridItemLong
+        <GridItemLending
           name={gridItemThree[0].name}
           description={gridItemThree[0].description}
         />  
-        <GridItemLever
+        <GridItemPaint
           name={gridItemFour[0].name}
-          description={gridItemOne[0].description}
+          description={gridItemFour[0].description}
         />              
         </div>
       </div>
