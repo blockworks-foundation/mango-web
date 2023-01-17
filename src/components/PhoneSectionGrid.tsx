@@ -1,26 +1,26 @@
-import GridItemShort from "@/components/cards/GridItemShort";
+import GridItemGlobe from "@/components/cards/GridItemGlobe";
 import GridItemSend from "@/components/cards/GridItemSend";
 import GridItemFees from "@/components/cards/GridItemFees";
 
 const gridItemOne: any = [
     {
-      name: "Self-custody, made for people.",
+      name: "Self-custody, for people.",
       description:
-        "Pay, request, send, and receive all through a mobile phone number linked to your own digital payments wallet.",
+        "Pay, request, send, and receive all through a mobile phone number linked to your own digital crypto currency payments wallet.",
     },
   ]; 
   const gridItemTwo: any = [
     {
       name: "Put your coin to work.",
       description:
-        "Earn a variable interest rate for your money. Auto-lending allows you to take advantage of pooled lending markets. ",
+        "Earn a variable interest rate for your money. Auto-lending allows you to take advantage of pooled lending markets.",
     },
   ]; 
   const gridItemThree: any = [
     {
-      name: "Global payments made simple.",
+      name: "Move where you want.",
       description:
-      "Mango[redacted] is an open-source global payments platform for mobile devices. ",
+      "An open-source global payments platform for mobile. Take your money with you. Pay anyone, anywhere.",
     },
   ]; 
   
@@ -42,7 +42,7 @@ function PhoneSectionGrid() {
           />  
         </div>
         <div className="flex-1">
-          <GridItemShort
+          <GridItemGlobe
             name={gridItemThree[0].name}
             description={gridItemThree[0].description}
           />    

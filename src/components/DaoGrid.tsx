@@ -1,4 +1,4 @@
-import GridItemShort from "@/components/cards/GridItemShort";
+import GridItemShort from "@/components/cards/GridItemGlobe";
 import GridItemLong from "@/components/cards/GridItemLong";
 
 const gridItemOne: any = [

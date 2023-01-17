@@ -32,6 +32,8 @@ module.exports = {
         'mangocardsend': "url('/assets/images/card-send.svg')",
         'mangocardcoin': "url('/assets/images/card-coin.svg')",
         'mangocardglobal': "url('/assets/images/card-world.svg')",
+        'mangocardlever': "url('/assets/images/card-controls.svg')",
+
       }),
       height: {
         350: '350px',

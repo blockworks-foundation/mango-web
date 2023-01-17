@@ -4,7 +4,7 @@ import {
 
   } from '@heroicons/react/20/solid';
 
-function GridItemShort(props: any) {
+function GridItemGlobe(props: any) {
 
   return (
     <div className="group lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3 cursor-pointer hover:-translate-y-2 hover:-rotate-1 transition duration-150 ease-in-out">
@@ -22,7 +22,7 @@ function GridItemShort(props: any) {
                   </h2>
                 </dt>
 
-                  <dd className="text-th-fgd-3 text-md">
+                <dd className="text-th-fgd-3 group-hover:text-th-fgd-4 text-md transition duration-150 ease-in-out">
                   {props.description}
                 </dd>
 
@@ -34,4 +34,4 @@ function GridItemShort(props: any) {
   );
 }
 
-export default GridItemShort;
+export default GridItemGlobe;
