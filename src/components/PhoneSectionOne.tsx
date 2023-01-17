@@ -111,7 +111,7 @@ const PhoneSectionOne = () => {
         </div>
 
       </div>
-        <div className="z-10 transform -translate-y-[750px] translate-x-[600px]">
+        <div className="z-0 transform -translate-y-[750px] translate-x-[600px]">
         <MangoBlob />
        </div> 
      <div className="flex flex-col z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
