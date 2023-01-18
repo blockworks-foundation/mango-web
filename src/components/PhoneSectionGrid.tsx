@@ -13,7 +13,7 @@ const gridItemOne: any = [
     {
       name: "Put your coin to work.",
       description:
-        "Earn a variable yield on your capital. Auto-lending enables you to take advantage of decentralized pooled lending markets.",
+        "Auto-lending enables you to take advantage of decentralized pooled lending markets.",
     },
   ]; 
   const gridItemThree: any = [
