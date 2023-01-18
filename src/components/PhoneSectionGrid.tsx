@@ -20,7 +20,7 @@ const gridItemOne: any = [
     {
       name: "Pay anyone, anywhere.",
       description:
-      "An mobile global payments platform for the people. Discover a new way to move money around.",
+      "A mobile global payments platform for the people. Discover a new way to move money around.",
     },
   ]; 
   
