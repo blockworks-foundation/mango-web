@@ -6,21 +6,21 @@ const gridItemOne: any = [
     {
       name: "Self-custody, for people.",
       description:
-        "Pay, request, send, and receive all through a mobile phone number linked to your own digital crypto currency wallet for payments.",
+        "Pay, request, send, and receive all through a mobile phone number connected to your own digital crypto currency wallet.",
     },
   ]; 
   const gridItemTwo: any = [
     {
       name: "Put your coin to work.",
       description:
-        "Earn a variable interest rate for your money. Auto-lending allows you to take advantage of pooled lending markets.",
+        "Earn a variable yield on your capital. Auto-lending enables you to take advantage of decentralized pooled lending markets.",
     },
   ]; 
   const gridItemThree: any = [
     {
-      name: "Move where you want.",
+      name: "Pay anyone, anywhere.",
       description:
-      "An open-source global payments platform for the people. Discover a new way to move money around.",
+      "An mobile global payments platform for the people. Discover a new way to move money around.",
     },
   ]; 
   

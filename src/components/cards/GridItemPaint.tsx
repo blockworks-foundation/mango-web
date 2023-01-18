@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  GlobeAmericasIcon
+  LifebuoyIcon
 
   } from '@heroicons/react/20/solid';
 
@@ -14,7 +14,7 @@ function GridItemPaint(props: any) {
             <dl className="text-left">
                 <dt>
                 <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-3 bg-th-fgd-1 group-hover:bg-th-fgd-2 group-hover:text-white transition-all duration-150 ease-in-out">
-                                <GlobeAmericasIcon className="h-6 w-6" />
+                                <LifebuoyIcon className="h-6 w-6" />
                  </span>
                   <h2 className="text-th-fgd-4 group-hover:text-mango-yellow font-display tracking-tighter text-xl mb-2 transition duration-150 ease-in-out">
 

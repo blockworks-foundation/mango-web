@@ -5,7 +5,7 @@ import GridItemPaint from "@/components/cards/GridItemPaint";
 
 const gridItemOne: any = [
     {
-      name: "The power is all yours.",
+      name: "The controls are all yours.",
       description:
         "Every market is cross-collateralized. Mango let's you utilize protocol approved assets as collateral across spot and derivitive markets.",
     },
