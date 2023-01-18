@@ -29,11 +29,11 @@ module.exports = {
         'mangocpu': "url('/assets/images/bg-cta.svg')",
         'mangocard': "url('/assets/images/card-bg-test.svg')",
         'mangocardtwo': "url('/assets/images/card-bg-two.svg')",
-        'mangocardsend': "url('/assets/images/card-send.svg')",
-        'mangocardcoin': "url('/assets/images/card-coin.svg')",
-        'mangocardglobal': "url('/assets/images/card-world.svg')",
-        'mangocardlever': "url('/assets/images/card-controls.svg')",
-        'mangocardmarkets': "url('/assets/images/card-side.svg')",
+        'mangocardsend': "url('/assets/images/card-send.png')",
+        'mangocardcoin': "url('/assets/images/card-coin.png')",
+        'mangocardglobal': "url('/assets/images/card-world.png')",
+        'mangocardlever': "url('/assets/images/card-lever.png')",
+        'mangocardmarkets': "url('/assets/images/card-markets.png')",
 
       }),
       height: {
