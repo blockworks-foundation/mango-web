@@ -124,7 +124,18 @@ const PhoneSectionOne = () => {
        </div> 
      <div className="flex flex-col z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
       <div className="h-0 z-10 transform translate-x-[300px] translate-y-[50px]">
+        <div className="absolute transform translate-x-[38px]">
           <GlobalAbstract />
+        </div>
+
+          <Image
+            src="/assets/images/globe-mango.svg"
+            alt="Github"
+            width={450}
+            height={450}
+            loading="lazy"
+          />
+
        </div>
        <div className="z-0 h-0">
            <Image
