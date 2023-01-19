@@ -11,7 +11,6 @@ function BrowserMockupAbstract() {
           initial={{ scale: .9, opacity: 0, }}
           animate={{ y: -30, scale: 1, opacity: 1, }}
           transition={{
-            delay: .2,
             duration: .3,
             ease: "easeInOut"
           }}

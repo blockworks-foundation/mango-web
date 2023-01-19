@@ -10,7 +10,6 @@ function IphoneAbstract(props: any) {
                         initial={{ opacity: 0, }}
                         animate={{ y: -30, scale: 1, opacity: 1, }}
                         transition={{
-                            delay: .2,
                             duration: .3,
                             ease: "easeInOut",
                         }}className="z-50 -mt-24 m-auto rounded-[50px] w-[310px] shadow-[0_8px_42px_-5px_rgba(0,0,0,0.35)]">
