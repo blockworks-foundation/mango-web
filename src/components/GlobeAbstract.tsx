@@ -60,7 +60,7 @@ const GlobalAbstract = () => {
                             delay: 0,
                             duration: 2,
                             ease: "easeInOut"
-                          }}  d="M199.094 110.251C199.097 110.251 204.95 67.7575 235 38.5C264.323 9.95009 292.827 10.1719 292.827 10.1719" stroke="#6CBF00" strokeWidth="5" strokeLinecap="round"/>
+                          }}  d="M199.094 110.251C199.097 110.251 204.95 67.7575 235 38.5C264.323 9.95009 292.827 10.1719 292.827 10.1719" stroke="#6CBF00" strokeWidth="3" strokeLinecap="round"/>
               </motion.g>
 
               <motion.g 
@@ -82,7 +82,7 @@ const GlobalAbstract = () => {
                             delay: 0,
                             duration: 2,
                             ease: "easeInOut"
-                          }}  d="M52.5916 137.214C52.597 137.214 38.3073 170.512 76.5243 227.785C125.677 301.446 204.695 310.773 204.695 310.773" stroke="#E2AF00" strokeWidth="5" strokeLinecap="round"/>
+                          }}  d="M52.5916 137.214C52.597 137.214 38.3073 170.512 76.5243 227.785C125.677 301.446 204.695 310.773 204.695 310.773" stroke="#E2AF00" strokeWidth="3" strokeLinecap="round"/>
                 </motion.g>
 
                 <motion.g 
@@ -104,7 +104,7 @@ const GlobalAbstract = () => {
                             delay: 0,
                             duration: 2,
                             ease: "easeInOut"
-                          }} d="M253.672 429.967C253.671 429.957 331.12 413.826 410.919 322.456C517.966 199.89 511.739 72.8958 511.739 72.8958" stroke="#FF5B4E" strokeWidth="5" strokeLinecap="round"/>
+                          }} d="M253.672 429.967C253.671 429.957 331.12 413.826 410.919 322.456C517.966 199.89 511.739 72.8958 511.739 72.8958" stroke="#FF5B4E" strokeWidth="3" strokeLinecap="round"/>
                 </motion.g>
 
                 </svg>
