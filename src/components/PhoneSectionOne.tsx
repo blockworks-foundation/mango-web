@@ -11,6 +11,7 @@ import {
 
   } from '@heroicons/react/20/solid';
 import GlobalAbstract from './GlobeAbstract';
+import Image from 'next/image';
 
 const PhoneSectionOne = () => {
   return (
@@ -126,11 +127,14 @@ const PhoneSectionOne = () => {
           <GlobalAbstract />
        </div>
        <div className="z-0 h-0">
-         <img
-           className="w-auto h-[900px]"
-           src={`/assets/images/phonelights.svg`}          
-           alt="iphone"
-           />
+           <Image
+            src="/assets/images/phonelights.svg"
+            alt="Github"
+            width={900}
+            height={900}
+            loading="lazy"
+          />
+
        </div>
      </div>        
     </>

@@ -4,6 +4,7 @@ import ButtonTwo from '@/components/ButtonTwo';
 import LinkieTwo from '@/components/LinkieTwo';
 import CallToAction from '@/components/CallToAction'
 // import MangoBlob from '@/components/MangoBlob';
+import Image from 'next/image';
 
 const SectionCta = () => {
   return (
@@ -42,11 +43,14 @@ const SectionCta = () => {
 
         </div>
           <div className="z-10 mt-0 ">
-            <img
-              className="m-auto h-auto relative right-12"
-              src={`/assets/images/mango_cpu.png`}          
-              alt="desktop"
-              />
+            <Image
+            className="m-auto h-auto relative right-12"
+            src="/assets/images/mango_cpu.png"
+            alt="Github"
+            width={1000}
+            height={300}
+            loading="lazy"
+          />  
           </div>
         </div>
         <CallToAction /> 

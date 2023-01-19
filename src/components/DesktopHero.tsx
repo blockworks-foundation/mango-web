@@ -8,6 +8,7 @@ import {
   ReceiptPercentIcon,
 
   } from '@heroicons/react/20/solid';
+import Image from 'next/image';
 
 const DesktopHero = () => {
   return (
@@ -62,11 +63,13 @@ const DesktopHero = () => {
           <MangoBlob />
         </div>
         <div className="z-0 block reletive transform -translate-y-[400px] translate-x-[600px] h-0">
-          <img
-            className=""
+          <Image
             src="/assets/images/hero_desktop.png"
-            alt="desktop"
-          />         
+            alt="Github"
+            width={1300}
+            height={300}
+            loading="lazy"
+          />       
         </div>
       </div>
     </div>

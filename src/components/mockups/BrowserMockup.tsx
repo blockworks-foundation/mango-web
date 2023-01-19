@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function BrowserMockup(props: any) {
   return (
@@ -79,10 +80,15 @@ function BrowserMockup(props: any) {
             </div>
 
             <div className="bg-white bg-opacity-10 h-auto w-full rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-th-fgd-1">
-            <img
-              className="z-0 reletive w-full h-auto rounded-b-2xl"
-              src={props.src}     
-              />
+                <Image
+                  className="z-0 reletive w-full h-auto rounded-b-2xl"
+                    src={props.src} 
+                    alt="Github"
+                    width={1300}
+                    height={300}
+                    loading="lazy"
+                  />    
+
             </div>
           </div>
     </div>

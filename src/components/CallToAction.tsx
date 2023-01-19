@@ -1,5 +1,6 @@
 // import GradientText from "@/components/GradientText";
 import ButtonCopyGit from "./ButtonCopyGit";
+import Image from "next/image";
 
 const CallToAction = () => {
   return (
@@ -20,11 +21,16 @@ const CallToAction = () => {
                   </div>
               </div>
               <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
-                  <img
+
+                  <Image
                   className="transform translate-x-2 translate-y-2 object-cover"
-                  src="assets/images/cpu-mango.png"
-                  alt="mango markets"
-                  />
+                    src="/assets/images/cpu-mango.png"
+                    alt="Github"
+                    width={1300}
+                    height={300}
+                    loading="lazy"
+                  />    
+                  
               </div>
             </div>
         </div>
