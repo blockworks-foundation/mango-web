@@ -2,7 +2,7 @@ import {motion, AnimationProps} from 'framer-motion';
 
 const mainPathVariant: AnimationProps = {
     transition: {
-      duration: 6,
+      duration: 2,
       ease: "easeInOut",
     },
     variants: {
@@ -16,8 +16,8 @@ const mainPathVariant: AnimationProps = {
   };
   const mainModalVariant: AnimationProps = {
     transition: {
-      delay: 4,
-      duration: 1,
+      delay: 0,
+      duration: 2,
       ease: "easeIn",
     },
     variants: {
@@ -25,8 +25,8 @@ const mainPathVariant: AnimationProps = {
         fillOpacity: 1,
         pathLength: 1,
         transition: {
-          delay: 2,
-          duration: 3,
+          delay: 0,
+          duration: 2,
         },
       },
       hidden: {
@@ -42,11 +42,11 @@ const GlobalAbstract = () => {
             <svg width="338" height="444" viewBox="0 0 538 444" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.g 
                     {...mainModalVariant}
-                          initial={{ opacity: 0 }}
-                          whileInView={{ opacity: 1 }}
+                          initial='hidden'
+                          whileInView='visible'
                           transition={{
                             duration: 2,
-                            ease: "easeInOut"
+                            ease: "easeIn"
                           }} >
                <circle opacity="0.2" cx="293" cy="10" r="10" fill="#559600"/>
                   <circle opacity="0.2" cx="293" cy="10" r="10" fill="#559600"/>
@@ -65,11 +65,11 @@ const GlobalAbstract = () => {
 
               <motion.g 
                     {...mainModalVariant}
-                          initial={{ opacity: 0 }}
-                          whileInView={{ opacity: 1 }}
+                         initial='hidden'
+                         whileInView='visible'
                           transition={{
                             duration: 2,
-                            ease: "easeInOut"
+                            ease: "easeIn"
                           }} >
                 <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 204.719 310.635)" fill="#FECA1A"/>
                   <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.999971 0.00767888 0.00767888 -0.999971 53.0858 136.748)" fill="#FECA1A"/>
@@ -87,11 +87,11 @@ const GlobalAbstract = () => {
 
                 <motion.g 
                     {...mainModalVariant}
-                          initial={{ opacity: 0 }}
-                          whileInView={{ opacity: 1 }}
+                          initial='hidden'
+                          whileInView='visible'
                           transition={{
                             duration: 2,
-                            ease: "easeInOut"
+                            ease: "easeIn"
                           }} >
                   <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.973499 -0.228693 -0.228693 -0.973499 253.311 430.292)" fill="#E54033"/>
                   <ellipse opacity="0.2" rx="11.333" ry="11.0969" transform="matrix(0.973499 -0.228693 -0.228693 -0.973499 511.139 73.3047)" fill="#E54033"/>
