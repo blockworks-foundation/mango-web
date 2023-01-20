@@ -23,7 +23,7 @@ const DesktopHero = () => {
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          Wen? Now.<br /> <GradientText>Trade, manage, earn <br />all from one hub.</GradientText>
+         Take the power of defi back.<br /> <GradientText>Trade, manage, and earn <br />all from one hub.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
