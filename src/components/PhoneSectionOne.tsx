@@ -18,13 +18,13 @@ const PhoneSectionOne = () => {
     <>
       <div className="z-20 max-w-7xl m-auto px-8 border-l-[4px] border-th-fgd-2 border-solid h-auto -mt-[32px]">
       <div className="w-1/3 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
-      <p className="font-phone text-2xl mb-3 text-left">
+        <p className="font-phone text-2xl mb-3 text-left">
           <span className="type-phone font-mono text-th-fgd-3"></span>
         </p>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-3"></div>
 
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          Pay anyone, anywhere. <br  /><GradientText>Digital payments should<br  /> be without borders.</GradientText>
+          Pay, request, and discover. <br  /><GradientText>Crypto payements for<br  /> the digital nomad.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
