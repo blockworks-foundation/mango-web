@@ -33,7 +33,7 @@ const HomeHero = () => {
         <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left">
          <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
             <FireIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4" />
-            Blazing fast products, built transparently and all on-chain.
+            Blazing fast products, transparent and all on-chain.
           </li>
 
           <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
