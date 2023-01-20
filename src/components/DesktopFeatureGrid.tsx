@@ -26,9 +26,9 @@ const gridItemOne: any = [
   ]; 
   const gridItemFour: any = [
     {
-      name: "Paint your own trades.",
+      name: "Paint your own positions.",
       description:
-        "Cross-collateral means fungability for your digital money. Mango turns your capital into tools for precision.",
+        "Mango gives you the canvas and the tools. Cross-collateral means fungability for your digital money. Mango turns your capital into tools for precision.",
     },
   ]; 
 
