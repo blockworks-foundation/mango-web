@@ -21,7 +21,7 @@ const gridItemOne: any = [
     {
       name: "All cool in the lending pool.",
       description:
-        "Open accounts earn variable yield from pooled capital. Earn by easily participating in decentralized lending markets.",
+        "Open accounts earn variable yield from pooled capital. Earn simply from participating in decentralized lending markets.",
     },
   ]; 
   const gridItemFour: any = [
