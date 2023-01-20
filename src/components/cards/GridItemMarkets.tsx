@@ -21,7 +21,7 @@ function GridItemMarkets(props: any) {
                 <dd className="font-body text-th-fgd-3 group-hover:text-th-fgd-4 text-md transition duration-150 ease-in-out">
                   {props.description}
                 </dd>
-                <p className="text-th-fgd-3 text-sm font-bold mt-4">
+                <p className="text-white text-opacity-50 text-sm font-bold mt-4">
                     Powered by:
                   </p>
                 <div className="grid grid-cols-2 gap-4 saturate-0 group-hover:saturate-100">

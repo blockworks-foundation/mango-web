@@ -14,7 +14,7 @@ const gridItemOne: any = [
     {
       name: "Permisionless & open markets.",
       description:
-        "Trade spot and derivitives markets all on-chain. Enjoy the power and versatility of decentralized leveraged defi products.",
+        "Access to up 5x margined spot markets and ability to trade with 20x leverage on permissionless derivitives markets, all on-chain all from one place.",
     },
   ]; 
   const gridItemThree: any = [
