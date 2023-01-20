@@ -12,7 +12,7 @@ import DesktopHero from '@/components/DesktopHero';
 const Index = () => {
   return (
     <div
-      className={"debug-screens w-screen overflow-hidden bg-gradient-to-b from-th-bkg-1 to-th-bkg-2 saturate-[1.25]"}
+      className={"debug-screens w-screen overflow-hidden bg-gradient-to-b from-th-bkg-1 to-th-bkg-2"}
     >
       <HomeHero />
       <PhoneSectionOne />
