@@ -5,16 +5,16 @@ import GridItemPaint from "@/components/cards/GridItemPaint";
 
 const gridItemOne: any = [
     {
-      name: "The controls are all yours.",
+      name: "You get one shot.",
       description:
-        "Every market is cross-collateralized. Mango let's you utilize protocol approved assets as collateral across spot and derivitive markets.",
+        "Cross-collateral means fungability for your digital money. Mango turns your capital into utility with precision.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Permisionless & open markets.",
+      name: "Open market participation.",
       description:
-        "Access to up 5x margined spot markets and ability to trade with 20x leverage on permissionless derivitives markets, all on-chain all from one place.",
+        "Access up 5x margined spot markets and ability the to trade with 20x leverage in permissionless derivitives markets, all on-chain.",
     },
   ]; 
   const gridItemThree: any = [

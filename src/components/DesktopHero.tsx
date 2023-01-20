@@ -35,7 +35,7 @@ const DesktopHero = () => {
 
           <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
             <TableCellsIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4"   />
-            Swap spot and trade derivitives with margin/leverage as you need.
+            Easily swap, or place trades on both spot and derivitives markets.
           </li>
           
           <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
