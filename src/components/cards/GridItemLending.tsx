@@ -21,6 +21,7 @@ function GridItemLending(props: any) {
                 <dd className="text-th-fgd-3 text-md">
                   {props.description}
                 </dd>
+                
             </dl>
           </div>
         </div>

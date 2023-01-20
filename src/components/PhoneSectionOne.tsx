@@ -24,7 +24,7 @@ const PhoneSectionOne = () => {
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-3"></div>
 
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          Pay, request, and discover. <br  /><GradientText>Crypto payements for<br  /> the digital nomad.</GradientText>
+          Pay, request, &amp; discover. <br  /><GradientText>Crypto payements for<br  /> the digital nomad.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 

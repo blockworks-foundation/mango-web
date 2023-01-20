@@ -5,30 +5,30 @@ import GridItemPaint from "@/components/cards/GridItemPaint";
 
 const gridItemOne: any = [
     {
-      name: "You control the mixer.",
+      name: "Easy as analog.",
       description:
-        "Cross-collateral means fungability for your digital money. Mango turns your capital into tools for precision.",
+        "A simple, intuititive, performance interface for trading decentralized open markets.",
     },
   ]; 
   const gridItemTwo: any = [
     {
       name: "Open, transparent, permissionless.",
       description:
-        "Access up 5x margined spot markets and ability the to trade with 20x leverage in permissionless derivitives markets, all on-chain.",
+        "Access margined spot markets and the ability to trade with up to 20x leverage in permissionless derivitives markets, all on-chain.",
     },
   ]; 
   const gridItemThree: any = [
     {
       name: "All cool in the lending pool.",
       description:
-        "Variable interests come from pooled capitaled from user deposits. With power comes great responsibility.",
+        "Open accounts earn variable yield from pooled capital. Earn by easily participating in decentralized lending markets.",
     },
   ]; 
   const gridItemFour: any = [
     {
       name: "Paint your own trades.",
       description:
-        "Mango is a power tool for the power user. Use it how you wish, every trade is different, mango is tailored for you.",
+        "Cross-collateral means fungability for your digital money. Mango turns your capital into tools for precision.",
     },
   ]; 
 
