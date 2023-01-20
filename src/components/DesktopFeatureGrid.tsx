@@ -5,14 +5,14 @@ import GridItemPaint from "@/components/cards/GridItemPaint";
 
 const gridItemOne: any = [
     {
-      name: "You get one shot.",
+      name: "You control the mixer.",
       description:
-        "Cross-collateral means fungability for your digital money. Mango turns your capital into utility with precision.",
+        "Cross-collateral means fungability for your digital money. Mango turns your capital into tools for precision.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Open market participation.",
+      name: "Open, transparent, permissionless.",
       description:
         "Access up 5x margined spot markets and ability the to trade with 20x leverage in permissionless derivitives markets, all on-chain.",
     },
