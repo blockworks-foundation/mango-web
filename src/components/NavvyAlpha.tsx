@@ -1,17 +1,20 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  Bars3Icon,
-
-  ChartBarIcon,
-  CheckCircleIcon,
-  CursorArrowRaysIcon,
-
-  PhoneIcon,
-  PlayIcon,
-  Squares2X2Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+    BuildingLibraryIcon,
+    DevicePhoneMobileIcon,
+    BanknotesIcon,
+    UsersIcon,
+    PuzzlePieceIcon,
+    AcademicCapIcon,
+    PresentationChartLineIcon,
+    BookOpenIcon,
+    UserGroupIcon,
+    ChatBubbleLeftRightIcon,
+    GiftIcon,
+    Bars3Icon,
+    XMarkIcon,
+} from '@heroicons/react/24/solid'
 import ButtonTwo from '@/components/ButtonTwo'
 import QrCodeDrop from '@/components/QrCodeDrop'
 import StyleGuideDrop from '@/components/StyleGuideDrop'
@@ -24,67 +27,67 @@ const exlpore = [
     name: 'Markets',
     description: 'Access margin and leverage to trade permissionless spot and derivitive markets.',
     href: '#',
-    icon: ChartBarIcon,
+    icon: BuildingLibraryIcon,
   },
   {
     name: 'Redacted',
     description: 'Move money globally without borders. Pay, send, swap, receive, and earn all from your device.',
     href: '#',
-    icon: CursorArrowRaysIcon,
+    icon: DevicePhoneMobileIcon,
   },
   {
     name: 'Earn',
     description: "Automatically earn yeild from auto lending in your earn account.",
     href: '#',
-    icon: Squares2X2Icon,
+    icon: BanknotesIcon,
   },
 ]
 const callsToAction = [
-  { name: 'Liquidator Program', href: '#', icon: PlayIcon },
-  { name: 'Market Maker Program', href: '#', icon: CheckCircleIcon },
+  { name: 'Liquidator Program', href: '#', icon: UsersIcon },
+  { name: 'Market Maker Program', href: '#', icon: PuzzlePieceIcon },
 ]
 const community = [
     {
       name: 'Exlpore the docs',
       description: 'Learn about the protocol on a deaper level and start composing and integrating today.',
       href: '#',
-      icon: ChartBarIcon,
+      icon: BookOpenIcon,
     },
     {
       name: 'Protocol Stats',
       description: 'Total Value Deposited, Current rates for borrowing/lending, and other valuable stats.',
       href: '#',
-      icon: CursorArrowRaysIcon,
+      icon: PresentationChartLineIcon,
     },
     {
       name: 'Mango DAO',
       description: "Mango DAO is building a distributed way to organize like minded builders, have a stake in the protocol.",
       href: '/dao',
-      icon: Squares2X2Icon,
+      icon: UserGroupIcon,
     },
     {
         name: 'Mango Forum',
         description: "Discuss proposals, partnerships, and improvements to Mango, all in one place.",
         href: '/dao',
-        icon: Squares2X2Icon,
+        icon: ChatBubbleLeftRightIcon,
       },    
   ]
   const callsToActionTwo = [
-    { name: 'Redeem your MNGO', href: '#', icon: CheckCircleIcon },
-    { name: 'Mango Market Caps', href: '#', icon: PhoneIcon },
+    { name: 'Redeem your MNGO', href: '#', icon: GiftIcon },
+    { name: 'Mango Market Caps', href: '#', icon: AcademicCapIcon },
   ]
 const support = [
     {
         name: 'Discord',
         description: 'Learn about the protocol on a deaper level and start composing and integrating today.',
         href: '#',
-        icon: ChartBarIcon,
+        icon: GiftIcon,
       },
       {
         name: 'Twitter',
         description: 'Learn about the protocol on a deaper level and start composing and integrating today.',
         href: '#',
-        icon: ChartBarIcon,
+        icon: GiftIcon,
     },
 ]
 
@@ -96,14 +99,6 @@ const blogPosts = [
     preview: 'Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.',
     imageUrl:
       'https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80',
-  },
-  {
-    id: 2,
-    name: 'How to use search engine optimization to drive traffic to your site',
-    href: '#',
-    preview: 'Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80',
   },
 ]
 
@@ -177,28 +172,25 @@ const NavvyAlpha = () => {
                       leaveTo="opacity-0 -translate-y-1"
                     >
                       <Popover.Panel className="mt-5 absolute inset-x-0 top-full z-40 hidden transform bg-th-bkg-2 shadow-2xl md:block">
-                        <div className="mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
+                        <div className="mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-8">
                           {exlpore.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-th-fgd-1"
+                              className="group -m-3 flex flex-col justify-between rounded-2xl p-4 hover:bg-th-fgd-1 transition-all duration-100 ease-in-out"
                             >
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
-                                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-th-fgd-1 group-hover:bg-th-fgd-2 text-white sm:h-12 sm:w-12">
+                                    <item.icon className="h-6 w-6 group-hover:text-mango-yellow" aria-hidden="true" />
                                   </span>
                                 </div>
                                 <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                                   <div>
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                    <p className="text-base font-body font-bold text-th-fgd-4 group-hover:text-th-fgd-5">{item.name}</p>
+                                    <p className="mt-1 text-sm text-th-fgd-3 group-hover:text-th-fgd-4">{item.description}</p>
                                   </div>
-                                  <p className="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
-                                    Learn more
-                                    <span aria-hidden="true"> &rarr;</span>
-                                  </p>
+
                                 </div>
                               </div>
                             </a>
@@ -277,28 +269,25 @@ const NavvyAlpha = () => {
                       leaveTo="opacity-0 -translate-y-1"
                     >
                       <Popover.Panel className="mt-5 absolute inset-x-0 top-full z-40 hidden transform bg-th-bkg-2 shadow-2xl md:block">
-                        <div className="mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
+                      <div className="mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-8">
                           {community.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-th-fgd-1"
+                              className="group -m-3 flex flex-col justify-between rounded-2xl p-4 hover:bg-th-fgd-1 transition-all duration-100 ease-in-out"
                             >
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
-                                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-th-fgd-1 group-hover:bg-th-fgd-2 text-white sm:h-12 sm:w-12">
+                                    <item.icon className="h-6 w-6 group-hover:text-mango-yellow" aria-hidden="true" />
                                   </span>
                                 </div>
                                 <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                                   <div>
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                  <p className="text-base font-body font-bold text-th-fgd-4 group-hover:text-th-fgd-5">{item.name}</p>
+                                    <p className="mt-1 text-sm text-th-fgd-3 group-hover:text-th-fgd-4">{item.description}</p>
                                   </div>
-                                  <p className="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
-                                    Learn more
-                                    <span aria-hidden="true"> &rarr;</span>
-                                  </p>
+
                                 </div>
                               </div>
                             </a>
@@ -379,28 +368,25 @@ const NavvyAlpha = () => {
                           <div className="w-1/2 bg-th-bkg-2" />
                         </div>
                         <div className="relative mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-                          <nav className="grid gap-y-10 bg-th-bkg-2 px-4 py-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
+                          <nav className="grid gap-y-10 bg-th-bkg-2 px-4 py-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-8">
                           {support.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-th-fgd-1"
+                              className="group -m-3 flex flex-col justify-between rounded-2xl p-4 hover:bg-th-fgd-1 transition-all duration-100 ease-in-out"
                             >
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
-                                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-th-fgd-1 group-hover:bg-th-fgd-2 text-white sm:h-12 sm:w-12">
+                                    <item.icon className="h-6 w-6 group-hover:text-mango-yellow" aria-hidden="true" />
                                   </span>
                                 </div>
                                 <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                                   <div>
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                  <p className="text-base font-body font-bold text-th-fgd-4 group-hover:text-th-fgd-5">{item.name}</p>
+                                    <p className="mt-1 text-sm text-th-fgd-3 group-hover:text-th-fgd-4">{item.description}</p>
                                   </div>
-                                  <p className="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
-                                    Learn more
-                                    <span aria-hidden="true"> &rarr;</span>
-                                  </p>
+
                                 </div>
                               </div>
                             </a>
