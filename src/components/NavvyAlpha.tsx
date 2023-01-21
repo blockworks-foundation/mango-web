@@ -200,7 +200,7 @@ const NavvyAlpha = () => {
 
                           ))}
 
-                                    <div className="flex md:h-full lg:flex-col">
+                                <div className="flex md:h-full lg:flex-col">
 
                                     <div className="bg-white bg-opacity-10 p-2 rounded-xl w-[179px]">
 

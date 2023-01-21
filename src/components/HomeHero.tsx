@@ -15,7 +15,7 @@ import {
 
 const HomeHero = () => {
   return (
-    <section className=" ">
+    <section className="">
       <NavvyAlpha />
 
       
