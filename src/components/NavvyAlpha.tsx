@@ -18,7 +18,7 @@ import {
 import ButtonTwo from '@/components/ButtonTwo'
 import QrCodeDrop from '@/components/QrCodeDrop'
 import StyleGuideDrop from '@/components/StyleGuideDrop'
-
+import Image from 'next/image';
 // import ThemeSwitcher from './ThemeSwitcher'
 
 
@@ -30,16 +30,16 @@ const exlpore = [
     icon: BuildingLibraryIcon,
   },
   {
+    name: 'Earn',
+    description: "Automatically earn variable yield right into your mango account, all powered by decentralized money markets.",
+    href: '#',
+    icon: BanknotesIcon,
+  },
+  {
     name: 'Redacted',
     description: 'Move money globally without borders. Pay, send, swap, receive, and earn all from your device.',
     href: '#',
     icon: DevicePhoneMobileIcon,
-  },
-  {
-    name: 'Earn',
-    description: "Automatically earn yeild from auto lending in your earn account.",
-    href: '#',
-    icon: BanknotesIcon,
   },
 ]
 const callsToAction = [
@@ -109,7 +109,7 @@ function classNames(...classes: any) {
 const NavvyAlpha = () => {
   return (
     <>
-          <div className="z-50 h-2 w-screen fixed bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div>
+          <div className="z-40 h-2 w-screen fixed bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div>
 
      <Popover className="w-screen fixed backdrop-blur-xl bg-opacity-50 z-50 mt-2">
       <div className="pointer-events-none absolute inset-0 z-30 shadow" aria-hidden="true" />
@@ -197,8 +197,26 @@ const NavvyAlpha = () => {
                                 </div>
                               </div>
                             </a>
+
                           ))}
+
+                                    <div className="flex md:h-full lg:flex-col">
+
+                                    <div className="bg-white p-2 rounded-xl w-[179px]">
+
+                                        <Image
+                                        src="/assets/images/qr-code-test.svg"
+                                        alt="Github"
+                                        width={160}
+                                        height={160}
+                                        loading="lazy"
+                                        />
+
+                                        </div>
+                                     </div>
                         </div>
+
+
                         <div className="bg-th-bkg-3">
                           <div className="mx-auto max-w-7xl space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8">
                             {callsToAction.map((item) => (

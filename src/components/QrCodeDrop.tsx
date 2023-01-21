@@ -1,8 +1,7 @@
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import {QrCodeIcon, DevicePhoneMobileIcon, } from '@heroicons/react/20/solid'
-
-
+import Image from 'next/image';
 
 const QrCodeDrop = () => {
   return (
@@ -43,11 +42,19 @@ const QrCodeDrop = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute right-0 top-16 z-30 w-[200px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-4 border border-th-fgd-1 p-1`}
+              className={`absolute right-0 top-[70px] w-[190px] z-50 overflow-auto rounded-[18px] shadow-lg bg-th-bkg-4 border border-th-fgd-1 p-1`}
               >
               <div className="flex flex-col">
 
-              <div className="h-[160px] bg-white bg-opacity-5 rounded-xl m-2">
+              <div className="h-[160px] bg-white bg-opacity-100 rounded-xl m-2">
+
+              <Image
+                src="/assets/images/qr-code-test.svg"
+                alt="Github"
+                width={400}
+                height={400}
+                loading="lazy"
+              />
 
               </div>
               <div className="inline-flex bg-mango-green broder border-[1px] border-mango-green bg-opacity-5 rounded-xl py-1 px-2 m-1">  
@@ -56,7 +63,7 @@ const QrCodeDrop = () => {
                 width="25"
                 height="25" 
                 viewBox="0 0 24 24" 
-                className="fill-mango-green p-1 w-[33px] bg-white bg-opacity-10 rounded-md"
+                className="fill-mango-green p-1 w-[25px] bg-white bg-opacity-10 rounded-md"
                 xmlns="http://www.w3.org/2000/svg">
                 <path 
                     d="m23 8c-.552 0-1-.447-1-1v-4c0-.552-.449-1-1-1h-4c-.552 0-1-.447-1-1s.448-1 1-1h4c1.654 0 3 1.346 3 3v4c0 .553-.448 1-1 1z"/>
@@ -72,7 +79,7 @@ const QrCodeDrop = () => {
                     d="m21 14c0 .553-.448 1-1 1h-1v2c0 1.103-.897 2-2 2h-10c-1.103 0-2-.897-2-2v-2h-1c-.552 0-1-.447-1-1s.448-1 1-1h16c.552 0 1 .447 1 1z"/>
                 </svg> 
               <div>
-              <h3 className="text-mango-green ml-2 text-md font-body font-bold tracking-wide text-th-fgd-4">
+              <h3 className="text-mango-green ml-2 mt-[2px] text-sm font-body font-bold tracking-wide text-th-fgd-4">
                         Discover Mango
                </h3>   
                 </div>  
