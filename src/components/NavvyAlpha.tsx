@@ -126,6 +126,9 @@ const NavvyAlpha = () => {
 
             <Popover.Group as="nav" className="flex space-x-1 mt-0 mr-40">
 
+                  {/* 
+                 Explore
+                  */}
               <Popover>
                 {({ open }) => (
                   <>
@@ -164,7 +167,7 @@ const NavvyAlpha = () => {
 
                     <Transition
                       as={Fragment}
-                      enter="transition ease-out duration-200"
+                      enter="transition ease-out duration-150"
                       enterFrom="opacity-0 -translate-y-1"
                       enterTo="opacity-100 translate-y-0"
                       leave="transition ease-in duration-150"
@@ -202,9 +205,9 @@ const NavvyAlpha = () => {
                               <div key={item.name} className="flow-root">
                                 <a
                                   href={item.href}
-                                  className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+                                  className="group -m-3 flex items-center rounded-md p-3 text-base font-medium text-th-fgd-3 hover:text-th-fgd-4 hover:bg-th-fgd-1"
                                 >
-                                  <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                  <item.icon className="h-6 w-6 flex-shrink-0 text-th-fgd-3 group-hover:text-mango-yellow" aria-hidden="true" />
                                   <span className="ml-3">{item.name}</span>
                                 </a>
                               </div>
@@ -216,7 +219,9 @@ const NavvyAlpha = () => {
                   </>
                 )}
               </Popover>
-
+                  {/* 
+                 Community
+                  */}
               <Popover>
                 {({ open }) => (
                   <>
@@ -261,7 +266,7 @@ const NavvyAlpha = () => {
 
                     <Transition
                       as={Fragment}
-                      enter="transition ease-out duration-200"
+                      enter="transition ease-out duration-150"
                       enterFrom="opacity-0 -translate-y-1"
                       enterTo="opacity-100 translate-y-0"
                       leave="transition ease-in duration-150"
@@ -299,9 +304,9 @@ const NavvyAlpha = () => {
                               <div key={item.name} className="flow-root">
                                 <a
                                   href={item.href}
-                                  className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+                                  className="group -m-3 flex items-center rounded-md p-3 text-base font-medium text-th-fgd-3 hover:text-th-fgd-4 hover:bg-th-fgd-1"
                                 >
-                                  <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                  <item.icon className="h-6 w-6 flex-shrink-0 text-th-fgd-3 group-hover:text-mango-yellow" aria-hidden="true" />
                                   <span className="ml-3">{item.name}</span>
                                 </a>
                               </div>
@@ -313,7 +318,9 @@ const NavvyAlpha = () => {
                   </>
                 )}
               </Popover>
-              
+                  {/* 
+                 Support
+                  */}
               <Popover>
                 {({ open }) => (
                   <>
@@ -355,7 +362,7 @@ const NavvyAlpha = () => {
 
                     <Transition
                       as={Fragment}
-                      enter="transition ease-out duration-200"
+                      enter="transition ease-out duration-150"
                       enterFrom="opacity-0 -translate-y-1"
                       enterTo="opacity-100 translate-y-0"
                       leave="transition ease-in duration-150"
