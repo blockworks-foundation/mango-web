@@ -46,7 +46,7 @@ const QrCodeDrop = () => {
               >
               <div className="flex flex-col">
 
-              <div className="h-[160px] bg-white bg-opacity-100 rounded-xl m-2">
+              <div className="h-[160px] bg-white bg-opacity-10 rounded-xl m-2">
 
               <Image
                 src="/assets/images/qr-code-test.svg"
