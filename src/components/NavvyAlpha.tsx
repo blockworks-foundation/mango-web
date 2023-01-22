@@ -200,9 +200,9 @@ const NavvyAlpha = () => {
 
                           ))}
 
-                                <div className="flex md:h-full lg:flex-col">
+                                <div className="group flex md:h-full lg:flex-col">
 
-                                    <div className="bg-white bg-opacity-10 p-2 rounded-xl w-[179px]">
+                                    <div className=" p-2 w-[179px] bg-white bg-opacity-10 group-hover:bg-opacity-20 group-hover:saturate-[1.25] rounded-xl m-2 transition duration-150 ease-in-out">
 
                                         <Image
                                         src="/assets/images/qr-code-test.svg"

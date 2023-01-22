@@ -42,11 +42,11 @@ const QrCodeDrop = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute right-0 top-[70px] w-[190px] z-50 overflow-auto rounded-[18px] shadow-lg bg-th-bkg-4 border border-th-fgd-1 p-1`}
+              className={`group absolute right-0 top-[70px] w-[190px] z-50 overflow-auto rounded-[18px] shadow-lg bg-th-bkg-4 border border-th-fgd-1 p-1`}
               >
               <div className="flex flex-col">
 
-              <div className="h-[160px] bg-white bg-opacity-10 rounded-xl m-2">
+              <div className="h-[165px] bg-white bg-opacity-10 group-hover:bg-opacity-20 group-hover:saturate-[1.25] rounded-xl m-2 transition duration-150 ease-in-out">
 
               <Image
                 src="/assets/images/qr-code-test.svg"
