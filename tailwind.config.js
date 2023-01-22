@@ -35,6 +35,7 @@ module.exports = {
         'mangocardlever': "url('/assets/images/card-lever.png')",
         'mangocardmarkets': "url('/assets/images/card-markets.png')",
         'mangocardlend': "url('/assets/images/card-lend.png')",
+        'mangocardlendsm': "url('/assets/images/card-lend-sm.png')",
         'mangocardpaint': "url('/assets/images/card-paint.png')",
 
       }),

@@ -2,7 +2,7 @@
 import GradientText from '@/components/GradientText';
 import ButtonTwo from '@/components/ButtonTwo';
 import LinkieTwo from '@/components/LinkieTwo';
-import CallToAction from '@/components/CallToAction'
+import CallToActionCard from '@/components/CallToActionCard'
 // import MangoBlob from '@/components/MangoBlob';
 import Image from 'next/image';
 
@@ -11,13 +11,13 @@ const SectionCta = () => {
     <>
      <div className="py-40">
       <div className="z-10">
-      <h2 className="text-center font-display text-6xl tracking-tight mb-6 text-th-fgd-5 leading-tight">
+      <h2 className="text-center font-display sm:text-6xl text-2xl tracking-tight mb-6 text-th-fgd-5 leading-tight">
           Powered by a fruit.
           <br />
           <GradientText>This is money with mango.</GradientText>
         </h2>
       </div>
-        <div className="mt-8 flex lg:flex-row md:flex-row lg:justify-center md:justify-center sm:justify-center">
+        <div className="mt-8 flex flex-row justify-center">
                       
                       <ButtonTwo>
                         <a
@@ -53,7 +53,7 @@ const SectionCta = () => {
           />  
           </div>
         </div>
-        <CallToAction /> 
+        <CallToActionCard /> 
         </>
 
   );
