@@ -18,29 +18,29 @@ const DesktopHero = () => {
 
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
-        <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
+        <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
         Be merry, we&apos;re back.<br /> <GradientText>Trade, manage, earn <br />all from one hub.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
-        <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
-        <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <AdjustmentsVerticalIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4" />
+        <ul className="flex space-y-3 flex-col z-20 font-body text-md sm:text-xl mb-3 text-left">
+        <li className="group inline-flex text-th-fgd-4">
+            <AdjustmentsVerticalIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
             Full control over your digital coin. No middleman, just you and the contract.
           </li>
 
-          <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <TableCellsIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4"   />
+          <li className="group inline-flex text-th-fgd-4">
+            <TableCellsIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
             Easily swap, or place trades on both spot and derivitives markets.
           </li>
           
-          <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <ReceiptPercentIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4"/>
+          <li className="group inline-flex text-th-fgd-4">
+            <ReceiptPercentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
             Auto-lending earns you transparent yield from pooled capital. 
           </li>
         </ul>
         
-        <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+        <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
         <div className="inline-flex -ml-8">
           <ButtonNew className="w-[218px] py-6">
@@ -52,13 +52,13 @@ const DesktopHero = () => {
         
         </div>
         
-        <div className="w-1/3 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+        <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
       
       <div className=" h-[100px]">
         <div className="z-0 transform -translate-y-[500px] translate-x-[600px]">
           <MangoBlob />
         </div>
-        <div className="z-0 block reletive transform -translate-y-[400px] translate-x-[600px] h-0">
+        <div className="z-0 hidden sm:block reletive transform -translate-y-[400px] translate-x-[600px] h-0">
           <Image
             src="/assets/images/hero_desktop.png"
             alt="Github"

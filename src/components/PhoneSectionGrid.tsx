@@ -28,20 +28,20 @@ const gridItemOne: any = [
 function PhoneSectionGrid() {
   return (
     <div className="max-w-7xl mx-auto -mt-[0px] px-8 border-l-[4px] border-th-fgd-2 border-solid py-[150px]">
-      <div className="z-20 flex gap-10 mb-6">
-        <div className="flex-1">
+      <div className="z-20 grid sm:grid-cols-3 grid-cols-1 gap-10 mb-6">
+        <div className="col-span-1">
           <GridItemSend
             name={gridItemOne[0].name}
             description={gridItemOne[0].description}
           /> 
         </div>
-        <div className="flex-1">
+        <div className="col-span-1">
           <GridItemFees
             name={gridItemTwo[0].name}
             description={gridItemTwo[0].description}
           />  
         </div>
-        <div className="flex-1">
+        <div className="col-span-1">
           <GridItemGlobe
             name={gridItemThree[0].name}
             description={gridItemThree[0].description}

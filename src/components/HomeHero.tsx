@@ -20,32 +20,32 @@ const HomeHero = () => {
 
       
       <div className="flex flex-col max-w-7xl mb-8 z-10 mx-auto p-8 border-l-[4px] border-th-fgd-2 border-solid">
-        <div className="z-20 flex flex-col pt-[205px] sm:pt-[5px] ">
+        <div className="z-20 flex flex-col sm:pt-[205px] pt-[105px]">
 
-        <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-4"></div>
-        <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
+        <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-4"></div>
+        <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
         <GradientText>Building open finance <br />for the internet <br />generation.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
-        <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left">
-         <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <BoltIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4" />
-            Lightning fast products, transparent and all on-chain.
+        <ul className="flex space-y-3 flex-col z-20 font-body text-md sm:text-xl mb-3 text-left">
+         <li className="group inline-flex text-th-fgd-4">
+            <BoltIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
+           Lightning fast products, transparent and all on-chain.
           </li>
 
-          <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <CodeBracketIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4"   />
+          <li className="group inline-flex text-th-fgd-4">
+            <CodeBracketIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
             Open-source, community driven, fully verifiable.
           </li>
           
-          <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <GlobeAltIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4"/>
+          <li className="group inline-flex text-th-fgd-4">
+            <GlobeAltIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
             Accessible globally, without borders.
           </li>
         </ul>
 
-        <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+        <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
         <div className="inline-flex -ml-8">
           
@@ -61,7 +61,7 @@ const HomeHero = () => {
           </Linkie>
         </div>
         </div>
-        <div className="w-1/3 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+        <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
 
       <div className=" h-[500px]">
@@ -69,7 +69,7 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-[550px] translate-x-[225px]">
           <MangoBlob />
         </div>
-        <div className="z-10 block reletive transform -translate-y-[700px] translate-x-[730px] -rotate-[9deg] ">
+        <div className=" z-10 sm:block hidden reletive transform -translate-y-[700px] translate-x-[730px] -rotate-[9deg] ">
           <BrowserMockupAbstract />
 {/* 
           <img
@@ -79,7 +79,7 @@ const HomeHero = () => {
           />
 */}          
         </div>
-        <div className="z-10 block reletive transform -translate-y-[1100px] translate-x-[125px] -rotate-[3deg]">
+        <div className="z-10 sm:block hidden reletive transform -translate-y-[1100px] translate-x-[125px] -rotate-[3deg]">
             <IphoneAbstract src="/assets/images/iphone-1.jpg" />
 {/* 
           <img

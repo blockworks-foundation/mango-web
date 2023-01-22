@@ -489,7 +489,7 @@ const NavvyAlpha = () => {
           focus
           className="absolute inset-x-0 top-0 z-30 origin-top-right transform transition md:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-xl bg-th-bkg-2 shadow-lg">
+          <div className="divide-y-2 divide-th-fgd-2 rounded-xl bg-th-bkg-2 shadow-lg">
             <div className="px-5 pt-5 pb-6 sm:pb-8">
               <div className="flex items-center justify-between">
                 <div>

@@ -28,7 +28,7 @@ const ButtonNew: FunctionComponent<LinkieProps> = ({
                   <div className="default-transition relative z-10 flex h-full items-center justify-center space-x-3 px-12">
 
     <StyledButton
-        className={`${className} flex z-10 relative group text-xl`}
+        className={`${className} flex z-10 relative group sm:text-xl text-sm`}
         {...props}
       >
         {children}

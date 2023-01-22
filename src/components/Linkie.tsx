@@ -28,7 +28,7 @@ const Linkie: FunctionComponent<LinkieProps> = ({
   return (
     <div className="text-th-fgd-3 hover:text-th-fgd-5 duration-150">
       <StyledButton
-        className={`${className} pr-5 flex z-10 p-[24px] relative text-lg group`}
+        className={`${className} pr-5 flex z-10 p-[24px] relative sm:text-xl text-sm group`}
         {...props}
       >
         {children}

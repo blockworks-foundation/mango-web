@@ -17,29 +17,29 @@ const PhoneSectionOne = () => {
   return (
     <>
       <div className="z-20 max-w-7xl m-auto px-8 border-l-[4px] border-th-fgd-2 border-solid h-auto -mt-[32px]">
-        <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-3"></div>
+      <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-4"></div>
 
-        <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
+        <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
           Pay, request, &amp; discover. <br  /><GradientText>Crypto payements for<br  /> the digital nomad.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
-        <ul className="flex flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
-        <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <KeyIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4"/>
+        <ul className="flex space-y-3 flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
+        <li className="group inline-flex text-th-fgd-4">
+            <KeyIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
               Your keys, your money, you&apos;re in control.
           </li>
-          <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <CurrencyDollarIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4"   />
+          <li className="group inline-flex text-th-fgd-4">
+            <CurrencyDollarIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
             Fiat to crypto, crypto to fiat.
           </li>
-          <li className="group mb-2 inline-flex text-th-fgd-3 hover:text-th-fgd-4 transition-all duration-100 ease-in-out cursor-default">
-            <PhoneIcon className="bg-th-fgd-1 group-hover:bg-th-fgd-2 rounded-md p-1 w-[30px] h-[30px] group-hover:text-mango-yellow mr-3 mb-4" />
+          <li className="group inline-flex text-th-fgd-4">
+            <PhoneIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
             Pay with your number, forget wallet addresses.
           </li>
         </ul>
         <div className="group">
-          <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+        <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
             <div className="inline-flex">
                   <div className="z-20 w-[160px] ">
                     <div className="-ml-8"> 
@@ -106,7 +106,7 @@ const PhoneSectionOne = () => {
                         </button>
                         <div className="z-10 transform -translate-y-[37px] -translate-x-[80px]"><MangoPill>SOON</MangoPill></div>
                       </div>
-                      <div className="w-1/3 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] -mt-[6px]"></div>
+                      <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] -mt-[6px]"></div>
                       <div className="tranform translate-y-5 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition duration-100 ease-in-out">
                         <p className="w-[220px] group animate-pulse -ml-[20px] mt-2 flex flex-row text-sm font-mono text-th-fgd-4 group-hover:text-opacity-100 transition duration-150 ease-in-out">
                           Join the testflight! <PaperAirplaneIcon className="w-4 h-4 m-1 rotate-0 group-hover:-rotate-45 transistion delay-100 duration-150 text-mango-yellow" />
@@ -118,7 +118,7 @@ const PhoneSectionOne = () => {
         <div className="z-0 transform -translate-y-[750px] translate-x-[600px]">
         <MangoBlob />
        </div> 
-     <div className="flex flex-col z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
+     <div className="hidden sm:flex flex-col z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
       <div className="h-0 z-10 transform translate-x-[300px] translate-y-[50px]">
         <div className="absolute transform translate-x-[38px]">
           <GlobalAbstract />

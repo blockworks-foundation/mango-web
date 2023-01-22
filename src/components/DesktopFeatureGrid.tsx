@@ -56,7 +56,7 @@ function DesktopFeatureGrid() {
         />              
         </div>
       </div>
-      <div className="w-1/3 h-[4px] bg-gradient-to-r from-th-fgd-2"></div>
+      <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2"></div>
       <div className="h-1/2 w-[4px] bg-gradient-to-b from-th-fgd-2"></div>
 
     </section>
