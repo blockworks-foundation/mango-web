@@ -14,7 +14,7 @@ function BrowserMockupAbstract() {
             duration: .3,
             ease: "easeInOut"
           }}
-          className="w-[1100px] mt-20 m-auto rounded-2xl shadow-[0_8px_62px_-5px_rgba(0,0,0,0.25)]">
+          className="w-[800px] sm:w-[1100px] mt-20 m-auto rounded-2xl shadow-[0_8px_62px_-5px_rgba(0,0,0,0.25)]">
             <div className="bg-th-bkg-3 h-12 w-full py-4 pl-4 rounded-t-2xl backdrop-blur-xl border border-1 border-solid border-th-fgd-1">
                 <ul className="flex flex-row space-x-4">
                   <li className="bg-mango-red h-4 w-4 rounded-full"></li>

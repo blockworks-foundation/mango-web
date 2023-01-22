@@ -39,8 +39,8 @@ const mainModalVariant: AnimationProps = {
 const MangoAbstract = () => {
     return (
 
-      <div>
-        <svg width="700" height="403" viewBox="0 0 1056 403" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="w-[300px] mt-20 ml-10 sm:w-[700px] sm:mt-16 sm:ml-5">
+        <svg viewBox="0 0 1056 403" fill="none" xmlns="http://www.w3.org/2000/svg">
             
             <motion.path
               {...mainPathVariant}

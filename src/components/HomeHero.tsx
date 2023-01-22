@@ -64,30 +64,16 @@ const HomeHero = () => {
         <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
 
-      <div className=" h-[500px]">
+      <div className="sm:h-[500px]">
         
         <div className="z-0 transform -translate-y-[550px] translate-x-[225px]">
           <MangoBlob />
         </div>
-        <div className=" z-10 sm:block hidden reletive transform -translate-y-[700px] translate-x-[730px] -rotate-[9deg] ">
-          <BrowserMockupAbstract />
-{/* 
-          <img
-            className="w-full h-auto"
-            src="/assets/images/hero_desktop.png"
-            alt="desktop"
-          />
-*/}          
+        <div className=" z-10 reletive transform sm:-translate-y-[700px] sm:translate-x-[730px] sm:-rotate-[9deg]">
+          <BrowserMockupAbstract />        
         </div>
         <div className="z-10 sm:block hidden reletive transform -translate-y-[1100px] translate-x-[125px] -rotate-[3deg]">
-            <IphoneAbstract src="/assets/images/iphone-1.jpg" />
-{/* 
-          <img
-            className="w-full h-auto"
-            src="/assets/images/hero_desktop.png"
-            alt="desktop"
-          />
-*/}          
+            <IphoneAbstract src="/assets/images/iphone-1.jpg" />         
         </div>
       </div>
     </div>
