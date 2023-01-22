@@ -6,7 +6,6 @@ import {
     BanknotesIcon,
     UsersIcon,
     PuzzlePieceIcon,
-    AcademicCapIcon,
     PresentationChartLineIcon,
     BookOpenIcon,
     UserGroupIcon,
@@ -19,6 +18,7 @@ import ButtonTwo from '@/components/ButtonTwo'
 import QrCodeDrop from '@/components/QrCodeDrop'
 import StyleGuideDrop from '@/components/StyleGuideDrop'
 import Image from 'next/image';
+import CapIcon from './CapIcon'
 // import ThemeSwitcher from './ThemeSwitcher'
 
 
@@ -74,7 +74,7 @@ const community = [
   ]
   const callsToActionTwo = [
     { name: 'Redeem your MNGO', href: '#', icon: GiftIcon },
-    { name: 'Mango Market Caps', href: '#', icon: AcademicCapIcon },
+    { name: 'Mango Market Caps', href: '#', icon: CapIcon },
   ]
 const support = [
     {
