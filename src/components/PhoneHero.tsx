@@ -15,9 +15,6 @@ const PhoneHero = () => {
   return (
     <>
       <div className="z-20 mb-8 max-w-7xl m-auto px-8 mt-[260px]">
-      <p className="font-phone text-2xl mb-3 text-left">
-          <span className="type-phone font-mono text-th-fgd-3"></span>
-        </p>
         <h2 className="font-display text-6xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
           Pay anyone, anywhere. <br  /><GradientText>A digital, global wallet<br  /> without borders.</GradientText>
         </h2>
