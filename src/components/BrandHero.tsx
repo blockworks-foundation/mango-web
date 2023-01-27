@@ -1,37 +1,30 @@
 
 import GradientText from '@/components/GradientText';
-import ButtonTwo from '@/components/ButtonTwo';
 import CallToActionCard from '@/components/CallToActionCard'
 
 const BrandHero = () => {
   return (
     <>
-     <div className="mt-20 py-40">
-      <div className="z-10">
-      <h2 className="text-center font-display sm:text-5xl text-2xl tracking-tight mb-6 text-th-fgd-5 leading-tight">
+     <div className="mt-20 py-40 border-l-[4px] border-th-fgd-2 border-solid max-w-7xl mx-auto px-16">
+     <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[64px] mb-8"></div>
+      <div className="z-10 ">
+      <h2 className="text-left font-display sm:text-5xl text-2xl tracking-tight mb-2 text-th-fgd-5 leading-tight">
             <GradientText>Mango Brand Guidelines.</GradientText>
       </h2>
-      <p className="text-th-fgd-4 text-center text-2xl">
+      <p className="text-th-fgd-4 text-left text-2xl">
          Resources for presenting the Mango brand consistently and professionally.
       </p>
       </div>
-        <div className="my-8 flex flex-row justify-center">
-                      
-                      <ButtonTwo>
-                        <a
-                          rel="noreferrer"
-                          target="_blank"
-                          href="https://trade.mango.markets"
-                        >
-                          Download Brand Assets
-                        </a>
-                      </ButtonTwo>
-                      
-
-
-        </div>
-
-          <div className="z-10 mt-20 grid grid-cols-2 max-w-7xl mx-auto">
+      
+      <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[64px] my-10"></div>
+      <ul className="inline-flex space-x-3">
+            <li className="bg-th-fgd-1 h-10 w-10"></li>
+            <li className="bg-th-fgd-1 h-10 w-10"></li>
+            <li className="bg-th-fgd-1 h-10 w-10"></li>
+            <li className="bg-th-fgd-1 h-10 w-10"></li>
+        </ul>
+      <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[64px] mt-10"></div>
+       <div className="z-10 mt-10 grid grid-cols-2 max-w-7xl mx-auto">
           <div className="group lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3 cursor-pointer  transition duration-150 ease-in-out">
             <div className="p-5 z-10 bg-th-bkg-2 hover:bg-th-bkg-3 border-2 border-th-fgd-1 w-full shadow-md hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.2)] rounded-[28px] transition duration-150 ease-in-out flex flex-col items-center justify-items-center">
                 <div className="w-full ">
@@ -146,7 +139,7 @@ const BrandHero = () => {
             </div>
           </div>  
 
-          </div>
+       </div>
         </div>
         <CallToActionCard /> 
         </>
