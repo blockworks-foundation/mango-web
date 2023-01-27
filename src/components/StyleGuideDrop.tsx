@@ -40,7 +40,7 @@ const StyleGuideDrop = () => {
                         <li className="group mb-2 text-sm">
                           <a
                             className="inline-flex text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out w-full"
-                            href="https://trade.mango.markets/"
+                            href="#"
                           >
                           <NewspaperIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
 
@@ -50,7 +50,7 @@ const StyleGuideDrop = () => {
                         <li className="group mb-2 text-sm">
                           <a
                             className="inline-flex text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out  w-full"
-                            href="https://trade.mango.markets/"
+                            href="#"
                           >
                           <ClipboardDocumentIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
                            Copy Logo as SVG
@@ -60,7 +60,7 @@ const StyleGuideDrop = () => {
                         <li className="group mb-4 text-sm">
                           <a
                             className="inline-flex text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out  w-full"
-                            href="https://trade.mango.markets/"
+                            href="/brand"
                           >
                           <PaintBrushIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
                            Mango Brand Guidlines
