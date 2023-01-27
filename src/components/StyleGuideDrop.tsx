@@ -12,7 +12,7 @@ const StyleGuideDrop = () => {
         <div className="relative group">
 
           <Popover.Button
-            className={`group flex z-30 overflow-hidden`}
+            className={`group flex z-30 overflow-hidden p-4 -mt-3`}
           >
             <Logo /> 
           </Popover.Button>
@@ -31,26 +31,17 @@ const StyleGuideDrop = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute left-0 top-16 thin-scroll z-20 max-h-screen w-48 overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 p-4`}
+              className={`absolute left-0 top-[95px] z-20 max-h-screen w-[240px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 px-2 py-4 pb-0`}
             >
               <div className="grid grid-cols-1">
-              <div className="col-span-1 px-1">    
-              <h3 className="mb-2 text-sm font-display uppercase tracking-tight text-th-fgd-3">
-                        Style & Press
-               </h3>            
+              <div className="col-span-1 px-1">              
               <ul className="">
                         <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/"
                           >
-                           Logo Zip
-                            <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
+                           Copy logomark as SVG
                           </a>
                         </li>
                         <li className="group mb-4 text-sm">
@@ -58,13 +49,7 @@ const StyleGuideDrop = () => {
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/"
                           >
-                           Styleguide
-                            <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
+                           Copy logotype as SVG
                           </a>
                         </li>
                         <li className="group mb-4 text-sm">
@@ -72,13 +57,7 @@ const StyleGuideDrop = () => {
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
                             href="https://trade.mango.markets/"
                           >
-                           Press Pack
-                            <span
-                                  className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
-                                  aria-hidden="true"
-                                >
-                                  &rarr;
-                                </span>
+                           Brand Guidlines
                           </a>
                         </li>
                         </ul>
