@@ -29,19 +29,19 @@ const exlpore = [
   {
     name: 'Markets',
     description: 'Access margin and leverage to trade permissionless spot and derivitive markets.',
-    href: '#',
+    href: '/markets',
     icon: BuildingLibraryIcon,
   },
   {
     name: 'Earn',
     description: "Automatically earn variable yield right into your mango account, all powered by decentralized money markets.",
-    href: '#',
+    href: '/markets',
     icon: BanknotesIcon,
   },
   {
     name: 'Redacted',
     description: 'Move money globally without borders. Pay, send, swap, receive, and earn all from your device.',
-    href: '#',
+    href: '/redacted',
     icon: DevicePhoneMobileIcon,
   },
 ]
@@ -53,13 +53,13 @@ const community = [
     {
       name: 'Exlpore the docs',
       description: 'Learn about the protocol on a deaper level and start composing and integrating today.',
-      href: '#',
+      href: 'https://docs.mango.markets/',
       icon: BookOpenIcon,
     },
     {
       name: 'Protocol Stats',
       description: 'Total Value Deposited, Current rates for borrowing/lending, and other valuable stats.',
-      href: '#',
+      href: 'https://alpha.mango.markets/stats',
       icon: PresentationChartLineIcon,
     },
     {
@@ -71,25 +71,25 @@ const community = [
     {
         name: 'Mango Forum',
         description: "Discuss proposals, partnerships, and improvements to Mango, all in one place.",
-        href: '/dao',
+        href: 'https://forum.mango.markets/',
         icon: ChatBubbleLeftRightIcon,
       },    
   ]
   const callsToActionTwo = [
-    { name: 'Redeem your MNGO', href: '#', icon: GiftIcon },
-    { name: 'Mango Market Caps', href: '#', icon: CapIconGold },
+    { name: 'Redeem your MNGO', href: 'https://token.mango.markets/', icon: GiftIcon },
+    { name: 'Mango Market Caps', href: 'https://initialcapoffering.com/', icon: CapIconGold },
   ]
 const support = [
     {
         name: 'Discord',
         description: 'Learn about the protocol on a deaper level and start composing and integrating today.',
-        href: '#',
+        href: 'https://discord.gg/2uwjsBc5yw',
         icon: GiftIcon,
       },
       {
         name: 'Twitter',
         description: 'Learn about the protocol on a deaper level and start composing and integrating today.',
-        href: '#',
+        href: 'https://twitter.com/mangomarkets',
         icon: GiftIcon,
     },
 ]

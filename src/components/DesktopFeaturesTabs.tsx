@@ -36,11 +36,11 @@ function DesktopFeaturesTabs() {
   return (
     <>
     <Tab.Group manual>
-      <div className="border-t-4 border-th-bkg-2 border-opacity-5 w-screen 2xl:ml-44 xl:ml-16">
+      <div className="border-t-4 border-th-fgd-2 border-opacity-5 w-screen">
 
       </div>
       <Tab.List className={"text-white grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 max-w-7xl m-auto"}>
-          <Tab className="group hover:bg-th-bkg-1 hover:border-t-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-red focus:border-opacity-100">
+          <Tab className="group hover:bg-th-bkg-1 hover:border-t-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-red focus:border-opacity-100 focus:bg-th-bkg-2">
             <dl>
               {featureOne.map((feature) => (
                 <div className="text-left" key={feature.name}>
@@ -60,7 +60,7 @@ function DesktopFeaturesTabs() {
               ))}
             </dl>
           </Tab>
-          <Tab className="group hover:bg-th-bkg-1 hover:border-t-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-yellow focus:border-opacity-100">
+          <Tab className="group hover:bg-th-bkg-1 hover:border-t-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-yellow focus:border-opacity-100 focus:bg-th-bkg-2">
             <dl>
               {featureTwo.map((feature) => (
                 <div className="text-left" key={feature.name}>
@@ -80,7 +80,7 @@ function DesktopFeaturesTabs() {
               ))}
             </dl>
           </Tab>
-          <Tab className="group hover:bg-th-bkg-1 hover:border-t-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-green focus:border-opacity-100">
+          <Tab className="group hover:bg-th-bkg-1 hover:border-t-4 border-th-bkg-3 focus:bg-opacity-0 p-8 -mt-1 mb-4 align-top focus:border-t-4 focus:border-mango-green focus:border-opacity-100 focus:bg-th-bkg-2">
             <dl>
               {featureThree.map((feature) => (
                 <div className="text-left" key={feature.name}>

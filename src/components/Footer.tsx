@@ -10,7 +10,6 @@ const Footer = () => {
   return (
     <>
       <div className="max-w-7xl h-[4px] mx-auto bg-gradient-to-r from-th-fgd-2 mt-10"></div>
-      <div className="bg-mangobottom bg-contain bg-bottom bg-no-repeat">
         <div className="max-w-7xl mx-auto border-l-[4px] border-th-fgd-2 border-solid px-8">
 
             <EmailForm />
@@ -20,14 +19,14 @@ const Footer = () => {
             <div className="py-8 mx-auto">
               <div className="flex flex-wrap -mx-4 mb-8 lg:mb-16">
                 <div className="w-full lg:w-1/3 px-4 mb-12 lg:mb-0">
-                  <div className="w-1/3 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-4"></div>
+                  <div className="w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-4"></div>
                      <Logo />         
                    <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-4"></div>
  
-                  <p className="font-body mt-5 mb-6 max-w-xs text-th-fgd-4 opacity-50 leading-loose">
+                  <p className="font-body text-sm mt-5 mb-6 max-w-xs text-th-fgd-4 opacity-50 leading-normal">
                     Mango is a decentralized organization building the 
-                    next generation of decentralied trading products
-                    and infratructure.{' '}
+                    next generation of decentralied financial products
+                    and infratructure for the people.{' '}
                   </p>
                   <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] my-4"></div>
 
@@ -102,7 +101,7 @@ const Footer = () => {
                         <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/"
+                            href="/markets"
                           >
                             Markets
                             <span
@@ -116,7 +115,7 @@ const Footer = () => {
                         <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/perp/BTC"
+                            href="/redacted"
                           >
                             Redacted
                             <span
@@ -130,7 +129,7 @@ const Footer = () => {
                         <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/borrow"
+                            href="/earn"
                           >
                             Earn
                             <span
@@ -149,7 +148,7 @@ const Footer = () => {
                       <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/"
+                            href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md"
                           >
                             Liquidator
                             <span
@@ -163,7 +162,7 @@ const Footer = () => {
                         <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="https://trade.mango.markets/perp/BTC"
+                            href="https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md"
                           >
                             Market Maker
                             <span
@@ -260,7 +259,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
       </div>
     </>
   )

@@ -1,16 +1,21 @@
-import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import HomeCtaFour from '@/components/SectionCta';
 import PhoneHero from '@/components/PhoneHero';
+import NavvyAlpha from '@/components/NavvyAlpha';
+import PhoneSectionGrid from '@/components/PhoneSectionGrid';
+import PhoneSectionTab from '@/components/PhoneSectionTab';
+import CallToActionCard from '@/components/CallToActionCard';
 
 const Mobile = () => {
   return (
     <div
       className={"debug-screens h-auto w-screen overflow-hidden bg-gradient-to-b from-th-bkg-1 to-th-bkg-2 "}
     >
-      <Nav />
+      <NavvyAlpha />
         <PhoneHero />
-         <HomeCtaFour />
+        <PhoneSectionGrid />
+        <PhoneSectionTab />
+        <CallToActionCard />
+
       <Footer />
 
     </div>

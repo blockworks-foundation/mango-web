@@ -1,16 +1,20 @@
-import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import DesktopHero from '@/components/DesktopHero';
-import HomeCtaFour from '@/components/SectionCta';
+import NavvyAlpha from '@/components/NavvyAlpha';
+import DesktopFeatureGridTwo from '@/components/DesktopFeatureGridTwo';
+import DesktopFeaturesTabs from '@/components/DesktopFeaturesTabs';
+import CallToActionCard from '@/components/CallToActionCard';
 
 const Markets = () => {
   return (
     <div
       className={"debug-screens h-auto w-screen overflow-hidden bg-gradient-to-b from-th-bkg-1 to-th-bkg-2 "}
     >
-      <Nav />
+      <NavvyAlpha />
          <DesktopHero />
-         <HomeCtaFour />
+         <DesktopFeatureGridTwo />
+         <DesktopFeaturesTabs />
+         <CallToActionCard />
       <Footer />
 
     </div>

@@ -32,11 +32,12 @@ const featureThree = [
 
 function PhoneSectionTab() {
   return (
-    <div className="grid grid-cols-2 max-w-7xl mx-auto py-40 space-y-0 mt-40">
+    <>
+    <div className="grid grid-cols-2 max-w-7xl mx-auto space-y-0 ">
         <Tab.Group vertical>
             <div className="">
-            <Tab.List className={"text-th-fgd-5 flex flex-col max-w-xl m-auto border-l-4 border-th-bkg-2 border-opacity-5 "}>
-                <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-red focus:border-opacity-100">
+            <Tab.List className={"text-th-fgd-5 flex flex-col max-w-7xl m-auto border-l-4 border-th-fgd-2 border-opacity-5 "}>
+                <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-red focus:border-opacity-100 focus:bg-th-bkg-2">
                     <dl>
                     {featureOne.map((feature) => (
                         <div className="text-left" key={feature.name}>
@@ -57,7 +58,7 @@ function PhoneSectionTab() {
                     </dl>
                 </Tab>
 
-                <Tab className="group -ml-1 hover:-ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100">
+                <Tab className="group -ml-1 hover:-ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-yellow focus:border-opacity-100 focus:bg-th-bkg-2">
                     <dl>
                     {featureTwo.map((feature) => (
                         <div className="text-left" key={feature.name}>
@@ -78,7 +79,7 @@ function PhoneSectionTab() {
                     </dl>
                 </Tab>
 
-                <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-green focus:border-opacity-100">
+                <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-8 align-top focus:border-l-4 focus:border-mango-green focus:border-opacity-100 focus:bg-th-bkg-2">
                     <dl>
                     {featureThree.map((feature) => (
                         <div className="text-left" key={feature.name}>
@@ -120,7 +121,11 @@ function PhoneSectionTab() {
 
         </div>          
     </Tab.Group>
+    <div>    
+    <div className=" h-[200px] w-[4px] ml-0 bg-gradient-to-b from-th-fgd-2"></div>
+    </div>
   </div>
+</>
   )
 }
 

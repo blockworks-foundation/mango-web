@@ -14,7 +14,7 @@ const DesktopHero = () => {
   return (
       <div className="flex flex-col max-w-7xl mb-8 z-10 mx-auto p-8 py-20 border-l-[4px] border-th-fgd-2 border-solid">
 
-        <div className="z-20 flex flex-col">
+        <div className="z-20 flex flex-col sm:pt-[205px] pt-[105px]">
 
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 

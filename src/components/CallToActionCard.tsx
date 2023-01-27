@@ -1,39 +1,59 @@
 // import GradientText from "@/components/GradientText";
-import ButtonCopyGit from "./ButtonCopyGit";
-import Image from "next/image";
+import ButtonCopyGit from "@/components/ButtonCopyGit";
+//import Image from "next/image";
+
+//import ButtonTwo from "./ButtonTwo";
 
 const CallToActionCard = () => {
   return (
     <>
-        <div className="z-50 mx-auto max-w-7xl pt-0 pb-16 mt-0 px-8 ">
-
-            <div className="group sm:h-72 transform transition duration-200 ease-in-out hover:-translate-y-2 border border-th-fgd-2 rounded-[40px] shadow-lg hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.1)] overflow-hidden lg:grid lg:grid-cols-2 lg:gap-2 mt-8 bg-mangotop bg-cover bg-top bg-no-repeat bg-th-bkg-3">
-              <div className="pt-10 pb-12 px-5 sm:pt-16 sm:px-16 lg:py-4 lg:pr-0 xl:py-12 xl:px-16">
-                  <div className="lg:self-center">
-                  <h2 className="text-xl sm:text-4xl font-mono font-bold text-th-fgd-5 w-screen">
-                        Doesnt matter where you are. 
-                      <br />
-                      <span className="text-th-fgd-3">
-                        We open-source everything.
-                      </span>
-                  </h2>
-                      <ButtonCopyGit />
-                  </div>
-              </div>
-              <div className="-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1">
-
-                  <Image
-                  className="transform translate-x-2 translate-y-2 object-cover"
-                    src="/assets/images/cpu-mango.png"
-                    alt="Github"
-                    width={1300}
-                    height={300}
-                    loading="lazy"
-                  />    
-                  
-              </div>
+<div className="">
+      <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div className="h-[300px] relative isolate overflow-hidden bg-mango-orange px-6 pt-16 shadow-[30px] sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 bg-mangotop bg-top bg-no-repeat">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1024 1024"
+            className="absolute top-1/4 left-1/4 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:translate-y-0 lg:-translate-x-1/2"
+            aria-hidden="true"
+          >
+            <circle cx={512} cy={512} r={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
+            <defs>
+              <radialGradient
+                id="759c1415-0410-454c-8f7c-9a820de03641"
+                cx={0}
+                cy={0}
+                r={1}
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(512 512) rotate(90) scale(512)"
+              >
+                <stop stopColor="#E54033" />
+                <stop offset={1} stopColor="#E54033" stopOpacity={0} />
+              </radialGradient>
+            </defs>
+          </svg>
+          <div className="-mt-16 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+            <h2 className="text-6xl font-display font-bold tracking-tight leading-tight text-white sm:text-4xl">
+              Decentralized sofware for the people.
+            </h2>
+            <p className="text-white/70 mt-2">
+              Open-source first, trust in that you don&apos;t need to trust. 
+            </p>
+            <div className="mt-5">
+              <ButtonCopyGit />
             </div>
+          </div>
+          <div className="relative mt-16 h-80 lg:mt-8">
+            <img
+              className="absolute top-0 left-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+              alt="App screenshot"
+              width={1824}
+              height={1080}
+            />
+          </div>
         </div>
+      </div>
+    </div>
     </>
   );
 };
