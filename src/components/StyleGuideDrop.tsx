@@ -1,4 +1,5 @@
 import { Popover, Transition } from '@headlessui/react'
+import { CodeBracketSquareIcon, PaintBrushIcon } from '@heroicons/react/20/solid'
 import { Fragment } from 'react'
 import Logo from './Logo'
 
@@ -31,33 +32,38 @@ const StyleGuideDrop = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute left-0 top-[95px] z-20 max-h-screen w-[240px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 px-2 py-4 pb-0`}
+              className={`absolute left-0 top-[95px] z-20 max-h-screen w-[240px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 px-2 py-3 pb-0`}
             >
               <div className="grid grid-cols-1">
               <div className="col-span-1 px-1">              
               <ul className="">
-                        <li className="group mb-4 text-sm">
+                        <li className="group mb-2 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
+                            className="inline-flex text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out w-full"
                             href="https://trade.mango.markets/"
                           >
+                          <CodeBracketSquareIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
+
                            Copy logomark as SVG
                           </a>
                         </li>
-                        <li className="group mb-4 text-sm">
+                        <li className="group mb-2 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
+                            className="inline-flex text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out  w-full"
                             href="https://trade.mango.markets/"
                           >
+                          <CodeBracketSquareIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
                            Copy logotype as SVG
                           </a>
                         </li>
+                        <div className="h-[2px] bg-gradient-to-r from-white/0 via-th-fgd-2 to-white/0 my-2"></div>
                         <li className="group mb-4 text-sm">
                           <a
-                            className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
+                            className="inline-flex text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out  w-full"
                             href="https://trade.mango.markets/"
                           >
-                           Brand Guidlines
+                          <PaintBrushIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
+                           Mango Brand Guidlines
                           </a>
                         </li>
                         </ul>
