@@ -35,7 +35,7 @@ const exlpore = [
   {
     name: 'Earn',
     description: "Automatically earn variable yield right into your mango account, all powered by decentralized money markets.",
-    href: '/markets',
+    href: '/earn',
     icon: BanknotesIcon,
   },
   {
