@@ -33,7 +33,7 @@ const CallToActionCard = () => {
           </svg>
           <div className="-mt-16 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
             <h2 className="text-6xl font-display font-bold tracking-tight leading-tight text-white sm:text-4xl">
-              Decentralized sofware for the people.
+              Decentralized software for the people.
             </h2>
             <p className="text-white/70 mt-2">
               Open-source first, trust in that you don&apos;t need to trust. 
