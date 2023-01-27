@@ -26,25 +26,26 @@ function GridItemMarkets(props: any) {
                   </p>
                 <div className="grid grid-cols-2 gap-4 saturate-0 group-hover:saturate-100">
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl mt-3 border border-th-fgd-2 shadow-md">
-                    <img className="h-3 mt-[10px]" src="./assets/images/logo-openbook.png" />
+                    <img className="h-3 mt-[10px]" src="/assets/images/logo-openbook.png" />
+                    
                     <p className="text-center text-th-fgd-4 text-md font-bold py-1 ml-3">
                       Openbook
                     </p>
                   </div>
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl mt-3 border border-th-fgd-2 shadow-md">
-                    <img className="h-8" src="./assets/images/logo-jupiter.svg" />
+                    <img className="h-8" src="/assets/images/logo-jupiter.svg" />
                     <p className="text-center text-th-fgd-4 text-md font-bold py-1 ml-3">
                       Jupiter
                     </p>
                   </div>
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl border border-th-fgd-2 shadow-md">
-                    <img className="h-8" src="./assets/images/logo-solana.svg" />
+                    <img className="h-8" src="/assets/images/logo-solana.svg" />
                     <p className="text-center text-th-fgd-4 text-md font-bold py-1 ml-3">
                       Solana
                     </p>
                   </div>
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl border border-th-fgd-2 shadow-md">
-                    <img className="h-8" src="./assets/images/logo-orca.svg" />
+                    <img className="h-8" src="/assets/images/logo-orca.svg" />
                     <p className="text-center text-th-fgd-4 text-md font-bold py-1 ml-3">
                       Orca
                     </p>
