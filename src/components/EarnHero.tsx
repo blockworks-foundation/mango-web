@@ -4,8 +4,8 @@ import ButtonNew from '@/components/ButtonNew';
 import MangoBlob from '@/components/MangoBlob';
 import { 
   AdjustmentsVerticalIcon,
-  TableCellsIcon,
   ReceiptPercentIcon,
+  BanknotesIcon,
 
   } from '@heroicons/react/20/solid';
 import Image from 'next/image';
@@ -19,7 +19,7 @@ const EarnHero = () => {
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
         <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-        Be merry, we&apos;re back.<br /> <GradientText>Trade, manage, earn <br />all from one hub.</GradientText>
+        Permissionless money markets.<br /> <GradientText>Earn, manage, borrow<br />all from one hub.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
@@ -30,13 +30,13 @@ const EarnHero = () => {
           </li>
 
           <li className="group inline-flex text-th-fgd-4">
-            <TableCellsIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
-            Easily swap, or place trades on both spot and derivitives markets.
+            <ReceiptPercentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
+            Earn transparent yeild form auto-lending.
           </li>
           
           <li className="group inline-flex text-th-fgd-4">
-            <ReceiptPercentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
-            Auto-lending earns you transparent yield from pooled capital. 
+            <BanknotesIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
+            Borrow on your capital. 
           </li>
         </ul>
         
