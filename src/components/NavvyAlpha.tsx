@@ -457,7 +457,7 @@ const NavvyAlpha = () => {
 
             </Popover.Group>
 
-            <div className="">
+             <div className="-mt-2">
                   <ButtonTwo>
                     <a href="http://alpha.mango.markets"
                       >
@@ -465,7 +465,7 @@ const NavvyAlpha = () => {
                     </a>
                   </ButtonTwo>
               </div>
-              <div className="z-30 bg-th-fgd-2 mt-2 rounded-full ml-6 shadow-lg">
+              <div className="z-30 bg-th-fgd-2 rounded-full ml-6 shadow-lg -mt-1">
                   <QrCodeDrop />
                   {/* 
                   <ThemeSwitcher /> 

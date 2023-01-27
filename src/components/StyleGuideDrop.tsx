@@ -13,12 +13,12 @@ const StyleGuideDrop = () => {
         <div className="relative group">
 
           <Popover.Button
-            className={`group flex z-30 overflow-hidden p-4 -mt-3`}
+            className={`group flex z-30 overflow-hidden p-3 transform -translate-y-3`}
           >
             <Logo /> 
           </Popover.Button>
 
-          <div className="p-1 -mt-6 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-300 group-hover:duration-300 animate-tilt"></div>
+          <div className="-mt-10 p-1 ml-0 w-38 mx-auto -inset-0.5 bg-gradient-to-r from-mango-red to-mango-green rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-300 group-hover:duration-300 animate-tilt"></div>
           </div>
           <Transition
             appear={true}
@@ -32,7 +32,7 @@ const StyleGuideDrop = () => {
             leaveTo="opacity-0"
           >
             <Popover.Panel
-              className={`absolute left-0 top-[95px] z-20 max-h-screen w-[240px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 px-2 py-3 pb-0`}
+              className={`absolute left-0 top-[70px] z-20 max-h-screen w-[240px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 px-2 py-3 pb-0`}
             >
               <div className="grid grid-cols-1">
               <div className="col-span-1 px-1">              
