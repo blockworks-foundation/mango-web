@@ -1,5 +1,5 @@
 import { Popover, Transition } from '@headlessui/react'
-import { CodeBracketSquareIcon, PaintBrushIcon } from '@heroicons/react/20/solid'
+import { ClipboardDocumentIcon, NewspaperIcon, PaintBrushIcon } from '@heroicons/react/20/solid'
 import { Fragment } from 'react'
 import Logo from './Logo'
 
@@ -42,9 +42,9 @@ const StyleGuideDrop = () => {
                             className="inline-flex text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out w-full"
                             href="https://trade.mango.markets/"
                           >
-                          <CodeBracketSquareIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
+                          <NewspaperIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
 
-                           Copy logomark as SVG
+                           Download Presskit
                           </a>
                         </li>
                         <li className="group mb-2 text-sm">
@@ -52,8 +52,8 @@ const StyleGuideDrop = () => {
                             className="inline-flex text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out  w-full"
                             href="https://trade.mango.markets/"
                           >
-                          <CodeBracketSquareIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
-                           Copy logotype as SVG
+                          <ClipboardDocumentIcon className="w-[15px] h-[15px] mr-2 mt-1 group-hover:text-mango-yellow" /> 
+                           Copy Logo as SVG
                           </a>
                         </li>
                         <div className="h-[2px] bg-gradient-to-r from-white/0 via-th-fgd-2 to-white/0 my-2"></div>
