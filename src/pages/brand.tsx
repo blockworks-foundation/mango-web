@@ -1,4 +1,5 @@
 import BrandHero from '@/components/BrandHero';
+import BrandSectionOne from '@/components/BrandSectionOne';
 import Footer from '@/components/Footer';
 
 import NavvyAlpha from '@/components/NavvyAlpha';
@@ -10,6 +11,7 @@ const Brand = () => {
     >
       <NavvyAlpha />
       <BrandHero />
+      <BrandSectionOne />
 
       <Footer />
 
