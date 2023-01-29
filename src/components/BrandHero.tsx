@@ -102,7 +102,7 @@ const BrandHero = () => {
 
                 <div className="w-full ">
                 <h1 className="font-display text-lg p-2 text-white/50 text-left mt-10">
-                    Tirtiary Brand Colors
+                    Tertiary Brand Colors
                 </h1>
                 </div>    
                 <div className="grid grid-cols-4 gap-4 mx-auto w-full">
