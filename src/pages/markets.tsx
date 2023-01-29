@@ -4,6 +4,7 @@ import NavvyAlpha from '@/components/NavvyAlpha';
 import DesktopFeatureGridTwo from '@/components/DesktopFeatureGridTwo';
 import DesktopFeaturesTabs from '@/components/DesktopFeaturesTabs';
 import CallToActionCard from '@/components/CallToActionCard';
+import SectionCta from '@/components/SectionCta';
 
 const Markets = () => {
   return (
@@ -14,6 +15,7 @@ const Markets = () => {
          <DesktopHero />
          <DesktopFeatureGridTwo />
          <DesktopFeaturesTabs />
+         <SectionCta />
          <CallToActionCard />
       <Footer />
 

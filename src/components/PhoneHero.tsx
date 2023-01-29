@@ -23,7 +23,7 @@ const PhoneHero = () => {
 
         <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-4"></div>
         <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-          Pay, request, &amp; discover. <br  /><GradientText>Crypto payements for<br  /> the digital nomad.</GradientText>
+          Pay anyone instantly.<br  /><GradientText>This is money with<br  /> Mango Pay.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 

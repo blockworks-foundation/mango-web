@@ -82,6 +82,10 @@ html {
 *::after {
   box-sizing: inherit;
 }
+*:focus {
+  outline: none;
+}
+
 img,
 video {
   height: auto;

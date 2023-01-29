@@ -4,6 +4,7 @@ import NavvyAlpha from '@/components/NavvyAlpha';
 import PhoneSectionGrid from '@/components/PhoneSectionGrid';
 import PhoneSectionTab from '@/components/PhoneSectionTab';
 import CallToActionCard from '@/components/CallToActionCard';
+import SectionCta from '@/components/SectionCta';
 
 const Mobile = () => {
   return (
@@ -14,6 +15,7 @@ const Mobile = () => {
         <PhoneHero />
         <PhoneSectionGrid />
         <PhoneSectionTab />
+        <SectionCta />
         <CallToActionCard />
 
       <Footer />
