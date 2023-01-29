@@ -20,8 +20,9 @@ import StyleGuideDrop from '@/components/StyleGuideDrop'
 import Image from 'next/image';
 // import CapIcon from '@/components/CapIcon'
 import CapIconGold from '@/components/CapIconGold'
-import Logo from './Logo'
-
+import Logo from '@/components/Logo'
+import DiscordIcon from '@/components/Discord'
+import TwitterIcon from '@/components/Twitter'
 // import ThemeSwitcher from './ThemeSwitcher'
 
 
@@ -79,18 +80,18 @@ const community = [
     { name: 'Redeem your MNGO', href: 'https://token.mango.markets/', icon: GiftIcon },
     { name: 'Mango Market Caps', href: 'https://initialcapoffering.com/', icon: CapIconGold },
   ]
-const support = [
+  const support = [
     {
         name: 'Discord',
         description: 'Learn about the protocol on a deaper level and start composing and integrating today.',
         href: 'https://discord.gg/2uwjsBc5yw',
-        icon: GiftIcon,
+        icon: DiscordIcon,
       },
       {
         name: 'Twitter',
         description: 'Learn about the protocol on a deaper level and start composing and integrating today.',
         href: 'https://twitter.com/mangomarkets',
-        icon: GiftIcon,
+        icon: TwitterIcon,
     },
 ]
 
@@ -101,7 +102,7 @@ const blogPosts = [
     href: '#',
     preview: "It's easy to get started with crypto! learn how to set up a wallet to become a crypto native.",
     imageUrl:
-      'https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80',
+      '/assets/images/walletpost.png',
   },
 ]
 
@@ -188,7 +189,7 @@ const NavvyAlpha = () => {
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
                                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-th-fgd-1 group-hover:bg-th-fgd-2 text-white sm:h-12 sm:w-12">
-                                    <item.icon className="h-6 w-6 group-hover:text-mango-yellow" aria-hidden="true" />
+                                    <item.icon className="h-6 w-6 text-th-fgd-3 group-hover:text-mango-yellow" aria-hidden="true" />
                                   </span>
                                 </div>
                                 <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
@@ -305,7 +306,7 @@ const NavvyAlpha = () => {
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
                                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-th-fgd-1 group-hover:bg-th-fgd-2 text-white sm:h-12 sm:w-12">
-                                    <item.icon className="h-6 w-6 group-hover:text-mango-yellow" aria-hidden="true" />
+                                    <item.icon className="h-6 w-6 text-th-fgd-3 group-hover:text-mango-yellow" aria-hidden="true" />
                                   </span>
                                 </div>
                                 <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
@@ -406,7 +407,7 @@ const NavvyAlpha = () => {
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
                                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-th-fgd-1 group-hover:bg-th-fgd-2 text-white sm:h-12 sm:w-12">
-                                    <item.icon className="h-6 w-6 group-hover:text-mango-yellow" aria-hidden="true" />
+                                    <item.icon  aria-hidden="true" />
                                   </span>
                                 </div>
                                 <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
@@ -489,7 +490,7 @@ const NavvyAlpha = () => {
           focus
           className="absolute inset-x-0 top-0 z-30 origin-top-right transform transition md:hidden"
         >
-          <div className="divide-y-2 divide-th-fgd-2 rounded-xl bg-th-bkg-2 shadow-lg">
+          <div className="rounded-xl bg-th-bkg-2 shadow-lg">
             <div className="px-5 pt-5 pb-6 sm:pb-8">
               <div className="flex items-center justify-between">
                 <div>
@@ -509,7 +510,7 @@ const NavvyAlpha = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-m-3 flex items-center rounded-xl p-3 hover:bg-gray-50"
+                        className="-m-3 flex items-center rounded-xl p-3 hover:bg-mango-bkg-3"
                       >
                         <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-th-fgd-1 group-hover:bg-th-fgd-2 text-white sm:h-12 sm:w-12">
                           <item.icon className="h-6 w-6 flex-shrink-0 text-th-fgd-3 group-hover:text-mango-yellow" aria-hidden="true" />
@@ -527,22 +528,47 @@ const NavvyAlpha = () => {
                 </nav>
               </div>
             </div>
-            <div className="py-6 px-5">
+            <div className="h-[2px] bg-gradient-to-r from-white/0 via-th-fgd-2 to-white/0 "></div>
+
+            <div className="py-3 px-5">
               <div className="grid grid-cols-2 gap-4">
+              <div className="flex flex-row">
+                      <svg
+                        className="mt-[6px] mr-3"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M23.7187 1.67497C21.9061 0.89249 19.9681 0.323786 17.9421 0C17.6932 0.41511 17.4025 0.973432 17.2021 1.4176C15.0482 1.11872 12.9142 1.11872 10.8 1.4176C10.5996 0.973432 10.3023 0.41511 10.0513 0C8.02293 0.323786 6.08271 0.894565 4.27023 1.67912C0.614418 6.77668 -0.376613 11.7477 0.118903 16.648C2.54363 18.3188 4.89347 19.3337 7.20367 19.9979C7.77407 19.2736 8.2828 18.5036 8.72106 17.692C7.88639 17.3993 7.08696 17.0382 6.33156 16.6189C6.53197 16.482 6.72798 16.3387 6.91738 16.1914C11.5246 18.1797 16.5304 18.1797 21.0826 16.1914C21.2741 16.3387 21.4701 16.482 21.6683 16.6189C20.9107 17.0402 20.1091 17.4014 19.2744 17.6941C19.7127 18.5036 20.2192 19.2757 20.7918 20C23.1042 19.3358 25.4563 18.3209 27.881 16.648C28.4624 10.9672 26.8878 6.04193 23.7187 1.67497ZM9.34871 13.6343C7.96567 13.6343 6.83149 12.4429 6.83149 10.9922C6.83149 9.54132 7.94144 8.34791 9.34871 8.34791C10.756 8.34791 11.8901 9.53924 11.8659 10.9922C11.8682 12.4429 10.756 13.6343 9.34871 13.6343ZM18.6512 13.6343C17.2682 13.6343 16.1339 12.4429 16.1339 10.9922C16.1339 9.54132 17.2439 8.34791 18.6512 8.34791C20.0584 8.34791 21.1926 9.53924 21.1684 10.9922C21.1684 12.4429 20.0584 13.6343 18.6512 13.6343Z"
+                          fill="#4F4C67"
+
+                        />
+                      </svg>
                 <a href="#" className="rounded-xl text-base font-medium text-th-fgd-4 hover:text-mango-yellow">
                   Discord
                 </a>
+                </div>
+                <div className="flex flex-row mb-3">
+                      <svg
+                        className="mt-[6px] mr-3"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.78874 23C5.55374 23 2.53817 22.0591 0 20.4356C2.15499 20.5751 5.95807 20.2411 8.32358 17.9848C4.76508 17.8215 3.16026 15.0923 2.95094 13.926C3.25329 14.0426 4.6953 14.1826 5.50934 13.856C1.4159 12.8296 0.787928 9.23732 0.927477 8.14097C1.695 8.67749 2.99745 8.8641 3.50913 8.81744C-0.305207 6.08823 1.06703 1.98276 1.74151 1.09635C4.47882 4.88867 8.5812 7.01857 13.6564 7.13704C13.5607 6.71736 13.5102 6.28042 13.5102 5.83164C13.5102 2.61092 16.1134 0 19.3247 0C21.0025 0 22.5144 0.712754 23.5757 1.85284C24.6969 1.59011 26.3843 0.975068 27.2092 0.443205C26.7934 1.93611 25.4989 3.18149 24.7159 3.64308C24.7224 3.65878 24.7095 3.62731 24.7159 3.64308C25.4037 3.53904 27.2648 3.18137 28 2.68256C27.6364 3.52125 26.264 4.91573 25.1377 5.69642C25.3473 14.9381 18.2765 23 8.78874 23Z"
+                          fill="#4F4C67"
+                        />
+                      </svg>
                 <a href="#" className="rounded-xl text-base font-medium text-th-fgd-4 hover:text-mango-yellow">
                   Twitter
                 </a>
-              </div>
-              <div className="mt-6">
-                  <ButtonTwo className="">
-                    <a href="http://alpha.mango.markets"
-                      >
-                      Discover 🥭
-                    </a>
-                  </ButtonTwo>
+                </div>
               </div>
             </div>
           </div>
