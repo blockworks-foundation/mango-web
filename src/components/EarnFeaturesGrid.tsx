@@ -19,7 +19,7 @@ const gridItemOne: any = [
   ]; 
   const gridItemThree: any = [
     {
-      name: "Lending for the people.",
+      name: "Lending for anyone.",
       description:
         "Decentralized money markets can offer lower fees compared to traditional lending systems as there are no intermediaries involved.",
     },
