@@ -5,7 +5,6 @@ import Linkie from '@/components/Linkie';
 import MangoBlob from '@/components/MangoBlob';
 import BrowserMockupAbstract from '@/components/mockups/BrowserMockupAbstract';
 import IphoneAbstract from '@/components/mockups/IphoneAbstract';
-import NavvyAlpha from '@/components/NavvyAlpha';
 import { 
   CodeBracketIcon,
   GlobeAltIcon,
@@ -16,8 +15,6 @@ import {
 const HomeHero = () => {
   return (
     <section className="">
-      <NavvyAlpha />
-
       
       <div className="flex flex-col max-w-7xl mb-8 z-10 mx-auto p-8 border-l-[4px] border-th-fgd-2 border-solid">
         <div className="z-20 flex flex-col sm:pt-[205px] pt-[105px]">
