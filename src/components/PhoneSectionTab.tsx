@@ -35,7 +35,7 @@ const featureThree = [
 function PhoneSectionTab() {
   return (
     <>
-    <div className="grid grid-cols-2 max-w-7xl mx-auto space-y-0 ">
+    <div className="grid grid-cols-2 max-w-7xl mx-auto space-y-0">
         <Tab.Group vertical>
             
             <div className="">
@@ -109,9 +109,9 @@ function PhoneSectionTab() {
             </div>
             <div className="">
             <Tab.Panels className={"text-white"}>
-            <div className="absolute z-0 transform -translate-x-72 -translate-y-[100px]">
-                            <MangoBlob />
-                        </div> 
+                 <div className="reletive z-0 transform -translate-x-72 -translate-y-[0px]">
+                   <MangoBlob />
+                 </div> 
                 <Tab.Panel>
                         <IphoneMockup src="/assets/images/iphone-1.jpg" />
                 </Tab.Panel>

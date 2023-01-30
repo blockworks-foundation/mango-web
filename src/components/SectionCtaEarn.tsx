@@ -62,7 +62,7 @@ const SectionCtaEarn = () => {
         </h2>
       </div>
 
-        <div className="z-10 mt-10 grid grid-cols-2 max-w-7xl mx-auto px-10">
+        <div className="z-10 mt-10 grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-7xl mx-auto px-4">
           <div className="group lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3 cursor-pointer  transition duration-150 ease-in-out px-5">
             <div className="h-[580px] p-5 z-10 bg-th-bkg-2 hover:bg-th-bkg-3 border-2 border-th-fgd-1 w-full shadow-md hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.2)] rounded-[28px] transition duration-150 ease-in-out flex flex-col items-center justify-items-center bg-mangocardpools bg-no-repeat bg-bottom bg-contain">
 
@@ -85,7 +85,7 @@ const SectionCtaEarn = () => {
             {featureThree.map((feature) => (   
                 <ul className="font-body text-th-fgd-4 mb-1" key={feature.bullet}>
 
-                    <li className="inline-flex my-3">
+                    <li className="inline-flex">
                         <div>
                         <NoSymbolIcon className=" w-6 h-6 text-mango-red mt-[2px] mr-2" />
                         </div>

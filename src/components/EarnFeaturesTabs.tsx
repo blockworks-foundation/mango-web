@@ -35,7 +35,7 @@ const featureThree = [
 function EarnFeaturesTabs() {
   return (
     <>
-    <div className="grid grid-cols-2 max-w-7xl mx-auto space-y-0 ">
+    <div className="grid grid-cols-2 max-w-7xl mx-auto space-y-0 overflow-hidden">
         <Tab.Group vertical>
             <div className="">
             <div className="h-[100px] w-[4px] bg-gradient-to-t from-th-fgd-2"></div>
@@ -107,8 +107,8 @@ function EarnFeaturesTabs() {
 
             </div>
             <div className="">
-            <Tab.Panels className={"text-white -mt-24"}>
-            <div className="absolute z-0 transform -translate-x-72 -translate-y-[100px]">
+            <Tab.Panels className={"text-white"}>
+            <div className="reletive z-0 transform -translate-x-72 -translate-y-[0px]">
                  <MangoBlob />
             </div> 
                     <Tab.Panel>
@@ -126,7 +126,7 @@ function EarnFeaturesTabs() {
         </div>          
     </Tab.Group>
     <div>    
-    <div className="-mt-[85px] h-[200px] w-[4px] ml-0 bg-gradient-to-b from-th-fgd-2"></div>
+    <div className="-mt-[181px] h-[200px] w-[4px] ml-0 bg-gradient-to-b from-th-fgd-2"></div>
     </div>
   </div>
 </>
