@@ -43,7 +43,7 @@ const SectionCta = () => {
         </div>
           <div className="z-10 mt-0 ">
             <Image
-            className="m-auto h-auto relative right-12"
+            className="mx-auto h-auto "
             src="/assets/images/mango_cpu.png"
             alt="Github"
             width={1000}

@@ -31,8 +31,8 @@ const CallToActionCard = () => {
               </radialGradient>
             </defs>
           </svg>
-          <div className="-mt-16 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-            <h2 className="text-6xl font-display font-bold tracking-tight leading-tight text-white sm:text-4xl">
+          <div className="-mt-10 sm:-mt-16 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+            <h2 className="text-3xl font-display font-bold tracking-tight leading-tight text-white sm:text-4xl">
               Decentralized software for the people.
             </h2>
             <p className="text-white/70 mt-2">

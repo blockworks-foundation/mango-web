@@ -16,7 +16,7 @@ const ButtonTwo: FunctionComponent<ButtonProps> = ({
 
 }) => {
   return (
-    <div className="group ">
+    <div className="group">
 
       <div className="flex justify-center">
         <button className=" transition-all duration-100 ease-in-out bg-th-fgd-2 rounded-xl">

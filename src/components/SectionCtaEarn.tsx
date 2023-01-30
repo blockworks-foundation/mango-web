@@ -1,5 +1,6 @@
 
 import GradientText from '@/components/GradientText';
+import { StopIcon } from '@heroicons/react/20/solid';
 //import ButtonTwo from '@/components/ButtonTwo';
 //import LinkieTwo from '@/components/LinkieTwo';
 // import MangoBlob from '@/components/MangoBlob';
@@ -58,7 +59,7 @@ const SectionCtaEarn = () => {
       <h2 className="text-center font-display sm:text-6xl text-2xl tracking-tight mb-6 text-th-fgd-5 leading-tight">
           Powered by a fruit.
           <br />
-          <GradientText>This is money with Mango.</GradientText>
+          <GradientText>This is defi with Mango.</GradientText>
         </h2>
       </div>
 
@@ -67,36 +68,47 @@ const SectionCtaEarn = () => {
             <div className="h-[580px] p-5 z-10 bg-th-bkg-2 hover:bg-th-bkg-3 border-2 border-th-fgd-1 w-full shadow-md hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.2)] rounded-[28px] transition duration-150 ease-in-out flex flex-col items-center justify-items-center bg-mangocardpools bg-no-repeat bg-bottom bg-contain">
 
                 <div className="w-full p-2"  >
-                <h1 className="font-display text-4xl text-mango-yellow text-left">
-                    Pool Rules
+                <h1 className="font-display text-4xl text-mango-yellow text-left tracking-tighter leading-tight">
+                    Take caution while swiming.
                 </h1>
                 <p className="font-body text-th-fgd-4 mb-3 text-xl">
-                    Decentralized lending carries risks, and it&apos;s important to carefully consider these risks before participating in these markets.
+                    Decentralized lending carries risks, and it&apos;s important to carefully consider these risks before participating in decentralized lending markets.
                 </p>
-                <p className="font-mono text-th-fgd-3 mb-5 text-sm">
-                    <span className="text-mango-orange font-bold">Disclaimer:</span> This list is intended to be humorous and not to be taken as professional financial advice.
-                </p>
+
             </div>
 
                 
             </div>
           </div>  
           <div className="group lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3 px-5">
+                <h1 className="inline-flex font-display text-3xl text-th-fgd-3 text-left mb-2">
+                    Pool Rules  
+                    <span>
+                      <NoSymbolIcon className=" w-8 h-8 text-mango-red mt-[8px] ml-2" />
+                     </span>                                  
+                </h1>
+
+                <div className="h-[2px] bg-gradient-to-r from-white/0 via-th-fgd-2 to-white/0 mb-2"></div>
+
             {featureThree.map((feature) => (   
                 <ul className="font-body text-th-fgd-4 mb-1" key={feature.bullet}>
 
                     <li className="inline-flex">
                         <div>
-                        <NoSymbolIcon className=" w-6 h-6 text-mango-red mt-[2px] mr-2" />
+                        <StopIcon className=" w-3 h-3 text-th-fgd-2 mt-[8px] mr-2" />
                         </div>
                         <div>
                         <span className="text-xl text-th-fgd-4">{feature.bullet}</span>
                         <span className="text-xl text-th-fgd-3">{feature.descript}</span>
                         </div>
                     </li>
-
                 </ul>
                 ))}
+                <div className="h-[2px] bg-gradient-to-r from-white/0 via-th-fgd-2 to-white/0 my-2"></div>
+
+                <p className="font-mono text-th-fgd-3 mt-5 text-sm">
+                    <span className="text-mango-orange font-bold">Disclaimer:</span> This list is intended to be humorous and not to be taken as professional financial advice.
+                </p>
         </div>
        </div>
 

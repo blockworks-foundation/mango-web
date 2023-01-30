@@ -35,7 +35,7 @@ const featureThree = [
 function EarnFeaturesTabs() {
   return (
     <>
-    <div className="grid grid-cols-2 max-w-7xl mx-auto space-y-0 overflow-hidden">
+    <div className="grid grid-cols-2 max-w-7xl mx-auto space-y-0">
         <Tab.Group vertical>
             <div className="">
             <div className="h-[100px] w-[4px] bg-gradient-to-t from-th-fgd-2"></div>

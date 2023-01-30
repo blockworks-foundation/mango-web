@@ -27,7 +27,7 @@ const EmailForm = () => {
   return (
     <> 
     <div className="px-4">
-            <div className="max-w-7xl mx-auto px-4 pt-12 pb-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto pt-12 pb-4 sm:px-6 lg:px-8">
               <h2 className="inline text-3xl text-th-fgd-4 font-display tracking-tight leading-tight font-bold sm:block sm:text-5xl">
                 Want product news and updates?{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green sm:block sm:text-5xl">
@@ -47,12 +47,12 @@ const EmailForm = () => {
                       type="email"
                       autoComplete="email"
                       required
-                      className="w-screen px-5 py-2 placeholder-gray-400 text-black text-opacity-80 sm:max-w-xs border-black/20 border-[3px] border- rounded-xl focus:outline-mango-yellow hover:border-mango-yellow transition duration 150 ease-in-out"
+                      className="w-full px-5 py-2 placeholder-gray-400 text-black text-opacity-80 sm:max-w-xs border-black/20 border-[3px] border- rounded-xl focus:outline-mango-yellow hover:border-mango-yellow transition duration 150 ease-in-out"
                       placeholder="Drop us your email..."
                       value={email}
                       onChange={handleChange}
                     />
-                    <div className="mt-[1px] sm:ml-3 sm:flex-shrink-0">
+                    <div className="mt-1 -ml-1 sm:ml-3 sm:flex-shrink-0">
                       <ButtonTwo>
                        Sign me up!
                       </ButtonTwo>
