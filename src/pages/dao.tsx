@@ -2,6 +2,7 @@ import Footer from '@/components/Footer';
 import DaoHero from '@/components/DaoHero';
 import DaoFeatureGrid from '@/components/DaoFeatureGrid';
 import CallToActionCard from '@/components/CallToActionCard';
+import SectionCtaDao from '@/components/SectionCtaDao';
 
 const Dao = () => {
   return (
@@ -10,6 +11,7 @@ const Dao = () => {
     >
          <DaoHero />
          <DaoFeatureGrid />
+         <SectionCtaDao />
          <CallToActionCard />
          <Footer />
 
