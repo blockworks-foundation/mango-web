@@ -1,11 +1,24 @@
-import { Popover, Transition } from '@headlessui/react'
-import { ClipboardDocumentIcon, NewspaperIcon, PaintBrushIcon } from '@heroicons/react/20/solid'
-import { Fragment } from 'react'
-import Logo from './Logo'
+import React, { useState } from 'react';
+import { Popover, Transition } from '@headlessui/react';
+import { ClipboardDocumentIcon, NewspaperIcon, PaintBrushIcon } from '@heroicons/react/20/solid';
+import { Fragment } from 'react';
+import Logo from './Logo';
 
 
 
 const StyleGuideDrop = () => {
+  const [isRightClicked, setIsRightClicked] = useState(false);
+  //const [isLeftClicked, setIsLeftClicked] = useState(false);
+
+  const handleRightClick = (event: any) => {
+    event.preventDefault();
+    setIsRightClicked(!isRightClicked);
+  };
+
+  const handleLeftClick = () => {
+    window.location.href = '/';
+  };
+
   return (
     <Popover>
       {({ open }) => (
@@ -14,7 +27,10 @@ const StyleGuideDrop = () => {
 
           <Popover.Button
             className={`group flex z-30 overflow-hidden p-3 transform -translate-y-3`}
+            onContextMenu={handleRightClick}
+            onClick={handleLeftClick}
           >
+           
             <Logo /> 
           </Popover.Button>
 
@@ -22,7 +38,7 @@ const StyleGuideDrop = () => {
           </div>
           <Transition
             appear={true}
-            show={open}
+            show={open || isRightClicked}
             as={Fragment}
             enter="transition ease-in-out duration-150"
             enterFrom="-translate-y-3"
@@ -30,7 +46,7 @@ const StyleGuideDrop = () => {
             leave="transition ease-out duration-150"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-          >
+            >
             <Popover.Panel
               className={`absolute left-0 top-[70px] z-20 max-h-screen w-[240px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 px-2 py-3 pb-0`}
             >
