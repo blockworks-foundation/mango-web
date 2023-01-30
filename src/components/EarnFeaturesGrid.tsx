@@ -5,30 +5,30 @@ import GridItemPaint from "@/components/cards/GridItemPaint";
 
 const gridItemOne: any = [
     {
-      name: "Easy as analog.",
+      name: "Accessibility, not gatekeeping.",
       description:
-        "A simple, intuititive, performance interface for trading decentralized open markets.",
+        "Access to financial services to anyone with an internet connection, regardless of location or credit history.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Open, transparent, permissionless.",
+      name: "Open, transparent, & permissionless.",
       description:
-        "Access margined spot markets and the ability to trade with up to 20x leverage in permissionless derivitives markets, all on-chain.",
+        "All transactions and lending agreements are transparent and recorded on a public ledger, ensuring accountability and reducing the risk of disputes.",
     },
   ]; 
   const gridItemThree: any = [
     {
-      name: "All cool in the lending pool.",
+      name: "Lending for the people.",
       description:
-        "Open accounts earn variable yield from pooled capital. Earn simply from participating in decentralized lending markets.",
+        "Decentralized money markets can offer lower fees compared to traditional lending systems as there are no intermediaries involved.",
     },
   ]; 
   const gridItemFour: any = [
     {
-      name: "Paint your own positions.",
+      name: "All cool in the lending pool.",
       description:
-        "Mango turns your capital into tools for art. Cross-collateral means fungability for your digital money.",
+        "Open accounts earn variable yield from pooled capital. Earn simply from participating in decentralized lending markets.",
     },
   ]; 
 
@@ -55,12 +55,11 @@ function EarnFeaturesGrid() {
           description={gridItemFour[0].description}
         />              
         </div>
-        
-      </div>
+        </div>
       <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2"></div>
-      <div className="h-1/2 w-[4px] bg-gradient-to-b from-th-fgd-2"></div>
+      <div className="h-[150px] w-[4px] bg-gradient-to-b from-th-fgd-2"></div>
+
     </section>
-    
 </>
   );
 }

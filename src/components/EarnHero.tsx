@@ -19,24 +19,24 @@ const EarnHero = () => {
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
         <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-        Permissionless money markets.<br /> <GradientText>Earn, manage, borrow<br />all from one hub.</GradientText>
+        Permissionless money markets.<br /> <GradientText>Earn, borrow, and manage.<br />No middleman.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
         <ul className="flex space-y-3 flex-col z-20 font-body text-md sm:text-xl mb-3 text-left">
         <li className="group inline-flex text-th-fgd-4">
             <AdjustmentsVerticalIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
-            Full control over your digital coin. No middleman, just you and the contract.
+            Full control over your digital coin. Just you and the blockchain.
           </li>
 
           <li className="group inline-flex text-th-fgd-4">
             <ReceiptPercentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
-            Earn transparent yeild form auto-lending.
+            Earn transparent yeild form automatic-lending.
           </li>
           
           <li className="group inline-flex text-th-fgd-4">
             <BanknotesIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
-            Borrow on your capital. 
+            Borrow on your capital. Your value has value. 
           </li>
         </ul>
         

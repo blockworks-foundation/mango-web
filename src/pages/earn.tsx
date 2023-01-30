@@ -3,6 +3,7 @@ import EarnHero from '@/components/EarnHero';
 import NavvyAlpha from '@/components/NavvyAlpha';
 import EarnFeaturesGrid from '@/components/EarnFeaturesGrid';
 import CallToActionCard from '@/components/CallToActionCard';
+import SectionCta from '@/components/SectionCta';
 
 const Earn = () => {
   return (
@@ -12,6 +13,7 @@ const Earn = () => {
       <NavvyAlpha />
          <EarnHero />
          <EarnFeaturesGrid />
+         <SectionCta />
          <CallToActionCard />
       <Footer />
 
