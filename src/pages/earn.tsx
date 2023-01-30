@@ -4,6 +4,7 @@ import NavvyAlpha from '@/components/NavvyAlpha';
 import EarnFeaturesGrid from '@/components/EarnFeaturesGrid';
 import CallToActionCard from '@/components/CallToActionCard';
 import SectionCtaEarn from '@/components/SectionCtaEarn';
+import EarnFeaturesTabs from '@/components/EarnFeaturesTabs';
 
 const Earn = () => {
   return (
@@ -14,6 +15,7 @@ const Earn = () => {
          <EarnHero />
          <EarnFeaturesGrid />
          <SectionCtaEarn />
+         <EarnFeaturesTabs />
          <CallToActionCard />
       <Footer />
 

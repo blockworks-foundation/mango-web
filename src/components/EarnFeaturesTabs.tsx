@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react'
 import MangoBlob from '@/components/MangoBlob'
-import IphoneMockup from '@/components/mockups/IphoneMockup'
+import BrowserMockup from '@/components/mockups/BrowserMockup'
 
 import { 
     CubeIcon,
@@ -32,16 +32,15 @@ const featureThree = [
   },
 ]
 
-function PhoneSectionTab() {
+function EarnFeaturesTabs() {
   return (
     <>
     <div className="grid grid-cols-2 max-w-7xl mx-auto space-y-0 ">
         <Tab.Group vertical>
-            
             <div className="">
+            <div className="h-[100px] w-[4px] bg-gradient-to-t from-th-fgd-2"></div>
 
             <Tab.List className={"text-th-fgd-5 flex flex-col max-w-7xl m-auto border-l-4 border-th-fgd-2 border-opacity-5 "}>
-                
                 <Tab className="group -ml-1 hover:bg-th-bkg-1 hover:border-l-4 border-th-bkg-3 focus:bg-opacity-0 p-10 hover:px-9 focus:px-9 align-top focus:border-l-4 focus:border-mango-red focus:border-opacity-100 focus:bg-th-bkg-2">
                     <dl>
                     {featureOne.map((feature) => (
@@ -108,30 +107,30 @@ function PhoneSectionTab() {
 
             </div>
             <div className="">
-            <Tab.Panels className={"text-white"}>
+            <Tab.Panels className={"text-white -mt-24"}>
             <div className="absolute z-0 transform -translate-x-72 -translate-y-[100px]">
-                            <MangoBlob />
-                        </div> 
-                <Tab.Panel>
-                        <IphoneMockup src="/assets/images/iphone-1.jpg" />
-                </Tab.Panel>
-                <Tab.Panel>
-                         <IphoneMockup src="/assets/images/iphone-2.jpg" />
+                 <MangoBlob />
+            </div> 
+                    <Tab.Panel>
+                        <BrowserMockup src="/assets/images/feature_screen_one.png" />
+                     </Tab.Panel>
+                     <Tab.Panel>
+                        <BrowserMockup src="/assets/images/feature_screen_two.png" />
+                    </Tab.Panel>
+                     <Tab.Panel>
+                        <BrowserMockup src="/assets/images/feature_screen_three.png" />
+                    </Tab.Panel>
 
-                </Tab.Panel>
-                <Tab.Panel>
-                        <IphoneMockup src="/assets/images/iphone-3.jpg" />
-                </Tab.Panel>
             </Tab.Panels>
 
         </div>          
     </Tab.Group>
     <div>    
-    <div className=" h-[200px] w-[4px] ml-0 bg-gradient-to-b from-th-fgd-2"></div>
+    <div className="-mt-[85px] h-[200px] w-[4px] ml-0 bg-gradient-to-b from-th-fgd-2"></div>
     </div>
   </div>
 </>
   )
 }
 
-export default PhoneSectionTab;
+export default EarnFeaturesTabs;
