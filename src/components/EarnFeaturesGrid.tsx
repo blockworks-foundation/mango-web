@@ -1,6 +1,5 @@
 import GridItemDisputes from "@/components/cards/GridItemDisputes";
-import GridItemLending from "@/components/cards/GridItemLending";
-import GridItemPaint from "@/components/cards/GridItemPaint";
+import GridItemLendingSm from "@/components/cards/GridItemLendingSm";
 import GridItemGlobe from "./cards/GridItemGlobe";
 
 const gridItemOne: any = [
@@ -21,14 +20,7 @@ const gridItemOne: any = [
     {
       name: "Lending for anyone.",
       description:
-        "Decentralized money markets can offer lower fees compared to traditional lending systems as there are no intermediaries involved.",
-    },
-  ]; 
-  const gridItemFour: any = [
-    {
-      name: "All cool in the lending pool.",
-      description:
-        "Open accounts earn variable yield from pooled capital. Earn simply from participating in decentralized lending markets.",
+        "Decentralized money markets can offer lower fees and higher yield compared to traditional lending systems as there are no intermediaries involved.Open accounts earn variable yield from pooled capital.",
     },
   ]; 
 
@@ -46,13 +38,9 @@ function EarnFeaturesGrid() {
           name={gridItemTwo[0].name}
           description={gridItemTwo[0].description}
         />  
-        <GridItemLending
+        <GridItemLendingSm
           name={gridItemThree[0].name}
           description={gridItemThree[0].description}
-        />  
-        <GridItemPaint
-          name={gridItemFour[0].name}
-          description={gridItemFour[0].description}
         />              
         </div>
         </div>
