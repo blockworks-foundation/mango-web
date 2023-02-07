@@ -3,10 +3,10 @@ import React from 'react';
   //ScaleIcon
 //  } from '@heroicons/react/20/solid';
 
-function GridItemLending(props: any) {
+function GridItemDisputes(props: any) {
   return (
     <div className="group lg:col-span-2 md:col-span-3 sm:col-span-3 xs:col-span-3 cursor-pointer  transition duration-150 ease-in-out">
-      <div className="z-10 bg-th-bkg-2 hover:bg-th-bkg-3 border-2 border-th-fgd-1 h-[380px] w-full shadow-md hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.2)] rounded-[28px] sm:bg-mangocardlend bg-mangocardlendsm bg-contain sm:bg-right bg-bottom bg-no-repeat transition duration-150 ease-in-out">
+      <div className="z-10 bg-th-bkg-2 hover:bg-th-bkg-3 border-2 border-th-fgd-1 h-[380px] w-full shadow-md hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.2)] rounded-[28px] sm:bg-mangocarddisputes bg-mangocardlendsm bg-contain sm:bg-right bg-bottom bg-no-repeat transition duration-150 ease-in-out">
         <div className="py-4 px-8 mt-3">
           <div className="flex flex-col mb-8">
             <dl className="text-left sm:w-1/2">
@@ -30,4 +30,4 @@ function GridItemLending(props: any) {
   );
 }
 
-export default GridItemLending;
+export default GridItemDisputes;

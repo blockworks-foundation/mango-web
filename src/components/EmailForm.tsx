@@ -62,7 +62,7 @@ const EmailForm = () => {
               </form>
               <div className="w-full mt-4">
                 <p className="text-xl font-body text-th-fgd-3 text-opacity-50">
-                  We don&apos;t spam email, sell or use your data for anything other than product updates. 
+                  We don&apos;t spam email, sell or use your data for anything. 
                 </p>
               </div>
             </div>

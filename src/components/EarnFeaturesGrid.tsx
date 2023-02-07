@@ -1,13 +1,13 @@
-import GridItemLever from "@/components/cards/GridItemLever";
-import GridItemMarkets from "@/components/cards/GridItemMarkets";
+import GridItemDisputes from "@/components/cards/GridItemDisputes";
 import GridItemLending from "@/components/cards/GridItemLending";
 import GridItemPaint from "@/components/cards/GridItemPaint";
+import GridItemGlobe from "./cards/GridItemGlobe";
 
 const gridItemOne: any = [
     {
       name: "Accessibility, not gatekeeping.",
       description:
-        "Access to financial services to anyone with an internet connection, regardless of location or credit history.",
+        "Access to permissionless financial services should be for anyone with an internet connection, regardless of location or credit history.",
     },
   ]; 
   const gridItemTwo: any = [
@@ -38,11 +38,11 @@ function EarnFeaturesGrid() {
     <section className="max-w-7xl mx-auto z-30">
       <div className="px-8 pb-4 border-l-[4px] border-th-fgd-2 border-solid -mt-[32px]">
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
-        <GridItemLever
+        <GridItemGlobe
           name={gridItemOne[0].name}
           description={gridItemOne[0].description}
         />  
-        <GridItemMarkets
+        <GridItemDisputes
           name={gridItemTwo[0].name}
           description={gridItemTwo[0].description}
         />  
