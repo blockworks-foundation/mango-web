@@ -31,12 +31,12 @@ const EarnHero = () => {
 
           <li className="group inline-flex text-th-fgd-4">
             <ReceiptPercentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
-            Earn transparent yeild form automatic-lending.
+            Earn variable yeild from automatic-lending built into accounts on mango.
           </li>
           
           <li className="group inline-flex text-th-fgd-4">
             <BanknotesIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
-            Borrow on your capital. Your value has value. 
+            Borrow on your capital. Your value has utility. 
           </li>
         </ul>
         
