@@ -38,7 +38,7 @@ const PhoneHero = () => {
               </li>
               <li className="group inline-flex text-th-fgd-4">
                 <PhoneIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
-                Pay with your number, forget wallet addresses.
+                Pay with your contacts, forget wallet addresses.
               </li>
         </ul>
 
