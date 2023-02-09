@@ -1,17 +1,17 @@
-import GridItemDisputes from "@/components/cards/GridItemDisputes";
 import GridItemLendingSm from "@/components/cards/GridItemLendingSm";
-import GridItemGlobe from "./cards/GridItemGlobe";
+import GridItemCompose from "./cards/GridItemCompose";
+import GridItemTransparent from "./cards/GridItemTransparent";
 
 const gridItemOne: any = [
     {
-      name: "Accessibility, not gatekeeping.",
+      name: "No gatekeeping here.",
       description:
-        "Access to permissionless financial services should be for anyone with an internet connection, regardless of location or credit history.",
+        "Access to permissionless financial services online should be for anyone with an internet connection, regardless of location or credit history.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Open, transparent, & permissionless.",
+      name: "Open & transparent.",
       description:
         "All transactions and lending agreements are transparent and recorded on a public ledger, ensuring accountability and reducing the risk of disputes.",
     },
@@ -20,7 +20,7 @@ const gridItemOne: any = [
     {
       name: "Lending for anyone.",
       description:
-        "Decentralized money markets can offer lower fees and higher yield compared to traditional lending systems as there are no intermediaries involved.Open accounts earn variable yield from pooled capital.",
+        "Decentralized lending markets have the potential to offer higher yield compared to traditional lending systems. Accounts on Mango automatically earn variable yield.",
     },
   ]; 
 
@@ -30,11 +30,11 @@ function EarnFeaturesGrid() {
     <section className="max-w-7xl mx-auto z-30">
       <div className="px-8 pb-4 border-l-[4px] border-th-fgd-2 border-solid -mt-[32px]">
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
-        <GridItemGlobe
+        <GridItemCompose
           name={gridItemOne[0].name}
           description={gridItemOne[0].description}
         />  
-        <GridItemDisputes
+        <GridItemTransparent
           name={gridItemTwo[0].name}
           description={gridItemTwo[0].description}
         />  
