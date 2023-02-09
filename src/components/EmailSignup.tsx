@@ -4,7 +4,7 @@ import ButtonTwo from '@/components/ButtonTwo'
 //  e.stopPropagation()
 //}
 
-const EmailForm = () => {
+const EmailSignup = () => {
   const [done, setDone] = useState(false)
   const [email, setEmail] = useState('')
 
@@ -71,7 +71,7 @@ const EmailForm = () => {
   )
 }
 
-export default EmailForm;
+export default EmailSignup;
     
          
          
