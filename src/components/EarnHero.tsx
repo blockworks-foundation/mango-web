@@ -19,7 +19,7 @@ const EarnHero = () => {
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
         <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-        Permissionless money markets.<br /> <GradientText>Earn, borrow, and manage.<br />No middleman.</GradientText>
+        Permissionless money markets.<br /> <GradientText>Lend, borrow, and earn.<br />No middleman.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
