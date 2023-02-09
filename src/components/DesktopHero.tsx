@@ -31,12 +31,12 @@ const DesktopHero = () => {
 
           <li className="group inline-flex text-th-fgd-4">
             <TableCellsIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
-            Easily swap, or place trades on both spot and derivitives markets.
+            Access to margin and leverage for spot and derivitives markets.
           </li>
           
           <li className="group inline-flex text-th-fgd-4">
             <ReceiptPercentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
-            Auto-lending earns you transparent yield from pooled capital. 
+           Automatically earn variable yield from auto-lending account.
           </li>
         </ul>
         
