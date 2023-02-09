@@ -18,9 +18,9 @@ const gridItemOne: any = [
   ]; 
   const gridItemThree: any = [
     {
-      name: "Lending for anyone.",
+      name: "Decentralized yield generator.",
       description:
-        "Decentralized lending markets have the potential to offer higher yield compared to traditional lending systems. Accounts on Mango automatically earn variable yield.",
+        "Decentralized lending markets have the potential to offer higher yield compared to traditional lending systems by removing the friction of a middleman. ",
     },
   ]; 
 
