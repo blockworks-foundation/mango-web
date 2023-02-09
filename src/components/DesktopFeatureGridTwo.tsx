@@ -21,14 +21,14 @@ const gridItemOne: any = [
     {
       name: "All cool in the lending pool.",
       description:
-        "Open accounts earn variable yield from pooled capital. Earn simply from participating in decentralized lending markets.",
+        "Open accounts earn variable yield from desposited funds. Earn yield simply from holding capital in decentralized lending markets.",
     },
   ]; 
   const gridItemFour: any = [
     {
       name: "Paint your own positions.",
       description:
-        "Mango turns your capital into tools for art. Cross-collateral means fungability for your digital money.",
+        "Markets turns your capital into tools for art. Cross-collateralized assets mean fungability for your digital money.",
     },
   ]; 
 
