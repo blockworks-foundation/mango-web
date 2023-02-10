@@ -55,7 +55,7 @@ const BrandHero = () => {
                         Logomark
                   </h1>
                   <ul className="inline-flex space-x-5">
-                        <li className="bg-th-bkg-1 py-10 px-10 rounded-3xl">
+                        <li className="bg-th-bkg-1 py-10 px-11 rounded-3xl">
                         <Image
                               src="/assets/images/mango-logomark.svg"
                               alt="Github"
@@ -64,7 +64,7 @@ const BrandHero = () => {
                               loading="lazy"
                         />
                         </li>
-                        <li className="saturate-150 bg-gradient-to-br from-mango-red via-mango-orange to-mango-green py-10 px-10 rounded-3xl">
+                        <li className="saturate-150 bg-gradient-to-br from-mango-red via-mango-orange to-mango-green py-10 px-11 rounded-3xl">
                         <Image
                               src="/assets/images/white-logomark.svg"
                               alt="Github"
@@ -73,7 +73,7 @@ const BrandHero = () => {
                               loading="lazy"
                         />
                         </li>
-                        <li className="bg-mango-purple  py-10 px-10 rounded-3xl">
+                        <li className="bg-mango-purple  py-10 px-11 rounded-3xl">
                         <Image
                               src="/assets/images/white-logomark.svg"
                               alt="Github"
@@ -82,7 +82,7 @@ const BrandHero = () => {
                               loading="lazy"
                         />
                         </li>
-                        <li className="bg-th-fgd-5 border-2 border-th-bkg-3 py-10 px-10 rounded-3xl">
+                        <li className="bg-th-fgd-5 border-2 border-th-bkg-3 py-10 px-11 rounded-3xl">
                         <Image
                               src="/assets/images/dark-logomark.svg"
                               alt="Github"

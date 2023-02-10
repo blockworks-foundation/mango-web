@@ -4,21 +4,21 @@ import GridItemTransparent from "./cards/GridItemTransparent";
 
 const gridItemOne: any = [
     {
-      name: "No gatekeeping here.",
+      name: "Financial Inclusion.",
       description:
         "Access to permissionless financial services online should be for anyone with an internet connection, regardless of location or credit history.",
     },
   ]; 
   const gridItemTwo: any = [
     {
-      name: "Open & transparent.",
+      name: "Open & Transparent.",
       description:
         "All transactions and lending agreements are transparent and recorded on a public ledger, ensuring accountability and reducing the risk of disputes.",
     },
   ]; 
   const gridItemThree: any = [
     {
-      name: "Decentralized yield generator.",
+      name: "Peer-to-Peer Finance.",
       description:
         "Decentralized lending markets have the potential to offer higher yield compared to traditional lending systems by removing the friction of a middleman. ",
     },
