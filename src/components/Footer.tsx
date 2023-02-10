@@ -115,9 +115,9 @@ const Footer = () => {
                         <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="/redacted"
+                            href="/earn"
                           >
-                            Redacted
+                            Earn
                             <span
                                   className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
                                   aria-hidden="true"
@@ -129,9 +129,9 @@ const Footer = () => {
                         <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
-                            href="/earn"
+                            href="/pay"
                           >
-                            Earn
+                            Pay
                             <span
                                   className="text-th-fgd-5 opacity-0 transition duration-100 ease-in group-hover:opacity-50 ml-2"
                                   aria-hidden="true"

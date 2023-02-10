@@ -29,6 +29,14 @@ function EarnFeaturesGrid() {
   <>
     <section className="max-w-7xl mx-auto z-30">
       <div className="px-8 pb-4 border-l-[4px] border-th-fgd-2 border-solid -mt-[32px]">
+      <div className="max-w-2xl pt-40 pb-20">
+                  <h1 className="text-th-fgd-4 font-display tracking-tighter text-3xl mb-2 ">
+                    Transparently generated passive yield.
+                  </h1>
+                  <p className="font-body text-th-fgd-3 text-xl ">
+                      Mango Earn turns you into the banker. Lend your capital in decentralized peer-to-peer open markets or borrow on your collateral and utilize your assets as you see fit.
+                      </p>
+            </div>
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
         <GridItemCompose
           name={gridItemOne[0].name}

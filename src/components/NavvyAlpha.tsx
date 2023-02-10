@@ -40,9 +40,9 @@ const exlpore = [
     icon: BanknotesIcon,
   },
   {
-    name: 'Redacted',
+    name: 'Pay',
     description: 'Move money globally without borders. Pay, send, swap, receive, and earn all from your device.',
-    href: '/redacted',
+    href: '/pay',
     icon: DevicePhoneMobileIcon,
   },
 ]
