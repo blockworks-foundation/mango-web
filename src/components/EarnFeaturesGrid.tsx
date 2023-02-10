@@ -4,7 +4,7 @@ import GridItemTransparent from "./cards/GridItemTransparent";
 
 const gridItemOne: any = [
     {
-      name: "Financial Inclusion.",
+      name: "Financial Inclusion for all.",
       description:
         "Access to permissionless financial services online should be for anyone with an internet connection, regardless of location or credit history.",
     },
