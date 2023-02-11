@@ -41,7 +41,7 @@ function DaoFeaturesGrid() {
                   <br /><br />
                     Decentralized applications at their core embody the potential of fair distribution of a centralized structures. They enable new opportunities and ways of thinking about our reality and the way we run current and future systems.
                   <br /><br />
-                    <span className="text-th-fgd-4">Over the last 10+ years we have seen this decentralized future unfolding, slowly but surely and feel that this trend will continue.</span>
+                    <span className="text-th-fgd-4">Over the last 10+ years we have seen this decentralized future unfolding slowly but surely, and feel that this trend will continue.</span>
                   </p>
             </div>     
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
