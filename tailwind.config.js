@@ -41,6 +41,8 @@ module.exports = {
         'mangocardpools': "url('/assets/images/card-pools.png')",
         'mangocardcomposability': "url('/assets/images/card-composability.png')",
         'mangocardtransparent': "url('/assets/images/card-transparent.png')",
+        'mangocardgov': "url('/assets/images/card-gov.png')",
+        'mangocardstress': "url('/assets/images/card-stress.png')",
 
 
       }),

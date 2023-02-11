@@ -13,7 +13,7 @@ const gridItemOne: any = [
     {
       name: "Put your coin to work.",
       description:
-        "Auto-lending from your earn account enables you to take advantage of decentralized money markets.",
+       "Auto-lending within your Mango account enables you to passively take advantage of decentralized lending markets.",
     },
   ]; 
   const gridItemThree: any = [
