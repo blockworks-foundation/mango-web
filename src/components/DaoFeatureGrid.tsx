@@ -1,5 +1,5 @@
-import GridItemLever from "@/components/cards/GridItemLever";
 import GridItemGov from "./cards/GridItemGov";
+import GridItemProducts from "./cards/GridItemProducts";
 import GridItemStress from "./cards/GridItemStress";
 
 
@@ -19,9 +19,9 @@ const gridItemOne: any = [
   ]; 
   const gridItemThree: any = [
     {
-      name: "Building with the ecosystem.",
+      name: "Here for the long-haul.",
       description:
-        "All code is verifiable, you don't need to trust us. You can trust the systems underneath. ",
+        "30+ Contributors dedicated to Mango, building open-source tooling, infratructure, and creating accessable financial products for people. ",
     },
   ]; 
 
@@ -34,7 +34,7 @@ function DaoFeaturesGrid() {
       <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
       <div className="py-10 max-w-xl">
                   <h1 className="text-th-fgd-4 font-display tracking-tighter text-xl mb-2 ">
-                  <span className="text-th-fgd-3">Contributor thesis:</span>  A decentralized future that is in control of the people, not the powers that be.
+                  <span className="text-mango-yellow">Contributor thesis:</span>  A decentralized future that is in control of the people is better for us all.
                   </h1>
                   <p className="font-body text-th-fgd-3 text-md ">
                     The open-source, decentralized application space has the potential to become a truly driving force in giving power back to people, open-source decentralied products are going to be pivotal in the shift to that future. 
@@ -54,7 +54,7 @@ function DaoFeaturesGrid() {
           name={gridItemTwo[0].name}
           description={gridItemTwo[0].description}
         />  
-        <GridItemLever
+        <GridItemProducts
           name={gridItemThree[0].name}
           description={gridItemThree[0].description}
         />               
