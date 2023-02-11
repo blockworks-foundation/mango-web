@@ -19,24 +19,24 @@ const DaoHero = () => {
     <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
     <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-        <GradientText>Building open finance <br />for the internet <br />generation.</GradientText>
+        <GradientText>Distributed community driven<br />development governed<br />by people.</GradientText>
         </h2>
     <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
     <ul className="flex space-y-3 flex-col z-20 font-body text-md sm:text-xl mb-3 text-left">
     <li className="group inline-flex text-th-fgd-4">
         <CubeTransparentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
-        All on-chain from the beginning.
+        Transparent, all on-chain from the beginning.
       </li>
 
       <li className="group inline-flex text-th-fgd-4">
         <CodeBracketIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
-        Open-source, and fully verifiable.
+        Open-source, audited, and fully verifiable.
       </li>
       
       <li className="group inline-flex text-th-fgd-4">
         <GlobeAsiaAustraliaIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
-        Globally distributed contributors.
+        Globally distributed contributor ecosystem.
       </li>
     </ul>
     
@@ -58,11 +58,11 @@ const DaoHero = () => {
     <div className="z-0 transform -translate-y-[500px] translate-x-[600px]">
       <MangoBlob />
     </div>
-    <div className="z-0 hidden sm:block reletive transform -translate-y-[500px] translate-x-[450px] h-0">
+    <div className="z-0 hidden sm:block reletive transform -translate-y-[400px] translate-x-[450px] h-0">
       <Image
         src="/assets/images/ApeToMan.svg"
         alt="Github"
-        width={1000}
+        width={900}
         height={300}
         loading="lazy"
       />       

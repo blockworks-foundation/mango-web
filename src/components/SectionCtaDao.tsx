@@ -54,12 +54,12 @@ const featureThree = [
 const SectionCtaDao = () => {
   return (
     <>
-     <div className="pb-40">
+     <div className="py-40">
       <div className="z-10 max-w-7xl mx-auto px-10">
       <h2 className="text-center font-display sm:text-6xl text-2xl tracking-tight mb-6 text-th-fgd-5 leading-tight">
-          Powered by a fruit.
+          Driven by a belief.
           <br />
-          <GradientText>This is defi with Mango.</GradientText>
+          <GradientText>This is our Manifesto.</GradientText>
         </h2>
       </div>
 
