@@ -24,6 +24,11 @@ const PhoneSectionOne = () => {
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
           <ul className="flex space-y-3 flex-col z-20 font-body text-xl mb-3 text-left text-th-fgd-4">
+
+          <li className="group inline-flex text-th-fgd-4">
+                <PhoneIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
+                Pay with your number, forget wallet addresses.
+              </li>
             <li className="group inline-flex text-th-fgd-4">
                 <KeyIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
                   Your keys, your money, you&apos;re in control.
@@ -32,10 +37,7 @@ const PhoneSectionOne = () => {
                 <CurrencyDollarIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
                 Fiat to crypto, crypto to fiat.
               </li>
-              <li className="group inline-flex text-th-fgd-4">
-                <PhoneIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
-                Pay with your number, forget wallet addresses.
-              </li>
+
           </ul>
         <div className="group">
         <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>

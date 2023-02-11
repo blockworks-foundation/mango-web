@@ -38,10 +38,6 @@ function EarnFeaturesGrid() {
                       </p>
             </div>
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
-        <GridItemCompose
-          name={gridItemOne[0].name}
-          description={gridItemOne[0].description}
-        />  
         <GridItemTransparent
           name={gridItemTwo[0].name}
           description={gridItemTwo[0].description}
@@ -49,7 +45,11 @@ function EarnFeaturesGrid() {
         <GridItemLendingSm
           name={gridItemThree[0].name}
           description={gridItemThree[0].description}
-        />              
+        />   
+        <GridItemCompose
+          name={gridItemOne[0].name}
+          description={gridItemOne[0].description}
+        />                     
         </div>
         </div>
       <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2"></div>
