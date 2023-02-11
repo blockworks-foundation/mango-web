@@ -19,7 +19,7 @@ const DaoHero = () => {
     <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-3"></div>
 
     <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
-        <GradientText>Distributed community driven<br />development governed<br />by people.</GradientText>
+        A distributed community. <br /><GradientText>Design &amp; development<br />governed by people.</GradientText>
         </h2>
     <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
