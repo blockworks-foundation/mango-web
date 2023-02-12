@@ -2,7 +2,6 @@ import Footer from '@/components/Footer';
 import EarnHero from '@/components/EarnHero';
 import EarnFeaturesGrid from '@/components/EarnFeaturesGrid';
 import CallToActionCard from '@/components/CallToActionCard';
-import EarnFeaturesTabs from '@/components/EarnFeaturesTabs';
 import SectionCtaEarn from '@/components/SectionCtaEarn';
 
 const Earn = () => {
@@ -13,7 +12,6 @@ const Earn = () => {
          <EarnHero />
          <EarnFeaturesGrid />
          <SectionCtaEarn />
-         <EarnFeaturesTabs />
          <CallToActionCard />
          <Footer />
 

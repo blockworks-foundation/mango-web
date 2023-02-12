@@ -1,5 +1,5 @@
 import React from 'react';
-import MangoAbstract from '../MangoAbstract';
+// import MangoAbstract from '../MangoAbstract';
 import {motion} from 'framer-motion';
 import Image from 'next/image';
 
@@ -90,12 +90,13 @@ function BrowserMockupAbstract() {
             </div>
 
             <div className=" overflow-hidden rounded-b-2xl backdrop-blur-xl border border-1 border-solid border-th-fgd-1">
+                {/* 
                 <div className="absolute">
                    <MangoAbstract />
-
                 </div>
+                */}
                 <Image
-                    src="/assets/images/browser-abstract.svg"
+                    src="/assets/images/UI_Accounts.svg"
                     alt="Github"
                     width={1100}
                     height={300}

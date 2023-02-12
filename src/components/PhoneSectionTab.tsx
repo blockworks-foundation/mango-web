@@ -113,14 +113,14 @@ function PhoneSectionTab() {
                    <MangoBlob />
                  </div> 
                 <Tab.Panel>
-                        <IphoneMockup src="/assets/images/iphone-1.jpg" />
+                        <IphoneMockup src="/assets/images/ui_mobil_01.svg" />
                 </Tab.Panel>
                 <Tab.Panel>
-                         <IphoneMockup src="/assets/images/iphone-2.jpg" />
+                         <IphoneMockup src="/assets/images/ui_mobil_02.svg" />
 
                 </Tab.Panel>
                 <Tab.Panel>
-                        <IphoneMockup src="/assets/images/iphone-3.jpg" />
+                        <IphoneMockup src="/assets/images/ui_mobil_03.svg" />
                 </Tab.Panel>
             </Tab.Panels>
 

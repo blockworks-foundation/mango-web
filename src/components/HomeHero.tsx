@@ -70,7 +70,7 @@ const HomeHero = () => {
           <BrowserMockupAbstract />        
         </div>
         <div className="z-10 sm:block hidden reletive transform -translate-y-[1100px] translate-x-[125px] -rotate-[3deg]">
-            <IphoneAbstract src="/assets/images/iphone-1.jpg" />         
+            <IphoneAbstract src="/assets/images/ui_mobil_01.svg" />         
         </div>
       </div>
     </div>
