@@ -39,7 +39,7 @@ function DaoFeaturesGrid() {
                   <p className="font-body text-th-fgd-3 text-md ">
                     The open-source, decentralized application space has the potential to become a truly driving force in giving power back to people, open-source decentralied products are going to be pivotal in the shift to that future. 
                   <br /><br />
-                    Decentralized applications at their core embody the potential of fair distribution of a centralized structures. They enable new opportunities and ways of thinking about our reality and the way we run current and future systems.
+                    Decentralized applications at their core embody the potential of fair distribution of traditional centralized institutions. They enable new opportunities and ways of thinking about our reality and the way we run current and future systems.
                   <br /><br />
                     <span className="text-th-fgd-4">Over the last 10+ years we have seen this decentralized future unfolding slowly but surely, and feel that this trend will continue.</span>
                   </p>
