@@ -28,6 +28,10 @@ const PhoneHero = () => {
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
         <ul className="flex space-y-3 flex-col z-20 font-body text-md sm:text-xl mb-3 text-left">
+        <li className="group inline-flex text-th-fgd-4">
+                <PhoneIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
+                Pay with your contacts, forget wallet addresses.
+              </li>
            <li className="group inline-flex text-th-fgd-4">
                 <KeyIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
                   Your keys, your money, you&apos;re in control.
@@ -36,10 +40,7 @@ const PhoneHero = () => {
                 <CurrencyDollarIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
                 Fiat to crypto, crypto to fiat.
               </li>
-              <li className="group inline-flex text-th-fgd-4">
-                <PhoneIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
-                Pay with your contacts, forget wallet addresses.
-              </li>
+
         </ul>
 
         <div className="group">

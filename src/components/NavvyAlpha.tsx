@@ -34,16 +34,16 @@ const exlpore = [
     icon: BuildingLibraryIcon,
   },
   {
-    name: 'Earn',
-    description: "Automatically earn variable yield right into your mango account, all powered by decentralized money markets.",
-    href: '/earn',
-    icon: BanknotesIcon,
-  },
-  {
     name: 'Pay',
     description: 'Move money globally without borders. Pay, send, swap, receive, and earn all from your device.',
     href: '/pay',
     icon: DevicePhoneMobileIcon,
+  },
+  {
+    name: 'Earn',
+    description: "Automatically earn variable yield right into your mango account, all powered by decentralized money markets.",
+    href: '/earn',
+    icon: BanknotesIcon,
   },
 ]
 const callsToAction = [
