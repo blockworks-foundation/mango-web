@@ -36,7 +36,7 @@ const BrandHero = () => {
                   <p className="font-body text-th-fgd-3 text-md ">
                         Unripe mangoes can sit out on the counter at room temperature until ripened, once ripened Mango assets can be used in any content, just use plenty of space around the asset being used. 
                         <br /><br />
-                        You can adjust sizing and use them in any location, but please make sure to keep fruit refridgerated with plenty of space around, we don&apos;t want ripened mangoes to go to waste!
+                        Eat how ever you&apos;d like! But please make sure to keep fruit refridgerated with plenty of space around, we don&apos;t want ripened mangoes to go to waste!
                   </p>
                   <div className="bg-mango-orange/10  border-2 border-mango-orange/20 rounded-2xl py-3 px-5 text-mango-orange mt-8 text-sm">
                         <p>
