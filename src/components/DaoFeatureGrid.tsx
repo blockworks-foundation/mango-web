@@ -37,7 +37,7 @@ function DaoFeaturesGrid() {
                   <span className="text-mango-yellow">Contributor thesis:</span>  A decentralized future that is in control of the people is better for us all.
                   </h1>
                   <p className="font-body text-th-fgd-3 text-md ">
-                    The open-source, decentralized application space has the potential to become a truly driving force in giving power back to people, open-source decentralied products are going to be pivotal in the shift to that future. 
+                    The open-source, decentralized application space has the potential to become a truly driving force in giving power back to people, open-source decentralized products are going to be pivotal in the shift to that future. 
                   <br /><br />
                     Decentralized applications at their core embody the potential of fair distribution of traditional centralized institutions. They enable new opportunities and ways of thinking about our reality and the way we run current and future systems.
                   <br /><br />
