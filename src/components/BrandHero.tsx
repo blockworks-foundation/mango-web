@@ -21,7 +21,7 @@ const BrandHero = () => {
           <div className="group lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3">
             <div className="">
                   <h1 className="text-th-fgd-4 font-display tracking-tighter text-xl mb-2 ">
-                        Naming
+                        How to plant &amp; grow.
                   </h1>
                   <p className="font-body text-th-fgd-3 text-md ">
                         “Mango” is a fruit, always spelled with a capital “M”. It is also the top level brand name for the DAO and its suite of products. 
@@ -31,16 +31,16 @@ const BrandHero = () => {
             </div>
             <div className=" mt-5">
                   <h1 className="text-th-fgd-4 font-display tracking-tighter text-xl mb-2 ">
-                        Usage
+                        Ways to eat.
                   </h1>
                   <p className="font-body text-th-fgd-3 text-md ">
                         Unripe mangoes can sit out on the counter at room temperature until ripened, once ripened Mango assets can be used in any content, just use plenty of space around the asset being used. 
                         <br /><br />
-                        You can adjust sizing, use them in any location, but just make sure to keep fruit open and free from clutter, less they go bad, we don&apos;t want ripened mangoes to go to waste!
+                        You can adjust sizing and use them in any location, but please make sure to keep fruit refridgerated with plenty of space around, we don&apos;t want ripened mangoes to go to waste!
                   </p>
                   <div className="bg-mango-orange/10  border-2 border-mango-orange/20 rounded-2xl py-3 px-5 text-mango-orange mt-8 text-sm">
                         <p>
-                        Any assets provided are free to use, however please do not alter these files in any way, please do not display mango assets in a way that implies an affiliation, or endorsement by Mango of your busines, products, or services unless an official endorsement exsists. Get in touch if you have questions.
+                        Any assets provided are free to use, however please do not alter these files in any way, please do not display mango assets in a way that implies an affiliation, or endorsement by Mango of your busines, products, or services unless an official endorsement exsists.
                         </p>
                   </div>
             </div>

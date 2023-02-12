@@ -11,16 +11,16 @@ import {
 
 const featureOne = [
   {
-    name: 'Maximum capital efficiency.',
+    name: 'Margin on swaps.',
     description:
-      "Every market is cross-collateralized. Mango's risk engine let's you utilize all your assets and derivative contracts as collateral.",
+      "A power tool for the defi native trader, access margin on any spot markets integrated into jupiter, orca, and openbook.",
   },
 ]
 const featureTwo = [
   {
-    name: 'Sub-second latency.',
+    name: 'Permisionless derivitives.',
     description:
-      'Instant order execution at the price of less than a cent. Low latency allows market makers to post tight spreads on the books. Oh, and liquidations are instant as well, so watch your exposure.',
+      'Delta neutral, longing the bottom, or selling the rip. Do it non-custodial, transparent, and all on-chain. ',
   },
 ]
 const featureThree = [
