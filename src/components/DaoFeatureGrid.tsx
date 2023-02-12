@@ -3,74 +3,78 @@ import GridItemProducts from "./cards/GridItemProducts";
 import GridItemStress from "./cards/GridItemStress";
 import { StopIcon } from "@heroicons/react/24/solid";
 
+const featureFour = [
+       {
+      bullet:
+        "The effectiveness of decentralized applications as a public resource depends upon ",
+        descript:
+       "interoperability (protocols, data formats, content), innovation and decentralized participation worldwide.",
+    },
+    {
+     bullet:
+     "Build for open-source, build for people.",
+      descript:
+    "Free and open-source software promotes the development of the decentralized application space as public resources for good. ",
+     },
+     {
+       bullet:
+        "Build in public, ",
+        descript:
+          "Transparent community-based processes promote participation, accountability and trust.",
+       },
+       {
+        bullet:
+         "Commercial involvement in protocol usage can bring many goods ",
+        descript:
+          "a balance between profit and public benefit is critical.",
+        },
+         {
+        bullet:
+          "Decentralzied open-source applications deserve the spot light. ",
+        descript:
+         "Magnifying the public benefit aspects of decentralized applications is an important goal, worthy of time, attention and commitment. ",
+          },
+]
+
 const featureThree = [
   {
-      bullet:
+    bullet:
       "Create permissionless decentralized systems ",
     descript:
       "that allow for humans to transact, interact, and build without restriction.",
   },
-    {
-      bullet:
-        "Decentralized applications can become an integral part of modern life ",
-        descript:
-        "a key component to fair distribution of power and knowledge that we hope can benefit society as a whole.",
+  {
+    bullet:
+      "Decentralized applications can become an integral part of modern life ",
+    descript:
+      "a key component to fair distribution of power and knowledge that we hope can benefit society as a whole.",
+  },
+  {
+    bullet:
+       "Blockchains are a global public resource ",
+    descript:
+       " that must remain open and accessible.",
+   },
+   {
+    bullet:
+       "Make life simpller, ",
+    descript:
+        "decentralized applications must make the lives of individual human beings better not more difficult.",
+     },
+     {
+     bullet:
+       "Individuals' security and privacy within crypto are fundamental ",
+     descript:
+        "and must not be treated as optional.",
       },
       {
-          bullet:
-            "Blockchains are a global public resource ",
-            descript:
-            " that must remain open and accessible.",
-          },
-              {
-                  bullet:
-                    "Make life simpller, ",
-                    descript:
-                    "decentralized applications must make the lives of individual human beings better not more difficult.",
-                  },
-                  {
-                        bullet:
-                        "Individuals' security and privacy within crypto are fundamental ",
-                        descript:
-                        "and must not be treated as optional.",
-                      },
-                      {
-                          bullet:
-                            "Individuals must have the ability to shape the protocol ",
-                            descript:
-                            "and their own experiences on it.",
-                          },
-                          {
-                              bullet:
-                                "The effectiveness of decentralized applications as a public resource depends upon ",
-                                descript:
-                                "interoperability (protocols, data formats, content), innovation and decentralized participation worldwide.",
-                              },
-                              {
-                                bullet:
-                                  "Build for open-source, build for people.",
-                                  descript:
-                                  "Free and open-source software promotes the development of the decentralized application space as public resources for good. ",
-                                },
-                              {
-                                bullet:
-                                  "Build in public, ",
-                                  descript:
-                                  "Transparent community-based processes promote participation, accountability and trust.",
-                                },
-                              {
-                                bullet:
-                                  "Commercial involvement in protocol usage can bring many goods ",
-                                  descript:
-                                  "a balance between profit and public benefit is critical.",
-                                },
-                              {
-                                bullet:
-                                  "Decentralzied open-source applications deserve the spot light. ",
-                                  descript:
-                                  "Magnifying the public benefit aspects of decentralized applications is an important goal, worthy of time, attention and commitment. ",
-                                },
-                          ]
+      bullet:
+        "Individuals must have the ability to shape the protocol ",
+      descript:
+        "and their own experiences on it.",
+       },
+      
+]
 const gridItemOne: any = [
     {
       name: "Open by default.",
@@ -140,7 +144,8 @@ function DaoFeaturesGrid() {
             </div>    
             <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
 
-            <div className="max-w-xl py-10">
+            <div className="py-10 grid grid-cols-4 gap-20">
+            <div className="col-span-2">
             {featureThree.map((feature) => (   
                 <ul className="font-body text-th-fgd-4 mb-6" key={feature.bullet}>
 
@@ -155,6 +160,23 @@ function DaoFeaturesGrid() {
                     </li>
                 </ul>
                 ))}
+            </div>
+            <div className="col-span-2">
+            {featureFour.map((feature) => (   
+                <ul className="font-body text-th-fgd-4 mb-6" key={feature.bullet}>
+
+                    <li className="inline-flex">
+                        <div>
+                        <StopIcon className="fill-mango-yellow w-3 h-3 text-th-fgd-2 mt-[8px] mr-2" />
+                        </div>
+                        <div>
+                        <span className="text-xl text-th-fgd-4">{feature.bullet}</span>
+                        <span className="text-xl text-th-fgd-3">{feature.descript}</span>
+                        </div>
+                    </li>
+                </ul>
+                ))}
+            </div>
             </div>
       </div>
       <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2"></div>
