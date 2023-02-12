@@ -30,10 +30,10 @@ module.exports = {
         'mangocard': "url('/assets/images/card-bg-test.svg')",
         'mangocardtwo': "url('/assets/images/card-bg-two.svg')",
         'mangocardsend': "url('/assets/images/card-send.png')",
-        'mangocardcoin': "url('/assets/images/card-coin.png')",
-        'mangocardglobal': "url('/assets/images/card-world.png')",
-        'mangocardlever': "url('/assets/images/card-lever.png')",
-        'mangocardmarkets': "url('/assets/images/card-markets.png')",
+        'mangocardcoin': "url('/assets/images/card-coin.svg')",
+        'mangocardglobal': "url('/assets/images/card-world.svg')",
+        'mangocardlever': "url('/assets/images/card-lever.svg')",
+        'mangocardmarkets': "url('/assets/images/card-markets.svg')",
         'mangocardlend': "url('/assets/images/card-lend.png')",
         'mangocardlendsm': "url('/assets/images/card-lend-sm.png')",
         'mangocardlendxsm': "url('/assets/images/card-lendsm.png')",
@@ -42,7 +42,7 @@ module.exports = {
         'mangocardcomposability': "url('/assets/images/card-composability.png')",
         'mangocardtransparent': "url('/assets/images/card-transparent.png')",
         'mangocardgov': "url('/assets/images/card-gov.png')",
-        'mangocardstress': "url('/assets/images/card-stress.png')",
+        'mangocardstress': "url('/assets/images/card-stress.svg')",
         'mangocardproducts': "url('/assets/images/card-products.png')",
 
 
