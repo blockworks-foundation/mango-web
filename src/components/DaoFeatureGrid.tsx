@@ -6,33 +6,33 @@ import { StopIcon } from "@heroicons/react/24/solid";
 const featureFour = [
        {
       bullet:
-        "The effectiveness of decentralized applications as a public resource depends upon ",
+        "The effectiveness of decentralized applications as a public resource depends upon the following;",
         descript:
-       "interoperability (protocols, data formats, content), innovation and decentralized participation worldwide.",
+       " Interoperability (between protocols, data formats, content), innovation and decentralized participation worldwide is a must.",
     },
     {
      bullet:
-     "Build for open-source, build for people.",
+     "We're building for open-source, building for people. ",
       descript:
     "Free and open-source software promotes the development of the decentralized application space as public resources for good. ",
      },
      {
        bullet:
-        "Build in public, ",
+        "Build in public; ",
         descript:
-          "Transparent community-based processes promote participation, accountability and trust.",
+          "Transparent community-based processes promote participation, accountability and trust as public resources are grown.",
        },
        {
         bullet:
-         "Commercial involvement in protocol usage can bring many goods ",
+         "Commercial involvement in protocol usage is inevitable and can bring many good things; ",
         descript:
-          "a balance between profit and public benefit is critical.",
+          "A balance between profit and public benefit is critical.",
         },
          {
         bullet:
-          "Decentralzied open-source applications deserve the spot light. ",
+          "Magnifying the public benefit aspects of decentralized applications is an important goal, ",
         descript:
-         "Magnifying the public benefit aspects of decentralized applications is an important goal, worthy of time, attention and commitment. ",
+         " worthy of time, attention and commitment. ",
           },
 ]
 
@@ -47,31 +47,31 @@ const featureThree = [
     bullet:
       "Decentralized applications can become an integral part of modern life ",
     descript:
-      "a key component to fair distribution of power and knowledge that we hope can benefit society as a whole.",
+      "a key component to fair distribution of power that we hope can benefit society as a whole.",
   },
   {
     bullet:
-       "Blockchains are a global public resource ",
+       "Open-source protocols are a global public resource ",
     descript:
-       " that must remain open and accessible.",
+       " that must remain open, accessible, and verfyiable.",
    },
    {
     bullet:
-       "Make life simpller, ",
+       "Make life simpller. ",
     descript:
-        "decentralized applications must make the lives of individual human beings better not more difficult.",
+        "Decentralized applications must make lives of human beings better not more difficult.",
      },
      {
      bullet:
-       "Individuals' security and privacy within crypto are fundamental ",
+       "Individuals' security and privacy within crypto are fundamental. ",
      descript:
-        "and must not be treated as optional.",
+        "This fact must not be treated as optional.",
       },
       {
       bullet:
-        "Individuals must have the ability to shape the protocol ",
+        "Individuals must have the ability to shape the protocol, ",
       descript:
-        "and their own experiences on it.",
+        "as well as their own experiences on it.",
        },
       
 ]
