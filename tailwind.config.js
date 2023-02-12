@@ -33,7 +33,7 @@ module.exports = {
         'mangocardcoin': "url('/assets/images/card-coin.svg')",
         'mangocardglobal': "url('/assets/images/card-world.svg')",
         'mangocardlever': "url('/assets/images/card-lever.svg')",
-        'mangocardmarkets': "url('/assets/images/card-markets.svg')",
+        'mangocardmarkets': "url('/assets/images/card-markets.png')",
         'mangocardlend': "url('/assets/images/card-lend.png')",
         'mangocardlendsm': "url('/assets/images/card-lend-sm.png')",
         'mangocardlendxsm': "url('/assets/images/card-lendsm.png')",
