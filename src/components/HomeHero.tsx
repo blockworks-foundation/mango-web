@@ -66,7 +66,7 @@ const HomeHero = () => {
         <div className="z-0 transform -translate-y-[550px] translate-x-[225px]">
           <MangoBlob />
         </div>
-        <div className=" z-10 reletive transform sm:-translate-y-[700px] sm:translate-x-[730px] sm:-rotate-[9deg]">
+        <div className=" z-10 reletive transform sm:-translate-y-[700px] sm:translate-x-[777px] sm:-rotate-[9deg]">
           <BrowserMockupAbstract />        
         </div>
         <div className="z-10 sm:block hidden reletive transform -translate-y-[1100px] translate-x-[125px] -rotate-[3deg]">
