@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 //import { 
   //UsersIcon,
 //  } from '@heroicons/react/20/solid';
@@ -8,8 +8,16 @@ function GridItemSend(props: any) {
 
   return (
     <div className="group lg:col-span-1 md:col-span-3 sm:col-span-3 xs:col-span-3 cursor-pointer transition duration-150 ease-in-out ">
-      <div className="z-10 bg-th-bkg-2 hover:bg-th-bkg-3 border-2 border-th-fgd-1 h-[380px] w-full shadow-md hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.2)] rounded-[28px] bg-mangocardsend bg-contain bg-top bg-no-repeat transition duration-150 ease-in-out flex justify-items-end place-items-end items-end">
-        <div className="py-4 px-8 mt-3">
+      <div className="z-10 bg-th-bkg-2 hover:bg-th-bkg-3 border-2 border-th-fgd-1 w-full shadow-md hover:shadow-[0_8px_62px_-5px_rgba(0,0,0,0.2)] rounded-[28px] transition duration-150 ease-in-out flex flex-col justify-items-end place-items-end items-end">
+         <Image
+            className="rounded-[26px]"
+            src="/assets/images/card-send.png"
+            alt="Send"
+            width={1300}
+            height={300}
+            loading="lazy"
+          />     
+        <div className="py-4 px-8 -mt-16">
           <div className="flex flex-col mb-8">
             <dl className="text-left">
                 <dt>{/*
