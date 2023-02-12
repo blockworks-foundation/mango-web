@@ -137,7 +137,7 @@ function DaoFeaturesGrid() {
                   <span className="text-mango-yellow">Contributor principles:</span> 
                   </h1>
                   <p className="font-body text-th-fgd-3 text-md ">
-                  We all have good hearts, intentions, and similar ideas about the way we view Mango. Given distribution of the Mango DAO, contributors feel it beneficial to solidify these ideas in writing for current the culture of Mango contributors as well and future ones coming on-board to help develop the protocol. 
+                  We all have good hearts, intentions, and similar ideas about the way we view Mango. Given the distribution of the Mango DAO, contributors feel it beneficial to solidify these ideas in writing for the current culture of Mango contributors as well and future ones coming on-board to help develop the protocol. 
                   <br /><br />
                   Mango is driven by the community, we need to make sure that contributor community is aligned with the core beliefs of the DAO. The core beliefs of the DAO are an amalgamation of the core beliefs of its contributors. 
                   </p>

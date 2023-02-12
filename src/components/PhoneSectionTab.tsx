@@ -11,25 +11,26 @@ import {
     } from '@heroicons/react/20/solid'
 
 const featureOne = [
-  {
-    name: "Decentralized & Secure.",
-    description:
-      "Powered by Solana blockchains decentralized trustless network, transactions are sent instantly with little to no cost to the user. ",
-  },
+    {
+        name: "Pay how you're familiar.",
+        description:
+          "You can pay anyone at little to no cost to you bank account, we use USDC as a base token and we seamlessly convert into over 50+ local currencies such US Dollar, Euro and Mexican Peso automatically for you.",
+      },
+
 ]
 const featureTwo = [
   {
-    name: "Simple & intuitive.",
+    name: "Secure, simple, & intuitive",
     description:
-      "We keep it light and simple. No complicated features or cognative overload. Pay, mange, discover, all from one hub.",
+      "We keep it light. Mange your digital money and assets from one mobile hub. Payments and integrated non-custodial wallets are powered by Solana blockchain network. Your keys, you're in control.",
   },
 ]
 const featureThree = [
-  {
-    name: "Pay how you're familiar.",
-    description:
-      "We use USDC as a base token and we seamlessly convert into over 50+ local currencies such US Dollar, Euro and Mexican Peso automatically for you.",
-  },
+    {
+        name: "Decentralized money markets built in.",
+        description:
+          "Powered by Mango V4, Mango Pay users unlock passive yield in the form an Earn account. Enjoy variable yield generated from auto-lending in Mango Markets.",
+      },
 ]
 
 function PhoneSectionTab() {
@@ -46,8 +47,8 @@ function PhoneSectionTab() {
                     <dl>
                     {featureOne.map((feature) => (
                         <div className="text-left" key={feature.name}>
-                            <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-1 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
-                                <CubeIcon className="h-6 w-6 text-th-fgd-3 group-hover:text-mango-yellow" />
+                    <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-1 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange transition-all duration-150 ease-in-out">
+                                 <CurrencyYenIcon className="h-6 w-6 text-th-fgd-3 group-hover:text-mango-yellow group-focus:text-white" />
                             </span>
                         <div className="inline-flex">
                             <dt className="text-xl font-display text-th-fgd-5">{feature.name}</dt>
@@ -67,8 +68,8 @@ function PhoneSectionTab() {
                     <dl>
                     {featureTwo.map((feature) => (
                         <div className="text-left" key={feature.name}>
-                            <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-1 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
-                                <FaceSmileIcon className="h-6 w-6 text-th-fgd-3 group-hover:text-mango-yellow" />
+                    <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-1 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange transition-all duration-150 ease-in-out">
+                                <FaceSmileIcon className="h-6 w-6 text-th-fgd-3 group-hover:text-mango-yellow group-focus:text-white" />
                             </span>
                         <div className="inline-flex">
                             <dt className="text-xl font-display text-th-fgd-5">{feature.name}</dt>
@@ -88,8 +89,8 @@ function PhoneSectionTab() {
                     <dl>
                     {featureThree.map((feature) => (
                         <div className="text-left" key={feature.name}>
-                            <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-1 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange group-focus:text-white transition-all duration-150 ease-in-out">
-                                <CurrencyYenIcon className="h-6 w-6 text-th-fgd-3 group-hover:text-mango-yellow" />
+                            <span className="mb-3 flex items-center justify-center h-10 w-10 rounded-lg text-th-fgd-4 bg-th-fgd-1 group-hover:bg-th-fgd-2 group-focus:bg-gradient-to-tr from-mango-green to-mango-orange transition-all duration-150 ease-in-out">
+                                 <CubeIcon className="h-6 w-6 text-th-fgd-3 group-hover:text-mango-yellow group-focus:text-white" />
                             </span>
                         <div className="inline-flex">
                             <dt className="text-xl font-display text-th-fgd-5">{feature.name}</dt>
