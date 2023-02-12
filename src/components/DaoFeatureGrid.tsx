@@ -1,8 +1,76 @@
 import GridItemGov from "./cards/GridItemGov";
 import GridItemProducts from "./cards/GridItemProducts";
 import GridItemStress from "./cards/GridItemStress";
+import { StopIcon } from "@heroicons/react/24/solid";
 
-
+const featureThree = [
+  {
+      bullet:
+      "Create permissionless decentralized systems ",
+    descript:
+      "that allow for humans to transact, interact, and build without restriction.",
+  },
+    {
+      bullet:
+        "Decentralized applications can become an integral part of modern life ",
+        descript:
+        "a key component to fair distribution of power and knowledge that we hope can benefit society as a whole.",
+      },
+      {
+          bullet:
+            "Blockchains are a global public resource ",
+            descript:
+            " that must remain open and accessible.",
+          },
+              {
+                  bullet:
+                    "Make life simpller, ",
+                    descript:
+                    "decentralized applications must make the lives of individual human beings better not more difficult.",
+                  },
+                  {
+                        bullet:
+                        "Individuals' security and privacy within crypto are fundamental ",
+                        descript:
+                        "and must not be treated as optional.",
+                      },
+                      {
+                          bullet:
+                            "Individuals must have the ability to shape the protocol ",
+                            descript:
+                            "and their own experiences on it.",
+                          },
+                          {
+                              bullet:
+                                "The effectiveness of decentralized applications as a public resource depends upon ",
+                                descript:
+                                "interoperability (protocols, data formats, content), innovation and decentralized participation worldwide.",
+                              },
+                              {
+                                bullet:
+                                  "Build for open-source, build for people.",
+                                  descript:
+                                  "Free and open-source software promotes the development of the decentralized application space as public resources for good. ",
+                                },
+                              {
+                                bullet:
+                                  "Build in public, ",
+                                  descript:
+                                  "Transparent community-based processes promote participation, accountability and trust.",
+                                },
+                              {
+                                bullet:
+                                  "Commercial involvement in protocol usage can bring many goods ",
+                                  descript:
+                                  "a balance between profit and public benefit is critical.",
+                                },
+                              {
+                                bullet:
+                                  "Decentralzied open-source applications deserve the spot light. ",
+                                  descript:
+                                  "Magnifying the public benefit aspects of decentralized applications is an important goal, worthy of time, attention and commitment. ",
+                                },
+                          ]
 const gridItemOne: any = [
     {
       name: "Open by default.",
@@ -44,7 +112,7 @@ function DaoFeaturesGrid() {
                     <span className="text-th-fgd-4">Over the last 10+ years we have seen this decentralized future unfolding slowly but surely, and feel that this trend will continue.</span>
                   </p>
             </div>     
-      <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
+      <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
         
         <GridItemGov
           name={gridItemOne[0].name}
@@ -59,7 +127,35 @@ function DaoFeaturesGrid() {
           description={gridItemThree[0].description}
         />               
         </div>
-        
+        <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+           <div className="py-10 max-w-xl">
+                  <h1 className="text-th-fgd-4 font-display tracking-tighter text-xl mb-2 ">
+                  <span className="text-mango-yellow">Contributor principles:</span> 
+                  </h1>
+                  <p className="font-body text-th-fgd-3 text-md ">
+                  We all have good hearts, intentions, and similar ideas about the way we view Mango. Given distribution of the Mango DAO, contributors feel it beneficial to solidify these ideas in writing for current the culture of Mango contributors as well and future ones coming on-board to help develop the protocol. 
+                  <br /><br />
+                  Mango is driven by the community, we need to make sure that contributor community is aligned with the core beliefs of the DAO. The core beliefs of the DAO are an amalgamation of the core beliefs of its contributors. 
+                  </p>
+            </div>    
+            <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px]"></div>
+
+            <div className="max-w-xl py-10">
+            {featureThree.map((feature) => (   
+                <ul className="font-body text-th-fgd-4 mb-6" key={feature.bullet}>
+
+                    <li className="inline-flex">
+                        <div>
+                        <StopIcon className="fill-mango-yellow w-3 h-3 text-th-fgd-2 mt-[8px] mr-2" />
+                        </div>
+                        <div>
+                        <span className="text-xl text-th-fgd-4">{feature.bullet}</span>
+                        <span className="text-xl text-th-fgd-3">{feature.descript}</span>
+                        </div>
+                    </li>
+                </ul>
+                ))}
+            </div>
       </div>
       <div className="sm:w-1/3 w-full h-[4px] bg-gradient-to-r from-th-fgd-2"></div>
       <div className="h-1/2 w-[4px] bg-gradient-to-b from-th-fgd-2"></div>
