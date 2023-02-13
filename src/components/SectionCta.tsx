@@ -50,8 +50,8 @@ const SectionCta = () => {
             height={0}
             loading="lazy"
             style={{
-              width: '100%',
-              height: 'auto',
+              width: 'auto',
+              height: '100%',
             }}
           />  
           </div>

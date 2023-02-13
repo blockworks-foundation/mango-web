@@ -11,7 +11,7 @@ class MyDocument extends Document {
         <Head>
           <title>Mango</title>
           <meta name="description" content="Trade, manage, and earn, all from one hub." />        
-          </Head>  
+        </Head>  
         <body>
           <Main />
           <NextScript />
