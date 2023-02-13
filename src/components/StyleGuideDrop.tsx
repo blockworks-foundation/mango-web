@@ -53,7 +53,7 @@ const StyleGuideDrop = () => {
             leaveTo="opacity-0"
             >
             <Popover.Panel
-              className={`absolute left-0 top-[70px] z-20 max-h-screen w-[265px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 px-1 pt-2 pb-0`}
+              className={`absolute left-0 top-[70px] z-20 max-h-screen w-[235px] overflow-auto rounded-[18px] shadow-lg bg-th-bkg-3 border border-th-fgd-1 px-1 pt-2 pb-0`}
             >
               <div className="grid grid-cols-1">
               <div className="col-span-1 px-1">              
