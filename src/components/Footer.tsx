@@ -141,10 +141,10 @@ const Footer = () => {
                           </a>
                         </li>
                       </ul>
-                      <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-yellow pl-4 transition duration-100 ease-in-out">
+                      <h3 className="mt-12 mb-3 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-yellow pl-4 transition duration-100 ease-in-out">
                         Infrastructure
                       </h3>
-                      <ul className="mt-12">
+                      <ul className="">
                       <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
