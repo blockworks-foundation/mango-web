@@ -26,7 +26,7 @@ const BrandHero = () => {
                   <p className="font-body text-th-fgd-3 text-md ">
                         “Mango” is a fruit, always spelled with a capital “M”. It is also the top level brand name for the DAO and its suite of products. 
                         <br /><br />
-                         When referring to any dedicated releases from Mango or the DAO itself, contributors ask that you capitalize them as proper nouns (e.g. &quot;Mango Markets&quot;, &quot;Mango Pay&quot;, &quot;Mango DAO&quot;).
+                         When referring to any dedicated releases from Mango, contributors ask that you capitalize them as proper nouns (e.g. &quot;Mango Markets&quot;, &quot;Mango Pay&quot;, &quot;Mango DAO&quot;).
                   </p>
             </div>
             <div className=" mt-5">
