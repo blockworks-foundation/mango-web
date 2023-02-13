@@ -100,7 +100,7 @@ function BrowserMockupAbstract() {
                     alt="Browser"
                     width={1100}
                     height={300}
-                    loading="lazy"
+                    priority
                   />    
 
 

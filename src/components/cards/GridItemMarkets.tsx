@@ -28,12 +28,13 @@ function GridItemMarkets(props: any) {
                  <div className="grid grid-cols-2 gap-4 saturate-0 group-hover:saturate-100">
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl mt-3 border border-th-fgd-2 shadow-md">
                   <Image
-                      className="h-3 mt-[10px]"
+                      className="h-4 mt-[10px]"
                       src="/assets/images/logo-openbook.png"
                       alt="controls"
-                      width={50}
-                      height={50}
+                      width={0}
+                      height={0}
                       loading="lazy"
+                      style={{ width: 'auto', height: '30px' }}
                     />                     
                     <p className="text-center text-th-fgd-4 text-md font-bold py-1 ml-3">
                       Openbook
@@ -44,9 +45,10 @@ function GridItemMarkets(props: any) {
                       className="h-8"
                       src="/assets/images/logo-jupiter.svg"
                       alt="controls"
-                      width={50}
-                      height={50}
+                      width={0}
+                      height={0}
                       loading="lazy"
+                      style={{ width: 'auto', height: '30px' }}
                     /> 
                     <p className="text-center text-th-fgd-4 text-md font-bold py-1 ml-3">
                       Jupiter
@@ -57,9 +59,10 @@ function GridItemMarkets(props: any) {
                       className="h-8"
                       src="/assets/images/logo-solana.svg"
                       alt="controls"
-                      width={50}
-                      height={50}
+                      width={0}
+                      height={0}
                       loading="lazy"
+                      style={{ width: 'auto', height: '30px' }}
                     /> 
                     <p className="text-center text-th-fgd-4 text-md font-bold py-1 ml-3">
                       Solana
@@ -70,9 +73,10 @@ function GridItemMarkets(props: any) {
                       className="h-8"
                       src="/assets/images/logo-orca.svg"
                       alt="controls"
-                      width={40}
-                      height={40}
+                      width={0}
+                      height={0}
                       loading="lazy"
+                      style={{ width: 'auto', height: '30px' }}
                     /> 
                     <p className="text-center text-th-fgd-4 text-md font-bold py-1 ml-3">
                       Orca

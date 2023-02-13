@@ -145,10 +145,14 @@ const PhoneSectionOne = () => {
        <div className="z-0 h-0">
            <Image
             src="/assets/images/phonelights.svg"
-            alt="Github"
-            width={900}
-            height={900}
+            alt="phone"
+            width={0}
+            height={0}
             loading="lazy"
+            style={{
+              width: '900px',
+              height: 'auto',
+            }}
           />
 
        </div>

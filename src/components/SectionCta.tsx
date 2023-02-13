@@ -47,8 +47,12 @@ const SectionCta = () => {
             src="/assets/images/mango_cpu.png"
             alt="Github"
             width={1000}
-            height={300}
+            height={0}
             loading="lazy"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />  
           </div>
         </div>
