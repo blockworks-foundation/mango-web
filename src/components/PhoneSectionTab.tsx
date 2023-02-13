@@ -14,7 +14,7 @@ const featureOne = [
     {
         name: "Pay how you're familiar.",
         description:
-          "You can pay anyone at little to no cost to you bank account, we use USDC as a base token and we seamlessly convert into over 50+ local currencies such US Dollar, Euro and Mexican Peso automatically for you.",
+          "You can pay anyone at little to no cost unlike traditional remittance services, we use USDC as a base token and we seamlessly convert into over 50+ local currencies such US Dollar, Euro and Mexican Peso automatically for you.",
       },
 
 ]
