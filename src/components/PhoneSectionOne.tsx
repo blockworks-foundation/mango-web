@@ -150,11 +150,12 @@ const PhoneSectionOne = () => {
           />
 
        </div>
+       <div className="z-0">
+        <MangoBlob />
+       </div>  
      </div>   
       </div>
-        <div className="z-0 transform -translate-y-[750px] translate-x-[600px]">
-        <MangoBlob />
-       </div>      
+    
     </>
   );
 };
