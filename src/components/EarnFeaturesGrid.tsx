@@ -34,7 +34,7 @@ function EarnFeaturesGrid() {
                     Transparently generated yield.
                   </h1>
                   <p className="font-body text-th-fgd-3 text-xl ">
-                      Mango Earn turns you into the banker. Lend your capital in decentralized peer-to-peer open markets and borrow on your collateral and utilize your assets as you see fit.
+                      Mango Earn turns you into the banker. Lend your capital in decentralized peer-to-peer open markets, borrow on your collateral and utilize your assets as you see fit.
                       </p>
             </div>
       <div className="z-20 grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">

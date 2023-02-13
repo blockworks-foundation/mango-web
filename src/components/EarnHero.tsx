@@ -24,15 +24,18 @@ const EarnHero = () => {
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
         <ul className="flex space-y-3 flex-col z-20 font-body text-md sm:text-xl mb-3 text-left">
+        
+        <li className="group inline-flex text-th-fgd-4">
+            <ReceiptPercentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
+            Earn variable yeild from automatic-lending built into accounts on mango.
+          </li>
+        
         <li className="group inline-flex text-th-fgd-4">
             <AdjustmentsVerticalIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
             Full control over your digital coin. Just you and the blockchain.
           </li>
 
-          <li className="group inline-flex text-th-fgd-4">
-            <ReceiptPercentIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"   />
-            Earn variable yeild from automatic-lending built into accounts on mango.
-          </li>
+
           
           <li className="group inline-flex text-th-fgd-4">
             <BanknotesIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4"/>
