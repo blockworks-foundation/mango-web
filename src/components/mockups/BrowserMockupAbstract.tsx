@@ -97,7 +97,7 @@ function BrowserMockupAbstract() {
                 */}
                 <Image
                     src="/assets/images/UI_Accounts.svg"
-                    alt="Github"
+                    alt="Browser"
                     width={1100}
                     height={300}
                     loading="lazy"

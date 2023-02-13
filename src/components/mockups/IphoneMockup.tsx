@@ -19,6 +19,7 @@ function IphoneMockup(props: any) {
                                     </div>
                                      <img 
                                         className="z-0 reletive rounded-[41px]"
+                                        alt="phone"
                                         src={props.src} />
                                     <div className="flex items-center flex-col">
                                         <ul className="absolute">

@@ -8,7 +8,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        <Head />
+        <Head>
+          <title>Mango</title>
+          <meta name="description" content="Trade, manage, and earn, all from one hub." />        
+          </Head>  
         <body>
           <Main />
           <NextScript />

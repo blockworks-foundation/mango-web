@@ -1,7 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 
-
 function IphoneAbstract(props: any) {
   return (
     <div>
@@ -24,11 +23,12 @@ function IphoneAbstract(props: any) {
                                         <ul className="absolute">
                                             <li className="bg-black bg-opacity-80 h-[20px] w-[90px] rounded-full mt-3"></li>
                                         </ul>
-                                    </div>
+                                    </div> 
                                      <img 
                                         className="z-0 reletive rounded-[41px]"
+                                        alt="phone"
                                         src={props.src} />
-                                    <div className="flex items-center flex-col">
+                                        <div className="flex items-center flex-col">
                                         <ul className="absolute">
                                         <li className="bg-white bg-opacity-80 h-[4px] w-[66px] rounded-full -mt-3 animate-bounce"></li>
                                         </ul>

@@ -94,10 +94,10 @@ const Footer = () => {
                 <div className="w-full lg:w-2/3 px-4">
                   <div className="flex flex-wrap justify-between">
                     <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                      <ul className="">
-                      <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-red pl-4 transition duration-100 ease-in-out">
+                    <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-red pl-4 transition duration-100 ease-in-out">
                         Explore
                       </h3>
+                      <ul className="">
                         <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
@@ -141,10 +141,10 @@ const Footer = () => {
                           </a>
                         </li>
                       </ul>
-                      <ul className="mt-12">
                       <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-yellow pl-4 transition duration-100 ease-in-out">
                         Infrastructure
                       </h3>
+                      <ul className="mt-12">
                       <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
@@ -176,10 +176,10 @@ const Footer = () => {
                       </ul>
                     </div>
                     <div className="w-1/2 lg:w-1/4 mb-8 lg:mb-0">
-                    <ul className="">
-                      <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-green pl-4 transition duration-100 ease-in-out">
+                    <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-green pl-4 transition duration-100 ease-in-out">
                         Developers
                       </h3>
+                    <ul className="">
                       <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"
@@ -211,10 +211,10 @@ const Footer = () => {
                       </ul>
                     </div>
                     <div className="w-1/2 lg:w-1/4">
-                    <ul className="">
-                      <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-orange pl-4 transition duration-100 ease-in-out">
+                    <h3 className="mb-4 text-lg font-mono text-th-fgd-4 opacity-80 border-l-4 border-l-mango-orange pl-4 transition duration-100 ease-in-out">
                         Contact
                       </h3>
+                    <ul className="">
                       <li className="group mb-4 text-sm">
                           <a
                             className="text-th-fgd-3 hover:text-th-fgd-5 py-2 px-4 rounded-lg hover:bg-th-fgd-1 transition duration-100 ease-in-out"

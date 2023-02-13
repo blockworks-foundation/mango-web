@@ -29,6 +29,10 @@ const StyleGuideDrop = () => {
             className={`group flex z-30 overflow-hidden p-3 transform -translate-y-3`}
             onContextMenu={handleRightClick}
             onClick={handleLeftClick}
+            id="Logo button" 
+            type="button" 
+            aria-label='Logo button'
+            aria-haspopup="true"
           >
            
             <Logo /> 

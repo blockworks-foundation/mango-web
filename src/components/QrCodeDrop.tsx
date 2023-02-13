@@ -12,6 +12,10 @@ const QrCodeDrop = () => {
 
         <Popover.Button
             className={`flex z-30 relative items-center justify-center p-[3px] overflow-hidden rounded-full shadow-2xl group`}
+            id="Qr Code button" 
+            type="button" 
+            aria-label='Qr Code button'
+            aria-haspopup="true"
           >
               <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-300 group-hover:bg-mango-green rounded-xl blur-md ease-in-out"></span>
               <span className="absolute inset-0 w-full h-full transition duration-300 group-hover:rotate-180 ease-in-out">

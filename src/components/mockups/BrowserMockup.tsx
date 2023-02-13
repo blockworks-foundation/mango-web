@@ -85,7 +85,7 @@ function BrowserMockup(props: any) {
                 <Image
                   className="z-0 reletive w-full h-auto rounded-b-2xl"
                     src={props.src} 
-                    alt="Github"
+                    alt="Browser"
                     width={1300}
                     height={300}
                     loading="lazy"
