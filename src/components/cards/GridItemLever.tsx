@@ -17,7 +17,7 @@ function GridItemLeverage(props: any) {
             height={300}
             loading="lazy"
           />     
-        <div className="py-4 px-8 -mt-12">
+        <div className="py-4 px-8 -mt-16">
           <div className="flex flex-col mb-8">
             <dl className="text-left">
                 <dt>{/*
