@@ -47,8 +47,8 @@ const exlpore = [
   },
 ]
 const callsToAction = [
-  { name: 'Liquidator Program', href: '#', icon: UsersIcon },
-  { name: 'Market Maker Program', href: '#', icon: PuzzlePieceIcon },
+  { name: 'Liquidator Program', href: 'https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/LiquidatorQuickstart.md', icon: UsersIcon },
+  { name: 'Market Maker Program', href: 'https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingIntroduction.md', icon: PuzzlePieceIcon },
 ]
 const community = [
     {
