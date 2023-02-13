@@ -18,7 +18,6 @@ const HomeHero = () => {
       
       <div className="flex flex-col max-w-7xl mb-8 z-10 mx-auto p-8 border-l-[4px] border-th-fgd-2 border-solid">
         <div className="z-20 flex flex-col sm:pt-[205px] pt-[105px]">
-
         <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-4"></div>
         <h2 
         className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
