@@ -5,27 +5,30 @@ import Linkie from '@/components/Linkie';
 import MangoBlob from '@/components/MangoBlob';
 import BrowserMockupAbstract from '@/components/mockups/BrowserMockupAbstract';
 import IphoneAbstract from '@/components/mockups/IphoneAbstract';
+import { motion } from 'framer-motion';
 import { 
   CodeBracketIcon,
   GlobeAltIcon,
   BoltIcon
 
   } from '@heroicons/react/20/solid';
-
 const HomeHero = () => {
   return (
-    <section className="">
+    <motion.section initial="initial" animate="animate" className="">
       
       <div className="flex flex-col max-w-7xl mb-8 z-10 mx-auto p-8 border-l-[4px] border-th-fgd-2 border-solid">
         <div className="z-20 flex flex-col sm:pt-[205px] pt-[105px]">
 
         <div className="sm:w-1/2 w-full h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-4"></div>
-        <h2 className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
+        <h2 
+        className="font-display sm:text-6xl text-2xl tracking-tight mb-6 text-left text-th-fgd-5 leading-tight">
         Building open finance <br /><GradientText>for the internet <br />generation.</GradientText>
         </h2>
         <div className="w-1/2 h-[4px] bg-gradient-to-r from-th-fgd-2 transform -translate-x-[32px] mb-8"></div>
 
-        <ul className="flex space-y-3 flex-col z-20 font-body text-md sm:text-xl mb-3 text-left">
+        <ul 
+
+        className="flex space-y-3 flex-col z-20 font-body text-md sm:text-xl mb-3 text-left">
          <li className="group inline-flex text-th-fgd-4">
             <BoltIcon className="bg-th-fgd-1 text-mango-yellow rounded-md p-1 w-[30px] h-[30px] mr-3 mb-4" />
            Lightning fast products, transparent and all on-chain.
@@ -74,7 +77,7 @@ const HomeHero = () => {
         </div>
       </div>
     </div>
-    </section>
+    </motion.section>
 
   );
 };
