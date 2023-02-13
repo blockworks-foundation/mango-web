@@ -28,8 +28,8 @@ function GridItemMarkets(props: any) {
                  <div className="grid grid-cols-2 gap-4 saturate-0 group-hover:saturate-100">
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl mt-3 border border-th-fgd-2 shadow-md">
                   <Image
-                      className="h-4 mt-[10px]"
-                      src="/assets/images/logo-openbook.png"
+                      className=""
+                      src="/assets/images/logo-openbook.svg"
                       alt="controls"
                       width={0}
                       height={0}
@@ -42,7 +42,7 @@ function GridItemMarkets(props: any) {
                   </div>
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl mt-3 border border-th-fgd-2 shadow-md">
                     <Image
-                      className="h-8"
+                      className=""
                       src="/assets/images/logo-jupiter.svg"
                       alt="controls"
                       width={0}
@@ -56,7 +56,7 @@ function GridItemMarkets(props: any) {
                   </div>
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl border border-th-fgd-2 shadow-md">
                   <Image
-                      className="h-8"
+                      className=""
                       src="/assets/images/logo-solana.svg"
                       alt="controls"
                       width={0}
@@ -70,7 +70,7 @@ function GridItemMarkets(props: any) {
                   </div>
                   <div className="inline-flex col-span-1 p-4 bg-th-fgd-1 rounded-2xl border border-th-fgd-2 shadow-md">
                   <Image
-                      className="h-8"
+                      className=""
                       src="/assets/images/logo-orca.svg"
                       alt="controls"
                       width={0}
