@@ -122,20 +122,14 @@ const PhoneSectionOne = () => {
                         </p>
                       </div>
         </div>
-
-      </div>
-        <div className="z-0 transform -translate-y-[750px] translate-x-[600px]">
-        <MangoBlob />
-       </div> 
-     <div className="hidden sm:flex flex-col z-0 reletive transform translate-x-[700px] -translate-y-[666px]">
+        <div className="hidden sm:flex flex-col z-0 reletive transform translate-x-[420px] -translate-y-[666px]">
       <div className="h-0 z-10 transform translate-x-[300px] translate-y-[50px]">
-        <div className="absolute transform translate-x-[38px]">
-          <GlobalAbstract />
-        </div>
-
+          <div className="absolute transform translate-x-[38px]">
+            <GlobalAbstract />
+          </div>
           <Image
+            alt="globe"
             src="/assets/images/globe-mango.svg"
-            alt="Github"
             width={450}
             height={450}
             loading="lazy"
@@ -156,7 +150,11 @@ const PhoneSectionOne = () => {
           />
 
        </div>
-     </div>        
+     </div>   
+      </div>
+        <div className="z-0 transform -translate-y-[750px] translate-x-[600px]">
+        <MangoBlob />
+       </div>      
     </>
   );
 };

@@ -38,8 +38,7 @@ const mainPathVariant: AnimationProps = {
 const GlobalAbstract = () => {
     
     return (
-      <div className="">
-            <svg width="338" height="444" viewBox="0 0 538 444" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <motion.svg width="338" height="444" viewBox="0 0 538 444" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.g 
                     {...mainModalVariant}
                           initial='hidden'
@@ -107,8 +106,7 @@ const GlobalAbstract = () => {
                           }} d="M253.672 429.967C253.671 429.957 331.12 413.826 410.919 322.456C517.966 199.89 511.739 72.8958 511.739 72.8958" stroke="#FF5B4E" strokeWidth="3" strokeLinecap="round"/>
                 </motion.g>
 
-                </svg>
-      </div>
+                </motion.svg>
     );
   };
   
