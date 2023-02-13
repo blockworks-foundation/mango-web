@@ -1,4 +1,5 @@
 import React from 'react';
+import LinkieCard from '../LinkieCard';
 //import { 
   //ScaleIcon
 //  } from '@heroicons/react/20/solid';
@@ -21,7 +22,11 @@ function GridItemLending(props: any) {
                 <dd className="font-body text-th-fgd-3 group-hover:text-th-fgd-4 text-md transition duration-150 ease-in-out">
                   {props.description}
                 </dd>
-                
+                <LinkieCard>
+                  <a rel="noreferrer" target="_blank" href="/earn">
+                  Learn more
+                </a>
+                </LinkieCard>
             </dl>
           </div>
         </div>
