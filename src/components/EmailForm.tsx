@@ -47,12 +47,12 @@ const EmailForm = () => {
                       type="email"
                       autoComplete="email"
                       required
-                      className="w-full px-5 py-2 placeholder-gray-400 text-black text-opacity-80 sm:max-w-xs border-black/20 border-[3px] border- rounded-xl focus:outline-mango-yellow hover:border-mango-yellow transition duration 150 ease-in-out"
+                      className="w-full px-5 py-2 placeholder-gray-400 text-black text-opacity-80 sm:max-w-xs border-black/20 border-[3px] border- rounded-full focus:outline-mango-yellow hover:border-mango-yellow transition duration 150 ease-in-out"
                       placeholder="Drop us your email..."
                       value={email}
                       onChange={handleChange}
                     />
-                    <div className="mt-1 -ml-1 sm:ml-3 sm:flex-shrink-0">
+                    <div className=" -ml-1 sm:ml-3 sm:flex-shrink-0">
                       <ButtonTwo>
                        Sign me up!
                       </ButtonTwo>
