@@ -466,7 +466,7 @@ const NavvyAlpha = () => {
                     </a>
                   </ButtonTwo>
               </div>
-              <div className="z-30 bg-th-fgd-2 rounded-full ml-6 shadow-lg -mt-1">
+              <div className="inline-flex z-30 bg-th-fgd-2 rounded-full ml-6 shadow-lg -mt-1">
                   <QrCodeDrop />
                   {/* 
                   <ThemeSwitcher /> 
