@@ -2,51 +2,213 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'TT Mono';
+  src: url('/fonts/TT_Commons_Pro_Mono_Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Commons Expanded';
+  src: url('/fonts/TT_Commons_Pro_Expanded_DemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: normal;
+  src: url('/fonts/TT_Commons_Pro_Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: medium;
+  src: url('/fonts/TT_Commons_Pro_Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: bold;
+  src: url('/fonts/TT_Commons_Pro_DemiBold.woff2') format('woff2');
+}
+
+/* Reset */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+
 /* Theme */
 
 :root {
-  --primary: theme('colors.light-theme.yellow');
-  --red: theme('colors.light-theme.red.DEFAULT');
-  --red-dark: theme('colors.light-theme.red.dark');
-  --green: theme('colors.light-theme.green.DEFAULT');
-  --green-dark: theme('colors.light-theme.green.dark');
-  --bkg-1: theme('colors.light-theme["bkg-1"]');
-  --bkg-2: theme('colors.light-theme["bkg-2"]');
-  --bkg-3: theme('colors.light-theme["bkg-3"]');
-  --fgd-1: theme('colors.light-theme["fgd-1"]');
-  --fgd-2: theme('colors.light-theme["fgd-2"]');
-  --fgd-3: theme('colors.light-theme["fgd-3"]');
-  --fgd-4: theme('colors.light-theme["fgd-4"]');
-}
-
-[data-theme='Dark'] {
-  --primary: theme('colors.dark-theme.yellow');
-  --red: theme('colors.dark-theme.red.DEFAULT');
-  --red-dark: theme('colors.dark-theme.red.dark');
-  --green: theme('colors.dark-theme.green.DEFAULT');
-  --green-dark: theme('colors.dark-theme.green.dark');
-  --bkg-1: theme('colors.dark-theme["bkg-1"]');
-  --bkg-2: theme('colors.dark-theme["bkg-2"]');
-  --bkg-3: theme('colors.dark-theme["bkg-3"]');
-  --fgd-1: theme('colors.dark-theme["fgd-1"]');
-  --fgd-2: theme('colors.dark-theme["fgd-2"]');
-  --fgd-3: theme('colors.dark-theme["fgd-3"]');
-  --fgd-4: theme('colors.dark-theme["fgd-4"]');
+  --active: theme('colors.light-theme.active.DEFAULT');
+  --active-dark: theme('colors.light-theme.active.dark');
+  --down: theme('colors.light-theme.down.DEFAULT');
+  --down-dark: theme('colors.light-theme.down.dark');
+  --down-muted: theme('colors.light-theme.down.muted');
+  --up: theme('colors.light-theme.up.DEFAULT');
+  --up-dark: theme('colors.light-theme.up.dark');
+  --up-muted: theme('colors.light-theme.up.muted');
+  --link: theme('colors.light-theme.link.DEFAULT');
+  --link-hover: theme('colors.light-theme.link.hover');
+  --bkg-1: theme('colors.light-theme.bkg-1');
+  --bkg-2: theme('colors.light-theme.bkg-2');
+  --bkg-3: theme('colors.light-theme.bkg-3');
+  --bkg-4: theme('colors.light-theme.bkg-4');
+  --fgd-1: theme('colors.light-theme.fgd-1');
+  --fgd-2: theme('colors.light-theme.fgd-2');
+  --fgd-3: theme('colors.light-theme.fgd-3');
+  --fgd-4: theme('colors.light-theme.fgd-4');
+  --button: theme('colors.light-theme.button.DEFAULT');
+  --input-bkg: theme('colors.light-theme.input.bkg');
+  --input-border: theme('colors.light-theme.input.border');
+  --input-border-hover: theme('colors.light-theme.input.borderDark');
+  --button-hover: theme('colors.light-theme.button.hover');
+  --error: theme('colors.light-theme.error');
+  --success: theme('colors.light-theme.success');
+  --warning: theme('colors.light-theme.warning');
 }
 
 [data-theme='Mango'] {
-  --primary: theme('colors.mango-theme.yellow');
-  --red: theme('colors.mango-theme.red.DEFAULT');
-  --red-dark: theme('colors.mango-theme.red.dark');
-  --green: theme('colors.mango-theme.green.DEFAULT');
-  --green-dark: theme('colors.mango-theme.green.dark');
-  --bkg-1: theme('colors.mango-theme["bkg-1"]');
-  --bkg-2: theme('colors.mango-theme["bkg-2"]');
-  --bkg-3: theme('colors.mango-theme["bkg-3"]');
-  --fgd-1: theme('colors.mango-theme["fgd-1"]');
-  --fgd-2: theme('colors.mango-theme["fgd-2"]');
-  --fgd-3: theme('colors.mango-theme["fgd-3"]');
-  --fgd-4: theme('colors.mango-theme["fgd-4"]');
+  --active: theme('colors.mango-classic-theme.active.DEFAULT');
+  --active-dark: theme('colors.mango-classic-theme.active.dark');
+  --down: theme('colors.mango-classic-theme.down.DEFAULT');
+  --down-dark: theme('colors.mango-classic-theme.down.dark');
+  --down-muted: theme('colors.mango-classic-theme.down.muted');
+  --up: theme('colors.mango-classic-theme.up.DEFAULT');
+  --up-dark: theme('colors.mango-classic-theme.up.dark');
+  --up-muted: theme('colors.mango-classic-theme.up.muted');
+  --link: theme('colors.mango-classic-theme.link.DEFAULT');
+  --link-hover: theme('colors.mango-classic-theme.link.hover');
+  --bkg-1: theme('colors.mango-classic-theme.bkg-1');
+  --bkg-2: theme('colors.mango-classic-theme.bkg-2');
+  --bkg-3: theme('colors.mango-classic-theme.bkg-3');
+  --bkg-4: theme('colors.mango-classic-theme.bkg-4');
+  --fgd-1: theme('colors.mango-classic-theme.fgd-1');
+  --fgd-2: theme('colors.mango-classic-theme.fgd-2');
+  --fgd-3: theme('colors.mango-classic-theme.fgd-3');
+  --fgd-4: theme('colors.mango-classic-theme.fgd-4');
+  --button: theme('colors.mango-classic-theme.button.DEFAULT');
+  --button-hover: theme('colors.mango-classic-theme.button.hover');
+  --input-bkg: theme('colors.mango-classic-theme.input.bkg');
+  --input-border: theme('colors.mango-classic-theme.input.border');
+  --input-border-hover: theme('colors.mango-classic-theme.input.borderDark');
+  --error: theme('colors.mango-classic-theme.error');
+  --success: theme('colors.mango-classic-theme.success');
+  --warning: theme('colors.mango-classic-theme.warning');
+}
+
+/* Base */
+
+body {
+  @apply font-body text-sm tracking-wider;
+}
+
+button {
+  @apply tracking-wider focus:outline-none;
+}
+
+svg {
+  @apply transition duration-500 ease-out;
+}
+
+.default-transition {
+  @apply transition duration-300 ease-out;
+}
+
+/* Type */
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-display text-th-fgd-1;
+}
+
+h1 {
+  @apply text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+h4 {
+  @apply text-base;
+}
+
+p {
+  @apply text-th-fgd-3;
+}
+
+li {
+  @apply text-sm text-th-fgd-3;
 }
 
 @layer utilities {

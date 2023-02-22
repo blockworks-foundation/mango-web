@@ -1,6 +1,6 @@
 import { useState } from 'react'
 //import MangoPill from '../components/MangoPill'
-import Button from './Button'
+import Button from './shared/Button'
 import ButtonWhite from './ButtonWhite'
 
 //const doNothing = (e) => {

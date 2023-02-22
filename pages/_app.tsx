@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import { ThemeProvider } from 'next-themes'
 import '../styles/index.css'
-import useWallet from '../hooks/useWallet'
+import LayoutWrapper from '../components/layout/LayoutWrapper'
+import { appWithTranslation } from 'next-i18next'
 
 function App({ Component, pageProps }) {
-  useWallet()
-
   const title = 'Mango Markets'
   const description =
     'Decentralised, cross-margin trading up to 20x leverage with lightning speed and near-zero fees.'
@@ -39,10 +38,12 @@ function App({ Component, pageProps }) {
         <link rel="manifest" href="/manifest.json"></link>
       </Head>
       <ThemeProvider defaultTheme="Mango">
-        <Component {...pageProps} />
+        <LayoutWrapper>
+          <Component {...pageProps} />
+        </LayoutWrapper>
       </ThemeProvider>
     </>
   )
 }
 
-export default App
+export default appWithTranslation(App)

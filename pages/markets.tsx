@@ -1,4 +1,4 @@
-import NavBarBeta from '../components/NavBarBeta'
+import NavBarBeta from '../components/navigation/TopNavigation'
 import HeroSectionMarkets from '../components/HeroSectionMarkets'
 import FeatureSection from '../components/FeatureSection'
 import FooterSection from '../components/FooterSection'

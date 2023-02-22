@@ -1,5 +1,5 @@
 // import MarketCard from './MarketCard'
-import Button from './Button'
+import Button from './shared/Button'
 // import GradientText from './GradientText'
 import Link from './Link'
 // import Marquee from 'react-fast-marquee'

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import LendCard from './LendCard'
-import Button from './Button'
+import Button from './shared/Button'
 import Link from './Link'
 //import GradientText from './GradientText'
 import Marquee from 'react-fast-marquee'

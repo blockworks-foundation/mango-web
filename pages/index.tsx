@@ -1,16 +1,23 @@
-import NavBarBeta from '../components/NavBarBeta'
-import HeroSectionHome from '../components/HeroSectionHome'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { NextPage } from 'next'
+import HomePage from '../components/home/HomePage'
 
-const Index = () => {
-  return (
-    <div
-      className={`radial-gradient-bg text-th-fgd-1 transition-all h-screen overflow-hidden`}
-    >
-      <div className="w-screen h-2 bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div>
-      <NavBarBeta />
-      <HeroSectionHome />
-    </div>
-  )
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'home',
+        'footer',
+        'navigation',
+      ])),
+      // Will be passed to the page component as props
+    },
+  }
+}
+
+const Index: NextPage = () => {
+  return <HomePage />
 }
 
 export default Index

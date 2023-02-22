@@ -1,4 +1,4 @@
-import Button from './Button'
+import Button from './shared/Button'
 import LinkLeft from './LinkLeft'
 import Link from './Link'
 

@@ -1,4 +1,4 @@
-import Button from './Button'
+import Button from './shared/Button'
 //import ButtonWhite from './ButtonWhite'
 
 import {
