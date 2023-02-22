@@ -31,7 +31,7 @@ const MenuPanel = ({
         showMenu ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      <div className="flex justify-end p-6">
+      <div className="flex justify-end py-3 px-6">
         <IconButton onClick={() => setShowMenu(false)} hideBg size="medium">
           <XMarkIcon className="h-8 w-8" />
         </IconButton>

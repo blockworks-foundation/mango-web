@@ -19,7 +19,7 @@ const HomeTopSection = () => {
 
   return (
     <div className="lg:pl-12 pl-6 py-24 relative">
-      <div className="w-1/3">
+      <div className="w-full md:w-1/2 lg:w-2/5">
         <h1 className="mb-6">{t('home:long-short-everything')}</h1>
         <CheckBullet>{t('home:bullet-1')}</CheckBullet>
         <CheckBullet showNewBadge>{t('home:bullet-2')}</CheckBullet>

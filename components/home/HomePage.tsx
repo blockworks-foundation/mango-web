@@ -10,7 +10,7 @@ const HomePage = () => {
       {/* <div className="w-screen h-2 bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div> */}
       <HomeTopSection />
       <div className="bg-th-bkg-1 py-16 relative z-10">
-        <div className="px-6 lg:px-12 grid grid-cols-3 gap-x-8 gap-y-12">
+        <div className="px-6 lg:px-12 grid grid-cols-6 gap-x-8 gap-y-12">
           <IconWithText
             desc={t('competitive-fees-desc')}
             icon={<CurrencyDollarIcon className="h-6 w-6 text-th-fgd-2" />}
@@ -59,7 +59,7 @@ const IconWithText = ({
   title: string
 }) => {
   return (
-    <div className="col-span-1">
+    <div className="col-span-6 sm:col-span-3 md:col-span-2">
       <div className="h-10 w-10 rounded-full border-2 border-th-fgd-2 flex items-center justify-center mb-2">
         {icon}
       </div>

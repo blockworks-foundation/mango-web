@@ -5,9 +5,9 @@ import { ReactNode } from 'react'
 const Footer = () => {
   const { t } = useTranslation(['footer', 'navigation'])
   return (
-    <div className="lg:px-12 lg:pt-10 lg:pb-4 px-6 py-4 bg-th-bkg-2">
-      <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-3">
+    <div className="lg:px-12 lg:pt-10 pb-4 px-6 pt-8 bg-th-bkg-2">
+      <div className="flex flex-col-reverse lg:flex-row">
+        <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start">
           <a href="https://mango.markets">
             <div className="flex flex-shrink-0 cursor-pointer items-center">
               <img
@@ -20,7 +20,9 @@ const Footer = () => {
               </span>
             </div>
           </a>
-          <p className="mt-2 mb-4">{t('footer-mission')}</p>
+          <p className="mt-2 mb-4 max-w-[420px] text-center lg:text-left">
+            {t('footer-mission')}
+          </p>
           <div className="flex space-x-2">
             <a className="text-th-fgd-4" href="#">
               {t('terms-of-service')}
@@ -31,7 +33,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="col-span-9 flex items-start justify-end space-x-8">
+        <div className="w-full lg:w-3/4 flex flex-col sm:flex-row items-start justify-end sm:space-x-8 mb-8 lg:mb-0 border-b border-th-bkg-3 lg:border-b-0 pb-6 lg:pb-0">
           <FooterLinkColumn title={t('navigation:about')}>
             <FooterLink path="/mango-dao" title={t('navigation:mango-dao')} />
             <FooterLink path="/token" title={t('navigation:token')} />
@@ -105,7 +107,7 @@ const Footer = () => {
           </FooterLinkColumn>
         </div>
       </div>
-      <p className="flex justify-center mt-6 font-mono text-xs text-th-fgd-4">
+      <p className="flex justify-center mt-3 lg:mt-6 font-mono text-xs text-th-fgd-4">
         {t('copyright')}
       </p>
     </div>
@@ -122,7 +124,7 @@ const FooterLinkColumn = ({
   title: string
 }) => {
   return (
-    <div className="w-28">
+    <div className="w-full lg:w-28 mb-6 last:mb-0 sm:mb-0">
       <h4 className="text-th-fgd-3 text-sm mb-2">{title}</h4>
       {children}
     </div>
