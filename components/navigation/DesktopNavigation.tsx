@@ -1,6 +1,13 @@
 import { Popover, Transition } from '@headlessui/react'
 import Link from 'next/link'
-import { Fragment, ReactNode, useRef, useState } from 'react'
+import {
+  Fragment,
+  ReactNode,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react'
 import { useTranslation } from 'next-i18next'
 import Button from '../shared/Button'
 
@@ -55,71 +62,74 @@ const NavigationItem = ({
   children: ReactNode
   title: string
 }) => {
-  const buttonRef = useRef(null)
+  const [isOverButton, setIsOverButton] = useState(false)
+  const [isOverList, setIsOverList] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-  // const [isOverMenu, setIsOverMenu] = useState(false)
+  const [isTouchInput, setIsTouchInput] = useState(false)
+  const [hasClicked, setHasClicked] = useState(false)
+  const button = useRef(null)
 
-  const toggleMenu = (open) => {
-    setIsOpen(!open)
-    buttonRef?.current?.click()
-  }
-
-  const onHover = (open, action) => {
-    if (
-      (!open && !isOpen && action === 'onMouseEnter') ||
-      (open && isOpen && action === 'onMouseLeave')
-    ) {
-      toggleMenu(open)
+  useLayoutEffect(() => {
+    if (isOpen && !isOverButton && !isOverList && !isTouchInput) {
+      button.current.click()
+      setIsOpen(false)
+    } else if (!isOpen && (isOverButton || isOverList) && !isTouchInput) {
+      button.current.click()
+      setIsOpen(true)
     }
-  }
+  }, [isOverButton, isOverList])
 
-  const handleClick = (open) => {
-    setIsOpen(!open)
-  }
-
-  // const handleClickOutside = (event) => {
-  //   if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-  //     event.stopPropagation()
-  //   }
-  // }
-  // useEffect(() => {
-  //   document.addEventListener('mousedown', handleClickOutside)
-
-  //   return () => {
-  //     document.removeEventListener('mousedown', handleClickOutside)
-  //   }
-  // })
+  useEffect(() => {
+    setIsTouchInput(false)
+    setHasClicked(false)
+  }, [hasClicked])
 
   return (
     <Popover className="relative">
-      {({ open }) => (
-        <>
-          <Popover.Button
-            className="text-th-fgd-2 md:hover:text-th-active"
-            onMouseEnter={() => onHover(open, 'onMouseEnter')}
-            onMouseLeave={() => onHover(open, 'onMouseLeave')}
-            ref={buttonRef}
-          >
-            <div onClick={() => handleClick(open)}>
-              <span className="font-display text-th-fgd-2">{title}</span>
-            </div>
-          </Popover.Button>
-          <Transition
-            show={open}
-            as={Fragment}
-            enter="transition ease-out duration-200"
-            enterFrom="opacity-0 translate-y-1"
-            enterTo="opacity-100 translate-y-0"
-            leave="transition ease-in duration-150"
-            leaveFrom="opacity-100 translate-y-0"
-            leaveTo="opacity-0 translate-y-1"
-          >
-            <Popover.Panel static className="absolute z-20 w-56 top-8 right-0">
-              {children}
-            </Popover.Panel>
-          </Transition>
-        </>
-      )}
+      <Popover.Button
+        className="h-10"
+        ref={button}
+        onTouchStart={() => {
+          setIsTouchInput(true)
+        }}
+        onMouseEnter={() => {
+          setIsOverButton(true)
+        }}
+        onMouseLeave={() => {
+          setIsOverButton(false)
+        }}
+        onClick={() => {
+          setHasClicked(true)
+          setIsOpen(!isOpen)
+        }}
+        onKeyDown={() => {
+          setIsOpen(!isOpen)
+        }}
+      >
+        <span className="font-display text-th-fgd-2">{title}</span>
+      </Popover.Button>
+      <Transition
+        show={isOpen}
+        as={Fragment}
+        enter="transition ease-out duration-200"
+        enterFrom="opacity-0 translate-y-1"
+        enterTo="opacity-100 translate-y-0"
+        leave="transition ease-in duration-200"
+        leaveFrom="opacity-100 translate-y-0"
+        leaveTo="opacity-0 translate-y-1"
+      >
+        <Popover.Panel
+          className="absolute z-20 w-56 right-0"
+          onMouseEnter={() => {
+            setIsOverList(true)
+          }}
+          onMouseLeave={() => {
+            setIsOverList(false)
+          }}
+        >
+          {children}
+        </Popover.Panel>
+      </Transition>
     </Popover>
   )
 }
@@ -128,7 +138,8 @@ const NavigationItemPanel = ({ children }: { children: ReactNode }) => {
   return <div className="bg-th-bkg-2 py-2 space-y-4 rounded-md">{children}</div>
 }
 
-const linkClassNames = 'px-4 py-2 font-medium text-th-fgd-2 block'
+const linkClassNames =
+  'px-4 py-2 font-medium text-th-fgd-2 block md:hover:text-th-fgd-4 default-transition'
 
 const NavigationItemLink = ({
   path,

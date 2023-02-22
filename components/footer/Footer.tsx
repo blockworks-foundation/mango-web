@@ -131,7 +131,8 @@ const FooterLinkColumn = ({
   )
 }
 
-const linkClassNames = 'font-medium text-th-fgd-2 block mb-1.5 last:mb-0'
+const linkClassNames =
+  'font-medium text-th-fgd-2 block mb-1.5 last:mb-0 md:hover:text-th-fgd-4 default-transition'
 
 const FooterLink = ({
   path,
