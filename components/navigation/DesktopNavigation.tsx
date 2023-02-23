@@ -106,7 +106,9 @@ const NavigationItem = ({
           setIsOpen(!isOpen)
         }}
       >
-        <span className="font-display text-th-fgd-2">{title}</span>
+        <span className="font-display text-th-fgd-3 md:hover:text-th-fgd-1 default-transition">
+          {title}
+        </span>
       </Popover.Button>
       <Transition
         show={isOpen}

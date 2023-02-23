@@ -2,7 +2,7 @@ import { useTranslation } from 'next-i18next'
 import { useTheme } from 'next-themes'
 import { FunctionComponent, useState } from 'react'
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
-import { COLORS } from '../../styles/colors'
+// import { COLORS } from '../../styles/colors'
 import SectionWrapper from '../shared/SectionWrapper'
 
 const CHART_DATA = [
@@ -18,19 +18,19 @@ const CHART_DATA = [
 
 const CHART_COLORS = [
   {
-    Mango: '#89B92A',
+    Mango: '#9971D6',
     Light: '#60bf4f',
   },
   {
-    Mango: '#f1c84b',
+    Mango: '#6432AE',
     Light: '#141414',
   },
   {
-    Mango: '#F84638',
+    Mango: '#7139C4',
     Light: '#BE6A6A',
   },
   {
-    Mango: '#9189ae',
+    Mango: '#8251CD',
     Light: '#878787',
   },
 ]
@@ -49,7 +49,7 @@ const Distribution: FunctionComponent = () => {
   return (
     <SectionWrapper>
       <h2 className="mb-6">{t('distribution')}</h2>
-      <div className="flex flex-col-reverse md:flex-row items-center md:justify-between">
+      <div className="flex flex-col-reverse md:flex-row items-center md:justify-between z-10 relative">
         <div className="grid grid-cols-4 gap-6 w-full md:w-1/2">
           {CHART_DATA.map((data) => {
             const { label, desc, value } = data
@@ -61,7 +61,7 @@ const Distribution: FunctionComponent = () => {
                 key={`item-${label}`}
                 onMouseEnter={() => setMouseData(label)}
               >
-                <h3>{`${value}% ${label}`}</h3>
+                <h3 className="mb-3">{`${value}% ${label}`}</h3>
                 <p>{desc}</p>
               </div>
             )
@@ -88,8 +88,9 @@ const Distribution: FunctionComponent = () => {
                     key={`cell-${index}`}
                     fill={CHART_COLORS[index][theme]}
                     fillOpacity={mouseData === entry.label ? 1 : 0.4}
-                    stroke={COLORS.BKG1[theme]}
-                    strokeWidth={4}
+                    // stroke={COLORS.BKG1[theme]}
+                    // strokeWidth={4}
+                    stroke="transparent"
                   />
                 ))}
               </Pie>
@@ -97,6 +98,7 @@ const Distribution: FunctionComponent = () => {
           </ResponsiveContainer>
         </div>
       </div>
+      <div className="absolute w-1/2 h-72 bottom-0 right-0 bg-th-button mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob" />
     </SectionWrapper>
   )
 }

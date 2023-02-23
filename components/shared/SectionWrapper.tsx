@@ -9,7 +9,7 @@ const SectionWrapper = ({
 }) => {
   return (
     <div
-      className={`bg-th-bkg-1 lg:px-12 pl-6 py-24 relative overflow-hidden ${className}`}
+      className={`bg-th-bkg-1 lg:px-20 px-6 py-24 relative overflow-hidden ${className}`}
     >
       {children}
     </div>

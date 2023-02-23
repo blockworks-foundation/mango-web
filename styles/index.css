@@ -188,15 +188,15 @@ h4 {
 }
 
 h1 {
-  @apply text-5xl lg:text-6xl;
+  @apply text-6xl lg:text-7xl;
 }
 
 h2 {
-  @apply text-2xl;
+  @apply text-4xl lg:text-5xl;
 }
 
 h3 {
-  @apply text-lg;
+  @apply text-lg lg:text-2xl;
 }
 
 h4 {

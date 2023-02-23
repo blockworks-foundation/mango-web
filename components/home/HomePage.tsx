@@ -1,6 +1,7 @@
 import { CurrencyDollarIcon } from '@heroicons/react/20/solid'
 import { useTranslation } from 'next-i18next'
 import { ReactNode } from 'react'
+import Button from '../shared/Button'
 import SectionWrapper from '../shared/SectionWrapper'
 import HomeTopSection from './HomeTopSection'
 
@@ -8,7 +9,6 @@ const HomePage = () => {
   const { t } = useTranslation('home')
   return (
     <>
-      {/* <div className="w-screen h-2 bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div> */}
       <HomeTopSection />
       <SectionWrapper>
         <div className="grid grid-cols-6 gap-x-8 gap-y-12">
@@ -44,6 +44,30 @@ const HomePage = () => {
           />
         </div>
       </SectionWrapper>
+      <SectionWrapper>
+        <div className="grid grid-cols-12 gap-8">
+          <div className="col-span-6 h-96 flex justify-center relative">
+            <img
+              className="absolute z-10 w-full h-auto max-w-[440px]"
+              src="/images/swap-mobile.png"
+              alt=""
+            />
+          </div>
+          <div className="col-span-6">
+            <h2 className="mb-4">{t('swap-heading')}</h2>
+            <p className="text-lg mb-6">{t('swap-desc')}</p>
+            <h3 className="mb-3">{t('swap-highlight-1-heading')}</h3>
+            <p className="mb-6">{t('swap-highlight-1-desc')}</p>
+            <h3 className="mb-3">{t('swap-highlight-2-heading')}</h3>
+            <p className="mb-6">{t('swap-highlight-2-desc')}</p>
+            <h3 className="mb-3">{t('swap-highlight-3-heading')}</h3>
+            <p className="mb-8">{t('swap-highlight-3-desc')}</p>
+            <Button size="large">{t('swap-now')}</Button>
+          </div>
+        </div>
+        <div className="absolute w-1/2 h-48 -top-20 left-0 bg-th-down mix-blend-screen rounded-full filter blur-3xl opacity-20 animate-blob" />
+        <div className="absolute w-2/3 h-48 -bottom-20 right-0 bg-th-button mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob" />
+      </SectionWrapper>
     </>
   )
 }
@@ -64,7 +88,7 @@ const IconWithText = ({
       <div className="h-10 w-10 rounded-full border-2 border-th-fgd-2 flex items-center justify-center mb-2">
         {icon}
       </div>
-      <h3 className="mb-2">{title}</h3>
+      <h3 className="mb-3">{title}</h3>
       <p>{desc}</p>
     </div>
   )

@@ -15,35 +15,7 @@ module.exports = {
       body: 'TT Commons, sans-serif',
       mono: ['TT Mono, mono'],
     },
-    // screens: {
-    //   xs: '240px',
-    //   // => @media (min-width: 340px) { ... }
-    //   sm: '640px',
-    //   // => @media (min-width: 640px) { ... }
-
-    //   md: '768px',
-    //   // => @media (min-width: 768px) { ... }
-
-    //   lg: '1024px',
-    //   // => @media (min-width: 1024px) { ... }
-
-    //   xl: '1280px',
-    //   // => @media (min-width: 1280px) { ... }
-
-    //   '2xl': '1536px',
-    //   // => @media (min-width: 1536px) { ... }
-    // },
     extend: {
-      // backgroundImage: (_) => ({
-      //   'hero-img': "url('../public/img/Hero_BG.jpeg')",
-      //   'product-one': "url('../public/img/ProductFeature1.png')",
-      //   'product-two': "url('../public/img/ProductFeature2.png')",
-      //   'product-three': "url('../public/img/ProductFeature3.png')",
-      //   'product-four': "url('../public/img/redeem4.png')",
-      //   'bg-texture': "url('../public/img/bgtexture.png')",
-      //   'bg-cta': "url('../public/img/bgcta.jpeg')",
-      //   'home-bg': "url('../public/img/home_section.png')",
-      // }),
       height: {
         450: '450px',
         500: '500px',
@@ -71,8 +43,8 @@ module.exports = {
             dark: 'hsl(45, 86%, 57%)',
           },
           button: {
-            DEFAULT: 'hsl(269, 23%, 48%)',
-            hover: 'hsl(269, 23%, 43%)',
+            DEFAULT: '#7139C4',
+            hover: '#6432AE',
           },
           input: {
             bkg: 'hsl(256, 18%, 10%)',

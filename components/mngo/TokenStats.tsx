@@ -28,9 +28,9 @@ const TokenStats = () => {
 
   return (
     <SectionWrapper>
-      <h2 className="mb-6">{t('mngo-stats')}</h2>
+      <h2 className="mb-12">{t('mngo-stats')}</h2>
       {coingeckoMngoInfo?.data?.market_data ? (
-        <div className="border-b border-th-bkg-3 w-2/3">
+        <div className="border-b border-th-bkg-3 w-full md:w-2/3">
           <StatsRow
             isCurrency
             title={t('mngo:price')}

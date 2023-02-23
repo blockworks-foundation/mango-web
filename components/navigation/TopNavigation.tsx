@@ -1,13 +1,13 @@
-// import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
 import DesktopNavigation from './DesktopNavigation'
 import MobileNavigation from './MobileNavigation'
 
 const TopNavigation = () => {
   // const { t } = useTranslation(['common', 'navigation'])
   return (
-    <div className="lg:px-12 lg:py-6 px-6 py-3">
+    <div className="lg:px-20 lg:py-6 px-6 py-3">
       <div className="flex justify-between items-center">
-        <a href="https://mango.markets">
+        <Link href="/" shallow>
           <div className="flex flex-shrink-0 cursor-pointer items-center">
             <img
               className="h-8 w-8 flex-shrink-0"
@@ -18,7 +18,7 @@ const TopNavigation = () => {
               Mango
             </span>
           </div>
-        </a>
+        </Link>
         <DesktopNavigation />
         <MobileNavigation />
       </div>
