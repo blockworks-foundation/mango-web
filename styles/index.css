@@ -207,6 +207,11 @@ p {
   @apply text-th-fgd-3;
 }
 
+.font-mono {
+  -webkit-font-feature-settings: 'zero' 1;
+  font-feature-settings: 'zero' 1;
+}
+
 li {
   @apply text-sm text-th-fgd-3;
 }

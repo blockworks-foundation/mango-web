@@ -1,6 +1,7 @@
 import { CurrencyDollarIcon } from '@heroicons/react/20/solid'
 import { useTranslation } from 'next-i18next'
 import { ReactNode } from 'react'
+import SectionWrapper from '../shared/SectionWrapper'
 import HomeTopSection from './HomeTopSection'
 
 const HomePage = () => {
@@ -9,8 +10,8 @@ const HomePage = () => {
     <>
       {/* <div className="w-screen h-2 bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div> */}
       <HomeTopSection />
-      <div className="bg-th-bkg-1 py-16 relative z-10">
-        <div className="px-6 lg:px-12 grid grid-cols-6 gap-x-8 gap-y-12">
+      <SectionWrapper>
+        <div className="grid grid-cols-6 gap-x-8 gap-y-12">
           <IconWithText
             desc={t('competitive-fees-desc')}
             icon={<CurrencyDollarIcon className="h-6 w-6 text-th-fgd-2" />}
@@ -42,7 +43,7 @@ const HomePage = () => {
             title={t('competitive-fees')}
           />
         </div>
-      </div>
+      </SectionWrapper>
     </>
   )
 }

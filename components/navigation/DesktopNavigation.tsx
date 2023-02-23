@@ -21,7 +21,7 @@ const DesktopNavigation = () => {
             path="/mango-dao"
             title={t('navigation:mango-dao')}
           />
-          <NavigationItemLink path="/token" title={t('navigation:token')} />
+          <NavigationItemLink path="/mngo" title={t('navigation:mngo-token')} />
         </NavigationItemPanel>
       </NavigationItem>
       <NavigationItem title={t('navigation:products')}>
@@ -30,7 +30,7 @@ const DesktopNavigation = () => {
             path="/mango-dao"
             title={t('navigation:mango-dao')}
           />
-          <NavigationItemLink path="/token" title={t('navigation:token')} />
+          <NavigationItemLink path="/mngo" title={t('navigation:mngo-token')} />
         </NavigationItemPanel>
       </NavigationItem>
       <NavigationItem title={t('navigation:developers')}>

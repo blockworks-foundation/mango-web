@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import Button from '../shared/Button'
 import { useTranslation } from 'next-i18next'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
+import SectionWrapper from '../shared/SectionWrapper'
 
 const HomeTopSection = () => {
   const { t } = useTranslation(['common', 'home'])
@@ -18,7 +19,7 @@ const HomeTopSection = () => {
   // }, [])
 
   return (
-    <div className="lg:pl-12 pl-6 py-24 relative">
+    <SectionWrapper>
       <div className="w-full md:w-1/2 lg:w-2/5">
         <h1 className="mb-6">{t('home:long-short-everything')}</h1>
         <CheckBullet>{t('home:bullet-1')}</CheckBullet>
@@ -43,7 +44,7 @@ const HomeTopSection = () => {
         alt=""
       /> */}
       <div className="absolute w-1/2 h-full top-40 right-0 bg-th-button mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob"></div>
-    </div>
+    </SectionWrapper>
   )
 }
 

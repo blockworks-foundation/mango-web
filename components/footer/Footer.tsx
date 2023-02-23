@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 const Footer = () => {
   const { t } = useTranslation(['footer', 'navigation'])
   return (
-    <div className="lg:px-12 lg:pt-10 pb-4 px-6 pt-8 bg-th-bkg-2">
+    <div className="lg:px-12 lg:pt-10 pb-4 px-6 pt-8 bg-th-bkg-2 z-20 relative">
       <div className="flex flex-col-reverse lg:flex-row">
         <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start">
           <a href="https://mango.markets">
@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="w-full lg:w-3/4 flex flex-col sm:flex-row items-start justify-end sm:space-x-8 mb-8 lg:mb-0 border-b border-th-bkg-3 lg:border-b-0 pb-6 lg:pb-0">
           <FooterLinkColumn title={t('navigation:about')}>
             <FooterLink path="/mango-dao" title={t('navigation:mango-dao')} />
-            <FooterLink path="/token" title={t('navigation:token')} />
+            <FooterLink path="/mngo" title={t('navigation:mngo-token')} />
             <FooterLink path="#" isExternal title={t('navigation:v4-stats')} />
             <FooterLink path="/brand" title={t('navigation:brand')} />
           </FooterLinkColumn>

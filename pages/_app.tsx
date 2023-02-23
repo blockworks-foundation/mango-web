@@ -3,6 +3,9 @@ import { ThemeProvider } from 'next-themes'
 import '../styles/index.css'
 import LayoutWrapper from '../components/layout/LayoutWrapper'
 import { appWithTranslation } from 'next-i18next'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
 
 function App({ Component, pageProps }) {
   const title = 'Mango Markets'
@@ -37,11 +40,13 @@ function App({ Component, pageProps }) {
 
         <link rel="manifest" href="/manifest.json"></link>
       </Head>
-      <ThemeProvider defaultTheme="Mango">
-        <LayoutWrapper>
-          <Component {...pageProps} />
-        </LayoutWrapper>
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider defaultTheme="Mango">
+          <LayoutWrapper>
+            <Component {...pageProps} />
+          </LayoutWrapper>
+        </ThemeProvider>
+      </QueryClientProvider>
     </>
   )
 }
