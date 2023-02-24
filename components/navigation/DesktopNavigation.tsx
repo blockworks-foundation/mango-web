@@ -9,10 +9,21 @@ import {
   useState,
 } from 'react'
 import { useTranslation } from 'next-i18next'
-import Button from '../shared/Button'
+import Button, { IconButton } from '../shared/Button'
+import { useTheme } from 'next-themes'
+import { MoonIcon, SunIcon } from '@heroicons/react/20/solid'
 
 const DesktopNavigation = () => {
   const { t } = useTranslation(['common', 'navigation'])
+  const { theme, setTheme } = useTheme()
+
+  const toggleTheme = () => {
+    if (theme === 'Mango') {
+      setTheme('Light')
+    } else {
+      setTheme('Mango')
+    }
+  }
   return (
     <div className="hidden lg:flex lg:items-center space-x-8">
       <NavigationItem title={t('navigation:about')}>
@@ -42,6 +53,13 @@ const DesktopNavigation = () => {
       <NavigationItem title={t('navigation:careers')}>
         <div />
       </NavigationItem>
+      <IconButton hideBg size="medium" onClick={toggleTheme}>
+        {theme === 'Mango' ? (
+          <MoonIcon className="h-5 w-5" />
+        ) : (
+          <SunIcon className="h-5 w-5" />
+        )}
+      </IconButton>
       <a
         href="https://trade.mango.markets"
         target="_blank"
