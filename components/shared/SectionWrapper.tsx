@@ -1,3 +1,4 @@
+import { useTheme } from 'next-themes'
 import { ReactNode } from 'react'
 
 const SectionWrapper = ({
@@ -9,11 +10,14 @@ const SectionWrapper = ({
   className?: string
   noPaddingX?: boolean
 }) => {
+  const { theme } = useTheme()
   return (
     <div
       className={`bg-th-bkg-1 ${
         noPaddingX ? '' : 'lg:px-20 px-6'
-      } py-24 relative overflow-hidden ${className}`}
+      } py-24 relative overflow-hidden ${className} ${
+        theme === 'Light' ? 'border-b border-th-bkg-3' : ''
+      }`}
     >
       {children}
     </div>

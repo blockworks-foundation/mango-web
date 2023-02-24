@@ -1,6 +1,8 @@
 import { Transition } from '@headlessui/react'
 import { Fragment, ReactNode, useState } from 'react'
 import { useTranslation } from 'next-i18next'
+import ColorBlur from './ColorBlur'
+import { useTheme } from 'next-themes'
 
 const Steps = ({ steps }: { steps: StepItem[] }) => {
   const [highlighted, setHighlighted] = useState(0)
@@ -40,6 +42,7 @@ const StepItem = ({
   setHighlighted: (x: number) => void
 }) => {
   const { t } = useTranslation(['home'])
+  const { theme } = useTheme()
   const isHighlighted = highlighted === index
   const { children, desc, title, imagePath } = item
   return (
@@ -51,7 +54,11 @@ const StepItem = ({
       >
         <div
           className={`${
-            isHighlighted ? 'bg-th-bkg-1' : 'opacity-40'
+            isHighlighted
+              ? theme === 'Light'
+                ? 'bg-th-bkg-2'
+                : 'bg-th-bkg-1'
+              : 'opacity-40'
           } flex-1 flex flex-col md:flex-row items-start md:space-x-6 py-12 lg:px-20 px-6 h-64 default-transition`}
         >
           <h3>{`0${index + 1}`}</h3>
@@ -76,16 +83,15 @@ const StepItem = ({
         </Transition>
       </div>
       <Transition
-        // as={Fragment}
         show={isHighlighted}
-        enter="transition-all ease-in duration-500"
+        enter="transition-all ease-in duration-500 delay-200"
         enterFrom="opacity-0"
         enterTo="opacity-100"
         leave="transition-all ease-out duration-500"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <div className="absolute w-2/3 h-64 top-0 left-0 bg-th-button mix-blend-screen rounded-full filter blur-3xl opacity-20" />
+        <ColorBlur className="left-0 top-0" height="280px" width="66%" />
       </Transition>
     </div>
   )

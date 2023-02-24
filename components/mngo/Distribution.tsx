@@ -2,6 +2,7 @@ import { useTranslation } from 'next-i18next'
 import { useTheme } from 'next-themes'
 import { FunctionComponent, useState } from 'react'
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
+import ColorBlur from '../shared/ColorBlur'
 // import { COLORS } from '../../styles/colors'
 import SectionWrapper from '../shared/SectionWrapper'
 
@@ -19,19 +20,19 @@ const CHART_DATA = [
 const CHART_COLORS = [
   {
     Mango: '#9971D6',
-    Light: '#60bf4f',
-  },
-  {
-    Mango: '#6432AE',
-    Light: '#141414',
-  },
-  {
-    Mango: '#7139C4',
-    Light: '#BE6A6A',
+    Light: '#9971D6',
   },
   {
     Mango: '#8251CD',
-    Light: '#878787',
+    Light: '#8251CD',
+  },
+  {
+    Mango: '#7139C4',
+    Light: '#7139C4',
+  },
+  {
+    Mango: '#52298E',
+    Light: '#52298E',
   },
 ]
 
@@ -98,7 +99,11 @@ const Distribution: FunctionComponent = () => {
           </ResponsiveContainer>
         </div>
       </div>
-      <div className="absolute w-1/2 h-72 bottom-0 right-0 bg-th-button mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob" />
+      <ColorBlur
+        className="bottom-0 right-0 opacity-20"
+        height="360px"
+        width="50%"
+      />
     </SectionWrapper>
   )
 }

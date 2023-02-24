@@ -3,9 +3,8 @@ import DesktopNavigation from './DesktopNavigation'
 import MobileNavigation from './MobileNavigation'
 
 const TopNavigation = () => {
-  // const { t } = useTranslation(['common', 'navigation'])
   return (
-    <div className="lg:px-20 lg:py-6 px-6 py-3">
+    <div className="lg:px-20 lg:py-6 px-6 py-3 bg-transparent">
       <div className="flex justify-between items-center">
         <Link href="/" shallow>
           <div className="flex flex-shrink-0 cursor-pointer items-center">

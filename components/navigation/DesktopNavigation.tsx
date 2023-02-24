@@ -155,11 +155,11 @@ const NavigationItem = ({
 }
 
 const NavigationItemPanel = ({ children }: { children: ReactNode }) => {
-  return <div className="bg-th-bkg-2 py-2 space-y-4 rounded-md">{children}</div>
+  return <div className="bg-th-bkg-2 py-2 rounded-md">{children}</div>
 }
 
 const linkClassNames =
-  'px-4 py-2 font-medium text-th-fgd-2 block md:hover:text-th-fgd-4 default-transition'
+  'px-4 py-1 font-medium text-th-fgd-2 block md:hover:text-th-fgd-4 default-transition'
 
 const NavigationItemLink = ({
   path,

@@ -76,12 +76,12 @@ module.exports = {
         },
         'light-theme': {
           active: {
-            DEFAULT: 'hsl(0, 0%, 8%)',
+            DEFAULT: '#7139C4',
             dark: 'hsl(33, 100%, 52%)',
           },
           button: {
-            DEFAULT: 'hsl(0, 0%, 84%)',
-            hover: 'hsl(0, 0%, 74%)',
+            DEFAULT: '#F2C94C',
+            hover: '#EFBF2E',
           },
           input: {
             bkg: 'hsl(0, 0%, 97%)',

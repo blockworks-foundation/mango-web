@@ -5,6 +5,7 @@ import BotOne from '../icons/BotOne'
 import BotThree from '../icons/BotThree'
 import BotTwo from '../icons/BotTwo'
 import Button, { LinkButton } from '../shared/Button'
+import ColorBlur from '../shared/ColorBlur'
 import HeadingTagline from '../shared/HeadingTagline'
 import SectionWrapper from '../shared/SectionWrapper'
 import Steps from '../shared/Steps'
@@ -83,8 +84,16 @@ const HomePage = () => {
             <Button size="large">{t('home:swap-now')}</Button>
           </div>
         </div>
-        <div className="absolute w-1/2 h-48 -top-20 left-0 bg-th-down mix-blend-screen rounded-full filter blur-3xl opacity-20 animate-blob" />
-        <div className="absolute w-2/3 h-48 -bottom-20 right-0 bg-th-button mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob" />
+        <ColorBlur
+          className="animate-blob bg-th-down -top-20 left-0 opacity-20"
+          height="200px"
+          width="50%"
+        />
+        <ColorBlur
+          className="animate-blob -bottom-20 right-0 opacity-10"
+          height="200px"
+          width="66%"
+        />
       </SectionWrapper>
       <SectionWrapper>
         <div className="text-center">

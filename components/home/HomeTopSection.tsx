@@ -3,6 +3,7 @@ import Button from '../shared/Button'
 import { useTranslation } from 'next-i18next'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import SectionWrapper from '../shared/SectionWrapper'
+import ColorBlur from '../shared/ColorBlur'
 
 const HomeTopSection = () => {
   const { t } = useTranslation(['common', 'home'])
@@ -43,7 +44,11 @@ const HomeTopSection = () => {
         src="../img/trade.png"
         alt=""
       /> */}
-      <div className="absolute w-1/2 h-full top-40 right-0 bg-th-button mix-blend-screen rounded-full filter blur-3xl opacity-10 animate-blob"></div>
+      <ColorBlur
+        className="right-0 top-40 animate-blob"
+        height="100%"
+        width="50%"
+      />
     </SectionWrapper>
   )
 }
