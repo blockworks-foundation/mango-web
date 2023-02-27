@@ -27,7 +27,7 @@ const HomeTopSection = () => {
         <CheckBullet showNewBadge>{t('home:bullet-2')}</CheckBullet>
         <CheckBullet>{t('home:bullet-3')}</CheckBullet>
         <CheckBullet>{t('home:bullet-4')}</CheckBullet>
-        <CheckBullet showNewBadge>{t('home:bullet-5')}</CheckBullet>
+        {/* <CheckBullet showNewBadge>{t('home:bullet-5')}</CheckBullet> */}
         <div className="mt-8">
           <a
             href="https://trade.mango.markets"
@@ -64,9 +64,9 @@ const CheckBullet = ({
 }) => {
   const { t } = useTranslation('common')
   return (
-    <div className="mb-2 flex items-center space-x-2">
-      <CheckCircleIcon className="h-5 w-5 text-th-fgd-4 flex-shrink-0" />
-      <p className="text-lg text-th-fgd-2">{children}</p>
+    <div className="mb-2 flex items-center space-x-2.5">
+      <CheckCircleIcon className="h-6 w-6 text-th-fgd-4 flex-shrink-0" />
+      <p className="intro-p">{children}</p>
       {showNewBadge ? (
         <div className="p-1 rounded bg-th-active leading-none font-medium text-xxs uppercase text-th-bkg-1">
           {t('new')}

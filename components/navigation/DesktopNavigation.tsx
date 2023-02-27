@@ -33,25 +33,87 @@ const DesktopNavigation = () => {
             title={t('navigation:mango-dao')}
           />
           <NavigationItemLink path="/mngo" title={t('navigation:mngo-token')} />
+          <NavigationItemLink
+            path="#"
+            isExternal
+            title={t('navigation:v4-stats')}
+          />
+          <NavigationItemLink path="/brand" title={t('navigation:brand')} />
         </NavigationItemPanel>
       </NavigationItem>
       <NavigationItem title={t('navigation:products')}>
         <NavigationItemPanel>
           <NavigationItemLink
-            path="/mango-dao"
-            title={t('navigation:mango-dao')}
+            path="https://trade.mango.markets"
+            isExternal
+            title={t('navigation:mango-v4')}
           />
-          <NavigationItemLink path="/mngo" title={t('navigation:mngo-token')} />
+          <NavigationItemLink
+            path="/mobile-app"
+            title={t('navigation:mobile-app')}
+          />
         </NavigationItemPanel>
       </NavigationItem>
       <NavigationItem title={t('navigation:developers')}>
-        <div />
+        <NavigationItemPanel>
+          <NavigationItemLink
+            path="https://docs.mango.markets"
+            isExternal
+            title={t('navigation:docs')}
+          />
+          <NavigationItemLink
+            path="https://github.com/blockworks-foundation"
+            isExternal
+            title={t('navigation:github')}
+          />
+          <NavigationItemLink
+            path="https://github.com/blockworks-foundation"
+            isExternal
+            title={t('navigation:market-maker')}
+          />
+          <NavigationItemLink
+            path="https://github.com/blockworks-foundation"
+            isExternal
+            title={t('navigation:liquidator')}
+          />
+          <NavigationItemLink
+            path="https://github.com/blockworks-foundation"
+            isExternal
+            title={t('navigation:contribute')}
+          />
+        </NavigationItemPanel>
       </NavigationItem>
       <NavigationItem title={t('navigation:community')}>
-        <div />
+        <NavigationItemPanel>
+          <NavigationItemLink
+            path="https://dao.mango.markets"
+            isExternal
+            title={t('navigation:governance')}
+          />
+          <NavigationItemLink
+            path="https://discord.gg/2uwjsBc5yw"
+            isExternal
+            title={t('navigation:discord')}
+          />
+          <NavigationItemLink
+            path="https://twitter.com/mangomarkets"
+            isExternal
+            title={t('navigation:twitter')}
+          />
+          <NavigationItemLink
+            path="https://forum.mango.markets"
+            isExternal
+            title={t('navigation:forum')}
+          />
+        </NavigationItemPanel>
       </NavigationItem>
       <NavigationItem title={t('navigation:careers')}>
-        <div />
+        <NavigationItemPanel>
+          <NavigationItemLink
+            path="/careers"
+            title={t('navigation:work-with-us')}
+          />
+        </NavigationItemPanel>
       </NavigationItem>
       <IconButton hideBg size="medium" onClick={toggleTheme}>
         {theme === 'Mango' ? (
@@ -65,7 +127,7 @@ const DesktopNavigation = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button>{t('trade-now')}</Button>
+        <Button className="text-sm">{t('trade-now')}</Button>
       </a>
     </div>
   )
@@ -124,7 +186,7 @@ const NavigationItem = ({
           setIsOpen(!isOpen)
         }}
       >
-        <span className="font-display text-th-fgd-3 md:hover:text-th-fgd-1 default-transition">
+        <span className="font-display text-th-fgd-2 md:hover:text-th-fgd-1 default-transition">
           {title}
         </span>
       </Popover.Button>
@@ -159,7 +221,7 @@ const NavigationItemPanel = ({ children }: { children: ReactNode }) => {
 }
 
 const linkClassNames =
-  'px-4 py-1 font-medium text-th-fgd-2 block md:hover:text-th-fgd-4 default-transition'
+  'px-4 py-1 font-medium text-th-fgd-2 block md:hover:text-th-fgd-1 default-transition text-sm'
 
 const NavigationItemLink = ({
   path,

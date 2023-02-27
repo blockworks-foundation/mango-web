@@ -59,28 +59,30 @@ const StepItem = ({
                 ? 'bg-th-bkg-2'
                 : 'bg-th-bkg-1'
               : 'opacity-40'
-          } flex-1 flex flex-col md:flex-row items-start md:space-x-6 py-12 lg:px-20 px-6 h-64 default-transition`}
+          } flex flex-col md:flex-row md:space-x-6 items-start py-12 lg:pl-20 pl-6 h-64 default-transition pr-40 -mr-32 w-full`}
         >
           <h3>{`0${index + 1}`}</h3>
-          <div className="hidden md:block border-b-2 border-th-fgd-2 h-4 w-14" />
+          <div className="hidden md:block border-b-2 border-th-fgd-2 h-4 w-full max-w-[40px]" />
           <div>
             <h3 className="mb-3">{t(title)}</h3>
-            <p>{t(desc)}</p>
+            <p className="max-w-[800px]">{t(desc)}</p>
             {children ? children : null}
           </div>
         </div>
-        <Transition
-          as={Fragment}
-          show={isHighlighted}
-          enter="transition-all ease-in duration-300"
-          enterFrom="opacity-0 translate-x-4"
-          enterTo="opacity-100 translate-x-0"
-          leave="transition-all ease-out duration-300"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <img className="w-auto h-40 md:h-64 -ml-32" src={imagePath} alt="" />
-        </Transition>
+        <div className="w-64 flex-shrink-0">
+          <Transition
+            as={Fragment}
+            show={isHighlighted}
+            enter="transition-all ease-in duration-300"
+            enterFrom="opacity-0 translate-x-4"
+            enterTo="opacity-100 translate-x-0"
+            leave="transition-all ease-out duration-300"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <img className="w-auto h-40 md:h-64" src={imagePath} alt="" />
+          </Transition>
+        </div>
       </div>
       <Transition
         show={isHighlighted}

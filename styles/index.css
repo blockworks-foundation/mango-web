@@ -192,7 +192,7 @@ h1 {
 }
 
 h2 {
-  @apply text-4xl lg:text-5xl;
+  @apply text-5xl lg:text-6xl;
 }
 
 h3 {
@@ -204,7 +204,11 @@ h4 {
 }
 
 p {
-  @apply text-th-fgd-3;
+  @apply text-th-fgd-3 text-lg;
+}
+
+a {
+  @apply text-lg;
 }
 
 .font-mono {
@@ -214,6 +218,10 @@ p {
 
 li {
   @apply text-sm text-th-fgd-3;
+}
+
+.intro-p {
+  @apply text-xl text-th-fgd-2;
 }
 
 @layer utilities {

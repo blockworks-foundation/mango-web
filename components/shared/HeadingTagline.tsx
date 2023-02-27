@@ -1,8 +1,7 @@
 const HeadingTagline = ({ text }: { text: string }) => {
   return (
-    <div className="flex items-center space-x-4 max-w-[204px]">
-      <div className="border-2 border-th-fgd-4 h-full py-2" />
-      <p className="text-lg">{text}</p>
+    <div className="border-l-4 border-th-fgd-4 max-w-[204px]">
+      <p className="text-xl ml-4">{text}</p>
     </div>
   )
 }

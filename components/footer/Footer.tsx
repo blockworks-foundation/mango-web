@@ -20,15 +20,15 @@ const Footer = () => {
               </span>
             </div>
           </Link>
-          <p className="mt-3 mb-4 max-w-[420px] text-center lg:text-left">
+          <p className="mt-3 mb-4 max-w-[420px] text-sm text-center lg:text-left">
             {t('footer-mission')}
           </p>
           <div className="flex space-x-3">
-            <a className="text-th-fgd-4 whitespace-nowrap" href="#">
+            <a className="text-th-fgd-4 text-sm whitespace-nowrap" href="#">
               {t('terms-of-service')}
             </a>
             <div className="border-r border-th-bkg-4" />
-            <a className="text-th-fgd-4 whitespace-nowrap" href="#">
+            <a className="text-th-fgd-4 text-sm whitespace-nowrap" href="#">
               {t('privacy-policy')}
             </a>
           </div>
@@ -98,11 +98,6 @@ const Footer = () => {
             />
           </FooterLinkColumn>
           <FooterLinkColumn title={t('navigation:careers')}>
-            <FooterLink
-              path="https://trade.mango.markets"
-              isExternal
-              title={t('navigation:mango-v4')}
-            />
             <FooterLink path="/careers" title={t('navigation:work-with-us')} />
           </FooterLinkColumn>
         </div>
@@ -124,7 +119,7 @@ const FooterLinkColumn = ({
   title: string
 }) => {
   return (
-    <div className="w-full lg:w-24 xl:w-28 mb-6 last:mb-0 sm:mb-0">
+    <div className="w-full lg:w-28 xl:w-32 mb-6 last:mb-0 sm:mb-0">
       <h4 className="text-th-fgd-3 text-sm mb-3">{title}</h4>
       {children}
     </div>
@@ -132,7 +127,7 @@ const FooterLinkColumn = ({
 }
 
 const linkClassNames =
-  'font-medium text-th-fgd-2 block mb-1.5 last:mb-0 md:hover:text-th-fgd-4 default-transition'
+  'font-medium text-th-fgd-2 block mb-1.5 last:mb-0 md:hover:text-th-fgd-4 default-transition text-sm'
 
 const FooterLink = ({
   path,
