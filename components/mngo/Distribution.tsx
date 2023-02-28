@@ -49,21 +49,21 @@ const Distribution: FunctionComponent = () => {
 
   return (
     <SectionWrapper>
-      <h2 className="mb-6">{t('distribution')}</h2>
+      <h2 className="mb-12">{t('distribution')}</h2>
       <div className="flex flex-col-reverse md:flex-row items-center md:justify-between z-10 relative">
-        <div className="grid grid-cols-4 gap-6 w-full md:w-1/2">
+        <div className="w-full md:w-1/2 space-y-8">
           {CHART_DATA.map((data) => {
             const { label, desc, value } = data
             return (
               <div
                 className={`${
                   label === mouseData ? '' : 'opacity-40'
-                } col-span-4 sm:col-span-2 md:col-span-4 default-transition cursor-pointer w-max`}
+                } default-transition cursor-pointer`}
                 key={`item-${label}`}
                 onMouseEnter={() => setMouseData(label)}
               >
-                <h3 className="mb-3">{`${value}% ${label}`}</h3>
-                <p>{desc}</p>
+                <h3 className="mb-3">{`${value}% ${t(label)}`}</h3>
+                <p>{t(desc)}</p>
               </div>
             )
           })}

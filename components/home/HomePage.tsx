@@ -2,19 +2,19 @@ import {
   ArrowPathRoundedSquareIcon,
   BoltIcon,
   BuildingLibraryIcon,
-  ChevronRightIcon,
   CurrencyDollarIcon,
   DevicePhoneMobileIcon,
 } from '@heroicons/react/20/solid'
 import { useTranslation } from 'next-i18next'
-import { ReactNode } from 'react'
 import BotOne from '../icons/BotOne'
 import BotThree from '../icons/BotThree'
 import BotTwo from '../icons/BotTwo'
 import LiquidIcon from '../icons/LiquidIcon'
-import Button, { LinkButton } from '../shared/Button'
+import Button from '../shared/Button'
 import ColorBlur from '../shared/ColorBlur'
 import HeadingTagline from '../shared/HeadingTagline'
+import IconWithText from '../shared/IconWithText'
+import InlineImageWithText from '../shared/InlineImageWithText'
 import SectionWrapper from '../shared/SectionWrapper'
 import Steps from '../shared/Steps'
 import HomeTopSection from './HomeTopSection'
@@ -213,86 +213,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-const IconWithText = ({
-  desc,
-  icon,
-  linkPath,
-  linkText,
-  noBorder,
-  title,
-}: {
-  desc: string
-  icon: ReactNode
-  linkPath?: string
-  linkText?: string
-  noBorder?: boolean
-  title: string
-}) => {
-  return (
-    <div className="col-span-6 sm:col-span-3 md:col-span-2">
-      <div
-        className={`${
-          noBorder
-            ? ''
-            : 'flex items-center justify-center h-10 w-10 rounded-full bg-th-bkg-3'
-        } mb-3`}
-      >
-        {icon}
-      </div>
-      <h3 className="mb-3">{title}</h3>
-      <p>{desc}</p>
-      {linkText ? (
-        <a
-          className="block mt-6"
-          href={linkPath}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <LinkButton className="flex items-center">
-            {linkText}
-            <ChevronRightIcon className="h-5 w-5 ml-1" />
-          </LinkButton>
-        </a>
-      ) : null}
-    </div>
-  )
-}
-
-const InlineImageWithText = ({
-  desc,
-  title,
-  imageSrc,
-  linkPath,
-  linkText,
-  reverse,
-}: {
-  desc: string
-  title: string
-  imageSrc: string
-  linkPath: string
-  linkText: string
-  reverse?: boolean
-}) => {
-  return (
-    <div
-      className={`flex flex-col md:flex-row md:items-center md:space-x-10 mt-12 ${
-        reverse ? 'md:flex-row-reverse md:justify-between' : ''
-      }`}
-    >
-      <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
-        <img className="w-1/2 sm:w-auto h-auto" src={imageSrc} alt="" />
-      </div>
-      <div className="w-full md:w-1/2">
-        <h3 className="mb-3">{title}</h3>
-        <p className="mb-6">{desc}</p>
-        <a href={linkPath} rel="noopener noreferrer" target="_blank">
-          <LinkButton className="flex items-center">
-            {linkText}
-            <ChevronRightIcon className="h-5 w-5 ml-1" />
-          </LinkButton>
-        </a>
-      </div>
-    </div>
-  )
-}

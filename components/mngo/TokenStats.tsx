@@ -73,9 +73,10 @@ const StatsRow = ({
   value: string | undefined
   isCurrency?: boolean
 }) => {
+  const { t } = useTranslation('mngo')
   return (
     <div className="flex justify-between p-6 border-t border-th-bkg-3">
-      <p>{title}</p>
+      <p>{t(title)}</p>
       <p className="font-mono text-th-fgd-1">
         {value
           ? isCurrency
