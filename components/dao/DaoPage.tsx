@@ -19,7 +19,7 @@ const PROPOSAL_STEPS = (t: TFunction) => [
     imagePath: '/images/img-placeholder.png',
     title: 'dao:discuss',
     children: (
-      <div className="flex items-center space-x-6 mt-6">
+      <div className="flex items-center space-x-6 mt-4 lg:mt-6">
         <a
           href="https://forum.mango.markets"
           rel="noopener noreferrer"
@@ -48,7 +48,7 @@ const PROPOSAL_STEPS = (t: TFunction) => [
     imagePath: '/images/img-placeholder.png',
     title: 'dao:propose',
     children: (
-      <div className="mt-6">
+      <div className="mt-4 lg:mt-6">
         <a href="#" rel="noopener noreferrer" target="_blank">
           <LinkButton className="flex items-center">
             {t('dao:list-market')}
@@ -63,7 +63,7 @@ const PROPOSAL_STEPS = (t: TFunction) => [
     imagePath: '/images/img-placeholder.png',
     title: 'dao:vote',
     children: (
-      <div className="mt-6">
+      <div className="mt-4 lg:mt-6">
         <a
           href="https://dao.mango.markets"
           rel="noopener noreferrer"

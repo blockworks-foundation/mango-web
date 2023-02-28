@@ -200,7 +200,7 @@ h2 {
 }
 
 h3 {
-  @apply text-lg lg:text-2xl;
+  @apply text-xl lg:text-2xl;
 }
 
 h4 {
@@ -208,11 +208,11 @@ h4 {
 }
 
 p {
-  @apply text-th-fgd-3 text-lg;
+  @apply text-th-fgd-3 text-base lg:text-lg;
 }
 
 a {
-  @apply text-lg;
+  @apply text-base lg:text-lg;
 }
 
 .font-mono {
@@ -225,7 +225,7 @@ li {
 }
 
 .intro-p {
-  @apply text-xl text-th-fgd-2;
+  @apply text-lg md:text-xl text-th-fgd-2;
 }
 
 @layer utilities {

@@ -17,7 +17,7 @@
     "power-people": "Power to the people",
     "proposal-life-cycle": "The proposal life cycle.",
     "propose": "Propose",
-    "propose-desc": "If you hold at least 100,000 MNGO you can create an on-chain proposal. There's a simple interface for common activities like listing markets and token transfers.",
+    "propose-desc": "If you hold at least 100,000 MNGO you can create an on-chain proposal. It's simple for common activities like listing markets and token transfers.",
     "vote": "Vote",
     "vote-desc": "Mango token holders vote on-chain for or against the proposal. Votes are weighted by the amount of MNGO you have. Tokens can be locked for additional vote weight.",
     "open-finances": "Open financials",

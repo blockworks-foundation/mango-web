@@ -85,15 +85,15 @@ const HomePage = () => {
         </div>
       </SectionWrapper>
       <SectionWrapper>
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-7 h-96 flex justify-center relative">
+        <div className="grid grid-cols-12 gap-6 md:gap-8">
+          <div className="col-span-4 md:col-span-7 h-96 flex justify-center relative">
             <img
               className="absolute z-10 w-full h-auto max-w-[440px]"
               src="/images/swap-mobile.png"
               alt=""
             />
           </div>
-          <div className="col-span-5">
+          <div className="col-span-8 md:col-span-5">
             <h2 className="mb-4">{t('home:swap-heading')}</h2>
             <p className="intro-p mb-8">{t('home:swap-desc')}</p>
             <h3 className="mb-3">{t('home:swap-highlight-1-heading')}</h3>
@@ -198,11 +198,11 @@ const HomePage = () => {
         <Steps steps={STEPS} />
       </SectionWrapper>
       <SectionWrapper>
-        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
-          <div className="col-span-12 sm:col-span-6">
+        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row sm:items-end mb-12 md:mb-16">
+          <div className="col-span-12 order-2 sm:order-1 sm:col-span-6">
             <h2>{t('home:crypto-loves-mango')}</h2>
           </div>
-          <div className="col-span-12 sm:col-span-6 flex justify-end">
+          <div className="col-span-12 order-1 sm:order-2 sm:col-span-6 flex sm:justify-end">
             <HeadingTagline text={t('home:saying-about-us')} />
           </div>
         </div>

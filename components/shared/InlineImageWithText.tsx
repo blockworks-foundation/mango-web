@@ -22,8 +22,8 @@ const InlineImageWithText = ({
         reverse ? 'md:flex-row-reverse md:justify-between' : ''
       }`}
     >
-      <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
-        <img className="w-1/2 sm:w-auto h-auto" src={imageSrc} alt="" />
+      <div className="w-full md:w-1/2 flex md:justify-center mb-8 md:mb-0">
+        <img className="w-48 sm:w-auto h-auto" src={imageSrc} alt="" />
       </div>
       <div className="w-full md:w-1/2">
         <h3 className="mb-3">{title}</h3>

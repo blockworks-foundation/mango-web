@@ -56,20 +56,20 @@ const StepItem = ({
           className={`${
             isHighlighted
               ? theme === 'Light'
-                ? 'bg-th-bkg-2'
-                : 'bg-th-bkg-1'
-              : 'opacity-40'
-          } flex flex-col md:flex-row md:space-x-6 items-start py-12 lg:pl-20 pl-6 h-64 default-transition pr-40 -mr-32 w-full`}
+                ? 'md:bg-th-bkg-2'
+                : 'md:bg-th-bkg-1'
+              : 'md:opacity-40'
+          } flex flex-row space-x-4 md:space-x-6 mb-8 last:mb-0 md:mb-0 items-start md:py-12 lg:pl-20 pl-6 h-auto md:h-64 default-transition md:pr-40 md:-mr-32 w-full`}
         >
           <h3>{`0${index + 1}`}</h3>
-          <div className="hidden md:block border-b-2 border-th-fgd-2 h-4 w-full max-w-[40px]" />
+          <div className="border-b-2 border-th-fgd-2 h-4 w-full max-w-[24px] md:max-w-[40px]" />
           <div>
             <h3 className="mb-3">{t(title)}</h3>
             <p className="max-w-[800px]">{t(desc)}</p>
             {children ? children : null}
           </div>
         </div>
-        <div className="w-64 flex-shrink-0">
+        <div className="hidden md:block w-64 flex-shrink-0">
           <Transition
             as={Fragment}
             show={isHighlighted}
@@ -85,6 +85,7 @@ const StepItem = ({
         </div>
       </div>
       <Transition
+        className="hidden md:block"
         show={isHighlighted}
         enter="transition-all ease-in duration-500 delay-200"
         enterFrom="opacity-0"
