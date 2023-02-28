@@ -40,6 +40,7 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.2.1",
     "react-i18next": "^12.1.5",
+    "react-responsive-carousel": "^3.2.23",
     "recharts": "^2.4.3",
     "zustand": "^3.4.1"
   },

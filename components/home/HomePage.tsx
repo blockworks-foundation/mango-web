@@ -18,6 +18,7 @@ import HeadingTagline from '../shared/HeadingTagline'
 import SectionWrapper from '../shared/SectionWrapper'
 import Steps from '../shared/Steps'
 import HomeTopSection from './HomeTopSection'
+import Testimonials from './Testimonials'
 
 const STEPS = [
   {
@@ -195,6 +196,17 @@ const HomePage = () => {
           </div>
         </div>
         <Steps steps={STEPS} />
+      </SectionWrapper>
+      <SectionWrapper>
+        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
+          <div className="col-span-12 sm:col-span-6">
+            <h2>{t('home:crypto-loves-mango')}</h2>
+          </div>
+          <div className="col-span-12 sm:col-span-6 flex justify-end">
+            <HeadingTagline text={t('home:saying-about-us')} />
+          </div>
+        </div>
+        <Testimonials />
       </SectionWrapper>
     </>
   )
