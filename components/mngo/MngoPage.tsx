@@ -5,8 +5,7 @@ import {
 } from '@heroicons/react/20/solid'
 import { useTranslation } from 'next-i18next'
 import dynamic from 'next/dynamic'
-import Button from '../shared/Button'
-import ColorBlur from '../shared/ColorBlur'
+import ChildPageTopSection from '../shared/ChildPageTopSection'
 import HeadingTagline from '../shared/HeadingTagline'
 import IconWithText from '../shared/IconWithText'
 import InlineImageWithText from '../shared/InlineImageWithText'
@@ -17,34 +16,15 @@ const Distribution = dynamic(() => import('./Distribution'), {
 })
 
 const MngoPage = () => {
-  const { t } = useTranslation(['common, mngo'])
+  const { t } = useTranslation(['common', 'mngo'])
   return (
     <>
-      <SectionWrapper>
-        <div className="w-full flex flex-col items-center text-center">
-          <h1 className="mb-6">{t('mngo:powered-by-mngo')}</h1>
-          <p className="intro-p">{t('mngo:mngo-desc')}</p>
-          <div className="mt-8">
-            <a
-              href="https://trade.mango.markets"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="large">{t('mngo:buy-mngo')}</Button>
-            </a>
-          </div>
-        </div>
-        <ColorBlur
-          className="top-40 -right-80 bg-th-down animate-blob"
-          height="100%"
-          width="66%"
-        />
-        <ColorBlur
-          className="top-80 left-40 delay-500 animate-blob"
-          height="100%"
-          width="50%"
-        />
-      </SectionWrapper>
+      <ChildPageTopSection
+        heading={t('mngo:powered-by-mngo')}
+        intro={t('mngo:mngo-desc')}
+        linkPath="https://trade.mango.markets"
+        buttonText={t('mngo:buy-mngo')}
+      />
       <TokenStats />
       <SectionWrapper>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">

@@ -14,7 +14,7 @@ const SectionWrapper = ({
   return (
     <div
       className={`bg-th-bkg-1 ${
-        noPaddingX ? '' : 'lg:px-20 px-6'
+        noPaddingX ? '' : 'page-x-padding'
       } py-24 relative overflow-hidden ${className} ${
         theme === 'Light' ? 'border-b border-th-bkg-3' : ''
       }`}

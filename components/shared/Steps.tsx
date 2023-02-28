@@ -41,7 +41,7 @@ const StepItem = ({
   highlighted: number
   setHighlighted: (x: number) => void
 }) => {
-  const { t } = useTranslation(['home'])
+  const { t } = useTranslation(['home', 'dao'])
   const { theme } = useTheme()
   const isHighlighted = highlighted === index
   const { children, desc, title, imagePath } = item

@@ -187,11 +187,11 @@ const HomePage = () => {
         </div>
       </SectionWrapper>
       <SectionWrapper noPaddingX>
-        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
-          <div className="col-span-12 sm:col-span-6 lg:px-20 px-6">
+        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">
+          <div className="col-span-12 sm:col-span-6 page-x-padding">
             <HeadingTagline text={t('home:getting-started')} />
           </div>
-          <div className="col-span-12 sm:col-span-6 lg:px-20 px-6">
+          <div className="col-span-12 sm:col-span-6 page-x-padding">
             <h2>{t('home:new-to-mango')}</h2>
           </div>
         </div>

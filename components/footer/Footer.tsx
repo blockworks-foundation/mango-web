@@ -21,15 +21,15 @@ const Footer = () => {
             </div>
           </Link>
           <p className="mt-3 mb-4 max-w-[420px] text-sm text-center lg:text-left">
-            {t('footer-mission')}
+            {t('footer:footer-mission')}
           </p>
           <div className="flex space-x-3">
             <a className="text-th-fgd-4 text-sm whitespace-nowrap" href="#">
-              {t('terms-of-service')}
+              {t('footer:terms-of-service')}
             </a>
             <div className="border-r border-th-bkg-4" />
             <a className="text-th-fgd-4 text-sm whitespace-nowrap" href="#">
-              {t('privacy-policy')}
+              {t('footer:privacy-policy')}
             </a>
           </div>
         </div>
@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="flex justify-center mt-3 lg:mt-6 font-mono text-xs text-th-fgd-4">
-        {t('copyright')}
+        {t('footer:copyright')}
       </p>
     </div>
   )

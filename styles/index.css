@@ -178,6 +178,10 @@ svg {
   @apply transition duration-300 ease-out;
 }
 
+.page-x-padding {
+  @apply lg:px-20 px-6;
+}
+
 /* Type */
 
 h1,
@@ -192,7 +196,7 @@ h1 {
 }
 
 h2 {
-  @apply text-5xl lg:text-6xl;
+  @apply text-4xl lg:text-5xl;
 }
 
 h3 {
