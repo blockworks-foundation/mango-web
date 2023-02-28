@@ -163,7 +163,7 @@ const HomePage = () => {
           <IconWithText
             desc={t('home:market-maker-desc')}
             icon={<BotOne className="h-16 w-16 mb-4 text-th-fgd-2" />}
-            linkPath="#"
+            linkPath="https://github.com/blockworks-foundation/mango-v4/tree/dev/ts/client/scripts/mm"
             linkText={t('home:market-maker-link')}
             noBorder
             title={t('home:market-maker')}

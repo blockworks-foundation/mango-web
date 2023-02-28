@@ -60,7 +60,7 @@ const Footer = () => {
               title={t('navigation:github')}
             />
             <FooterLink
-              path="https://github.com/blockworks-foundation"
+              path="https://github.com/blockworks-foundation/mango-v4/tree/dev/ts/client/scripts/mm"
               isExternal
               title={t('navigation:market-maker')}
             />

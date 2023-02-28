@@ -1,5 +1,4 @@
 import { Popover, Transition } from '@headlessui/react'
-import Link from 'next/link'
 import {
   Fragment,
   ReactNode,
@@ -12,6 +11,7 @@ import { useTranslation } from 'next-i18next'
 import Button, { IconButton } from '../shared/Button'
 import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from '@heroicons/react/20/solid'
+import NavigationItemLink from './NavigationItemLink'
 
 const DesktopNavigation = () => {
   const { t } = useTranslation(['common', 'navigation'])
@@ -67,7 +67,7 @@ const DesktopNavigation = () => {
             title={t('navigation:github')}
           />
           <NavigationItemLink
-            path="https://github.com/blockworks-foundation"
+            path="https://github.com/blockworks-foundation/mango-v4/tree/dev/ts/client/scripts/mm"
             isExternal
             title={t('navigation:market-maker')}
           />
@@ -218,27 +218,4 @@ const NavigationItem = ({
 
 const NavigationItemPanel = ({ children }: { children: ReactNode }) => {
   return <div className="bg-th-bkg-2 py-2 rounded-md">{children}</div>
-}
-
-const linkClassNames =
-  'px-4 py-1 font-medium text-th-fgd-2 block md:hover:text-th-fgd-1 default-transition text-sm'
-
-const NavigationItemLink = ({
-  path,
-  title,
-  isExternal = false,
-}: {
-  isExternal?: boolean
-  path: string
-  title: string
-}) => {
-  return isExternal ? (
-    <a className={linkClassNames} href={path}>
-      {title}
-    </a>
-  ) : (
-    <Link href={path} shallow>
-      <span className={linkClassNames}>{title}</span>
-    </Link>
-  )
 }
