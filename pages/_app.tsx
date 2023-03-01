@@ -10,9 +10,9 @@ const queryClient = new QueryClient()
 function App({ Component, pageProps }) {
   const title = 'Mango Markets'
   const description =
-    'Decentralised, cross-margin trading up to 20x leverage with lightning speed and near-zero fees.'
+    'Decentralized, cross-margin trading up to 20x leverage with lightning speed and near-zero fees.'
   const keywords =
-    'Mango Markets, Serum, SRM, Serum DEX, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Decentralize, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SerumBTC, SerumUSD, SRM Tokens, SPL Tokens'
+    'Mango Markets, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
 
   return (
     <>

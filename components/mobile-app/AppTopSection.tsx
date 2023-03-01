@@ -1,42 +1,45 @@
-import Button from '../shared/Button'
 import { useTranslation } from 'next-i18next'
 import SectionWrapper from '../shared/SectionWrapper'
 import ColorBlur from '../shared/ColorBlur'
 import { useTheme } from 'next-themes'
 import CheckBullet from '../shared/CheckBullet'
 
-const HomeTopSection = () => {
-  const { t } = useTranslation(['common', 'home'])
+const AppTopSection = () => {
+  const { t } = useTranslation(['common', 'mobile-app'])
   const { theme } = useTheme()
-  // const sideImage = useRef(null)
-  // const tl = gsap.timeline()
-
-  // useEffect(() => {
-  //   //image animation
-  //   tl.to(sideImage.current, 0.7, {
-  //     opacity: 1,
-  //     y: 0,
-  //     ease: Power3.easeOut,
-  //   })
-  // }, [])
 
   return (
     <SectionWrapper>
       <div className="grid grid-cols-12">
         <div className="col-span-12 lg:col-span-5">
-          <h1 className="mb-6">{t('home:long-short-everything')}</h1>
-          <CheckBullet>{t('home:bullet-1')}</CheckBullet>
-          <CheckBullet>{t('home:bullet-2')}</CheckBullet>
-          <CheckBullet>{t('home:bullet-3')}</CheckBullet>
-          <CheckBullet showNewBadge>{t('home:bullet-4')}</CheckBullet>
-          {/* <CheckBullet showNewBadge>{t('home:bullet-5')}</CheckBullet> */}
-          <div className="mt-8">
+          <h1 className="mb-6">{t('mobile-app:page-heading')}</h1>
+          <CheckBullet>{t('mobile-app:bullet-1')}</CheckBullet>
+          <CheckBullet>{t('mobile-app:bullet-2')}</CheckBullet>
+          <CheckBullet>{t('mobile-app:bullet-3')}</CheckBullet>
+          <CheckBullet>{t('mobile-app:bullet-4')}</CheckBullet>
+          <CheckBullet>{t('mobile-app:bullet-5')}</CheckBullet>
+          <div className="mt-8 flex space-x-6">
             <a
-              href="https://trade.mango.markets"
+              href="https://apps.apple.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="large">{t('trade-now')}</Button>
+              <img
+                className="w-auto h-12 rounded-lg"
+                src="/images/app-store-dark.png"
+                alt="iOS App Store"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=markets.mango"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-auto h-12 rounded-lg"
+                src="/images/google-play-dark.png"
+                alt="Google Play Store"
+              />
             </a>
           </div>
         </div>
@@ -61,4 +64,4 @@ const HomeTopSection = () => {
   )
 }
 
-export default HomeTopSection
+export default AppTopSection

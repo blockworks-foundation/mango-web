@@ -2,6 +2,7 @@ import {
   ArrowPathRoundedSquareIcon,
   BoltIcon,
   BuildingLibraryIcon,
+  ChevronRightIcon,
   CurrencyDollarIcon,
   DevicePhoneMobileIcon,
 } from '@heroicons/react/20/solid'
@@ -11,7 +12,7 @@ import BotOne from '../icons/BotOne'
 import BotThree from '../icons/BotThree'
 import BotTwo from '../icons/BotTwo'
 import LiquidIcon from '../icons/LiquidIcon'
-import Button from '../shared/Button'
+import Button, { LinkButton } from '../shared/Button'
 import ColorBlur from '../shared/ColorBlur'
 import HeadingTagline from '../shared/HeadingTagline'
 import IconWithText from '../shared/IconWithText'
@@ -20,11 +21,35 @@ import SectionWrapper from '../shared/SectionWrapper'
 import Steps from '../shared/Steps'
 import HomeTopSection from './HomeTopSection'
 
-const STEPS = [
+const STEPS = (t) => [
   {
     desc: 'home:get-wallet-desc',
     imagePath: '/images/img-placeholder.png',
     title: 'home:get-wallet',
+    children: (
+      <div className="flex items-center space-x-6 mt-4 lg:mt-6">
+        <a
+          href="https://chrome.google.com/webstore/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <LinkButton className="flex items-center">
+            {t('home:get-phantom')}
+            <ChevronRightIcon className="h-6 w-6 ml-1.5" />
+          </LinkButton>
+        </a>
+        <a
+          href="https://chrome.google.com/webstore/detail/solflare-wallet/bhhhlbepdkbapadjdnnojkbgioiodbic"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <LinkButton className="flex items-center">
+            {t('home:get-solflare')}
+            <ChevronRightIcon className="h-6 w-6 ml-1.5" />
+          </LinkButton>
+        </a>
+      </div>
+    ),
   },
   {
     desc: 'home:fund-wallet-desc',
@@ -205,7 +230,7 @@ const HomePage = () => {
             <h2>{t('home:new-to-mango')}</h2>
           </div>
         </div>
-        <Steps steps={STEPS} />
+        <Steps steps={STEPS(t)} />
       </SectionWrapper>
       {/* add the below when we have some textimonials */}
       {/* <SectionWrapper>

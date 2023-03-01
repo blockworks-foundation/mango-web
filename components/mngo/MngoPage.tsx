@@ -66,7 +66,7 @@ const MngoPage = () => {
           desc={t('mngo:vested-grants-desc')}
           title={t('mngo:vested-grants')}
           imageSrc="/images/img-placeholder.png"
-          linkPath="#"
+          linkPath="https://dao.mango.markets/dao/MNGO/token-stats"
           linkText={t('mngo:view-emissions')}
           reverse
         />

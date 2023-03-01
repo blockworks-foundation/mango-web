@@ -3,8 +3,7 @@ import { IconButton } from '../shared/Button'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Transition } from '@headlessui/react'
 import NavigationItemLink from './NavigationItemLink'
-import { useTranslation } from 'react-i18next'
-// import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 
 const MobileNavigation = () => {
   const [showMenu, setShowMenu] = useState(false)

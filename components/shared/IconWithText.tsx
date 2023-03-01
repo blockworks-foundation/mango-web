@@ -10,7 +10,7 @@ const IconWithText = ({
   noBorder,
   title,
 }: {
-  desc: string
+  desc?: string
   icon: ReactNode
   linkPath?: string
   linkText?: string
