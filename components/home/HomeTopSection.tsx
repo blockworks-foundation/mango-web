@@ -27,9 +27,9 @@ const HomeTopSection = () => {
         <div className="col-span-12 lg:col-span-5">
           <h1 className="mb-6">{t('home:long-short-everything')}</h1>
           <CheckBullet>{t('home:bullet-1')}</CheckBullet>
-          <CheckBullet showNewBadge>{t('home:bullet-2')}</CheckBullet>
+          <CheckBullet>{t('home:bullet-2')}</CheckBullet>
           <CheckBullet>{t('home:bullet-3')}</CheckBullet>
-          <CheckBullet>{t('home:bullet-4')}</CheckBullet>
+          <CheckBullet showNewBadge>{t('home:bullet-4')}</CheckBullet>
           {/* <CheckBullet showNewBadge>{t('home:bullet-5')}</CheckBullet> */}
           <div className="mt-8">
             <a
@@ -80,12 +80,14 @@ const CheckBullet = ({
   return (
     <div className="mb-2 flex items-center space-x-2.5">
       <CheckCircleIcon className="h-6 w-6 text-th-fgd-4 flex-shrink-0" />
-      <p className="intro-p">{children}</p>
-      {showNewBadge ? (
-        <div className="p-1 rounded bg-th-active leading-none font-medium text-xxs uppercase text-th-bkg-1">
-          {t('new')}
-        </div>
-      ) : null}
+      <p className="intro-p">
+        {children}
+        {showNewBadge ? (
+          <span className="py-0.5 px-1 rounded bg-th-active font-medium text-sm uppercase text-th-bkg-1 ml-2">
+            {t('new')}
+          </span>
+        ) : null}
+      </p>
     </div>
   )
 }
