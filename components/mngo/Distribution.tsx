@@ -2,8 +2,6 @@ import { useTranslation } from 'next-i18next'
 import { useTheme } from 'next-themes'
 import { FunctionComponent, useState } from 'react'
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
-import ColorBlur from '../shared/ColorBlur'
-// import { COLORS } from '../../styles/colors'
 import SectionWrapper from '../shared/SectionWrapper'
 
 const CHART_DATA = [
@@ -99,11 +97,6 @@ const Distribution: FunctionComponent = () => {
           </ResponsiveContainer>
         </div>
       </div>
-      <ColorBlur
-        className="bottom-0 right-0 opacity-20"
-        height="360px"
-        width="50%"
-      />
     </SectionWrapper>
   )
 }

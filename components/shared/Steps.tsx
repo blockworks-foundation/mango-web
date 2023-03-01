@@ -94,7 +94,11 @@ const StepItem = ({
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <ColorBlur className="left-0 top-0" height="280px" width="66%" />
+        <ColorBlur
+          className="left-0 top-0 bg-th-down"
+          height="280px"
+          width="66%"
+        />
       </Transition>
     </div>
   )

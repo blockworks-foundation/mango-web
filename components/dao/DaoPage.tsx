@@ -7,6 +7,7 @@ import {
 import { TFunction, useTranslation } from 'next-i18next'
 import { LinkButton } from '../shared/Button'
 import ChildPageTopSection from '../shared/ChildPageTopSection'
+import ColorBlur from '../shared/ColorBlur'
 import HeadingTagline from '../shared/HeadingTagline'
 import IconWithText from '../shared/IconWithText'
 import InlineImageWithText from '../shared/InlineImageWithText'
@@ -131,6 +132,11 @@ const DaoPage = () => {
             title={t('dao:fees-accrue')}
           />
         </div>
+        <ColorBlur
+          className="top-0 left-0 opacity-10"
+          height="360px"
+          width="50%"
+        />
       </SectionWrapper>
       <SectionWrapper noPaddingX>
         <h2 className="mb-8 md:mb-16 page-x-padding">

@@ -6,6 +6,7 @@ import {
 import { useTranslation } from 'next-i18next'
 import dynamic from 'next/dynamic'
 import ChildPageTopSection from '../shared/ChildPageTopSection'
+import ColorBlur from '../shared/ColorBlur'
 import HeadingTagline from '../shared/HeadingTagline'
 import IconWithText from '../shared/IconWithText'
 import InlineImageWithText from '../shared/InlineImageWithText'
@@ -52,6 +53,11 @@ const MngoPage = () => {
             title={t('mngo:dao-controlled-supply')}
           />
         </div>
+        <ColorBlur
+          className="bottom-0 left-0 opacity-10"
+          height="360px"
+          width="50%"
+        />
       </SectionWrapper>
       <Distribution />
       <SectionWrapper>

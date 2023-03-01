@@ -179,7 +179,7 @@ svg {
 }
 
 .page-x-padding {
-  @apply lg:px-20 px-6;
+  @apply px-6 md:px-12 lg:px-20;
 }
 
 /* Type */

@@ -6,6 +6,7 @@ import {
   DevicePhoneMobileIcon,
 } from '@heroicons/react/20/solid'
 import { useTranslation } from 'next-i18next'
+import { useTheme } from 'next-themes'
 import BotOne from '../icons/BotOne'
 import BotThree from '../icons/BotThree'
 import BotTwo from '../icons/BotTwo'
@@ -18,7 +19,6 @@ import InlineImageWithText from '../shared/InlineImageWithText'
 import SectionWrapper from '../shared/SectionWrapper'
 import Steps from '../shared/Steps'
 import HomeTopSection from './HomeTopSection'
-import Testimonials from './Testimonials'
 
 const STEPS = [
   {
@@ -45,6 +45,7 @@ const STEPS = [
 
 const HomePage = () => {
   const { t } = useTranslation(['common', 'home'])
+  const { theme } = useTheme()
   return (
     <>
       <HomeTopSection />
@@ -86,14 +87,18 @@ const HomePage = () => {
       </SectionWrapper>
       <SectionWrapper>
         <div className="grid grid-cols-12 gap-6 md:gap-8">
-          <div className="col-span-4 md:col-span-7 h-96 flex justify-center relative">
+          <div className="hidden md:col-span-6 h-96 md:flex justify-center relative">
             <img
-              className="absolute z-10 w-full h-auto max-w-[440px]"
-              src="/images/swap-mobile.png"
+              className="absolute z-10 w-auto h-auto md:h-[480px] lg:h-[640px]"
+              src={
+                theme === 'Light'
+                  ? '/images/@1x-swap-light.png'
+                  : '/images/@1x-swap-dark.png'
+              }
               alt=""
             />
           </div>
-          <div className="col-span-8 md:col-span-5">
+          <div className="col-span-12 md:col-span-6">
             <h2 className="mb-4">{t('home:swap-heading')}</h2>
             <p className="intro-p mb-8">{t('home:swap-desc')}</p>
             <h3 className="mb-3">{t('home:swap-highlight-1-heading')}</h3>
@@ -108,12 +113,12 @@ const HomePage = () => {
           </div>
         </div>
         <ColorBlur
-          className="animate-blob bg-th-down -top-20 left-0 opacity-20"
+          className="animate-blob -top-20 left-0 opacity-10"
           height="200px"
           width="50%"
         />
         <ColorBlur
-          className="animate-blob -bottom-20 right-0 opacity-10"
+          className="animate-blob bg-th-down -bottom-20 right-0 opacity-10"
           height="200px"
           width="66%"
         />
@@ -185,6 +190,11 @@ const HomePage = () => {
             title={t('home:build-your-own')}
           />
         </div>
+        <ColorBlur
+          className="animate-blob top-0 left-0 opacity-10"
+          height="300px"
+          width="75%"
+        />
       </SectionWrapper>
       <SectionWrapper noPaddingX>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">
@@ -197,7 +207,8 @@ const HomePage = () => {
         </div>
         <Steps steps={STEPS} />
       </SectionWrapper>
-      <SectionWrapper>
+      {/* add the below when we have some textimonials */}
+      {/* <SectionWrapper>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row sm:items-end mb-12 md:mb-16">
           <div className="col-span-12 order-2 sm:order-1 sm:col-span-6">
             <h2>{t('home:crypto-loves-mango')}</h2>
@@ -207,7 +218,7 @@ const HomePage = () => {
           </div>
         </div>
         <Testimonials />
-      </SectionWrapper>
+      </SectionWrapper> */}
     </>
   )
 }
