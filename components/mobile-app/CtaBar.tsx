@@ -6,8 +6,7 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid'
 
 const CtaBar = () => {
   const { t } = useTranslation('mobile-app')
-  const [show, setShow] = useState(true)
-  //   const [lastScrollY, setLastScrollY] = useState(0)
+  const [show, setShow] = useState(false)
 
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
@@ -19,11 +18,6 @@ const CtaBar = () => {
       } else {
         setShow(false)
       }
-      //   if (bottom) {
-      //     setLastScrollY(0)
-      //   } else {
-      //     setLastScrollY(window.scrollY)
-      //   }
     }
   }
 

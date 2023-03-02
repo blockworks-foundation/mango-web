@@ -12,7 +12,7 @@ function App({ Component, pageProps }) {
   const description =
     'Decentralized, cross-margin trading up to 20x leverage with lightning speed and near-zero fees.'
   const keywords =
-    'Mango Markets, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
+    'Mango Markets, DEFI, Decentralized Finance, Decentralized Finance, Crypto, ERC20, Ethereum, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
 
   return (
     <>

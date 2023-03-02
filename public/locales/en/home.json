@@ -33,7 +33,7 @@
     "get-wallet": "Get your Solana wallet",
     "get-wallet-desc": "Phantom and Solflare are popular wallets with great browser extensions. Either is a good choice to use with Mango.",
     "lightning-execution": "Lightning execution",
-    "lightning-execution-desc": "The speed of a centralised exchange without losing control of your assets.",
+    "lightning-execution-desc": "The speed of a centralized exchange without losing control of your assets.",
     "liquidator": "Liquidator",
     "liquidator-desc": "Liquidators protect the protocol from bad debt and earn fees for executing liquidations. Interested? We’ve built an open source liquidator to get you started.",
     "liquidator-link": "Become a liquidator",
