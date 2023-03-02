@@ -59,11 +59,16 @@ const StepItem = ({
                 ? 'md:bg-th-bkg-2'
                 : 'md:bg-th-bkg-1'
               : 'md:opacity-40'
-          } flex flex-row space-x-4 md:space-x-6 mb-8 last:mb-0 md:mb-0 items-start md:py-12 lg:pl-20 pl-6 h-auto md:h-64 default-transition md:pr-40 md:-mr-32 w-full`}
+          } flex flex-row space-x-4 md:space-x-6 mb-12 last:mb-0 md:mb-0 items-start md:py-12 lg:pl-20 pl-6 h-auto md:h-64 default-transition md:pr-40 md:-mr-32 w-full`}
         >
           <h3>{`0${index + 1}`}</h3>
           <div className="border-b-2 border-th-fgd-2 h-4 w-full max-w-[24px] md:max-w-[40px]" />
           <div>
+            <img
+              className="md:hidden w-auto h-32 mb-4"
+              src={imagePath}
+              alt=""
+            />
             <h3 className="mb-3">{t(title)}</h3>
             <p className="max-w-[800px]">{t(desc)}</p>
             {children ? children : null}

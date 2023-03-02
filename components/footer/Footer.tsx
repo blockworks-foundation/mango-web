@@ -119,7 +119,7 @@ const Footer = () => {
         </p>
       </div>
       <ColorBlur
-        className="bg-th-down bottom-0 right-0 opacity-10"
+        className="bg-th-down -top-20 md:bottom-0 right-0 opacity-10"
         height="300px"
         width="80%"
       />

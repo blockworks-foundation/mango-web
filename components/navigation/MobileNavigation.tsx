@@ -4,14 +4,18 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Transition } from '@headlessui/react'
 import NavigationItemLink from './NavigationItemLink'
 import { useTranslation } from 'next-i18next'
+import ThemeToggle from './ThemeToggle'
 
 const MobileNavigation = () => {
   const [showMenu, setShowMenu] = useState(false)
   return (
     <div className="lg:hidden">
-      <IconButton hideBg onClick={() => setShowMenu(true)} size="medium">
-        <Bars3Icon className="h-6 w-6" />
-      </IconButton>
+      <div className="flex items-center space-x-2">
+        <ThemeToggle />
+        <IconButton hideBg onClick={() => setShowMenu(true)} size="medium">
+          <Bars3Icon className="h-6 w-6" />
+        </IconButton>
+      </div>
       <MenuPanel showMenu={showMenu} setShowMenu={setShowMenu} />
     </div>
   )

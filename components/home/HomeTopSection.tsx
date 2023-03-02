@@ -1,9 +1,9 @@
-import Button from '../shared/Button'
 import { useTranslation } from 'next-i18next'
 import SectionWrapper from '../shared/SectionWrapper'
 import ColorBlur from '../shared/ColorBlur'
 import { useTheme } from 'next-themes'
 import CheckBullet from '../shared/CheckBullet'
+import ButtonLink from '../shared/ButtonLink'
 
 const HomeTopSection = () => {
   const { t } = useTranslation(['common', 'home'])
@@ -30,15 +30,12 @@ const HomeTopSection = () => {
           <CheckBullet>{t('home:bullet-3')}</CheckBullet>
           <CheckBullet showNewBadge>{t('home:bullet-4')}</CheckBullet>
           {/* <CheckBullet showNewBadge>{t('home:bullet-5')}</CheckBullet> */}
-          <div className="mt-8">
-            <a
-              href="https://trade.mango.markets"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="large">{t('trade-now')}</Button>
-            </a>
-          </div>
+          <ButtonLink
+            className="mt-8"
+            linkText={t('trade-now')}
+            path="https://trade.mango.markets"
+            size="large"
+          />
         </div>
         <div className="col-span-12 lg:col-span-7 relative h-48 sm:h-56 md:h-80 lg:h-full">
           <img

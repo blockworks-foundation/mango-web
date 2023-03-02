@@ -65,15 +65,11 @@ const MobileAppPage = () => {
           desc={t('mobile-app:send-payments-desc')}
           title={t('mobile-app:send-payments')}
           imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('learn-more')}
         />
         <InlineImageWithText
           desc={t('mobile-app:accept-payments-desc')}
           title={t('mobile-app:accept-payments')}
           imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('mobile-app:deposit-now')}
           reverse
         />
       </SectionWrapper>
