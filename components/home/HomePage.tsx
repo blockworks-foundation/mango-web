@@ -114,7 +114,7 @@ const HomePage = () => {
         <div className="grid grid-cols-12 gap-6 md:gap-8">
           <div className="hidden md:col-span-6 h-96 md:flex justify-center relative">
             <img
-              className="absolute z-10 w-auto h-auto md:h-[480px] lg:h-[640px]"
+              className="absolute z-10 w-auto h-auto md:h-[480px] lg:h-[680px]"
               src={
                 theme === 'Light'
                   ? '/images/@1x-swap-light.png'
@@ -161,19 +161,19 @@ const HomePage = () => {
           linkText={t('learn-more')}
         />
         <InlineImageWithText
-          desc={t('home:earn-interest-desc')}
-          title={t('home:earn-interest')}
-          imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('home:deposit-now')}
-          reverse
-        />
-        <InlineImageWithText
           desc={t('home:risk-engine-desc')}
           title={t('home:risk-engine')}
           imageSrc="/images/img-placeholder.png"
           linkPath="#"
           linkText={t('learn-more')}
+          reverse
+        />
+        <InlineImageWithText
+          desc={t('home:earn-interest-desc')}
+          title={t('home:earn-interest')}
+          imageSrc="/images/img-placeholder.png"
+          linkPath="#"
+          linkText={t('home:deposit-now')}
         />
         <InlineImageWithText
           desc={t('home:borrow-any-token-desc')}
