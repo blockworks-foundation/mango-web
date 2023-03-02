@@ -1,62 +1,32 @@
 import {
-  ChevronRightIcon,
   CurrencyEuroIcon,
   GlobeAsiaAustraliaIcon,
   KeyIcon,
 } from '@heroicons/react/20/solid'
 import { useTranslation } from 'next-i18next'
-import { LinkButton } from '../shared/Button'
 import HeadingTagline from '../shared/HeadingTagline'
 import IconWithText from '../shared/IconWithText'
 import InlineImageWithText from '../shared/InlineImageWithText'
 import SectionWrapper from '../shared/SectionWrapper'
 import Steps from '../shared/Steps'
 import AppTopSection from './AppTopSection'
+import CtaBar from './CtaBar'
 
-const STEPS = (t) => [
+const STEPS = [
   {
-    desc: 'mobile-app:get-wallet-desc',
+    desc: 'mobile-app:buy-desc',
     imagePath: '/images/img-placeholder.png',
-    title: 'mobile-app:get-wallet',
-    children: (
-      <div className="flex items-center space-x-6 mt-4 lg:mt-6">
-        <a
-          href="https://chrome.google.com/webstore/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <LinkButton className="flex items-center">
-            {t('mobile-app:get-phantom')}
-            <ChevronRightIcon className="h-6 w-6 ml-1.5" />
-          </LinkButton>
-        </a>
-        <a
-          href="https://chrome.google.com/webstore/detail/solflare-wallet/bhhhlbepdkbapadjdnnojkbgioiodbic"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <LinkButton className="flex items-center">
-            {t('mobile-app:get-solflare')}
-            <ChevronRightIcon className="h-6 w-6 ml-1.5" />
-          </LinkButton>
-        </a>
-      </div>
-    ),
+    title: 'mobile-app:buy',
   },
   {
-    desc: 'mobile-app:fund-wallet-desc',
+    desc: 'mobile-app:invest-desc',
     imagePath: '/images/img-placeholder.png',
-    title: 'mobile-app:fund-wallet',
+    title: 'mobile-app:invest',
   },
   {
-    desc: 'mobile-app:connect-mango-desc',
+    desc: 'mobile-app:stack-growth-desc',
     imagePath: '/images/img-placeholder.png',
-    title: 'mobile-app:connect-mango',
-  },
-  {
-    desc: 'mobile-app:trade-earn-borrow-desc',
-    imagePath: '/images/img-placeholder.png',
-    title: 'mobile-app:trade-earn-borrow',
+    title: 'mobile-app:stack-growth',
   },
 ]
 
@@ -81,6 +51,7 @@ const MobileAppPage = () => {
           />
         </div>
       </SectionWrapper>
+      <CtaBar />
       <SectionWrapper>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
           <div className="col-span-12 sm:col-span-6">
@@ -91,33 +62,18 @@ const MobileAppPage = () => {
           </div>
         </div>
         <InlineImageWithText
-          desc={t('mobile-app:token-listings-desc')}
-          title={t('mobile-app:token-listings')}
+          desc={t('mobile-app:send-payments-desc')}
+          title={t('mobile-app:send-payments')}
           imageSrc="/images/img-placeholder.png"
           linkPath="#"
           linkText={t('learn-more')}
         />
         <InlineImageWithText
-          desc={t('mobile-app:earn-interest-desc')}
-          title={t('mobile-app:earn-interest')}
+          desc={t('mobile-app:accept-payments-desc')}
+          title={t('mobile-app:accept-payments')}
           imageSrc="/images/img-placeholder.png"
           linkPath="#"
           linkText={t('mobile-app:deposit-now')}
-          reverse
-        />
-        <InlineImageWithText
-          desc={t('mobile-app:risk-engine-desc')}
-          title={t('mobile-app:risk-engine')}
-          imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('learn-more')}
-        />
-        <InlineImageWithText
-          desc={t('mobile-app:borrow-any-token-desc')}
-          title={t('mobile-app:borrow-any-token')}
-          imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('mobile-app:borrow-now')}
           reverse
         />
       </SectionWrapper>
@@ -161,13 +117,13 @@ const MobileAppPage = () => {
       <SectionWrapper noPaddingX>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">
           <div className="col-span-12 sm:col-span-6 page-x-padding">
-            <HeadingTagline text={t('mobile-app:getting-started')} />
+            <h2>{t('mobile-app:steps-heading')}</h2>
           </div>
-          <div className="col-span-12 sm:col-span-6 page-x-padding">
-            <h2>{t('mobile-app:new-to-mango')}</h2>
+          <div className="col-span-12 sm:col-span-6 page-x-padding flex justify-end">
+            <HeadingTagline text={t('mobile-app:steps-tagline')} />
           </div>
         </div>
-        <Steps steps={STEPS(t)} />
+        <Steps steps={STEPS} />
       </SectionWrapper>
       {/* add the below when we have some textimonials */}
       {/* <SectionWrapper>
