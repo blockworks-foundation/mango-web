@@ -1,4 +1,4 @@
-import Button from './Button'
+import ButtonLink from './ButtonLink'
 import ColorBlur from './ColorBlur'
 import SectionWrapper from './SectionWrapper'
 
@@ -19,9 +19,7 @@ const ChildPageTopSection = ({
         <h1 className="mb-6">{heading}</h1>
         <p className="intro-p">{intro}</p>
         <div className="mt-8">
-          <a href={linkPath} target="_blank" rel="noopener noreferrer">
-            <Button size="large">{buttonText}</Button>
-          </a>
+          <ButtonLink path={linkPath} linkText={buttonText} size="large" />
         </div>
       </div>
       <ColorBlur
