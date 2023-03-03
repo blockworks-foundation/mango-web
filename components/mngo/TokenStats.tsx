@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'next-i18next'
 import { formatCurrencyValue, formatNumericValue } from '../../utils'
 import SectionWrapper from '../shared/SectionWrapper'
+import SheenLoader from '../shared/SheenLoader'
 
 const fetchTokenInfo = async () => {
   const response = await fetch(
@@ -58,6 +59,14 @@ const TokenStats = () => {
               title={t('mngo:total-supply')}
               value={coingeckoMngoInfo?.data?.market_data?.total_supply}
             />
+          </div>
+        ) : coingeckoMngoInfo?.isLoading || coingeckoMngoInfo?.isFetching ? (
+          <div className="space-y-0.5">
+            {[...Array(5)].map((x, i) => (
+              <SheenLoader className="flex flex-1" key={i}>
+                <div className="h-[77px] w-full bg-th-bkg-2" />
+              </SheenLoader>
+            ))}
           </div>
         ) : null}
         <div className="hidden md:flex md:w-1/3 justify-center">

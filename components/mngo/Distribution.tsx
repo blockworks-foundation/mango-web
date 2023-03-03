@@ -47,26 +47,9 @@ const Distribution: FunctionComponent = () => {
 
   return (
     <SectionWrapper>
-      <h2 className="mb-12">{t('distribution')}</h2>
-      <div className="flex flex-col-reverse md:flex-row items-center md:justify-between z-10 relative">
-        <div className="w-full md:w-1/2 space-y-8">
-          {CHART_DATA.map((data) => {
-            const { label, desc, value } = data
-            return (
-              <div
-                className={`${
-                  label === mouseData ? '' : 'opacity-40'
-                } default-transition cursor-pointer`}
-                key={`item-${label}`}
-                onMouseEnter={() => setMouseData(label)}
-              >
-                <h3 className="mb-3">{`${value}% ${t(label)}`}</h3>
-                <p>{t(desc)}</p>
-              </div>
-            )
-          })}
-        </div>
-        <div className="w-1/2 h-[280px] lg:h-[360px] mb-8 md:mb-0">
+      <h2 className="mb-10 lg:mb-16">{t('distribution')}</h2>
+      <div className="flex flex-col-reverse md:flex-row items-center md:justify-between md:space-x-10 z-10 relative">
+        <div className="w-1/2 h-[280px] lg:h-[440px] mb-8 md:mb-0">
           <ResponsiveContainer>
             <PieChart>
               <Pie
@@ -95,6 +78,23 @@ const Distribution: FunctionComponent = () => {
               </Pie>
             </PieChart>
           </ResponsiveContainer>
+        </div>
+        <div className="w-full md:w-1/2 space-y-8">
+          {CHART_DATA.map((data) => {
+            const { label, desc, value } = data
+            return (
+              <div
+                className={`${
+                  label === mouseData ? '' : 'opacity-40'
+                } default-transition cursor-pointer`}
+                key={`item-${label}`}
+                onMouseEnter={() => setMouseData(label)}
+              >
+                <h3 className="mb-3">{`${value}% ${t(label)}`}</h3>
+                <p>{t(desc)}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </SectionWrapper>

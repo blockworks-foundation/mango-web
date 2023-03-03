@@ -58,7 +58,7 @@ const MngoPage = () => {
           />
         </div>
         <ColorBlur
-          className="bottom-0 left-0 opacity-10"
+          className="top-0 left-0 opacity-10"
           height="360px"
           width="50%"
         />
