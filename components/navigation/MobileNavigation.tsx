@@ -31,6 +31,11 @@ const MenuPanel = ({
   setShowMenu: (showMenu: boolean) => void
 }) => {
   const { t } = useTranslation(['common', 'navigation'])
+
+  const closeOnClick = () => {
+    setShowMenu(false)
+  }
+
   return (
     <>
       <div
@@ -48,14 +53,17 @@ const MenuPanel = ({
             <h4 className="px-4 mb-2">{t('navigation:about')}</h4>
             <NavigationItemLink
               path="/mango-dao"
+              onClick={closeOnClick}
               title={t('navigation:mango-dao')}
             />
             <NavigationItemLink
               path="/mngo"
+              onClick={closeOnClick}
               title={t('navigation:mngo-token')}
             />
             <NavigationItemLink
               path="#"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:v4-stats')}
             />
@@ -65,11 +73,13 @@ const MenuPanel = ({
             <h4 className="px-4 mb-2">{t('navigation:products')}</h4>
             <NavigationItemLink
               path="https://app.mango.markets"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:mango-v4')}
             />
             <NavigationItemLink
               path="/mobile-app"
+              onClick={closeOnClick}
               title={t('navigation:mobile-app')}
             />
           </div>
@@ -77,26 +87,31 @@ const MenuPanel = ({
             <h4 className="px-4 mb-2">{t('navigation:developers')}</h4>
             <NavigationItemLink
               path="https://docs.mango.markets"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:docs')}
             />
             <NavigationItemLink
               path="https://github.com/blockworks-foundation"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:github')}
             />
             <NavigationItemLink
               path="https://github.com/blockworks-foundation/mango-v4/tree/dev/ts/client/scripts/mm"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:market-maker')}
             />
             <NavigationItemLink
               path="https://github.com/blockworks-foundation"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:liquidator')}
             />
             <NavigationItemLink
               path="https://github.com/blockworks-foundation"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:contribute')}
             />
@@ -105,21 +120,25 @@ const MenuPanel = ({
             <h4 className="px-4 mb-2">{t('navigation:community')}</h4>
             <NavigationItemLink
               path="https://dao.mango.markets"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:governance')}
             />
             <NavigationItemLink
               path="https://discord.gg/2uwjsBc5yw"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:discord')}
             />
             <NavigationItemLink
               path="https://twitter.com/mangomarkets"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:twitter')}
             />
             <NavigationItemLink
               path="https://forum.mango.markets"
+              onClick={closeOnClick}
               isExternal
               title={t('navigation:forum')}
             />
@@ -128,14 +147,11 @@ const MenuPanel = ({
             <h4 className="px-4 mb-2">{t('navigation:careers')}</h4>
             <NavigationItemLink
               path="/careers"
+              onClick={closeOnClick}
               title={t('navigation:work-with-us')}
             />
           </div>
         </div>
-        {/* <div
-        className="border-b border-th-bkg-4"
-        onClick={() => setShowMenu(false)}
-      ></div> */}
       </div>
       <Transition
         as={Fragment}

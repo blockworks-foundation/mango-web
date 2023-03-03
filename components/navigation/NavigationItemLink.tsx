@@ -5,19 +5,27 @@ const linkClassNames =
 
 const NavigationItemLink = ({
   path,
+  onClick,
   title,
   isExternal = false,
 }: {
   isExternal?: boolean
   path: string
+  onClick?: () => void
   title: string
 }) => {
   return isExternal ? (
-    <a className={linkClassNames} href={path}>
+    <a
+      className={linkClassNames}
+      href={path}
+      onClick={onClick}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {title}
     </a>
   ) : (
-    <Link href={path} shallow>
+    <Link href={path} onClick={onClick} shallow>
       <span className={linkClassNames}>{title}</span>
     </Link>
   )

@@ -18,14 +18,14 @@ const InlineImageWithText = ({
 }) => {
   return (
     <div
-      className={`flex flex-col sm:flex-row sm:items-center sm:space-x-10 mt-12 ${
-        reverse ? 'md:flex-row-reverse md:justify-between' : ''
+      className={`flex flex-col sm:flex-row sm:items-center mt-12 ${
+        reverse ? 'sm:flex-row-reverse sm:justify-between' : ''
       }`}
     >
-      <div className="w-full sm:w-1/2 flex md:justify-center mb-4 md:mb-0">
+      <div className="w-full sm:w-1/2 flex sm:justify-center mb-4 sm:mb-0 sm:px-8 md:px-10">
         <img className="w-32 sm:w-auto h-auto" src={imageSrc} alt="" />
       </div>
-      <div className="w-full md:w-1/2">
+      <div className="w-full sm:w-1/2">
         <h3 className="mb-3">{title}</h3>
         <p>{desc}</p>
         {linkPath ? (
