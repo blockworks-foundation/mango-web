@@ -5,6 +5,7 @@ import {
   EyeIcon,
 } from '@heroicons/react/20/solid'
 import { TFunction, useTranslation } from 'next-i18next'
+import useSectionBg from '../../hooks/useSectionBg'
 import { LinkButton } from '../shared/Button'
 import ChildPageTopSection from '../shared/ChildPageTopSection'
 import ColorBlur from '../shared/ColorBlur'
@@ -87,6 +88,7 @@ const PROPOSAL_STEPS = (t: TFunction) => [
 
 const DaoPage = () => {
   const { t } = useTranslation(['common', 'dao'])
+  const sectionBg = useSectionBg()
   return (
     <>
       <ChildPageTopSection
@@ -95,17 +97,19 @@ const DaoPage = () => {
         linkPath="https://dao.mango.markets"
         buttonText={t('dao:explore-governance')}
       />
-      <SectionWrapper>
-        <h2 className="mb-12">{t('dao:join-mango-dao')}</h2>
-        <InlineImageWithText
-          desc={t('dao:get-mngo-desc')}
-          title={t('dao:get-mngo')}
-          imageSrc="/images/img-placeholder.png"
-          linkPath="https://trade.mango.markets/swap"
-          linkText={t('dao:buy-mngo')}
-          reverse
-        />
-      </SectionWrapper>
+      <div className={`${sectionBg} z-20 relative`}>
+        <SectionWrapper>
+          <h2 className="mb-12">{t('dao:join-mango-dao')}</h2>
+          <InlineImageWithText
+            desc={t('dao:get-mngo-desc')}
+            title={t('dao:get-mngo')}
+            imageSrc="/images/img-placeholder.png"
+            linkPath="https://trade.mango.markets/swap"
+            linkText={t('dao:buy-mngo')}
+            reverse
+          />
+        </SectionWrapper>
+      </div>
       <SectionWrapper>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
           <div className="col-span-12 sm:col-span-6">
@@ -138,12 +142,14 @@ const DaoPage = () => {
           width="50%"
         />
       </SectionWrapper>
-      <SectionWrapper noPaddingX>
-        <h2 className="mb-8 md:mb-16 page-x-padding">
-          {t('dao:proposal-life-cycle')}
-        </h2>
-        <Steps steps={PROPOSAL_STEPS(t)} />
-      </SectionWrapper>
+      <div className={`${sectionBg}`}>
+        <SectionWrapper noPaddingX>
+          <h2 className="mb-8 md:mb-16 page-x-padding">
+            {t('dao:proposal-life-cycle')}
+          </h2>
+          <Steps steps={PROPOSAL_STEPS(t)} />
+        </SectionWrapper>
+      </div>
     </>
   )
 }

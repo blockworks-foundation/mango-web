@@ -39,7 +39,7 @@ const HomeTopSection = () => {
         </div>
         <div className="col-span-12 lg:col-span-7 relative h-48 sm:h-56 md:h-80 lg:h-full">
           <img
-            className="w-full mt-10 lg:mt-0 absolute h-auto -bottom-50 lg:-right-40 z-10 lg:top-1/2 lg:transform lg:-translate-y-1/2"
+            className="w-full mt-10 lg:mt-0 absolute h-auto lg:-right-40 xl:right-0 z-10 lg:top-1/2 lg:transform lg:-translate-y-1/2"
             src={
               theme === 'Light'
                 ? '/images/@1x-home-hero-desktop-light.png'

@@ -8,6 +8,7 @@ import {
 } from '@heroicons/react/20/solid'
 import { useTranslation } from 'next-i18next'
 import { useTheme } from 'next-themes'
+import useSectionBg from '../../hooks/useSectionBg'
 import BotOne from '../icons/BotOne'
 import BotThree from '../icons/BotThree'
 import BotTwo from '../icons/BotTwo'
@@ -71,45 +72,48 @@ const STEPS = (t) => [
 const HomePage = () => {
   const { t } = useTranslation(['common', 'home'])
   const { theme } = useTheme()
+  const sectionBg = useSectionBg()
   return (
     <>
       <HomeTopSection />
-      <SectionWrapper>
-        <div className="grid grid-cols-6 gap-12">
-          <IconWithText
-            desc={t('home:competitive-fees-desc')}
-            icon={<CurrencyDollarIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('home:competitive-fees')}
-          />
-          <IconWithText
-            desc={t('home:lightning-execution-desc')}
-            icon={<BoltIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('home:lightning-execution')}
-          />
-          <IconWithText
-            desc={t('home:deeply-liquid-desc')}
-            icon={<LiquidIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('home:deeply-liquid')}
-          />
-          <IconWithText
-            desc={t('home:cross-margin-desc')}
-            icon={
-              <ArrowPathRoundedSquareIcon className="h-5 w-5 text-th-fgd-2" />
-            }
-            title={t('home:cross-margin')}
-          />
-          <IconWithText
-            desc={t('home:community-governed-desc')}
-            icon={<BuildingLibraryIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('home:community-governed')}
-          />
-          <IconWithText
-            desc={t('home:trade-your-way-desc')}
-            icon={<DevicePhoneMobileIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('home:trade-your-way')}
-          />
-        </div>
-      </SectionWrapper>
+      <div className={`${sectionBg} z-20 relative`}>
+        <SectionWrapper>
+          <div className="grid grid-cols-6 gap-12">
+            <IconWithText
+              desc={t('home:competitive-fees-desc')}
+              icon={<CurrencyDollarIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('home:competitive-fees')}
+            />
+            <IconWithText
+              desc={t('home:lightning-execution-desc')}
+              icon={<BoltIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('home:lightning-execution')}
+            />
+            <IconWithText
+              desc={t('home:deeply-liquid-desc')}
+              icon={<LiquidIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('home:deeply-liquid')}
+            />
+            <IconWithText
+              desc={t('home:cross-margin-desc')}
+              icon={
+                <ArrowPathRoundedSquareIcon className="h-5 w-5 text-th-fgd-2" />
+              }
+              title={t('home:cross-margin')}
+            />
+            <IconWithText
+              desc={t('home:community-governed-desc')}
+              icon={<BuildingLibraryIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('home:community-governed')}
+            />
+            <IconWithText
+              desc={t('home:trade-your-way-desc')}
+              icon={<DevicePhoneMobileIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('home:trade-your-way')}
+            />
+          </div>
+        </SectionWrapper>
+      </div>
       <SectionWrapper>
         <div className="grid grid-cols-12 gap-6 md:gap-8">
           <div className="hidden md:col-span-6 h-96 md:flex justify-center relative">
@@ -148,42 +152,46 @@ const HomePage = () => {
           width="66%"
         />
       </SectionWrapper>
-      <SectionWrapper>
-        <div className="text-center max-w-[800px] mx-auto">
-          <h2 className="mb-4">{t('home:built-for-traders-holders')}</h2>
-          <p className="intro-p">{t('home:built-for-traders-holders-desc')}</p>
-        </div>
-        <InlineImageWithText
-          desc={t('home:token-listings-desc')}
-          title={t('home:token-listings')}
-          imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('learn-more')}
-        />
-        <InlineImageWithText
-          desc={t('home:risk-engine-desc')}
-          title={t('home:risk-engine')}
-          imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('learn-more')}
-          reverse
-        />
-        <InlineImageWithText
-          desc={t('home:earn-interest-desc')}
-          title={t('home:earn-interest')}
-          imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('home:deposit-now')}
-        />
-        <InlineImageWithText
-          desc={t('home:borrow-any-token-desc')}
-          title={t('home:borrow-any-token')}
-          imageSrc="/images/img-placeholder.png"
-          linkPath="#"
-          linkText={t('home:borrow-now')}
-          reverse
-        />
-      </SectionWrapper>
+      <div className={`${sectionBg} z-20 relative`}>
+        <SectionWrapper>
+          <div className="text-center max-w-[800px] mx-auto">
+            <h2 className="mb-4">{t('home:built-for-traders-holders')}</h2>
+            <p className="intro-p">
+              {t('home:built-for-traders-holders-desc')}
+            </p>
+          </div>
+          <InlineImageWithText
+            desc={t('home:token-listings-desc')}
+            title={t('home:token-listings')}
+            imageSrc="/images/img-placeholder.png"
+            linkPath="#"
+            linkText={t('learn-more')}
+          />
+          <InlineImageWithText
+            desc={t('home:risk-engine-desc')}
+            title={t('home:risk-engine')}
+            imageSrc="/images/img-placeholder.png"
+            linkPath="#"
+            linkText={t('learn-more')}
+            reverse
+          />
+          <InlineImageWithText
+            desc={t('home:earn-interest-desc')}
+            title={t('home:earn-interest')}
+            imageSrc="/images/img-placeholder.png"
+            linkPath="#"
+            linkText={t('home:deposit-now')}
+          />
+          <InlineImageWithText
+            desc={t('home:borrow-any-token-desc')}
+            title={t('home:borrow-any-token')}
+            imageSrc="/images/img-placeholder.png"
+            linkPath="#"
+            linkText={t('home:borrow-now')}
+            reverse
+          />
+        </SectionWrapper>
+      </div>
       <SectionWrapper>
         <h2 className="mb-4">{t('home:trading-bots-welcome')}</h2>
         <p className="intro-p max-w-[800px]">
@@ -221,17 +229,19 @@ const HomePage = () => {
           width="75%"
         />
       </SectionWrapper>
-      <SectionWrapper noPaddingX>
-        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">
-          <div className="col-span-12 sm:col-span-6 page-x-padding">
-            <HeadingTagline text={t('home:getting-started')} />
+      <div className={`${sectionBg}`}>
+        <SectionWrapper noPaddingX>
+          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">
+            <div className="col-span-12 sm:col-span-6 page-x-padding">
+              <HeadingTagline text={t('home:getting-started')} />
+            </div>
+            <div className="col-span-12 sm:col-span-6 page-x-padding">
+              <h2>{t('home:new-to-mango')}</h2>
+            </div>
           </div>
-          <div className="col-span-12 sm:col-span-6 page-x-padding">
-            <h2>{t('home:new-to-mango')}</h2>
-          </div>
-        </div>
-        <Steps steps={STEPS(t)} />
-      </SectionWrapper>
+          <Steps steps={STEPS(t)} />
+        </SectionWrapper>
+      </div>
       {/* add the below when we have some textimonials */}
       {/* <SectionWrapper>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row sm:items-end mb-12 md:mb-16">

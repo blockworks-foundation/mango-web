@@ -103,7 +103,7 @@ module.exports = {
           success: 'hsl(111, 47%, 53%)',
           warning: 'hsl(33, 100%, 57%)',
           'bkg-1': 'hsl(0, 0%, 99%)',
-          'bkg-2': 'hsl(0, 0%, 94%)',
+          'bkg-2': 'hsl(0, 0%, 96%)',
           'bkg-3': 'hsl(0, 0%, 89%)',
           'bkg-4': 'hsl(0, 0%, 84%)',
           'fgd-1': 'hsl(0, 0%, 8%)',
@@ -159,6 +159,9 @@ module.exports = {
             transform: 'translate(0px, 0px) scale(1)',
           },
         },
+      },
+      screens: {
+        xl: '1600px',
       },
     },
   },

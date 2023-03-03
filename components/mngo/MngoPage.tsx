@@ -5,6 +5,7 @@ import {
 } from '@heroicons/react/20/solid'
 import { useTranslation } from 'next-i18next'
 import dynamic from 'next/dynamic'
+import useSectionBg from '../../hooks/useSectionBg'
 import ChildPageTopSection from '../shared/ChildPageTopSection'
 import ColorBlur from '../shared/ColorBlur'
 import HeadingTagline from '../shared/HeadingTagline'
@@ -18,6 +19,7 @@ const Distribution = dynamic(() => import('./Distribution'), {
 
 const MngoPage = () => {
   const { t } = useTranslation(['common', 'mngo'])
+  const sectionBg = useSectionBg()
   return (
     <>
       <ChildPageTopSection
@@ -26,7 +28,9 @@ const MngoPage = () => {
         linkPath="https://trade.mango.markets"
         buttonText={t('mngo:buy-mngo')}
       />
-      <TokenStats />
+      <div className={`${sectionBg} z-20 relative`}>
+        <TokenStats />
+      </div>
       <SectionWrapper>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
           <div className="col-span-12 sm:col-span-6">
@@ -59,7 +63,9 @@ const MngoPage = () => {
           width="50%"
         />
       </SectionWrapper>
-      <Distribution />
+      <div className={`${sectionBg}`}>
+        <Distribution />
+      </div>
       <SectionWrapper>
         <h2 className="mb-12">{t('mngo:token-emissions')}</h2>
         <InlineImageWithText

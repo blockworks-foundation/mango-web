@@ -2,7 +2,6 @@ import { Transition } from '@headlessui/react'
 import { Fragment, ReactNode, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import ColorBlur from './ColorBlur'
-import { useTheme } from 'next-themes'
 
 const Steps = ({ steps }: { steps: StepItem[] }) => {
   const [highlighted, setHighlighted] = useState(0)
@@ -42,7 +41,6 @@ const StepItem = ({
   setHighlighted: (x: number) => void
 }) => {
   const { t } = useTranslation(['home', 'dao'])
-  const { theme } = useTheme()
   const isHighlighted = highlighted === index
   const { children, desc, title, imagePath } = item
   return (
@@ -54,12 +52,8 @@ const StepItem = ({
       >
         <div
           className={`${
-            isHighlighted
-              ? theme === 'Light'
-                ? 'md:bg-th-bkg-2'
-                : 'md:bg-th-bkg-1'
-              : 'md:opacity-40'
-          } flex flex-row space-x-4 md:space-x-6 mb-12 last:mb-0 md:mb-0 items-start md:py-12 lg:pl-20 pl-6 h-auto md:h-64 default-transition md:pr-40 md:-mr-32 w-full`}
+            isHighlighted ? 'md:bg-th-bkg-1' : 'md:opacity-40'
+          } flex flex-row space-x-4 md:space-x-6 mb-12 last:mb-0 md:mb-0 items-start md:py-12 lg:pl-20 pl-6 h-auto md:h-64 default-transition md:pr-40 md:-mr-32 w-full xl:rounded-l-xl`}
         >
           <h3>{`0${index + 1}`}</h3>
           <div className="border-b-2 border-th-fgd-2 h-4 w-full max-w-[24px] md:max-w-[40px]" />

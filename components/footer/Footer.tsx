@@ -1,13 +1,19 @@
 import { useTranslation } from 'next-i18next'
+import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import ColorBlur from '../shared/ColorBlur'
 
 const Footer = () => {
   const { t } = useTranslation(['footer', 'navigation'])
+  const { theme } = useTheme()
   return (
     <div className="relative">
-      <div className="lg:px-20 lg:pt-10 pb-4 px-6 pt-8 bg-th-bkg-1 z-20 relative">
+      <div
+        className={`lg:px-20 lg:pt-10 pb-4 px-6 pt-8 bg-th-bkg-1 ${
+          theme === 'Light' ? 'border-t border-th-bkg-2' : ''
+        } z-20 relative`}
+      >
         <div className="flex flex-col-reverse lg:flex-row">
           <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start">
             <Link href="/" shallow>
