@@ -143,7 +143,7 @@ const FooterLinkColumn = ({
   title: string
 }) => {
   return (
-    <div className="w-full lg:w-28 xl:w-32 mb-6 last:mb-0 sm:mb-0">
+    <div className="w-full lg:w-32 mb-6 last:mb-0 sm:mb-0">
       <h4 className="text-th-fgd-3 text-sm mb-3">{title}</h4>
       {children}
     </div>
