@@ -21,40 +21,42 @@ const HomeTopSection = () => {
   // }, [])
 
   return (
-    <SectionWrapper>
-      <div className="grid grid-cols-12">
-        <div className="col-span-12 lg:col-span-5">
-          <h1 className="mb-6">{t('home:long-short-everything')}</h1>
-          <CheckBullet>{t('home:bullet-1')}</CheckBullet>
-          <CheckBullet>{t('home:bullet-2')}</CheckBullet>
-          <CheckBullet>{t('home:bullet-3')}</CheckBullet>
-          <CheckBullet showNewBadge>{t('home:bullet-4')}</CheckBullet>
-          {/* <CheckBullet showNewBadge>{t('home:bullet-5')}</CheckBullet> */}
-          <ButtonLink
-            className="mt-8"
-            linkText={t('trade-now')}
-            path="https://trade.mango.markets"
-            size="large"
-          />
+    <div className="relative overflow-hidden">
+      <SectionWrapper>
+        <div className="grid grid-cols-12">
+          <div className="col-span-12 lg:col-span-5">
+            <h1 className="mb-6">{t('home:long-short-everything')}</h1>
+            <CheckBullet>{t('home:bullet-1')}</CheckBullet>
+            <CheckBullet>{t('home:bullet-2')}</CheckBullet>
+            <CheckBullet>{t('home:bullet-3')}</CheckBullet>
+            <CheckBullet showNewBadge>{t('home:bullet-4')}</CheckBullet>
+            {/* <CheckBullet showNewBadge>{t('home:bullet-5')}</CheckBullet> */}
+            <ButtonLink
+              className="mt-8"
+              linkText={t('trade-now')}
+              path="https://trade.mango.markets"
+              size="large"
+            />
+          </div>
+          <div className="col-span-12 lg:col-span-7 relative h-48 sm:h-56 md:h-80 lg:h-full">
+            <img
+              className="w-full mt-10 lg:mt-0 absolute h-auto lg:-right-40 xl:right-0 z-10 lg:top-1/2 lg:transform lg:-translate-y-1/2"
+              src={
+                theme === 'Light'
+                  ? '/images/@1x-home-hero-desktop-light.png'
+                  : '/images/@1x-home-hero-desktop-dark.png'
+              }
+              alt=""
+            />
+          </div>
         </div>
-        <div className="col-span-12 lg:col-span-7 relative h-48 sm:h-56 md:h-80 lg:h-full">
-          <img
-            className="w-full mt-10 lg:mt-0 absolute h-auto lg:-right-40 xl:right-0 z-10 lg:top-1/2 lg:transform lg:-translate-y-1/2"
-            src={
-              theme === 'Light'
-                ? '/images/@1x-home-hero-desktop-light.png'
-                : '/images/@1x-home-hero-desktop-dark.png'
-            }
-            alt=""
-          />
-        </div>
-      </div>
+      </SectionWrapper>
       <ColorBlur
         className="right-0 top-40 animate-blob"
         height="100%"
         width="50%"
       />
-    </SectionWrapper>
+    </div>
   )
 }
 

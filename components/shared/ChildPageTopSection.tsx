@@ -14,14 +14,16 @@ const ChildPageTopSection = ({
   linkPath: string
 }) => {
   return (
-    <SectionWrapper>
-      <div className="w-full flex flex-col items-center mx-auto text-center max-w-[800px]">
-        <h1 className="mb-6">{heading}</h1>
-        <p className="intro-p">{intro}</p>
-        <div className="mt-8">
-          <ButtonLink path={linkPath} linkText={buttonText} size="large" />
+    <div className="relative overflow-hidden">
+      <SectionWrapper>
+        <div className="w-full flex flex-col items-center mx-auto text-center max-w-[800px]">
+          <h1 className="mb-6">{heading}</h1>
+          <p className="intro-p">{intro}</p>
+          <div className="mt-8">
+            <ButtonLink path={linkPath} linkText={buttonText} size="large" />
+          </div>
         </div>
-      </div>
+      </SectionWrapper>
       <ColorBlur
         className="top-40 -right-80 bg-th-down animate-blob"
         height="100%"
@@ -32,7 +34,7 @@ const ChildPageTopSection = ({
         height="100%"
         width="50%"
       />
-    </SectionWrapper>
+    </div>
   )
 }
 

@@ -59,32 +59,34 @@ const MobileAppPage = () => {
         </SectionWrapper>
       </div>
       <CtaBar />
-      <SectionWrapper>
-        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
-          <div className="col-span-12 sm:col-span-6">
-            <HeadingTagline text={t('mobile-app:easy-to-use-tagline')} />
+      <div className="relative overflow-hidden">
+        <SectionWrapper>
+          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
+            <div className="col-span-12 sm:col-span-6">
+              <HeadingTagline text={t('mobile-app:easy-to-use-tagline')} />
+            </div>
+            <div className="col-span-12 sm:col-span-6">
+              <h2>{t('mobile-app:easy-to-use')}</h2>
+            </div>
           </div>
-          <div className="col-span-12 sm:col-span-6">
-            <h2>{t('mobile-app:easy-to-use')}</h2>
-          </div>
-        </div>
-        <InlineImageWithText
-          desc={t('mobile-app:send-payments-desc')}
-          title={t('mobile-app:send-payments')}
-          imageSrc="/images/img-placeholder.png"
-        />
-        <InlineImageWithText
-          desc={t('mobile-app:accept-payments-desc')}
-          title={t('mobile-app:accept-payments')}
-          imageSrc="/images/img-placeholder.png"
-          reverse
-        />
+          <InlineImageWithText
+            desc={t('mobile-app:send-payments-desc')}
+            title={t('mobile-app:send-payments')}
+            imageSrc="/images/img-placeholder.png"
+          />
+          <InlineImageWithText
+            desc={t('mobile-app:accept-payments-desc')}
+            title={t('mobile-app:accept-payments')}
+            imageSrc="/images/img-placeholder.png"
+            reverse
+          />
+        </SectionWrapper>
         <ColorBlur
           className="left-0 top-0 bg-th-down animate-blob"
           height="200px"
           width="50%"
         />
-      </SectionWrapper>
+      </div>
       <div className={`${sectionBg}`}>
         <SectionWrapper noPaddingX>
           <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">

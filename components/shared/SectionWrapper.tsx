@@ -13,7 +13,7 @@ const SectionWrapper = ({
     <div
       className={`${
         noPaddingX ? '' : 'page-x-padding'
-      } py-16 lg:py-24 xl:py-32 max-w-[1600px] mx-auto relative ${className}`}
+      } py-16 lg:py-24 xl:py-32 max-w-[1600px] mx-auto relative overflow-hidden ${className}`}
     >
       {children}
     </div>

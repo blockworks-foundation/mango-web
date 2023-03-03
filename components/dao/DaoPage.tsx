@@ -110,38 +110,40 @@ const DaoPage = () => {
           />
         </SectionWrapper>
       </div>
-      <SectionWrapper>
-        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
-          <div className="col-span-12 sm:col-span-6">
-            <HeadingTagline text={t('dao:power-people')} />
+      <div className="relative overflow-hidden">
+        <SectionWrapper>
+          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
+            <div className="col-span-12 sm:col-span-6">
+              <HeadingTagline text={t('dao:power-people')} />
+            </div>
+            <div className="col-span-12 sm:col-span-6">
+              <h2>{t('dao:open-democracy')}</h2>
+            </div>
           </div>
-          <div className="col-span-12 sm:col-span-6">
-            <h2>{t('dao:open-democracy')}</h2>
+          <div className="grid grid-cols-6 gap-12 mt-12">
+            <IconWithText
+              desc={t('dao:open-finances-desc')}
+              icon={<BookOpenIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('dao:open-finances')}
+            />
+            <IconWithText
+              desc={t('dao:view-votes-desc')}
+              icon={<EyeIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('dao:view-votes')}
+            />
+            <IconWithText
+              desc={t('dao:fees-accrue-desc')}
+              icon={<ArrowTrendingUpIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('dao:fees-accrue')}
+            />
           </div>
-        </div>
-        <div className="grid grid-cols-6 gap-12 mt-12">
-          <IconWithText
-            desc={t('dao:open-finances-desc')}
-            icon={<BookOpenIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('dao:open-finances')}
-          />
-          <IconWithText
-            desc={t('dao:view-votes-desc')}
-            icon={<EyeIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('dao:view-votes')}
-          />
-          <IconWithText
-            desc={t('dao:fees-accrue-desc')}
-            icon={<ArrowTrendingUpIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('dao:fees-accrue')}
-          />
-        </div>
+        </SectionWrapper>
         <ColorBlur
           className="top-0 left-0 opacity-10"
           height="360px"
           width="50%"
         />
-      </SectionWrapper>
+      </div>
       <div className={`${sectionBg}`}>
         <SectionWrapper noPaddingX>
           <h2 className="mb-8 md:mb-16 page-x-padding">

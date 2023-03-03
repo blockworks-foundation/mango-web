@@ -31,38 +31,40 @@ const MngoPage = () => {
       <div className={`${sectionBg} z-20 relative`}>
         <TokenStats />
       </div>
-      <SectionWrapper>
-        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
-          <div className="col-span-12 sm:col-span-6">
-            <HeadingTagline text={t('mngo:ido-price')} />
+      <div className="relative overflow-hidden">
+        <SectionWrapper>
+          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-16">
+            <div className="col-span-12 sm:col-span-6">
+              <HeadingTagline text={t('mngo:ido-price')} />
+            </div>
+            <div className="col-span-12 sm:col-span-6">
+              <h2>{t('mngo:fair-launch-ido')}</h2>
+            </div>
           </div>
-          <div className="col-span-12 sm:col-span-6">
-            <h2>{t('mngo:fair-launch-ido')}</h2>
+          <div className="grid grid-cols-6 gap-x-8 gap-y-12 mt-12">
+            <IconWithText
+              desc={t('mngo:no-insider-deals-desc')}
+              icon={<HandThumbDownIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('mngo:no-insider-deals')}
+            />
+            <IconWithText
+              desc={t('mngo:equal-price-desc')}
+              icon={<Bars2Icon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('mngo:equal-price')}
+            />
+            <IconWithText
+              desc={t('mngo:dao-controlled-supply-desc')}
+              icon={<CubeIcon className="h-5 w-5 text-th-fgd-2" />}
+              title={t('mngo:dao-controlled-supply')}
+            />
           </div>
-        </div>
-        <div className="grid grid-cols-6 gap-x-8 gap-y-12 mt-12">
-          <IconWithText
-            desc={t('mngo:no-insider-deals-desc')}
-            icon={<HandThumbDownIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('mngo:no-insider-deals')}
-          />
-          <IconWithText
-            desc={t('mngo:equal-price-desc')}
-            icon={<Bars2Icon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('mngo:equal-price')}
-          />
-          <IconWithText
-            desc={t('mngo:dao-controlled-supply-desc')}
-            icon={<CubeIcon className="h-5 w-5 text-th-fgd-2" />}
-            title={t('mngo:dao-controlled-supply')}
-          />
-        </div>
+        </SectionWrapper>
         <ColorBlur
           className="top-0 left-0 opacity-10"
           height="360px"
           width="50%"
         />
-      </SectionWrapper>
+      </div>
       <div className={`${sectionBg}`}>
         <Distribution />
       </div>

@@ -94,7 +94,7 @@ const StepItem = ({
         leaveTo="opacity-0"
       >
         <ColorBlur
-          className="left-0 top-10 bg-th-down opacity-30"
+          className="left-1/2 -translate-x-1/2 top-10 bg-th-down opacity-30"
           height="180px"
           width="66%"
         />

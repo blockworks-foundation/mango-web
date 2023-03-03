@@ -115,33 +115,35 @@ const HomePage = () => {
           </div>
         </SectionWrapper>
       </div>
-      <SectionWrapper>
-        <div className="grid grid-cols-12 gap-6 md:gap-8">
-          <div className="hidden md:col-span-6 h-96 md:flex justify-center relative">
-            <img
-              className="absolute z-10 w-auto h-auto md:h-[480px] lg:h-[680px]"
-              src={
-                theme === 'Light'
-                  ? '/images/@1x-swap-light.png'
-                  : '/images/@1x-swap-dark.png'
-              }
-              alt=""
-            />
+      <div className="relative overflow-hidden">
+        <SectionWrapper>
+          <div className="grid grid-cols-12 gap-6 md:gap-8">
+            <div className="hidden md:col-span-6 h-96 md:flex justify-center relative">
+              <img
+                className="absolute z-10 w-auto h-auto md:h-[480px] lg:h-[680px]"
+                src={
+                  theme === 'Light'
+                    ? '/images/@1x-swap-light.png'
+                    : '/images/@1x-swap-dark.png'
+                }
+                alt=""
+              />
+            </div>
+            <div className="col-span-12 md:col-span-6">
+              <h2 className="mb-4">{t('home:swap-heading')}</h2>
+              <p className="intro-p mb-8">{t('home:swap-desc')}</p>
+              <h3 className="mb-3">{t('home:swap-highlight-1-heading')}</h3>
+              <p className="mb-8">{t('home:swap-highlight-1-desc')}</p>
+              <h3 className="mb-3">{t('home:swap-highlight-2-heading')}</h3>
+              <p className="mb-8">{t('home:swap-highlight-2-desc')}</p>
+              <h3 className="mb-3">{t('home:swap-highlight-3-heading')}</h3>
+              <p className="mb-10">{t('home:swap-highlight-3-desc')}</p>
+              <Button className="text-lg" size="large">
+                {t('home:swap-now')}
+              </Button>
+            </div>
           </div>
-          <div className="col-span-12 md:col-span-6">
-            <h2 className="mb-4">{t('home:swap-heading')}</h2>
-            <p className="intro-p mb-8">{t('home:swap-desc')}</p>
-            <h3 className="mb-3">{t('home:swap-highlight-1-heading')}</h3>
-            <p className="mb-8">{t('home:swap-highlight-1-desc')}</p>
-            <h3 className="mb-3">{t('home:swap-highlight-2-heading')}</h3>
-            <p className="mb-8">{t('home:swap-highlight-2-desc')}</p>
-            <h3 className="mb-3">{t('home:swap-highlight-3-heading')}</h3>
-            <p className="mb-10">{t('home:swap-highlight-3-desc')}</p>
-            <Button className="text-lg" size="large">
-              {t('home:swap-now')}
-            </Button>
-          </div>
-        </div>
+        </SectionWrapper>
         <ColorBlur
           className="animate-blob -top-20 left-0 opacity-10"
           height="200px"
@@ -152,7 +154,7 @@ const HomePage = () => {
           height="200px"
           width="66%"
         />
-      </SectionWrapper>
+      </div>
       <div className={`${sectionBg} z-20 relative`}>
         <SectionWrapper>
           <div className="text-center max-w-[800px] mx-auto">
@@ -193,43 +195,45 @@ const HomePage = () => {
           />
         </SectionWrapper>
       </div>
-      <SectionWrapper>
-        <h2 className="mb-4">{t('home:trading-bots-welcome')}</h2>
-        <p className="intro-p max-w-[800px]">
-          {t('home:trading-bots-welcome-desc')}
-        </p>
-        <div className="grid grid-cols-6 gap-x-8 gap-y-12 mt-12">
-          <IconWithText
-            desc={t('home:market-maker-desc')}
-            icon={<BotOne className="h-16 w-16 mb-4 text-th-fgd-2" />}
-            linkPath="https://github.com/blockworks-foundation/mango-v4/tree/dev/ts/client/scripts/mm"
-            linkText={t('home:market-maker-link')}
-            noBorder
-            title={t('home:market-maker')}
-          />
-          <IconWithText
-            desc={t('home:liquidator-desc')}
-            icon={<BotTwo className="h-16 w-16 mb-4 text-th-fgd-2" />}
-            linkPath="#"
-            linkText={t('home:liquidator-link')}
-            noBorder
-            title={t('home:liquidator')}
-          />
-          <IconWithText
-            desc={t('home:build-your-own-desc')}
-            icon={<BotThree className="h-16 w-16 mb-4 text-th-fgd-2" />}
-            linkPath="#"
-            linkText={t('home:explore-the-code')}
-            noBorder
-            title={t('home:build-your-own')}
-          />
-        </div>
+      <div className="relative overflow-hidden">
+        <SectionWrapper>
+          <h2 className="mb-4">{t('home:trading-bots-welcome')}</h2>
+          <p className="intro-p max-w-[800px]">
+            {t('home:trading-bots-welcome-desc')}
+          </p>
+          <div className="grid grid-cols-6 gap-x-8 gap-y-12 mt-12">
+            <IconWithText
+              desc={t('home:market-maker-desc')}
+              icon={<BotOne className="h-16 w-16 mb-4 text-th-fgd-2" />}
+              linkPath="https://github.com/blockworks-foundation/mango-v4/tree/dev/ts/client/scripts/mm"
+              linkText={t('home:market-maker-link')}
+              noBorder
+              title={t('home:market-maker')}
+            />
+            <IconWithText
+              desc={t('home:liquidator-desc')}
+              icon={<BotTwo className="h-16 w-16 mb-4 text-th-fgd-2" />}
+              linkPath="#"
+              linkText={t('home:liquidator-link')}
+              noBorder
+              title={t('home:liquidator')}
+            />
+            <IconWithText
+              desc={t('home:build-your-own-desc')}
+              icon={<BotThree className="h-16 w-16 mb-4 text-th-fgd-2" />}
+              linkPath="#"
+              linkText={t('home:explore-the-code')}
+              noBorder
+              title={t('home:build-your-own')}
+            />
+          </div>
+        </SectionWrapper>
         <ColorBlur
-          className="animate-blob top-0 left-0 opacity-10"
+          className="animate-blob -top-20 left-0 opacity-10"
           height="300px"
-          width="75%"
+          width="66%"
         />
-      </SectionWrapper>
+      </div>
       <div className={`${sectionBg} z-20 relative`}>
         <SectionWrapper noPaddingX>
           <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">
@@ -244,22 +248,24 @@ const HomePage = () => {
         </SectionWrapper>
       </div>
       {/* add the below when we have some textimonials */}
-      <SectionWrapper>
-        <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row sm:items-end mb-12 md:mb-16">
-          <div className="col-span-12 order-2 sm:order-1 sm:col-span-6">
-            <h2>{t('home:crypto-loves-mango')}</h2>
+      <div className="relative overflow-hidden">
+        <SectionWrapper>
+          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row sm:items-end mb-12 md:mb-16">
+            <div className="col-span-12 order-2 sm:order-1 sm:col-span-6">
+              <h2>{t('home:crypto-loves-mango')}</h2>
+            </div>
+            <div className="col-span-12 order-1 sm:order-2 sm:col-span-6 flex sm:justify-end">
+              <HeadingTagline text={t('home:saying-about-us')} />
+            </div>
           </div>
-          <div className="col-span-12 order-1 sm:order-2 sm:col-span-6 flex sm:justify-end">
-            <HeadingTagline text={t('home:saying-about-us')} />
-          </div>
-        </div>
-        <Testimonials />
+          <Testimonials />
+        </SectionWrapper>
         <ColorBlur
           className="animate-blob top-0 right-0 opacity-10"
           height="300px"
           width="50%"
         />
-      </SectionWrapper>
+      </div>
     </>
   )
 }
