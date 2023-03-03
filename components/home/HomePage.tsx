@@ -117,27 +117,54 @@ const HomePage = () => {
       </div>
       <div className="relative overflow-hidden">
         <SectionWrapper>
-          <div className="grid grid-cols-12 gap-6 md:gap-8">
-            <div className="hidden md:col-span-6 h-96 md:flex justify-center relative">
+          <div className="grid grid-cols-12 md:gap-12">
+            <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[580px] md:h-auto flex justify-center relative order-2 md:order-1">
               <img
-                className="absolute z-10 w-auto h-auto md:h-[480px] lg:h-[680px]"
+                className="absolute z-10 w-full h-auto max-w-[400px]"
                 src={
                   theme === 'Light'
                     ? '/images/@1x-swap-light.png'
                     : '/images/@1x-swap-dark.png'
                 }
-                alt=""
+                alt="Swap"
               />
             </div>
-            <div className="col-span-12 md:col-span-6">
+            <div className="col-span-12 md:col-span-6 lg:col-span-7 order-1 md:order-2 mb-10 md:mb-0">
               <h2 className="mb-4">{t('home:swap-heading')}</h2>
               <p className="intro-p mb-8">{t('home:swap-desc')}</p>
-              <h3 className="mb-3">{t('home:swap-highlight-1-heading')}</h3>
-              <p className="mb-8">{t('home:swap-highlight-1-desc')}</p>
-              <h3 className="mb-3">{t('home:swap-highlight-2-heading')}</h3>
-              <p className="mb-8">{t('home:swap-highlight-2-desc')}</p>
-              <h3 className="mb-3">{t('home:swap-highlight-3-heading')}</h3>
-              <p className="mb-10">{t('home:swap-highlight-3-desc')}</p>
+              <div className="flex items-center md:items-start lg:items-center space-x-6 mb-8">
+                <img
+                  className="w-20 h-auto"
+                  src="/images/img-placeholder.png"
+                  alt=""
+                />
+                <div>
+                  <h3 className="mb-3">{t('home:swap-highlight-1-heading')}</h3>
+                  <p>{t('home:swap-highlight-1-desc')}</p>
+                </div>
+              </div>
+              <div className="flex items-center md:items-start lg:items-center space-x-6 mb-8">
+                <img
+                  className="w-20 h-auto"
+                  src="/images/img-placeholder.png"
+                  alt=""
+                />
+                <div>
+                  <h3 className="mb-3">{t('home:swap-highlight-2-heading')}</h3>
+                  <p>{t('home:swap-highlight-2-desc')}</p>
+                </div>
+              </div>
+              <div className="flex items-center md:items-start lg:items-center space-x-6 mb-10">
+                <img
+                  className="w-20 h-auto"
+                  src="/images/img-placeholder.png"
+                  alt=""
+                />
+                <div>
+                  <h3 className="mb-3">{t('home:swap-highlight-3-heading')}</h3>
+                  <p>{t('home:swap-highlight-3-desc')}</p>
+                </div>
+              </div>
               <Button className="text-lg" size="large">
                 {t('home:swap-now')}
               </Button>
