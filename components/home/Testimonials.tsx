@@ -76,7 +76,7 @@ interface TestimonialItem {
 const Testimonial = ({ item }: { item: TestimonialItem }) => {
   const { description, name, profileImgSrc, testimonial, twitterHandle } = item
   return (
-    <div className="flex flex-col items-center h-64">
+    <div className="flex flex-col items-center h-72 md:h-64">
       <div className="w-24 h-24 mb-3">
         <img
           className="w-full h-full rounded-full"

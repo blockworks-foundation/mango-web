@@ -30,7 +30,7 @@ const STEPS = (t) => [
     imagePath: '/images/img-placeholder.png',
     title: 'home:get-wallet',
     children: (
-      <div className="flex items-center space-x-6 mt-4 lg:mt-6">
+      <div className="flex items-center space-x-3 sm:space-x-6 mt-4 lg:mt-6">
         <a
           href="https://chrome.google.com/webstore/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa"
           rel="noopener noreferrer"

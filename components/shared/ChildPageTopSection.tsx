@@ -19,7 +19,7 @@ const ChildPageTopSection = ({
         <div className="w-full flex flex-col items-center mx-auto text-center max-w-[800px]">
           <h1 className="mb-6">{heading}</h1>
           <p className="intro-p">{intro}</p>
-          <div className="mt-8">
+          <div className="mt-8 w-full sm:w-auto">
             <ButtonLink path={linkPath} linkText={buttonText} size="large" />
           </div>
         </div>

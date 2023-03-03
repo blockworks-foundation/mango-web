@@ -56,7 +56,7 @@ const StepItem = ({
           } flex flex-row space-x-4 md:space-x-6 mb-12 last:mb-0 md:mb-0 items-start md:py-12 lg:pl-20 pl-6 h-auto md:h-64 default-transition md:pr-40 md:-mr-32 w-full xl:rounded-l-xl`}
         >
           <h3>{`0${index + 1}`}</h3>
-          <div className="border-b-2 border-th-fgd-2 h-4 w-full max-w-[24px] md:max-w-[40px]" />
+          <div className="hidden sm:block border-b-2 border-th-fgd-2 h-4 w-full sm:max-w-[24px] md:max-w-[40px]" />
           <div>
             <img
               className="md:hidden w-auto h-32 mb-4"
