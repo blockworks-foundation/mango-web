@@ -89,13 +89,13 @@ const StepItem = ({
         enter="transition-all ease-in duration-500 delay-200"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        leave="transition-all ease-out duration-500"
+        leave="transition-all ease-out duration-200"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
         <ColorBlur
-          className="left-0 top-0 bg-th-down"
-          height="280px"
+          className="left-0 top-10 bg-th-down opacity-30"
+          height="180px"
           width="66%"
         />
       </Transition>

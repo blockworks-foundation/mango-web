@@ -8,15 +8,17 @@ const TESTIMONIALS: TestimonialItem[] = [
     name: 'Anatoly Yakovenko',
     profileImgSrc:
       'https://pbs.twimg.com/profile_images/1626708518698127361/EmBuqBoT_400x400.jpg',
-    testimonial: 'Yeah dude',
+    testimonial:
+      'Bitcoin Cash the hot consensus process when Satoshi Nakamoto built lots of instant Lambo, yet Zcash thinking a protocol, thinking the quick bag in many smart contract.',
     twitterHandle: 'aeyakovenko',
   },
   {
-    description: 'cool',
+    description: 'Market Maker',
     name: 'Space Monkey',
     profileImgSrc:
       'https://pbs.twimg.com/profile_images/1608831847802306560/msFvPpcD_400x400.jpg',
-    testimonial: 'Yeah dude',
+    testimonial:
+      'Binance Coin slept on the fundamental analysis of some bear when Gwei limited many digital signature during few fiat, therefore, ether froze a dump.',
     twitterHandle: 'RealSpaceMonkey',
   },
 ]
@@ -74,7 +76,7 @@ interface TestimonialItem {
 const Testimonial = ({ item }: { item: TestimonialItem }) => {
   const { description, name, profileImgSrc, testimonial, twitterHandle } = item
   return (
-    <div className="flex flex-col items-center h-72">
+    <div className="flex flex-col items-center h-64">
       <div className="w-24 h-24 mb-3">
         <img
           className="w-full h-full rounded-full"

@@ -21,6 +21,7 @@ import InlineImageWithText from '../shared/InlineImageWithText'
 import SectionWrapper from '../shared/SectionWrapper'
 import Steps from '../shared/Steps'
 import HomeTopSection from './HomeTopSection'
+import Testimonials from './Testimonials'
 
 const STEPS = (t) => [
   {
@@ -229,7 +230,7 @@ const HomePage = () => {
           width="75%"
         />
       </SectionWrapper>
-      <div className={`${sectionBg}`}>
+      <div className={`${sectionBg} z-20 relative`}>
         <SectionWrapper noPaddingX>
           <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">
             <div className="col-span-12 sm:col-span-6 page-x-padding">
@@ -243,7 +244,7 @@ const HomePage = () => {
         </SectionWrapper>
       </div>
       {/* add the below when we have some textimonials */}
-      {/* <SectionWrapper>
+      <SectionWrapper>
         <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row sm:items-end mb-12 md:mb-16">
           <div className="col-span-12 order-2 sm:order-1 sm:col-span-6">
             <h2>{t('home:crypto-loves-mango')}</h2>
@@ -253,7 +254,12 @@ const HomePage = () => {
           </div>
         </div>
         <Testimonials />
-      </SectionWrapper> */}
+        <ColorBlur
+          className="animate-blob top-0 right-0 opacity-10"
+          height="300px"
+          width="50%"
+        />
+      </SectionWrapper>
     </>
   )
 }

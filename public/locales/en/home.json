@@ -44,7 +44,7 @@
     "new-to-mango": "New to Mango?",
     "risk-engine": "Sophisticated risk engine",
     "risk-engine-desc": "The risk engine for v4 is at the core of its design. Features include, manipulation resistent price oracles, insurance fund, partial liquidations, minimum pool deposit ratios, asset and liability weights, DAO governed risk parameters and emergency reduce-only mode.",
-    "saying-about-us": "See what the community is saying about us",
+    "saying-about-us": "See what the community is saying about us.",
     "swap-desc": "The simplicity of swap with the power of leverage.",
     "swap-heading": "Swap it like it's hot.",
     "swap-highlight-1-desc": "Mango Swap implements flash loans to add margin to your swaps. When you use margin a loan will be opened for you.",
