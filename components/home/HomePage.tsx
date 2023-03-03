@@ -68,6 +68,13 @@ const STEPS = (t) => [
     desc: 'home:trade-earn-borrow-desc',
     imagePath: '/images/img-placeholder.png',
     title: 'home:trade-earn-borrow',
+    children: (
+      <ButtonLink
+        className="mt-4 lg:mt-6"
+        path="https://app.mango.markets/"
+        linkText={t('home:get-started')}
+      />
+    ),
   },
 ]
 
@@ -121,7 +128,7 @@ const HomePage = () => {
           <div className="grid grid-cols-12 md:gap-12">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[580px] md:h-auto flex justify-center relative order-2 md:order-1">
               <img
-                className="absolute z-10 w-full h-auto max-w-[400px]"
+                className="absolute z-10 w-full h-auto max-w-[380px] xl:max-w-[400px]"
                 src={
                   theme === 'Light'
                     ? '/images/@1x-swap-light.png'
