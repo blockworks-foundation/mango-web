@@ -35,7 +35,7 @@ const DesktopNavigation = () => {
       <NavigationItem title={t('navigation:products')}>
         <NavigationItemPanel>
           <NavigationItemLink
-            path="https://trade.mango.markets"
+            path="https://app.mango.markets"
             isExternal
             title={t('navigation:mango-v4')}
           />
@@ -107,10 +107,7 @@ const DesktopNavigation = () => {
         </NavigationItemPanel>
       </NavigationItem>
       <ThemeToggle />
-      <ButtonLink
-        linkText={t('trade-now')}
-        path="https://trade.mango.markets"
-      />
+      <ButtonLink linkText={t('trade-now')} path="https://app.mango.markets" />
     </div>
   )
 }

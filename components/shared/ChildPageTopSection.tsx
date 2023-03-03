@@ -15,7 +15,7 @@ const ChildPageTopSection = ({
 }) => {
   return (
     <div className="relative overflow-hidden">
-      <SectionWrapper>
+      <SectionWrapper className="z-10">
         <div className="w-full flex flex-col items-center mx-auto text-center max-w-[800px]">
           <h1 className="mb-6">{heading}</h1>
           <p className="intro-p">{intro}</p>

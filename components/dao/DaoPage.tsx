@@ -104,7 +104,7 @@ const DaoPage = () => {
             desc={t('dao:get-mngo-desc')}
             title={t('dao:get-mngo')}
             imageSrc="/images/img-placeholder.png"
-            linkPath="https://trade.mango.markets/swap"
+            linkPath="https://app.mango.markets/"
             linkText={t('dao:buy-mngo')}
             reverse
           />

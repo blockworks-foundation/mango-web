@@ -13,7 +13,8 @@ import BotOne from '../icons/BotOne'
 import BotThree from '../icons/BotThree'
 import BotTwo from '../icons/BotTwo'
 import LiquidIcon from '../icons/LiquidIcon'
-import Button, { LinkButton } from '../shared/Button'
+import { LinkButton } from '../shared/Button'
+import ButtonLink from '../shared/ButtonLink'
 import ColorBlur from '../shared/ColorBlur'
 import HeadingTagline from '../shared/HeadingTagline'
 import IconWithText from '../shared/IconWithText'
@@ -116,7 +117,7 @@ const HomePage = () => {
         </SectionWrapper>
       </div>
       <div className="relative overflow-hidden">
-        <SectionWrapper>
+        <SectionWrapper className="z-10">
           <div className="grid grid-cols-12 md:gap-12">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[580px] md:h-auto flex justify-center relative order-2 md:order-1">
               <img
@@ -165,9 +166,11 @@ const HomePage = () => {
                   <p>{t('home:swap-highlight-3-desc')}</p>
                 </div>
               </div>
-              <Button className="text-lg" size="large">
-                {t('home:swap-now')}
-              </Button>
+              <ButtonLink
+                path="https://app.mango.markets/"
+                linkText={t('home:swap-now')}
+                size="large"
+              />
             </div>
           </div>
         </SectionWrapper>
@@ -209,14 +212,14 @@ const HomePage = () => {
             desc={t('home:earn-interest-desc')}
             title={t('home:earn-interest')}
             imageSrc="/images/img-placeholder.png"
-            linkPath="#"
+            linkPath="https://app.mango.markets"
             linkText={t('home:deposit-now')}
           />
           <InlineImageWithText
             desc={t('home:borrow-any-token-desc')}
             title={t('home:borrow-any-token')}
             imageSrc="/images/img-placeholder.png"
-            linkPath="#"
+            linkPath="https://app.mango.markets"
             linkText={t('home:borrow-now')}
             reverse
           />

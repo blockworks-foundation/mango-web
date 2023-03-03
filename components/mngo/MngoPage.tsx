@@ -25,7 +25,7 @@ const MngoPage = () => {
       <ChildPageTopSection
         heading={t('mngo:powered-by-mngo')}
         intro={t('mngo:mngo-desc')}
-        linkPath="https://trade.mango.markets"
+        linkPath="https://app.mango.markets"
         buttonText={t('mngo:buy-mngo')}
       />
       <div className={`${sectionBg} z-20 relative`}>

@@ -54,7 +54,7 @@ const Footer = () => {
             </FooterLinkColumn>
             <FooterLinkColumn title={t('navigation:products')}>
               <FooterLink
-                path="https://trade.mango.markets"
+                path="https://app.mango.markets"
                 isExternal
                 title={t('navigation:mango-v4')}
               />

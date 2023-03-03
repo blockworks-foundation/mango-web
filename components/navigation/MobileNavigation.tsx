@@ -64,7 +64,7 @@ const MenuPanel = ({
           <div>
             <h4 className="px-4 mb-2">{t('navigation:products')}</h4>
             <NavigationItemLink
-              path="https://trade.mango.markets"
+              path="https://app.mango.markets"
               isExternal
               title={t('navigation:mango-v4')}
             />

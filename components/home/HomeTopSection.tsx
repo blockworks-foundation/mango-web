@@ -34,7 +34,7 @@ const HomeTopSection = () => {
             <ButtonLink
               className="mt-8"
               linkText={t('trade-now')}
-              path="https://trade.mango.markets"
+              path="https://app.mango.markets"
               size="large"
             />
           </div>
