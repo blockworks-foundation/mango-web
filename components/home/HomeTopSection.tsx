@@ -25,7 +25,13 @@ const HomeTopSection = () => {
       <SectionWrapper>
         <div className="grid grid-cols-12">
           <div className="col-span-12 lg:col-span-5">
-            <h1 className="mb-6">{t('home:long-short-everything')}</h1>
+            <h1 className="mb-6">
+              {t('home:long-short-everything')}{' '}
+              <span className="bg-gradient-to-b from-th-active via-th-warning to-th-down bg-clip-text text-transparent">
+                {t('home:everything')}
+              </span>
+              .
+            </h1>
             <CheckBullet>{t('home:bullet-1')}</CheckBullet>
             <CheckBullet>{t('home:bullet-2')}</CheckBullet>
             <CheckBullet>{t('home:bullet-3')}</CheckBullet>

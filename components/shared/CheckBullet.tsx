@@ -16,7 +16,7 @@ const CheckBullet = ({
       <p className="intro-p">
         {children}
         {showNewBadge ? (
-          <span className="py-0.5 px-1 rounded bg-th-active font-medium text-sm uppercase text-th-bkg-1 ml-2">
+          <span className="py-0.5 px-1 rounded bg-th-fgd-1 font-medium text-sm uppercase text-th-bkg-1 ml-2">
             {t('new')}
           </span>
         ) : null}

@@ -163,7 +163,7 @@ th {
 /* Base */
 
 body {
-  @apply font-body text-sm tracking-wider;
+  @apply font-body text-sm;
 }
 
 button {
@@ -208,11 +208,11 @@ h4 {
 }
 
 p {
-  @apply text-th-fgd-3 text-base xl:text-lg;
+  @apply tracking-wider text-th-fgd-3 text-base xl:text-lg;
 }
 
 a {
-  @apply text-base lg:text-lg;
+  @apply tracking-wider text-base lg:text-lg;
 }
 
 .font-mono {

@@ -126,9 +126,9 @@ const HomePage = () => {
       <div className="relative overflow-hidden">
         <SectionWrapper className="z-10">
           <div className="grid grid-cols-12 md:gap-12">
-            <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[580px] md:h-auto flex justify-center relative order-2 md:order-1">
+            <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[450px] md:h-auto flex justify-center relative order-2 md:order-1">
               <img
-                className="absolute z-10 w-full h-auto max-w-[380px] xl:max-w-[400px]"
+                className="absolute z-10 w-full h-auto max-w-[320px] xl:max-w-[330px]"
                 src={
                   theme === 'Light'
                     ? '/images/@1x-swap-light.png'
@@ -139,7 +139,7 @@ const HomePage = () => {
             </div>
             <div className="col-span-12 md:col-span-6 lg:col-span-7 order-1 md:order-2 mb-10 md:mb-0">
               <h2 className="mb-4">{t('home:swap-heading')}</h2>
-              <p className="intro-p mb-8">{t('home:swap-desc')}</p>
+              <p className="intro-p mb-10 md:mb-16">{t('home:swap-desc')}</p>
               <div className="flex items-center md:items-start lg:items-center space-x-6 mb-8">
                 <img
                   className="w-20 h-auto"
@@ -192,6 +192,64 @@ const HomePage = () => {
           width="66%"
         />
       </div>
+      <div className="relative overflow-hidden">
+        <SectionWrapper>
+          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-10 md:mb-16">
+            <div className="col-span-12 sm:col-span-6">
+              <HeadingTagline text={t('home:risk-engine-desc')} />
+            </div>
+            <div className="col-span-12 sm:col-span-6">
+              <h2>{t('home:risk-engine')}</h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-6 gap-x-8 gap-y-12 mt-12">
+            <IconWithText
+              desc="EOS cost many automated stablecoin after a genesis block when ICO serves a dormant taint of lots of protocol, nor when Maker cooperated the considerable transaction fee"
+              icon={
+                <img
+                  src="/images/img-placeholder.png"
+                  className="h-20 w-20 mb-4"
+                />
+              }
+              linkPath="#"
+              linkText={t('learn-more')}
+              noBorder
+              title="Risk heading 1"
+            />
+            <IconWithText
+              desc="EOS cost many automated stablecoin after a genesis block when ICO serves a dormant taint of lots of protocol, nor when Maker cooperated the considerable transaction fee"
+              icon={
+                <img
+                  src="/images/img-placeholder.png"
+                  className="h-20 w-20 mb-4"
+                />
+              }
+              linkPath="#"
+              linkText={t('learn-more')}
+              noBorder
+              title="Risk heading 2"
+            />
+            <IconWithText
+              desc="EOS cost many automated stablecoin after a genesis block when ICO serves a dormant taint of lots of protocol, nor when Maker cooperated the considerable transaction fee"
+              icon={
+                <img
+                  src="/images/img-placeholder.png"
+                  className="h-20 w-20 mb-4"
+                />
+              }
+              linkPath="#"
+              linkText={t('learn-more')}
+              noBorder
+              title="Risk heading 3"
+            />
+          </div>
+        </SectionWrapper>
+        <ColorBlur
+          className="animate-blob -bottom-20 right-0 opacity-10"
+          height="200px"
+          width="66%"
+        />
+      </div>
       <div className={`${sectionBg} z-20 relative`}>
         <SectionWrapper>
           <div className="text-center max-w-[800px] mx-auto">
@@ -207,20 +265,21 @@ const HomePage = () => {
             linkPath="#"
             linkText={t('learn-more')}
           />
-          <InlineImageWithText
+          {/* <InlineImageWithText
             desc={t('home:risk-engine-desc')}
             title={t('home:risk-engine')}
             imageSrc="/images/img-placeholder.png"
             linkPath="#"
             linkText={t('learn-more')}
             reverse
-          />
+          /> */}
           <InlineImageWithText
             desc={t('home:earn-interest-desc')}
             title={t('home:earn-interest')}
             imageSrc="/images/img-placeholder.png"
             linkPath="https://app.mango.markets"
             linkText={t('home:deposit-now')}
+            reverse
           />
           <InlineImageWithText
             desc={t('home:borrow-any-token-desc')}
@@ -228,7 +287,7 @@ const HomePage = () => {
             imageSrc="/images/img-placeholder.png"
             linkPath="https://app.mango.markets"
             linkText={t('home:borrow-now')}
-            reverse
+            // reverse
           />
         </SectionWrapper>
       </div>
@@ -273,7 +332,7 @@ const HomePage = () => {
       </div>
       <div className={`${sectionBg} z-20 relative`}>
         <SectionWrapper noPaddingX>
-          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-8 md:mb-12">
+          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row items-end mb-10 md:mb-16">
             <div className="col-span-12 sm:col-span-6 page-x-padding">
               <HeadingTagline text={t('home:getting-started')} />
             </div>
@@ -287,7 +346,7 @@ const HomePage = () => {
       {/* add the below when we have some textimonials */}
       <div className="relative overflow-hidden">
         <SectionWrapper>
-          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row sm:items-end mb-12 md:mb-16">
+          <div className="grid grid-cols-12 gap-8 md:gap-12 flex flex-col sm:flex-row sm:items-end mb-10 md:mb-16">
             <div className="col-span-12 order-2 sm:order-1 sm:col-span-6">
               <h2>{t('home:crypto-loves-mango')}</h2>
             </div>
