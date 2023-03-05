@@ -126,9 +126,9 @@ const HomePage = () => {
       <div className="relative overflow-hidden">
         <SectionWrapper className="z-10">
           <div className="grid grid-cols-12 md:gap-12">
-            <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[450px] md:h-auto flex justify-center relative order-2 md:order-1">
+            <div className="col-span-12 md:col-span-6 lg:col-span-5 h-[410px] md:h-auto flex justify-center order-2 md:order-1">
               <img
-                className="absolute z-10 w-full h-auto max-w-[320px] xl:max-w-[330px]"
+                className="absolute md:top-1/2 md:-translate-y-1/2 z-10 w-full h-auto max-w-[320px] xl:max-w-[330px]"
                 src={
                   theme === 'Light'
                     ? '/images/@1x-swap-light.png'
@@ -204,7 +204,7 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-6 gap-x-8 gap-y-12 mt-12">
             <IconWithText
-              desc="EOS cost many automated stablecoin after a genesis block when ICO serves a dormant taint of lots of protocol, nor when Maker cooperated the considerable transaction fee"
+              desc={t('home:risk-engine-1-desc')}
               icon={
                 <img
                   src="/images/img-placeholder.png"
@@ -214,10 +214,10 @@ const HomePage = () => {
               linkPath="#"
               linkText={t('learn-more')}
               noBorder
-              title="Risk heading 1"
+              title={t('home:risk-engine-1')}
             />
             <IconWithText
-              desc="EOS cost many automated stablecoin after a genesis block when ICO serves a dormant taint of lots of protocol, nor when Maker cooperated the considerable transaction fee"
+              desc={t('home:risk-engine-2-desc')}
               icon={
                 <img
                   src="/images/img-placeholder.png"
@@ -227,10 +227,10 @@ const HomePage = () => {
               linkPath="#"
               linkText={t('learn-more')}
               noBorder
-              title="Risk heading 2"
+              title={t('home:risk-engine-2')}
             />
             <IconWithText
-              desc="EOS cost many automated stablecoin after a genesis block when ICO serves a dormant taint of lots of protocol, nor when Maker cooperated the considerable transaction fee"
+              desc={t('home:risk-engine-3-desc')}
               icon={
                 <img
                   src="/images/img-placeholder.png"
@@ -240,7 +240,7 @@ const HomePage = () => {
               linkPath="#"
               linkText={t('learn-more')}
               noBorder
-              title="Risk heading 3"
+              title={t('home:risk-engine-3')}
             />
           </div>
         </SectionWrapper>
