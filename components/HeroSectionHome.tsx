@@ -1,5 +1,5 @@
+import { FunctionComponent } from 'react'
 import { useRef, useEffect } from 'react'
-import Button from './Button'
 import { gsap, Power3 } from 'gsap'
 
 const HeroSectionHome = () => {
@@ -15,16 +15,46 @@ const HeroSectionHome = () => {
       ease: Power3.easeOut,
     })
   }, [])
-
   return (
     <div className="relative" style={{ height: 'calc(100vh - 160px)' }}>
-      <div className="lg:px-20 xs:px-6 max-w-xl lg:max-w-3xl h-full pb-20 flex flex-col justify-center w-full">
+      <div className="lg:px-20 xs:px-6 sm:max-w-xl lg:max-w-3xl h-full flex flex-col justify-center w-full">
         <div>
-          <h1 className="mb-3 lg:text-6xl text-5xl text-white font-bold font-heading">
-            A New Dawn.{' '}
+          <h1 className="mb-4">
+            Live to{' '}
+            <span className="bg-gradient-to-br from-secondary-1-light via-primary-dark to-secondary-2-light bg-clip-text text-transparent">
+              trade
+            </span>
+            .
           </h1>
+          <p className="text-base  text-th-fgd-3 mb-6">
+            Mango v4 is in public beta. Re-designed from the ground up with
+            innovative new features and risk mitigation strategies, you can
+            finally ditch your CEX.
+          </p>
+          <CheckBullet>Trade spot & perpetuals up to 10x leverage.</CheckBullet>
+          <CheckBullet>Earn interest on all deposits.</CheckBullet>
+          <CheckBullet>Borrow any listed token.</CheckBullet>
+          <CheckBullet showNewBadge>Permissionless token listings.</CheckBullet>
+          {/* <CheckBullet showNewBadge>{t('home:bullet-5')}</CheckBullet> */}
+          <div className="flex items-center mt-10 space-x-8">
+            <ButtonLink
+              linkText="Trade Now"
+              path="https://app.mango.markets"
+              size="large"
+            />
+            <a
+              href="https://docs.mango.markets"
+              rel="noopener noreferrer"
+              className="font-bold flex items-center text-th-fgd-2 md:hover:text-th-fgd-3 default-transition"
+              target="_blank"
+            >
+              View Docs
+              <ChevronRightIcon className="h-6 w-6 mt-0.5" />
+            </a>
+          </div>
+          <p className="mt-8 text-xs">Website under contruction.</p>
 
-          <p className="mb-3 opacity-80 text-lg">
+          {/* <p className="mb-3 opacity-80 text-lg">
             The next generation of Mango is on the horizon. With exciting new
             features and risk mitigation strategies, Mango v4 is your one-stop
             DeFi shop.
@@ -47,9 +77,9 @@ const HeroSectionHome = () => {
                 <span>Join Discord</span>
               </Button>
             </a>
-          </div>
+          </div> */}
         </div>
-        <div>
+        {/* <div>
           <p className="mt-16 py-4 text-xs text-white text-opacity-50 uppercase tracking-wide font-normal sm:mt-16">
             Powered by
           </p>
@@ -63,11 +93,11 @@ const HeroSectionHome = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <img
         ref={sideImage}
-        className="hidden md:block absolute -bottom-20 z-10 right-0 w-full md:w-2/3 lg:w-3/5 h-auto opacity-0 transform translate-y-40"
+        className="hidden sm:block absolute -bottom-20 z-10 right-0 w-3/4 sm:w-2/3 lg:w-3/5 h-auto opacity-0 transform translate-y-40"
         src="../img/trade.png"
         alt=""
       />
@@ -81,3 +111,65 @@ const HeroSectionHome = () => {
 }
 
 export default HeroSectionHome
+
+import { CheckCircleIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
+import { ReactNode } from 'react'
+
+const CheckBullet = ({
+  children,
+  showNewBadge,
+}: {
+  children: ReactNode
+  showNewBadge?: boolean
+}) => {
+  return (
+    <div className="mb-2 flex items-center space-x-2.5">
+      <CheckCircleIcon className="h-6 w-6 text-th-fgd-3 flex-shrink-0" />
+      <p className="text-base lg:text-lg text-th-fgd-2">
+        {children}
+        {showNewBadge ? (
+          <span className="py-0.5 px-1 rounded bg-th-fgd-1 font-medium text-sm uppercase text-th-bkg-1 ml-2">
+            New
+          </span>
+        ) : null}
+      </p>
+    </div>
+  )
+}
+
+interface ButtonLinkProps {
+  path: string
+  className?: string
+  secondary?: boolean
+  linkText: string
+  size?: 'large' | 'medium' | 'small'
+}
+
+const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
+  linkText,
+  path,
+  className,
+  secondary,
+  size = 'medium',
+}) => {
+  return (
+    <a
+      className={`flex sm:w-max items-center justify-center rounded-md ${
+        secondary
+          ? 'border border-th-red-dark'
+          : 'bg-th-red-dark md:hover:brightness-90'
+      } ${
+        size === 'medium'
+          ? 'h-10 px-4 text-sm'
+          : size === 'large'
+          ? 'h-12 px-6'
+          : 'h-8 px-3'
+      } default-transition font-display focus:outline-none text-th-fgd-1 ${className}`}
+      href={path}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      {linkText}
+    </a>
+  )
+}
