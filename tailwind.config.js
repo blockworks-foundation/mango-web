@@ -177,6 +177,9 @@ module.exports = {
           },
         },
       },
+      screens: {
+        sm: '480px',
+      },
     },
   },
   variants: {

@@ -19,7 +19,7 @@ const HeroSectionHome = () => {
   // }, [])
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center lg:px-20 xs:px-6">
-      <div className="text-center lg:text-left max-w-[800px] mx-auto w-full lg:w-1/2 lg:pr-16">
+      <div className="text-center lg:text-left max-w-[800px] mx-auto w-full lg:w-1/2 xl:w-2/5 lg:pr-16">
         <h1 className="mb-4">Safer. Simpler. Smarter.</h1>
         <p className="text-base lg:text-lg text-th-fgd-3 mb-6">
           A magical new way to interact with DeFi. Groundbreaking safety
@@ -54,10 +54,10 @@ const HeroSectionHome = () => {
         </div>
         {/* <p className="mt-8 text-xs">Website under contruction.</p> */}
       </div>
-      <div className="relative h-max w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
+      <div className="relative h-max w-full lg:w-1/2 xl:w-3/5 flex justify-center mb-4 lg:mb-0">
         <img
           // ref={sideImage}
-          className="w-2/3 md:w-1/2 lg:w-full h-auto "
+          className="w-full sm:w-3/4 md:w-1/2 lg:w-full h-auto "
           src="../img/swap-trade.png"
           alt=""
         />
