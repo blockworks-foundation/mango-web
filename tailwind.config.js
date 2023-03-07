@@ -11,9 +11,10 @@ module.exports = {
   darkMode: false,
   theme: {
     fontFamily: {
-      sans: ['Lato', 'sans-serif'],
+      display: ['TT Commons Expanded, sans-serif'],
+      body: 'TT Commons, sans-serif',
+      mono: ['TT Mono, mono'],
     },
-
     screens: {
       xs: '240px',
       // => @media (min-width: 340px) { ... }
@@ -132,16 +133,17 @@ module.exports = {
           'fgd-4': '#878787',
         },
         'mango-theme': {
-          yellow: '#F2C94C',
-          red: { DEFAULT: '#E54033', dark: '#C7251A' },
+          // yellow: '#603BCF',
+          yellow: 'hsl(45, 86%, 62%)',
+          red: { DEFAULT: '#E54033', dark: '#603BCF' },
           green: { DEFAULT: '#AFD803', dark: '#91B503' },
-          'bkg-1': '#141026',
+          'bkg-1': '#141414',
           'bkg-2': '#1D1832',
           'bkg-3': '#252238',
           'fgd-1': '#F0EDFF',
-          'fgd-2': '#FCFCFF',
+          'fgd-2': '#ddd',
           'fgd-3': '#B9B5CE',
-          'fgd-4': '#2F2C45',
+          'fgd-4': '#5A5775',
         },
         'th-bkg-1': 'var(--bkg-1)',
         'th-bkg-2': 'var(--bkg-2)',
@@ -174,6 +176,9 @@ module.exports = {
             transform: 'translate(0px, 0px) scale(1)',
           },
         },
+      },
+      screens: {
+        sm: '480px',
       },
     },
   },

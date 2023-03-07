@@ -2,6 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'TT Mono';
+  src: url('/fonts/TT_Commons_Pro_Mono_Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Commons Expanded';
+  src: url('/fonts/TT_Commons_Pro_Expanded_DemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: normal;
+  src: url('/fonts/TT_Commons_Pro_Normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: medium;
+  src: url('/fonts/TT_Commons_Pro_Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: bold;
+  src: url('/fonts/TT_Commons_Pro_DemiBold.woff2') format('woff2');
+}
+
+/* Reset */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+
 /* Theme */
 
 :root {
@@ -49,6 +147,66 @@
   --fgd-4: theme('colors.mango-theme["fgd-4"]');
 }
 
+/* Base */
+
+body {
+  @apply bg-th-bkg-1 font-body text-sm h-full;
+}
+
+button {
+  @apply tracking-wider focus:outline-none;
+}
+
+svg {
+  @apply transition duration-500 ease-out;
+}
+
+.default-transition {
+  @apply transition duration-300 ease-out;
+}
+
+.page-x-padding {
+  @apply px-6 md:px-12 lg:px-20;
+}
+
+/* Type */
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-display text-th-fgd-1;
+}
+
+h1 {
+  @apply text-5xl sm:text-6xl lg:text-7xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+}
+
+h3 {
+  @apply text-xl lg:text-2xl;
+}
+
+h4 {
+  @apply text-base;
+}
+
+p {
+  @apply tracking-wider text-th-fgd-3 text-base xl:text-lg;
+}
+
+a {
+  @apply tracking-wider text-base lg:text-lg;
+}
+
+.font-mono {
+  -webkit-font-feature-settings: 'zero' 1;
+  font-feature-settings: 'zero' 1;
+}
+
 @layer utilities {
   .animation-delay-2000 {
     animation-delay: 2s;
@@ -59,6 +217,6 @@
 }
 
 .radial-gradient-bg {
-  background-image: radial-gradient(at 300% 100%, #5b48ad 0, transparent 75%);
+  background-image: radial-gradient(at -50% -50%, #41308b 0, transparent 60%);
   @apply bg-th-bkg-1;
 }
