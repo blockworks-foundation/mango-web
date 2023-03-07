@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'TT Mono';
-  src: url('/fonts/TT_Commons_Pro_Mono_Regular.woff2') format('woff2');
+  src: url('/fonts/TT_Commons_Pro_Mono_Medium.woff2') format('woff2');
 }
 
 @font-face {
@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'TT Commons';
   font-weight: normal;
-  src: url('/fonts/TT_Commons_Pro_Regular.woff2') format('woff2');
+  src: url('/fonts/TT_Commons_Pro_Normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -217,6 +217,6 @@ a {
 }
 
 .radial-gradient-bg {
-  background-image: radial-gradient(at 300% 100%, #5b48ad 0, transparent 75%);
+  background-image: radial-gradient(at -50% -50%, #41308b 0, transparent 60%);
   @apply bg-th-bkg-1;
 }
