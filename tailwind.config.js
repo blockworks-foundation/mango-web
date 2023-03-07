@@ -137,7 +137,7 @@ module.exports = {
           yellow: 'hsl(45, 86%, 62%)',
           red: { DEFAULT: '#E54033', dark: '#603BCF' },
           green: { DEFAULT: '#AFD803', dark: '#91B503' },
-          'bkg-1': '#1C1924',
+          'bkg-1': '#141414',
           'bkg-2': '#1D1832',
           'bkg-3': '#252238',
           'fgd-1': '#F0EDFF',
