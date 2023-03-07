@@ -3,6 +3,7 @@ import { FunctionComponent } from 'react'
 // import { gsap, Power3 } from 'gsap'
 
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import ColorBlur from './ColorBlur'
 
 const HeroSectionHome = () => {
   // const sideImage = useRef(null)
@@ -20,11 +21,11 @@ const HeroSectionHome = () => {
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center lg:px-20 xs:px-6">
       <div className="text-center lg:text-left max-w-[800px] mx-auto w-full lg:w-1/2 xl:w-2/5 lg:pr-16">
-        <h1 className="mb-4">Safer. Simpler. Smarter.</h1>
+        <h1 className="mb-4">Safer. Smarter. Faster.</h1>
         <p className="text-base lg:text-lg text-th-fgd-3 mb-6">
           A magical new way to interact with DeFi. Groundbreaking safety
-          features designed to keep your funds secure. The simplest way to
-          margin trade any token pair. All powered by flashloans.
+          features designed to keep your funds secure. The easiest way to margin
+          trade any token pair. All powered by flashloans.
         </p>
         {/* <p className="text-base  text-th-fgd-3 mb-6">
             Mango v4 is in public beta. Re-designed from the ground up with
@@ -62,6 +63,11 @@ const HeroSectionHome = () => {
           alt=""
         />
       </div>
+      <ColorBlur
+        width="66%"
+        height="300px"
+        className="-top-20 left-0 opacity-20"
+      />
     </div>
   )
 }
