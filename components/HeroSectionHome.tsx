@@ -18,8 +18,8 @@ const HeroSectionHome = () => {
   //   })
   // }, [])
   return (
-    <div className="grid grid-cols-12 gap-6 lg:gap-10 h-[calc(100%-160px)] flex items-center">
-      <div className="col-span-12 lg:col-span-6 xl:col-span-5 lg:pl-20 xs:px-6 text-center lg:text-left order-2 lg:order-1 max-w-[800px] mx-auto">
+    <div className="flex flex-col-reverse lg:flex-row items-center lg:px-20 xs:px-6">
+      <div className="text-center lg:text-left max-w-[800px] mx-auto w-full lg:w-1/2 lg:pr-16">
         <h1 className="mb-4">Safer. Simpler. Smarter.</h1>
         <p className="text-base lg:text-lg text-th-fgd-3 mb-6">
           A magical new way to interact with DeFi. Groundbreaking safety
@@ -54,10 +54,10 @@ const HeroSectionHome = () => {
         </div>
         {/* <p className="mt-8 text-xs">Website under contruction.</p> */}
       </div>
-      <div className="col-span-12 lg:col-span-6 xl:col-span-7 relative h-max order-1 lg:order-2">
+      <div className="relative h-max w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
         <img
           // ref={sideImage}
-          className="relative lg:absolute w-2/3 md:w-1/2 lg:w-full h-auto lg:top-1/2 lg:-translate-y-1/2 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-10 lg:mt-8"
+          className="w-2/3 md:w-1/2 lg:w-full h-auto "
           src="../img/swap-trade.png"
           alt=""
         />

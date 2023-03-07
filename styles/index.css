@@ -150,7 +150,7 @@ th {
 /* Base */
 
 body {
-  @apply font-body text-sm;
+  @apply bg-th-bkg-1 font-body text-sm h-full;
 }
 
 button {

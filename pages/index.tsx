@@ -4,11 +4,12 @@ import HeroSectionHome from '../components/HeroSectionHome'
 const Index = () => {
   return (
     <div
-      className={`radial-gradient-bg bg-gradient-to-br from-th-bkg-2 to-th-bkg-1 text-th-fgd-1 transition-all h-screen overflow-hidden`}
+      className={`radial-gradient-bg text-th-fgd-1 transition-all min-h-screen`}
     >
-      {/* <div className="w-screen h-2 bg-gradient-to-r from-mango-red via-mango-yellow to-mango-green"></div> */}
       <NavBarBeta />
-      <HeroSectionHome />
+      <div className="max-w-[1600px] mx-auto min-h-[calc(100vh-160px)] flex flex-col justify-center">
+        <HeroSectionHome />
+      </div>
     </div>
   )
 }
