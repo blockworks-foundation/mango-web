@@ -5,9 +5,10 @@ import '../styles/index.css'
 function App({ Component, pageProps }) {
   const title = 'Mango Markets'
   const description =
-    'Decentralised, cross-margin trading up to 20x leverage with lightning speed and near-zero fees.'
+    'A magical new way to interact with DeFi. Groundbreaking safety features. Margin trade any token pair. All powered by flashloans.'
+
   const keywords =
-    'Mango Markets, Serum, SRM, Serum DEX, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Decentralize, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SerumBTC, SerumUSD, SRM Tokens, SPL Tokens'
+    'Mango Markets, DEX, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Decentralize, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
 
   return (
     <>
@@ -30,10 +31,8 @@ function App({ Component, pageProps }) {
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://www.mango.markets/socials/twitter-image-1200x600.png?34567878"
+          content="https://mango.markets/socials/meta.jpg?1234567"
         />
-
-        <link rel="manifest" href="/manifest.json"></link>
       </Head>
       <ThemeProvider defaultTheme="Mango">
         <Component {...pageProps} />
