@@ -263,7 +263,7 @@ const MangoApp = () => {
                 viewBox="0 0 24 24"
                 stroke-width="2"
                 stroke="white"
-                class="w-6 h-6 pr-1"
+                className="w-6 h-6 pr-1"
               >
                 <path
                   stroke-linecap="round"
@@ -282,7 +282,7 @@ const MangoApp = () => {
                 viewBox="0 0 24 24"
                 stroke-width="2"
                 stroke="white"
-                class="w-6 h-6 pl-1"
+                className="w-6 h-6 pl-1"
               >
                 <path
                   stroke-linecap="round"
