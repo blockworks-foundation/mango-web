@@ -301,8 +301,9 @@ const MangoApp = () => {
                 alt="Mobile App Mango"
               />
               <p className="lg:text-l mt-10 mb-10 leading-normal">
-                "Mango app is a game changer for instant payments. It's
-                crypto-powered, fast, efficient, easy to use, and has low fees."
+                &quot;Mango app is a game changer for instant payments.
+                It&apos;s crypto-powered, fast, efficient, easy to use, and has
+                low fees.&quot;
               </p>
             </div>
             <span className="font-bold self-end">Ethan</span>
@@ -315,9 +316,9 @@ const MangoApp = () => {
                 alt="Mobile App Mango"
               />
               <p className="lg:text-l mt-10 mb-10 leading-normal">
-                "Mango app is a reliable and user-friendly platform for crypto
-                payments. The instant payments feature is a huge plus, and the
-                security measures ensure my funds are safe."
+                &quot;Mango app is a reliable and user-friendly platform for
+                crypto payments. The instant payments feature is a huge plus,
+                and the security measures ensure my funds are safe.&quot;
               </p>
             </div>
             <div className="font-bold self-end">Isabella</div>
@@ -330,9 +331,9 @@ const MangoApp = () => {
                 alt="Mobile App Mango"
               />
               <p className="lg:text-l mt-10 mb-10 leading-normal">
-                "Mango app is a great addition to my crypto transactions. It's
-                user-friendly, powered by blockchain, and has instant payments
-                for transferring funds quickly and easily."
+                &quot;Mango app is a great addition to my crypto transactions.
+                It&apos;s user-friendly, powered by blockchain, and has instant
+                payments for transferring funds quickly and easily.&quot;
               </p>
             </div>
             <div className="font-bold self-end">Liam</div>
@@ -345,8 +346,8 @@ const MangoApp = () => {
                 alt="Mobile App Mango"
               />
               <p className="lg:text-l mt-10 mb-10 leading-normal">
-                "Mango app is the best crypto-powered instant payments app out
-                there. It's simple, low-cost, fast, and reliable."
+                &quot;Mango app is the best crypto-powered instant payments app
+                out there. It&apos;s simple, low-cost, fast, and reliable.&quot;
               </p>
             </div>
             <div className="font-bold self-end">Ava</div>
