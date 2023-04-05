@@ -9,7 +9,7 @@ const NavBarBeta = () => {
               <a className="flex items-center" href="https://mango.markets">
                 <span className="sr-only">Mango</span>
                 <img className="h-8" src="/logo.svg" alt="" width="auto" />
-                <span className="hidden md:block font-display text-2xl letter-spacing-s ml-2">
+                <span className="hidden md:block font-display text-2xl tracking-tighter ml-2">
                   Mango
                 </span>
               </a>
