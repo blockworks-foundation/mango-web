@@ -1,6 +1,5 @@
 import NavBarBeta from '../components/NavBarBeta'
 import MangoApp from '../components/MangoApp'
-import Footer from '../components/Footer'
 
 const Index = () => {
   return (
@@ -10,7 +9,6 @@ const Index = () => {
       <NavBarBeta />
       <div className="max-w-[1600px] mx-auto min-h-[calc(100vh-160px)] flex flex-col justify-center">
         <MangoApp />
-        <Footer />
       </div>
     </div>
   )

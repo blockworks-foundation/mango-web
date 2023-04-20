@@ -15,13 +15,13 @@
 @font-face {
   font-family: 'TT Commons';
   font-weight: normal;
-  src: url('/fonts/TT_Commons_Pro_Normal.woff2') format('woff2');
+  src: url('/fonts/TT_Commons_Pro_Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'TT Commons';
   font-weight: medium;
-  src: url('/fonts/TT_Commons_Pro_Medium.woff2') format('woff2');
+  src: url('/fonts/TT_Commons_Pro_Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -152,7 +152,8 @@ th {
 body {
   @apply bg-th-bkg-1 font-body text-sm h-full;
   letter-spacing: 0.025em;
-  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  -webkit-font-smoothing: antialiased; /* WebKit  */
 }
 
 button {
@@ -178,10 +179,11 @@ h2,
 h3,
 h4 {
   @apply font-display text-th-fgd-1;
+  letter-spacing: -0.0125em;
 }
 
 h1 {
-  @apply text-5xl sm:text-6xl lg:text-7xl;
+  @apply text-5xl sm:text-6xl lg:text-6xl;
 }
 
 h2 {
@@ -201,7 +203,8 @@ p {
 }
 
 a {
-  @apply text-base lg:text-lg;
+  @apply text-base lg:text-base;
+  letter-spacing: 0;
 }
 
 .font-mono {
@@ -221,4 +224,14 @@ a {
 .radial-gradient-bg {
   background-image: radial-gradient(at -50% -50%, #41308b 0, transparent 60%);
   @apply bg-th-bkg-1;
+}
+.bg-nav {
+  background-image: linear-gradient(#141414 0, transparent 100%);
+}
+
+hr {
+  border: none;
+  height: 2px;
+  width: 100%;
+  @apply bg-th-bkg-3;
 }
