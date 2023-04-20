@@ -14,7 +14,7 @@ const NavBarBeta = () => {
                 </span>
               </a>
             </div>
-            <div className="flex flex-row mr-4">
+            {/* <div className="flex flex-row mr-4">
               <a className="mx-4 text-fgd-1 font-display" href="">
                 Products
               </a>
@@ -27,7 +27,7 @@ const NavBarBeta = () => {
               <a className="mx-4 text-fgd-1 font-display" href="">
                 Support
               </a>
-            </div>
+            </div> */}
             <div className="flex flex-row">
               <a
                 className="flex h-5 w-5 ml-5"

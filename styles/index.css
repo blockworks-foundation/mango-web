@@ -152,7 +152,8 @@ th {
 body {
   @apply bg-th-bkg-1 font-body text-sm h-full;
   letter-spacing: 0.025em;
-  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  -webkit-font-smoothing: antialiased; /* WebKit  */
 }
 
 button {

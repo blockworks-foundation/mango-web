@@ -10,8 +10,8 @@ const Index = () => {
       <NavBarBeta />
       <div className="max-w-[1600px] mx-auto min-h-[calc(100vh-160px)] flex flex-col justify-center">
         <MangoApp />
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }
