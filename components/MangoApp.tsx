@@ -328,9 +328,9 @@ const MangoApp = () => {
               />
               <p className="lg:text-l mt-10 mb-10 leading-snug">
                 What I like most about the app is the ability to make payments
-                to anyone on my contact list using just their phone number. It's
-                simple to split costs for things like restaurant bills, concert
-                tickets, or hotels.
+                to anyone on my contact list using just their phone number.
+                It&apos;s simple to split costs for things like restaurant
+                bills, concert tickets, or hotels.
               </p>
             </div>
             <span className="font-bold self-end">
@@ -346,9 +346,9 @@ const MangoApp = () => {
                 alt="Mobile App Mango"
               />
               <p className="lg:text-l mt-10 mb-10 leading-snug">
-                It's a simple, beautiful, yet incredibly powerful wallet. Not
-                only can I pay with crypto, but I can also invest in top tokens
-                and earn additional interest on all the funds I receive.
+                It&apos;s a simple, beautiful, yet incredibly powerful wallet.
+                Not only can I pay with crypto, but I can also invest in top
+                tokens and earn additional interest on all the funds I receive.
               </p>
             </div>
             <span className="font-bold self-end">
