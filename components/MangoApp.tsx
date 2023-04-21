@@ -15,13 +15,23 @@ const MangoApp = () => {
           <div className="inline-flex w-full sm:w-auto flex-wrap sm:space-x-4">
             <ButtonLink
               className="w-full mt-4"
-              linkText="App Store"
+              linkText={
+                <>
+                  <img src="/img/apple.svg" alt="Apple" />{' '}
+                  <span className="ml-2">App Store</span>
+                </>
+              }
               path="https://testflight.apple.com/join/x60TmlgF"
               size="large"
             />
             <ButtonLink
               className="w-full mt-4"
-              linkText="Google Play"
+              linkText={
+                <>
+                  <img src="/img/android.svg" alt="Google" />{' '}
+                  <span className="ml-2">Google Play</span>
+                </>
+              }
               path="https://play.google.com/store/apps/details?id=markets.mango"
               size="large"
             />
@@ -407,13 +417,23 @@ const MangoApp = () => {
             <div className="inline-flex w-full flex-wrap sm:space-x-4 mt-6">
               <ButtonLink
                 className="w-full mt-4"
-                linkText="App Store"
+                linkText={
+                  <>
+                    <img src="/img/apple.svg" alt="Apple" />{' '}
+                    <span className="ml-4">App Store</span>
+                  </>
+                }
                 path="https://testflight.apple.com/join/x60TmlgF"
                 size="large"
               />
               <ButtonLink
                 className="w-full mt-4"
-                linkText="Google Play"
+                linkText={
+                  <>
+                    <img src="/img/android.svg" alt="Google" />{' '}
+                    <span className="ml-4">Google Play</span>
+                  </>
+                }
                 path="https://play.google.com/store/apps/details?id=markets.mango"
                 size="large"
               />
