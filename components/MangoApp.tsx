@@ -38,7 +38,13 @@ const MangoApp = () => {
           </div>
         </div>
         <div className="flex w-full md:w-5/12 mx-auto mt-20 md:mt-0">
-          <video loop autoPlay muted playsInline>
+          <video
+            loop
+            autoPlay
+            muted
+            playsInline
+            poster="../videos/mango-payments-hero.png"
+          >
             <source
               src="../videos/mango-payments-hero.webm"
               type="video/webm"
@@ -54,52 +60,8 @@ const MangoApp = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.2"
-              stroke="currentColor"
-              className="w-10 h-10"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-              />
-            </svg>
-          </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto md:mx-0">
-            Get a <span className="text-th-fgd-1">number</span> or QR code of
-            the recipient.
-          </h3>
-        </div>
-        <div className="pt-10">
-          <span className="inline-flex p-1 rounded-full border-2 mb-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="0.8"
-              stroke="currentColor"
-              className="w-16 h-16"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 7.5l3 4.5m0 0l3-4.5M12 12v5.25M15 12H9m6 3H9m12-3a9"
-              />
-            </svg>
-          </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto md:mx-0">
-            Specify the <span className="text-th-fgd-1">amount</span> and select
-            the currency.
-          </h3>
-        </div>
-        <div className="pt-10">
-          <span className="inline-flex p-4 rounded-full border-2 mb-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.2"
+              viewBox="1 1 22 22"
+              strokeWidth="1.1"
               stroke="currentColor"
               className="w-10 h-10"
             >
@@ -110,10 +72,60 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto md:mx-0">
-            <span className="text-th-fgd-1">Pay</span> someone or send payment
-            <span className="text-th-fgd-1"> request</span>.
+          <h3 className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4">
+            Easy transactions
           </h3>
+          <p className="max-w-xs mx-auto md:mx-0">
+            Simply pay and request payments with your phone contacts.
+          </p>
+        </div>
+        <div className="pt-10">
+          <span className="inline-flex p-1 rounded-full border-2 mb-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="-6 -5 36 36"
+              strokeWidth="1.2"
+              stroke="currentColor"
+              className="w-16 h-16"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+              />
+            </svg>
+          </span>
+          <h3 className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4">
+            Global payments
+          </h3>
+          <p className="max-w-xs mx-auto md:mx-0">
+            Pay internationally without worrying about currency conversions.
+          </p>
+        </div>
+        <div className="pt-10">
+          <span className="inline-flex p-4 rounded-full border-2 mb-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="2 2 20 20"
+              strokeWidth="1.1"
+              stroke="currentColor"
+              className="w-10 h-10"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"
+              />
+            </svg>
+          </span>
+          <h3 className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4">
+            Powered by crypto
+          </h3>
+          <p className="max-w-xs mx-auto md:mx-0">
+            State-of-the-art security and light-speed transactions.
+          </p>
         </div>
       </div>
 
@@ -136,7 +148,14 @@ const MangoApp = () => {
         </div>
         <div className="flex flex-wrap md:flex-nowrap w-full mx-auto items-center mt-20 text-center md:text-left">
           <div className="w-full md:w-1/2 md:mx-10">
-            <video className="md:w-10/12" loop autoPlay muted playsInline>
+            <video
+              className="md:w-10/12"
+              loop
+              autoPlay
+              muted
+              playsInline
+              poster="../videos/mango-payments-pay.png"
+            >
               <source
                 src="../videos/mango-payments-pay.webm"
                 type="video/webm"
@@ -163,6 +182,7 @@ const MangoApp = () => {
               autoPlay
               muted
               playsInline
+              poster="../videos/mango-payments-request.png"
             >
               <source
                 src="../videos/mango-payments-request.webm"
@@ -398,6 +418,7 @@ const MangoApp = () => {
               playsInline
               muted
               className="absolute lg:w-11/12 xl:w-10/12 2xl:w-10/12 xl:ml-10"
+              poster="../videos/mango-download.png"
             >
               <source src="../videos/mango-download.webm" type="video/webm" />
               <source src="../videos/mango-download.mp4" type="video/mp4" />
