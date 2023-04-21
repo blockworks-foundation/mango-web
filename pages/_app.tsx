@@ -3,12 +3,11 @@ import { ThemeProvider } from 'next-themes'
 import '../styles/index.css'
 
 function App({ Component, pageProps }) {
-  const title = 'Mango Markets'
-  const description =
-    'A magical new way to interact with DeFi. Groundbreaking safety features. Margin trade any token pair. All powered by flashloans.'
+  const title = 'Mango Pay'
+  const description = 'Send money globally, instantly with Mango Pay'
 
   const keywords =
-    'Mango Markets, DEX, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Decentralize, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
+    'Mango Pay, DEX, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Decentralize, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
 
   return (
     <>
@@ -27,12 +26,13 @@ function App({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mango Markets" />
+        <meta name="twitter:title" content="Mango Pay" />
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://mango.markets/socials/meta.jpg?1234567"
+          content="/socials/social-image.png?1234567"
         />
+        <meta name="theme-color" content="#141414" />
       </Head>
       <ThemeProvider defaultTheme="Mango">
         <Component {...pageProps} />

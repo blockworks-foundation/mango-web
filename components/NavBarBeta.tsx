@@ -6,7 +6,7 @@ const NavBarBeta = () => {
         <div className="lg:px-20 xs:px-6 xs:py-1 bg-nav">
           <div className="flex justify-between items-center py-6">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a className="flex items-center" href="https://mango.markets">
+              <a className="flex items-center" href="/">
                 <span className="sr-only">Mango</span>
                 <img className="h-8" src="/logo.svg" alt="" width="auto" />
                 <span className="hidden md:block font-display text-2xl tracking-tighter ml-2">

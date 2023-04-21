@@ -5,7 +5,7 @@ const MangoApp = () => {
     <>
       <div className="flex w-full sm:w-96 md:w-full mx-auto flex-wrap lg:flex-nowrap items-center lg:px-20 xs:px-6 pt-40 lg:pt-30">
         <div className="w-full md:w-7/12 mb-10 text-center md:text-left">
-          <h1 className="mb-12 text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl tracking-tight">
+          <h1 className="mb-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl tracking-tight">
             Pay friends <br /> instantly
           </h1>
           <p className="text-xl lg:text-2xl xl:text-3xl mb-6 max-w-xl text-th-fgd-1">
@@ -56,7 +56,7 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs">
+          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto">
             Get a <span className="text-th-fgd-1">number</span> or QR code of
             the recipient.
           </h3>
@@ -78,7 +78,7 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs">
+          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto">
             Specify the <span className="text-th-fgd-1">amount</span> and select
             the currency.
           </h3>
@@ -100,9 +100,9 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs">
+          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto">
             <span className="text-th-fgd-1">Pay</span> someone or send payment
-            <span className="text-th-fgd-1">request</span>.
+            <span className="text-th-fgd-1"> request</span>.
           </h3>
         </div>
       </div>
@@ -166,7 +166,7 @@ const MangoApp = () => {
           </div>
           <div className="w-full md:w-1/2 py-10 md:px-10 md:order-1">
             <h3 className="mb-8 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-              Requests <br /> a payment
+              Request <br /> a payment
             </h3>
             <p className="text-l leading-snug">
               Send payment request to the people on your contact list even those

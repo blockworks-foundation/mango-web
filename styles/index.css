@@ -154,6 +154,7 @@ body {
   letter-spacing: 0.025em;
   -moz-osx-font-smoothing: grayscale; /* Firefox */
   -webkit-font-smoothing: antialiased; /* WebKit  */
+  background: #141414;
 }
 
 button {
