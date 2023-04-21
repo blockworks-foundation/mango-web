@@ -17,7 +17,7 @@ const MangoApp = () => {
               className="w-full mt-4"
               linkText={
                 <>
-                  <img src="/img/apple.svg" alt="Apple" />{' '}
+                  <img src="/img/apple.svg" alt="Apple" />
                   <span className="ml-2">App Store</span>
                 </>
               }
@@ -28,7 +28,7 @@ const MangoApp = () => {
               className="w-full mt-4"
               linkText={
                 <>
-                  <img src="/img/android.svg" alt="Google" />{' '}
+                  <img src="/img/google-play.svg" alt="Google" />
                   <span className="ml-2">Google Play</span>
                 </>
               }
@@ -419,7 +419,7 @@ const MangoApp = () => {
                 className="w-full mt-4"
                 linkText={
                   <>
-                    <img src="/img/apple.svg" alt="Apple" />{' '}
+                    <img src="/img/apple.svg" alt="Apple" />
                     <span className="ml-4">App Store</span>
                   </>
                 }
@@ -430,7 +430,7 @@ const MangoApp = () => {
                 className="w-full mt-4"
                 linkText={
                   <>
-                    <img src="/img/android.svg" alt="Google" />{' '}
+                    <img src="/img/google-play.svg" alt="Google" />
                     <span className="ml-4">Google Play</span>
                   </>
                 }
@@ -466,15 +466,15 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
     <a
       className={`flex sm:w-max items-center justify-center rounded-xl ${
         secondary
-          ? 'border border-th-red-dark'
-          : 'bg-th-red-dark md:hover:brightness-90'
+          ? 'border border-mango-light'
+          : 'bg-mango-light md:hover:brightness-90'
       } ${
         size === 'medium'
           ? 'h-10 px-4 text-sm'
           : size === 'large'
           ? 'h-12 px-6'
           : 'h-8 px-3'
-      } default-transition font-display focus:outline-none text-th-fgd-1 ${className}`}
+      } default-transition font-display focus:outline-none text-black ${className}`}
       href={path}
       rel="noopener noreferrer"
       target="_blank"
