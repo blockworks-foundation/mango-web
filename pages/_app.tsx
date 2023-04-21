@@ -24,13 +24,19 @@ function App({ Component, pageProps }) {
         <meta name="description" content={description} />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="msapplication-TileColor" content="#da532c" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:image"
+          content="https://usemango.app/socials/social-image.jpg"
+        />
         <meta name="theme-color" content="#ffffff" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mango Pay" />
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="/socials/social-image.png?1234567"
+          content="https://usemango.app/socials/social-image.jpg"
         />
         <meta name="theme-color" content="#141414" />
       </Head>

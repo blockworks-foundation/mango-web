@@ -16,7 +16,7 @@ const MangoApp = () => {
             <ButtonLink
               className="w-full mt-4"
               linkText="App Store"
-              path="https://play.google.com/store/apps/details?id=markets.mango"
+              path="https://testflight.apple.com/join/x60TmlgF"
               size="large"
             />
             <ButtonLink
@@ -56,7 +56,7 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto">
+          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto md:mx-0">
             Get a <span className="text-th-fgd-1">number</span> or QR code of
             the recipient.
           </h3>
@@ -78,7 +78,7 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto">
+          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto md:mx-0">
             Specify the <span className="text-th-fgd-1">amount</span> and select
             the currency.
           </h3>
@@ -100,7 +100,7 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto">
+          <h3 className="relative text-base lg:text-xl xl:text-2xl font-display text-th-fgd-3 leading-snug max-w-xs mx-auto md:mx-0">
             <span className="text-th-fgd-1">Pay</span> someone or send payment
             <span className="text-th-fgd-1"> request</span>.
           </h3>
@@ -408,7 +408,7 @@ const MangoApp = () => {
               <ButtonLink
                 className="w-full mt-4"
                 linkText="App Store"
-                path="https://play.google.com/store/apps/details?id=markets.mango"
+                path="https://testflight.apple.com/join/x60TmlgF"
                 size="large"
               />
               <ButtonLink
@@ -431,7 +431,7 @@ interface ButtonLinkProps {
   path: string
   className?: string
   secondary?: boolean
-  linkText: string
+  linkText: string | JSX.Element
   size?: 'large' | 'medium' | 'small'
 }
 
