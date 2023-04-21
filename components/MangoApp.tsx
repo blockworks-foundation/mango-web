@@ -16,7 +16,7 @@ const MangoApp = () => {
             <ButtonLink
               className="w-full mt-4"
               linkText="App Store"
-              path="https://play.google.com/store/apps/details?id=markets.mango"
+              path="https://testflight.apple.com/join/x60TmlgF"
               size="large"
             />
             <ButtonLink
@@ -408,7 +408,7 @@ const MangoApp = () => {
               <ButtonLink
                 className="w-full mt-4"
                 linkText="App Store"
-                path="https://play.google.com/store/apps/details?id=markets.mango"
+                path="https://testflight.apple.com/join/x60TmlgF"
                 size="large"
               />
               <ButtonLink
@@ -431,7 +431,7 @@ interface ButtonLinkProps {
   path: string
   className?: string
   secondary?: boolean
-  linkText: string
+  linkText: string | JSX.Element
   size?: 'large' | 'medium' | 'small'
 }
 
