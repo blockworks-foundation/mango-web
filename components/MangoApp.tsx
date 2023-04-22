@@ -6,11 +6,14 @@ const MangoApp = () => {
       <div className="flex w-full sm:w-96 md:w-full mx-auto flex-wrap lg:flex-nowrap items-center lg:px-20 xs:px-6 pt-40 lg:pt-30">
         <div className="w-full md:w-7/12 mb-10 text-center md:text-left">
           <h1 className="mb-12 text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl tracking-tight">
-            Pay friends <br /> instantly
+            Easy.
+            <br />
+            Safe.
+            <br />
+            Crypto.
           </h1>
           <p className="text-xl lg:text-2xl xl:text-3xl mb-6 max-w-xl text-th-fgd-1">
-            Send and accept cross-border payments with anyone on your contact
-            list.
+            A secure crypto wallet that&apos;s so simple, anyone can use it.
           </p>
           <div className="inline-flex w-full sm:w-auto flex-wrap sm:space-x-4">
             <ButtonLink
@@ -59,8 +62,8 @@ const MangoApp = () => {
             <span className="text-sm absolute -top-2 -left-12 text-th-primary hidden md:block">
               01
             </span>{' '}
-            Get a <span className="text-th-fgd-1">number</span> or QR code of
-            the recipient.
+            Non-custodial wallet without the risk of losing access to your
+            crypto.
           </h3>
         </div>
         <div className="pt-10">
@@ -84,8 +87,7 @@ const MangoApp = () => {
             <span className="text-sm absolute -top-2 -left-12 text-th-primary hidden md:block">
               02
             </span>{' '}
-            Specify the <span className="text-th-fgd-1">amount</span> and select
-            the currency.
+            Send and request payments to anyone&apos;s mobile number.
           </h3>
         </div>
         <div className="pt-10">
@@ -109,8 +111,9 @@ const MangoApp = () => {
             <span className="text-sm absolute -top-2 -left-12 text-th-primary hidden md:block">
               03
             </span>{' '}
-            <span className="text-th-fgd-1">Pay</span> someone or send payment{' '}
-            <span className="text-th-fgd-1">request</span>.
+            Build your crypto portfolio. Withdraw to your bank account.
+            {/* <span className="text-th-fgd-1">Pay</span> or send a payment{' '}
+            <span className="text-th-fgd-1">request</span> to get paid. */}
           </h3>
         </div>
       </div>
@@ -125,11 +128,10 @@ const MangoApp = () => {
             Payments
           </span>
           <h2 className="mb-10 mt-12 text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
-            Send & accept <br /> payments
+            Pay without limits
           </h2>
           <p className="text-2xl xl:text-3xl xl:leading-tight">
-            Securely pay or get paid with a phone number or QR code. Guaranteed
-            and immediate.
+            Send and accept payments globally to anyone with a mobile phone.
           </p>
         </div>
         <div className="flex flex-wrap md:flex-nowrap w-full mx-auto items-center mt-20 text-center md:text-left">
@@ -143,12 +145,16 @@ const MangoApp = () => {
           </div>
           <div className="w-full md:w-1/2 py-10 md:px-10">
             <h3 className="mb-8 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-              Pay friends instantly
+              Anywhere
+              <br />
+              on earth
+              <br />
+              in a flash
             </h3>
             <p className="text-l leading-snug">
-              Pay without requiring a bank account. All you need is a phone
-              number or a QR code to instantly transfer payments. Say goodbye to
-              the hassle of traditional banking methods.
+              International banking transactions are slow and expensive. Now you
+              can send funds around the globe in a matter of seconds and for a
+              fraction of a cent.
             </p>
           </div>
         </div>
@@ -163,13 +169,12 @@ const MangoApp = () => {
           </div>
           <div className="w-full md:w-1/2 py-10 md:px-10 md:order-1">
             <h3 className="mb-8 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-              Requests <br /> a payment
+              Split the bill with ease
             </h3>
             <p className="text-l leading-snug">
-              Did you cover the shopping expenses for everyone in advance? Send
-              payment request to the people on your contact list even those who
-              do not have the app. Submit the request, and we will notify you
-              when it is done.
+              Send payment requests to your friends when you front the bill. If
+              they don&apos;t have the app, they&apos;ll get a message with the
+              request. We&apos;ll ping you when payments hit your wallet.
             </p>
           </div>
         </div>
@@ -189,16 +194,14 @@ const MangoApp = () => {
             crypto portfolio
           </h2>
           <p className="text-2xl xl:text-3xl xl:leading-tight">
-            Invest in cryptocurrencies - convert your funds into one of 9 the
-            most popular cryptocurrencies.
+            Everything you need to become a legendary crypto investor.
           </p>
         </div>
         <div className="grid gap-20 grid-cols-1 md:grid-cols-3 mt-20 w-full xl:w-10/12 mx-auto">
           <div className="text-base">
-            <h3 className="py-2">Convert</h3>
+            <h3 className="py-2">Invest</h3>
             <p className="text-l leading-snug">
-              Use your funds to convert them into one of 10 most popular crypto
-              currencies.
+              Buy crypto with currency and swap between your favorite tokens.
             </p>
             <img
               className="mt-8"
@@ -209,8 +212,8 @@ const MangoApp = () => {
           <div className="text-base">
             <h3 className="py-2">Earn</h3>
             <p className="text-l leading-snug">
-              Put your holding to work - deposit them to your earn wallet to
-              make interest.
+              Deposit your long-term holds into your Earn Wallet to earn
+              interest.
             </p>
             <img
               className="mt-8"
@@ -221,8 +224,8 @@ const MangoApp = () => {
           <div className="text-base">
             <h3 className="py-2">Withdraw</h3>
             <p className="text-l leading-snug">
-              Manage your portfolio. Watch it grow. Withdraw profits to your
-              bank account.
+              Convert your crypto back to currency and withdraw to your bank
+              account.
             </p>
             <img
               className="mt-8"
@@ -244,11 +247,12 @@ const MangoApp = () => {
               In Action
             </span>
             <h2 className="mb-10 mt-12 text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
-              Community <br /> driven features
+              Word on
+              <br />
+              the street
             </h2>
             <p className="text-2xl xl:text-3xl xl:leading-tight">
-              Crypto loves Mango. See what <br />
-              the community is saying about us.
+              See what the community is saying about us.
             </p>
           </div>
           <div className="flex flex-nowrap self-end space-x-4 hidden sm:flex">
@@ -373,11 +377,13 @@ const MangoApp = () => {
               Get the app
             </span>
             <h2 className="mb-10 mt-12 text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
-              Pay anyone
+              Download now
+              <br />
+              to get started
             </h2>
-            <p className="text-xl lg:text-xl xl:text-2xl max-w-xl text-th-fgd-1">
-              Your friends will love you. <br /> Available for iOS and Android.
-            </p>
+            {/* <p className="text-xl lg:text-xl xl:text-2xl max-w-xl text-th-fgd-1">
+              Start your jouney with us today.
+            </p> */}
             <div className="inline-flex w-full flex-wrap sm:space-x-4 mt-6">
               <ButtonLink
                 className="w-full mt-4"
