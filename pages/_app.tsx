@@ -3,21 +3,18 @@ import { ThemeProvider } from 'next-themes'
 import '../styles/index.css'
 
 function App({ Component, pageProps }) {
-  const title = 'Mango Pay'
-  const description = 'Send money globally, instantly with Mango Pay'
+  const title = 'Crypto Payments App - Mango Pay'
+  const description =
+    'Pay with crypto to friends and family. Use a phone number to send and accept crypto payments'
 
   const keywords =
-    'Mango Pay, DEX, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Decentralize, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
+    'Crypto Payments, Mango Pay, Pay with crypto, DEX, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Decentralize, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
 
   return (
     <>
       <Head>
         <title>{title}</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-          rel="stylesheet"
-        />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content={keywords} />

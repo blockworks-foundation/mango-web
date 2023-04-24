@@ -1,40 +1,53 @@
 import { FunctionComponent } from 'react'
-
 const MangoApp = () => {
   return (
     <>
       <div className="flex w-full sm:w-96 md:w-full mx-auto flex-wrap lg:flex-nowrap items-center lg:px-20 xs:px-6 pt-40 lg:pt-30">
         <div className="w-full md:w-7/12 mb-10 text-center md:text-left">
-          <h1 className="mb-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl tracking-tight">
-            Pay friends <br /> instantly
+          <h1 className="text-xs uppercase tracking-widest text-base font-thin ml-1 mb-10">
+            <span>Crypto payments app</span>
           </h1>
-          <p className="text-xl lg:text-2xl xl:text-3xl mb-6 max-w-xl text-th-fgd-1">
-            Send and accept cross-border payments with anyone on your contact
-            list.
+          <h2 className="mb-10 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
+            Pay with crypto <br className="hidden md:block" />
+            to friends &amp; family <br className="hidden md:block" />
+            worldwide.
+          </h2>
+          <p className="text-xl lg:text-2xl">
+            Send and request crypto payments to anyone's mobile number.{' '}
+            <br className="hidden xl:block" /> Build crypto portfolio, withdraw
+            to your bank account.
           </p>
-          <div className="inline-flex w-full sm:w-auto flex-wrap sm:space-x-4">
+          <div className="flex w-full items-center sm:w-auto flex-wrap">
             <ButtonLink
-              className="w-full mt-4"
+              className="w-full mx-auto md:mx-0 my-8"
               linkText={
                 <>
-                  <img src="/img/apple.svg" alt="Apple" />
-                  <span className="ml-2">App Store</span>
+                  <span>Get the App</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="-10 -6 34 34"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                    />
+                  </svg>
                 </>
               }
-              path="https://testflight.apple.com/join/x60TmlgF"
+              path="https://usemango.app/get"
               size="large"
             />
-            <ButtonLink
-              className="w-full mt-4"
-              linkText={
-                <>
-                  <img src="/img/google-play.svg" alt="Google" />
-                  <span className="ml-2">Google Play</span>
-                </>
-              }
-              path="https://play.google.com/store/apps/details?id=markets.mango"
-              size="large"
-            />
+            <div className="m-auto md:ml-6 text-th-fgd-3">
+              Available on:
+              <br className="hidden md:block" />{' '}
+              <span className="text-th-fgd-1 font-bold">iOS</span> and{' '}
+              <span className="text-th-fgd-1 font-bold">Android</span>
+            </div>
           </div>
         </div>
         <div className="flex w-full md:w-5/12 mx-auto mt-20 md:mt-0">
@@ -44,12 +57,18 @@ const MangoApp = () => {
             muted
             playsInline
             poster="../videos/mango-payments-hero.png"
+            itemType="http://schema.org/VideoObject"
           >
             <source
               src="../videos/mango-payments-hero.webm"
               type="video/webm"
             />
             <source src="../videos/mango-payments-hero.mp4" type="video/mp4" />
+            <meta itemProp="name" content="Crypto payments - Mango app" />
+            <meta
+              itemProp="description"
+              content="Mango app allows user to pay with crypto easily and securly"
+            />
           </video>
         </div>
       </div>
@@ -72,9 +91,9 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4">
+          <p className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4 tracking-normal">
             Easy transactions
-          </h3>
+          </p>
           <p className="max-w-xs mx-auto md:mx-0">
             Simply pay and request payments with your phone contacts.
           </p>
@@ -96,9 +115,9 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4">
+          <p className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4 tracking-normal">
             Global payments
-          </h3>
+          </p>
           <p className="max-w-xs mx-auto md:mx-0">
             Pay internationally without worrying about currency conversions.
           </p>
@@ -120,9 +139,9 @@ const MangoApp = () => {
               />
             </svg>
           </span>
-          <h3 className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4">
+          <p className="lg:text-xl xl:text-2xl font-display text-th-fgd-1 mb-4 tracking-normal">
             Powered by crypto
-          </h3>
+          </p>
           <p className="max-w-xs mx-auto md:mx-0">
             State-of-the-art security and light-speed transactions.
           </p>
@@ -134,14 +153,14 @@ const MangoApp = () => {
       </div>
 
       <div className="lg:px-20 xs:px-6 py-20 w-full sm:w-96 md:w-10/12 xl:w-9/12 mx-auto">
-        <div className="w-full mx-auto text-center md:w-[28rem] lg:w-[42rem]">
+        <div className="w-full mx-auto text-center md:w-[34rem] lg:w-[42rem]">
           <span className="flex inline-flex uppercase tracking-widest text-base font-bold text-th-primary rounded-full border-2 border-th-primary px-4 py-2">
             Payments
           </span>
-          <h2 className="mb-10 mt-12 text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
-            Send &amp; accept <br /> payments
+          <h2 className="mb-10 mt-12 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
+            Send &amp; accept <br /> crypto payments
           </h2>
-          <p className="text-2xl xl:text-3xl xl:leading-tight">
+          <p className="text-xl lg:text-2xl">
             Securely pay or get paid with a phone number or QR code.{' '}
             <span className="text-th-fgd-1">Guaranteed and immediate.</span>
           </p>
@@ -155,22 +174,28 @@ const MangoApp = () => {
               muted
               playsInline
               poster="../videos/mango-payments-pay.png"
+              itemType="http://schema.org/VideoObject"
             >
               <source
                 src="../videos/mango-payments-pay.webm"
                 type="video/webm"
               />
               <source src="../videos/mango-payments-pay.mp4" type="video/mp4" />
+              <meta itemProp="name" content="Pay with crypto - Mango app" />
+              <meta
+                itemProp="description"
+                content="An app enabling the user to easily pay anyone using their phone number"
+              />
             </video>
           </div>
           <div className="w-full md:w-1/2 py-10 md:px-10">
             <h3 className="mb-8 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-              Pay friends instantly
+              Pay friends <br /> instantly
             </h3>
             <p className="text-l leading-snug">
-              Pay without requiring a bank account. All you need is a phone
-              number or a QR code to instantly transfer payments. Say goodbye to
-              the hassle of traditional banking methods.
+              Pay with crypto with phone number or a QR code to instantly
+              transfer payments. Say goodbye to the hassle with wallet addresses
+              or traditional banking methods.
             </p>
           </div>
         </div>
@@ -183,6 +208,7 @@ const MangoApp = () => {
               muted
               playsInline
               poster="../videos/mango-payments-request.png"
+              itemType="http://schema.org/VideoObject"
             >
               <source
                 src="../videos/mango-payments-request.webm"
@@ -191,6 +217,14 @@ const MangoApp = () => {
               <source
                 src="../videos/mango-payments-request.mp4"
                 type="video/mp4"
+              />
+              <meta
+                itemProp="name"
+                content="Request payments with crypto - Mango app"
+              />
+              <meta
+                itemProp="description"
+                content="Mango app allows the user to request crypto payments using their phone number"
               />
             </video>
           </div>
@@ -212,16 +246,16 @@ const MangoApp = () => {
       </div>
 
       <div className="lg:px-20 xs:px-6 py-20 w-full sm:w-96 md:w-10/12 xl:w-9/12 mx-auto text-center">
-        <div className="w-full mx-auto md:w-[30rem] lg:w-[44rem]">
+        <div className="w-full mx-auto md:w-[30rem] lg:w-[38rem]">
           <span className="flex inline-flex uppercase tracking-widest text-base font-bold text-th-primary rounded-full border-2 border-th-primary px-4 py-2">
             Wallet
           </span>
-          <h2 className="mb-10 mt-12 text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
+          <h2 className="mb-10 mt-12 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
             Build your <br />
             crypto portfolio
           </h2>
-          <p className="text-2xl xl:text-3xl xl:leading-tight">
-            Convert your funds into one of 9 the most popular tokens.{' '}
+          <p className="text-xl lg:text-2xl">
+            Buy crypto with cash and convert it into popular coins.{' '}
             <span className="text-th-fgd-1">
               Earn interest up to 45% per year.
             </span>
@@ -229,39 +263,38 @@ const MangoApp = () => {
         </div>
         <div className="grid gap-20 grid-cols-1 md:grid-cols-3 mt-20 w-full mx-auto px-10">
           <div className="text-base">
-            <h4 className="pb-4">Convert tokens</h4>
+            <h4 className="pb-4">Convert coins</h4>
             <p className="text-l leading-snug">
-              Stay up-to-date with the crypto market. Track the prices. Convert
-              one token to another.
+              Buy crypto with cash and convert swap your favorite coins.
             </p>
             <img
               className="mt-12"
               src="../img/mango-app-wallet-1.png"
-              alt="Mobile App Mango"
+              alt="Swap once cryptocurrency to another"
             />
           </div>
           <div className="text-base">
             <h4 className="pb-4">Earn interest</h4>
             <p className="text-l leading-snug">
-              Deposit funds from your wallet into Mango Earn to earn Annual
-              Percentage Yield.
+              Deposit your long-term holds into your Earn Wallet to earn
+              interest.
             </p>
             <img
               className="mt-12"
               src="../img/mango-app-wallet-2.png"
-              alt="Mobile App Mango"
+              alt="Earn interest with your long-tern cryptocurrency holds"
             />
           </div>
           <div className="text-base">
             <h4 className="pb-4">Withdraw</h4>
             <p className="text-l leading-snug">
-              Manage your portfolio. Withdraw your funds directly to your bank
+              Convert your crypto back to currency and withdraw to your bank
               account.
             </p>
             <img
               className="mt-12"
               src="../img/mango-app-wallet-3.png"
-              alt="Mobile App Mango"
+              alt="Withdraw crypto to the bank account"
             />
           </div>
         </div>
@@ -277,63 +310,23 @@ const MangoApp = () => {
             <span className="flex inline-flex uppercase tracking-widest text-base font-bold text-th-primary rounded-full border-2 border-th-primary px-4 py-2">
               In Action
             </span>
-            <h2 className="mb-10 mt-12 text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
+            <h2 className="mb-10 mt-12 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
               Community <br /> driven features
             </h2>
-            <p className="text-2xl xl:text-3xl xl:leading-tight">
+            <p className="text-xl lg:text-2xl">
               <span className="text-th-fgd-1">People love Mango.</span> See what{' '}
               <br />
               the community is saying about us.
             </p>
           </div>
-          {/* <div className="flex flex-nowrap self-end space-x-4 hidden sm:flex">
-            <a
-              href=""
-              className="inline-flex justify-center items-center w-12 h-12 bg-th-red-dark rounded-full"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="white"
-                className="w-6 h-6 pr-1"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 19.5L8.25 12l7.5-7.5"
-                />
-              </svg>
-            </a>
-            <a
-              href=""
-              className="inline-flex justify-center items-center w-12 h-12 bg-th-red-dark rounded-full"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="white"
-                className="w-6 h-6 pl-1"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </a>
-          </div> */}
         </div>
         <div className="mt-24 w-full grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex-col text-base rounded-3xl border-2 border-th-bkg-3 p-8">
             <div className="self-start">
               <img
                 className="w-1/4 rounded-xl"
-                src="../reviews/mango-user-review-1.png"
-                alt="Mobile App Mango"
+                src="../reviews/crypto-payments-app-user-1.png"
+                alt="A user that pay friends with crypyo in their local currency"
               />
               <p className="lg:text-l mt-10 mb-10 leading-snug">
                 Being constantly on the move, I have been using the Mango app to
@@ -353,8 +346,8 @@ const MangoApp = () => {
             <div className="self-start">
               <img
                 className="w-1/4 rounded-xl"
-                src="../reviews/mango-user-review-2.png"
-                alt="Mobile App Mango"
+                src="../reviews/crypto-payments-app-user-2.png"
+                alt="A user that pay with crypyo using only a phone number"
               />
               <p className="lg:text-l mt-10 mb-10 leading-snug">
                 What I like most about the app is the ability to make payments
@@ -372,8 +365,8 @@ const MangoApp = () => {
             <div className="self-start">
               <img
                 className="w-1/4 rounded-xl"
-                src="../reviews/mango-user-review-3.png"
-                alt="Mobile App Mango"
+                src="../reviews/crypto-payments-app-user-3.png"
+                alt="A user that invest in crypto"
               />
               <p className="lg:text-l mt-10 mb-10 leading-snug">
                 It&apos;s a simple, beautiful, yet incredibly powerful wallet.
@@ -390,8 +383,8 @@ const MangoApp = () => {
             <div className="self-start">
               <img
                 className="w-1/4 rounded-xl"
-                src="../reviews/mango-user-review-4.png"
-                alt="Mobile App Mango"
+                src="../reviews/crypto-payments-app-user-4.png"
+                alt="A user that apriciate high security standards"
               />
               <p className="lg:text-l mt-10 mb-10 leading-snug">
                 Although the app has state-of-the-art security and runs on
@@ -400,7 +393,7 @@ const MangoApp = () => {
               </p>
             </div>
             <span className="font-bold self-end">
-              Mario <br />{' '}
+              Mario <br />
               <span className="text-sm font-normal">
                 Developer, Buenos Aires
               </span>
@@ -417,47 +410,63 @@ const MangoApp = () => {
               autoPlay
               playsInline
               muted
-              className="absolute lg:w-11/12 xl:w-10/12 2xl:w-10/12 xl:ml-10"
+              className="absolute w-10/12 xl:w-10/12 2xl:w-10/12"
               poster="../videos/mango-download.png"
+              itemType="http://schema.org/VideoObject"
             >
               <source src="../videos/mango-download.webm" type="video/webm" />
               <source src="../videos/mango-download.mp4" type="video/mp4" />
+              <meta
+                itemProp="name"
+                content="Download crypto payments app - Mango"
+              />
+              <meta
+                itemProp="description"
+                content="Download the app and enjoy free, worldwide crypto payments with friends."
+              />
             </video>
           </div>
-          <div className="w-full md:w-1/2 flex-wrap xl:py-5 2xl:py-10">
+          <div className="w-full sm:w-80 md:w-1/2 mx-auto flex-wrap lg:flex-nowrap xl:py-5 2xl:py-10 text-center md:text-left">
             <span className="flex inline-flex uppercase tracking-widest text-base font-bold text-th-primary rounded-full border-2 border-th-primary px-4 py-2">
-              Get the app
+              Crypto payments
             </span>
-            <h2 className="mb-10 mt-12 text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
-              Download the Mango app
+            <h2 className="mb-10 mt-12 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl tracking-tight">
+              Download Mango
             </h2>
             <p className="text-xl lg:text-xl xl:text-2xl max-w-xl text-th-fgd-1">
-              Get started with the most powerful wallet supporting instant
+              Get started with the most powerful wallet supporting crypto
               payments and easy crypto investments.
             </p>
-            <div className="inline-flex w-full flex-wrap sm:space-x-4 mt-6">
+            <div className="flex w-full items-center sm:w-auto flex-wrap">
               <ButtonLink
-                className="w-full mt-4"
+                className="w-full mx-auto md:mx-0 my-8"
                 linkText={
                   <>
-                    <img src="/img/apple.svg" alt="Apple" />
-                    <span className="ml-4">App Store</span>
+                    <span>Get the App</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="-10 -6 34 34"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                      />
+                    </svg>
                   </>
                 }
-                path="https://testflight.apple.com/join/x60TmlgF"
+                path="https://usemango.app/get"
                 size="large"
               />
-              <ButtonLink
-                className="w-full mt-4"
-                linkText={
-                  <>
-                    <img src="/img/google-play.svg" alt="Google" />
-                    <span className="ml-4">Google Play</span>
-                  </>
-                }
-                path="https://play.google.com/store/apps/details?id=markets.mango"
-                size="large"
-              />
+              <div className="m-auto md:ml-6 text-th-fgd-3">
+                Available on: <br className="hidden md:block" />
+                <span className="text-th-fgd-1 font-bold">iOS</span> and{' '}
+                <span className="text-th-fgd-1 font-bold">Android</span>
+              </div>
             </div>
           </div>
         </div>
