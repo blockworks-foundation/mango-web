@@ -13,7 +13,7 @@ const MangoApp = () => {
             worldwide.
           </h2>
           <p className="text-xl lg:text-2xl">
-            Send and request crypto payments to anyone's mobile number.{' '}
+            Send and request crypto payments to anyone's mobile number.
             <br className="hidden xl:block" /> Build crypto portfolio, withdraw
             to your bank account.
           </p>
@@ -44,8 +44,8 @@ const MangoApp = () => {
             />
             <div className="m-auto md:ml-6 text-th-fgd-3">
               Available on:
-              <br className="hidden md:block" />{' '}
-              <span className="text-th-fgd-1 font-bold">iOS</span> and{' '}
+              <br className="hidden md:block" />
+              <span className="text-th-fgd-1 font-bold">iOS</span> and
               <span className="text-th-fgd-1 font-bold">Android</span>
             </div>
           </div>
@@ -161,7 +161,7 @@ const MangoApp = () => {
             Send &amp; accept <br /> crypto payments
           </h2>
           <p className="text-xl lg:text-2xl">
-            Securely pay or get paid with a phone number or QR code.{' '}
+            Securely pay or get paid with a phone number or QR code.
             <span className="text-th-fgd-1">Guaranteed and immediate.</span>
           </p>
         </div>
@@ -255,7 +255,7 @@ const MangoApp = () => {
             crypto portfolio
           </h2>
           <p className="text-xl lg:text-2xl">
-            Buy crypto with cash and convert it into popular coins.{' '}
+            Buy crypto with cash and convert it into popular coins.
             <span className="text-th-fgd-1">
               Earn interest up to 45% per year.
             </span>
@@ -314,7 +314,7 @@ const MangoApp = () => {
               Community <br /> driven features
             </h2>
             <p className="text-xl lg:text-2xl">
-              <span className="text-th-fgd-1">People love Mango.</span> See what{' '}
+              <span className="text-th-fgd-1">People love Mango.</span> See what
               <br />
               the community is saying about us.
             </p>
@@ -336,7 +336,7 @@ const MangoApp = () => {
               </p>
             </div>
             <span className="font-bold self-end">
-              Luc <br />{' '}
+              Luc <br />
               <span className="text-sm font-normal">
                 Entrepreneur, Digital Nomad
               </span>
@@ -357,7 +357,7 @@ const MangoApp = () => {
               </p>
             </div>
             <span className="font-bold self-end">
-              Maya <br />{' '}
+              Maya <br />
               <span className="text-sm font-normal">Photographer, Berlin</span>
             </span>
           </div>
@@ -375,7 +375,7 @@ const MangoApp = () => {
               </p>
             </div>
             <span className="font-bold self-end">
-              Lars <br />{' '}
+              Lars <br />
               <span className="text-sm font-normal">Youtuber, Stockholm</span>
             </span>
           </div>
@@ -464,7 +464,7 @@ const MangoApp = () => {
               />
               <div className="m-auto md:ml-6 text-th-fgd-3">
                 Available on: <br className="hidden md:block" />
-                <span className="text-th-fgd-1 font-bold">iOS</span> and{' '}
+                <span className="text-th-fgd-1 font-bold">iOS</span> and
                 <span className="text-th-fgd-1 font-bold">Android</span>
               </div>
             </div>
