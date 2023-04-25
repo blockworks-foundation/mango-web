@@ -13,7 +13,7 @@ const MangoApp = () => {
             worldwide.
           </h2>
           <p className="text-xl lg:text-2xl">
-            Send and request crypto payments to anyone's mobile number.
+            Send and request crypto payments to anyone&apos;s mobile number.
             <br className="hidden xl:block" /> Build crypto portfolio, withdraw
             to your bank account.
           </p>
