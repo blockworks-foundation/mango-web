@@ -9,6 +9,7 @@ const IconWithText = ({
   linkText,
   noBorder,
   title,
+  showBackground,
 }: {
   desc?: string
   icon: ReactNode
@@ -16,9 +17,14 @@ const IconWithText = ({
   linkText?: string
   noBorder?: boolean
   title: string
+  showBackground?: boolean
 }) => {
   return (
-    <div className="col-span-6 sm:col-span-3 md:col-span-2">
+    <div
+      className={`highlight-features opacity-0 translate-y-[40px] col-span-6 sm:col-span-3 md:col-span-2 ${
+        showBackground ? 'border border-th-bkg-3 rounded-xl px-8 py-10' : ''
+      }`}
+    >
       <div
         className={`${
           noBorder

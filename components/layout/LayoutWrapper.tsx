@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react'
 import Footer from '../footer/Footer'
 import TopNavigation from '../navigation/TopNavigation'
+// import ColorBlur from '../shared/ColorBlur'
 
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   const [mounted, setMounted] = useState(false)
@@ -16,6 +17,11 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   return (
     <div className="bg-th-bkg-1">
       <TopNavigation />
+      {/* <ColorBlur
+        className="left-0 top-0 animate-blob"
+        height="25%"
+        width="50%"
+      /> */}
       <div>{children}</div>
       <Footer />
     </div>
