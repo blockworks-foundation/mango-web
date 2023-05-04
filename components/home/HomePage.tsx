@@ -206,7 +206,7 @@ const HomePage = () => {
         <div className="w-full h-full" ref={swapPanel}>
           <div className="border border-th-bkg-3 px-16 py-24 rounded-xl relative min-h-[730px]">
             <h2 className="mb-4 text-center">{t('home:swap-heading')}</h2>
-            <p className="intro-p mb-10 text-center max-w-lg mx-auto">
+            <p className="intro-p text-center max-w-lg mx-auto">
               {t('home:swap-desc')}
             </p>
             <ButtonLink
@@ -232,7 +232,7 @@ const HomePage = () => {
         </div>
       </SectionWrapper>
       <div className="page-x-padding" ref={unlimitedTokens}>
-        <div className="flex core-features py-24 h-screen flex items-center justify-center">
+        <div className="flex core-features h-screen flex items-center justify-center">
           <div className="w-1/2 h-full">
             <div className="unlimited-icons h-full w-full flex items-center justify-center">
               {tokenIcons.map((icon) => (
@@ -264,15 +264,15 @@ const HomePage = () => {
           <div className="w-1/2 relative h-full flex items-center">
             <div className="feature-text absolute">
               <h2 className="mb-4">{t('home:token-listings')}</h2>
-              <p className="intro-p mb-10">{t('home:swap-desc')}</p>
+              <p className="intro-p">{t('home:swap-desc')}</p>
             </div>
             <div className="feature-text absolute">
               <h2 className="mb-4">{t('home:earn-interest')}</h2>
-              <p className="intro-p mb-10 max-w-lg">{t('home:swap-desc')}</p>
+              <p className="intro-p max-w-lg">{t('home:swap-desc')}</p>
             </div>
             <div className="feature-text absolute">
               <h2 className="mb-4">{t('home:borrow-any-token')}</h2>
-              <p className="intro-p mb-10 max-w-lg">{t('home:swap-desc')}</p>
+              <p className="intro-p max-w-lg">{t('home:swap-desc')}</p>
             </div>
           </div>
         </div>
