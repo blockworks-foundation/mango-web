@@ -1,14 +1,8 @@
-// const colors = require('tailwindcss/colors')
-// const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  darkMode: false,
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     fontFamily: {
       display: ['TT Commons Expanded, sans-serif'],

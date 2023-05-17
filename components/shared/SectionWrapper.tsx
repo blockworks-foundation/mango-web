@@ -14,7 +14,7 @@ const SectionWrapper = ({
   return (
     <div
       className={`${noPaddingX ? '' : 'page-x-padding'} ${
-        noPaddingY ? '' : 'py-24 lg:py-32 xl:py-40'
+        noPaddingY ? '' : 'py-24 lg:py-32'
       } max-w-[1600px] mx-auto ${className}`}
     >
       {children}

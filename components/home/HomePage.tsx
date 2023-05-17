@@ -85,10 +85,10 @@ const HomePage = () => {
       const spheres = self.selector('.sphere')
       spheres.forEach((sphere, i) => {
         gsap.to(sphere, {
-          y: i % 2 ? -200 : 200,
+          y: i % 2 ? -150 : 100,
           scrollTrigger: {
             trigger: sphere,
-            start: 'center center',
+            start: i % 2 ? 'bottom bottom' : 'center center',
             scrub: true,
           },
         })
@@ -119,7 +119,7 @@ const HomePage = () => {
           </div>
           <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center">
             <img
-              className="sphere absolute -top-12 sm:-top-28 opacity-60 -left-6 sm:left-6 w-56 h-auto xl:-left-12"
+              className="sphere absolute -top-12 sm:-top-28 xl:-top-40 opacity-60 -left-6 sm:left-6 w-56 h-auto xl:-left-12"
               src="/images/new/black-sphere.png"
               alt=""
             />
@@ -129,7 +129,7 @@ const HomePage = () => {
               alt=""
             />
             <img
-              className="sphere absolute lg:-bottom-16 -right-28 sm:-right-24 md:-right-14 lg:right-0 lg:left-0 xl:-left-16 w-80 h-auto"
+              className="sphere absolute lg:-bottom-24 xl:-bottom-40 -right-28 sm:-right-24 md:-right-14 lg:right-0 lg:left-0 xl:-left-16 w-80 h-auto"
               src="/images/new/orange-sphere.png"
               alt=""
             />

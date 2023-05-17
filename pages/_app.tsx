@@ -3,9 +3,6 @@ import { ThemeProvider } from 'next-themes'
 import '../styles/index.css'
 import LayoutWrapper from '../components/layout/LayoutWrapper'
 import { appWithTranslation } from 'next-i18next'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
-const queryClient = new QueryClient()
 
 function App({ Component, pageProps }) {
   const title = 'Mango Markets'
@@ -35,18 +32,14 @@ function App({ Component, pageProps }) {
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://www.mango.markets/socials/twitter-image-1200x600.png?34567878"
+          content="https://mango.markets/socials/meta.jpg?1234567"
         />
-
-        <link rel="manifest" href="/manifest.json"></link>
       </Head>
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider defaultTheme="Mango">
-          <LayoutWrapper>
-            <Component {...pageProps} />
-          </LayoutWrapper>
-        </ThemeProvider>
-      </QueryClientProvider>
+      <ThemeProvider defaultTheme="Mango">
+        <LayoutWrapper>
+          <Component {...pageProps} />
+        </LayoutWrapper>
+      </ThemeProvider>
     </>
   )
 }
