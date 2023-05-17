@@ -12,9 +12,12 @@ import IconWithText from '../shared/IconWithText'
 import SectionWrapper from '../shared/SectionWrapper'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useEffect, useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import ColorBlur from '../shared/ColorBlur'
+
+gsap.registerPlugin(MotionPathPlugin)
+gsap.registerPlugin(ScrollTrigger)
 
 const tokenIcons = [
   { icon: 'coin-orange.png', x: '10%', y: '20%' },
@@ -40,11 +43,6 @@ const HomePage = () => {
   const callouts = useRef()
   const swapPanel = useRef()
   const coreFeatures = useRef()
-
-  useEffect(() => {
-    gsap.registerPlugin(MotionPathPlugin)
-    gsap.registerPlugin(ScrollTrigger)
-  }, [])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
