@@ -10,14 +10,14 @@ import {
 import { useTranslation } from 'next-i18next'
 import NavigationItemLink from './NavigationItemLink'
 import ButtonLink from '../shared/ButtonLink'
-import ThemeToggle from './ThemeToggle'
+// import ThemeToggle from './ThemeToggle'
 
 const DesktopNavigation = () => {
   const { t } = useTranslation(['common', 'navigation'])
 
   return (
     <div className="hidden lg:flex lg:items-center space-x-8">
-      <NavigationItem title={t('navigation:about')}>
+      {/* <NavigationItem title={t('navigation:about')}>
         <NavigationItemPanel>
           <NavigationItemLink
             path="/mango-dao"
@@ -31,8 +31,8 @@ const DesktopNavigation = () => {
           />
           <NavigationItemLink path="/brand" title={t('navigation:brand')} />
         </NavigationItemPanel>
-      </NavigationItem>
-      <NavigationItem title={t('navigation:products')}>
+      </NavigationItem> */}
+      {/* <NavigationItem title={t('navigation:products')}>
         <NavigationItemPanel>
           <NavigationItemLink
             path="https://app.mango.markets"
@@ -44,7 +44,7 @@ const DesktopNavigation = () => {
             title={t('navigation:mobile-app')}
           />
         </NavigationItemPanel>
-      </NavigationItem>
+      </NavigationItem> */}
       <NavigationItem title={t('navigation:developers')}>
         <NavigationItemPanel>
           <NavigationItemLink
@@ -98,16 +98,16 @@ const DesktopNavigation = () => {
           />
         </NavigationItemPanel>
       </NavigationItem>
-      <NavigationItem title={t('navigation:careers')}>
+      {/* <NavigationItem title={t('navigation:careers')}>
         <NavigationItemPanel>
           <NavigationItemLink
             path="/careers"
             title={t('navigation:work-with-us')}
           />
         </NavigationItemPanel>
-      </NavigationItem>
-      <ThemeToggle />
-      <ButtonLink linkText={t('trade-now')} path="https://app.mango.markets" />
+      </NavigationItem> */}
+      {/* <ThemeToggle /> */}
+      <ButtonLink linkText="Launch App" path="https://app.mango.markets" />
     </div>
   )
 }
@@ -165,7 +165,7 @@ const NavigationItem = ({
           setIsOpen(!isOpen)
         }}
       >
-        <span className="font-display text-th-fgd-2 md:hover:text-th-fgd-1 default-transition">
+        <span className="font-display text-th-fgd-2 md:hover:text-th-fgd-1 default-transition text-base">
           {title}
         </span>
       </Popover.Button>

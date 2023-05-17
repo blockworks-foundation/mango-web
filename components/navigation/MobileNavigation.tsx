@@ -4,14 +4,14 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Transition } from '@headlessui/react'
 import NavigationItemLink from './NavigationItemLink'
 import { useTranslation } from 'next-i18next'
-import ThemeToggle from './ThemeToggle'
+// import ThemeToggle from './ThemeToggle'
 
 const MobileNavigation = () => {
   const [showMenu, setShowMenu] = useState(false)
   return (
     <div className="lg:hidden">
       <div className="flex items-center space-x-2">
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         <IconButton hideBg onClick={() => setShowMenu(true)} size="medium">
           <Bars3Icon className="h-6 w-6" />
         </IconButton>
@@ -49,7 +49,7 @@ const MenuPanel = ({
           </IconButton>
         </div>
         <div className="grid grid-cols-2 grid-row-flow gap-6 px-4">
-          <div>
+          {/* <div>
             <h4 className="px-4 mb-2">{t('navigation:about')}</h4>
             <NavigationItemLink
               path="/mango-dao"
@@ -68,8 +68,8 @@ const MenuPanel = ({
               title={t('navigation:v4-stats')}
             />
             <NavigationItemLink path="/brand" title={t('navigation:brand')} />
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <h4 className="px-4 mb-2">{t('navigation:products')}</h4>
             <NavigationItemLink
               path="https://app.mango.markets"
@@ -82,7 +82,7 @@ const MenuPanel = ({
               onClick={closeOnClick}
               title={t('navigation:mobile-app')}
             />
-          </div>
+          </div> */}
           <div>
             <h4 className="px-4 mb-2">{t('navigation:developers')}</h4>
             <NavigationItemLink
@@ -143,14 +143,14 @@ const MenuPanel = ({
               title={t('navigation:forum')}
             />
           </div>
-          <div>
+          {/* <div>
             <h4 className="px-4 mb-2">{t('navigation:careers')}</h4>
             <NavigationItemLink
               path="/careers"
               onClick={closeOnClick}
               title={t('navigation:work-with-us')}
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <Transition

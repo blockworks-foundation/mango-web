@@ -10,36 +10,41 @@ import LiquidIcon from '../icons/LiquidIcon'
 import ButtonLink from '../shared/ButtonLink'
 import IconWithText from '../shared/IconWithText'
 import SectionWrapper from '../shared/SectionWrapper'
-import HomeTopSection from './HomeTopSection'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
-
-gsap.registerPlugin(MotionPathPlugin)
-gsap.registerPlugin(ScrollTrigger)
+import ColorBlur from '../shared/ColorBlur'
 
 const tokenIcons = [
-  { icon: 'mngo.svg', x: '15%', y: '20%' },
-  { icon: 'btc.svg', x: '2%', y: '10%' },
-  { icon: 'eth.svg', x: '90%', y: '23%' },
-  { icon: 'usdt.svg', x: '79%', y: '25%' },
-  { icon: 'sol.svg', x: '95%', y: '80%' },
-  { icon: 'usdc.svg', x: '3%', y: '65%' },
-  { icon: 'usdc.svg', x: '88%', y: '40%' },
-  { icon: 'btc.svg', x: '86%', y: '48%' },
-  { icon: 'eth.svg', x: '10%', y: '73%' },
-  { icon: 'usdt.svg', x: '14%', y: '78%' },
-  { icon: 'sol.svg', x: '12%', y: '40%' },
-  { icon: 'mngo.svg', x: '81%', y: '68%' },
+  { icon: 'coin-orange.png', x: '10%', y: '20%' },
+  { icon: 'coin-silver.png', x: '2%', y: '10%' },
+  { icon: 'cube-pink.png', x: '90%', y: '23%' },
+  { icon: 'spring-chrome.png', x: '79%', y: '25%' },
+  { icon: 'pyramid-blue.png', x: '95%', y: '80%' },
+  { icon: 'ring-white.png', x: '3%', y: '65%' },
+  { icon: 'ring-white.png', x: '88%', y: '40%' },
+  { icon: 'coin-silver.png', x: '86%', y: '48%' },
+  { icon: 'cube-pink.png', x: '10%', y: '73%' },
+  { icon: 'spring-chrome.png', x: '14%', y: '78%' },
+  { icon: 'pyramid-blue.png', x: '12%', y: '40%' },
+  { icon: 'coin-orange.png', x: '81%', y: '68%' },
 ]
+
+const MOBILE_IMAGE_CLASSES = 'h-auto w-3/4 sm:w-1/2 max-w-[480px] mb-6 lg:mb-0'
 
 const HomePage = () => {
   const { t } = useTranslation(['common', 'home'])
 
+  const topSection = useRef()
   const callouts = useRef()
   const swapPanel = useRef()
-  const unlimitedTokens = useRef()
+  const coreFeatures = useRef()
+
+  useEffect(() => {
+    gsap.registerPlugin(MotionPathPlugin)
+    gsap.registerPlugin(ScrollTrigger)
+  }, [])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -48,6 +53,7 @@ const HomePage = () => {
         gsap.to(box, {
           opacity: 1,
           y: -40,
+          ease: 'power3.inOut',
           scrollTrigger: {
             trigger: box,
             end: 'top 40%',
@@ -66,7 +72,6 @@ const HomePage = () => {
         gsap.to(icon, {
           y: i % 2 ? 100 : -100,
           rotateZ: i % 2 ? 45 : -45,
-          opacity: 0,
           scrollTrigger: {
             trigger: icon,
             scrub: true,
@@ -79,203 +84,253 @@ const HomePage = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const featureText = self.selector('.feature-text')
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.core-features',
-          start: 'top top',
-          end: '+=15000',
-          scrub: true,
-          markers: true,
-          pin: true,
-        },
-      })
-
-      const textTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.core-features',
-          start: 'bottom bottom',
-          end: '+=15000',
-          scrub: true,
-        },
-      })
-      featureText.forEach(function (elem, i) {
-        if (i !== 0) {
-          textTl.from(elem, {
-            opacity: 0,
-            y: 600,
-          })
-        }
-        textTl.to(elem, {
-          autoAlpha: 1,
-          y: 0,
-        })
-        if (i !== featureText.length - 1) {
-          textTl.to(elem, {
-            y: -600,
-          })
-        }
-      })
-      const icons = self.selector('.unlimited-icon-wrapper')
-      const angle = 360 / 12
-      const distanceToken = 150 // distance from origin
-      const distanceInterest = 75 // distance from origin
-      icons.forEach((icon, i) => {
-        const interest = icon.querySelector('.interest-icon')
-        const radians = (angle * (i + 1) * Math.PI) / 180
-        // Calculate x and y offsets
-        const tokenOffsetX = distanceToken * Math.cos(radians)
-        const tokenOffsetY = distanceToken * Math.sin(radians)
-        const interestOffsetX = distanceInterest * Math.cos(radians)
-        const interestOffsetY = distanceInterest * Math.sin(radians)
-        const iconTl = gsap.timeline({
+      const spheres = self.selector('.sphere')
+      spheres.forEach((sphere, i) => {
+        gsap.to(sphere, {
+          y: i % 2 ? -200 : 200,
           scrollTrigger: {
-            trigger: '.core-features',
-            start: 'top top',
-            end: '+=8500',
+            trigger: sphere,
+            start: 'center center',
             scrub: true,
           },
         })
-        iconTl
-          .to(icon, {
-            x: tokenOffsetX,
-            y: tokenOffsetY,
-          })
-          .to(icon, {
-            rotateZ: 360,
-          })
-          .to(interest, {
-            x: interestOffsetX,
-            y: interestOffsetY,
-            rotateZ: 360,
-          })
-          .to(interest, {
-            opacity: 0,
-          })
       })
-    }, unlimitedTokens) // <- Scope!
+    }, topSection) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
   return (
     <>
-      <HomeTopSection />
-      <SectionWrapper className="pt-24 lg:pt-32 xl:pt-40" noPaddingY>
-        <div className="grid grid-cols-6 gap-8" ref={callouts}>
+      <SectionWrapper className="overflow-hidden h-screen">
+        <div className="grid grid-cols-12" ref={topSection}>
+          <div className="col-span-12 lg:col-span-5 mb-12 lg:mb-0 relative z-10">
+            <h1 className="mb-6 text-center lg:text-left">
+              Safer. Smarter. Faster.
+            </h1>
+            <p className="intro-p mb-10 text-center lg:text-left">
+              A magical new way to interact with DeFi. Groundbreaking safety
+              features designed to keep your funds secure. The easiest way to
+              margin trade any token pair. All powered by flashloans.
+            </p>
+            <ButtonLink
+              className="mt-8 mx-auto lg:mx-0"
+              linkText={t('trade-now')}
+              path="https://app.mango.markets"
+              size="large"
+            />
+          </div>
+          <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center">
+            <img
+              className="sphere absolute -top-12 sm:-top-28 opacity-60 -left-6 sm:left-6 w-56 h-auto xl:-left-12"
+              src="/images/new/black-sphere.png"
+              alt=""
+            />
+            <img
+              className="w-3/4 lg:w-full absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0 xl:w-[740px]"
+              src="/images/new/trade-desktop.png"
+              alt=""
+            />
+            <img
+              className="sphere absolute lg:-bottom-16 -right-28 sm:-right-24 md:-right-14 lg:right-0 lg:left-0 xl:-left-16 w-80 h-auto"
+              src="/images/new/orange-sphere.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </SectionWrapper>
+      <SectionWrapper>
+        <div
+          className="grid grid-cols-6 gap-4 md:gap-6 xl:gap-8"
+          ref={callouts}
+        >
           <IconWithText
             desc={t('home:competitive-fees-desc')}
-            icon={<CurrencyDollarIcon className="h-5 w-5 text-th-fgd-2" />}
+            icon={<CurrencyDollarIcon className="h-7 w-7 text-th-fgd-2" />}
             title={t('home:competitive-fees')}
             showBackground
           />
           <IconWithText
             desc={t('home:lightning-execution-desc')}
-            icon={<BoltIcon className="h-5 w-5 text-th-fgd-2" />}
+            icon={<BoltIcon className="h-7 w-7 text-th-fgd-2" />}
             title={t('home:lightning-execution')}
             showBackground
           />
           <IconWithText
             desc={t('home:deeply-liquid-desc')}
-            icon={<LiquidIcon className="h-5 w-5 text-th-fgd-2" />}
+            icon={<LiquidIcon className="h-7 w-7 text-th-fgd-2" />}
             title={t('home:deeply-liquid')}
             showBackground
           />
           <IconWithText
             desc={t('home:cross-margin-desc')}
             icon={
-              <ArrowPathRoundedSquareIcon className="h-5 w-5 text-th-fgd-2" />
+              <ArrowPathRoundedSquareIcon className="h-7 w-7 text-th-fgd-2" />
             }
             title={t('home:cross-margin')}
             showBackground
           />
           <IconWithText
             desc={t('home:community-governed-desc')}
-            icon={<BuildingLibraryIcon className="h-5 w-5 text-th-fgd-2" />}
+            icon={<BuildingLibraryIcon className="h-7 w-7 text-th-fgd-2" />}
             title={t('home:community-governed')}
             showBackground
           />
           <IconWithText
             desc={t('home:trade-your-way-desc')}
-            icon={<DevicePhoneMobileIcon className="h-5 w-5 text-th-fgd-2" />}
+            icon={<DevicePhoneMobileIcon className="h-7 w-7 text-th-fgd-2" />}
             title={t('home:trade-your-way')}
             showBackground
           />
         </div>
       </SectionWrapper>
-      <SectionWrapper className="relative overflow-hidden">
-        <div className="w-full h-full" ref={swapPanel}>
-          <div className="border border-th-bkg-3 px-16 py-24 rounded-xl relative min-h-[730px]">
-            <h2 className="mb-4 text-center">{t('home:swap-heading')}</h2>
-            <p className="intro-p text-center max-w-lg mx-auto">
-              {t('home:swap-desc')}
-            </p>
-            <ButtonLink
-              className="mx-auto"
-              path="https://app.mango.markets/"
-              linkText={t('home:swap-now')}
-              size="large"
-            />
-            <img
-              className="shadow-lg mt-12 w-2/3 h-auto absolute left-1/2 -translate-x-1/2"
-              src="/images/@1x-swap-desktop-dark-2.png"
-              alt=""
-            />
+      <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
+        <SectionWrapper className="relative overflow-hidden">
+          <ColorBlur
+            className="-top-20 left-1/2 -translate-x-1/2"
+            height="1000px"
+            width="600px"
+          />
+          <div className="w-full h-full" ref={swapPanel}>
+            <div className="relative min-h-[580px] md:min-h-[640px] lg:min-h-[730px]">
+              <div className="relative z-10">
+                <h2 className="mb-4 text-center">{t('home:swap-heading')}</h2>
+                <p className="intro-p text-center max-w-lg mx-auto">
+                  {t('home:swap-desc')}
+                </p>
+              </div>
+              <ButtonLink
+                className="mx-auto mt-10"
+                path="https://app.mango.markets/"
+                linkText={t('home:swap-now')}
+                size="large"
+              />
+              <img
+                className="shadow-lg mt-12 w-full sm:w-3/4 max-w-[800px] h-auto absolute left-1/2 -translate-x-1/2 bottom-10"
+                src="/images/new/swap-desktop.png"
+                alt=""
+              />
+            </div>
+            {tokenIcons.map((icon) => (
+              <img
+                className={`absolute token-icon w-10 md:w-16 xl:w-20 h-auto`}
+                key={icon.icon}
+                src={`/images/new/${icon.icon}`}
+                style={{ top: icon.y, left: icon.x }}
+              />
+            ))}
           </div>
-          {tokenIcons.map((icon) => (
-            <img
-              className={`absolute token-icon w-10 h-10`}
-              key={icon.icon}
-              src={`/icons/mono/${icon.icon}`}
-              style={{ top: icon.y, left: icon.x }}
-            />
-          ))}
+        </SectionWrapper>
+      </div>
+      <SectionWrapper>
+        <div
+          className="core-features flex flex-col justify-center"
+          ref={coreFeatures}
+        >
+          <div className="h-full max-w-[1200px] xl:px-12">
+            <div className="flex flex-col lg:flex-row lg:items-center pb-12 lg:pb-28">
+              <img
+                className={MOBILE_IMAGE_CLASSES}
+                src="/images/new/trade-favorites.png"
+              />
+              <div>
+                <h2 className="mb-4">Leverage trade your favorite markets</h2>
+                <p className="intro-p">
+                  Up to 10x leverage on the spot and perp markets you want to
+                  trade. Cross-margined accounts allow you to make the most of
+                  your capital.
+                </p>
+                <ButtonLink
+                  className="mt-10"
+                  path="https://app.mango.markets/"
+                  linkText="Start Trading"
+                  size="large"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col-reverse lg:flex-row lg:items-center py-12 lg:py-28">
+              <div>
+                <h2 className="mb-4">Unparalleled safety</h2>
+                <p className="intro-p">
+                  Innovative safety features to protect your funds. Mango is
+                  manipulation resistant to minimize potential losses from bad
+                  actors or extreme volatility.
+                </p>
+                <ButtonLink
+                  className="mt-10"
+                  path="https://docs.mango.markets/"
+                  linkText={t('learn-more')}
+                  size="large"
+                />
+              </div>
+              <img
+                className={MOBILE_IMAGE_CLASSES}
+                src="/images/new/unparalleled-safety.png"
+              />
+            </div>
+            <div className="flex flex-col lg:flex-row lg:items-center py-12 lg:py-28">
+              <img
+                className={MOBILE_IMAGE_CLASSES}
+                src="/images/new/token-listings.png"
+              />
+              <div>
+                <h2 className="mb-4 max-w-lg">Permissionless token listings</h2>
+                <p className="intro-p">
+                  Anyone can easily list any token on Mango. A governance
+                  proposal is created upon submission and if successful the
+                  token will list automatically.
+                </p>
+                <ButtonLink
+                  className="mt-10"
+                  path="https://app.mango.markets/governance/listToken"
+                  linkText="List a Token"
+                  size="large"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col-reverse lg:flex-row lg:items-center pt-12 lg:pt-28">
+              <div>
+                <h2 className="mb-4">Borrow and earn interest</h2>
+                <p className="intro-p">
+                  All tokens on Mango can be borrowed for use in other DeFi
+                  activities. Plus, all deposits earn interest without unlock
+                  periods.
+                </p>
+                <ButtonLink
+                  className="mt-10"
+                  path="https://app.mango.markets/"
+                  linkText="Get Started"
+                  size="large"
+                />
+              </div>
+              <img
+                className={MOBILE_IMAGE_CLASSES}
+                src="/images/new/borrow.png"
+              />
+            </div>
+          </div>
         </div>
       </SectionWrapper>
-      <div className="page-x-padding" ref={unlimitedTokens}>
-        <div className="flex core-features h-screen flex items-center justify-center">
-          <div className="w-1/2 h-full">
-            <div className="unlimited-icons h-full w-full flex items-center justify-center">
-              {tokenIcons.map((icon) => (
-                <div
-                  className="unlimited-icon-wrapper relative flex items-center justify-center"
-                  key={icon.icon}
-                >
-                  <div className="interest-icon absolute bg-th-bkg-2 rounded-full h-10 w-10 flex items-center justify-center">
-                    {/* <div className="relative"> */}
-                    {/* <img
-                        className={`w-6 h-6`}
-                        src={`/icons/mono/${interestIcons[i].icon}`}
-                      /> */}
-                    <div className="h-6 w-6 flex items-center justify-center rounded-full bg-th-fgd-1 text-th-bkg-1">
-                      <span className="font-display text-lg">$</span>
-                    </div>
-                    {/* </div> */}
-                  </div>
-                  <div className="unlimited-icon absolute bg-th-bkg-2 rounded-full h-16 w-16 flex items-center justify-center">
-                    <img
-                      className={`w-10 h-10`}
-                      src={`/icons/mono/${icon.icon}`}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+      <div className="bg-[url('/images/new/cube-bg.png')] bg-repeat">
+        <SectionWrapper className="relative overflow-hidden">
+          <ColorBlur className="-top-10 left-0" height="600px" width="600px" />
+          <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-b from-th-bkg-1 to-th-bkg-2 w-[800px] rounded-full h-[800px]" />
+          <div className="flex flex-col items-center relative">
+            <img className="w-64 h-auto mb-12" src="/images/new/build.png" />
+            <h2 className="mb-4 text-center">Build on Mango</h2>
+            <p className="intro-p text-center max-w-lg mx-auto">
+              Mango is 100% open source and highly composable. Build trading
+              bots, new product integrations, community tools or whatever you
+              desire. Explore the code and get building.
+            </p>
+
+            <ButtonLink
+              className="mx-auto mt-10"
+              path="https://github.com/blockworks-foundation"
+              linkText={t('home:explore-the-code')}
+              size="large"
+            />
           </div>
-          <div className="w-1/2 relative h-full flex items-center">
-            <div className="feature-text absolute">
-              <h2 className="mb-4">{t('home:token-listings')}</h2>
-              <p className="intro-p">{t('home:swap-desc')}</p>
-            </div>
-            <div className="feature-text absolute">
-              <h2 className="mb-4">{t('home:earn-interest')}</h2>
-              <p className="intro-p max-w-lg">{t('home:swap-desc')}</p>
-            </div>
-            <div className="feature-text absolute">
-              <h2 className="mb-4">{t('home:borrow-any-token')}</h2>
-              <p className="intro-p max-w-lg">{t('home:swap-desc')}</p>
-            </div>
-          </div>
-        </div>
+        </SectionWrapper>
       </div>
     </>
   )

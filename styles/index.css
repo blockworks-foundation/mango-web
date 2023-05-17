@@ -208,7 +208,7 @@ h4 {
 }
 
 p {
-  @apply tracking-wider text-th-fgd-3 text-base xl:text-lg;
+  @apply tracking-wider text-th-fgd-4 text-base xl:text-lg;
 }
 
 a {
@@ -225,7 +225,7 @@ li {
 }
 
 .intro-p {
-  @apply text-lg md:text-xl text-th-fgd-2;
+  @apply text-lg md:text-xl text-th-fgd-4;
 }
 
 @layer utilities {
@@ -258,4 +258,21 @@ li {
 
 .sideways-bounce {
   animation: sideways-bounce 1s infinite;
+}
+
+/* stable price home page animation */
+
+.path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 6s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }

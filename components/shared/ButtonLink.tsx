@@ -17,7 +17,7 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
 }) => {
   return (
     <a
-      className={`flex sm:w-max items-center justify-center rounded-md ${
+      className={`flex w-max items-center justify-center rounded-md ${
         secondary
           ? 'border border-th-button md:hover:border-th-button-hover'
           : 'bg-th-button md:hover:bg-th-button-hover'
