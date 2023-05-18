@@ -269,7 +269,14 @@ const HomePage = () => {
                     linkText={t('learn-more')}
                     size="large"
                   />
-                  <Ottersec className="w-40 h-auto text-th-fgd-1" />
+                  <a
+                    className="text-th-fgd-1 md:hover:text-th-fgd-3 focus:outline-none"
+                    href="https://osec.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Ottersec className="w-40 h-auto" />
+                  </a>
                 </div>
               </div>
               <img
