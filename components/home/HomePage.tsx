@@ -15,6 +15,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import ColorBlur from '../shared/ColorBlur'
+import Ottersec from '../icons/Ottersec'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -99,7 +100,7 @@ const HomePage = () => {
 
   return (
     <>
-      <SectionWrapper className="overflow-hidden h-screen">
+      <SectionWrapper className="overflow-hidden h-[760px] lg:h-auto">
         <div className="grid grid-cols-12" ref={topSection}>
           <div className="col-span-12 lg:col-span-5 mb-12 lg:mb-0 relative z-10">
             <h1 className="mb-6 text-center lg:text-left">
@@ -143,39 +144,47 @@ const HomePage = () => {
         >
           <IconWithText
             desc={t('home:competitive-fees-desc')}
-            icon={<CurrencyDollarIcon className="h-7 w-7 text-th-fgd-2" />}
+            icon={
+              <CurrencyDollarIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
+            }
             title={t('home:competitive-fees')}
             showBackground
           />
           <IconWithText
             desc={t('home:lightning-execution-desc')}
-            icon={<BoltIcon className="h-7 w-7 text-th-fgd-2" />}
+            icon={<BoltIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />}
             title={t('home:lightning-execution')}
             showBackground
           />
           <IconWithText
             desc={t('home:deeply-liquid-desc')}
-            icon={<LiquidIcon className="h-7 w-7 text-th-fgd-2" />}
+            icon={
+              <LiquidIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
+            }
             title={t('home:deeply-liquid')}
             showBackground
           />
           <IconWithText
             desc={t('home:cross-margin-desc')}
             icon={
-              <ArrowPathRoundedSquareIcon className="h-7 w-7 text-th-fgd-2" />
+              <ArrowPathRoundedSquareIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
             }
             title={t('home:cross-margin')}
             showBackground
           />
           <IconWithText
             desc={t('home:community-governed-desc')}
-            icon={<BuildingLibraryIcon className="h-7 w-7 text-th-fgd-2" />}
+            icon={
+              <BuildingLibraryIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
+            }
             title={t('home:community-governed')}
             showBackground
           />
           <IconWithText
             desc={t('home:trade-your-way-desc')}
-            icon={<DevicePhoneMobileIcon className="h-7 w-7 text-th-fgd-2" />}
+            icon={
+              <DevicePhoneMobileIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
+            }
             title={t('home:trade-your-way')}
             showBackground
           />
@@ -184,8 +193,8 @@ const HomePage = () => {
       <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur
-            className="-top-20 left-1/2 -translate-x-1/2"
-            height="1000px"
+            className="-top-20 left-0 -rotate-25"
+            height="800px"
             width="600px"
           />
           <div className="w-full h-full" ref={swapPanel}>
@@ -203,7 +212,7 @@ const HomePage = () => {
                 size="large"
               />
               <img
-                className="shadow-lg mt-12 w-full sm:w-3/4 max-w-[800px] h-auto absolute left-1/2 -translate-x-1/2 bottom-10"
+                className="shadow-lg mt-12 w-full sm:w-3/4 max-w-[800px] h-auto absolute left-1/2 -translate-x-1/2 bottom-16 md:bottom-10"
                 src="/images/new/swap-desktop.png"
                 alt=""
               />
@@ -253,12 +262,15 @@ const HomePage = () => {
                   manipulation resistant to minimize potential losses from bad
                   actors or extreme volatility.
                 </p>
-                <ButtonLink
-                  className="mt-10"
-                  path="https://docs.mango.markets/"
-                  linkText={t('learn-more')}
-                  size="large"
-                />
+                <div className="flex flex-col sm:flex-row sm:items-center mt-10">
+                  <ButtonLink
+                    className="mb-8 sm:mb-0 sm:mr-8"
+                    path="https://docs.mango.markets/"
+                    linkText={t('learn-more')}
+                    size="large"
+                  />
+                  <Ottersec className="w-40 h-auto text-th-fgd-1" />
+                </div>
               </div>
               <img
                 className={MOBILE_IMAGE_CLASSES}
@@ -311,9 +323,12 @@ const HomePage = () => {
       <div className="bg-[url('/images/new/cube-bg.png')] bg-repeat">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur className="-top-10 left-0" height="600px" width="600px" />
-          <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-b from-th-bkg-1 to-th-bkg-2 w-[800px] rounded-full h-[800px]" />
+          <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-tl shadow-xl from-th-bkg-1 to-th-bkg-2 h-[600px] w-[600px] md:h-[800px] md:w-[800px] rounded-full" />
           <div className="flex flex-col items-center relative">
-            <img className="w-64 h-auto mb-12" src="/images/new/build.png" />
+            <img
+              className="w-40 md:w-64 h-auto mb-8 md:mb-12"
+              src="/images/new/build.png"
+            />
             <h2 className="mb-4 text-center">Build on Mango</h2>
             <p className="intro-p text-center max-w-lg mx-auto">
               Mango is 100% open source and highly composable. Build trading
