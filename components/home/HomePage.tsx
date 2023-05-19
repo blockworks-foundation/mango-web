@@ -35,7 +35,8 @@ const tokenIcons = [
   { icon: 'coin-orange.png', x: '81%', y: '68%' },
 ]
 
-const MOBILE_IMAGE_CLASSES = 'h-auto w-3/4 sm:w-1/2 max-w-[480px] mb-6 lg:mb-0'
+const MOBILE_IMAGE_CLASSES =
+  'core-image h-[240px] w-[240px] sm:h-[300px] sm:w-[300px] md:h-[480px] md:w-[480px] mb-6 lg:mb-0'
 
 const HomePage = () => {
   const { t } = useTranslation(['common', 'home'])
@@ -61,6 +62,39 @@ const HomePage = () => {
         })
       })
     }, callouts) // <- Scope!
+    return () => ctx.revert() // <- Cleanup!
+  }, [])
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const features = self.selector('.core-feature')
+      const text = self.selector('.core-text')
+      const image = self.selector('.core-image')
+      features.forEach((feature, i) => {
+        gsap.from(text[i], {
+          opacity: 0.4,
+          y: 60,
+          ease: 'power3.inOut',
+          scrollTrigger: {
+            start: 'top 60%',
+            end: 'top 20%',
+            trigger: feature,
+            scrub: true,
+          },
+        })
+        gsap.from(image[i], {
+          opacity: 0.4,
+          scale: 0.9,
+          ease: 'power3.inOut',
+          scrollTrigger: {
+            start: 'top 60%',
+            end: 'top 20%',
+            trigger: feature,
+            scrub: true,
+          },
+        })
+      })
+    }, coreFeatures) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
@@ -227,17 +261,14 @@ const HomePage = () => {
         </SectionWrapper>
       </div>
       <SectionWrapper>
-        <div
-          className="core-features flex flex-col justify-center"
-          ref={coreFeatures}
-        >
-          <div className="h-full max-w-[1200px] xl:px-12">
-            <div className="flex flex-col lg:flex-row lg:items-center pb-12 lg:pb-28">
+        <div className="flex flex-col justify-center" ref={coreFeatures}>
+          <div className="h-full xl:px-12">
+            <div className="core-feature flex flex-col lg:flex-row lg:items-center pb-12 lg:pb-24">
               <img
                 className={MOBILE_IMAGE_CLASSES}
                 src="/images/new/trade-favorites.png"
               />
-              <div>
+              <div className="core-text">
                 <h2 className="mb-4">{t('home:leverage-trade-heading')}</h2>
                 <p className="intro-p">{t('home:leverage-trade-desc')}</p>
                 <ButtonLink
@@ -248,8 +279,8 @@ const HomePage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col-reverse lg:flex-row lg:items-center py-12 lg:py-28">
-              <div>
+            <div className="core-feature flex flex-col-reverse lg:flex-row lg:items-center py-12 lg:py-24">
+              <div className="core-text">
                 <h2 className="mb-4">{t('home:safety-heading')}</h2>
                 <p className="intro-p">{t('home:safety-desc')}</p>
                 <div className="flex flex-row flex-wrap items-center mt-4">
@@ -274,12 +305,12 @@ const HomePage = () => {
                 src="/images/new/unparalleled-safety.png"
               />
             </div>
-            <div className="flex flex-col lg:flex-row lg:items-center py-12 lg:py-28">
+            <div className="core-feature flex flex-col lg:flex-row lg:items-center py-12 lg:py-24">
               <img
                 className={MOBILE_IMAGE_CLASSES}
                 src="/images/new/token-listings.png"
               />
-              <div>
+              <div className="core-text">
                 <h2 className="mb-4 max-w-lg">
                   {t('home:token-listings-heading')}
                 </h2>
@@ -292,8 +323,8 @@ const HomePage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col-reverse lg:flex-row lg:items-center pt-12 lg:pt-28">
-              <div>
+            <div className="core-feature flex flex-col-reverse lg:flex-row lg:items-center pt-12 lg:pt-24">
+              <div className="core-text">
                 <h2 className="mb-4">{t('home:borrow-heading')}</h2>
                 <p className="intro-p">{t('home:borrow-desc')}</p>
                 <ButtonLink
@@ -321,8 +352,9 @@ const HomePage = () => {
               src="/images/new/build.png"
             />
             <h2 className="mb-4 text-center">{t('home:build-heading')}</h2>
-            <p className="intro-p text-center max-w-lg mx-auto"></p>
-
+            <p className="intro-p text-center max-w-lg mx-auto">
+              {t('home:build-desc')}
+            </p>
             <ButtonLink
               className="mx-auto mt-10"
               path="https://github.com/blockworks-foundation"
