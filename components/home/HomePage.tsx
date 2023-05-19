@@ -45,6 +45,7 @@ const HomePage = () => {
   const callouts = useRef()
   const swapPanel = useRef()
   const coreFeatures = useRef()
+  const build = useRef()
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -139,6 +140,22 @@ const HomePage = () => {
         })
       })
     }, topSection) // <- Scope!
+    return () => ctx.revert() // <- Cleanup!
+  }, [])
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '#build',
+            scrub: true,
+          },
+        })
+        .from('#build', {
+          y: -200,
+        })
+    }, build) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
@@ -360,17 +377,24 @@ const HomePage = () => {
       </SectionWrapper>
       <div className="bg-[url('/images/new/cube-bg.png')] bg-repeat">
         <SectionWrapper className="relative overflow-hidden">
+          <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-tl shadow-xl from-th-bkg-1 to-th-bkg-2 h-[600px] w-[600px] md:h-[800px] md:w-[800px] rounded-full" />
           <ColorBlur
-            className="-top-10 left-0 opacity-40"
+            className="-top-10 left-0 opacity-50"
             height="600px"
             width="600px"
           />
-          <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-tl shadow-xl from-th-bkg-1 to-th-bkg-2 h-[600px] w-[600px] md:h-[800px] md:w-[800px] rounded-full" />
-          <div className="flex flex-col items-center relative">
-            <img
-              className="w-40 md:w-64 h-auto mb-8 md:mb-12"
-              src="/images/new/build.png"
-            />
+          <div className="flex flex-col items-center relative" ref={build}>
+            <div className="relative h-[280px] w-[280px] md:h-[400px] md:w-[400px] mb-4 md:mb-8">
+              <img
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 md:w-56 h-auto"
+                src="/images/new/build-hori.png"
+              />
+              <img
+                className="absolute left-1/3 -translate-x-1/3 h-40 md:h-56 w-auto"
+                src="/images/new/build-vert.png"
+                id="build"
+              />
+            </div>
             <h2 className="mb-4 text-center">{t('home:build-heading')}</h2>
             <p className="intro-p text-center max-w-lg mx-auto">
               {t('home:build-desc')}
