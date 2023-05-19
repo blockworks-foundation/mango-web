@@ -12,7 +12,7 @@ const ColorBlur = ({
   const { theme } = useTheme()
   return theme !== 'Light' ? (
     <div
-      className={`absolute bg-th-fgd-1 mix-blend-overlay rounded-full filter blur-3xl opacity-40 ${className}`}
+      className={`absolute bg-th-fgd-1 mix-blend-overlay rounded-full filter blur-3xl ${className}`}
       style={{ height: height, width: width }}
     />
   ) : null

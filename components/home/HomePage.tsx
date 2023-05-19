@@ -67,6 +67,33 @@ const HomePage = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
+      const icons = self.selector('.token-icon')
+      icons.forEach((icon, i) => {
+        gsap.to(icon, {
+          y: i % 2 ? 100 : -100,
+          rotateZ: i % 2 ? 45 : -45,
+          scrollTrigger: {
+            trigger: icon,
+            scrub: true,
+          },
+        })
+      })
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '#swap-desktop',
+            scrub: true,
+          },
+        })
+        .from('#swap-desktop', {
+          rotateX: -45,
+        })
+    }, swapPanel) // <- Scope!
+    return () => ctx.revert() // <- Cleanup!
+  }, [])
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
       const features = self.selector('.core-feature')
       const text = self.selector('.core-text')
       const image = self.selector('.core-image')
@@ -95,23 +122,6 @@ const HomePage = () => {
         })
       })
     }, coreFeatures) // <- Scope!
-    return () => ctx.revert() // <- Cleanup!
-  }, [])
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context((self) => {
-      const icons = self.selector('.token-icon')
-      icons.forEach((icon, i) => {
-        gsap.to(icon, {
-          y: i % 2 ? 100 : -100,
-          rotateZ: i % 2 ? 45 : -45,
-          scrollTrigger: {
-            trigger: icon,
-            scrub: true,
-          },
-        })
-      })
-    }, swapPanel) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
@@ -225,7 +235,7 @@ const HomePage = () => {
       <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur
-            className="-top-20 left-0 -rotate-25"
+            className="-top-20 left-0 -rotate-25 opacity-20"
             height="800px"
             width="600px"
           />
@@ -247,6 +257,7 @@ const HomePage = () => {
                 className="shadow-lg mt-12 w-full sm:w-3/4 max-w-[800px] h-auto absolute left-1/2 -translate-x-1/2 bottom-16 md:bottom-10"
                 src="/images/new/swap-desktop.png"
                 alt=""
+                id="swap-desktop"
               />
             </div>
             {tokenIcons.map((icon) => (
@@ -258,6 +269,11 @@ const HomePage = () => {
               />
             ))}
           </div>
+          <ColorBlur
+            className="-top-20 left-0 -rotate-25 opacity-20"
+            height="800px"
+            width="600px"
+          />
         </SectionWrapper>
       </div>
       <SectionWrapper>
@@ -344,7 +360,11 @@ const HomePage = () => {
       </SectionWrapper>
       <div className="bg-[url('/images/new/cube-bg.png')] bg-repeat">
         <SectionWrapper className="relative overflow-hidden">
-          <ColorBlur className="-top-10 left-0" height="600px" width="600px" />
+          <ColorBlur
+            className="-top-10 left-0 opacity-40"
+            height="600px"
+            width="600px"
+          />
           <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-tl shadow-xl from-th-bkg-1 to-th-bkg-2 h-[600px] w-[600px] md:h-[800px] md:w-[800px] rounded-full" />
           <div className="flex flex-col items-center relative">
             <img
