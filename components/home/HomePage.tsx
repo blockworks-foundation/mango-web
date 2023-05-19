@@ -104,12 +104,10 @@ const HomePage = () => {
         <div className="grid grid-cols-12" ref={topSection}>
           <div className="col-span-12 lg:col-span-5 mb-12 lg:mb-0 relative z-10">
             <h1 className="mb-6 text-center lg:text-left">
-              Safer. Smarter. Faster.
+              {t('home:home-heading')}
             </h1>
             <p className="intro-p mb-10 text-center lg:text-left">
-              A magical new way to interact with DeFi. Groundbreaking safety
-              features designed to keep your funds secure. The easiest way to
-              margin trade any token pair. All powered by flashloans.
+              {t('home:home-desc')}
             </p>
             <ButtonLink
               className="mt-8 mx-auto lg:mx-0"
@@ -240,12 +238,8 @@ const HomePage = () => {
                 src="/images/new/trade-favorites.png"
               />
               <div>
-                <h2 className="mb-4">Leverage trade your favorite markets</h2>
-                <p className="intro-p">
-                  Up to 10x leverage on the spot and perp markets you want to
-                  trade. Cross-margined accounts allow you to make the most of
-                  your capital.
-                </p>
+                <h2 className="mb-4">{t('home:leverage-trade-heading')}</h2>
+                <p className="intro-p">{t('home:leverage-trade-desc')}</p>
                 <ButtonLink
                   className="mt-10"
                   path="https://app.mango.markets/"
@@ -256,21 +250,17 @@ const HomePage = () => {
             </div>
             <div className="flex flex-col-reverse lg:flex-row lg:items-center py-12 lg:py-28">
               <div>
-                <h2 className="mb-4">Unparalleled safety</h2>
-                <p className="intro-p">
-                  Innovative safety features to protect your funds. Mango is
-                  manipulation resistant to minimize potential losses from bad
-                  actors or extreme volatility.
-                </p>
-                <div className="flex flex-col sm:flex-row sm:items-center mt-10">
+                <h2 className="mb-4">{t('home:safety-heading')}</h2>
+                <p className="intro-p">{t('home:safety-desc')}</p>
+                <div className="flex flex-row flex-wrap items-center mt-4">
                   <ButtonLink
-                    className="mb-8 sm:mb-0 sm:mr-8"
+                    className="mr-8 mt-6"
                     path="https://docs.mango.markets/"
                     linkText={t('learn-more')}
                     size="large"
                   />
                   <a
-                    className="text-th-fgd-1 md:hover:text-th-fgd-3 focus:outline-none"
+                    className="mt-6 text-th-fgd-1 md:hover:text-th-fgd-3 focus:outline-none"
                     href="https://osec.io/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -290,32 +280,26 @@ const HomePage = () => {
                 src="/images/new/token-listings.png"
               />
               <div>
-                <h2 className="mb-4 max-w-lg">Permissionless token listings</h2>
-                <p className="intro-p">
-                  Anyone can easily list any token on Mango. A governance
-                  proposal is created upon submission and if successful the
-                  token will list automatically.
-                </p>
+                <h2 className="mb-4 max-w-lg">
+                  {t('home:token-listings-heading')}
+                </h2>
+                <p className="intro-p">{t('home:token-listings-desc')}</p>
                 <ButtonLink
                   className="mt-10"
                   path="https://app.mango.markets/governance/listToken"
-                  linkText="List a Token"
+                  linkText={t('home:list-token')}
                   size="large"
                 />
               </div>
             </div>
             <div className="flex flex-col-reverse lg:flex-row lg:items-center pt-12 lg:pt-28">
               <div>
-                <h2 className="mb-4">Borrow and earn interest</h2>
-                <p className="intro-p">
-                  All tokens on Mango can be borrowed for use in other DeFi
-                  activities. Plus, all deposits earn interest without unlock
-                  periods.
-                </p>
+                <h2 className="mb-4">{t('home:borrow-heading')}</h2>
+                <p className="intro-p">{t('home:borrow-desc')}</p>
                 <ButtonLink
                   className="mt-10"
                   path="https://app.mango.markets/"
-                  linkText="Get Started"
+                  linkText={t('home:get-started')}
                   size="large"
                 />
               </div>
@@ -336,12 +320,8 @@ const HomePage = () => {
               className="w-40 md:w-64 h-auto mb-8 md:mb-12"
               src="/images/new/build.png"
             />
-            <h2 className="mb-4 text-center">Build on Mango</h2>
-            <p className="intro-p text-center max-w-lg mx-auto">
-              Mango is 100% open source and highly composable. Build trading
-              bots, new product integrations, community tools or whatever you
-              desire. Explore the code and get building.
-            </p>
+            <h2 className="mb-4 text-center">{t('home:build-heading')}</h2>
+            <p className="intro-p text-center max-w-lg mx-auto"></p>
 
             <ButtonLink
               className="mx-auto mt-10"
