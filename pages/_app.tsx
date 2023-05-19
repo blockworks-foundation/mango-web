@@ -32,7 +32,7 @@ function App({ Component, pageProps }) {
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://mango.markets/socials/meta.jpg?1234567"
+          content="https://mango.markets/twitter-card.png?12345678"
         />
       </Head>
       <ThemeProvider defaultTheme="Mango">
