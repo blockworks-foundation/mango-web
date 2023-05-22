@@ -4,6 +4,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Transition } from '@headlessui/react'
 import NavigationItemLink from './NavigationItemLink'
 import { useTranslation } from 'next-i18next'
+import Twitter from '../icons/Twitter'
+import Discord from '../icons/Discord'
 // import ThemeToggle from './ThemeToggle'
 
 const MobileNavigation = () => {
@@ -117,30 +119,35 @@ const MenuPanel = ({
             />
           </div>
           <div>
-            <h4 className="px-4 mb-2">{t('navigation:community')}</h4>
+            <h4 className="px-4 mb-2">{t('navigation:governance')}</h4>
             <NavigationItemLink
               path="https://dao.mango.markets"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:governance')}
-            />
-            <NavigationItemLink
-              path="https://discord.gg/2uwjsBc5yw"
-              onClick={closeOnClick}
-              isExternal
-              title={t('navigation:discord')}
-            />
-            <NavigationItemLink
-              path="https://twitter.com/mangomarkets"
-              onClick={closeOnClick}
-              isExternal
-              title={t('navigation:twitter')}
+              title={t('navigation:vote')}
             />
             <NavigationItemLink
               path="https://forum.mango.markets"
               onClick={closeOnClick}
               isExternal
               title={t('navigation:forum')}
+            />
+          </div>
+          <div>
+            <h4 className="px-4 mb-2">{t('navigation:social')}</h4>
+            <NavigationItemLink
+              icon={<Twitter className="h-4 w-4 mr-2" />}
+              path="https://twitter.com/mangomarkets"
+              onClick={closeOnClick}
+              isExternal
+              title={t('navigation:twitter')}
+            />
+            <NavigationItemLink
+              icon={<Discord className="h-4 w-4 mr-2" />}
+              path="https://discord.gg/2uwjsBc5yw"
+              onClick={closeOnClick}
+              isExternal
+              title={t('navigation:discord')}
             />
           </div>
           {/* <div>

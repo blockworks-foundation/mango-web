@@ -10,6 +10,8 @@ import {
 import { useTranslation } from 'next-i18next'
 import NavigationItemLink from './NavigationItemLink'
 import ButtonLink from '../shared/ButtonLink'
+import Twitter from '../icons/Twitter'
+import Discord from '../icons/Discord'
 // import ThemeToggle from './ThemeToggle'
 
 const DesktopNavigation = () => {
@@ -74,22 +76,12 @@ const DesktopNavigation = () => {
           />
         </NavigationItemPanel>
       </NavigationItem>
-      <NavigationItem title={t('navigation:community')}>
+      <NavigationItem title={t('navigation:governance')}>
         <NavigationItemPanel>
           <NavigationItemLink
             path="https://dao.mango.markets"
             isExternal
-            title={t('navigation:governance')}
-          />
-          <NavigationItemLink
-            path="https://discord.gg/2uwjsBc5yw"
-            isExternal
-            title={t('navigation:discord')}
-          />
-          <NavigationItemLink
-            path="https://twitter.com/mangomarkets"
-            isExternal
-            title={t('navigation:twitter')}
+            title={t('navigation:vote')}
           />
           <NavigationItemLink
             path="https://forum.mango.markets"
@@ -107,6 +99,24 @@ const DesktopNavigation = () => {
         </NavigationItemPanel>
       </NavigationItem> */}
       {/* <ThemeToggle /> */}
+      <div className="flex items-center space-x-6">
+        <a
+          className="text-th-fgd-4 hover:text-th-fgd-1"
+          href="https://twitter.com/mangomarkets"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Twitter className="h-5 w-5" />
+        </a>
+        <a
+          className="text-th-fgd-4 hover:text-th-fgd-1"
+          href="https://discord.gg/2uwjsBc5yw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Discord className="h-5 w-5" />
+        </a>
+      </div>
       <ButtonLink linkText="Launch App" path="https://app.mango.markets" />
     </div>
   )
@@ -196,5 +206,5 @@ const NavigationItem = ({
 }
 
 const NavigationItemPanel = ({ children }: { children: ReactNode }) => {
-  return <div className="bg-th-bkg-2 py-2 rounded-md">{children}</div>
+  return <div className="bg-th-bkg-2 py-4 rounded-lg">{children}</div>
 }

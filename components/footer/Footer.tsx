@@ -1,6 +1,8 @@
 import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { ReactNode } from 'react'
+import Twitter from '../icons/Twitter'
+import Discord from '../icons/Discord'
 
 const Footer = () => {
   const { t } = useTranslation(['footer', 'navigation'])
@@ -10,7 +12,7 @@ const Footer = () => {
         className={`lg:px-20 lg:pt-16 pb-6 px-6 pt-8 bg-th-bkg-1 z-20 relative`}
       >
         <div className="flex flex-col-reverse lg:flex-row">
-          <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start">
+          <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start lg:pr-6">
             <Link href="/" shallow>
               <div className="flex flex-shrink-0 cursor-pointer items-center">
                 <img
@@ -29,17 +31,18 @@ const Footer = () => {
             <div className="flex space-x-3">
               <a
                 className="text-th-fgd-4 opacity-60 text-sm whitespace-nowrap"
-                href="#"
+                href="https://docs.mango.markets/legal/terms-of-use"
+                rel="noopener noreferrer"
               >
                 {t('footer:terms-of-service')}
               </a>
-              <div className="border-r border-th-bkg-4" />
+              {/* <div className="border-r border-th-bkg-4" />
               <a
                 className="text-th-fgd-4 opacity-60 text-sm whitespace-nowrap"
                 href="#"
               >
                 {t('footer:privacy-policy')}
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="w-full lg:w-3/4 flex flex-col sm:flex-row items-start justify-end sm:space-x-8 mb-8 lg:mb-0 border-b border-th-bkg-3 lg:border-b-0 pb-6 lg:pb-0">
@@ -91,26 +94,30 @@ const Footer = () => {
                 title={t('navigation:contribute')}
               />
             </FooterLinkColumn>
-            <FooterLinkColumn title={t('navigation:community')}>
+            <FooterLinkColumn title={t('navigation:governance')}>
               <FooterLink
                 path="https://dao.mango.markets"
                 isExternal
-                title={t('navigation:governance')}
-              />
-              <FooterLink
-                path="https://discord.gg/2uwjsBc5yw"
-                isExternal
-                title={t('navigation:discord')}
-              />
-              <FooterLink
-                path="https://twitter.com/mangomarkets"
-                isExternal
-                title={t('navigation:twitter')}
+                title={t('navigation:vote')}
               />
               <FooterLink
                 path="https://forum.mango.markets"
                 isExternal
                 title={t('navigation:forum')}
+              />
+            </FooterLinkColumn>
+            <FooterLinkColumn title={t('navigation:social')}>
+              <FooterLink
+                icon={<Twitter className="h-4 w-4 mr-2" />}
+                path="https://twitter.com/mangomarkets"
+                isExternal
+                title={t('navigation:twitter')}
+              />
+              <FooterLink
+                icon={<Discord className="h-4 w-4 mr-2" />}
+                path="https://discord.gg/2uwjsBc5yw"
+                isExternal
+                title={t('navigation:discord')}
               />
             </FooterLinkColumn>
             {/* <FooterLinkColumn title={t('navigation:careers')}>
@@ -141,7 +148,7 @@ const FooterLinkColumn = ({
   title: string
 }) => {
   return (
-    <div className="w-full lg:w-56 mb-6 last:mb-0 sm:mb-0">
+    <div className="w-full lg:w-48 xl:w-56 mb-6 last:mb-0 sm:mb-0">
       <h4 className="text-th-fgd-3 text-lg mb-3">{title}</h4>
       {children}
     </div>
@@ -149,16 +156,18 @@ const FooterLinkColumn = ({
 }
 
 const linkClassNames =
-  'font-medium text-th-fgd-2 block mb-1.5 last:mb-0 md:hover:text-th-fgd-4 default-transition text-base'
+  'font-medium text-th-fgd-2 block mb-1.5 last:mb-0 md:hover:text-th-fgd-4 default-transition text-base flex items-center'
 
 const FooterLink = ({
   path,
   title,
   isExternal = false,
+  icon,
 }: {
   isExternal?: boolean
   path: string
   title: string
+  icon?: ReactNode
 }) => {
   return isExternal ? (
     <a
@@ -167,10 +176,12 @@ const FooterLink = ({
       target="_blank"
       rel="noopener noreferrer"
     >
+      {icon ? icon : null}
       {title}
     </a>
   ) : (
     <Link className={linkClassNames} href={path} shallow>
+      {icon ? icon : null}
       {title}
     </Link>
   )
