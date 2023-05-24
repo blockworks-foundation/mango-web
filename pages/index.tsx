@@ -1,17 +1,23 @@
-import NavBarBeta from '../components/NavBarBeta'
-import HeroSectionHome from '../components/HeroSectionHome'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { NextPage } from 'next'
+import HomePage from '../components/home/HomePage'
 
-const Index = () => {
-  return (
-    <div
-      className={`bg-th-bkg-1 text-th-fgd-1 transition-all min-h-screen pb-10`}
-    >
-      <NavBarBeta />
-      <div className="max-w-[1600px] mx-auto min-h-[calc(100vh-160px)] flex flex-col justify-center">
-        <HeroSectionHome />
-      </div>
-    </div>
-  )
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'home',
+        'footer',
+        'navigation',
+      ])),
+      // Will be passed to the page component as props
+    },
+  }
+}
+
+const Index: NextPage = () => {
+  return <HomePage />
 }
 
 export default Index

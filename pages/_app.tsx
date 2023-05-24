@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import { ThemeProvider } from 'next-themes'
 import '../styles/index.css'
+import LayoutWrapper from '../components/layout/LayoutWrapper'
+import { appWithTranslation } from 'next-i18next'
 
 function App({ Component, pageProps }) {
   const title = 'Mango Markets'
   const description =
-    'A magical new way to interact with DeFi. Groundbreaking safety features. Margin trade any token pair. All powered by flashloans.'
-
+    'Decentralized, cross-margin trading up to 20x leverage with lightning speed and near-zero fees.'
   const keywords =
-    'Mango Markets, DEX, DEFI, Decentralized Finance, Decentralised Finance, Crypto, ERC20, Ethereum, Decentralize, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
+    'Mango Markets, DEFI, Decentralized Finance, Decentralized Finance, Crypto, ERC20, Ethereum, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
 
   return (
     <>
@@ -31,14 +32,16 @@ function App({ Component, pageProps }) {
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://mango.markets/socials/meta.jpg?1234567"
+          content="https://mango.markets/twitter-card.png?12345678"
         />
       </Head>
       <ThemeProvider defaultTheme="Mango">
-        <Component {...pageProps} />
+        <LayoutWrapper>
+          <Component {...pageProps} />
+        </LayoutWrapper>
       </ThemeProvider>
     </>
   )
 }
 
-export default App
+export default appWithTranslation(App)

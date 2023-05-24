@@ -1,50 +1,15 @@
-// const colors = require('tailwindcss/colors')
-// const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  darkMode: false,
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     fontFamily: {
       display: ['TT Commons Expanded, sans-serif'],
       body: 'TT Commons, sans-serif',
       mono: ['TT Mono, mono'],
     },
-    screens: {
-      xs: '240px',
-      // => @media (min-width: 340px) { ... }
-      sm: '640px',
-      // => @media (min-width: 640px) { ... }
-
-      md: '768px',
-      // => @media (min-width: 768px) { ... }
-
-      lg: '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      xl: '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-    },
-
     extend: {
-      backgroundImage: (_) => ({
-        'hero-img': "url('../public/img/Hero_BG.jpeg')",
-        'product-one': "url('../public/img/ProductFeature1.png')",
-        'product-two': "url('../public/img/ProductFeature2.png')",
-        'product-three': "url('../public/img/ProductFeature3.png')",
-        'product-four': "url('../public/img/redeem4.png')",
-        'bg-texture': "url('../public/img/bgtexture.png')",
-        'bg-cta': "url('../public/img/bgcta.jpeg')",
-        'home-bg': "url('../public/img/home_section.png')",
-      }),
       height: {
         450: '450px',
         500: '500px',
@@ -66,100 +31,112 @@ module.exports = {
         help: 'help',
       },
       colors: {
-        primary: { light: '#F2C94C', dark: '#EEB91B' },
-        'secondary-1': { light: '#AFD803', dark: '#6CBF00' },
-        'secondary-2': { light: '#E54033', dark: '#C7251A' },
-        'secondary-3': { light: '#026DF7', dark: '#0259CA' },
-        'secondary-4': { light: '#262145', dark: '#1B1735' },
-        'bkg-1': '#141125',
-        'bkg-2': '#242132',
-        'bkg-3': '#393549',
-        'bkg-4': '#4F4B63',
-        'fgd-1': '#F0EDFF',
-        'fgd-2': '#FCFCFF',
-        'fgd-3': '#B9B5CE',
-        'fgd-4': '#706C81',
-        'mango-orange': {
-          DEFAULT: '#DFAB01',
-          dark: '#CB9C01',
-        },
-        'mango-yellow': '#F2C94C',
-        'mango-red': '#E54033',
-        'mango-green': '#AFD803',
-        'mango-dark': {
-          lighter: '#332F46',
-          light: '#262337',
-          DEFAULT: '#141026',
-        },
-        'mango-med': {
-          light: '#C2BDD9',
-          DEFAULT: '#9490A6',
-          dark: '#706C81',
-        },
-        'mango-light': {
-          light: '#FCFCFF',
-          DEFAULT: '#F0EDFF',
-          dark: '#B9B5CE',
-        },
-        'mango-grey': {
-          lighter: '#f7f7f7',
-          light: '#e6e6e6',
-          dark: '#092e34',
-          darker: '#072428',
-          darkest: '#061f23',
+        'mango-classic-theme': {
+          active: {
+            DEFAULT: 'hsl(45, 86%, 62%)',
+            dark: 'hsl(45, 86%, 57%)',
+          },
+          button: {
+            DEFAULT: '#7139C4',
+            hover: '#6432AE',
+          },
+          input: {
+            bkg: 'hsl(256, 18%, 10%)',
+            border: 'hsl(253, 19%, 41%)',
+            borderDark: 'hsl(253, 19%, 31%)',
+          },
+          link: { DEFAULT: 'hsl(33, 100%, 57%)', hover: 'hsl(33, 100%, 52%)' },
+          down: {
+            DEFAULT: 'hsl(4, 63%, 55%)',
+            dark: 'hsl(4, 93%, 55%)',
+            muted: 'hsl(4, 43%, 38%)',
+          },
+          up: {
+            DEFAULT: 'hsl(77, 63%, 40%)',
+            dark: 'hsl(85, 50%, 36%)',
+            muted: 'hsl(84, 40%, 32%)',
+          },
+          error: 'hsl(4, 93%, 60%)',
+          success: 'hsl(82, 97%, 41%)',
+          warning: 'hsl(33, 100%, 57%)',
+          'bkg-1': '#08050A',
+          'bkg-2': '#1B1420',
+          'bkg-3': '#211528',
+          'bkg-4': '#2B1B36',
+          'fgd-1': '#F5F1F8',
+          'fgd-2': '#ECE4F1',
+          'fgd-3': '#CDBFD6',
+          'fgd-4': '#B5A8BD',
         },
         'light-theme': {
-          yellow: '#F58700',
-          red: { DEFAULT: '#CC2929', dark: '#AA2222' },
-          green: { DEFAULT: '#5EBF4D', dark: '#4BA53B' },
-          'bkg-1': '#f7f7f7',
-          'bkg-2': '#FFFFFF',
-          'bkg-3': '#F0F0F0',
-          'fgd-1': '#061f23',
-          'fgd-2': '#0C3F45',
-          'fgd-3': '#446065',
-          'fgd-4': '#B0B0B0',
-        },
-        'dark-theme': {
-          yellow: '#E4AF11',
-          red: { DEFAULT: '#CC2929', dark: '#AA2222' },
-          green: { DEFAULT: '#5EBF4D', dark: '#4BA53B' },
-          'bkg-1': '#101012',
-          'bkg-2': '#1B1B1F',
-          'bkg-3': '#27272B',
-          'fgd-1': '#FFFFFF',
-          'fgd-2': '#F7F7F7',
-          'fgd-3': '#E7E7E7',
-          'fgd-4': '#878787',
-        },
-        'mango-theme': {
-          // yellow: '#603BCF',
-          yellow: 'hsl(45, 86%, 62%)',
-          red: { DEFAULT: '#E54033', dark: '#603BCF' },
-          green: { DEFAULT: '#AFD803', dark: '#91B503' },
-          'bkg-1': '#141414',
-          'bkg-2': '#1D1832',
-          'bkg-3': '#252238',
-          'fgd-1': '#F0EDFF',
-          'fgd-2': '#ddd',
-          'fgd-3': '#B9B5CE',
-          'fgd-4': '#5A5775',
+          active: {
+            DEFAULT: '#7139C4',
+            dark: 'hsl(33, 100%, 52%)',
+          },
+          button: {
+            DEFAULT: '#F2C94C',
+            hover: '#EFBF2E',
+          },
+          input: {
+            bkg: 'hsl(0, 0%, 97%)',
+            border: 'hsl(0, 0%, 33%)',
+            borderDark: 'hsl(0, 0%, 23%)',
+          },
+          link: { DEFAULT: 'hsl(33, 100%, 57%)', hover: 'hsl(33, 100%, 52%)' },
+          down: {
+            DEFAULT: 'hsl(0, 39%, 58%)',
+            dark: 'hsl(0, 39%, 53%)',
+            muted: 'hsl(0, 19%, 53%)',
+          },
+          up: {
+            DEFAULT: 'hsl(111, 47%, 53%)',
+            dark: 'hsl(111, 47%, 48%)',
+            muted: 'hsl(111, 7%, 48%)',
+          },
+          error: 'hsl(0, 39%, 58%)',
+          success: 'hsl(111, 47%, 53%)',
+          warning: 'hsl(33, 100%, 57%)',
+          'bkg-1': 'hsl(0, 0%, 99%)',
+          'bkg-2': 'hsl(0, 0%, 96%)',
+          'bkg-3': 'hsl(0, 0%, 89%)',
+          'bkg-4': 'hsl(0, 0%, 84%)',
+          'fgd-1': 'hsl(0, 0%, 8%)',
+          'fgd-2': 'hsl(0, 0%, 23%)',
+          'fgd-3': 'hsl(0, 0%, 38%)',
+          'fgd-4': 'hsl(0, 0%, 53%)',
         },
         'th-bkg-1': 'var(--bkg-1)',
         'th-bkg-2': 'var(--bkg-2)',
         'th-bkg-3': 'var(--bkg-3)',
+        'th-bkg-4': 'var(--bkg-4)',
         'th-fgd-1': 'var(--fgd-1)',
         'th-fgd-2': 'var(--fgd-2)',
         'th-fgd-3': 'var(--fgd-3)',
         'th-fgd-4': 'var(--fgd-4)',
-        'th-primary': 'var(--primary)',
-        'th-red': 'var(--red)',
-        'th-red-dark': 'var(--red-dark)',
-        'th-green': 'var(--green)',
-        'th-green-dark': 'var(--green-dark)',
+        'th-active': 'var(--active)',
+        'th-active-dark': 'var(--active-dark)',
+        'th-error': 'var(--error)',
+        'th-success': 'var(--success)',
+        'th-warning': 'var(--warning)',
+        'th-down': 'var(--down)',
+        'th-down-dark': 'var(--down-dark)',
+        'th-down-muted': 'var(--down-muted)',
+        'th-up': 'var(--up)',
+        'th-up-dark': 'var(--up-dark)',
+        'th-up-muted': 'var(--up-muted)',
+        'th-link': 'var(--link)',
+        'th-link-hover': 'var(--link-hover)',
+        'th-button': 'var(--button)',
+        'th-button-hover': 'var(--button-hover)',
+        'th-input-bkg': 'var(--input-bkg)',
+        'th-input-border': 'var(--input-border)',
+        'th-input-border-hover': 'var(--input-border-hover)',
       },
       animation: {
         blob: 'blob 12s infinite',
+      },
+      fontSize: {
+        xxs: '.65rem',
       },
       keyframes: {
         blob: {
@@ -176,9 +153,14 @@ module.exports = {
             transform: 'translate(0px, 0px) scale(1)',
           },
         },
+        shimmer: {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
       },
       screens: {
-        sm: '480px',
+        xl: '1600px',
       },
     },
   },
