@@ -89,7 +89,7 @@ const Footer = () => {
                 title={t('navigation:liquidator')}
               />
               <FooterLink
-                path="https://github.com/blockworks-foundation"
+                path="https://trello.com/b/tIj7K3FD/mango-development"
                 isExternal
                 title={t('navigation:contribute')}
               />
