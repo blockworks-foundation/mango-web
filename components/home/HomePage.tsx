@@ -350,7 +350,7 @@ const HomePage = () => {
                 <p className="intro-p">{t('home:token-listings-desc')}</p>
                 <ButtonLink
                   className="mt-10"
-                  path="https://app.mango.markets/governance/listToken"
+                  path="https://app.mango.markets/governance/list"
                   linkText={t('home:list-token')}
                   size="large"
                 />
