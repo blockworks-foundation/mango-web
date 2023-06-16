@@ -7,7 +7,7 @@ import { appWithTranslation } from 'next-i18next'
 function App({ Component, pageProps }) {
   const title = 'Mango Markets'
   const description =
-    'Decentralized, cross-margin trading up to 20x leverage with lightning speed and near-zero fees.'
+    'A magical new way to interact with DeFi. Groundbreaking safety features designed to keep your funds secure.'
   const keywords =
     'Mango Markets, DEFI, Decentralized Finance, Decentralized Finance, Crypto, ERC20, Ethereum, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
 
@@ -32,7 +32,7 @@ function App({ Component, pageProps }) {
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://mango.markets/twitter-card.png?12345678"
+          content="https://mango.markets/twitter-card.png?123456789"
         />
       </Head>
       <ThemeProvider defaultTheme="Mango">
