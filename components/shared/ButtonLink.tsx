@@ -30,7 +30,6 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
       } default-transition font-display focus:outline-none text-th-fgd-1 ${className}`}
       href={path}
       rel="noopener noreferrer"
-      target="_blank"
     >
       {linkText}
     </a>
