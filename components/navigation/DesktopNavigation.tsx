@@ -65,7 +65,7 @@ const DesktopNavigation = () => {
             title={t('navigation:market-maker')}
           />
           <NavigationItemLink
-            path="https://github.com/blockworks-foundation"
+            path="https://github.com/blockworks-foundation/mango-v4/tree/dev/bin/liquidator"
             isExternal
             title={t('navigation:liquidator')}
           />

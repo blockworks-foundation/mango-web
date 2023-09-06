@@ -106,7 +106,7 @@ const MenuPanel = ({
               title={t('navigation:market-maker')}
             />
             <NavigationItemLink
-              path="https://github.com/blockworks-foundation"
+              path="https://github.com/blockworks-foundation/mango-v4/tree/dev/bin/liquidator"
               onClick={closeOnClick}
               isExternal
               title={t('navigation:liquidator')}
