@@ -5,8 +5,8 @@
 /.pnp
 .pnp.js
 
-# pages
-/pages/google-verification.html
+# google
+/public/google1c604c9025f210a7.html
 
 # testing
 /coverage
