@@ -23,6 +23,7 @@
   "dependencies": {
     "@headlessui/react": "^1.0.0",
     "@heroicons/react": "^2.0.16",
+    "decimal.js": "^10.4.3",
     "gsap": "^3.11.5",
     "i18next": "^22.4.10",
     "immer": "^9.0.1",
@@ -31,7 +32,8 @@
     "next-themes": "^0.0.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^12.1.5"
+    "react-i18next": "^12.1.5",
+    "recharts": "^2.9.3"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.5",

@@ -126,12 +126,6 @@ const MenuPanel = ({
               isExternal
               title={t('navigation:vote')}
             />
-            <NavigationItemLink
-              path="https://forum.mango.markets"
-              onClick={closeOnClick}
-              isExternal
-              title={t('navigation:forum')}
-            />
           </div>
           <div>
             <h4 className="px-4 mb-2">{t('navigation:social')}</h4>

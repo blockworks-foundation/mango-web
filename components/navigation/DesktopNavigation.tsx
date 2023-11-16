@@ -83,11 +83,6 @@ const DesktopNavigation = () => {
             isExternal
             title={t('navigation:vote')}
           />
-          <NavigationItemLink
-            path="https://forum.mango.markets"
-            isExternal
-            title={t('navigation:forum')}
-          />
         </NavigationItemPanel>
       </NavigationItem>
       {/* <NavigationItem title={t('navigation:careers')}>

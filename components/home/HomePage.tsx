@@ -12,10 +12,13 @@ import IconWithText from '../shared/IconWithText'
 import SectionWrapper from '../shared/SectionWrapper'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import ColorBlur from '../shared/ColorBlur'
 import Ottersec from '../icons/Ottersec'
+import { MarketData } from '../../types'
+import TabsText from '../shared/TabsText'
+import MarketCard from './MarketCard'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -38,14 +41,31 @@ const tokenIcons = [
 const MOBILE_IMAGE_CLASSES =
   'core-image h-[240px] w-[240px] sm:h-[300px] sm:w-[300px] md:h-[480px] md:w-[480px] mb-6 lg:mb-0'
 
-const HomePage = () => {
+const HomePage = ({
+  perpData,
+  spotData,
+}: {
+  perpData: MarketData
+  spotData: MarketData
+}) => {
   const { t } = useTranslation(['common', 'home'])
+  const [activeMarketTab, setActiveMarketTab] = useState('spot')
 
   const topSection = useRef()
   const callouts = useRef()
   const swapPanel = useRef()
   const coreFeatures = useRef()
   const build = useRef()
+
+  const tabsWithCount: [string, number][] = useMemo(() => {
+    const perpMarketsNumber = Object.keys(perpData)?.length || 0
+    const spotMarketsNumber = Object.keys(spotData)?.length || 0
+    const tabs: [string, number][] = [
+      ['spot', spotMarketsNumber],
+      ['perp', perpMarketsNumber],
+    ]
+    return tabs
+  }, [perpData, spotData])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -249,6 +269,48 @@ const HomePage = () => {
           />
         </div>
       </SectionWrapper>
+      {spotData &&
+      Object.keys(spotData).length &&
+      perpData &&
+      Object.keys(perpData).length ? (
+        <SectionWrapper className="border-t border-th-bkg-3">
+          <div className="w-full h-full">
+            <h2 className="mb-4 text-center">{t('markets')}</h2>
+            <p className="mb-10 intro-p text-center max-w-lg mx-auto">
+              {t('home:markets-desc')}
+            </p>
+            <div className="flex justify-center pb-10">
+              <TabsText
+                activeTab={activeMarketTab}
+                className="text-2xl"
+                onChange={setActiveMarketTab}
+                tabs={tabsWithCount}
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-h-[580px] overflow-auto thin-scroll">
+              {activeMarketTab === 'spot'
+                ? Object.entries(spotData)
+                    .sort(
+                      (a, b) =>
+                        b[1][0].quote_volume_24h - a[1][0].quote_volume_24h
+                    )
+                    .map(([key, value]) => {
+                      const data = value[0]
+                      return <MarketCard name={key} data={data} key={key} />
+                    })
+                : Object.entries(perpData)
+                    .sort(
+                      (a, b) =>
+                        b[1][0].quote_volume_24h - a[1][0].quote_volume_24h
+                    )
+                    .map(([key, value]) => {
+                      const data = value[0]
+                      return <MarketCard name={key} data={data} key={key} />
+                    })}
+            </div>
+          </div>
+        </SectionWrapper>
+      ) : null}
       <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur
@@ -277,10 +339,10 @@ const HomePage = () => {
                 id="swap-desktop"
               />
             </div>
-            {tokenIcons.map((icon) => (
+            {tokenIcons.map((icon, i) => (
               <img
                 className={`absolute token-icon w-10 md:w-16 xl:w-20 h-auto`}
-                key={icon.icon}
+                key={icon.icon + i}
                 src={`/images/new/${icon.icon}`}
                 style={{ top: icon.y, left: icon.x }}
               />

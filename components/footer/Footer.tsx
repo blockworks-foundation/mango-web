@@ -100,11 +100,6 @@ const Footer = () => {
                 isExternal
                 title={t('navigation:vote')}
               />
-              <FooterLink
-                path="https://forum.mango.markets"
-                isExternal
-                title={t('navigation:forum')}
-              />
             </FooterLinkColumn>
             <FooterLinkColumn title={t('navigation:social')}>
               <FooterLink

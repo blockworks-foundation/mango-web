@@ -20,6 +20,7 @@
     "lightning-execution": "Lightning execution",
     "lightning-execution-desc": "The speed of a centralized exchange without losing control of your assets.",
     "list-token": "List a Token",
+    "markets-desc": "New markets are added frequently via Mango DAO. Anyone can propose a token or market to list.",
     "safety-desc": "Innovative safety features to protect your funds. Mango is manipulation resistant to minimize potential losses from bad actors or extreme volatility.",
     "safety-heading": "Unparalleled safety",
     "swap-desc": "The simplicity you love with the power of flash loans. Swap with up to 5x leverage and the best aggregated prices from all the top DEX's.",
