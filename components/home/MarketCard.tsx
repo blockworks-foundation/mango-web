@@ -6,20 +6,21 @@ import SimpleAreaChart from '../shared/SimpleAreaChart'
 import { useTranslation } from 'react-i18next'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
 
-const MarketCard = ({
-  name,
-  data,
-}: {
+type MarketCardData = {
   name: string
   data: MarketsDataItem
-}) => {
+}
+
+const MarketCard = ({ marketData }: { marketData: MarketCardData }) => {
   const { t } = useTranslation('common')
-  const { last_price, price_24h, price_history, quote_volume_24h } = data
+  const { name, data } = marketData
   const isSpot = name.includes('/')
   const baseSymbol = isSpot ? name.split('/')[0] : name.split('-')[0]
   const quoteSymbol = isSpot ? name.split('/')[1] : 'USDC'
   const change =
-    last_price && price_24h ? ((last_price - price_24h) / last_price) * 100 : 0
+    data?.last_price && data?.price_24h
+      ? ((data.last_price - data.price_24h) / data.last_price) * 100
+      : 0
   return (
     <div className="p-4 rounded-lg border border-th-bkg-3">
       <div className="flex items-start justify-between">
@@ -36,10 +37,10 @@ const MarketCard = ({
           <div>
             <p className="text-th-fgd-4">{name}</p>
             <p className="text-th-fgd-1 font-bold">
-              {last_price ? (
+              {data?.last_price ? (
                 <span>
                   {quoteSymbol === 'USDC' ? '$' : ''}
-                  {formatNumericValue(last_price)}{' '}
+                  {formatNumericValue(data.last_price)}{' '}
                   {quoteSymbol !== 'USDC' ? (
                     <span className="text-th-fgd-4 font-normal">
                       {quoteSymbol}
@@ -54,12 +55,12 @@ const MarketCard = ({
               <Change change={change} suffix="%" />
               <span className="text-th-fgd-4">|</span>
               <p className="whitespace-nowrap">
-                {quote_volume_24h ? (
+                {data?.quote_volume_24h ? (
                   <span>
                     {quoteSymbol === 'USDC' ? '$' : ''}
-                    {isNaN(quote_volume_24h)
+                    {isNaN(data.quote_volume_24h)
                       ? '0.00'
-                      : numberCompacter.format(quote_volume_24h)}{' '}
+                      : numberCompacter.format(data.quote_volume_24h)}{' '}
                     {quoteSymbol !== 'USDC' ? (
                       <span className="text-th-fgd-4 font-normal">
                         {quoteSymbol}
@@ -73,16 +74,18 @@ const MarketCard = ({
             </div>
           </div>
         </div>
-        {price_history && price_history.length ? (
+        {data?.price_history && data?.price_history.length ? (
           <div className="h-12 w-20">
             <SimpleAreaChart
               color={
-                price_history[0].price <=
-                price_history[price_history.length - 1]?.price
+                data.price_history[0].price <=
+                data.price_history[data.price_history.length - 1]?.price
                   ? 'var(--up)'
                   : 'var(--down)'
               }
-              data={price_history.sort((a, b) => a.time.localeCompare(b.time))}
+              data={data.price_history.sort((a, b) =>
+                a.time.localeCompare(b.time)
+              )}
               name={name}
               xKey="time"
               yKey="price"

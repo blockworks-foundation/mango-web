@@ -16,9 +16,11 @@ import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import ColorBlur from '../shared/ColorBlur'
 import Ottersec from '../icons/Ottersec'
-import { MarketData } from '../../types'
+import { AppStatsData, MarketData } from '../../types'
 import TabsText from '../shared/TabsText'
 import MarketCard from './MarketCard'
+import { formatNumericValue, numberCompacter } from '../../utils'
+import HeroStat from './HeroStat'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -44,9 +46,11 @@ const MOBILE_IMAGE_CLASSES =
 const HomePage = ({
   perpData,
   spotData,
+  appData,
 }: {
   perpData: MarketData
   spotData: MarketData
+  appData: AppStatsData
 }) => {
   const { t } = useTranslation(['common', 'home'])
   const [activeMarketTab, setActiveMarketTab] = useState('spot')
@@ -66,6 +70,47 @@ const HomePage = ({
     ]
     return tabs
   }, [perpData, spotData])
+
+  const formattedSpotData = useMemo(() => {
+    if (!spotData || !Object.keys(spotData)?.length) return []
+    const data = Object.entries(spotData)
+      .sort((a, b) => b[1][0].quote_volume_24h - a[1][0].quote_volume_24h)
+      .map(([key, value]) => {
+        const data = value[0]
+        return { name: key, data }
+      })
+    return data
+  }, [spotData])
+
+  const formattedPerpData = useMemo(() => {
+    if (!perpData || !Object.keys(perpData)?.length) return []
+    const data = Object.entries(perpData)
+      .sort((a, b) => b[1][0].quote_volume_24h - a[1][0].quote_volume_24h)
+      .map(([key, value]) => {
+        const data = value[0]
+        return { name: key, data }
+      })
+    return data
+  }, [perpData])
+
+  const formattedAppStatsData = useMemo(() => {
+    if (!appData || !Object.keys(appData).length) return
+    // volume
+    const spotVol24h = appData?.openbook_volume_usd_24h || 0
+    const perpVol24h = appData?.perp_volume_usd_24h || 0
+    const swapVol24h = appData?.swap_volume_usd_24h || 0
+    const totalVol24h = spotVol24h + perpVol24h + swapVol24h
+
+    // number of trades
+    const spotTrades24h = appData?.num_openbook_fills_24h || 0
+    const perpTrades24h = appData?.num_perp_fills_24h || 0
+    const swapTrades24h = appData?.num_swaps_24h || 0
+    const totalTrades24h = spotTrades24h + perpTrades24h + swapTrades24h
+
+    const weeklyActiveTraders = appData?.weekly_active_mango_accounts || 0
+
+    return { totalVol24h, totalTrades24h, weeklyActiveTraders }
+  }, [appData])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -216,7 +261,38 @@ const HomePage = ({
           </div>
         </div>
       </SectionWrapper>
-      <SectionWrapper>
+      <div className="bg-[url('/images/new/cube-bg.png')] bg-repeat py-12 lg:py-16">
+        <SectionWrapper noPaddingY>
+          <div className="grid grid-cols-4 gap-6">
+            <HeroStat
+              title={t('markets')}
+              value={(
+                formattedSpotData.length + formattedPerpData.length
+              ).toString()}
+            />
+            <HeroStat
+              title={t('home:active-traders')}
+              tooltipContent={t('home:tooltip-active-traders')}
+              value={formatNumericValue(
+                formattedAppStatsData.weeklyActiveTraders
+              )}
+            />
+            <HeroStat
+              title={t('home:daily-volume')}
+              tooltipContent={t('home:tooltip-daily-volume')}
+              value={`$${numberCompacter.format(
+                formattedAppStatsData.totalVol24h
+              )}`}
+            />
+            <HeroStat
+              title={t('home:daily-trades')}
+              tooltipContent={t('home:tooltip-daily-trades')}
+              value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
+            />
+          </div>
+        </SectionWrapper>
+      </div>
+      <SectionWrapper className="mt-10 md:mt-0">
         <div
           className="grid grid-cols-6 gap-4 md:gap-6 xl:gap-8"
           ref={callouts}
@@ -269,10 +345,7 @@ const HomePage = ({
           />
         </div>
       </SectionWrapper>
-      {spotData &&
-      Object.keys(spotData).length &&
-      perpData &&
-      Object.keys(perpData).length ? (
+      {formattedSpotData.length && formattedPerpData.length ? (
         <SectionWrapper className="border-t border-th-bkg-3">
           <div className="w-full h-full">
             <h2 className="mb-4 text-center">{t('markets')}</h2>
@@ -289,24 +362,12 @@ const HomePage = ({
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-h-[580px] overflow-auto thin-scroll">
               {activeMarketTab === 'spot'
-                ? Object.entries(spotData)
-                    .sort(
-                      (a, b) =>
-                        b[1][0].quote_volume_24h - a[1][0].quote_volume_24h
-                    )
-                    .map(([key, value]) => {
-                      const data = value[0]
-                      return <MarketCard name={key} data={data} key={key} />
-                    })
-                : Object.entries(perpData)
-                    .sort(
-                      (a, b) =>
-                        b[1][0].quote_volume_24h - a[1][0].quote_volume_24h
-                    )
-                    .map(([key, value]) => {
-                      const data = value[0]
-                      return <MarketCard name={key} data={data} key={key} />
-                    })}
+                ? formattedSpotData.map((data) => (
+                    <MarketCard marketData={data} key={data.name} />
+                  ))
+                : formattedPerpData.map((data) => (
+                    <MarketCard marketData={data} key={data.name} />
+                  ))}
             </div>
           </div>
         </SectionWrapper>

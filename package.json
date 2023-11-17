@@ -23,6 +23,7 @@
   "dependencies": {
     "@headlessui/react": "^1.0.0",
     "@heroicons/react": "^2.0.16",
+    "@tippyjs/react": "^4.2.6",
     "decimal.js": "^10.4.3",
     "gsap": "^3.11.5",
     "i18next": "^22.4.10",

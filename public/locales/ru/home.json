@@ -1,4 +1,5 @@
 {
+    "active-traders": "Active Traders",
     "borrow-desc": "All tokens on Mango can be borrowed for use in other DeFi activities. Plus, all deposits earn interest without unlock periods.",
     "borrow-heading": "Borrow and earn interest",
     "build-desc": "Mango is 100% open source and highly composable. Build trading bots, new product integrations, community tools or whatever you desire. Explore the code and get building.",
@@ -9,6 +10,8 @@
     "competitive-fees-desc": "Low fees for taker trades and rebates for maker trades. Plus, Solana's extremely low transaction costs.",
     "cross-margin": "Cross-margin accounts",
     "cross-margin-desc": "Leverage across all your positions. Open multiple accounts to isolate your risk.",
+    "daily-trades": "24h Trades",
+    "daily-volume": "24h Volume",
     "deeply-liquid": "Deeply liquid markets",
     "deeply-liquid-desc": "Get the best price with access to all of the liquidity on Solana.",
     "explore-the-code": "Explore the code",
@@ -28,6 +31,9 @@
     "swap-now": "Swap Now",
     "token-listings-desc": "Anyone can easily list any token on Mango. A governance proposal is created upon submission and if successful the token will list automatically.",
     "token-listings-heading": "Permissionless token listings",
+    "tooltip-active-traders": "Weekly active Mango Accounts",
+    "tooltip-daily-trades": "Number of trades across spot, swap and perp",
+    "tooltip-daily-volume": "Volume across spot, swap and perp",
     "trade-your-way": "Trade your way",
     "trade-your-way-desc": "Leverage swap or orderbook maxi? Mango is optimized for all devices so you can trade how you want, when you want."
 }
