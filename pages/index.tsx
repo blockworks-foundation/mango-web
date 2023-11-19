@@ -28,6 +28,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
           'navigation',
         ])),
       },
+      revalidate: 120,
     }
   } catch (e) {
     console.error('Failed to fetch market data', e)
