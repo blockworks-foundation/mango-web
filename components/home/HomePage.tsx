@@ -61,9 +61,9 @@ const fetchAppData = async () => {
 const HomePage = () => {
   const { t } = useTranslation(['common', 'home'])
   const [activeMarketTab, setActiveMarketTab] = useState('spot')
-  const { data: marketData } = useMarketsData()
+  const { data: marketData, isLoading: loadingMarketData } = useMarketsData()
 
-  const { data: appData } = useQuery({
+  const { data: appData, isLoading: loadingAppData } = useQuery({
     queryKey: ['app-data'],
     queryFn: fetchAppData,
   })
@@ -287,6 +287,7 @@ const HomePage = () => {
               value={(
                 formattedSpotData.length + formattedPerpData.length
               ).toString()}
+              loading={loadingMarketData}
             />
             <HeroStat
               title={t('home:active-traders')}
@@ -294,6 +295,7 @@ const HomePage = () => {
               value={formatNumericValue(
                 formattedAppStatsData.weeklyActiveTraders
               )}
+              loading={loadingAppData}
             />
             <HeroStat
               title={t('home:daily-volume')}
@@ -301,11 +303,13 @@ const HomePage = () => {
               value={`$${numberCompacter.format(
                 formattedAppStatsData.totalVol24h
               )}`}
+              loading={loadingAppData}
             />
             <HeroStat
               title={t('home:daily-trades')}
               tooltipContent={t('home:tooltip-daily-trades')}
               value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
+              loading={loadingAppData}
             />
           </div>
         </SectionWrapper>
