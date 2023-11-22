@@ -4,6 +4,7 @@ import '../styles/index.css'
 import LayoutWrapper from '../components/layout/LayoutWrapper'
 import { appWithTranslation } from 'next-i18next'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import PlausibleProvider from 'next-plausible'
 
 const metaTitle = 'Mango Markets – Safer. Smarter. Faster.'
 const metaDescription =
@@ -29,10 +30,6 @@ function App({ Component, pageProps }) {
       <Head>
         <title>Mango Markets</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-          rel="stylesheet"
-        />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content={keywords} />
@@ -51,9 +48,16 @@ function App({ Component, pageProps }) {
       </Head>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider defaultTheme="Mango">
-          <LayoutWrapper>
-            <Component {...pageProps} />
-          </LayoutWrapper>
+          <PlausibleProvider
+            domain="mango.markets"
+            customDomain="https://pl.mngo.cloud"
+            selfHosted={true}
+            trackOutboundLinks={true}
+          >
+            <LayoutWrapper>
+              <Component {...pageProps} />
+            </LayoutWrapper>
+          </PlausibleProvider>
         </ThemeProvider>
       </QueryClientProvider>
     </>
