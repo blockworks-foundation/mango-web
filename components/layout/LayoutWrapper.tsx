@@ -1,7 +1,12 @@
 import { ReactNode, useEffect, useState } from 'react'
 import Footer from '../footer/Footer'
 import TopNavigation from '../navigation/TopNavigation'
-import { ttCommons, ttCommonsExpanded, ttCommonsMono } from '../../utils/fonts'
+import {
+  lalezar,
+  ttCommons,
+  ttCommonsExpanded,
+  ttCommonsMono,
+} from '../../utils/fonts'
 
 const LayoutWrapper = ({ children }: { children: ReactNode }) => {
   const [mounted, setMounted] = useState(false)
@@ -16,7 +21,7 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
 
   return (
     <main
-      className={`bg-th-bkg-1 ${ttCommons.variable} ${ttCommonsExpanded.variable} ${ttCommonsMono.variable} font-sans`}
+      className={`bg-th-bkg-1 ${ttCommons.variable} ${ttCommonsExpanded.variable} ${ttCommonsMono.variable} ${lalezar.variable} font-sans`}
     >
       <TopNavigation />
       <div>{children}</div>

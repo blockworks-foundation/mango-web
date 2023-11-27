@@ -5202,6 +5202,13 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-flip-numbers@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/react-flip-numbers/-/react-flip-numbers-3.0.8.tgz#45f9240c3afd51e55f40d3da2380ac9d68d83456"
+  integrity sha512-iEh4WScZFiGYkIWw3ATA352+XVWBsiKLg97CQHGXvpBetJFYazaYWMqv/mR2fGHdoDLA/2uES74e2wdEgy69BQ==
+  dependencies:
+    react-simple-animate "^3.0.1"
+
 react-i18next@^12.1.5:
   version "12.2.2"
   resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-12.2.2.tgz#38a6fad11acf4f2abfc5611bdb6b1918d0f47578"
@@ -5231,6 +5238,11 @@ react-resize-detector@^8.0.4:
   integrity sha512-S7szxlaIuiy5UqLhLL1KY3aoyGHbZzsTpYal9eYMwCyKqoqoVLCmIgAgNyIM1FhnP2KyBygASJxdhejrzjMb+w==
   dependencies:
     lodash "^4.17.21"
+
+react-simple-animate@^3.0.1:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/react-simple-animate/-/react-simple-animate-3.5.2.tgz#ab08865c8bd47872b92bd1e25902326bf7c695b3"
+  integrity sha512-xLE65euP920QMTOmv5haPlml+hmOPDkbIr5WeF7ADIXWBYt5kW/vwpNfWg8EKMab8aeDxIZ6QjffVh8v2dUyhg==
 
 react-smooth@^2.0.4:
   version "2.0.5"

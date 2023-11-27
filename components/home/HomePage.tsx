@@ -135,7 +135,6 @@ const HomePage = () => {
       const boxes = self.selector('.highlight-features')
       boxes.forEach((box) => {
         gsap.to(box, {
-          opacity: 1,
           y: -40,
           ease: 'power3.inOut',
           scrollTrigger: {
@@ -397,7 +396,7 @@ const HomePage = () => {
       <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur
-            className="-top-20 left-0 -rotate-25 opacity-20"
+            className="-top-20 left-0 -rotate-25 opacity-20 bg-white"
             height="800px"
             width="600px"
           />
@@ -432,7 +431,7 @@ const HomePage = () => {
             ))}
           </div>
           <ColorBlur
-            className="-top-20 left-0 -rotate-25 opacity-20"
+            className="-top-20 left-0 -rotate-25 opacity-20 bg-white"
             height="800px"
             width="600px"
           />
@@ -524,7 +523,7 @@ const HomePage = () => {
         <SectionWrapper className="relative overflow-hidden">
           <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-tl shadow-xl from-th-bkg-1 to-th-bkg-2 h-[600px] w-[600px] md:h-[800px] md:w-[800px] rounded-full" />
           <ColorBlur
-            className="-top-10 left-0 opacity-50"
+            className="-top-10 left-0 opacity-50 bg-white"
             height="600px"
             width="600px"
           />

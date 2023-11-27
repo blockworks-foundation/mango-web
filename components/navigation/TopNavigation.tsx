@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import DesktopNavigation from './DesktopNavigation'
 import MobileNavigation from './MobileNavigation'
+import { useRouter } from 'next/router'
 
 const TopNavigation = () => {
+  const { asPath } = useRouter()
   return (
     <div className="lg:px-20 lg:py-6 px-6 py-4 bg-transparent max-w-[1600px] mx-auto">
       <div className="flex justify-between items-center">
@@ -18,8 +20,12 @@ const TopNavigation = () => {
             </span>
           </div>
         </Link>
-        <DesktopNavigation />
-        <MobileNavigation />
+        {asPath !== '/rewards' ? (
+          <>
+            <DesktopNavigation />
+            <MobileNavigation />
+          </>
+        ) : null}
       </div>
     </div>
   )
