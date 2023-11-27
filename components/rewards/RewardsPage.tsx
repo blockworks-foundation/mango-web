@@ -197,9 +197,9 @@ const RewardsPage = () => {
           <IconWithText
             desc={
               <span className="text-lg">
-                You&apos;ll automatically earn points by performing actions on
-                Mango. Our easy-to-use and lightning fast interface makes swaps
-                and spot trading a breeze.
+                You&apos;ll automatically earn points for trading on Mango. Our
+                easy-to-use and lightning fast interface makes swaps and spot
+                trading a breeze.
               </span>
             }
             icon={
