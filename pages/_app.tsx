@@ -3,6 +3,8 @@ import { ThemeProvider } from 'next-themes'
 import '../styles/index.css'
 import LayoutWrapper from '../components/layout/LayoutWrapper'
 import { appWithTranslation } from 'next-i18next'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import PlausibleProvider from 'next-plausible'
 
 const metaTitle = 'Mango Markets – Safer. Smarter. Faster.'
 const metaDescription =
@@ -10,16 +12,24 @@ const metaDescription =
 const keywords =
   'Mango Markets, DEFI, Decentralized Finance, Decentralized Finance, Crypto, ERC20, Ethereum, Solana, SOL, SPL, Cross-Chain, Trading, Fastest, Fast, SPL Tokens'
 
+// init react-query
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      gcTime: 1000 * 60 * 10,
+      staleTime: 1000 * 60,
+      retry: 3,
+      refetchOnWindowFocus: false,
+    },
+  },
+})
+
 function App({ Component, pageProps }) {
   return (
     <>
       <Head>
         <title>Mango Markets</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-          rel="stylesheet"
-        />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content={keywords} />
@@ -36,11 +46,20 @@ function App({ Component, pageProps }) {
           content="https://mango.markets/twitter-card.png?123456789"
         />
       </Head>
-      <ThemeProvider defaultTheme="Mango">
-        <LayoutWrapper>
-          <Component {...pageProps} />
-        </LayoutWrapper>
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider defaultTheme="Mango">
+          <PlausibleProvider
+            domain="mango.markets"
+            customDomain="https://pl.mngo.cloud"
+            selfHosted={true}
+            trackOutboundLinks={true}
+          >
+            <LayoutWrapper>
+              <Component {...pageProps} />
+            </LayoutWrapper>
+          </PlausibleProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
     </>
   )
 }

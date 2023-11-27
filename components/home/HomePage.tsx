@@ -16,11 +16,13 @@ import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import ColorBlur from '../shared/ColorBlur'
 import Ottersec from '../icons/Ottersec'
-import { AppStatsData, MarketData } from '../../types'
 import TabsText from '../shared/TabsText'
 import MarketCard from './MarketCard'
 import { formatNumericValue, numberCompacter } from '../../utils'
 import HeroStat from './HeroStat'
+import useMarketsData from '../../hooks/useMarketData'
+import { useQuery } from '@tanstack/react-query'
+import { MANGO_DATA_API_URL } from '../../utils/constants'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -43,17 +45,28 @@ const tokenIcons = [
 const MOBILE_IMAGE_CLASSES =
   'core-image h-[240px] w-[240px] sm:h-[300px] sm:w-[300px] md:h-[480px] md:w-[480px] mb-6 lg:mb-0'
 
-const HomePage = ({
-  perpData,
-  spotData,
-  appData,
-}: {
-  perpData: MarketData
-  spotData: MarketData
-  appData: AppStatsData
-}) => {
+const fetchAppData = async () => {
+  try {
+    const response = await fetch(
+      `${MANGO_DATA_API_URL}/stats/mango-protocol-summary`,
+    )
+    const data = await response.json()
+    return data
+  } catch (e) {
+    console.error('failed to fetch account followers', e)
+    return undefined
+  }
+}
+
+const HomePage = () => {
   const { t } = useTranslation(['common', 'home'])
   const [activeMarketTab, setActiveMarketTab] = useState('spot')
+  const { data: marketData, isLoading: loadingMarketData } = useMarketsData()
+
+  const { data: appData, isLoading: loadingAppData } = useQuery({
+    queryKey: ['app-data'],
+    queryFn: fetchAppData,
+  })
 
   const topSection = useRef()
   const callouts = useRef()
@@ -62,39 +75,44 @@ const HomePage = ({
   const build = useRef()
 
   const tabsWithCount: [string, number][] = useMemo(() => {
-    const perpMarketsNumber = Object.keys(perpData)?.length || 0
-    const spotMarketsNumber = Object.keys(spotData)?.length || 0
+    const perpMarketsNumber =
+      (marketData?.perpData && Object.keys(marketData?.perpData)?.length) || 0
+    const spotMarketsNumber =
+      (marketData?.spotData && Object.keys(marketData?.spotData)?.length) || 0
     const tabs: [string, number][] = [
       ['spot', spotMarketsNumber],
       ['perp', perpMarketsNumber],
     ]
     return tabs
-  }, [perpData, spotData])
+  }, [marketData])
 
   const formattedSpotData = useMemo(() => {
-    if (!spotData || !Object.keys(spotData)?.length) return []
-    const data = Object.entries(spotData)
+    if (!marketData?.spotData || !Object.keys(marketData?.spotData)?.length)
+      return []
+    const data = Object.entries(marketData.spotData)
       .sort((a, b) => b[1][0].quote_volume_24h - a[1][0].quote_volume_24h)
       .map(([key, value]) => {
         const data = value[0]
         return { name: key, data }
       })
     return data
-  }, [spotData])
+  }, [marketData])
 
   const formattedPerpData = useMemo(() => {
-    if (!perpData || !Object.keys(perpData)?.length) return []
-    const data = Object.entries(perpData)
+    if (!marketData?.perpData || !Object.keys(marketData?.perpData)?.length)
+      return []
+    const data = Object.entries(marketData.perpData)
       .sort((a, b) => b[1][0].quote_volume_24h - a[1][0].quote_volume_24h)
       .map(([key, value]) => {
         const data = value[0]
         return { name: key, data }
       })
     return data
-  }, [perpData])
+  }, [marketData])
 
   const formattedAppStatsData = useMemo(() => {
-    if (!appData || !Object.keys(appData).length) return
+    if (!appData || !Object.keys(appData).length)
+      return { totalVol24h: 0, totalTrades24h: 0, weeklyActiveTraders: 0 }
     // volume
     const spotVol24h = appData?.openbook_volume_usd_24h || 0
     const perpVol24h = appData?.perp_volume_usd_24h || 0
@@ -269,25 +287,29 @@ const HomePage = ({
               value={(
                 formattedSpotData.length + formattedPerpData.length
               ).toString()}
+              loading={loadingMarketData}
             />
             <HeroStat
               title={t('home:active-traders')}
               tooltipContent={t('home:tooltip-active-traders')}
               value={formatNumericValue(
-                formattedAppStatsData.weeklyActiveTraders
+                formattedAppStatsData.weeklyActiveTraders,
               )}
+              loading={loadingAppData}
             />
             <HeroStat
               title={t('home:daily-volume')}
               tooltipContent={t('home:tooltip-daily-volume')}
               value={`$${numberCompacter.format(
-                formattedAppStatsData.totalVol24h
+                formattedAppStatsData.totalVol24h,
               )}`}
+              loading={loadingAppData}
             />
             <HeroStat
               title={t('home:daily-trades')}
               tooltipContent={t('home:tooltip-daily-trades')}
               value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
+              loading={loadingAppData}
             />
           </div>
         </SectionWrapper>

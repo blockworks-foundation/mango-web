@@ -21,6 +21,10 @@ const MarketCard = ({ marketData }: { marketData: MarketCardData }) => {
     data?.last_price && data?.price_24h
       ? ((data.last_price - data.price_24h) / data.last_price) * 100
       : 0
+  const chartData =
+    data?.price_history && data?.price_history?.length
+      ? data.price_history.sort((a, b) => a.time.localeCompare(b.time))
+      : []
   return (
     <div className="p-4 rounded-lg border border-th-bkg-3">
       <div className="flex items-start justify-between">
@@ -74,18 +78,15 @@ const MarketCard = ({ marketData }: { marketData: MarketCardData }) => {
             </div>
           </div>
         </div>
-        {data?.price_history && data?.price_history.length ? (
+        {chartData.length ? (
           <div className="h-12 w-20">
             <SimpleAreaChart
               color={
-                data.price_history[0].price <=
-                data.price_history[data.price_history.length - 1]?.price
+                chartData[0].price <= chartData[chartData.length - 1].price
                   ? 'var(--up)'
                   : 'var(--down)'
               }
-              data={data.price_history.sort((a, b) =>
-                a.time.localeCompare(b.time)
-              )}
+              data={chartData}
               name={name}
               xKey="time"
               yKey="price"
