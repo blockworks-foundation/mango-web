@@ -23,6 +23,7 @@ import HeroStat from './HeroStat'
 import useMarketsData from '../../hooks/useMarketData'
 import { useQuery } from '@tanstack/react-query'
 import { MANGO_DATA_API_URL } from '../../utils/constants'
+import Loading from '../shared/Loading'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -48,7 +49,7 @@ const MOBILE_IMAGE_CLASSES =
 const fetchAppData = async () => {
   try {
     const response = await fetch(
-      `${MANGO_DATA_API_URL}/stats/mango-protocol-summary`
+      `${MANGO_DATA_API_URL}/stats/mango-protocol-summary`,
     )
     const data = await response.json()
     return data
@@ -292,7 +293,7 @@ const HomePage = () => {
               title={t('home:active-traders')}
               tooltipContent={t('home:tooltip-active-traders')}
               value={formatNumericValue(
-                formattedAppStatsData.weeklyActiveTraders
+                formattedAppStatsData.weeklyActiveTraders,
               )}
               loading={loadingAppData}
             />
@@ -300,7 +301,7 @@ const HomePage = () => {
               title={t('home:daily-volume')}
               tooltipContent={t('home:tooltip-daily-volume')}
               value={`$${numberCompacter.format(
-                formattedAppStatsData.totalVol24h
+                formattedAppStatsData.totalVol24h,
               )}`}
               loading={loadingAppData}
             />
@@ -366,33 +367,39 @@ const HomePage = () => {
           />
         </div>
       </SectionWrapper>
-      {formattedSpotData.length && formattedPerpData.length ? (
-        <SectionWrapper className="border-t border-th-bkg-3">
-          <div className="w-full h-full">
-            <h2 className="mb-4 text-center">{t('markets')}</h2>
-            <p className="mb-10 intro-p text-center max-w-lg mx-auto">
-              {t('home:markets-desc')}
-            </p>
-            <div className="flex justify-center pb-10">
-              <TabsText
-                activeTab={activeMarketTab}
-                className="text-2xl"
-                onChange={setActiveMarketTab}
-                tabs={tabsWithCount}
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-h-[580px] overflow-auto thin-scroll">
-              {activeMarketTab === 'spot'
-                ? formattedSpotData.map((data) => (
-                    <MarketCard marketData={data} key={data.name} />
-                  ))
-                : formattedPerpData.map((data) => (
-                    <MarketCard marketData={data} key={data.name} />
-                  ))}
-            </div>
+      <SectionWrapper className="border-t border-th-bkg-3">
+        <div className="w-full h-full">
+          <h2 className="mb-4 text-center">{t('markets')}</h2>
+          <p className="mb-10 intro-p text-center max-w-lg mx-auto">
+            {t('home:markets-desc')}
+          </p>
+          <div className="flex justify-center pb-10">
+            <TabsText
+              activeTab={activeMarketTab}
+              className="text-2xl"
+              onChange={setActiveMarketTab}
+              tabs={tabsWithCount}
+            />
           </div>
-        </SectionWrapper>
-      ) : null}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 h-[580px] overflow-auto thin-scroll">
+            {!loadingMarketData ? (
+              activeMarketTab === 'spot' ? (
+                formattedSpotData.map((data) => (
+                  <MarketCard marketData={data} key={data.name} />
+                ))
+              ) : (
+                formattedPerpData.map((data) => (
+                  <MarketCard marketData={data} key={data.name} />
+                ))
+              )
+            ) : (
+              <div className="h-full col-span-4 border border-th-bkg-3 rounded-xl flex items-center justify-center">
+                <Loading className="text-th-fgd-1" />
+              </div>
+            )}
+          </div>
+        </div>
+      </SectionWrapper>
       <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur

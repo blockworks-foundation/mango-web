@@ -52,13 +52,13 @@ const FAQS = [
           app.mango.markets
         </a>
         , connect your wallet and follow the steps to create and fund your
-        account. Now get trading and start earning rewards!
+        account. Now, get trading and start earning rewards!
       </span>
     ),
   },
   {
     q: 'How do I participate in rewards?',
-    a: 'Simply by trading on Mango. Points are allocated for spot trades and swaps. Other actions may also earn points. The more volume you do the more points you earn. At the end of each week prizes are distributed to all wallets with points. The more points you have the more prizes you could win.',
+    a: 'Simply by trading on Mango. Points are allocated for spot trades and swaps. Other actions may also earn points. The more volume you do, the more points you earn and the more points you earn the more prizes you could win. At the end of each week prizes are distributed to all wallets with points.',
   },
   {
     q: 'What can I win?',
@@ -105,7 +105,7 @@ type CurrentSeason = {
 const fetchCurrentSeason = async (): Promise<CurrentSeason | undefined> => {
   try {
     const data = await fetch(
-      `${MANGO_DATA_API_URL}/seasons/season-id?timestamp=${new Date().toISOString()}`
+      `${MANGO_DATA_API_URL}/seasons/season-id?timestamp=${new Date().toISOString()}`,
     )
     const res = await data.json()
     return res
