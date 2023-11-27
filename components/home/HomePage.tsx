@@ -48,7 +48,7 @@ const MOBILE_IMAGE_CLASSES =
 const fetchAppData = async () => {
   try {
     const response = await fetch(
-      `${MANGO_DATA_API_URL}/stats/mango-protocol-summary`
+      `${MANGO_DATA_API_URL}/stats/mango-protocol-summary`,
     )
     const data = await response.json()
     return data
@@ -293,7 +293,7 @@ const HomePage = () => {
               title={t('home:active-traders')}
               tooltipContent={t('home:tooltip-active-traders')}
               value={formatNumericValue(
-                formattedAppStatsData.weeklyActiveTraders
+                formattedAppStatsData.weeklyActiveTraders,
               )}
               loading={loadingAppData}
             />
@@ -301,7 +301,7 @@ const HomePage = () => {
               title={t('home:daily-volume')}
               tooltipContent={t('home:tooltip-daily-volume')}
               value={`$${numberCompacter.format(
-                formattedAppStatsData.totalVol24h
+                formattedAppStatsData.totalVol24h,
               )}`}
               loading={loadingAppData}
             />
