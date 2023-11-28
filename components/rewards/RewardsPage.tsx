@@ -366,7 +366,7 @@ const LandingPageButton: FunctionComponent<LandingPageButtonProps> = ({
 }) => {
   return (
     <a
-      className={`flex w-max items-center justify-center rounded-md bg-blue-600 md:hover:bg-blue-700 h-16 px-6 default-transition font-display focus:outline-none text-th-fgd-1 ${className}`}
+      className={`flex w-max items-center justify-center rounded-md bg-th-button md:hover:bg-th-button-hover h-16 px-6 default-transition font-display focus:outline-none text-th-fgd-1 ${className}`}
       href={path}
       rel="noopener noreferrer"
     >

@@ -30,8 +30,8 @@ const Change = ({
           change > 0
             ? 'text-th-up'
             : change < 0
-            ? 'text-th-down'
-            : 'text-th-fgd-4'
+              ? 'text-th-down'
+              : 'text-th-fgd-4'
         }`}
       >
         {prefix ? prefix : ''}

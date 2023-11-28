@@ -25,8 +25,8 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
         size === 'medium'
           ? 'h-10 px-4 text-sm'
           : size === 'large'
-          ? 'h-12 px-6'
-          : 'h-8 px-3'
+            ? 'h-12 px-6'
+            : 'h-8 px-3'
       } default-transition font-display focus:outline-none text-th-fgd-1 ${className}`}
       href={path}
       rel="noopener noreferrer"

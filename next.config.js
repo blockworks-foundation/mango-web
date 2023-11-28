@@ -22,7 +22,7 @@ const nextConfig = {
         'process.env': {
           BUILD_ID: JSON.stringify(opts.buildId),
         },
-      })
+      }),
     )
 
     return config
