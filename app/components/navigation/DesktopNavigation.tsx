@@ -15,20 +15,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const DesktopNavigation = () => {
-  const pathname = usePathname()
   return (
     <div className="hidden lg:flex lg:items-center space-x-8">
-      <Link href="/learn" shallow>
-        <span
-          className={`font-display ${
-            pathname === '/blog'
-              ? 'text-th-active md:hover:text-th-active'
-              : 'text-th-fgd-2 md:hover:text-th-fgd-1'
-          } default-transition text-base`}
-        >
-          Learn
-        </span>
-      </Link>
+      <NavigationLink path="/explore" text="Explore" />
+      <NavigationLink path="/learn" text="Learn" />
       <NavigationItem title="Developers">
         <NavigationItemPanel>
           <NavigationItemLink
@@ -186,4 +176,21 @@ const NavigationItem = ({
 
 const NavigationItemPanel = ({ children }: { children: ReactNode }) => {
   return <div className="bg-th-bkg-2 py-4 rounded-lg">{children}</div>
+}
+
+const NavigationLink = ({ path, text }: { path: string; text: string }) => {
+  const pathname = usePathname()
+  return (
+    <Link href={path} shallow>
+      <span
+        className={`font-display ${
+          pathname === path
+            ? 'text-th-active md:hover:text-th-active'
+            : 'text-th-fgd-2 md:hover:text-th-fgd-1'
+        } default-transition text-base`}
+      >
+        {text}
+      </span>
+    </Link>
+  )
 }

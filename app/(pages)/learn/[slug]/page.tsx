@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { fetchBlogPost, fetchBlogPosts } from '../../../contentful/blogPost'
-import RichText from '../../../contentful/RichText'
+import { fetchBlogPost, fetchBlogPosts } from '../../../../contentful/blogPost'
+import RichText from '../../../../contentful/RichText'
 
 interface BlogPostPageParams {
   slug: string

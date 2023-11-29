@@ -1,7 +1,7 @@
 import { draftMode } from 'next/headers'
 import Link from 'next/link'
-import { fetchBlogPosts } from '../../contentful/blogPost'
 import SectionWrapper from '../../components/shared/SectionWrapper'
+import { fetchBlogPosts } from '../../../contentful/blogPost'
 
 async function BlogPage() {
   // Fetch blog posts using the content preview

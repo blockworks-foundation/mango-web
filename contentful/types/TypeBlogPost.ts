@@ -8,10 +8,10 @@ import type {
 
 export interface TypeBlogPostFields {
   postTitle: EntryFieldTypes.Symbol
+  slug: EntryFieldTypes.Symbol
   postDescription: EntryFieldTypes.Text
   postHeroImage: EntryFieldTypes.AssetLink
   postContent: EntryFieldTypes.RichText
-  slug: EntryFieldTypes.Symbol
 }
 
 export type TypeBlogPostSkeleton = EntrySkeletonType<

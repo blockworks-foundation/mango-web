@@ -12,18 +12,18 @@ import IconWithText from '../shared/IconWithText'
 import SectionWrapper from '../shared/SectionWrapper'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useLayoutEffect, useMemo, useRef } from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import ColorBlur from '../shared/ColorBlur'
 import Ottersec from '../icons/Ottersec'
-import TabsText from '../shared/TabsText'
-import MarketCard from './MarketCard'
+// import TabsText from '../shared/TabsText'
+// import MarketCard from './MarketCard'
 import { formatNumericValue, numberCompacter } from '../../utils'
 import HeroStat from './HeroStat'
 import useMarketsData from '../../hooks/useMarketData'
 import { useQuery } from '@tanstack/react-query'
 import { MANGO_DATA_API_URL } from '../../utils/constants'
-import Loading from '../shared/Loading'
+// import Loading from '../shared/Loading'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -60,7 +60,7 @@ const fetchAppData = async () => {
 }
 
 const HomePage = () => {
-  const [activeMarketTab, setActiveMarketTab] = useState('Spot')
+  // const [activeMarketTab, setActiveMarketTab] = useState('Spot')
   const { data: marketData, isLoading: loadingMarketData } = useMarketsData()
 
   const { data: appData, isLoading: loadingAppData } = useQuery({
@@ -74,49 +74,15 @@ const HomePage = () => {
   const coreFeatures = useRef<HTMLDivElement>(null)
   const build = useRef<HTMLDivElement>(null)
 
-  const tabsWithCount: [string, number][] = useMemo(() => {
-    const perpMarketsNumber =
-      (marketData?.perpData && Object.keys(marketData?.perpData)?.length) || 0
-    const spotMarketsNumber =
-      (marketData?.spotData && Object.keys(marketData?.spotData)?.length) || 0
-    const tabs: [string, number][] = [
-      ['Spot', spotMarketsNumber],
-      ['Perp', perpMarketsNumber],
-    ]
-    return tabs
-  }, [marketData])
-
-  const formattedSpotData = useMemo(() => {
-    if (!marketData?.spotData || !Object.keys(marketData?.spotData)?.length)
-      return []
-    const data = Object.entries(marketData.spotData)
-      .sort((a, b) => {
-        const aVolume = a[1][0]?.quote_volume_24h || 0
-        const bVolume = b[1][0]?.quote_volume_24h || 0
-        return bVolume - aVolume
-      })
-      .map(([key, value]) => {
-        const data = value[0]
-        return { name: key, data }
-      })
-    return data
-  }, [marketData])
-
-  const formattedPerpData = useMemo(() => {
-    if (!marketData?.perpData || !Object.keys(marketData?.perpData)?.length)
-      return []
-    const data = Object.entries(marketData.perpData)
-      .sort((a, b) => {
-        const aVolume = a[1][0]?.quote_volume_24h || 0
-        const bVolume = b[1][0]?.quote_volume_24h || 0
-        return bVolume - aVolume
-      })
-      .map(([key, value]) => {
-        const data = value[0]
-        return { name: key, data }
-      })
-    return data
-  }, [marketData])
+  // const tabsWithCount: [string, number][] = useMemo(() => {
+  //   const perpMarketsNumber = marketData?.perp?.length || 0
+  //   const spotMarketsNumber = marketData?.spot?.length || 0
+  //   const tabs: [string, number][] = [
+  //     ['Spot', spotMarketsNumber],
+  //     ['Perp', perpMarketsNumber],
+  //   ]
+  //   return tabs
+  // }, [marketData])
 
   const formattedAppStatsData = useMemo(() => {
     if (!appData || !Object.keys(appData).length)
@@ -258,6 +224,9 @@ const HomePage = () => {
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
+  const numberOfMarkets =
+    (marketData?.spot.length || 0) + (marketData?.perp.length || 0)
+
   return (
     <>
       <SectionWrapper className="overflow-hidden h-[760px] lg:h-auto">
@@ -302,9 +271,7 @@ const HomePage = () => {
           <div className="grid grid-cols-4 gap-6">
             <HeroStat
               title="Markets"
-              value={(
-                formattedSpotData.length + formattedPerpData.length
-              ).toString()}
+              value={numberOfMarkets.toString()}
               loading={loadingMarketData}
             />
             <HeroStat
@@ -385,7 +352,7 @@ const HomePage = () => {
           />
         </div>
       </SectionWrapper>
-      <SectionWrapper className="border-t border-th-bkg-3">
+      {/* <SectionWrapper className="border-t border-th-bkg-3">
         <div className="w-full h-full">
           <h2 className="mb-4 text-center">Markets</h2>
           <p className="mb-10 intro-p text-center max-w-lg mx-auto">
@@ -418,7 +385,7 @@ const HomePage = () => {
             )}
           </div>
         </div>
-      </SectionWrapper>
+      </SectionWrapper> */}
       <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur

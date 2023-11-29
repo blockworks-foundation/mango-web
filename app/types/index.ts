@@ -1,5 +1,10 @@
 export type MarketData = { [key: string]: MarketsDataItem[] }
 
+export type FormattedMarketData = {
+  name: string
+  data: MarketsDataItem
+}
+
 export type MarketsDataItem = {
   base_volume_1h: number | undefined
   base_volume_24h: number | undefined

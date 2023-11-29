@@ -3,3 +3,4 @@ export type {
   TypeBlogPostFields,
   TypeBlogPostSkeleton,
 } from './TypeBlogPost'
+export type { TypeToken, TypeTokenFields, TypeTokenSkeleton } from './TypeToken'
