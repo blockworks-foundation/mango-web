@@ -69,11 +69,11 @@ const HomePage = () => {
     queryFn: fetchAppData,
   })
 
-  const topSection = useRef()
-  const callouts = useRef()
-  const swapPanel = useRef()
-  const coreFeatures = useRef()
-  const build = useRef()
+  const topSection = useRef<HTMLDivElement>(null)
+  const callouts = useRef<HTMLDivElement>(null)
+  const swapPanel = useRef<HTMLDivElement>(null)
+  const coreFeatures = useRef<HTMLDivElement>(null)
+  const build = useRef<HTMLDivElement>(null)
 
   const tabsWithCount: [string, number][] = useMemo(() => {
     const perpMarketsNumber =
@@ -91,7 +91,11 @@ const HomePage = () => {
     if (!marketData?.spotData || !Object.keys(marketData?.spotData)?.length)
       return []
     const data = Object.entries(marketData.spotData)
-      .sort((a, b) => b[1][0].quote_volume_24h - a[1][0].quote_volume_24h)
+      .sort((a, b) => {
+        const aVolume = a[1][0]?.quote_volume_24h || 0
+        const bVolume = b[1][0]?.quote_volume_24h || 0
+        return bVolume - aVolume
+      })
       .map(([key, value]) => {
         const data = value[0]
         return { name: key, data }
@@ -103,7 +107,11 @@ const HomePage = () => {
     if (!marketData?.perpData || !Object.keys(marketData?.perpData)?.length)
       return []
     const data = Object.entries(marketData.perpData)
-      .sort((a, b) => b[1][0].quote_volume_24h - a[1][0].quote_volume_24h)
+      .sort((a, b) => {
+        const aVolume = a[1][0]?.quote_volume_24h || 0
+        const bVolume = b[1][0]?.quote_volume_24h || 0
+        return bVolume - aVolume
+      })
       .map(([key, value]) => {
         const data = value[0]
         return { name: key, data }
@@ -133,96 +141,104 @@ const HomePage = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const boxes = self.selector('.highlight-features')
-      boxes.forEach((box) => {
-        gsap.to(box, {
-          opacity: 1,
-          y: -40,
-          ease: 'power3.inOut',
-          scrollTrigger: {
-            trigger: box,
-            end: 'top 40%',
-            scrub: true,
-          },
+      if (self?.selector) {
+        const boxes = self.selector('.highlight-features')
+        boxes.forEach((box) => {
+          gsap.to(box, {
+            opacity: 1,
+            y: -40,
+            ease: 'power3.inOut',
+            scrollTrigger: {
+              trigger: box,
+              end: 'top 40%',
+              scrub: true,
+            },
+          })
         })
-      })
+      }
     }, callouts) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const icons = self.selector('.token-icon')
-      icons.forEach((icon, i) => {
-        gsap.to(icon, {
-          y: i % 2 ? 100 : -100,
-          rotateZ: i % 2 ? 45 : -45,
-          scrollTrigger: {
-            trigger: icon,
-            scrub: true,
-          },
+      if (self?.selector) {
+        const icons = self.selector('.token-icon')
+        icons.forEach((icon, i) => {
+          gsap.to(icon, {
+            y: i % 2 ? 100 : -100,
+            rotateZ: i % 2 ? 45 : -45,
+            scrollTrigger: {
+              trigger: icon,
+              scrub: true,
+            },
+          })
         })
-      })
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: '#swap-desktop',
-            scrub: true,
-          },
-        })
-        .from('#swap-desktop', {
-          rotateX: -45,
-        })
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: '#swap-desktop',
+              scrub: true,
+            },
+          })
+          .from('#swap-desktop', {
+            rotateX: -45,
+          })
+      }
     }, swapPanel) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const features = self.selector('.core-feature')
-      const text = self.selector('.core-text')
-      const image = self.selector('.core-image')
-      features.forEach((feature, i) => {
-        gsap.from(text[i], {
-          opacity: 0.4,
-          y: 60,
-          ease: 'power3.inOut',
-          scrollTrigger: {
-            start: 'top 60%',
-            end: 'top 20%',
-            trigger: feature,
-            scrub: true,
-          },
+      if (self?.selector) {
+        const features = self.selector('.core-feature')
+        const text = self.selector('.core-text')
+        const image = self.selector('.core-image')
+        features.forEach((feature, i) => {
+          gsap.from(text[i], {
+            opacity: 0.4,
+            y: 60,
+            ease: 'power3.inOut',
+            scrollTrigger: {
+              start: 'top 60%',
+              end: 'top 20%',
+              trigger: feature,
+              scrub: true,
+            },
+          })
+          gsap.from(image[i], {
+            opacity: 0.4,
+            scale: 0.9,
+            ease: 'power3.inOut',
+            scrollTrigger: {
+              start: 'top 60%',
+              end: 'top 20%',
+              trigger: feature,
+              scrub: true,
+            },
+          })
         })
-        gsap.from(image[i], {
-          opacity: 0.4,
-          scale: 0.9,
-          ease: 'power3.inOut',
-          scrollTrigger: {
-            start: 'top 60%',
-            end: 'top 20%',
-            trigger: feature,
-            scrub: true,
-          },
-        })
-      })
+      }
     }, coreFeatures) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const spheres = self.selector('.sphere')
-      spheres.forEach((sphere, i) => {
-        gsap.to(sphere, {
-          y: i % 2 ? -150 : 100,
-          scrollTrigger: {
-            trigger: sphere,
-            start: i % 2 ? 'bottom bottom' : 'center center',
-            scrub: true,
-          },
+      if (self?.selector) {
+        const spheres = self.selector('.sphere')
+        spheres.forEach((sphere, i) => {
+          gsap.to(sphere, {
+            y: i % 2 ? -150 : 100,
+            scrollTrigger: {
+              trigger: sphere,
+              start: i % 2 ? 'bottom bottom' : 'center center',
+              scrub: true,
+            },
+          })
         })
-      })
+      }
     }, topSection) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
@@ -382,22 +398,24 @@ const HomePage = () => {
               tabs={tabsWithCount}
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 h-[580px] overflow-auto thin-scroll">
-            {!loadingMarketData ? (
-              activeMarketTab === 'spot' ? (
-                formattedSpotData.map((data) => (
-                  <MarketCard marketData={data} key={data.name} />
-                ))
+          <div className="h-[580px] overflow-auto thin-scroll">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {!loadingMarketData ? (
+                activeMarketTab === 'spot' ? (
+                  formattedSpotData.map((data) => (
+                    <MarketCard marketData={data} key={data.name} />
+                  ))
+                ) : (
+                  formattedPerpData.map((data) => (
+                    <MarketCard marketData={data} key={data.name} />
+                  ))
+                )
               ) : (
-                formattedPerpData.map((data) => (
-                  <MarketCard marketData={data} key={data.name} />
-                ))
-              )
-            ) : (
-              <div className="h-full col-span-4 border border-th-bkg-3 rounded-xl flex items-center justify-center">
-                <Loading className="text-th-fgd-1" />
-              </div>
-            )}
+                <div className="h-full col-span-4 border border-th-bkg-3 rounded-xl flex items-center justify-center">
+                  <Loading className="text-th-fgd-1" />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </SectionWrapper>
