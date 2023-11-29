@@ -1,4 +1,5 @@
 import localFont from 'next/font/local'
+import { Lalezar } from 'next/font/google'
 
 export const ttCommonsMono = localFont({
   src: '../fonts/TT_Commons_Pro_Mono_Medium.woff2',
@@ -29,4 +30,10 @@ export const ttCommons = localFont({
 export const ttCommonsExpanded = localFont({
   src: '../fonts/TT_Commons_Pro_Expanded_DemiBold.woff2',
   variable: '--font-display',
+})
+
+export const lalezar = Lalezar({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-rewards',
 })

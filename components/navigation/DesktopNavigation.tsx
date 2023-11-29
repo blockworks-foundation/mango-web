@@ -131,13 +131,24 @@ const NavigationItem = ({
   const [isOpen, setIsOpen] = useState(false)
   const [isTouchInput, setIsTouchInput] = useState(false)
   const [hasClicked, setHasClicked] = useState(false)
-  const button = useRef(null)
+  const button = useRef<HTMLButtonElement>(null)
 
   useLayoutEffect(() => {
-    if (isOpen && !isOverButton && !isOverList && !isTouchInput) {
+    if (
+      isOpen &&
+      !isOverButton &&
+      !isOverList &&
+      !isTouchInput &&
+      button?.current
+    ) {
       button.current.click()
       setIsOpen(false)
-    } else if (!isOpen && (isOverButton || isOverList) && !isTouchInput) {
+    } else if (
+      !isOpen &&
+      (isOverButton || isOverList) &&
+      !isTouchInput &&
+      button?.current
+    ) {
       button.current.click()
       setIsOpen(true)
     }

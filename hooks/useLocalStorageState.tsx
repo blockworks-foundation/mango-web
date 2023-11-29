@@ -4,7 +4,7 @@ const localStorageListeners = {}
 
 export function useLocalStorageStringState(
   key: string,
-  defaultState: string | null = null
+  defaultState: string | null = null,
 ): [string | null, (newState: string | null) => void] {
   const state =
     typeof window !== 'undefined'
@@ -20,7 +20,7 @@ export function useLocalStorageStringState(
     localStorageListeners[key].push(notify)
     return () => {
       localStorageListeners[key] = localStorageListeners[key].filter(
-        (listener) => listener !== notify
+        (listener) => listener !== notify,
       )
       if (localStorageListeners[key].length === 0) {
         delete localStorageListeners[key]
@@ -44,10 +44,10 @@ export function useLocalStorageStringState(
         localStorage.setItem(key, newState)
       }
       localStorageListeners[key].forEach((listener) =>
-        listener(key + '\n' + newState)
+        listener(key + '\n' + newState),
       )
     },
-    [state, key]
+    [state, key],
   )
 
   return [state, setState]
@@ -55,11 +55,11 @@ export function useLocalStorageStringState(
 
 export default function useLocalStorageState<T = any>(
   key: string,
-  defaultState: T | null = null
+  defaultState: T | null = null,
 ): [T, (newState: T) => void] {
   const [stringState, setStringState] = useLocalStorageStringState(
     key,
-    JSON.stringify(defaultState)
+    JSON.stringify(defaultState),
   )
 
   return [

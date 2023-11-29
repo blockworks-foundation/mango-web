@@ -35,8 +35,8 @@ const Button: FunctionComponent<ButtonCombinedProps> = ({
         size === 'medium'
           ? 'h-10 px-4'
           : size === 'large'
-          ? 'h-12 px-6'
-          : 'h-8 px-3'
+            ? 'h-12 px-6'
+            : 'h-8 px-3'
       } default-transition font-display text-th-fgd-1
       } focus:outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:brightness-100 ${className}`}
       {...props}
@@ -70,10 +70,10 @@ export const IconButton: FunctionComponent<IconButtonCombinedProps> = ({
         size === 'large'
           ? 'h-12 w-12'
           : size === 'small'
-          ? 'h-8 w-8'
-          : size === 'medium'
-          ? 'h-10 w-10'
-          : ''
+            ? 'h-8 w-8'
+            : size === 'medium'
+              ? 'h-10 w-10'
+              : ''
       } default-transition items-center justify-center rounded-full ${
         hideBg
           ? 'md:hover:text-th-active'

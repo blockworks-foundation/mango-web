@@ -24,6 +24,8 @@ import useMarketsData from '../../hooks/useMarketData'
 import { useQuery } from '@tanstack/react-query'
 import { MANGO_DATA_API_URL } from '../../utils/constants'
 import Loading from '../shared/Loading'
+import Image from 'next/image'
+import Link from 'next/link'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -69,11 +71,11 @@ const HomePage = () => {
     queryFn: fetchAppData,
   })
 
-  const topSection = useRef()
-  const callouts = useRef()
-  const swapPanel = useRef()
-  const coreFeatures = useRef()
-  const build = useRef()
+  const topSection = useRef<HTMLDivElement>(null)
+  const callouts = useRef<HTMLDivElement>(null)
+  const swapPanel = useRef<HTMLDivElement>(null)
+  const coreFeatures = useRef<HTMLDivElement>(null)
+  const build = useRef<HTMLDivElement>(null)
 
   const tabsWithCount: [string, number][] = useMemo(() => {
     const perpMarketsNumber =
@@ -91,7 +93,11 @@ const HomePage = () => {
     if (!marketData?.spotData || !Object.keys(marketData?.spotData)?.length)
       return []
     const data = Object.entries(marketData.spotData)
-      .sort((a, b) => b[1][0].quote_volume_24h - a[1][0].quote_volume_24h)
+      .sort((a, b) => {
+        const aVolume = a[1][0]?.quote_volume_24h || 0
+        const bVolume = b[1][0]?.quote_volume_24h || 0
+        return bVolume - aVolume
+      })
       .map(([key, value]) => {
         const data = value[0]
         return { name: key, data }
@@ -103,7 +109,11 @@ const HomePage = () => {
     if (!marketData?.perpData || !Object.keys(marketData?.perpData)?.length)
       return []
     const data = Object.entries(marketData.perpData)
-      .sort((a, b) => b[1][0].quote_volume_24h - a[1][0].quote_volume_24h)
+      .sort((a, b) => {
+        const aVolume = a[1][0]?.quote_volume_24h || 0
+        const bVolume = b[1][0]?.quote_volume_24h || 0
+        return bVolume - aVolume
+      })
       .map(([key, value]) => {
         const data = value[0]
         return { name: key, data }
@@ -133,96 +143,104 @@ const HomePage = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const boxes = self.selector('.highlight-features')
-      boxes.forEach((box) => {
-        gsap.to(box, {
-          opacity: 1,
-          y: -40,
-          ease: 'power3.inOut',
-          scrollTrigger: {
-            trigger: box,
-            end: 'top 40%',
-            scrub: true,
-          },
+      if (self?.selector) {
+        const boxes = self.selector('.highlight-features')
+        boxes.forEach((box) => {
+          gsap.to(box, {
+            opacity: 1,
+            y: -40,
+            ease: 'power3.inOut',
+            scrollTrigger: {
+              trigger: box,
+              end: 'top 40%',
+              scrub: true,
+            },
+          })
         })
-      })
+      }
     }, callouts) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const icons = self.selector('.token-icon')
-      icons.forEach((icon, i) => {
-        gsap.to(icon, {
-          y: i % 2 ? 100 : -100,
-          rotateZ: i % 2 ? 45 : -45,
-          scrollTrigger: {
-            trigger: icon,
-            scrub: true,
-          },
+      if (self?.selector) {
+        const icons = self.selector('.token-icon')
+        icons.forEach((icon, i) => {
+          gsap.to(icon, {
+            y: i % 2 ? 100 : -100,
+            rotateZ: i % 2 ? 45 : -45,
+            scrollTrigger: {
+              trigger: icon,
+              scrub: true,
+            },
+          })
         })
-      })
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: '#swap-desktop',
-            scrub: true,
-          },
-        })
-        .from('#swap-desktop', {
-          rotateX: -45,
-        })
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: '#swap-desktop',
+              scrub: true,
+            },
+          })
+          .from('#swap-desktop', {
+            rotateX: -45,
+          })
+      }
     }, swapPanel) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const features = self.selector('.core-feature')
-      const text = self.selector('.core-text')
-      const image = self.selector('.core-image')
-      features.forEach((feature, i) => {
-        gsap.from(text[i], {
-          opacity: 0.4,
-          y: 60,
-          ease: 'power3.inOut',
-          scrollTrigger: {
-            start: 'top 60%',
-            end: 'top 20%',
-            trigger: feature,
-            scrub: true,
-          },
+      if (self?.selector) {
+        const features = self.selector('.core-feature')
+        const text = self.selector('.core-text')
+        const image = self.selector('.core-image')
+        features.forEach((feature, i) => {
+          gsap.from(text[i], {
+            opacity: 0.4,
+            y: 60,
+            ease: 'power3.inOut',
+            scrollTrigger: {
+              start: 'top 60%',
+              end: 'top 20%',
+              trigger: feature,
+              scrub: true,
+            },
+          })
+          gsap.from(image[i], {
+            opacity: 0.4,
+            scale: 0.9,
+            ease: 'power3.inOut',
+            scrollTrigger: {
+              start: 'top 60%',
+              end: 'top 20%',
+              trigger: feature,
+              scrub: true,
+            },
+          })
         })
-        gsap.from(image[i], {
-          opacity: 0.4,
-          scale: 0.9,
-          ease: 'power3.inOut',
-          scrollTrigger: {
-            start: 'top 60%',
-            end: 'top 20%',
-            trigger: feature,
-            scrub: true,
-          },
-        })
-      })
+      }
     }, coreFeatures) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
-      const spheres = self.selector('.sphere')
-      spheres.forEach((sphere, i) => {
-        gsap.to(sphere, {
-          y: i % 2 ? -150 : 100,
-          scrollTrigger: {
-            trigger: sphere,
-            start: i % 2 ? 'bottom bottom' : 'center center',
-            scrub: true,
-          },
+      if (self?.selector) {
+        const spheres = self.selector('.sphere')
+        spheres.forEach((sphere, i) => {
+          gsap.to(sphere, {
+            y: i % 2 ? -150 : 100,
+            scrollTrigger: {
+              trigger: sphere,
+              start: i % 2 ? 'bottom bottom' : 'center center',
+              scrub: true,
+            },
+          })
         })
-      })
+      }
     }, topSection) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])
@@ -245,7 +263,48 @@ const HomePage = () => {
 
   return (
     <>
-      <SectionWrapper className="overflow-hidden h-[760px] lg:h-auto">
+      <SectionWrapper noPaddingY>
+        <div className="border border-gray-700 px-6 py-4 rounded-xl max-w-4xl mx-auto relative overflow-hidden">
+          <div className="relative z-10">
+            <div className="flex items-center space-x-6">
+              <Image
+                src="/images/mango-mints/chest.png"
+                height={72}
+                width={72}
+                alt="Chest"
+              />
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
+                <div className="pr-4">
+                  <h3 className="font-rewards text-3xl -mb-1">
+                    Trade. Win. Repeat.
+                  </h3>
+                  <p className="text-white">
+                    Rewards are go! Win amazing prizes every week for trading on
+                    Mango.
+                  </p>
+                </div>
+                <Link
+                  className="text-yellow-300 font-bold font-display text-base border border-yellow-300 rounded-lg px-4 py-2 md:hover:border-yellow-500 md:hover:text-yellow-500 text-center mt-4 sm:mt-0"
+                  href="/rewards"
+                  shallow
+                >
+                  <span className="whitespace-nowrap">Find out more</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <ColorBlur
+            blendMode="lighten"
+            className="top-1/2 left-0 opacity-60 bg-purple-600"
+            height="200px"
+            width="500px"
+          />
+        </div>
+      </SectionWrapper>
+      <SectionWrapper
+        className="overflow-hidden h-[760px] lg:h-auto py-12 md:py-24 md:pt-20 lg:pb-32"
+        noPaddingY
+      >
         <div className="grid grid-cols-12" ref={topSection}>
           <div className="col-span-12 lg:col-span-5 mb-12 lg:mb-0 relative z-10">
             <h1 className="mb-6 text-center lg:text-left">
@@ -404,7 +463,7 @@ const HomePage = () => {
       <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur
-            className="-top-20 left-0 -rotate-25 opacity-20"
+            className="-top-20 left-0 -rotate-25 opacity-20 bg-white"
             height="800px"
             width="600px"
           />
@@ -439,7 +498,7 @@ const HomePage = () => {
             ))}
           </div>
           <ColorBlur
-            className="-top-20 left-0 -rotate-25 opacity-20"
+            className="-top-20 left-0 -rotate-25 opacity-20 bg-white"
             height="800px"
             width="600px"
           />
@@ -531,7 +590,7 @@ const HomePage = () => {
         <SectionWrapper className="relative overflow-hidden">
           <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-tl shadow-xl from-th-bkg-1 to-th-bkg-2 h-[600px] w-[600px] md:h-[800px] md:w-[800px] rounded-full" />
           <ColorBlur
-            className="-top-10 left-0 opacity-50"
+            className="-top-10 left-0 opacity-50 bg-white"
             height="600px"
             width="600px"
           />
