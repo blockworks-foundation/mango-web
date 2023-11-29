@@ -3,17 +3,14 @@ import { IconButton } from '../shared/Button'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Transition } from '@headlessui/react'
 import NavigationItemLink from './NavigationItemLink'
-import { useTranslation } from 'next-i18next'
 import Twitter from '../icons/Twitter'
 import Discord from '../icons/Discord'
-// import ThemeToggle from './ThemeToggle'
 
 const MobileNavigation = () => {
   const [showMenu, setShowMenu] = useState(false)
   return (
     <div className="lg:hidden">
       <div className="flex items-center space-x-2">
-        {/* <ThemeToggle /> */}
         <IconButton hideBg onClick={() => setShowMenu(true)} size="medium">
           <Bars3Icon className="h-6 w-6" />
         </IconButton>
@@ -32,8 +29,6 @@ const MenuPanel = ({
   showMenu: boolean
   setShowMenu: (showMenu: boolean) => void
 }) => {
-  const { t } = useTranslation(['common', 'navigation'])
-
   const closeOnClick = () => {
     setShowMenu(false)
   }
@@ -51,107 +46,65 @@ const MenuPanel = ({
           </IconButton>
         </div>
         <div className="grid grid-cols-2 grid-row-flow gap-6 px-4">
-          {/* <div>
-            <h4 className="px-4 mb-2">{t('navigation:about')}</h4>
-            <NavigationItemLink
-              path="/mango-dao"
-              onClick={closeOnClick}
-              title={t('navigation:mango-dao')}
-            />
-            <NavigationItemLink
-              path="/mngo"
-              onClick={closeOnClick}
-              title={t('navigation:mngo-token')}
-            />
-            <NavigationItemLink
-              path="#"
-              onClick={closeOnClick}
-              isExternal
-              title={t('navigation:v4-stats')}
-            />
-            <NavigationItemLink path="/brand" title={t('navigation:brand')} />
-          </div> */}
-          {/* <div>
-            <h4 className="px-4 mb-2">{t('navigation:products')}</h4>
-            <NavigationItemLink
-              path="https://app.mango.markets"
-              onClick={closeOnClick}
-              isExternal
-              title={t('navigation:mango-v4')}
-            />
-            <NavigationItemLink
-              path="/mobile-app"
-              onClick={closeOnClick}
-              title={t('navigation:mobile-app')}
-            />
-          </div> */}
           <div>
-            <h4 className="px-4 mb-2">{t('navigation:developers')}</h4>
+            <h4 className="px-4 mb-2">Developers</h4>
             <NavigationItemLink
               path="https://docs.mango.markets"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:docs')}
+              title="Docs"
             />
             <NavigationItemLink
               path="https://github.com/blockworks-foundation"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:github')}
+              title="Github"
             />
             <NavigationItemLink
               path="https://github.com/blockworks-foundation/mango-v4/tree/dev/ts/client/scripts/mm"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:market-maker')}
+              title="Market maker bot"
             />
             <NavigationItemLink
               path="https://github.com/blockworks-foundation/mango-v4/tree/dev/bin/liquidator"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:liquidator')}
+              title="Liquidator bot"
             />
             <NavigationItemLink
               path="https://trello.com/b/tIj7K3FD/mango-development"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:contribute')}
+              title="Contribute"
             />
           </div>
           <div>
-            <h4 className="px-4 mb-2">{t('navigation:governance')}</h4>
+            <h4 className="px-4 mb-2">Governance</h4>
             <NavigationItemLink
               path="https://dao.mango.markets"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:vote')}
+              title="Vote"
             />
           </div>
           <div>
-            <h4 className="px-4 mb-2">{t('navigation:social')}</h4>
+            <h4 className="px-4 mb-2">Social</h4>
             <NavigationItemLink
               icon={<Twitter className="h-4 w-4 mr-2" />}
               path="https://twitter.com/mangomarkets"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:twitter')}
+              title="Twitter"
             />
             <NavigationItemLink
               icon={<Discord className="h-4 w-4 mr-2" />}
               path="https://discord.gg/2uwjsBc5yw"
               onClick={closeOnClick}
               isExternal
-              title={t('navigation:discord')}
+              title="Discord"
             />
           </div>
-          {/* <div>
-            <h4 className="px-4 mb-2">{t('navigation:careers')}</h4>
-            <NavigationItemLink
-              path="/careers"
-              onClick={closeOnClick}
-              title={t('navigation:work-with-us')}
-            />
-          </div> */}
         </div>
       </div>
       <Transition

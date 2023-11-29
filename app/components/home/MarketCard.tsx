@@ -3,7 +3,6 @@ import { MarketsDataItem } from '../../types'
 import { formatNumericValue, numberCompacter } from '../../utils'
 import Change from '../shared/Change'
 import SimpleAreaChart from '../shared/SimpleAreaChart'
-import { useTranslation } from 'react-i18next'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
 
 type MarketCardData = {
@@ -12,7 +11,6 @@ type MarketCardData = {
 }
 
 const MarketCard = ({ marketData }: { marketData: MarketCardData }) => {
-  const { t } = useTranslation('common')
   const { name, data } = marketData
   const isSpot = name.includes('/')
   const baseSymbol = isSpot ? name.split('/')[0] : name.split('-')[0]
@@ -101,7 +99,7 @@ const MarketCard = ({ marketData }: { marketData: MarketCardData }) => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <span>{t('trade', { token: isSpot ? baseSymbol : name })}</span>
+          <span>{`Trade ${isSpot ? baseSymbol : name}`}</span>
           <ArrowTopRightOnSquareIcon className="h-5 w-5" />
         </a>
       </div>

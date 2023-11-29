@@ -6,7 +6,6 @@ import {
   CurrencyDollarIcon,
   DevicePhoneMobileIcon,
 } from '@heroicons/react/20/solid'
-import { useTranslation } from 'next-i18next'
 import LiquidIcon from '../icons/LiquidIcon'
 import ButtonLink from '../shared/ButtonLink'
 import IconWithText from '../shared/IconWithText'
@@ -61,8 +60,7 @@ const fetchAppData = async () => {
 }
 
 const HomePage = () => {
-  const { t } = useTranslation(['common', 'home'])
-  const [activeMarketTab, setActiveMarketTab] = useState('spot')
+  const [activeMarketTab, setActiveMarketTab] = useState('Spot')
   const { data: marketData, isLoading: loadingMarketData } = useMarketsData()
 
   const { data: appData, isLoading: loadingAppData } = useQuery({
@@ -82,8 +80,8 @@ const HomePage = () => {
     const spotMarketsNumber =
       (marketData?.spotData && Object.keys(marketData?.spotData)?.length) || 0
     const tabs: [string, number][] = [
-      ['spot', spotMarketsNumber],
-      ['perp', perpMarketsNumber],
+      ['Spot', spotMarketsNumber],
+      ['Perp', perpMarketsNumber],
     ]
     return tabs
   }, [marketData])
@@ -266,14 +264,16 @@ const HomePage = () => {
         <div className="grid grid-cols-12" ref={topSection}>
           <div className="col-span-12 lg:col-span-5 mb-12 lg:mb-0 relative z-10">
             <h1 className="mb-6 text-center lg:text-left">
-              {t('home:home-heading')}
+              Safer. Smarter. Faster.
             </h1>
             <p className="intro-p mb-10 text-center lg:text-left">
-              {t('home:home-desc')}
+              A magical new way to interact with DeFi. Groundbreaking safety
+              features designed to keep your funds secure. The easiest way to
+              margin trade any token pair. All powered by flashloans.
             </p>
             <ButtonLink
               className="mt-8 mx-auto lg:mx-0"
-              linkText={t('trade-now')}
+              linkText="Trade Now"
               path="https://app.mango.markets"
               size="large"
             />
@@ -301,31 +301,31 @@ const HomePage = () => {
         <SectionWrapper noPaddingY>
           <div className="grid grid-cols-4 gap-6">
             <HeroStat
-              title={t('markets')}
+              title="Markets"
               value={(
                 formattedSpotData.length + formattedPerpData.length
               ).toString()}
               loading={loadingMarketData}
             />
             <HeroStat
-              title={t('home:active-traders')}
-              tooltipContent={t('home:tooltip-active-traders')}
+              title="Active Traders"
+              tooltipContent="Weekly active Mango Accounts"
               value={formatNumericValue(
                 formattedAppStatsData.weeklyActiveTraders,
               )}
               loading={loadingAppData}
             />
             <HeroStat
-              title={t('home:daily-volume')}
-              tooltipContent={t('home:tooltip-daily-volume')}
+              title="Daily Volume"
+              tooltipContent="Volume across spot, swap and perp"
               value={`$${numberCompacter.format(
                 formattedAppStatsData.totalVol24h,
               )}`}
               loading={loadingAppData}
             />
             <HeroStat
-              title={t('home:daily-trades')}
-              tooltipContent={t('home:tooltip-daily-trades')}
+              title="Daily Trades"
+              tooltipContent="Number of trades across spot, swap and perp"
               value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
               loading={loadingAppData}
             />
@@ -338,58 +338,59 @@ const HomePage = () => {
           ref={callouts}
         >
           <IconWithText
-            desc={t('home:competitive-fees-desc')}
+            desc="Low fees for taker trades and rebates for maker trades. Plus, Solana's extremely low transaction costs."
             icon={
               <CurrencyDollarIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
             }
-            title={t('home:competitive-fees')}
+            title="Competitive fees"
             showBackground
           />
           <IconWithText
-            desc={t('home:lightning-execution-desc')}
+            desc="The speed of a centralized exchange without losing control of your assets."
             icon={<BoltIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />}
-            title={t('home:lightning-execution')}
+            title="Lightning execution"
             showBackground
           />
           <IconWithText
-            desc={t('home:deeply-liquid-desc')}
+            desc="Get the best price with access to all of the liquidity on Solana."
             icon={
               <LiquidIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
             }
-            title={t('home:deeply-liquid')}
+            title="Deeply liquid markets"
             showBackground
           />
           <IconWithText
-            desc={t('home:cross-margin-desc')}
+            desc="Leverage across all your positions. Open multiple accounts to isolate your risk."
             icon={
               <ArrowPathRoundedSquareIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
             }
-            title={t('home:cross-margin')}
+            title="Cross-margin accounts"
             showBackground
           />
           <IconWithText
-            desc={t('home:community-governed-desc')}
+            desc="Mango is governed by the Mango DAO. Fully transparent and open to all."
             icon={
               <BuildingLibraryIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
             }
-            title={t('home:community-governed')}
+            title="Community governed"
             showBackground
           />
           <IconWithText
-            desc={t('home:trade-your-way-desc')}
+            desc="Leverage swap or orderbook maxi? Mango is optimized for all devices so you can trade how you want, when you want."
             icon={
               <DevicePhoneMobileIcon className="h-5 w-5 md:h-7 md:w-7 text-th-fgd-2" />
             }
-            title={t('home:trade-your-way')}
+            title="Trade your way"
             showBackground
           />
         </div>
       </SectionWrapper>
       <SectionWrapper className="border-t border-th-bkg-3">
         <div className="w-full h-full">
-          <h2 className="mb-4 text-center">{t('markets')}</h2>
+          <h2 className="mb-4 text-center">Markets</h2>
           <p className="mb-10 intro-p text-center max-w-lg mx-auto">
-            {t('home:markets-desc')}
+            New markets are added frequently via Mango DAO. Anyone can propose a
+            token or market to list.
           </p>
           <div className="flex justify-center pb-10">
             <TabsText
@@ -401,7 +402,7 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 h-[580px] overflow-auto thin-scroll">
             {!loadingMarketData ? (
-              activeMarketTab === 'spot' ? (
+              activeMarketTab === 'Spot' ? (
                 formattedSpotData.map((data) => (
                   <MarketCard marketData={data} key={data.name} />
                 ))
@@ -428,15 +429,17 @@ const HomePage = () => {
           <div className="w-full h-full" ref={swapPanel}>
             <div className="relative min-h-[580px] md:min-h-[640px] lg:min-h-[730px]">
               <div className="relative z-10">
-                <h2 className="mb-4 text-center">{t('home:swap-heading')}</h2>
+                <h2 className="mb-4 text-center">Level up your swaps</h2>
                 <p className="intro-p text-center max-w-lg mx-auto">
-                  {t('home:swap-desc')}
+                  The simplicity you love with the power of flash loans. Swap
+                  with up to 5x leverage and the best aggregated prices from all
+                  the top DEX&apos;s.
                 </p>
               </div>
               <ButtonLink
                 className="mx-auto mt-10"
                 path="https://app.mango.markets/"
-                linkText={t('home:swap-now')}
+                linkText="Swap Now"
                 size="large"
               />
               <img
@@ -471,8 +474,12 @@ const HomePage = () => {
                 src="/images/new/trade-favorites.png"
               />
               <div className="core-text">
-                <h2 className="mb-4">{t('home:leverage-trade-heading')}</h2>
-                <p className="intro-p">{t('home:leverage-trade-desc')}</p>
+                <h2 className="mb-4">Leverage trade your favorite markets</h2>
+                <p className="intro-p">
+                  Up to 10x leverage on the spot and perp markets you want to
+                  trade. Cross-margined accounts allow you to make the most of
+                  your capital.
+                </p>
                 <ButtonLink
                   className="mt-10"
                   path="https://app.mango.markets/"
@@ -483,13 +490,17 @@ const HomePage = () => {
             </div>
             <div className="core-feature flex flex-col-reverse lg:flex-row lg:items-center py-12 lg:py-24">
               <div className="core-text">
-                <h2 className="mb-4">{t('home:safety-heading')}</h2>
-                <p className="intro-p">{t('home:safety-desc')}</p>
+                <h2 className="mb-4">Unparalleled safety</h2>
+                <p className="intro-p">
+                  Innovative safety features to protect your funds. Mango is
+                  manipulation resistant to minimize potential losses from bad
+                  actors or extreme volatility.
+                </p>
                 <div className="flex flex-row flex-wrap items-center mt-4">
                   <ButtonLink
                     className="mr-8 mt-6"
                     path="https://docs.mango.markets/"
-                    linkText={t('learn-more')}
+                    linkText="Learn More"
                     size="large"
                   />
                   <a
@@ -513,26 +524,32 @@ const HomePage = () => {
                 src="/images/new/token-listings.png"
               />
               <div className="core-text">
-                <h2 className="mb-4 max-w-lg">
-                  {t('home:token-listings-heading')}
-                </h2>
-                <p className="intro-p">{t('home:token-listings-desc')}</p>
+                <h2 className="mb-4 max-w-lg">Permissionless token listings</h2>
+                <p className="intro-p">
+                  Anyone can easily list any token on Mango. A governance
+                  proposal is created upon submission and if successful the
+                  token will list automatically.
+                </p>
                 <ButtonLink
                   className="mt-10"
                   path="https://app.mango.markets/governance/list"
-                  linkText={t('home:list-token')}
+                  linkText="List a Token"
                   size="large"
                 />
               </div>
             </div>
             <div className="core-feature flex flex-col-reverse lg:flex-row lg:items-center pt-12 lg:pt-24">
               <div className="core-text">
-                <h2 className="mb-4">{t('home:borrow-heading')}</h2>
-                <p className="intro-p">{t('home:borrow-desc')}</p>
+                <h2 className="mb-4">Borrow and earn interest</h2>
+                <p className="intro-p">
+                  All tokens on Mango can be borrowed for use in other DeFi
+                  activities. Plus, all deposits earn interest without unlock
+                  periods.
+                </p>
                 <ButtonLink
                   className="mt-10"
                   path="https://app.mango.markets/"
-                  linkText={t('home:get-started')}
+                  linkText="Get Started"
                   size="large"
                 />
               </div>
@@ -564,14 +581,16 @@ const HomePage = () => {
                 id="build"
               />
             </div>
-            <h2 className="mb-4 text-center">{t('home:build-heading')}</h2>
+            <h2 className="mb-4 text-center">Build on Mango</h2>
             <p className="intro-p text-center max-w-lg mx-auto">
-              {t('home:build-desc')}
+              Mango is 100% open source and highly composable. Build trading
+              bots, new product integrations, community tools or whatever you
+              desire. Explore the code and get building.
             </p>
             <ButtonLink
               className="mx-auto mt-10"
               path="https://github.com/blockworks-foundation"
-              linkText={t('home:explore-the-code')}
+              linkText="Explore the code"
               size="large"
             />
           </div>

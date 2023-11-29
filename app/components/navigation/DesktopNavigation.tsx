@@ -7,65 +7,66 @@ import {
   useRef,
   useState,
 } from 'react'
-import { useTranslation } from 'next-i18next'
 import NavigationItemLink from './NavigationItemLink'
 import ButtonLink from '../shared/ButtonLink'
 import Twitter from '../icons/Twitter'
 import Discord from '../icons/Discord'
-// import ThemeToggle from './ThemeToggle'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const DesktopNavigation = () => {
-  const { t } = useTranslation(['common', 'navigation'])
-
+  const pathname = usePathname()
   return (
     <div className="hidden lg:flex lg:items-center space-x-8">
-      <NavigationItem title={t('navigation:developers')}>
+      <Link href="/learn" shallow>
+        <span
+          className={`font-display ${
+            pathname === '/blog'
+              ? 'text-th-active md:hover:text-th-active'
+              : 'text-th-fgd-2 md:hover:text-th-fgd-1'
+          } default-transition text-base`}
+        >
+          Learn
+        </span>
+      </Link>
+      <NavigationItem title="Developers">
         <NavigationItemPanel>
           <NavigationItemLink
             path="https://docs.mango.markets"
             isExternal
-            title={t('navigation:docs')}
+            title="Docs"
           />
           <NavigationItemLink
             path="https://github.com/blockworks-foundation"
             isExternal
-            title={t('navigation:github')}
+            title="Github"
           />
           <NavigationItemLink
             path="https://github.com/blockworks-foundation/mango-v4/tree/dev/ts/client/scripts/mm"
             isExternal
-            title={t('navigation:market-maker')}
+            title="Market maker bot"
           />
           <NavigationItemLink
             path="https://github.com/blockworks-foundation/mango-v4/tree/dev/bin/liquidator"
             isExternal
-            title={t('navigation:liquidator')}
+            title="Liquidator bot"
           />
           <NavigationItemLink
             path="https://trello.com/b/tIj7K3FD/mango-development"
             isExternal
-            title={t('navigation:contribute')}
+            title="Contribute"
           />
         </NavigationItemPanel>
       </NavigationItem>
-      <NavigationItem title={t('navigation:governance')}>
+      <NavigationItem title="Governance">
         <NavigationItemPanel>
           <NavigationItemLink
             path="https://dao.mango.markets"
             isExternal
-            title={t('navigation:vote')}
+            title="Vote"
           />
         </NavigationItemPanel>
       </NavigationItem>
-      {/* <NavigationItem title={t('navigation:careers')}>
-        <NavigationItemPanel>
-          <NavigationItemLink
-            path="/careers"
-            title={t('navigation:work-with-us')}
-          />
-        </NavigationItemPanel>
-      </NavigationItem> */}
-      {/* <ThemeToggle /> */}
       <div className="flex items-center space-x-6">
         <a
           className="text-th-fgd-4 hover:text-th-fgd-1"

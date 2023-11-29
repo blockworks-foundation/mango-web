@@ -57,7 +57,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <main className="p-[6vw]">
+    <div>
       <Link href="/">← Posts</Link>
       <div className="prose mt-8 border-t pt-8">
         {/* Render the blog post image */}
@@ -79,7 +79,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Render the blog post body */}
         <RichText document={blogPost.postContent} />
       </div>
-    </main>
+    </div>
   )
 }
 
