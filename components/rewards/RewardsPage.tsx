@@ -130,12 +130,12 @@ const RewardsPage = () => {
         className="bg-[url('/images/mango-mints/mints-bg.jpeg')] bg-cover bg-no-repeat border-t border-th-bkg-2 py-20"
       >
         <div className="flex flex-col items-center">
-          <Image
+          {/* <Image
             src="/images/mango-mints/chest.png"
             height={96}
             width={96}
             alt="Chest"
-          />
+          /> */}
           <h1 className="mt-6 text-center lg:text-left font-rewards md:text-8xl">
             Trade. Win. Repeat.
           </h1>
@@ -307,7 +307,7 @@ const RewardsPage = () => {
           </div>
           <LandingPageButton
             className="mt-12 mx-auto"
-            linkText="Ditch your CEX"
+            linkText="Create your Account"
             path="https://app.mango.markets"
           />
         </div>
