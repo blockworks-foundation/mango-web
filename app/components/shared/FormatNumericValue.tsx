@@ -1,5 +1,5 @@
 import Decimal from 'decimal.js'
-import { formatCurrencyValue, formatNumericValue } from '../../utils'
+import { formatCurrencyValue, formatNumericValue } from '../../utils/numbers'
 
 const FormatNumericValue = ({
   classNames,

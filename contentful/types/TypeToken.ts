@@ -9,6 +9,8 @@ import type {
 export interface TypeTokenFields {
   tokenName: EntryFieldTypes.Symbol
   slug: EntryFieldTypes.Symbol
+  seoTitle: EntryFieldTypes.Symbol
+  seoDescription: EntryFieldTypes.Text
   description: EntryFieldTypes.RichText
   tags: EntryFieldTypes.Array<
     EntryFieldTypes.Symbol<'Governanace' | 'Liquid Staking' | 'Meme'>

@@ -30,3 +30,16 @@ export type AppStatsData = {
   num_openbook_fills_24h: number
   open_interest: number
 }
+
+type PriceHistoryData = {
+  price: number
+  time: string
+}
+
+export type MangoTokenData = {
+  '24_hr_price': number
+  mint: string
+  price: number
+  price_history: PriceHistoryData[]
+  symbol: string
+}

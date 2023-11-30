@@ -3,6 +3,7 @@ import { Entry } from 'contentful'
 import { Document as RichTextDocument } from '@contentful/rich-text-types'
 import contentfulClient from './contentfulClient'
 import { makeApiRequest } from '../app/utils/birdeye'
+import { BirdeyeOverviewData } from '../app/types/birdeye'
 
 type TokenPageEntry = Entry<TypeTokenSkeleton, undefined, string>
 
@@ -16,15 +17,12 @@ export interface TokenPage {
   twitterUrl?: string
   mint: string
   coingeckoId: string
-}
-
-interface BirdeyeData {
-  price: number
-  priceChange24hPercent: number
+  seoTitle: string
+  seoDescription: string
 }
 
 export interface TokenPageWithData extends TokenPage {
-  birdeyeData: BirdeyeData
+  birdeyeData: BirdeyeOverviewData
 }
 
 export function parseContentfulTokenPage(
@@ -44,6 +42,8 @@ export function parseContentfulTokenPage(
     twitterUrl: tokenPageEntry.fields.twitterUrl || undefined,
     mint: tokenPageEntry.fields.mint,
     coingeckoId: tokenPageEntry.fields.coingeckoId,
+    seoTitle: tokenPageEntry.fields.seoTitle,
+    seoDescription: tokenPageEntry.fields.seoDescription,
   }
 }
 
@@ -85,14 +85,25 @@ interface FetchTokenPageOptions {
 export async function fetchTokenPage({
   slug,
   preview,
-}: FetchTokenPageOptions): Promise<TokenPage | null> {
+}: FetchTokenPageOptions): Promise<TokenPageWithData | null> {
   const contentful = contentfulClient({ preview })
 
-  const blogPostsResult = await contentful.getEntries<TypeTokenSkeleton>({
+  const tokenPageResult = await contentful.getEntries<TypeTokenSkeleton>({
     content_type: 'token',
     'fields.slug': slug,
     include: 2,
   })
 
-  return parseContentfulTokenPage(blogPostsResult.items[0])
+  const parsedTokenPage = parseContentfulTokenPage(tokenPageResult.items[0])
+
+  if (parsedTokenPage) {
+    const birdeyeDataResponse = await makeApiRequest(
+      `defi/token_overview?address=${parsedTokenPage.mint}`,
+    )
+    const birdeyeData = birdeyeDataResponse?.success
+      ? birdeyeDataResponse?.data
+      : undefined
+
+    return { ...parsedTokenPage, birdeyeData: birdeyeData }
+  } else return null
 }

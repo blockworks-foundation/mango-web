@@ -184,7 +184,7 @@ const NavigationLink = ({ path, text }: { path: string; text: string }) => {
     <Link href={path} shallow>
       <span
         className={`font-display ${
-          pathname === path
+          pathname.includes(path)
             ? 'text-th-active md:hover:text-th-active'
             : 'text-th-fgd-2 md:hover:text-th-fgd-1'
         } default-transition text-base`}

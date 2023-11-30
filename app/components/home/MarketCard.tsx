@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { MarketsDataItem } from '../../types'
-import { formatNumericValue, numberCompacter } from '../../utils'
+import { MarketsDataItem } from '../../types/mango'
+import { formatNumericValue, numberCompacter } from '../../utils/numbers'
 import Change from '../shared/Change'
 import SimpleAreaChart from '../shared/SimpleAreaChart'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'

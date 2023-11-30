@@ -206,6 +206,10 @@ li {
   @apply text-lg md:text-xl text-th-fgd-4;
 }
 
+table p {
+  @apply text-th-fgd-1;
+}
+
 /* Scrollbars */
 
 .hide-scroll::-webkit-scrollbar {

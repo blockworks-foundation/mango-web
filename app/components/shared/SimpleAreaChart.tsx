@@ -42,14 +42,7 @@ const SimpleAreaChart = ({
           fill={`url(#gradientArea-${name.replace(/[^a-zA-Z]/g, '')}`}
         />
         <XAxis dataKey={xKey} hide />
-        <YAxis
-          domain={([dataMin, dataMax]) => {
-            const adjustment = (dataMax - dataMin) / 5
-            return [dataMin - adjustment, dataMax + adjustment]
-          }}
-          dataKey={yKey}
-          hide
-        />
+        <YAxis domain={['dataMin', 'dataMax']} dataKey={yKey} hide />
       </AreaChart>
     </ResponsiveContainer>
   )

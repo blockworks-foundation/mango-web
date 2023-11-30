@@ -1,7 +1,25 @@
-import { FormattedMarketData, MarketData } from '../types'
+import { FormattedMarketData, MarketData } from '../types/mango'
 import { MANGO_DATA_API_URL } from './constants'
 
-export const fetchMarketData = async () => {
+export const fetchMangoTokenData = async () => {
+  try {
+    const response = await fetch(
+      `${MANGO_DATA_API_URL}/stats/token-price-history`,
+      {
+        cache: 'no-store',
+      },
+    )
+    const data = await response.json()
+    if (data && data?.length) {
+      return data
+    } else return []
+  } catch (e) {
+    console.error('Failed to fetch mango token data', e)
+    return []
+  }
+}
+
+export const fetchMangoMarketData = async () => {
   const promises = [
     fetch(`${MANGO_DATA_API_URL}/stats/perp-market-summary`, {
       cache: 'no-store',
@@ -44,7 +62,7 @@ export const fetchMarketData = async () => {
     }
     return { perp: formattedPerpData, spot: formattedSpotData }
   } catch (e) {
-    console.error('Failed to fetch market data', e)
+    console.error('Failed to fetch mango market data', e)
     return { perp: [], spot: [] }
   }
 }
