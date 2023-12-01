@@ -1,13 +1,13 @@
 import { fetchTokenPages } from '../../../contentful/tokenPage'
 import Explore from '../../components/explore/Explore'
 import { draftMode } from 'next/headers'
-import { fetchMangoTokenData } from '../../utils/mango'
+import { fetchMangoTokensData } from '../../utils/mango'
 
 async function ExplorePage() {
   const tokens = await fetchTokenPages({
     preview: draftMode().isEnabled,
   })
-  const mangoTokensData = await fetchMangoTokenData()
+  const mangoTokensData = await fetchMangoTokensData()
   return (
     <>
       <h1 className="text-5xl mb-10">Explore</h1>

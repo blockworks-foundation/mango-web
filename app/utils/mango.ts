@@ -1,7 +1,7 @@
 import { FormattedMarketData, MarketData } from '../types/mango'
 import { MANGO_DATA_API_URL } from './constants'
 
-export const fetchMangoTokenData = async () => {
+export const fetchMangoTokensData = async () => {
   try {
     const response = await fetch(
       `${MANGO_DATA_API_URL}/stats/token-price-history`,

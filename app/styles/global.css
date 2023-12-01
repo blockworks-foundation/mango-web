@@ -190,7 +190,7 @@ p {
 }
 
 a {
-  @apply tracking-wider text-base lg:text-lg default-transition;
+  @apply tracking-wider text-th-active md:hover:text-th-fgd-1 text-base xl:text-lg default-transition;
 }
 
 .font-mono {
@@ -208,6 +208,10 @@ li {
 
 table p {
   @apply text-th-fgd-1;
+}
+
+.tooltip-underline {
+  @apply default-transition w-max border-b border-dashed border-current hover:cursor-help hover:border-transparent;
 }
 
 /* Scrollbars */
