@@ -10,23 +10,42 @@ const TokenMangoStats = ({
   mangoData: MangoTokenData | undefined
 }) => {
   if (!mangoData) return null
+  const depositRate = mangoData?.deposit_rate
+    ? (mangoData.deposit_rate * 100).toFixed(2)
+    : '–'
+  const borrowRate = mangoData?.borrow_rate
+    ? (mangoData.borrow_rate * 100).toFixed(2)
+    : '–'
+  const available = mangoData?.available
+    ? numberCompacter.format(mangoData.available)
+    : '–'
   return (
     <div className="grid grid-cols-3 grid-flow-row gap-6">
       <KeyValuePairDisplay
         label="Deposit rate"
-        value={<span className="text-th-up">5.42%</span>}
+        value={
+          <span
+            className={
+              isNaN(mangoData?.deposit_rate) ? 'text-th-fgd-4' : 'text-th-up'
+            }
+          >
+            {depositRate}%
+          </span>
+        }
       />
       <KeyValuePairDisplay
         label="Borrow rate"
-        value={<span className="text-th-down">7.33%</span>}
+        value={
+          <span
+            className={
+              isNaN(mangoData?.borrow_rate) ? 'text-th-fgd-4' : 'text-th-down'
+            }
+          >
+            {borrowRate}%
+          </span>
+        }
       />
-      <KeyValuePairDisplay
-        label="Available"
-        value={numberCompacter.format(234956688)}
-      />
-      <KeyValuePairDisplay label="Asset weight" value="0.00x" />
-      <KeyValuePairDisplay label="Liability weight" value="1.80x" />
-      <KeyValuePairDisplay label="Max leverage" value="5x" />
+      <KeyValuePairDisplay label="Available" value={available} />
     </div>
   )
 }

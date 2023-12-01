@@ -37,9 +37,13 @@ type PriceHistoryData = {
 }
 
 export type MangoTokenData = {
-  '24_hr_price': number
+  symbol: string
   mint: string
   price: number
+  rolling_24hr_change: number
+  rolling_24hr_volume: number
+  available: number
+  borrow_rate: number
+  deposit_rate: number
   price_history: PriceHistoryData[]
-  symbol: string
 }

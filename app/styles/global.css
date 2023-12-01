@@ -190,7 +190,7 @@ p {
 }
 
 a {
-  @apply tracking-wider text-th-active md:hover:text-th-fgd-1 text-base xl:text-lg default-transition;
+  @apply tracking-wider text-th-active md:hover:text-th-fgd-1 text-base xl:text-lg default-transition cursor-pointer;
 }
 
 .font-mono {

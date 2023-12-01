@@ -7,7 +7,7 @@ export default function TokenPageLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
+    <div className="-mt-6">
       <Link
         className="text-th-fgd-4 flex items-center space-x-1"
         href="/explore"
@@ -17,6 +17,6 @@ export default function TokenPageLayout({
         <span>View all tokens</span>
       </Link>
       <div className="mt-8">{children}</div>
-    </>
+    </div>
   )
 }
