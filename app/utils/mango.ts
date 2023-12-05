@@ -4,7 +4,7 @@ import { MANGO_DATA_API_URL } from './constants'
 export const fetchMangoTokensData = async () => {
   try {
     const response = await fetch(`${MANGO_DATA_API_URL}/stats/tokens-summary`, {
-      cache: 'no-store',
+      next: { revalidate: 120 },
     })
     const data = await response.json()
     if (data && data?.length) {
@@ -20,9 +20,7 @@ export const fetchMangoTokenData = async (mint: string) => {
   try {
     const response = await fetch(
       `${MANGO_DATA_API_URL}/stats/token-mint-summary?token-mint=${mint}`,
-      {
-        cache: 'no-store',
-      },
+      { next: { revalidate: 120 } },
     )
     const data = await response.json()
     return data
@@ -35,10 +33,10 @@ export const fetchMangoTokenData = async (mint: string) => {
 export const fetchMangoMarketData = async () => {
   const promises = [
     fetch(`${MANGO_DATA_API_URL}/stats/perp-market-summary`, {
-      cache: 'no-store',
+      next: { revalidate: 120 },
     }),
     fetch(`${MANGO_DATA_API_URL}/stats/spot-market-summary`, {
-      cache: 'no-store',
+      next: { revalidate: 120 },
     }),
   ]
   try {

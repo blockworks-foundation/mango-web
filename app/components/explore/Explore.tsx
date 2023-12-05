@@ -7,6 +7,12 @@ import { Table, Td, Th, TrBody, TrHead } from '../shared/TableElements'
 import { CUSTOM_TOKEN_ICONS } from '../../utils/constants'
 import { useRouter } from 'next/navigation'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
+import {
+  countLeadingZeros,
+  formatNumericValue,
+  numberCompacter,
+} from '../../utils/numbers'
+import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
 export const goToTokenPage = (slug: string, router: AppRouterInstance) => {
   router.push(`/explore/${slug}`, { shallow: true })
@@ -25,8 +31,10 @@ const Explore = ({
       <thead>
         <TrHead>
           <Th className="text-left">Token</Th>
-          <Th className="text-left">Price</Th>
-          <Th className="text-left">Change</Th>
+          <Th className="text-right">Price</Th>
+          <Th className="text-right">24h Change</Th>
+          <Th className="text-right">24h Volume</Th>
+          <Th />
         </TrHead>
       </thead>
       <tbody>
@@ -34,20 +42,20 @@ const Explore = ({
           const { tokenName, slug, symbol, birdeyeData, mint } = token
           const mangoTokenData: MangoTokenData | undefined =
             mangoTokensData.find((mangoToken) => mangoToken?.mint === mint)
-          let price
-          let change24Hour
           let mangoSymbol
           if (mangoTokenData) {
-            price = mangoTokenData?.price || '–'
-            const change =
-              mangoTokenData?.price && mangoTokenData?.['24_hr_price']
-                ? ((mangoTokenData['24_hr_price'] - mangoTokenData.price) /
-                    mangoTokenData['24_hr_price']) *
-                  100
-                : '–'
-            change24Hour = change
             mangoSymbol = mangoTokenData.symbol
           }
+          const decimals =
+            countLeadingZeros(birdeyeData?.price) + birdeyeData?.decimals
+          const price = birdeyeData?.price
+            ? `$${formatNumericValue(birdeyeData.price, decimals)}`
+            : '–'
+          const rawChange = birdeyeData?.priceChange24hPercent
+          const change = rawChange ? `${rawChange.toFixed(2)}%` : '–'
+          const volume = birdeyeData?.v24hUSD
+            ? `$${numberCompacter.format(birdeyeData.v24hUSD)}`
+            : '–'
           const hasCustomIcon = CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
           const logoPath = hasCustomIcon
             ? `/icons/tokens/${mangoSymbol.toLowerCase()}.svg`
@@ -70,10 +78,30 @@ const Explore = ({
                 </div>
               </Td>
               <Td>
-                <p>{price}</p>
+                <p className="text-right">{price}</p>
               </Td>
               <Td>
-                <p>{change24Hour}</p>
+                <p
+                  className={`text-right ${
+                    !rawChange
+                      ? 'text-th-fgd-3'
+                      : rawChange > 0
+                        ? 'text-th-up'
+                        : rawChange < 0
+                          ? 'text-th-down'
+                          : 'text-th-fgd-3'
+                  }`}
+                >
+                  {change}
+                </p>
+              </Td>
+              <Td>
+                <p className="text-right">{volume}</p>
+              </Td>
+              <Td>
+                <div className="flex items-center justify-end">
+                  <ChevronRightIcon className="h-5 w-5 text-th-fgd-4" />
+                </div>
               </Td>
             </TrBody>
           )

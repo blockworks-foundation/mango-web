@@ -19,6 +19,8 @@ export interface TokenPage {
   coingeckoId: string
   seoTitle: string
   seoDescription: string
+  perpSymbol: string | undefined
+  spotSymbol: string
 }
 
 export interface TokenPageWithData extends TokenPage {
@@ -44,6 +46,8 @@ export function parseContentfulTokenPage(
     coingeckoId: tokenPageEntry.fields.coingeckoId,
     seoTitle: tokenPageEntry.fields.seoTitle,
     seoDescription: tokenPageEntry.fields.seoDescription,
+    perpSymbol: tokenPageEntry.fields.perpSymbol || undefined,
+    spotSymbol: tokenPageEntry.fields.spotSymbol,
   }
 }
 

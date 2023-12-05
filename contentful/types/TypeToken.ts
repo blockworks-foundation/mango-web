@@ -13,13 +13,18 @@ export interface TypeTokenFields {
   seoDescription: EntryFieldTypes.Text
   description: EntryFieldTypes.RichText
   tags: EntryFieldTypes.Array<
-    EntryFieldTypes.Symbol<'Governanace' | 'Liquid Staking' | 'Meme'>
+    EntryFieldTypes.Symbol<
+      'Blue Chip' | 'Dog Coins' | 'Governanace' | 'Liquid Staking' | 'Meme'
+    >
   >
   websiteUrl?: EntryFieldTypes.Symbol
   twitterUrl?: EntryFieldTypes.Symbol
+  whitepaper?: EntryFieldTypes.Symbol
   mint: EntryFieldTypes.Symbol
   coingeckoId: EntryFieldTypes.Symbol
   symbol: EntryFieldTypes.Symbol
+  spotSymbol: EntryFieldTypes.Symbol
+  perpSymbol?: EntryFieldTypes.Symbol
 }
 
 export type TypeTokenSkeleton = EntrySkeletonType<TypeTokenFields, 'token'>

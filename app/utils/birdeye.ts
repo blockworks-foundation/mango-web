@@ -6,7 +6,7 @@ export async function makeApiRequest(path: string) {
     headers: {
       'X-API-KEY': process.env.NEXT_PUBLIC_BIRDEYE_API_KEY!,
     },
-    cache: 'no-store',
+    next: { revalidate: 120 },
   })
   return response.json()
 }

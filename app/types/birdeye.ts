@@ -5,6 +5,7 @@ export interface BirdeyeOverviewData {
     discord: string
     telegram: string
   }
+  decimals: number
   liquidity: number
   logoURI: string
   numberMarkets: number

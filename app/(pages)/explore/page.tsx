@@ -10,7 +10,7 @@ async function ExplorePage() {
   const mangoTokensData = await fetchMangoTokensData()
   return (
     <>
-      <h1 className="text-5xl mb-10">Explore</h1>
+      <h1 className="text-4xl mb-10">Explore</h1>
       <ul>
         {tokens && tokens?.length ? (
           <Explore tokens={tokens} mangoTokensData={mangoTokensData} />

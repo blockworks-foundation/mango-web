@@ -1,5 +1,10 @@
 export type MarketData = { [key: string]: MarketsDataItem[] }
 
+export type MangoMarketsData = {
+  perp: FormattedMarketData[]
+  spot: FormattedMarketData[]
+}
+
 export type FormattedMarketData = {
   name: string
   data: MarketsDataItem

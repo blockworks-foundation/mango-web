@@ -17,7 +17,7 @@ const TokenPriceChart = ({
       data={chartData}
       daysToShow={daysToShow}
       setDaysToShow={setDaysToShow}
-      heightClass="h-[180px] lg:h-[205px]"
+      heightClass="h-[180px] lg:h-[260px]"
       hideAxis
       prefix="$"
       tickFormat={(x) => `$${formatYAxis(x)}`}
