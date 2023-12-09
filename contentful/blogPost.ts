@@ -11,7 +11,7 @@ type BlogPostEntry = Entry<TypeBlogPostSkeleton, undefined, string>
 export interface BlogPost {
   postTitle: string
   postDescription: string
-  postContent: RichTextDocument | null
+  postContent: RichTextDocument | undefined
   postHeroImage: ContentImage | null
   slug: string
 }
@@ -28,7 +28,7 @@ export function parseContentfulBlogPost(
   return {
     postTitle: blogPostEntry.fields.postTitle || '',
     postDescription: blogPostEntry.fields.postDescription,
-    postContent: blogPostEntry.fields.postContent || null,
+    postContent: blogPostEntry.fields.postContent || undefined,
     postHeroImage: parseContentfulContentImage(
       blogPostEntry.fields.postHeroImage,
     ),

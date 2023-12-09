@@ -56,7 +56,7 @@ const Explore = ({
           const volume = birdeyeData?.v24hUSD
             ? `$${numberCompacter.format(birdeyeData.v24hUSD)}`
             : '–'
-          const hasCustomIcon = CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
+          const hasCustomIcon = CUSTOM_TOKEN_ICONS[mangoSymbol?.toLowerCase()]
           const logoPath = hasCustomIcon
             ? `/icons/tokens/${mangoSymbol.toLowerCase()}.svg`
             : birdeyeData?.logoURI

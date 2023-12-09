@@ -3,6 +3,7 @@ export const MANGO_DATA_API_URL = 'https://api.mngo.cloud/data/v4'
 export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   all: true,
   bonk: true,
+  bsol: true,
   btc: true,
   chai: true,
   crown: true,
@@ -15,6 +16,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   hnt: true,
   jitosol: true,
   jlp: true,
+  jto: true,
   kin: true,
   ldo: true,
   mngo: true,

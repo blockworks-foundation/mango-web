@@ -11,7 +11,7 @@ export interface TokenPage {
   tokenName: string
   symbol: string
   slug: string
-  description: RichTextDocument | null
+  description: RichTextDocument | undefined
   tags: string[]
   websiteUrl?: string
   twitterUrl?: string
@@ -38,7 +38,7 @@ export function parseContentfulTokenPage(
     tokenName: tokenPageEntry.fields.tokenName,
     symbol: tokenPageEntry.fields.symbol,
     slug: tokenPageEntry.fields.slug,
-    description: tokenPageEntry.fields.description || null,
+    description: tokenPageEntry.fields.description || undefined,
     tags: tokenPageEntry.fields.tags || [],
     websiteUrl: tokenPageEntry.fields.websiteUrl || undefined,
     twitterUrl: tokenPageEntry.fields.twitterUrl || undefined,

@@ -3,7 +3,7 @@ import { Document as RichTextDocument } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 type RichTextProps = {
-  document: RichTextDocument | null
+  document: RichTextDocument | undefined
 }
 
 function RichText({ document }: RichTextProps) {

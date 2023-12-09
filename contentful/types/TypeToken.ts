@@ -11,10 +11,15 @@ export interface TypeTokenFields {
   slug: EntryFieldTypes.Symbol
   seoTitle: EntryFieldTypes.Symbol
   seoDescription: EntryFieldTypes.Text
-  description: EntryFieldTypes.RichText
+  description?: EntryFieldTypes.RichText
   tags: EntryFieldTypes.Array<
     EntryFieldTypes.Symbol<
-      'Blue Chip' | 'Dog Coins' | 'Governanace' | 'Liquid Staking' | 'Meme'
+      | 'Blue Chip'
+      | 'Bridged (Portal)'
+      | 'Dog Coins'
+      | 'Governanace'
+      | 'Liquid Staking'
+      | 'Meme'
     >
   >
   websiteUrl?: EntryFieldTypes.Symbol

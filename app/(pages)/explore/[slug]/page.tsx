@@ -159,17 +159,12 @@ async function TokenPage({ params }: TokenPageProps) {
           tokenPageData={tokenPageData}
         />
       </div>
-      {/* <div className={SECTION_WRAPPER_CLASSES}>
-        <h2 className="mb-4 text-2xl">Safety</h2>
-        <TokenStats
-          tokenData={tokenPageData}
-          securityData={birdeyeSecurityData}
-        />
-      </div> */}
-      <div className={SECTION_WRAPPER_CLASSES}>
-        <h2 className="mb-4 text-2xl">{`About ${tokenName}`}</h2>
-        <TokenAbout content={description} />
-      </div>
+      {description ? (
+        <div className={SECTION_WRAPPER_CLASSES}>
+          <h2 className="mb-4 text-2xl">{`About ${tokenName}`}</h2>
+          <TokenAbout content={description} />
+        </div>
+      ) : null}
     </div>
   )
 }
