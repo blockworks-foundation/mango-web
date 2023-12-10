@@ -76,7 +76,7 @@ const Explore = ({
                     <div>
                       <p>{tokenName}</p>
                       <p className="text-sm text-th-fgd-4">
-                        {mangoSymbol || symbol}
+                        {symbol || mangoSymbol}
                       </p>
                     </div>
                   </div>
