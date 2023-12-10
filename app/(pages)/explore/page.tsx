@@ -2,6 +2,11 @@ import { fetchTokenPages } from '../../../contentful/tokenPage'
 import Explore from '../../components/explore/Explore'
 import { draftMode } from 'next/headers'
 import { fetchMangoTokensData } from '../../utils/mango'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Explore Listed Tokens on Mango',
+}
 
 async function ExplorePage() {
   const tokens = await fetchTokenPages({

@@ -167,7 +167,12 @@ const TokenInfo = ({
           <h2 className="text-base">Categories</h2>
           <div className="flex flex-wrap">
             {tags.map((tag) => (
-              <Link className="text-th-fgd-3" href="#" key={tag}>
+              <Link
+                className="text-th-fgd-3"
+                href={{ pathname: '/explore', query: { category: tag } }}
+                key={tag}
+                shallow
+              >
                 <div className="flex items-center justify-center border border-th-fgd-4 rounded-md mt-2 mr-2 px-2 py-0.5">
                   <span className="text-sm">{tag}</span>
                 </div>
