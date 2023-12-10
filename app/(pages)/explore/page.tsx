@@ -8,19 +8,14 @@ async function ExplorePage() {
     preview: draftMode().isEnabled,
   })
   const mangoTokensData = await fetchMangoTokensData()
-  return (
-    <>
-      <h1 className="text-4xl mb-10">Explore</h1>
-      <ul>
-        {tokens && tokens?.length ? (
-          <Explore tokens={tokens} mangoTokensData={mangoTokensData} />
-        ) : (
-          <div className="p-6 rounded-xl border border-th-bkg-3">
-            <p className="text-center">Nothing to see here...</p>
-          </div>
-        )}
-      </ul>
-    </>
+  return tokens && tokens?.length ? (
+    <Explore tokens={tokens} mangoTokensData={mangoTokensData} />
+  ) : (
+    <div className="p-6 rounded-xl border border-th-bkg-3">
+      <p className="text-center">
+        Something went wrong. Try refreshing the page.
+      </p>
+    </div>
   )
 }
 
