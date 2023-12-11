@@ -10,7 +10,7 @@ const HeroStat = ({
   title: string
   tooltipContent?: string
   value: string
-  loading: boolean
+  loading?: boolean
 }) => {
   return (
     <div className="col-span-4 sm:col-span-2 lg:col-span-1">

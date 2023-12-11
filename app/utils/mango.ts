@@ -1,6 +1,22 @@
 import { FormattedMarketData, MarketData } from '../types/mango'
 import { MANGO_DATA_API_URL } from './constants'
 
+export const fetchAppStatsData = async () => {
+  try {
+    const response = await fetch(
+      `${MANGO_DATA_API_URL}/stats/mango-protocol-summary`,
+      {
+        next: { revalidate: 120 },
+      },
+    )
+    const data = await response.json()
+    return data
+  } catch (e) {
+    console.error('failed to fetch mango app stats data', e)
+    return undefined
+  }
+}
+
 export const fetchMangoTokensData = async () => {
   try {
     const response = await fetch(`${MANGO_DATA_API_URL}/stats/tokens-summary`, {

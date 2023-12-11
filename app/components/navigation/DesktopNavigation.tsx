@@ -18,7 +18,7 @@ const DesktopNavigation = () => {
   return (
     <div className="hidden lg:flex lg:items-center space-x-8">
       <NavigationLink path="/explore" text="Explore" />
-      <NavigationLink path="/learn" text="Learn" />
+      {/* <NavigationLink path="/learn" text="Learn" /> */}
       <NavigationItem title="Developers">
         <NavigationItemPanel>
           <NavigationItemLink

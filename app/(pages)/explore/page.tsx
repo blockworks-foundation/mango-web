@@ -5,7 +5,9 @@ import { fetchMangoTokensData } from '../../utils/mango'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Explore Listed Tokens on Mango',
+  title: 'Explore Listed Tokens on Mango Markets',
+  description:
+    'Live prices, charts, stats and alpha on every token listed on Mango Markets.',
 }
 
 async function ExplorePage() {

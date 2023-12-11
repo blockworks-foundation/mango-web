@@ -16,14 +16,9 @@ import { useLayoutEffect, useMemo, useRef } from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import ColorBlur from '../shared/ColorBlur'
 import Ottersec from '../icons/Ottersec'
-// import TabsText from '../shared/TabsText'
-// import MarketCard from './MarketCard'
 import { formatNumericValue, numberCompacter } from '../../utils/numbers'
 import HeroStat from './HeroStat'
-import useMarketsData from '../../hooks/useMarketData'
-import { useQuery } from '@tanstack/react-query'
-import { MANGO_DATA_API_URL } from '../../utils/constants'
-// import Loading from '../shared/Loading'
+import { AppStatsData } from '../../types/mango'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -46,63 +41,38 @@ const tokenIcons = [
 const MOBILE_IMAGE_CLASSES =
   'core-image h-[240px] w-[240px] sm:h-[300px] sm:w-[300px] md:h-[480px] md:w-[480px] mb-6 lg:mb-0'
 
-const fetchAppData = async () => {
-  try {
-    const response = await fetch(
-      `${MANGO_DATA_API_URL}/stats/mango-protocol-summary`,
-    )
-    const data = await response.json()
-    return data
-  } catch (e) {
-    console.error('failed to fetch account followers', e)
-    return undefined
-  }
-}
-
-const HomePage = () => {
-  // const [activeMarketTab, setActiveMarketTab] = useState('Spot')
-  const { data: marketData, isLoading: loadingMarketData } = useMarketsData()
-
-  const { data: appData, isLoading: loadingAppData } = useQuery({
-    queryKey: ['app-data'],
-    queryFn: fetchAppData,
-  })
-
+const HomePage = ({
+  appStatsData,
+  numberOfMarkets,
+}: {
+  appStatsData: AppStatsData
+  numberOfMarkets: number
+}) => {
   const topSection = useRef<HTMLDivElement>(null)
   const callouts = useRef<HTMLDivElement>(null)
   const swapPanel = useRef<HTMLDivElement>(null)
   const coreFeatures = useRef<HTMLDivElement>(null)
   const build = useRef<HTMLDivElement>(null)
 
-  // const tabsWithCount: [string, number][] = useMemo(() => {
-  //   const perpMarketsNumber = marketData?.perp?.length || 0
-  //   const spotMarketsNumber = marketData?.spot?.length || 0
-  //   const tabs: [string, number][] = [
-  //     ['Spot', spotMarketsNumber],
-  //     ['Perp', perpMarketsNumber],
-  //   ]
-  //   return tabs
-  // }, [marketData])
-
   const formattedAppStatsData = useMemo(() => {
-    if (!appData || !Object.keys(appData).length)
+    if (!appStatsData || !Object.keys(appStatsData).length)
       return { totalVol24h: 0, totalTrades24h: 0, weeklyActiveTraders: 0 }
     // volume
-    const spotVol24h = appData?.openbook_volume_usd_24h || 0
-    const perpVol24h = appData?.perp_volume_usd_24h || 0
-    const swapVol24h = appData?.swap_volume_usd_24h || 0
+    const spotVol24h = appStatsData?.openbook_volume_usd_24h || 0
+    const perpVol24h = appStatsData?.perp_volume_usd_24h || 0
+    const swapVol24h = appStatsData?.swap_volume_usd_24h || 0
     const totalVol24h = spotVol24h + perpVol24h + swapVol24h
 
     // number of trades
-    const spotTrades24h = appData?.num_openbook_fills_24h || 0
-    const perpTrades24h = appData?.num_perp_fills_24h || 0
-    const swapTrades24h = appData?.num_swaps_24h || 0
+    const spotTrades24h = appStatsData?.num_openbook_fills_24h || 0
+    const perpTrades24h = appStatsData?.num_perp_fills_24h || 0
+    const swapTrades24h = appStatsData?.num_swaps_24h || 0
     const totalTrades24h = spotTrades24h + perpTrades24h + swapTrades24h
 
-    const weeklyActiveTraders = appData?.weekly_active_mango_accounts || 0
+    const weeklyActiveTraders = appStatsData?.weekly_active_mango_accounts || 0
 
     return { totalVol24h, totalTrades24h, weeklyActiveTraders }
-  }, [appData])
+  }, [appStatsData])
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -224,9 +194,6 @@ const HomePage = () => {
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
-  const numberOfMarkets =
-    (marketData?.spot.length || 0) + (marketData?.perp.length || 0)
-
   return (
     <>
       <SectionWrapper className="overflow-hidden h-[760px] lg:h-auto">
@@ -268,33 +235,26 @@ const HomePage = () => {
       </SectionWrapper>
       <div className="bg-[url('/images/new/cube-bg.png')] bg-repeat py-12 lg:py-16">
         <SectionWrapper noPaddingY>
-          <div className="grid grid-cols-4 gap-6">
-            <HeroStat
-              title="Markets"
-              value={numberOfMarkets.toString()}
-              loading={loadingMarketData}
-            />
-            <HeroStat
+          <div className="grid grid-cols-3 gap-6">
+            <HeroStat title="Markets" value={numberOfMarkets.toString()} />
+            {/* <HeroStat
               title="Active Traders"
               tooltipContent="Weekly active Mango Accounts"
               value={formatNumericValue(
                 formattedAppStatsData.weeklyActiveTraders,
               )}
-              loading={loadingAppData}
-            />
+            /> */}
             <HeroStat
               title="Daily Volume"
               tooltipContent="Volume across spot, swap and perp"
               value={`$${numberCompacter.format(
                 formattedAppStatsData.totalVol24h,
               )}`}
-              loading={loadingAppData}
             />
             <HeroStat
               title="Daily Trades"
               tooltipContent="Number of trades across spot, swap and perp"
               value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
-              loading={loadingAppData}
             />
           </div>
         </SectionWrapper>
@@ -352,40 +312,6 @@ const HomePage = () => {
           />
         </div>
       </SectionWrapper>
-      {/* <SectionWrapper className="border-t border-th-bkg-3">
-        <div className="w-full h-full">
-          <h2 className="mb-4 text-center">Markets</h2>
-          <p className="mb-10 intro-p text-center max-w-lg mx-auto">
-            New markets are added frequently via Mango DAO. Anyone can propose a
-            token or market to list.
-          </p>
-          <div className="flex justify-center pb-10">
-            <TabsText
-              activeTab={activeMarketTab}
-              className="text-2xl"
-              onChange={setActiveMarketTab}
-              tabs={tabsWithCount}
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 h-[580px] overflow-auto thin-scroll">
-            {!loadingMarketData ? (
-              activeMarketTab === 'Spot' ? (
-                formattedSpotData.map((data) => (
-                  <MarketCard marketData={data} key={data.name} />
-                ))
-              ) : (
-                formattedPerpData.map((data) => (
-                  <MarketCard marketData={data} key={data.name} />
-                ))
-              )
-            ) : (
-              <div className="h-full col-span-4 border border-th-bkg-3 rounded-xl flex items-center justify-center">
-                <Loading className="text-th-fgd-1" />
-              </div>
-            )}
-          </div>
-        </div>
-      </SectionWrapper> */}
       <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur
