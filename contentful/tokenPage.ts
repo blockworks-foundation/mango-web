@@ -3,7 +3,11 @@ import { Entry } from 'contentful'
 import { Document as RichTextDocument } from '@contentful/rich-text-types'
 import contentfulClient from './contentfulClient'
 import { makeApiRequest } from '../app/utils/birdeye'
-import { BirdeyeOverviewData } from '../app/types/birdeye'
+import {
+  BirdeyeOverviewData,
+  BirdeyePriceHistoryData,
+} from '../app/types/birdeye'
+import { DAILY_SECONDS } from '../app/utils/constants'
 
 type TokenPageEntry = Entry<TypeTokenSkeleton, undefined, string>
 
@@ -25,6 +29,7 @@ export interface TokenPage {
 
 export interface TokenPageWithData extends TokenPage {
   birdeyeData: BirdeyeOverviewData
+  birdeyePrices?: BirdeyePriceHistoryData[]
 }
 
 export function parseContentfulTokenPage(
@@ -71,13 +76,26 @@ export async function fetchTokenPages({
 
   const tokenPagesWithData: TokenPageWithData[] = []
   for (const tokenPage of parsedTokenPages) {
+    // birdeye overview data
     const birdeyeDataResponse = await makeApiRequest(
       `defi/token_overview?address=${tokenPage.mint}`,
     )
     const birdeyeData = birdeyeDataResponse?.success
       ? birdeyeDataResponse?.data
       : undefined
-    tokenPagesWithData.push({ ...tokenPage, birdeyeData: birdeyeData })
+
+    // birdeye 24h price data
+    const queryEnd = Math.floor(Date.now() / 1000)
+    const queryStart = queryEnd - DAILY_SECONDS
+    const birdeyeQuery = `defi/history_price?address=${tokenPage.mint}&address_type=token&type=1H&time_from=${queryStart}&time_to=${queryEnd}`
+    const birdeyePricesResponse = await makeApiRequest(birdeyeQuery)
+    const birdeyePrices = birdeyePricesResponse?.data?.items?.length
+      ? birdeyePricesResponse.data.items
+      : []
+    for (const data of birdeyePrices) {
+      data.unixTime = data.unixTime * 1000
+    }
+    tokenPagesWithData.push({ ...tokenPage, birdeyeData, birdeyePrices })
   }
   return tokenPagesWithData
 }

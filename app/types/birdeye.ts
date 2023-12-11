@@ -16,11 +16,6 @@ export interface BirdeyeOverviewData {
   v24hUSD: number
 }
 
-export interface BirdeyeSecurityData {
-  ownerPercentage: number
-  top10UserPercent: number
-}
-
 export interface BirdeyePriceHistoryResponse {
   data: {
     items: BirdeyePriceHistoryData[]

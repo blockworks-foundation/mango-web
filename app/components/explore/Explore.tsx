@@ -25,9 +25,12 @@ import { useSortableData } from '../../hooks/useSortableData'
 import Input from '../forms/Input'
 import Select from '../forms/Select'
 import Link from 'next/link'
+import { BirdeyePriceHistoryData } from '../../types/birdeye'
+import SimpleAreaChart from '../shared/SimpleAreaChart'
 
 type FormattedTableData = {
   change: number | undefined
+  chartData: BirdeyePriceHistoryData[] | undefined
   fdv: number
   logoURI: string | undefined
   price: number
@@ -172,10 +175,12 @@ const Explore = ({
           : 0
       const fdv = birdeyeData?.mc ? birdeyeData.mc : 0
       const logoURI = birdeyeData?.logoURI
+      const chartData = token.birdeyePrices
 
       const data = {
         tokenName,
         change,
+        chartData,
         price,
         volume,
         fdv,
@@ -260,6 +265,7 @@ const Explore = ({
                   />
                 </div>
               </Th>
+              <Th className="text-right">24h chart</Th>
               <Th>
                 <div className="flex justify-end">
                   <SortableColumnHeader
@@ -298,6 +304,7 @@ const Explore = ({
               const {
                 tokenName,
                 change,
+                chartData,
                 price,
                 volume,
                 fdv,
@@ -342,6 +349,28 @@ const Explore = ({
                     <p className="text-right">
                       {price ? `$${formatNumericValue(price)}` : '–'}
                     </p>
+                  </Td>
+                  <Td>
+                    <div className="flex justify-end">
+                      {chartData && chartData.length ? (
+                        <div className="h-9 w-20">
+                          <SimpleAreaChart
+                            color={
+                              chartData[0].value <=
+                              chartData[chartData.length - 1].value
+                                ? 'var(--up)'
+                                : 'var(--down)'
+                            }
+                            data={chartData}
+                            name={tokenName}
+                            xKey="unixTime"
+                            yKey="value"
+                          />
+                        </div>
+                      ) : (
+                        <p className="text-th-fgd-4">Unavailable</p>
+                      )}
+                    </div>
                   </Td>
                   <Td>
                     <p
