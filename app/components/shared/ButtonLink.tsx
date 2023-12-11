@@ -1,11 +1,12 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, ReactNode } from 'react'
 
 interface ButtonLinkProps {
   path: string
   className?: string
   secondary?: boolean
-  linkText: string
+  linkText: string | ReactNode
   size?: 'large' | 'medium' | 'small'
+  target?: '_blank'
 }
 
 const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
@@ -14,6 +15,7 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
   className,
   secondary,
   size = 'medium',
+  target,
 }) => {
   return (
     <a
@@ -30,6 +32,7 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
       } default-transition font-display focus:outline-none text-th-fgd-1 ${className}`}
       href={path}
       rel="noopener noreferrer"
+      target={target ? target : undefined}
     >
       {linkText}
     </a>

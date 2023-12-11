@@ -9,6 +9,8 @@ import {
 } from '../../../types/mango'
 import { numberCompacter } from '../../../utils/numbers'
 import KeyValuePairDisplay from './KeyValuePairDisplay'
+import ButtonLink from '../../shared/ButtonLink'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
 
 const TokenMangoStats = ({
   mangoData,
@@ -36,6 +38,7 @@ const TokenMangoStats = ({
   const mangoSpotSymbol = tokenPageData?.spotSymbol
   const mangoPerpSymbol = tokenPageData?.perpSymbol
   const listedMarketsForToken: FormattedMarketData[] = []
+  let usdcSpotMarket
   if (mangoMarketsData) {
     for (const markets of Object.entries(mangoMarketsData)) {
       for (const market of markets[1]) {
@@ -57,6 +60,9 @@ const TokenMangoStats = ({
         }
       }
     }
+    usdcSpotMarket = mangoMarketsData.spot.find(
+      (market) => market.name.split('/')[1] === 'USDC',
+    )
   }
   return (
     <div className="grid grid-cols-3 grid-flow-row gap-6">
@@ -100,7 +106,13 @@ const TokenMangoStats = ({
           <p>Listed markets</p>
           <div className="flex flex-wrap">
             {listedMarketsForToken.map((market) => (
-              <Link className="text-th-fgd-3" href="#" key={market.name}>
+              <Link
+                className="text-th-fgd-3"
+                href={`https://app.mango.markets/trade?name=${market.name}`}
+                key={market.name}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <div className="flex items-center justify-center border border-th-fgd-4 rounded-md mt-2 mr-2 px-2 py-0.5">
                   <span className="text-sm">{market.name}</span>
                 </div>
@@ -109,6 +121,30 @@ const TokenMangoStats = ({
           </div>
         </div>
       ) : null}
+      <div className="flex space-x-4 mt-4">
+        <ButtonLink
+          path={`https://app.mango.markets/swap?in=USDC&out=${mangoData?.symbol}`}
+          linkText={
+            <div className="flex items-center space-x-2">
+              <span className="whitespace-nowrap">{`Swap ${tokenPageData?.symbol}`}</span>
+              <ArrowTopRightOnSquareIcon className="h-5 w-5 flex-shrink-0" />
+            </div>
+          }
+          target="_blank"
+        />
+        {usdcSpotMarket ? (
+          <ButtonLink
+            path={`https://app.mango.markets/trade?name=${usdcSpotMarket.name}`}
+            linkText={
+              <div className="flex items-center space-x-2">
+                <span className="whitespace-nowrap">{`Trade ${tokenPageData?.symbol}`}</span>
+                <ArrowTopRightOnSquareIcon className="h-5 w-5 flex-shrink-0" />
+              </div>
+            }
+            target="_blank"
+          />
+        ) : null}
+      </div>
     </div>
   )
 }

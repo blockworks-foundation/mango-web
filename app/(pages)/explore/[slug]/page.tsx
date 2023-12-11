@@ -13,7 +13,6 @@ import { fetchMangoMarketData, fetchMangoTokenData } from '../../../utils/mango'
 import { MangoMarketsData, MangoTokenData } from '../../../types/mango'
 import Image from 'next/image'
 import TokenMangoStats from '../../../components/explore/token-page/TokenMangoStats'
-import ButtonLink from '../../../components/shared/ButtonLink'
 import { fetchCoingeckoData } from '../../../utils/coingecko'
 import { CoingeckoData } from '../../../types/coingecko'
 import DailyRange from '../../../components/explore/token-page/DailyRange'
@@ -133,11 +132,7 @@ async function TokenPage({ params }: TokenPageProps) {
             <DailyRange high={high24h} low={low24h} price={currentPrice} />
           </div>
         </div>
-        <div className="flex space-x-3">
-          <Links birdeyeData={birdeyeData} />
-          <ButtonLink path="#" linkText="Swap" secondary />
-          <ButtonLink path="#" linkText="Trade" secondary />
-        </div>
+        <Links birdeyeData={birdeyeData} />
       </div>
       <div className="grid grid-cols-12 gap-6 border-b border-th-bkg-3">
         <div className="col-span-12 md:col-span-7 lg:col-span-8 py-6">
