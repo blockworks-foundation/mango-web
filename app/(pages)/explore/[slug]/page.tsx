@@ -5,8 +5,7 @@ import {
   fetchTokenPage,
   fetchTokenPages,
 } from '../../../../contentful/tokenPage'
-import { makeApiRequest } from '../../../utils/birdeye'
-import { CUSTOM_TOKEN_ICONS, DAILY_SECONDS } from '../../../utils/constants'
+import { CUSTOM_TOKEN_ICONS } from '../../../utils/constants'
 import TokenPriceChart from '../../../components/explore/token-page/TokenPriceChart'
 import TokenAbout from '../../../components/explore/token-page/TokenAbout'
 import { fetchMangoMarketData, fetchMangoTokenData } from '../../../utils/mango'
@@ -16,7 +15,6 @@ import TokenMangoStats from '../../../components/explore/token-page/TokenMangoSt
 import { fetchCoingeckoData } from '../../../utils/coingecko'
 import { CoingeckoData } from '../../../types/coingecko'
 import DailyRange from '../../../components/explore/token-page/DailyRange'
-import { BirdeyePriceHistoryResponse } from '../../../types/birdeye'
 import Links from '../../../components/explore/token-page/Links'
 import TokenInfo from '../../../components/explore/token-page/TokenInfo'
 
@@ -83,27 +81,6 @@ async function TokenPage({ params }: TokenPageProps) {
   const coingeckoData: CoingeckoData | undefined =
     await fetchCoingeckoData(coingeckoId)
 
-  // get token security info from birdeye
-  //   const birdeyeSecurityDataResponse = await makeApiRequest(
-  //     `defi/token_security?address=${tokenPageData.mint}`,
-  //   )
-  //   const birdeyeSecurityData = birdeyeSecurityDataResponse?.success
-  //     ? birdeyeSecurityDataResponse?.data
-  //     : undefined
-
-  // get price history for token price chart
-  const queryEnd = Math.floor(Date.now() / 1000)
-  const queryStart = queryEnd - 30 * DAILY_SECONDS
-  const birdeyeQuery = `defi/history_price?address=${mint}&address_type=token&type=30m&time_from=${queryStart}&time_to=${queryEnd}`
-  const birdeyePricesResponse: BirdeyePriceHistoryResponse =
-    await makeApiRequest(birdeyeQuery)
-  const birdeyePrices = birdeyePricesResponse?.data?.items?.length
-    ? birdeyePricesResponse.data.items
-    : []
-  for (const data of birdeyePrices) {
-    data.unixTime = data.unixTime * 1000
-  }
-
   const hasCustomIcon = Object.keys(CUSTOM_TOKEN_ICONS).find(
     (icon) => icon === mangoTokenData?.symbol?.toLowerCase(),
   )
@@ -113,9 +90,12 @@ async function TokenPage({ params }: TokenPageProps) {
 
   const high24h = coingeckoData?.market_data?.high_24h?.usd
   const low24h = coingeckoData?.market_data?.low_24h?.usd
-  const currentPrice = birdeyePrices?.length
-    ? birdeyePrices[birdeyePrices.length - 1]?.value
-    : 0
+  const currentPrice = coingeckoData?.market_data?.current_price?.usd
+  const lastUpdated = coingeckoData?.last_updated
+  const latestChartData =
+    currentPrice && lastUpdated
+      ? [{ unixTime: new Date(lastUpdated).getTime(), value: currentPrice }]
+      : []
 
   return (
     <div>
@@ -136,7 +116,7 @@ async function TokenPage({ params }: TokenPageProps) {
       </div>
       <div className="grid grid-cols-12 gap-6 border-b border-th-bkg-3">
         <div className="col-span-12 md:col-span-7 lg:col-span-8 py-6">
-          <TokenPriceChart chartData={birdeyePrices} />
+          <TokenPriceChart latestChartData={latestChartData} mint={mint} />
         </div>
         <div className="col-span-12 md:col-span-5 lg:col-span-4 bg-th-bkg-2 p-6">
           <TokenInfo

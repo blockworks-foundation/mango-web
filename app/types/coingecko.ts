@@ -31,5 +31,9 @@ export interface CoingeckoData {
     fully_diluted_valuation: {
       usd: number
     }
+    current_price: {
+      usd: number
+    }
   }
+  last_updated: string
 }
