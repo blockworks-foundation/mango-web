@@ -23,7 +23,7 @@ const Footer = () => {
                 </span>
               </div>
             </Link>
-            <p className="mt-3 mb-4 max-w-[420px] text-base text-center lg:text-left">
+            <p className="mt-3 mb-4 max-w-[420px] text-sm text-center lg:text-left">
               Transparency and integrity are core values in our mission to
               create products that empower individual financial freedom.
             </p>
@@ -38,6 +38,12 @@ const Footer = () => {
             </div>
           </div>
           <div className="w-full lg:w-3/4 flex flex-col sm:flex-row items-start justify-end sm:space-x-8 mb-8 lg:mb-0 border-b border-th-bkg-3 lg:border-b-0 pb-6 lg:pb-0">
+            <FooterLinkColumn title="Explore">
+              <FooterLink path="/explore" title="All" />
+              <FooterLink path="/explore?category=DeFi" title="DeFi" />
+              <FooterLink path="/explore?category=Meme" title="Meme" />
+              <FooterLink path="/explore?category=Exchange" title="Exchange" />
+            </FooterLinkColumn>
             <FooterLinkColumn title="Developers">
               <FooterLink
                 path="https://docs.mango.markets"

@@ -24,11 +24,12 @@ import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react'
 import { useSortableData } from '../../hooks/useSortableData'
 import Input from '../forms/Input'
 import Select from '../forms/Select'
-import Link from 'next/link'
 import { BirdeyePriceHistoryData } from '../../types/birdeye'
 import SimpleAreaChart from '../shared/SimpleAreaChart'
+import { useViewport } from '../../hooks/useViewport'
+import TokenCard from './TokenCard'
 
-type FormattedTableData = {
+export type FormattedTableData = {
   change: number | undefined
   chartData: BirdeyePriceHistoryData[] | undefined
   fdv: number
@@ -110,6 +111,7 @@ const Explore = ({
   const router = useRouter()
   const searchParams = useSearchParams()
   const category = searchParams.get('category')
+  const { isDesktop } = useViewport()
   const [searchString, setSearchString] = useState('')
   const [selectedCategory, setSelectedCategory] = useState(category || 'All')
 
@@ -195,6 +197,16 @@ const Explore = ({
     return formatted
   }, [filteredTokens, mangoTokensData])
 
+  const handleSetCategory = useCallback(
+    (cat: string) => {
+      setSelectedCategory(cat)
+      if (category && cat === 'All') {
+        router.replace('/explore', { shallow: true })
+      }
+    },
+    [category],
+  )
+
   const {
     items: tableData,
     requestSort,
@@ -203,36 +215,26 @@ const Explore = ({
 
   return (
     <>
-      <div className="mb-10 flex items-center justify-between">
-        <h1 className="text-4xl">{`Explore ${
-          category ? category : 'listed tokens'
+      <div className="mb-10 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <h1 className="text-4xl mb-4 lg:mb-0">{`Explore ${
+          selectedCategory !== 'All' ? selectedCategory : 'listed tokens'
         }`}</h1>
         <div className="flex space-x-2">
-          {!category ? (
-            <Select
-              value={selectedCategory}
-              onChange={(cat) => setSelectedCategory(cat)}
-              className="w-44 text-left whitespace-nowrap"
-            >
-              <>
-                <Select.Option value="All">All</Select.Option>
-                {categories.map((cat) => (
-                  <Select.Option key={cat} value={cat}>
-                    {cat}
-                  </Select.Option>
-                ))}
-              </>
-            </Select>
-          ) : (
-            <Link
-              className="flex items-center justify-center mr-3 text-th-fgd-3 underline md:hover:no-underline"
-              href="/explore"
-              shallow
-            >
-              Show all
-            </Link>
-          )}
-          <div className="relative mb-3 w-full lg:mb-0 lg:w-44">
+          <Select
+            value={selectedCategory}
+            onChange={(cat) => handleSetCategory(cat)}
+            className="w-1/2 lg:w-44 h-10 text-left whitespace-nowrap"
+          >
+            <>
+              <Select.Option value="All">All</Select.Option>
+              {categories.map((cat) => (
+                <Select.Option key={cat} value={cat}>
+                  {cat}
+                </Select.Option>
+              ))}
+            </>
+          </Select>
+          <div className="relative w-1/2 lg:mb-0 lg:w-44">
             <Input
               heightClass="h-10 pl-8"
               type="text"
@@ -244,176 +246,190 @@ const Explore = ({
         </div>
       </div>
       {tableData.length ? (
-        <Table>
-          <thead>
-            <TrHead>
-              <Th className="text-left">
-                <SortableColumnHeader
-                  sortKey="tokenName"
-                  sort={() => requestSort('tokenName')}
-                  sortConfig={sortConfig}
-                  title="Token"
-                />
-              </Th>
-              <Th>
-                <div className="flex justify-end">
+        isDesktop ? (
+          <Table>
+            <thead>
+              <TrHead>
+                <Th className="text-left">
                   <SortableColumnHeader
-                    sortKey="price"
-                    sort={() => requestSort('price')}
+                    sortKey="tokenName"
+                    sort={() => requestSort('tokenName')}
                     sortConfig={sortConfig}
-                    title="Price"
+                    title="Token"
                   />
-                </div>
-              </Th>
-              <Th className="text-right">24h chart</Th>
-              <Th>
-                <div className="flex justify-end">
-                  <SortableColumnHeader
-                    sortKey="change"
-                    sort={() => requestSort('change')}
-                    sortConfig={sortConfig}
-                    title="24h Change"
-                  />
-                </div>
-              </Th>
-              <Th>
-                <div className="flex justify-end">
-                  <SortableColumnHeader
-                    sortKey="volume"
-                    sort={() => requestSort('volume')}
-                    sortConfig={sortConfig}
-                    title="24h Volume"
-                  />
-                </div>
-              </Th>
-              <Th>
-                <div className="flex justify-end">
-                  <SortableColumnHeader
-                    sortKey="fdv"
-                    sort={() => requestSort('fdv')}
-                    sortConfig={sortConfig}
-                    title="FDV"
-                  />
-                </div>
-              </Th>
-              <Th />
-            </TrHead>
-          </thead>
-          <tbody>
-            {tableData.map((token) => {
-              const {
-                tokenName,
-                change,
-                chartData,
-                price,
-                volume,
-                fdv,
-                mangoSymbol,
-                logoURI,
-                symbol,
-                slug,
-              } = token
-              const hasCustomIcon = mangoSymbol
-                ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
-                : false
-              const logoPath = hasCustomIcon
-                ? `/icons/tokens/${mangoSymbol?.toLowerCase()}.svg`
-                : logoURI
-              return (
-                <TrBody
-                  key={slug}
-                  className="default-transition md:hover:cursor-pointer md:hover:bg-th-bkg-2"
-                  onClick={() => goToTokenPage(slug, router)}
-                >
-                  <Td>
-                    <div className="flex items-center space-x-3">
-                      {logoPath ? (
-                        <Image
-                          src={logoPath}
-                          alt="Logo"
-                          height={32}
-                          width={32}
-                        />
-                      ) : (
-                        <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
-                      )}
-                      <div>
-                        <p>{tokenName}</p>
-                        <p className="text-sm text-th-fgd-4">
-                          {symbol || mangoSymbol}
-                        </p>
-                      </div>
-                    </div>
-                  </Td>
-                  <Td>
-                    <p className="text-right">
-                      {price ? `$${formatNumericValue(price)}` : '–'}
-                    </p>
-                  </Td>
-                  <Td>
-                    <div className="flex justify-end">
-                      {chartData && chartData.length ? (
-                        <div className="h-9 w-20">
-                          <SimpleAreaChart
-                            color={
-                              chartData[0].value <=
-                              chartData[chartData.length - 1].value
-                                ? 'var(--up)'
-                                : 'var(--down)'
-                            }
-                            data={chartData}
-                            name={tokenName}
-                            xKey="unixTime"
-                            yKey="value"
+                </Th>
+                <Th>
+                  <div className="flex justify-end">
+                    <SortableColumnHeader
+                      sortKey="price"
+                      sort={() => requestSort('price')}
+                      sortConfig={sortConfig}
+                      title="Price"
+                    />
+                  </div>
+                </Th>
+                <Th className="text-right">24h chart</Th>
+                <Th>
+                  <div className="flex justify-end">
+                    <SortableColumnHeader
+                      sortKey="change"
+                      sort={() => requestSort('change')}
+                      sortConfig={sortConfig}
+                      title="24h Change"
+                    />
+                  </div>
+                </Th>
+                <Th>
+                  <div className="flex justify-end">
+                    <SortableColumnHeader
+                      sortKey="volume"
+                      sort={() => requestSort('volume')}
+                      sortConfig={sortConfig}
+                      title="24h Volume"
+                    />
+                  </div>
+                </Th>
+                <Th>
+                  <div className="flex justify-end">
+                    <SortableColumnHeader
+                      sortKey="fdv"
+                      sort={() => requestSort('fdv')}
+                      sortConfig={sortConfig}
+                      title="FDV"
+                    />
+                  </div>
+                </Th>
+                <Th />
+              </TrHead>
+            </thead>
+            <tbody>
+              {tableData.map((token) => {
+                const {
+                  tokenName,
+                  change,
+                  chartData,
+                  price,
+                  volume,
+                  fdv,
+                  mangoSymbol,
+                  logoURI,
+                  symbol,
+                  slug,
+                } = token
+                const hasCustomIcon = mangoSymbol
+                  ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
+                  : false
+                const logoPath = hasCustomIcon
+                  ? `/icons/tokens/${mangoSymbol?.toLowerCase()}.svg`
+                  : logoURI
+                return (
+                  <TrBody
+                    key={slug}
+                    className="default-transition md:hover:cursor-pointer md:hover:bg-th-bkg-2"
+                    onClick={() => goToTokenPage(slug, router)}
+                  >
+                    <Td>
+                      <div className="flex items-center space-x-3">
+                        {logoPath ? (
+                          <Image
+                            src={logoPath}
+                            alt="Logo"
+                            height={32}
+                            width={32}
                           />
+                        ) : (
+                          <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
+                        )}
+                        <div>
+                          <p>{tokenName}</p>
+                          <p className="text-sm text-th-fgd-4">
+                            {symbol || mangoSymbol}
+                          </p>
                         </div>
-                      ) : (
-                        <p className="text-th-fgd-4">Unavailable</p>
-                      )}
-                    </div>
-                  </Td>
-                  <Td>
-                    <p
-                      className={`text-right ${
-                        !change
-                          ? 'text-th-fgd-3'
-                          : change > 0
-                            ? 'text-th-up'
-                            : change < 0
-                              ? 'text-th-down'
-                              : 'text-th-fgd-3'
-                      }`}
-                    >
-                      {change ? `${change.toFixed(2)}%` : '–'}
-                    </p>
-                  </Td>
-                  <Td>
-                    <p className="text-right">
-                      {volume ? `$${numberCompacter.format(volume)}` : '–'}
-                    </p>
-                  </Td>
-                  <Td>
-                    <p className="text-right">
-                      {fdv ? `$${numberCompacter.format(fdv)}` : '–'}
-                    </p>
-                  </Td>
-                  <Td>
-                    <div className="flex items-center justify-end">
-                      <ChevronRightIcon className="h-5 w-5 text-th-fgd-4" />
-                    </div>
-                  </Td>
-                </TrBody>
-              )
-            })}
-          </tbody>
-        </Table>
+                      </div>
+                    </Td>
+                    <Td>
+                      <p className="text-right">
+                        {price ? `$${formatNumericValue(price)}` : '–'}
+                      </p>
+                    </Td>
+                    <Td>
+                      <div className="flex justify-end">
+                        {chartData && chartData.length ? (
+                          <div className="h-9 w-20">
+                            <SimpleAreaChart
+                              color={
+                                chartData[0].value <=
+                                chartData[chartData.length - 1].value
+                                  ? 'var(--up)'
+                                  : 'var(--down)'
+                              }
+                              data={chartData}
+                              name={tokenName}
+                              xKey="unixTime"
+                              yKey="value"
+                            />
+                          </div>
+                        ) : (
+                          <p className="text-th-fgd-4">Unavailable</p>
+                        )}
+                      </div>
+                    </Td>
+                    <Td>
+                      <p
+                        className={`text-right ${
+                          !change
+                            ? 'text-th-fgd-3'
+                            : change > 0
+                              ? 'text-th-up'
+                              : change < 0
+                                ? 'text-th-down'
+                                : 'text-th-fgd-3'
+                        }`}
+                      >
+                        {change ? `${change.toFixed(2)}%` : '–'}
+                      </p>
+                    </Td>
+                    <Td>
+                      <p className="text-right">
+                        {volume ? `$${numberCompacter.format(volume)}` : '–'}
+                      </p>
+                    </Td>
+                    <Td>
+                      <p className="text-right">
+                        {fdv ? `$${numberCompacter.format(fdv)}` : '–'}
+                      </p>
+                    </Td>
+                    <Td>
+                      <div className="flex items-center justify-end">
+                        <ChevronRightIcon className="h-5 w-5 text-th-fgd-4" />
+                      </div>
+                    </Td>
+                  </TrBody>
+                )
+              })}
+            </tbody>
+          </Table>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {tableData.map((data) => (
+              <TokenCard token={data} key={data.slug} />
+            ))}
+          </div>
+        )
       ) : (
-        <div className="border border-th-bkg-3 p-6 rounded-xl flex items-center justify-center">
-          <p>No tokens found...</p>
-        </div>
+        <NoTokenResults />
       )}
     </>
   )
 }
 
 export default Explore
+
+const NoTokenResults = () => {
+  return (
+    <div className="border border-th-bkg-3 p-6 rounded-xl flex items-center justify-center">
+      <p>No tokens found...</p>
+    </div>
+  )
+}
