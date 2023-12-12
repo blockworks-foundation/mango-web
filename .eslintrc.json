@@ -38,12 +38,6 @@
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_"
       }
-    ],
-    "no-console": [
-      2,
-      {
-        "allow": ["warn", "error"]
-      }
     ]
   }
 }
