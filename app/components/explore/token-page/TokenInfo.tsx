@@ -111,7 +111,7 @@ const TokenInfo = ({
                   ) : null}
                 </span>
                 {coingeckoData?.market_data?.ath_date?.usd ? (
-                  <span className="text-xs text-th-fgd-4">
+                  <span className="text-xs text-th-fgd-4 text-right">
                     {dayjs(coingeckoData.market_data.ath_date.usd).format(
                       'DD MMM YYYY',
                     )}{' '}
@@ -148,7 +148,7 @@ const TokenInfo = ({
                   ) : null}
                 </span>
                 {coingeckoData?.market_data?.atl_date?.usd ? (
-                  <span className="text-xs text-th-fgd-4">
+                  <span className="text-xs text-th-fgd-4 text-right">
                     {dayjs(coingeckoData.market_data.atl_date.usd).format(
                       'DD MMM YYYY',
                     )}{' '}

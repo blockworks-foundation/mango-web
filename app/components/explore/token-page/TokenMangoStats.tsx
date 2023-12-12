@@ -65,63 +65,73 @@ const TokenMangoStats = ({
     )
   }
   return (
-    <div className="grid grid-cols-3 grid-flow-row gap-6">
-      <KeyValuePairDisplay
-        label="Deposit rate"
-        value={
-          <span
-            className={
-              isNaN(mangoData?.deposit_rate) ? 'text-th-fgd-4' : 'text-th-up'
-            }
-          >
-            {depositRate}%
-          </span>
-        }
-      />
-      <KeyValuePairDisplay
-        label="Borrow rate"
-        value={
-          <span
-            className={
-              isNaN(mangoData?.borrow_rate) ? 'text-th-fgd-4' : 'text-th-down'
-            }
-          >
-            {borrowRate}%
-          </span>
-        }
-      />
-      <div>
-        <KeyValuePairDisplay
-          label="Available"
-          value={
-            <span>
-              {available}{' '}
-              <span className="text-sm text-th-fgd-4">${availableValue}</span>
-            </span>
-          }
-        />
-      </div>
-      {listedMarketsForToken.length ? (
-        <div className="col-span-3">
-          <p>Listed markets</p>
-          <div className="flex flex-wrap">
-            {listedMarketsForToken.map((market) => (
-              <Link
-                className="text-th-fgd-3"
-                href={`https://app.mango.markets/trade?name=${market.name}`}
-                key={market.name}
-                rel="noopener noreferrer"
-                target="_blank"
+    <>
+      <div className="grid grid-cols-3 gap-6">
+        <div className="col-span-3 sm:col-span-1">
+          <KeyValuePairDisplay
+            label="Deposit rate"
+            value={
+              <span
+                className={
+                  isNaN(mangoData?.deposit_rate)
+                    ? 'text-th-fgd-4'
+                    : 'text-th-up'
+                }
               >
-                <div className="flex items-center justify-center border border-th-fgd-4 rounded-md mt-2 mr-2 px-2 py-0.5">
-                  <span className="text-sm">{market.name}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+                {depositRate}%
+              </span>
+            }
+          />
         </div>
-      ) : null}
-      <div className="flex space-x-4 mt-4">
+        <div className="col-span-3 sm:col-span-1">
+          <KeyValuePairDisplay
+            label="Borrow rate"
+            value={
+              <span
+                className={
+                  isNaN(mangoData?.borrow_rate)
+                    ? 'text-th-fgd-4'
+                    : 'text-th-down'
+                }
+              >
+                {borrowRate}%
+              </span>
+            }
+          />
+        </div>
+        <div className="col-span-3 sm:col-span-1">
+          <KeyValuePairDisplay
+            label="Available"
+            value={
+              <span>
+                {available}{' '}
+                <span className="text-sm text-th-fgd-4">${availableValue}</span>
+              </span>
+            }
+          />
+        </div>
+        {listedMarketsForToken.length ? (
+          <div className="col-span-3">
+            <p>Listed markets</p>
+            <div className="flex flex-wrap">
+              {listedMarketsForToken.map((market) => (
+                <Link
+                  className="text-th-fgd-3"
+                  href={`https://app.mango.markets/trade?name=${market.name}`}
+                  key={market.name}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <div className="flex items-center justify-center border border-th-fgd-4 rounded-md mt-2 mr-2 px-2 py-0.5">
+                    <span className="text-sm">{market.name}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
+      <div className="flex space-x-4 mt-8">
         <ButtonLink
           path={`https://app.mango.markets/swap?in=USDC&out=${mangoData?.symbol}`}
           linkText={
@@ -145,7 +155,7 @@ const TokenMangoStats = ({
           />
         ) : null}
       </div>
-    </div>
+    </>
   )
 }
 

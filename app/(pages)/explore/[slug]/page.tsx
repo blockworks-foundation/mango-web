@@ -99,10 +99,10 @@ async function TokenPage({ params }: TokenPageProps) {
 
   return (
     <div>
-      <div className="pb-6 border-b border-th-bkg-3 flex items-end justify-between">
-        <div className="flex items-center space-x-3.5">
+      <div className="pb-6 border-b border-th-bkg-3 flex flex-col-reverse md:flex-row md:items-end md:justify-between">
+        <div className="flex items-center space-x-3.5 w-full">
           <Image src={logoPath} alt="Logo" height={56} width={56} />
-          <div>
+          <div className="w-full">
             <h1 className="mb-1 text-4xl">
               {tokenName}{' '}
               <span className="text-xl font-body font-normal text-th-fgd-4">
@@ -112,13 +112,15 @@ async function TokenPage({ params }: TokenPageProps) {
             <DailyRange high={high24h} low={low24h} price={currentPrice} />
           </div>
         </div>
-        <Links birdeyeData={birdeyeData} />
+        <div className="flex justify-end">
+          <Links birdeyeData={birdeyeData} />
+        </div>
       </div>
       <div className="grid grid-cols-12 gap-6 border-b border-th-bkg-3">
-        <div className="col-span-12 md:col-span-7 lg:col-span-8 py-6">
+        <div className="col-span-12 lg:col-span-8 py-6">
           <TokenPriceChart latestChartData={latestChartData} mint={mint} />
         </div>
-        <div className="col-span-12 md:col-span-5 lg:col-span-4 bg-th-bkg-2 p-6">
+        <div className="col-span-12 lg:col-span-4 bg-th-bkg-2 p-6 rounded-xl lg:rounded-none">
           <TokenInfo
             coingeckoData={coingeckoData}
             tokenPageData={tokenPageData}
