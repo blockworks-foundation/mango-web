@@ -26,8 +26,6 @@ const TokenInfo = ({
   const { mint, tags } = tokenPageData
   const [copied, setCopied] = useState(false)
 
-  console.log(coingeckoData)
-
   const handleCopyMint = (text: string) => {
     copyToClipboard(text)
     setCopied(true)
