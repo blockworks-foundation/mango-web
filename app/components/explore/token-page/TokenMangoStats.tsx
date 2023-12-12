@@ -22,17 +22,17 @@ const TokenMangoStats = ({
   tokenPageData: TokenPageWithData | null
 }) => {
   if (!mangoData) return null
-  const depositRate = mangoData?.deposit_rate
+  const depositRate = !isNaN(mangoData?.deposit_rate)
     ? (mangoData.deposit_rate * 100).toFixed(2)
     : '–'
-  const borrowRate = mangoData?.borrow_rate
+  const borrowRate = !isNaN(mangoData?.borrow_rate)
     ? (mangoData.borrow_rate * 100).toFixed(2)
     : '–'
-  const available = mangoData?.available
+  const available = !isNaN(mangoData?.available)
     ? numberCompacter.format(mangoData.available)
     : '–'
   const availableValue =
-    mangoData?.available && mangoData?.price
+    !isNaN(mangoData?.available) && mangoData?.price
       ? numberCompacter.format(mangoData.available * mangoData.price)
       : '–'
   const mangoSpotSymbol = tokenPageData?.spotSymbol
