@@ -44,7 +44,7 @@ export type FormattedTableData = {
 }
 
 export const goToTokenPage = (slug: string, router: AppRouterInstance) => {
-  router.push(`/explore/${slug}`, { shallow: true })
+  router.push(`/explore/${slug}`)
 }
 
 const generateSearchTerm = (item: TokenPageWithData, searchValue: string) => {
