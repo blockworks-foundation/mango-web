@@ -26,6 +26,8 @@ const TokenInfo = ({
   const { mint, tags } = tokenPageData
   const [copied, setCopied] = useState(false)
 
+  console.log(coingeckoData)
+
   const handleCopyMint = (text: string) => {
     copyToClipboard(text)
     setCopied(true)
@@ -92,7 +94,7 @@ const TokenInfo = ({
           value={
             coingeckoData?.market_data?.ath?.usd ? (
               <span className="flex flex-col items-end">
-                <span className="text-th-fgd-1 text-sm">
+                <span className="text-th-fgd-1 text-sm text-right">
                   {`$${formatNumericValue(coingeckoData.market_data.ath.usd)}`}{' '}
                   {coingeckoData?.market_data?.ath_change_percentage?.usd ? (
                     <span
@@ -129,7 +131,7 @@ const TokenInfo = ({
           value={
             coingeckoData?.market_data?.atl?.usd ? (
               <span className="flex flex-col items-end">
-                <span className="text-th-fgd-1 text-sm">
+                <span className="text-th-fgd-1 text-sm text-right">
                   {`$${formatNumericValue(coingeckoData.market_data.atl.usd)}`}{' '}
                   {coingeckoData?.market_data?.atl_change_percentage?.usd ? (
                     <span
