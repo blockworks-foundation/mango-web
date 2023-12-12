@@ -75,16 +75,23 @@ async function TokenPage({ params }: TokenPageProps) {
     tokenPageData
 
   // get mango specific token data
-  const mangoTokenData: MangoTokenData | undefined =
-    await fetchMangoTokenData(mint)
+  const mangoTokenDataPromise: Promise<MangoTokenData> =
+    fetchMangoTokenData(mint)
 
   // get data on all markets listed on mango
-  const mangoMarketsData: MangoMarketsData | undefined =
-    await fetchMangoMarketData()
+  const mangoMarketsDataPromise: Promise<MangoMarketsData> =
+    fetchMangoMarketData()
 
   // get coingecko token data
-  const coingeckoData: CoingeckoData | undefined =
-    await fetchCoingeckoData(coingeckoId)
+  const coingeckoDataPromise: Promise<CoingeckoData> =
+    fetchCoingeckoData(coingeckoId)
+
+  // Wait for the promises to resolve
+  const [mangoTokenData, mangoMarketsData, coingeckoData] = await Promise.all([
+    mangoTokenDataPromise,
+    mangoMarketsDataPromise,
+    coingeckoDataPromise,
+  ])
 
   const hasCustomIcon = Object.keys(CUSTOM_TOKEN_ICONS).find(
     (icon) => icon === mangoTokenData?.symbol?.toLowerCase(),
