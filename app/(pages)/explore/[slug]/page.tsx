@@ -6,7 +6,6 @@ import {
   fetchTokenPages,
 } from '../../../../contentful/tokenPage'
 import { CUSTOM_TOKEN_ICONS } from '../../../utils/constants'
-import TokenPriceChart from '../../../components/explore/token-page/TokenPriceChart'
 import TokenAbout from '../../../components/explore/token-page/TokenAbout'
 import { fetchMangoMarketData, fetchMangoTokenData } from '../../../utils/mango'
 import { MangoMarketsData, MangoTokenData } from '../../../types/mango'
@@ -17,6 +16,11 @@ import { CoingeckoData } from '../../../types/coingecko'
 import DailyRange from '../../../components/explore/token-page/DailyRange'
 import Links from '../../../components/explore/token-page/Links'
 import TokenInfo from '../../../components/explore/token-page/TokenInfo'
+import dynamic from 'next/dynamic'
+const TokenPriceChart = dynamic(
+  () => import('../../../components/explore/token-page/TokenPriceChart'),
+  { ssr: false },
+)
 
 const SECTION_WRAPPER_CLASSES = 'border-t border-th-bkg-3 pt-6 mt-12'
 
