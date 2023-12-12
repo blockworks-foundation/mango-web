@@ -17,6 +17,7 @@ import DailyRange from '../../../components/explore/token-page/DailyRange'
 import Links from '../../../components/explore/token-page/Links'
 import TokenInfo from '../../../components/explore/token-page/TokenInfo'
 import dynamic from 'next/dynamic'
+import DataDisclaimer from '../../../components/explore/DataDisclaimer'
 const TokenPriceChart = dynamic(
   () => import('../../../components/explore/token-page/TokenPriceChart'),
   { ssr: false },
@@ -146,6 +147,7 @@ async function TokenPage({ params }: TokenPageProps) {
           <TokenAbout content={description} />
         </div>
       ) : null}
+      <DataDisclaimer />
     </div>
   )
 }
