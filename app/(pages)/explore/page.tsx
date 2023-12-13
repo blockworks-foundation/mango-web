@@ -4,11 +4,16 @@ import { draftMode } from 'next/headers'
 import { fetchMangoTokensData } from '../../utils/mango'
 import { Metadata } from 'next'
 import DataDisclaimer from '../../components/explore/DataDisclaimer'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Explore Listed Tokens on Mango Markets',
   description:
     'Live prices, charts, stats and alpha on every token listed on Mango Markets.',
+}
+
+function ExploreFallback() {
+  return <></>
 }
 
 async function ExplorePage() {
@@ -19,7 +24,9 @@ async function ExplorePage() {
   return (
     <>
       {tokens && tokens?.length ? (
-        <Explore tokens={tokens} mangoTokensData={mangoTokensData} />
+        <Suspense fallback={<ExploreFallback />}>
+          <Explore tokens={tokens} mangoTokensData={mangoTokensData} />
+        </Suspense>
       ) : (
         <div className="p-6 rounded-xl border border-th-bkg-3">
           <p className="text-center">

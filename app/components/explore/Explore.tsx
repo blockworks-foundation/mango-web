@@ -19,6 +19,8 @@ import {
   ChevronRightIcon,
   MagnifyingGlassIcon,
   QuestionMarkCircleIcon,
+  Squares2X2Icon,
+  TableCellsIcon,
 } from '@heroicons/react/20/solid'
 import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react'
 import { useSortableData } from '../../hooks/useSortableData'
@@ -112,6 +114,7 @@ const Explore = ({
   const searchParams = useSearchParams()
   const category = searchParams?.get('category')
   const { isDesktop } = useViewport()
+  const [showTableView, setShowTableView] = useState(true)
   const [searchString, setSearchString] = useState('')
   const [selectedCategory, setSelectedCategory] = useState(category || 'All')
 
@@ -213,6 +216,10 @@ const Explore = ({
     sortConfig,
   } = useSortableData(formattedTableData())
 
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  if (!mounted) return null
+
   return (
     <>
       <div className="mb-10 flex flex-col lg:flex-row lg:items-center lg:justify-between">
@@ -243,10 +250,32 @@ const Explore = ({
             />
             <MagnifyingGlassIcon className="absolute left-2 top-3 h-4 w-4 text-th-fgd-3" />
           </div>
+          {isDesktop ? (
+            <div className="flex h-10">
+              <button
+                className={`flex w-10 items-center justify-center rounded-l-md border border-th-input-border border-r-0 focus:outline-none md:hover:bg-th-bkg-3 ${
+                  showTableView ? 'bg-th-bkg-3 text-th-active' : 'text-th-fgd-3'
+                }`}
+                onClick={() => setShowTableView(!showTableView)}
+              >
+                <TableCellsIcon className="h-5 w-5" />
+              </button>
+              <button
+                className={`flex w-10 items-center justify-center rounded-r-md border border-th-input-border border-l-0 focus:outline-none md:hover:bg-th-bkg-3 ${
+                  !showTableView
+                    ? 'bg-th-bkg-3 text-th-active'
+                    : 'text-th-fgd-3'
+                }`}
+                onClick={() => setShowTableView(!showTableView)}
+              >
+                <Squares2X2Icon className="h-5 w-5" />
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
       {tableData.length ? (
-        isDesktop ? (
+        isDesktop && showTableView ? (
           <Table>
             <thead>
               <TrHead>
