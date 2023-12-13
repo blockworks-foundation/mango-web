@@ -25,6 +25,7 @@ export interface TokenPage {
   seoDescription: string
   perpSymbol: string | undefined
   spotSymbol: string
+  lastModified: string
 }
 
 export interface TokenPageWithData extends TokenPage {
@@ -53,6 +54,7 @@ export function parseContentfulTokenPage(
     seoDescription: tokenPageEntry.fields.seoDescription,
     perpSymbol: tokenPageEntry.fields.perpSymbol || undefined,
     spotSymbol: tokenPageEntry.fields.spotSymbol,
+    lastModified: tokenPageEntry.sys.updatedAt,
   }
 }
 
