@@ -30,6 +30,7 @@ import { BirdeyePriceHistoryData } from '../../types/birdeye'
 import SimpleAreaChart from '../shared/SimpleAreaChart'
 import { useViewport } from '../../hooks/useViewport'
 import TokenCard from './TokenCard'
+import DataDisclaimer from './DataDisclaimer'
 
 export type FormattedTableData = {
   change: number | undefined
@@ -449,6 +450,7 @@ const Explore = ({
       ) : (
         <NoTokenResults />
       )}
+      <DataDisclaimer />
     </>
   )
 }

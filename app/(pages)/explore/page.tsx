@@ -3,7 +3,6 @@ import Explore from '../../components/explore/Explore'
 import { draftMode } from 'next/headers'
 import { fetchMangoTokensData } from '../../utils/mango'
 import { Metadata } from 'next'
-import DataDisclaimer from '../../components/explore/DataDisclaimer'
 import { Suspense } from 'react'
 
 export const metadata: Metadata = {
@@ -22,7 +21,7 @@ async function ExplorePage() {
   })
   const mangoTokensData = await fetchMangoTokensData()
   return (
-    <>
+    <div className="h-full">
       {tokens && tokens?.length ? (
         <Suspense fallback={<ExploreFallback />}>
           <Explore tokens={tokens} mangoTokensData={mangoTokensData} />
@@ -34,8 +33,7 @@ async function ExplorePage() {
           </p>
         </div>
       )}
-      <DataDisclaimer />
-    </>
+    </div>
   )
 }
 
