@@ -14,7 +14,8 @@
     "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
     "test": "jest",
     "test-all": "yarn lint && yarn type-check && yarn test",
-    "types:contentful": "export $(cat .env.local | awk '!/^\\s*#/' | awk '!/^\\s*$/'); npx cf-content-types-generator --spaceId $NEXT_PUBLIC_CONTENTFUL_SPACE_ID --token $NEXT_PUBLIC_CONTENTFUL_MANAGEMENT_TOKEN -o contentful/types -X && prettier --write contentful/types"
+    "types:contentful": "export $(cat .env.local | awk '!/^\\s*#/' | awk '!/^\\s*$/'); npx cf-content-types-generator --spaceId $NEXT_PUBLIC_CONTENTFUL_SPACE_ID --token $NEXT_PUBLIC_CONTENTFUL_MANAGEMENT_TOKEN -o contentful/types -X && prettier --write contentful/types",
+    "update-category-pages": "node contentful/updateCategoryPages.ts"
   },
   "engines": {
     "node": ">=18.x"
@@ -31,8 +32,10 @@
     "@tanstack/react-query": "^5.8.4",
     "@tippyjs/react": "^4.2.6",
     "contentful": "^10.6.12",
+    "contentful-management": "^11.6.1",
     "dayjs": "^1.11.10",
     "decimal.js": "^10.4.3",
+    "dotenv": "^16.3.1",
     "gsap": "^3.12.2",
     "i18next": "^23.7.6",
     "i18next-resources-to-backend": "^1.2.0",
