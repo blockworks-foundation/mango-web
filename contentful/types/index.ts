@@ -4,3 +4,8 @@ export type {
   TypeBlogPostSkeleton,
 } from './TypeBlogPost'
 export type { TypeToken, TypeTokenFields, TypeTokenSkeleton } from './TypeToken'
+export type {
+  TypeTokenCategory,
+  TypeTokenCategoryFields,
+  TypeTokenCategorySkeleton,
+} from './TypeTokenCategory'

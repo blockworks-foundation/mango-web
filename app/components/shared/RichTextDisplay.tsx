@@ -1,7 +1,11 @@
 import { Document as RichTextDocument } from '@contentful/rich-text-types'
-import RichText from '../../../../contentful/RichText'
+import RichText from '../../../contentful/RichText'
 
-const TokenAbout = ({ content }: { content: RichTextDocument | undefined }) => {
+const RichTextDisplay = ({
+  content,
+}: {
+  content: RichTextDocument | undefined
+}) => {
   return (
     <div className="max-w-4xl">
       <RichText document={content} />
@@ -9,4 +13,4 @@ const TokenAbout = ({ content }: { content: RichTextDocument | undefined }) => {
   )
 }
 
-export default TokenAbout
+export default RichTextDisplay

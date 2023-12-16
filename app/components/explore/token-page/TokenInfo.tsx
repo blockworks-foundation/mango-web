@@ -12,6 +12,7 @@ import {
   DocumentDuplicateIcon,
 } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import { tagToSlug } from '../TokenTable'
 dayjs.extend(relativeTime)
 
 const TokenInfo = ({
@@ -166,18 +167,21 @@ const TokenInfo = ({
         <>
           <h2 className="text-base">Categories</h2>
           <div className="flex flex-wrap">
-            {tags.map((tag) => (
-              <Link
-                className="text-th-fgd-3"
-                href={{ pathname: '/explore', query: { category: tag } }}
-                key={tag}
-                shallow
-              >
-                <div className="flex items-center justify-center border border-th-fgd-4 rounded-md mt-2 mr-2 px-2 py-0.5">
-                  <span className="text-sm">{tag}</span>
-                </div>
-              </Link>
-            ))}
+            {tags.map((tag) => {
+              const slug = tagToSlug(tag)
+              return (
+                <Link
+                  className="text-th-fgd-3"
+                  href={`/explore/${slug}`}
+                  key={tag}
+                  shallow
+                >
+                  <div className="flex items-center justify-center border border-th-fgd-4 rounded-md mt-2 mr-2 px-2 py-0.5">
+                    <span className="text-sm">{tag}</span>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </>
       ) : null}
