@@ -40,9 +40,9 @@ const Footer = () => {
           <div className="w-full lg:w-3/4 flex flex-col sm:flex-row items-start justify-end sm:space-x-8 mb-8 lg:mb-0 border-b border-th-bkg-3 lg:border-b-0 pb-6 lg:pb-0">
             <FooterLinkColumn title="Explore">
               <FooterLink path="/explore" title="All" />
-              <FooterLink path="/explore?category=DeFi" title="DeFi" />
-              <FooterLink path="/explore?category=Meme" title="Meme" />
-              <FooterLink path="/explore?category=Exchange" title="Exchange" />
+              <FooterLink path="/explore/defi" title="DeFi" />
+              <FooterLink path="/explore/meme" title="Meme" />
+              <FooterLink path="/explore/exchange" title="Exchange" />
             </FooterLinkColumn>
             <FooterLinkColumn title="Developers">
               <FooterLink

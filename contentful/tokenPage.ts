@@ -76,8 +76,7 @@ export async function fetchTokenPages({
     (tokenPageEntry) => parseContentfulTokenPage(tokenPageEntry) as TokenPage,
   )
 
-  const tokenPagesWithData: TokenPageWithData[] = []
-  for (const tokenPage of parsedTokenPages) {
+  async function fetchDataForToken(tokenPage) {
     // birdeye overview data
     const birdeyeDataResponse = await makeApiRequest(
       `defi/token_overview?address=${tokenPage.mint}`,
@@ -91,14 +90,27 @@ export async function fetchTokenPages({
     const queryStart = queryEnd - DAILY_SECONDS
     const birdeyeQuery = `defi/history_price?address=${tokenPage.mint}&address_type=token&type=1H&time_from=${queryStart}&time_to=${queryEnd}`
     const birdeyePricesResponse = await makeApiRequest(birdeyeQuery)
-    const birdeyePrices = birdeyePricesResponse?.data?.items?.length
-      ? birdeyePricesResponse.data.items
-      : []
-    for (const data of birdeyePrices) {
-      data.unixTime = data.unixTime * 1000
-    }
-    tokenPagesWithData.push({ ...tokenPage, birdeyeData, birdeyePrices })
+    const birdeyePrices =
+      birdeyePricesResponse?.data?.items?.map((data) => ({
+        ...data,
+        unixTime: data.unixTime * 1000,
+      })) || []
+
+    return { ...tokenPage, birdeyeData, birdeyePrices }
   }
+
+  async function fetchAllDataForTokens(parsedTokenPages) {
+    const fetchPromises = parsedTokenPages.map((tokenPage) =>
+      fetchDataForToken(tokenPage),
+    )
+
+    const tokenPagesWithData = await Promise.all(fetchPromises)
+
+    return tokenPagesWithData
+  }
+
+  const tokenPagesWithData = await fetchAllDataForTokens(parsedTokenPages)
+
   return tokenPagesWithData
 }
 
@@ -130,4 +142,64 @@ export async function fetchTokenPage({
 
     return { ...parsedTokenPage, birdeyeData: birdeyeData }
   } else return null
+}
+
+interface FetchTokenCategoryPageOptions {
+  category: string
+  preview: boolean
+}
+export async function fetchTokenPagesForCategory({
+  category,
+  preview,
+}: FetchTokenCategoryPageOptions): Promise<TokenPageWithData[]> {
+  const contentful = contentfulClient({ preview })
+
+  const tokenPagesResult = await contentful.getEntries({
+    content_type: 'token',
+    'fields.tags[in]': category,
+    include: 2,
+    order: ['fields.tokenName'],
+  })
+
+  const parsedTokenPages = tokenPagesResult.items.map(
+    (tokenPageEntry) =>
+      parseContentfulTokenPage(tokenPageEntry as TokenPageEntry) as TokenPage,
+  )
+
+  async function fetchDataForToken(tokenPage) {
+    // birdeye overview data
+    const birdeyeDataResponse = await makeApiRequest(
+      `defi/token_overview?address=${tokenPage.mint}`,
+    )
+    const birdeyeData = birdeyeDataResponse?.success
+      ? birdeyeDataResponse?.data
+      : undefined
+
+    // birdeye 24h price data
+    const queryEnd = Math.floor(Date.now() / 1000)
+    const queryStart = queryEnd - DAILY_SECONDS
+    const birdeyeQuery = `defi/history_price?address=${tokenPage.mint}&address_type=token&type=1H&time_from=${queryStart}&time_to=${queryEnd}`
+    const birdeyePricesResponse = await makeApiRequest(birdeyeQuery)
+    const birdeyePrices =
+      birdeyePricesResponse?.data?.items?.map((data) => ({
+        ...data,
+        unixTime: data.unixTime * 1000,
+      })) || []
+
+    return { ...tokenPage, birdeyeData, birdeyePrices }
+  }
+
+  async function fetchAllDataForTokens(parsedTokenPages) {
+    const fetchPromises = parsedTokenPages.map((tokenPage) =>
+      fetchDataForToken(tokenPage),
+    )
+
+    const tokenPagesWithData = await Promise.all(fetchPromises)
+
+    return tokenPagesWithData
+  }
+
+  const tokenPagesWithData = await fetchAllDataForTokens(parsedTokenPages)
+
+  return tokenPagesWithData
 }

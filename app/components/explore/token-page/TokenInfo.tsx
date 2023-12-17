@@ -6,22 +6,23 @@ import { formatNumericValue, numberCompacter } from '../../../utils/numbers'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { TokenPageWithData } from '../../../../contentful/tokenPage'
-import { copyToClipboard } from '../../../utils'
+import { copyToClipboard, tagToSlug } from '../../../utils'
 import {
   CheckCircleIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import { BirdeyeOverviewData } from '../../../types/birdeye'
 dayjs.extend(relativeTime)
 
 const TokenInfo = ({
   coingeckoData,
   tokenPageData,
-  volume,
+  birdeyeData,
 }: {
   coingeckoData: CoingeckoData | undefined
   tokenPageData: TokenPageWithData
-  volume: number | undefined
+  birdeyeData: BirdeyeOverviewData | undefined
 }) => {
   const { mint, tags } = tokenPageData
   const [copied, setCopied] = useState(false)
@@ -61,7 +62,11 @@ const TokenInfo = ({
         />
         <KeyValuePair
           label="24h Volume"
-          value={volume ? `$${numberCompacter.format(volume)}` : '–'}
+          value={
+            birdeyeData?.v24hUSD
+              ? `$${numberCompacter.format(birdeyeData?.v24hUSD)}`
+              : '–'
+          }
         />
         <KeyValuePair
           label="Market cap"
@@ -80,11 +85,13 @@ const TokenInfo = ({
         <KeyValuePair
           label="Fully diluted value"
           value={
-            coingeckoData?.market_data?.fully_diluted_valuation?.usd
-              ? `$${numberCompacter.format(
-                  coingeckoData.market_data.fully_diluted_valuation.usd,
-                )}`
-              : '–'
+            birdeyeData?.mc
+              ? `$${numberCompacter.format(birdeyeData.mc)}`
+              : coingeckoData?.market_data?.fully_diluted_valuation?.usd
+                ? `$${numberCompacter.format(
+                    coingeckoData.market_data.fully_diluted_valuation.usd,
+                  )}`
+                : '–'
           }
         />
         <KeyValuePair
@@ -166,18 +173,21 @@ const TokenInfo = ({
         <>
           <h2 className="text-base">Categories</h2>
           <div className="flex flex-wrap">
-            {tags.map((tag) => (
-              <Link
-                className="text-th-fgd-3"
-                href={{ pathname: '/explore', query: { category: tag } }}
-                key={tag}
-                shallow
-              >
-                <div className="flex items-center justify-center border border-th-fgd-4 rounded-md mt-2 mr-2 px-2 py-0.5">
-                  <span className="text-sm">{tag}</span>
-                </div>
-              </Link>
-            ))}
+            {tags.map((tag) => {
+              const slug = tagToSlug(tag)
+              return (
+                <Link
+                  className="text-th-fgd-3"
+                  href={`/explore/${slug}`}
+                  key={tag}
+                  shallow
+                >
+                  <div className="flex items-center justify-center border border-th-fgd-4 rounded-md mt-2 mr-2 px-2 py-0.5">
+                    <span className="text-sm">{tag}</span>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </>
       ) : null}

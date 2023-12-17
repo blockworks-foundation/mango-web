@@ -6,7 +6,7 @@ import {
   fetchTokenPages,
 } from '../../../../contentful/tokenPage'
 import { CUSTOM_TOKEN_ICONS } from '../../../utils/constants'
-import TokenAbout from '../../../components/explore/token-page/TokenAbout'
+import RichTextDisplay from '../../../components/shared/RichTextDisplay'
 import { fetchMangoMarketData, fetchMangoTokenData } from '../../../utils/mango'
 import { MangoMarketsData, MangoTokenData } from '../../../types/mango'
 import Image from 'next/image'
@@ -136,7 +136,7 @@ async function TokenPage({ params }: TokenPageProps) {
           <TokenInfo
             coingeckoData={coingeckoData}
             tokenPageData={tokenPageData}
-            volume={birdeyeData?.v24hUSD}
+            birdeyeData={birdeyeData}
           />
         </div>
       </div>
@@ -151,7 +151,7 @@ async function TokenPage({ params }: TokenPageProps) {
       {description ? (
         <div className={SECTION_WRAPPER_CLASSES}>
           <h2 className="mb-4 text-2xl">{`About ${tokenName}`}</h2>
-          <TokenAbout content={description} />
+          <RichTextDisplay content={description} />
         </div>
       ) : null}
       <DataDisclaimer />

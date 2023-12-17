@@ -14,12 +14,31 @@ export interface TypeTokenFields {
   description?: EntryFieldTypes.RichText
   tags: EntryFieldTypes.Array<
     EntryFieldTypes.Symbol<
+      | 'AI'
+      | 'AMM'
       | 'Blue Chip'
       | 'Bridged (Portal)'
-      | 'Dog Coins'
+      | 'Communication'
+      | 'DeFi'
+      | 'DePIN'
+      | 'Dog Coin'
+      | 'Domains'
+      | 'Exchange'
+      | 'Gambling'
+      | 'Gaming'
       | 'Governanace'
+      | 'Infrastructure'
+      | 'Layer 1'
       | 'Liquid Staking'
       | 'Meme'
+      | 'Options'
+      | 'Oracle'
+      | 'Payments'
+      | 'Perps'
+      | 'Social'
+      | 'Stablecoin'
+      | 'Tokenized Asset'
+      | 'Yield Bearing'
     >
   >
   websiteUrl?: EntryFieldTypes.Symbol
