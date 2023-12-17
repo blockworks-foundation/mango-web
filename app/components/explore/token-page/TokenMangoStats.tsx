@@ -60,7 +60,9 @@ const TokenMangoStats = ({
         }
       }
     }
-    usdcSpotMarket = mangoMarketsData.spot.find(
+  }
+  if (listedMarketsForToken.length) {
+    usdcSpotMarket = listedMarketsForToken.find(
       (market) => market.name.split('/')[1] === 'USDC',
     )
   }
