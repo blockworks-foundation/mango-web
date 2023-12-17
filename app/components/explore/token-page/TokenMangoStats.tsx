@@ -26,7 +26,7 @@ const TokenMangoStats = ({
     ? (mangoData.deposit_rate * 100).toFixed(2)
     : '–'
   const borrowRate = !isNaN(mangoData?.borrow_rate)
-    ? (mangoData.borrow_rate * 100).toFixed(2)
+    ? (mangoData.borrow_rate * 100 + 0.5).toFixed(2)
     : '–'
   const available = !isNaN(mangoData?.available)
     ? numberCompacter.format(mangoData.available)

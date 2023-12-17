@@ -136,7 +136,7 @@ async function TokenPage({ params }: TokenPageProps) {
           <TokenInfo
             coingeckoData={coingeckoData}
             tokenPageData={tokenPageData}
-            volume={birdeyeData?.v24hUSD}
+            birdeyeData={birdeyeData}
           />
         </div>
       </div>

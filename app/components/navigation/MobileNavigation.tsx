@@ -47,6 +47,29 @@ const MenuPanel = ({
         </div>
         <div className="grid grid-cols-2 grid-row-flow gap-6 px-4">
           <div>
+            <h4 className="px-4 mb-2">Explore</h4>
+            <NavigationItemLink
+              path="/explore"
+              onClick={closeOnClick}
+              title="All"
+            />
+            <NavigationItemLink
+              path="/explore/defi"
+              onClick={closeOnClick}
+              title="DeFi"
+            />
+            <NavigationItemLink
+              path="/explore/meme"
+              onClick={closeOnClick}
+              title="Meme"
+            />
+            <NavigationItemLink
+              path="/explore/exchange"
+              onClick={closeOnClick}
+              title="Exchange"
+            />
+          </div>
+          <div>
             <h4 className="px-4 mb-2">Developers</h4>
             <NavigationItemLink
               path="https://docs.mango.markets"

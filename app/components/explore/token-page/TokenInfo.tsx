@@ -12,16 +12,17 @@ import {
   DocumentDuplicateIcon,
 } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import { BirdeyeOverviewData } from '../../../types/birdeye'
 dayjs.extend(relativeTime)
 
 const TokenInfo = ({
   coingeckoData,
   tokenPageData,
-  volume,
+  birdeyeData,
 }: {
   coingeckoData: CoingeckoData | undefined
   tokenPageData: TokenPageWithData
-  volume: number | undefined
+  birdeyeData: BirdeyeOverviewData | undefined
 }) => {
   const { mint, tags } = tokenPageData
   const [copied, setCopied] = useState(false)
@@ -61,7 +62,11 @@ const TokenInfo = ({
         />
         <KeyValuePair
           label="24h Volume"
-          value={volume ? `$${numberCompacter.format(volume)}` : '–'}
+          value={
+            birdeyeData?.v24hUSD
+              ? `$${numberCompacter.format(birdeyeData?.v24hUSD)}`
+              : '–'
+          }
         />
         <KeyValuePair
           label="Market cap"
@@ -80,11 +85,13 @@ const TokenInfo = ({
         <KeyValuePair
           label="Fully diluted value"
           value={
-            coingeckoData?.market_data?.fully_diluted_valuation?.usd
-              ? `$${numberCompacter.format(
-                  coingeckoData.market_data.fully_diluted_valuation.usd,
-                )}`
-              : '–'
+            birdeyeData?.mc
+              ? `$${numberCompacter.format(birdeyeData.mc)}`
+              : coingeckoData?.market_data?.fully_diluted_valuation?.usd
+                ? `$${numberCompacter.format(
+                    coingeckoData.market_data.fully_diluted_valuation.usd,
+                  )}`
+                : '–'
           }
         />
         <KeyValuePair
