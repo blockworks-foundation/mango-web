@@ -2,17 +2,12 @@ import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { fetchTokenPagesForCategory } from '../../../../contentful/tokenPage'
-import DataDisclaimer from '../../../components/explore/DataDisclaimer'
 import {
   fetchTokenCategoryPage,
   fetchTokenCategoryPages,
 } from '../../../../contentful/tokenCategoryPage'
-import RichTextDisplay from '../../../components/shared/RichTextDisplay'
 import { fetchMangoTokenData } from '../../../utils/mango'
-import TokenTable from '../../../components/explore/TokenTable'
-import CategorySwitcher from '../../../components/explore/CategorySwitcher'
-
-const SECTION_WRAPPER_CLASSES = 'border-t border-th-bkg-3 pt-6 mt-12'
+import Category from '../../../components/explore/Category'
 
 interface TokenCategoryPageParams {
   category: string
@@ -62,7 +57,7 @@ async function TokenCategoryPage({ params }: TokenCategoryPageProps) {
     return notFound()
   }
 
-  const { category, description, slug } = tokenCategoryPageData
+  const { category } = tokenCategoryPageData
 
   // fetch token pages from contentful where the entry contains the category (tag)
   const tokensForCategory = await fetchTokenPagesForCategory({
@@ -77,25 +72,11 @@ async function TokenCategoryPage({ params }: TokenCategoryPageProps) {
   const mangoTokensData = await Promise.all(promises)
 
   return (
-    <>
-      <div className="mb-10 flex flex-col lg:flex-row lg:items-center lg:justify-between">
-        <h1 className="text-4xl mb-4 lg:mb-0">{`Explore ${category}`}</h1>
-        <CategorySwitcher tokens={tokensForCategory} />
-      </div>
-      <TokenTable
-        tokens={tokensForCategory}
-        mangoTokensData={mangoTokensData}
-        showTableView
-        categorySlug={slug}
-      />
-      {description ? (
-        <div className={SECTION_WRAPPER_CLASSES}>
-          <h2 className="mb-4 text-2xl">{`About ${category}`}</h2>
-          <RichTextDisplay content={description} />
-        </div>
-      ) : null}
-      <DataDisclaimer />
-    </>
+    <Category
+      categoryPageData={tokenCategoryPageData}
+      tokensForCategory={tokensForCategory}
+      mangoTokensData={mangoTokensData}
+    />
   )
 }
 

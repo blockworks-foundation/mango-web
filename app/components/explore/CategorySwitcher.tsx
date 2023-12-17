@@ -1,11 +1,9 @@
-'use client'
-
 import { useEffect, useMemo, useState } from 'react'
 import Select from '../forms/Select'
 import { TokenPageWithData } from '../../../contentful/tokenPage'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 import { useParams, useRouter } from 'next/navigation'
-import { tagToSlug } from './TokenTable'
+import { tagToSlug } from '../../utils'
 
 const goToCategoryPage = (categorySlug: string, router: AppRouterInstance) => {
   router.push(`/explore/${categorySlug}`)

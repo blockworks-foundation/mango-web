@@ -21,27 +21,19 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return tokenPages.map((page) => ({
       slug: page.slug,
-      tags: page.tags,
       updated: page.lastModified,
     }))
   }
-  const tokenPageSlugs = await getTokenSlugs()
   const sitemap: Sitemap[] = []
   // Generate URLs and add them to the sitemap
+  const tokenPageSlugs = await getTokenSlugs()
   tokenPageSlugs.map((page) => {
-    for (const tag of page.tags) {
-      const categorySlug = tag
-        .toLowerCase() // convert to lowercase
-        .replace(/[^a-zA-Z0-9\s]/g, '') // remove non-alphanumeric characters
-        .replace(/\s+/g, '-') // replace spaces with hyphens
-        .replace(/-+/g, '-') // replace consecutive hyphens with a single hyphen
-      const url = `https://mango.markets/explore/${categorySlug}/${page.slug}`
-      const lastModified = new Date(page.updated)
-      sitemap.push({
-        url,
-        lastModified,
-      })
-    }
+    const url = `https://mango.markets/token/${page.slug}`
+    const lastModified = new Date(page.updated)
+    sitemap.push({
+      url,
+      lastModified,
+    })
   })
   const categoryPageSlugs = await getCategorySlugs()
   categoryPageSlugs.map((page) => {

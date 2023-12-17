@@ -6,13 +6,12 @@ import { formatNumericValue, numberCompacter } from '../../../utils/numbers'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { TokenPageWithData } from '../../../../contentful/tokenPage'
-import { copyToClipboard } from '../../../utils'
+import { copyToClipboard, tagToSlug } from '../../../utils'
 import {
   CheckCircleIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/20/solid'
 import Link from 'next/link'
-import { tagToSlug } from '../TokenTable'
 dayjs.extend(relativeTime)
 
 const TokenInfo = ({

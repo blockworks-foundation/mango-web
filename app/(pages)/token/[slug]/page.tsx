@@ -4,25 +4,22 @@ import { notFound } from 'next/navigation'
 import {
   fetchTokenPage,
   fetchTokenPages,
-} from '../../../../../contentful/tokenPage'
-import { CUSTOM_TOKEN_ICONS } from '../../../../utils/constants'
-import RichTextDisplay from '../../../../components/shared/RichTextDisplay'
-import {
-  fetchMangoMarketData,
-  fetchMangoTokenData,
-} from '../../../../utils/mango'
-import { MangoMarketsData, MangoTokenData } from '../../../../types/mango'
+} from '../../../../contentful/tokenPage'
+import { CUSTOM_TOKEN_ICONS } from '../../../utils/constants'
+import RichTextDisplay from '../../../components/shared/RichTextDisplay'
+import { fetchMangoMarketData, fetchMangoTokenData } from '../../../utils/mango'
+import { MangoMarketsData, MangoTokenData } from '../../../types/mango'
 import Image from 'next/image'
-import TokenMangoStats from '../../../../components/explore/token-page/TokenMangoStats'
-import { fetchCoingeckoData } from '../../../../utils/coingecko'
-import { CoingeckoData } from '../../../../types/coingecko'
-import DailyRange from '../../../../components/explore/token-page/DailyRange'
-import Links from '../../../../components/explore/token-page/Links'
-import TokenInfo from '../../../../components/explore/token-page/TokenInfo'
+import TokenMangoStats from '../../../components/explore/token-page/TokenMangoStats'
+import { fetchCoingeckoData } from '../../../utils/coingecko'
+import { CoingeckoData } from '../../../types/coingecko'
+import DailyRange from '../../../components/explore/token-page/DailyRange'
+import Links from '../../../components/explore/token-page/Links'
+import TokenInfo from '../../../components/explore/token-page/TokenInfo'
 import dynamic from 'next/dynamic'
-import DataDisclaimer from '../../../../components/explore/DataDisclaimer'
+import DataDisclaimer from '../../../components/explore/DataDisclaimer'
 const TokenPriceChart = dynamic(
-  () => import('../../../../components/explore/token-page/TokenPriceChart'),
+  () => import('../../../components/explore/token-page/TokenPriceChart'),
   { ssr: false },
 )
 

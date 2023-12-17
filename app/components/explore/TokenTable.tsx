@@ -25,6 +25,7 @@ import { useViewport } from '../../hooks/useViewport'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 import { useRouter } from 'next/navigation'
 import { BirdeyePriceHistoryData } from '../../types/birdeye'
+import SheenLoader from '../shared/SheenLoader'
 
 export type FormattedTableData = {
   change: number | undefined
@@ -41,31 +42,21 @@ export type FormattedTableData = {
   tags: string[]
 }
 
-const goToTokenPage = (path: string, router: AppRouterInstance) => {
-  router.push(`/explore/${path}`)
-}
-
-export const tagToSlug = (tag: string) => {
-  return tag
-    .toLowerCase() // convert to lowercase
-    .replace(/[^a-zA-Z0-9\s]/g, '') // remove non-alphanumeric characters
-    .replace(/\s+/g, '-') // replace spaces with hyphens
-    .replace(/-+/g, '-') // replace consecutive hyphens with a single hyphen
+const goToTokenPage = (slug: string, router: AppRouterInstance) => {
+  router.push(`/token/${slug}`)
 }
 
 const TokenTable = ({
   tokens,
   mangoTokensData,
   showTableView,
-  categorySlug,
 }: {
   tokens: TokenPageWithData[]
   mangoTokensData: MangoTokenData[]
   showTableView: boolean
-  categorySlug?: string
 }) => {
   const router = useRouter()
-  const { isDesktop } = useViewport()
+  const { isDesktop, width } = useViewport()
 
   const formattedTableData = useCallback(() => {
     const formatted: FormattedTableData[] = []
@@ -121,7 +112,11 @@ const TokenTable = ({
   } = useSortableData(formattedTableData())
 
   return tableData.length ? (
-    isDesktop && showTableView ? (
+    !width ? (
+      <SheenLoader className="flex flex-1">
+        <div className={`h-96 w-full rounded-lg bg-th-bkg-2`} />
+      </SheenLoader>
+    ) : isDesktop && showTableView ? (
       <Table>
         <thead>
           <TrHead>
@@ -190,7 +185,6 @@ const TokenTable = ({
               logoURI,
               symbol,
               slug,
-              tags,
             } = token
             const hasCustomIcon = mangoSymbol
               ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
@@ -199,13 +193,11 @@ const TokenTable = ({
               ? `/icons/tokens/${mangoSymbol?.toLowerCase()}.svg`
               : logoURI
 
-            const category = categorySlug ? categorySlug : tagToSlug(tags[0])
-            const tokenPageSlug = `${category}/${slug}`
             return (
               <TrBody
                 key={slug}
                 className="default-transition md:hover:cursor-pointer md:hover:bg-th-bkg-2"
-                onClick={() => goToTokenPage(tokenPageSlug, router)}
+                onClick={() => goToTokenPage(slug, router)}
               >
                 <Td>
                   <div className="flex items-center space-x-3">

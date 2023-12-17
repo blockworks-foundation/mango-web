@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/20/solid'
 import { CUSTOM_TOKEN_ICONS } from '../../utils/constants'
 import Link from 'next/link'
-import { FormattedTableData, tagToSlug } from './TokenTable'
+import { FormattedTableData } from './TokenTable'
 
 const TokenCard = ({ token }: { token: FormattedTableData }) => {
   const {
@@ -22,7 +22,6 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
     logoURI,
     symbol,
     slug,
-    tags,
   } = token
   const hasCustomIcon = mangoSymbol
     ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
@@ -91,7 +90,7 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
       </div>
       <Link
         className="flex items-center justify-between border border-th-bkg-4 py-3 px-4 mx-auto w-full rounded-lg text-sm font-display text-th-fgd-2 mt-6"
-        href={`/explore/${tagToSlug(tags[0])}/${slug}`}
+        href={`/token/${slug}`}
       >
         <span>Stats and info</span>
         <ChevronRightIcon className="h-5 w-5 text-th-fgd-3" />
