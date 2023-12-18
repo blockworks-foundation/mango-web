@@ -11,8 +11,6 @@ import RichTextDisplay from '../shared/RichTextDisplay'
 import DataDisclaimer from './DataDisclaimer'
 import { sortTokens } from './Explore'
 
-const SECTION_WRAPPER_CLASSES = 'border-t border-th-bkg-3 pt-6 mt-12'
-
 const Category = ({
   categoryPageData,
   tokensForCategory,
@@ -23,7 +21,7 @@ const Category = ({
   mangoTokensData: MangoTokenData[]
 }) => {
   const [showTableView, setShowTableView] = useState(true)
-  const { category, description } = categoryPageData
+  const { category, description, heroImage } = categoryPageData
 
   const sortedTokens = useMemo(() => {
     return sortTokens(tokensForCategory)
@@ -47,8 +45,17 @@ const Category = ({
         showTableView={showTableView}
       />
       {description ? (
-        <div className={SECTION_WRAPPER_CLASSES}>
-          <h2 className="mb-4 text-2xl">{`About ${category}`}</h2>
+        <div className="my-20">
+          {heroImage ? (
+            <img
+              className="w-full h-auto mb-10"
+              src={heroImage.src}
+              // Use the Contentful Images API to render
+              // responsive images. No next/image required:
+              srcSet={`${heroImage.src}?w=300 1x, ${heroImage.src} 2x`}
+              alt={heroImage.alt}
+            />
+          ) : null}
           <RichTextDisplay content={description} />
         </div>
       ) : null}

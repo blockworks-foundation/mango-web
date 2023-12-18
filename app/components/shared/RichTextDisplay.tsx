@@ -7,7 +7,7 @@ const RichTextDisplay = ({
   content: RichTextDocument | undefined
 }) => {
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-3xl mx-auto">
       <RichText document={content} />
     </div>
   )

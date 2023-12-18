@@ -12,6 +12,7 @@ export interface TypeTokenCategoryFields {
   description?: EntryFieldTypes.RichText
   seoTitle?: EntryFieldTypes.Symbol
   seoDescription?: EntryFieldTypes.Text
+  heroImage?: EntryFieldTypes.AssetLink
 }
 
 export type TypeTokenCategorySkeleton = EntrySkeletonType<

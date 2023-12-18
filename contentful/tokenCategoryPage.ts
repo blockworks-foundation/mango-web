@@ -2,6 +2,7 @@ import { TypeTokenCategorySkeleton } from './types'
 import { Entry } from 'contentful'
 import { Document as RichTextDocument } from '@contentful/rich-text-types'
 import contentfulClient from './contentfulClient'
+import { ContentImage, parseContentfulContentImage } from './contentImage'
 
 type TokenCategoryPageEntry = Entry<
   TypeTokenCategorySkeleton,
@@ -13,25 +14,29 @@ export interface TokenCategoryPage {
   category: string
   slug: string
   description: RichTextDocument | undefined
+  heroImage: ContentImage | null
   seoTitle: string | undefined
   seoDescription: string | undefined
   lastModified: string
 }
 
 export function parseContentfulTokenCategoryPage(
-  tokenPageEntry?: TokenCategoryPageEntry,
+  tokenCategoryPageEntry?: TokenCategoryPageEntry,
 ): TokenCategoryPage | null {
-  if (!tokenPageEntry) {
+  if (!tokenCategoryPageEntry) {
     return null
   }
 
   return {
-    category: tokenPageEntry.fields.category,
-    slug: tokenPageEntry.fields.slug,
-    description: tokenPageEntry.fields.description || undefined,
-    seoTitle: tokenPageEntry.fields?.seoTitle || undefined,
-    seoDescription: tokenPageEntry.fields?.seoDescription || undefined,
-    lastModified: tokenPageEntry.sys.updatedAt,
+    category: tokenCategoryPageEntry.fields.category,
+    slug: tokenCategoryPageEntry.fields.slug,
+    description: tokenCategoryPageEntry.fields.description || undefined,
+    heroImage: parseContentfulContentImage(
+      tokenCategoryPageEntry.fields.heroImage,
+    ),
+    seoTitle: tokenCategoryPageEntry.fields?.seoTitle || undefined,
+    seoDescription: tokenCategoryPageEntry.fields?.seoDescription || undefined,
+    lastModified: tokenCategoryPageEntry.sys.updatedAt,
   }
 }
 
