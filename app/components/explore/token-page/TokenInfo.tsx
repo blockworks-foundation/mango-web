@@ -13,6 +13,7 @@ import {
 } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import { BirdeyeOverviewData } from '../../../types/birdeye'
+import SheenLoader from '../../shared/SheenLoader'
 dayjs.extend(relativeTime)
 
 const TokenInfo = ({
@@ -35,6 +36,17 @@ const TokenInfo = ({
   useEffect(() => {
     setTimeout(() => setCopied(false), 2000)
   }, [copied])
+
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  if (!mounted)
+    return (
+      <SheenLoader className="flex flex-1">
+        <div
+          className={`h-[264px] lg:h-[344px] w-full rounded-lg bg-th-bkg-2`}
+        />
+      </SheenLoader>
+    )
 
   return (
     <>
@@ -117,14 +129,14 @@ const TokenInfo = ({
                     </span>
                   ) : null}
                 </span>
-                {/* {coingeckoData?.market_data?.ath_date?.usd ? (
+                {coingeckoData?.market_data?.ath_date?.usd ? (
                   <span className="text-xs text-th-fgd-4 text-right">
                     {dayjs(coingeckoData.market_data.ath_date.usd).format(
                       'DD MMM YYYY',
                     )}{' '}
                     ({dayjs().to(coingeckoData.market_data.ath_date.usd)})
                   </span>
-                ) : null} */}
+                ) : null}
               </span>
             ) : (
               '–'
@@ -154,14 +166,14 @@ const TokenInfo = ({
                     </span>
                   ) : null}
                 </span>
-                {/* {coingeckoData?.market_data?.atl_date?.usd ? (
+                {coingeckoData?.market_data?.atl_date?.usd ? (
                   <span className="text-xs text-th-fgd-4 text-right">
                     {dayjs(coingeckoData.market_data.atl_date.usd).format(
                       'DD MMM YYYY',
                     )}{' '}
                     ({dayjs().to(coingeckoData.market_data.atl_date.usd)})
                   </span>
-                ) : null} */}
+                ) : null}
               </span>
             ) : (
               '–'
