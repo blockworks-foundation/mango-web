@@ -117,14 +117,14 @@ const TokenInfo = ({
                     </span>
                   ) : null}
                 </span>
-                {coingeckoData?.market_data?.ath_date?.usd ? (
+                {/* {coingeckoData?.market_data?.ath_date?.usd ? (
                   <span className="text-xs text-th-fgd-4 text-right">
                     {dayjs(coingeckoData.market_data.ath_date.usd).format(
                       'DD MMM YYYY',
                     )}{' '}
                     ({dayjs().to(coingeckoData.market_data.ath_date.usd)})
                   </span>
-                ) : null}
+                ) : null} */}
               </span>
             ) : (
               '–'
@@ -154,14 +154,14 @@ const TokenInfo = ({
                     </span>
                   ) : null}
                 </span>
-                {coingeckoData?.market_data?.atl_date?.usd ? (
+                {/* {coingeckoData?.market_data?.atl_date?.usd ? (
                   <span className="text-xs text-th-fgd-4 text-right">
                     {dayjs(coingeckoData.market_data.atl_date.usd).format(
                       'DD MMM YYYY',
                     )}{' '}
                     ({dayjs().to(coingeckoData.market_data.atl_date.usd)})
                   </span>
-                ) : null}
+                ) : null} */}
               </span>
             ) : (
               '–'

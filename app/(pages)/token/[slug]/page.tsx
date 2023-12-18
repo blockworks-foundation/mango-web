@@ -18,7 +18,6 @@ import Links from '../../../components/explore/token-page/Links'
 import TokenInfo from '../../../components/explore/token-page/TokenInfo'
 import dynamic from 'next/dynamic'
 import DataDisclaimer from '../../../components/explore/DataDisclaimer'
-import { Suspense } from 'react'
 const TokenPriceChart = dynamic(
   () => import('../../../components/explore/token-page/TokenPriceChart'),
   { ssr: false },
@@ -60,10 +59,6 @@ export async function generateMetadata(
     title: tokenPage.seoTitle,
     description: tokenPage.seoDescription,
   }
-}
-
-function Fallback() {
-  return <></>
 }
 
 async function TokenPage({ params }: TokenPageProps) {
@@ -138,13 +133,11 @@ async function TokenPage({ params }: TokenPageProps) {
           <TokenPriceChart latestChartData={latestChartData} mint={mint} />
         </div>
         <div className="col-span-12 lg:col-span-4 bg-th-bkg-2 p-6 rounded-xl lg:rounded-none">
-          <Suspense fallback={<Fallback />}>
-            <TokenInfo
-              coingeckoData={coingeckoData}
-              tokenPageData={tokenPageData}
-              birdeyeData={birdeyeData}
-            />
-          </Suspense>
+          <TokenInfo
+            coingeckoData={coingeckoData}
+            tokenPageData={tokenPageData}
+            birdeyeData={birdeyeData}
+          />
         </div>
       </div>
       <div className="mt-6">
