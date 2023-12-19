@@ -18,10 +18,12 @@ dayjs.extend(relativeTime)
 
 const TokenInfo = ({
   coingeckoData,
+  loadingCoingeckoData,
   tokenPageData,
   birdeyeData,
 }: {
   coingeckoData: CoingeckoData | undefined
+  loadingCoingeckoData: boolean
   tokenPageData: TokenPageWithData
   birdeyeData: BirdeyeOverviewData | undefined
 }) => {
@@ -36,17 +38,6 @@ const TokenInfo = ({
   useEffect(() => {
     setTimeout(() => setCopied(false), 2000)
   }, [copied])
-
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-  if (!mounted)
-    return (
-      <SheenLoader className="flex flex-1">
-        <div
-          className={`h-[264px] lg:h-[344px] w-full rounded-lg bg-th-bkg-2`}
-        />
-      </SheenLoader>
-    )
 
   return (
     <>
@@ -82,17 +73,23 @@ const TokenInfo = ({
         />
         <KeyValuePair
           label="Market cap"
-          value={`${
-            coingeckoData?.market_data?.market_cap?.usd
-              ? `$${numberCompacter.format(
-                  coingeckoData.market_data.market_cap.usd,
-                )}`
-              : '–'
-          } ${
-            coingeckoData?.market_data?.market_cap_rank
-              ? `| #${coingeckoData.market_data.market_cap_rank}`
-              : ''
-          }`}
+          value={
+            loadingCoingeckoData ? (
+              <DataLoader />
+            ) : (
+              `${
+                coingeckoData?.market_data?.market_cap?.usd
+                  ? `$${numberCompacter.format(
+                      coingeckoData.market_data.market_cap.usd,
+                    )}`
+                  : '–'
+              } ${
+                coingeckoData?.market_data?.market_cap_rank
+                  ? `| #${coingeckoData.market_data.market_cap_rank}`
+                  : ''
+              }`
+            )
+          }
         />
         <KeyValuePair
           label="Fully diluted value"
@@ -109,7 +106,12 @@ const TokenInfo = ({
         <KeyValuePair
           label="All-time high"
           value={
-            coingeckoData?.market_data?.ath?.usd ? (
+            loadingCoingeckoData ? (
+              <div className="space-y-0.5 flex flex-col items-end">
+                <DataLoader />
+                <DataLoader small />
+              </div>
+            ) : coingeckoData?.market_data?.ath?.usd ? (
               <span className="flex flex-col items-end">
                 <span className="text-th-fgd-1 text-sm text-right">
                   {`$${formatNumericValue(coingeckoData.market_data.ath.usd)}`}{' '}
@@ -146,7 +148,12 @@ const TokenInfo = ({
         <KeyValuePair
           label="All-time low"
           value={
-            coingeckoData?.market_data?.atl?.usd ? (
+            loadingCoingeckoData ? (
+              <div className="space-y-0.5 flex flex-col items-end">
+                <DataLoader />
+                <DataLoader small />
+              </div>
+            ) : coingeckoData?.market_data?.atl?.usd ? (
               <span className="flex flex-col items-end">
                 <span className="text-th-fgd-1 text-sm text-right">
                   {`$${formatNumericValue(coingeckoData.market_data.atl.usd)}`}{' '}
@@ -219,7 +226,15 @@ const KeyValuePair = ({
   return (
     <div className="flex justify-between">
       <p className="text-sm">{label}</p>
-      <p className="text-th-fgd-1 text-sm">{value}</p>
+      <span className="text-th-fgd-1 text-sm">{value}</span>
     </div>
+  )
+}
+
+const DataLoader = ({ small }: { small?: boolean }) => {
+  return (
+    <SheenLoader>
+      <div className={`${small ? 'h-3 w-32' : 'h-5 w-24'} bg-th-bkg-4`} />
+    </SheenLoader>
   )
 }

@@ -35,14 +35,16 @@ const fetchBirdeyePrices = async (daysToShow: string, mint: string) => {
 
 const TokenPriceChart = ({
   latestChartData,
+  loadingLatestChartData,
   mint,
 }: {
   latestChartData: ChartData[]
+  loadingLatestChartData: boolean
   mint: string
 }) => {
   const [daysToShow, setDaysToShow] = useState('30')
 
-  const { data: chartData, isLoading: loadingAppData } = useQuery({
+  const { data: chartData, isLoading: loadingChartData } = useQuery({
     queryKey: ['token-chart-data', daysToShow, mint],
     queryFn: () => fetchBirdeyePrices(daysToShow, mint),
   })
@@ -52,7 +54,7 @@ const TokenPriceChart = ({
       changeAsPercent
       data={chartData?.length ? chartData.concat(latestChartData) : chartData}
       daysToShow={daysToShow}
-      loading={loadingAppData}
+      loading={loadingChartData || loadingLatestChartData}
       setDaysToShow={setDaysToShow}
       heightClass="h-[180px] lg:h-[260px]"
       loaderHeightClass="h-[264px] lg:h-[344px]"
