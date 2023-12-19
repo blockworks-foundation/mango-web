@@ -202,6 +202,10 @@ li {
   @apply text-sm text-th-fgd-3;
 }
 
+li p {
+  @apply inline-block;
+}
+
 .intro-p {
   @apply text-lg md:text-xl text-th-fgd-4;
 }
