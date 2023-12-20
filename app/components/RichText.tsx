@@ -32,16 +32,23 @@ const Ul = ({ children }) => (
   <ul style={{ listStyle: 'inside disc', marginLeft: '16px' }}>{children}</ul>
 )
 const mangoUrl = 'https://mango.markets'
-const A = ({ node, children }) => (
-  <Link
-    className="text-th-fgd-2 border-b border-th-active md:hover:border-transparent"
-    href={node.data.uri}
-    target={node.data.uri.startsWith(mangoUrl) ? '_self' : '_blank'}
-    rel={node.data.uri.startsWith(mangoUrl) ? '' : 'noopener noreferrer'}
-  >
-    {children}
-  </Link>
-)
+const A = ({ node, children }) => {
+  const { data } = node
+  const isInternal =
+    data.uri.includes(mangoUrl) ||
+    data.uri.includes('localhost') ||
+    !data.uri.includes('http')
+  return (
+    <Link
+      className="text-th-fgd-2 border-b border-th-active md:hover:border-transparent"
+      href={data.uri}
+      target={isInternal ? '_self' : '_blank'}
+      rel={isInternal ? '' : 'noopener noreferrer'}
+    >
+      {children}
+    </Link>
+  )
+}
 
 const Spacer = () => (
   <hr style={{ borderColor: 'transparent', marginBottom: '12px' }} />
