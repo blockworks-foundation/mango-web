@@ -5,10 +5,11 @@ import { MangoTokenData } from '../../types/mango'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { ChangeEvent, useMemo, useState } from 'react'
 import Input from '../forms/Input'
-import DataDisclaimer from './DataDisclaimer'
 import TokenTable from './TokenTable'
 import CategorySwitcher from './CategorySwitcher'
 import TableViewToggle from './TableViewToggle'
+import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
+import { MAX_CONTENT_WIDTH } from '../../utils/constants'
 
 const generateSearchTerm = (item: TokenPageWithData, searchValue: string) => {
   const normalizedSearchValue = searchValue.toLowerCase()
@@ -65,9 +66,11 @@ export const sortTokens = (tokens: TokenPageWithData[]) => {
 }
 
 const Explore = ({
+  categoryPages,
   tokens,
   mangoTokensData,
 }: {
+  categoryPages: TokenCategoryPage[]
   tokens: TokenPageWithData[]
   mangoTokensData: MangoTokenData[]
 }) => {
@@ -84,31 +87,43 @@ const Explore = ({
 
   return (
     <>
-      <div className="mb-10 flex flex-col lg:flex-row lg:items-center lg:justify-between">
-        <h1 className="text-4xl mb-4 lg:mb-0">Explore listed tokens</h1>
-        <div className="flex space-x-2">
-          <CategorySwitcher tokens={tokens} />
-          <div className="relative w-1/2 lg:mb-0 lg:w-44">
-            <Input
-              heightClass="h-10 pl-8"
-              type="text"
-              value={searchString}
-              onChange={handleUpdateSearch}
-            />
-            <MagnifyingGlassIcon className="absolute left-2 top-3 h-4 w-4 text-th-fgd-3" />
+      <div
+        className={`flex flex-col items-start justify-end h-[264px] bg-[url('/images/new/cube-bg.png')] bg-repeat`}
+      >
+        <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
+          <div className="bg-[rgba(0,0,0,0.8)] px-3 py-1 mb-6">
+            <h1 className="text-4xl">Explore listed tokens</h1>
           </div>
-          <TableViewToggle
-            showTableView={showTableView}
-            setShowTableView={setShowTableView}
-          />
         </div>
       </div>
-      <TokenTable
-        tokens={filteredTokens}
-        mangoTokensData={mangoTokensData}
-        showTableView={showTableView}
-      />
-      <DataDisclaimer />
+      <div
+        className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
+      >
+        <div className="mb-6 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+          <p className="mb-3 sm:mb-0">{`${tokens?.length} tokens listed on Mango`}</p>
+          <div className="flex space-x-2">
+            <CategorySwitcher categories={categoryPages} />
+            <div className="relative w-1/2 lg:mb-0 lg:w-44">
+              <Input
+                heightClass="h-10 pl-8"
+                type="text"
+                value={searchString}
+                onChange={handleUpdateSearch}
+              />
+              <MagnifyingGlassIcon className="absolute left-2 top-3 h-4 w-4 text-th-fgd-3" />
+            </div>
+            <TableViewToggle
+              showTableView={showTableView}
+              setShowTableView={setShowTableView}
+            />
+          </div>
+        </div>
+        <TokenTable
+          tokens={filteredTokens}
+          mangoTokensData={mangoTokensData}
+          showTableView={showTableView}
+        />
+      </div>
     </>
   )
 }

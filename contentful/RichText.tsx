@@ -18,7 +18,11 @@ export default RichText
 
 const Bold = ({ children }) => <p className="font-bold">{children}</p>
 
-const Text = ({ children }) => <p className="mb-2">{children}</p>
+const Text = ({ children }) => (
+  <p className="mb-2 text-lg" style={{ lineHeight: '1.8rem' }}>
+    {children}
+  </p>
+)
 
 const H2 = ({ children }) => <h2 className="text-3xl">{children}</h2>
 const H3 = ({ children }) => <h3 className="mb-2 text-xl">{children}</h3>

@@ -8,6 +8,9 @@ import {
 } from '../../../../contentful/tokenCategoryPage'
 import { fetchMangoTokenData } from '../../../utils/mango'
 import Category from '../../../components/explore/Category'
+import { MAX_CONTENT_WIDTH } from '../../../utils/constants'
+import RichTextDisplay from '../../../components/shared/RichTextDisplay'
+import DataDisclaimer from '../../../components/explore/DataDisclaimer'
 
 interface TokenCategoryPageParams {
   category: string
@@ -48,16 +51,19 @@ export async function generateMetadata(
 }
 
 async function TokenCategoryPage({ params }: TokenCategoryPageProps) {
-  const tokenCategoryPageData = await fetchTokenCategoryPage({
-    slug: params.category,
+  const categoryPages = await fetchTokenCategoryPages({
     preview: draftMode().isEnabled,
   })
+
+  const tokenCategoryPageData = categoryPages.find(
+    (page) => page.slug === params.category,
+  )
 
   if (!tokenCategoryPageData) {
     return notFound()
   }
 
-  const { category } = tokenCategoryPageData
+  const { category, description } = tokenCategoryPageData
 
   // fetch token pages from contentful where the entry contains the category (tag)
   const tokensForCategory = await fetchTokenPagesForCategory({
@@ -72,11 +78,24 @@ async function TokenCategoryPage({ params }: TokenCategoryPageProps) {
   const mangoTokensData = await Promise.all(promises)
 
   return (
-    <Category
-      categoryPageData={tokenCategoryPageData}
-      tokensForCategory={tokensForCategory}
-      mangoTokensData={mangoTokensData}
-    />
+    <>
+      <Category
+        categoryPages={categoryPages}
+        categoryPageData={tokenCategoryPageData}
+        tokensForCategory={tokensForCategory}
+        mangoTokensData={mangoTokensData}
+      />
+      {description ? (
+        <div className="bg-th-bkg-2 py-10 md:py-16">
+          <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto`}>
+            <RichTextDisplay content={description} />
+          </div>
+        </div>
+      ) : null}
+      <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto pb-10`}>
+        <DataDisclaimer />
+      </div>
+    </>
   )
 }
 

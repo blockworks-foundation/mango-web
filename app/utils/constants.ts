@@ -43,3 +43,5 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
 
 export const DAILY_SECONDS = 86400
 export const DAILY_MILLISECONDS = 86400000
+
+export const MAX_CONTENT_WIDTH = 'max-w-[1280px]'
