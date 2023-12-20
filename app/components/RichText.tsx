@@ -1,6 +1,7 @@
-import { BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 import { Document as RichTextDocument } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Link from 'next/link'
 
 type RichTextProps = {
   document: RichTextDocument | undefined
@@ -30,6 +31,17 @@ const H4 = ({ children }) => <h3 className="mb-1.5 text-base">{children}</h3>
 const Ul = ({ children }) => (
   <ul style={{ listStyle: 'inside disc', marginLeft: '16px' }}>{children}</ul>
 )
+const mangoUrl = 'https://mango.markets'
+const A = ({ node, children }) => (
+  <Link
+    className="text-th-fgd-2 border-b border-th-active md:hover:border-transparent"
+    href={node.data.uri}
+    target={node.data.uri.startsWith(mangoUrl) ? '_self' : '_blank'}
+    rel={node.data.uri.startsWith(mangoUrl) ? '' : 'noopener noreferrer'}
+  >
+    {children}
+  </Link>
+)
 
 const Spacer = () => (
   <hr style={{ borderColor: 'transparent', marginBottom: '12px' }} />
@@ -41,6 +53,7 @@ const options = {
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    [INLINES.HYPERLINK]: (node, children) => <A node={node}>{children}</A>,
     [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
     [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
     [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,

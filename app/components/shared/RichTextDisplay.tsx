@@ -1,5 +1,5 @@
 import { Document as RichTextDocument } from '@contentful/rich-text-types'
-import RichText from '../../../contentful/RichText'
+import RichText from '../RichText'
 
 const RichTextDisplay = ({
   content,

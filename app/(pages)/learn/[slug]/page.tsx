@@ -3,7 +3,7 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { fetchBlogPost, fetchBlogPosts } from '../../../../contentful/blogPost'
-import RichText from '../../../../contentful/RichText'
+import RichText from '../../../components/RichText'
 
 interface BlogPostPageParams {
   slug: string
