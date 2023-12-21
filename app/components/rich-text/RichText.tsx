@@ -2,6 +2,7 @@ import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 import { Document as RichTextDocument } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Link from 'next/link'
+import TokenCallToAction from './TokenCallToAction'
 
 type RichTextProps = {
   document: RichTextDocument | undefined
@@ -59,13 +60,27 @@ const options = {
     [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
   },
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    [BLOCKS.PARAGRAPH]: (node, children) => {
+      const isEntry = node.content.find(
+        (type) => type.nodeType === 'embedded-entry-inline',
+      )
+      return isEntry ? <>{children}</> : <Text>{children}</Text>
+    },
     [INLINES.HYPERLINK]: (node, children) => <A node={node}>{children}</A>,
     [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
     [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
     [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
     [BLOCKS.UL_LIST]: (node, children) => <Ul>{children}</Ul>,
     [BLOCKS.HR]: () => <Spacer />,
+    [INLINES.EMBEDDED_ENTRY]: (node) => {
+      if (node.data.target.sys.contentType.sys.id === 'tokenCallToAction') {
+        return (
+          <div>
+            <TokenCallToAction data={node.data.target.fields} />
+          </div>
+        )
+      }
+    },
   },
   // renderText: (text) => text.replace('!', '?'),
 }

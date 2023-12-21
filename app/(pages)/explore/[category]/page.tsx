@@ -9,7 +9,7 @@ import {
 import { fetchMangoTokenData } from '../../../utils/mango'
 import Category from '../../../components/explore/Category'
 import { MAX_CONTENT_WIDTH } from '../../../utils/constants'
-import RichTextDisplay from '../../../components/shared/RichTextDisplay'
+import RichTextDisplay from '../../../components/rich-text/RichTextDisplay'
 import DataDisclaimer from '../../../components/explore/DataDisclaimer'
 
 interface TokenCategoryPageParams {

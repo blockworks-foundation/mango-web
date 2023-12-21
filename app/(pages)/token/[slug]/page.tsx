@@ -5,7 +5,7 @@ import {
   fetchTokenPage,
   fetchTokenPages,
 } from '../../../../contentful/tokenPage'
-import RichTextDisplay from '../../../components/shared/RichTextDisplay'
+import RichTextDisplay from '../../../components/rich-text/RichTextDisplay'
 import { fetchMangoMarketData, fetchMangoTokenData } from '../../../utils/mango'
 import { MangoMarketsData, MangoTokenData } from '../../../types/mango'
 import TokenMangoStats from '../../../components/explore/token-page/TokenMangoStats'

@@ -14,7 +14,7 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
   path,
   className,
   secondary,
-  size = 'medium',
+  size,
   target,
 }) => {
   return (
@@ -24,12 +24,12 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
           ? 'border border-th-button md:hover:border-th-button-hover'
           : 'bg-th-button md:hover:bg-th-button-hover'
       } ${
-        size === 'medium'
-          ? 'h-10 px-4 text-sm'
+        size === 'small'
+          ? 'h-8 px-3 text-xs'
           : size === 'large'
             ? 'h-12 px-6'
-            : 'h-8 px-3'
-      } default-transition font-display focus:outline-none text-th-fgd-1 ${className}`}
+            : 'h-10 px-4 text-sm'
+      } default-transition font-display focus:outline-none text-th-fgd-1 whitespace-nowrap ${className}`}
       href={path}
       rel="noopener noreferrer"
       target={target ? target : undefined}
