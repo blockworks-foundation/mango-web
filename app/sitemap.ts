@@ -28,7 +28,7 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Generate URLs and add them to the sitemap
   const tokenPageSlugs = await getTokenSlugs()
   tokenPageSlugs.map((page) => {
-    const url = `https://mango.markets/token/${page.slug}`
+    const url = `https://mango.markets/explore/tokens/${page.slug}`
     const lastModified = new Date(page.updated)
     sitemap.push({
       url,
@@ -37,7 +37,7 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
   })
   const categoryPageSlugs = await getCategorySlugs()
   categoryPageSlugs.map((page) => {
-    const url = `https://mango.markets/explore/${page.slug}`
+    const url = `https://mango.markets/explore/categories/${page.slug}`
     const lastModified = new Date(page.updated)
     sitemap.push({
       url,
@@ -74,7 +74,11 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(lastUpdate),
     },
     {
-      url: 'https://mango.markets/explore',
+      url: 'https://mango.markets/explore/tokens',
+      lastModified: new Date(lastUpdate),
+    },
+    {
+      url: 'https://mango.markets/explore/categories',
       lastModified: new Date(lastUpdate),
     },
   )

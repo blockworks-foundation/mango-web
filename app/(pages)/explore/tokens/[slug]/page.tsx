@@ -4,13 +4,16 @@ import { notFound } from 'next/navigation'
 import {
   fetchTokenPage,
   fetchTokenPages,
-} from '../../../../contentful/tokenPage'
-import RichTextDisplay from '../../../components/rich-text/RichTextDisplay'
-import { fetchMangoMarketData, fetchMangoTokenData } from '../../../utils/mango'
-import { MangoMarketsData, MangoTokenData } from '../../../types/mango'
-import TokenMangoStats from '../../../components/explore/token-page/TokenMangoStats'
-import DataDisclaimer from '../../../components/explore/DataDisclaimer'
-import InfoAndStats from '../../../components/explore/token-page/InfoAndStats'
+} from '../../../../../contentful/tokenPage'
+import RichTextDisplay from '../../../../components/rich-text/RichTextDisplay'
+import {
+  fetchMangoMarketData,
+  fetchMangoTokenData,
+} from '../../../../utils/mango'
+import { MangoMarketsData, MangoTokenData } from '../../../../types/mango'
+import TokenMangoStats from '../../../../components/explore/token-page/TokenMangoStats'
+import DataDisclaimer from '../../../../components/explore/DataDisclaimer'
+import InfoAndStats from '../../../../components/explore/token-page/InfoAndStats'
 
 const SECTION_WRAPPER_CLASSES = 'border-t border-th-bkg-3 pt-6 mt-12'
 

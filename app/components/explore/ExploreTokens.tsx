@@ -6,9 +6,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { ChangeEvent, useMemo, useState } from 'react'
 import Input from '../forms/Input'
 import TokenTable from './TokenTable'
-import CategorySwitcher from './CategorySwitcher'
 import TableViewToggle from './TableViewToggle'
-import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
 
 const generateSearchTerm = (item: TokenPageWithData, searchValue: string) => {
@@ -65,12 +63,10 @@ export const sortTokens = (tokens: TokenPageWithData[]) => {
   })
 }
 
-const Explore = ({
-  categoryPages,
+const ExploreTokens = ({
   tokens,
   mangoTokensData,
 }: {
-  categoryPages: TokenCategoryPage[]
   tokens: TokenPageWithData[]
   mangoTokensData: MangoTokenData[]
 }) => {
@@ -91,7 +87,7 @@ const Explore = ({
         className={`flex flex-col items-start justify-end h-[264px] bg-[url('/images/new/cube-bg.png')] bg-repeat`}
       >
         <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
-          <div className="bg-[rgba(0,0,0,0.8)] px-3 py-1 mb-6">
+          <div className="bg-[rgba(0,0,0,0.8)] px-3 py-1 mb-6 mx-6 sm:mx-0">
             <h1 className="text-4xl">Explore listed tokens</h1>
           </div>
         </div>
@@ -99,11 +95,11 @@ const Explore = ({
       <div
         className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
       >
-        <div className="mb-6 flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <p className="mb-3 sm:mb-0">{`${tokens?.length} tokens listed on Mango`}</p>
           <div className="flex space-x-2">
-            <CategorySwitcher categories={categoryPages} />
-            <div className="relative w-1/2 lg:mb-0 lg:w-44">
+            {/* <CategorySwitcher categories={categoryPages} /> */}
+            <div className="relative w-full lg:mb-0 sm:w-44">
               <Input
                 heightClass="h-10 pl-8"
                 type="text"
@@ -128,4 +124,4 @@ const Explore = ({
   )
 }
 
-export default Explore
+export default ExploreTokens

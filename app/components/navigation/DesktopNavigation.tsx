@@ -11,13 +11,19 @@ import NavigationItemLink from './NavigationItemLink'
 import ButtonLink from '../shared/ButtonLink'
 import Twitter from '../icons/Twitter'
 import Discord from '../icons/Discord'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 const DesktopNavigation = () => {
   return (
     <div className="hidden lg:flex lg:items-center space-x-8">
-      <NavigationLink path="/explore" text="Explore" />
+      <NavigationItem title="Explore">
+        <NavigationItemPanel>
+          <NavigationItemLink path="/explore/tokens" title="Listed tokens" />
+          <NavigationItemLink
+            path="/explore/categories"
+            title="Token categories"
+          />
+        </NavigationItemPanel>
+      </NavigationItem>
       {/* <NavigationLink path="/learn" text="Learn" /> */}
       <NavigationItem title="Developers">
         <NavigationItemPanel>
@@ -178,19 +184,19 @@ const NavigationItemPanel = ({ children }: { children: ReactNode }) => {
   return <div className="bg-th-bkg-2 py-4 rounded-lg">{children}</div>
 }
 
-const NavigationLink = ({ path, text }: { path: string; text: string }) => {
-  const pathname = usePathname()
-  return (
-    <Link href={path} shallow>
-      <span
-        className={`font-display ${
-          pathname?.includes(path)
-            ? 'text-th-active md:hover:text-th-active'
-            : 'text-th-fgd-2 md:hover:text-th-fgd-1'
-        } default-transition text-base`}
-      >
-        {text}
-      </span>
-    </Link>
-  )
-}
+// const NavigationLink = ({ path, text }: { path: string; text: string }) => {
+//   const pathname = usePathname()
+//   return (
+//     <Link href={path} shallow>
+//       <span
+//         className={`font-display ${
+//           pathname?.includes(path)
+//             ? 'text-th-active md:hover:text-th-active'
+//             : 'text-th-fgd-2 md:hover:text-th-fgd-1'
+//         } default-transition text-base`}
+//       >
+//         {text}
+//       </span>
+//     </Link>
+//   )
+// }

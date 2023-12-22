@@ -26,6 +26,7 @@ import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.share
 import { useRouter } from 'next/navigation'
 import { BirdeyePriceHistoryData } from '../../types/birdeye'
 import SheenLoader from '../shared/SheenLoader'
+import NoResults from './NoResults'
 
 export type FormattedTableData = {
   change: number | undefined
@@ -43,7 +44,7 @@ export type FormattedTableData = {
 }
 
 const goToTokenPage = (slug: string, router: AppRouterInstance) => {
-  router.push(`/token/${slug}`)
+  router.push(`/explore/tokens/${slug}`)
 }
 
 const TokenTable = ({
@@ -284,16 +285,8 @@ const TokenTable = ({
       </div>
     )
   ) : (
-    <NoTokenResults />
+    <NoResults message="No tokens found..." />
   )
 }
 
 export default TokenTable
-
-const NoTokenResults = () => {
-  return (
-    <div className="border border-th-bkg-3 p-6 rounded-xl flex items-center justify-center">
-      <p>No tokens found...</p>
-    </div>
-  )
-}

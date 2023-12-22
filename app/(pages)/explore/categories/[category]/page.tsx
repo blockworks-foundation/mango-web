@@ -1,16 +1,16 @@
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-import { fetchTokenPagesForCategory } from '../../../../contentful/tokenPage'
+import { fetchTokenPagesForCategory } from '../../../../../contentful/tokenPage'
 import {
   fetchTokenCategoryPage,
   fetchTokenCategoryPages,
-} from '../../../../contentful/tokenCategoryPage'
-import { fetchMangoTokenData } from '../../../utils/mango'
-import Category from '../../../components/explore/Category'
-import { MAX_CONTENT_WIDTH } from '../../../utils/constants'
-import RichTextDisplay from '../../../components/rich-text/RichTextDisplay'
-import DataDisclaimer from '../../../components/explore/DataDisclaimer'
+} from '../../../../../contentful/tokenCategoryPage'
+import { fetchMangoTokenData } from '../../../../utils/mango'
+import Category from '../../../../components/explore/Category'
+import { MAX_CONTENT_WIDTH } from '../../../../utils/constants'
+import RichTextDisplay from '../../../../components/rich-text/RichTextDisplay'
+import DataDisclaimer from '../../../../components/explore/DataDisclaimer'
 
 interface TokenCategoryPageParams {
   category: string

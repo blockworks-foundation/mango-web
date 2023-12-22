@@ -1,12 +1,11 @@
-import { fetchTokenPages } from '../../../contentful/tokenPage'
-import Explore from '../../components/explore/Explore'
+import { fetchTokenPages } from '../../../../contentful/tokenPage'
+import ExploreTokens from '../../../components/explore/ExploreTokens'
 import { draftMode } from 'next/headers'
-import { fetchMangoTokensData } from '../../utils/mango'
+import { fetchMangoTokensData } from '../../../utils/mango'
 import { Metadata } from 'next'
 import { Suspense } from 'react'
-import { MAX_CONTENT_WIDTH } from '../../utils/constants'
-import { fetchTokenCategoryPages } from '../../../contentful/tokenCategoryPage'
-import DataDisclaimer from '../../components/explore/DataDisclaimer'
+import { MAX_CONTENT_WIDTH } from '../../../utils/constants'
+import DataDisclaimer from '../../../components/explore/DataDisclaimer'
 
 export const metadata: Metadata = {
   title: 'Explore Listed Tokens on Mango Markets',
@@ -14,25 +13,18 @@ export const metadata: Metadata = {
     'Live prices, charts, stats and alpha on every token listed on Mango Markets.',
 }
 
-function ExploreFallback() {
+function ExploreTokensFallback() {
   return <></>
 }
 
-async function ExplorePage() {
+async function ExploreTokensPage() {
   const tokens = await fetchTokenPages({
     preview: draftMode().isEnabled,
   })
   const mangoTokensData = await fetchMangoTokensData()
-  const categoryPages = await fetchTokenCategoryPages({
-    preview: draftMode().isEnabled,
-  })
   return tokens && tokens?.length ? (
-    <Suspense fallback={<ExploreFallback />}>
-      <Explore
-        categoryPages={categoryPages}
-        tokens={tokens}
-        mangoTokensData={mangoTokensData}
-      />
+    <Suspense fallback={<ExploreTokensFallback />}>
+      <ExploreTokens tokens={tokens} mangoTokensData={mangoTokensData} />
       <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto pb-10`}>
         <DataDisclaimer />
       </div>
@@ -50,4 +42,4 @@ async function ExplorePage() {
   )
 }
 
-export default ExplorePage
+export default ExploreTokensPage

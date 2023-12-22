@@ -1,4 +1,4 @@
-import BackButton from '../../../components/shared/BackButton'
+import BackButton from '../../../../components/shared/BackButton'
 
 export default function TokenPageLayout({
   children,

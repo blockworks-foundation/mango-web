@@ -49,24 +49,14 @@ const MenuPanel = ({
           <div>
             <h4 className="px-4 mb-2">Explore</h4>
             <NavigationItemLink
-              path="/explore"
+              path="/explore/tokens"
               onClick={closeOnClick}
-              title="All"
+              title="Listed tokens"
             />
             <NavigationItemLink
-              path="/explore/defi"
+              path="/explore/categories"
               onClick={closeOnClick}
-              title="DeFi"
-            />
-            <NavigationItemLink
-              path="/explore/meme"
-              onClick={closeOnClick}
-              title="Meme"
-            />
-            <NavigationItemLink
-              path="/explore/exchange"
-              onClick={closeOnClick}
-              title="Exchange"
+              title="Token categories"
             />
           </div>
           <div>

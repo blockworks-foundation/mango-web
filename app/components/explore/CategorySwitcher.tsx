@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
 
 const goToCategoryPage = (categorySlug: string, router: AppRouterInstance) => {
-  router.push(`/explore/${categorySlug}`)
+  router.push(`/explore/categories/${categorySlug}`)
 }
 
 const CategorySwitcher = ({
@@ -40,7 +40,7 @@ const CategorySwitcher = ({
   const handleSetCategory = (cat: string) => {
     setSelectedCategory(cat)
     if (cat === 'All') {
-      router.push('/explore', { shallow: true })
+      router.push('/explore/categories', { shallow: true })
     } else {
       const slug = categories.find((category) => category.category === cat)
         ?.slug

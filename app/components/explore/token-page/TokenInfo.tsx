@@ -197,7 +197,7 @@ const TokenInfo = ({
               return (
                 <Link
                   className="text-th-fgd-3"
-                  href={`/explore/${slug}`}
+                  href={`/explore/categories/${slug}`}
                   key={tag}
                   shallow
                 >

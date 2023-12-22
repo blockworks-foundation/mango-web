@@ -7,8 +7,9 @@ import CategorySwitcher from './CategorySwitcher'
 import TableViewToggle from './TableViewToggle'
 import TokenTable from './TokenTable'
 import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
-import { sortTokens } from './Explore'
+import { sortTokens } from './ExploreTokens'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
+import BackButton from '../shared/BackButton'
 
 const Category = ({
   categoryPages,
@@ -35,13 +36,16 @@ const Category = ({
   return (
     <>
       <div
-        className={`flex flex-col items-start justify-end h-[264px] ${
+        className={`flex flex-col items-start justify-between h-[264px] py-6 ${
           description ? 'bg-cover bg-center' : 'bg-repeat'
         }`}
         style={{ backgroundImage: `url('${backgroundImageUrl}')` }}
       >
+        <div className={`${MAX_CONTENT_WIDTH} w-full mx-auto px-6 lg:px-20`}>
+          <BackButton />
+        </div>
         <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
-          <div className="bg-[rgba(0,0,0,0.8)] px-3 py-1 mb-6">
+          <div className="bg-[rgba(21,19,27,0.8)] px-3 py-1">
             <h1 className="text-4xl">{`Explore ${category}`}</h1>
           </div>
         </div>
