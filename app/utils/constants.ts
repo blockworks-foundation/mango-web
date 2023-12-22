@@ -23,6 +23,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   mngo: true,
   msol: true,
   neon: true,
+  nos: true,
   opos: true,
   orca: true,
   pyth: true,
