@@ -28,7 +28,7 @@ const Text = ({ children }) => (
 
 const H2 = ({ children }) => <h2 className="text-3xl">{children}</h2>
 const H3 = ({ children }) => <h3 className="mb-2 text-xl">{children}</h3>
-const H4 = ({ children }) => <h3 className="mb-1.5 text-base">{children}</h3>
+const H4 = ({ children }) => <h3 className="mb-1.5 text-lg">{children}</h3>
 const Ul = ({ children }) => (
   <ul style={{ listStyle: 'inside disc', marginLeft: '16px' }}>{children}</ul>
 )
