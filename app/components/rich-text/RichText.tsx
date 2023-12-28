@@ -41,7 +41,7 @@ const A = ({ node, children }) => {
     !data.uri.includes('http')
   return (
     <Link
-      className="text-th-fgd-2 border-b border-th-active md:hover:border-transparent text-lg"
+      className="text-th-fgd-3 border-b border-th-active md:hover:border-transparent text-lg"
       href={data.uri}
       target={isInternal ? '_self' : '_blank'}
       rel={isInternal ? '' : 'noopener noreferrer'}
