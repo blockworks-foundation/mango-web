@@ -18,7 +18,9 @@ function RichText({ document }: RichTextProps) {
 
 export default RichText
 
-const Bold = ({ children }) => <p className="font-bold">{children}</p>
+const Bold = ({ children }) => (
+  <span className="font-bold text-th-fgd-3">{children}</span>
+)
 
 const Text = ({ children }) => (
   <p className="mb-2 text-lg" style={{ lineHeight: '1.8rem' }}>
@@ -30,7 +32,7 @@ const H2 = ({ children }) => <h2 className="text-3xl">{children}</h2>
 const H3 = ({ children }) => <h3 className="mb-2 text-xl">{children}</h3>
 const H4 = ({ children }) => <h3 className="mb-1.5 text-lg">{children}</h3>
 const Ul = ({ children }) => (
-  <ul style={{ listStyle: 'inside disc', marginLeft: '16px' }}>{children}</ul>
+  <ul style={{ listStyle: 'outside disc', marginLeft: '16px' }}>{children}</ul>
 )
 const mangoUrl = 'https://mango.markets'
 const A = ({ node, children }) => {
@@ -71,6 +73,19 @@ const options = {
     [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
     [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
     [BLOCKS.UL_LIST]: (node, children) => <Ul>{children}</Ul>,
+    [BLOCKS.LIST_ITEM]: (node) => {
+      const transformedChildren = documentToReactComponents(node, {
+        renderNode: {
+          [BLOCKS.PARAGRAPH]: (node, children) => children,
+          [BLOCKS.LIST_ITEM]: (node, children) => children,
+        },
+      })
+      return (
+        <li className="font-body text-th-fgd-4 text-lg mb-2 tracking-wider">
+          {transformedChildren}
+        </li>
+      )
+    },
     [BLOCKS.HR]: () => <Spacer />,
     [INLINES.EMBEDDED_ENTRY]: (node) => {
       if (node.data.target.sys.contentType.sys.id === 'tokenCallToAction') {
