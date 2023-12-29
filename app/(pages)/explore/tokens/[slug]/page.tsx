@@ -95,7 +95,6 @@ async function TokenPage({ params }: TokenPageProps) {
       </div>
       {description ? (
         <div className={SECTION_WRAPPER_CLASSES}>
-          <h2 className="mb-4 text-2xl">{`About ${tokenName}`}</h2>
           <RichTextDisplay content={description} />
         </div>
       ) : null}
