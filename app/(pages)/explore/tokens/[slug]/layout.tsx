@@ -1,4 +1,5 @@
 import BackButton from '../../../../components/shared/BackButton'
+import { MAX_CONTENT_WIDTH } from '../../../../utils/constants'
 
 export default function TokenPageLayout({
   children,
@@ -6,11 +7,11 @@ export default function TokenPageLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="px-6 lg:px-20 pb-12 pt-8 max-w-[1280px] mx-auto min-h-screen">
-      <div className="-mt-6">
+    <div className="min-h-screen">
+      <div className={`${MAX_CONTENT_WIDTH} w-full mx-auto px-6 lg:px-20`}>
         <BackButton />
-        <div className="mt-8">{children}</div>
       </div>
+      <div>{children}</div>
     </div>
   )
 }

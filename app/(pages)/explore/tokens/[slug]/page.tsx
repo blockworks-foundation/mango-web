@@ -14,8 +14,7 @@ import { MangoMarketsData, MangoTokenData } from '../../../../types/mango'
 import TokenMangoStats from '../../../../components/explore/token-page/TokenMangoStats'
 import DataDisclaimer from '../../../../components/explore/DataDisclaimer'
 import InfoAndStats from '../../../../components/explore/token-page/InfoAndStats'
-
-const SECTION_WRAPPER_CLASSES = 'border-t border-th-bkg-3 pt-6 mt-12'
+import { MAX_CONTENT_WIDTH } from '../../../../utils/constants'
 
 interface TokenPageParams {
   slug: string
@@ -80,26 +79,34 @@ async function TokenPage({ params }: TokenPageProps) {
   ])
 
   return (
-    <div>
-      <InfoAndStats
-        tokenPageData={tokenPageData}
-        mangoTokenData={mangoTokenData}
-      />
-      <div className="mt-6">
-        <h2 className="mb-4 text-2xl">{`${tokenName} on Mango`}</h2>
-        <TokenMangoStats
-          mangoData={mangoTokenData}
-          mangoMarketsData={mangoMarketsData}
+    <>
+      <div
+        className={`px-6 lg:px-20 pb-10 md:pb-16 pt-6 ${MAX_CONTENT_WIDTH} mx-auto`}
+      >
+        <InfoAndStats
           tokenPageData={tokenPageData}
+          mangoTokenData={mangoTokenData}
         />
+        <div className="mt-6">
+          <h2 className="mb-4 text-2xl">{`${tokenName} on Mango`}</h2>
+          <TokenMangoStats
+            mangoData={mangoTokenData}
+            mangoMarketsData={mangoMarketsData}
+            tokenPageData={tokenPageData}
+          />
+        </div>
       </div>
       {description ? (
-        <div className={SECTION_WRAPPER_CLASSES}>
-          <RichTextDisplay content={description} />
+        <div className="bg-th-bkg-2 py-10 md:py-16">
+          <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto`}>
+            <RichTextDisplay content={description} />
+          </div>
         </div>
       ) : null}
-      <DataDisclaimer />
-    </div>
+      <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto pb-10`}>
+        <DataDisclaimer />
+      </div>
+    </>
   )
 }
 
