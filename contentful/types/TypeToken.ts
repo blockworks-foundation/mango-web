@@ -49,6 +49,7 @@ export interface TypeTokenFields {
   symbol: EntryFieldTypes.Symbol
   spotSymbol: EntryFieldTypes.Symbol
   perpSymbol?: EntryFieldTypes.Symbol
+  isCrossChain?: EntryFieldTypes.Boolean
 }
 
 export type TypeTokenSkeleton = EntrySkeletonType<TypeTokenFields, 'token'>

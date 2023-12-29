@@ -26,6 +26,7 @@ export interface TokenPage {
   perpSymbol: string | undefined
   spotSymbol: string
   lastModified: string
+  isCrossChain: boolean | undefined
 }
 
 export interface TokenPageWithData extends TokenPage {
@@ -55,6 +56,7 @@ export function parseContentfulTokenPage(
     perpSymbol: tokenPageEntry.fields.perpSymbol || undefined,
     spotSymbol: tokenPageEntry.fields.spotSymbol,
     lastModified: tokenPageEntry.sys.updatedAt,
+    isCrossChain: tokenPageEntry.fields.isCrossChain || undefined,
   }
 }
 
