@@ -68,7 +68,32 @@ const options = {
       )
       return isEntry ? <>{children}</> : <Text>{children}</Text>
     },
-    [INLINES.HYPERLINK]: (node, children) => <A node={node}>{children}</A>,
+    [INLINES.HYPERLINK]: (node, children) => {
+      if (node.data.uri.includes('youtube.com')) {
+        // Extract videoId from the URL
+        const match =
+          /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/.exec(
+            node.data.uri,
+          )
+        const videoId = match && match[7].length === 11 ? match[7] : null
+        return (
+          videoId && (
+            <span className="relative block w-full h-0 pb-[56.25%]">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                title={`https://youtube.com/embed/${videoId}`}
+                src={`https://youtube.com/embed/${videoId}`}
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                frameBorder="0"
+                allowFullScreen
+              />
+            </span>
+          )
+        )
+      } else {
+        return <A node={node}>{children}</A>
+      }
+    },
     [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
     [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
     [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
