@@ -17,7 +17,7 @@ const fetchBirdeyePrices = async (daysToShow: string, mint: string) => {
     const queryEnd = Math.floor(Date.now() / 1000)
     const queryStart = queryEnd - parseInt(daysToShow) * DAILY_SECONDS
     const interval =
-      daysToShow === '1' ? '15m' : daysToShow === '7' ? '1H' : '4H'
+      daysToShow === '1' ? '30m' : daysToShow === '7' ? '1H' : '4H'
     const birdeyeQuery = `defi/history_price?address=${mint}&address_type=token&type=${interval}&time_from=${queryStart}&time_to=${queryEnd}`
     const birdeyePricesResponse = await makeApiRequest(birdeyeQuery)
     const birdeyePrices = birdeyePricesResponse?.data?.items?.length

@@ -26,7 +26,6 @@ export interface TokenPage {
   perpSymbol: string | undefined
   spotSymbol: string
   lastModified: string
-  isCrossChain: boolean | undefined
 }
 
 export interface TokenPageWithData extends TokenPage {
@@ -56,7 +55,6 @@ export function parseContentfulTokenPage(
     perpSymbol: tokenPageEntry.fields.perpSymbol || undefined,
     spotSymbol: tokenPageEntry.fields.spotSymbol,
     lastModified: tokenPageEntry.sys.updatedAt,
-    isCrossChain: tokenPageEntry.fields.isCrossChain || undefined,
   }
 }
 
@@ -90,7 +88,7 @@ export async function fetchTokenPages({
     // birdeye 24h price data
     const queryEnd = Math.floor(Date.now() / 1000)
     const queryStart = queryEnd - DAILY_SECONDS
-    const birdeyeQuery = `defi/history_price?address=${tokenPage.mint}&address_type=token&type=1H&time_from=${queryStart}&time_to=${queryEnd}`
+    const birdeyeQuery = `defi/history_price?address=${tokenPage.mint}&address_type=token&type=30m&time_from=${queryStart}&time_to=${queryEnd}`
     const birdeyePricesResponse = await makeApiRequest(birdeyeQuery)
     const birdeyePrices =
       birdeyePricesResponse?.data?.items?.map((data) => ({

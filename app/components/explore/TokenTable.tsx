@@ -75,9 +75,6 @@ const TokenTable = ({
         : mangoTokenData?.price
           ? mangoTokenData.price
           : 0
-      const change = birdeyeData?.priceChange24hPercent
-        ? birdeyeData.priceChange24hPercent
-        : mangoTokenData?.rolling_24hr_change
       const volume = birdeyeData?.v24hUSD
         ? birdeyeData.v24hUSD
         : mangoTokenData?.rolling_24hr_volume
@@ -86,6 +83,14 @@ const TokenTable = ({
       const fdv = birdeyeData?.mc ? birdeyeData.mc : 0
       const logoURI = birdeyeData?.logoURI
       const chartData = token.birdeyePrices
+
+      const change = chartData?.length
+        ? ((chartData[chartData.length - 1].value - chartData[0].value) /
+            chartData[0].value) *
+          100
+        : birdeyeData?.priceChange24hPercent
+          ? birdeyeData.priceChange24hPercent
+          : mangoTokenData?.rolling_24hr_change
 
       const data = {
         tokenName,
