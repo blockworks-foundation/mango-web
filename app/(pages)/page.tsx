@@ -4,7 +4,7 @@ import { fetchAppStatsData, fetchMangoMarketData } from '../utils/mango'
 
 const metaTitle = 'Mango Markets | Safer. Smarter. Faster.'
 const metaDescription =
-  'A magical new way to interact with DeFi. Groundbreaking safety features designed to keep your funds secure. The easiest way to margin trade any token pair. All powered by flashloans.'
+  'A magical DeFi experience powered by flashloans. Cross-margin trading with multi-collateral and groudbreaking safety features.'
 
 export const metadata: Metadata = {
   title: metaTitle,
