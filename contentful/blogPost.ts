@@ -14,6 +14,10 @@ export interface BlogPost {
   postContent: RichTextDocument | undefined
   postHeroImage: ContentImage | null
   slug: string
+  createdAt: string
+  author: string | undefined
+  seoTitle: string | undefined
+  seoDescription: string | undefined
 }
 
 // A function to transform a Contentful blog post
@@ -33,6 +37,10 @@ export function parseContentfulBlogPost(
       blogPostEntry.fields.postHeroImage,
     ),
     slug: blogPostEntry.fields.slug,
+    createdAt: blogPostEntry.sys.createdAt,
+    author: blogPostEntry.fields.author,
+    seoTitle: blogPostEntry.fields.seoTitle,
+    seoDescription: blogPostEntry.fields.seoDescription,
   }
 }
 

@@ -1,9 +1,11 @@
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
 import { fetchBlogPost, fetchBlogPosts } from '../../../../contentful/blogPost'
 import RichText from '../../../components/rich-text/RichText'
+import { MAX_CONTENT_WIDTH } from '../../../utils/constants'
+import BackButton from '../../../components/shared/BackButton'
+import { CalendarIcon } from '@heroicons/react/20/solid'
 
 interface BlogPostPageParams {
   slug: string
@@ -37,7 +39,8 @@ export async function generateMetadata(
   }
 
   return {
-    title: blogPost.postTitle,
+    title: blogPost?.seoTitle || blogPost.postTitle,
+    description: blogPost?.seoDescription || blogPost.postDescription,
   }
 }
 
@@ -56,30 +59,36 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
     return notFound()
   }
 
+  const backgroundImageUrl = '/images/new/cube-bg.png'
+
+  const { postTitle, postDescription, postContent, createdAt } = blogPost
+
   return (
-    <div>
-      <Link href="/">← Posts</Link>
-      <div className="prose mt-8 border-t pt-8">
-        {/* Render the blog post image */}
-        {blogPost.postHeroImage && (
-          <img
-            src={blogPost.postHeroImage.src}
-            // Use the Contentful Images API to render
-            // responsive images. No next/image required:
-            srcSet={`${blogPost.postHeroImage.src}?w=300 1x, ${blogPost.postHeroImage.src} 2x`}
-            width={300}
-            height={300}
-            alt={blogPost.postHeroImage.alt}
-          />
-        )}
-
-        {/* Render the blog post title */}
-        <h1>{blogPost.postTitle}</h1>
-
-        {/* Render the blog post body */}
-        <RichText document={blogPost.postContent} />
+    <>
+      <div
+        className={`flex flex-col items-start justify-between h-[264px] py-6`}
+        style={{ backgroundImage: `url('${backgroundImageUrl}')` }}
+      >
+        <div className={`${MAX_CONTENT_WIDTH} w-full mx-auto px-6 lg:px-20`}>
+          <BackButton />
+        </div>
+        <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
+          <div className="bg-[rgba(21,19,27,0.8)] px-3 py-1">
+            <h1 className="text-4xl">{postTitle}</h1>
+          </div>
+        </div>
       </div>
-    </div>
+      <div className="px-6 lg:px-20 pt-6 pb-10 md:pb-16 max-w-3xl mx-auto">
+        <div className="mb-10">
+          <p className="text-xl text-th-fgd-2 mb-1">{postDescription}</p>
+          <div className="flex items-center space-x-2">
+            <CalendarIcon className="h-5 w-5 text-th-fgd-4" />
+            <p>{createdAt}</p>
+          </div>
+        </div>
+        <RichText document={postContent} />
+      </div>
+    </>
   )
 }
 

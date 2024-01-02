@@ -9,9 +9,12 @@ import type {
 export interface TypeBlogPostFields {
   postTitle: EntryFieldTypes.Symbol
   slug: EntryFieldTypes.Symbol
+  author?: EntryFieldTypes.Symbol
   postDescription: EntryFieldTypes.Text
-  postHeroImage: EntryFieldTypes.AssetLink
   postContent: EntryFieldTypes.RichText
+  postHeroImage?: EntryFieldTypes.AssetLink
+  seoTitle?: EntryFieldTypes.Symbol
+  seoDescription?: EntryFieldTypes.Text
 }
 
 export type TypeBlogPostSkeleton = EntrySkeletonType<

@@ -98,7 +98,6 @@ const ExploreTokens = ({
         <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <p className="mb-3 sm:mb-0">{`${tokens?.length} tokens listed on Mango`}</p>
           <div className="flex space-x-2">
-            {/* <CategorySwitcher categories={categoryPages} /> */}
             <div className="relative w-full lg:mb-0 sm:w-44">
               <Input
                 heightClass="h-10 pl-8"
