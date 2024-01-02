@@ -5,7 +5,7 @@ import { fetchBlogPost, fetchBlogPosts } from '../../../../contentful/blogPost'
 import RichText from '../../../components/rich-text/RichText'
 import { MAX_CONTENT_WIDTH } from '../../../utils/constants'
 import BackButton from '../../../components/shared/BackButton'
-import { CalendarIcon } from '@heroicons/react/20/solid'
+import { CalendarIcon, UserCircleIcon } from '@heroicons/react/20/solid'
 
 interface BlogPostPageParams {
   slug: string
@@ -61,7 +61,14 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const backgroundImageUrl = '/images/new/cube-bg.png'
 
-  const { postTitle, postDescription, postContent, createdAt } = blogPost
+  const {
+    author,
+    authorProfileImage,
+    postTitle,
+    postDescription,
+    postContent,
+    createdAt,
+  } = blogPost
 
   return (
     <>
@@ -79,12 +86,28 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </div>
       <div className="px-6 lg:px-20 pt-6 pb-10 md:pb-16 max-w-3xl mx-auto">
-        <div className="mb-10">
-          <p className="text-xl text-th-fgd-2 mb-1">{postDescription}</p>
-          <div className="flex items-center space-x-2">
-            <CalendarIcon className="h-5 w-5 text-th-fgd-4" />
-            <p>{createdAt}</p>
-          </div>
+        <div className="border-b border-th-bkg-3 pb-6 mb-10">
+          <p className="text-xl text-th-fgd-2 mb-4">{postDescription}</p>
+          {author ? (
+            <div className="flex items-center space-x-2">
+              {authorProfileImage?.src ? (
+                <img
+                  className="rounded-full w-12 h-12"
+                  src={authorProfileImage.src}
+                  alt={authorProfileImage?.alt}
+                />
+              ) : (
+                <UserCircleIcon className="w-12 h-12 text-th-fgd-4" />
+              )}
+              <div>
+                <p className="text-th-fgd-2 font-bold">{author}</p>
+                <div className="flex items-center space-x-1.5">
+                  <CalendarIcon className="h-4 w-4 text-th-fgd-4" />
+                  <p>{createdAt}</p>
+                </div>
+              </div>
+            </div>
+          ) : null}
         </div>
         <RichText document={postContent} />
       </div>

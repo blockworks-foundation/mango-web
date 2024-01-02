@@ -16,6 +16,7 @@ export interface BlogPost {
   slug: string
   createdAt: string
   author: string | undefined
+  authorProfileImage: ContentImage | null
   seoTitle: string | undefined
   seoDescription: string | undefined
 }
@@ -39,6 +40,9 @@ export function parseContentfulBlogPost(
     slug: blogPostEntry.fields.slug,
     createdAt: blogPostEntry.sys.createdAt,
     author: blogPostEntry.fields.author,
+    authorProfileImage: parseContentfulContentImage(
+      blogPostEntry.fields.authorProfileImage,
+    ),
     seoTitle: blogPostEntry.fields.seoTitle,
     seoDescription: blogPostEntry.fields.seoDescription,
   }
