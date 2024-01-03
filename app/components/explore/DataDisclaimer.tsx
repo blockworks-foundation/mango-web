@@ -9,7 +9,7 @@ const DataDisclaimer = () => {
         of the data, and shall not be liable for any errors, omissions, or any
         losses resulting from its use.
       </p>
-      <p>
+      <p className="text-xs">
         Do not invest unless you are prepared to lose all the money you invest.
         Crypto is a high-risk investment and you should not expect to be
         protected if something goes wrong.
