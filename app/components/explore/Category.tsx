@@ -44,7 +44,7 @@ const Category = ({
         <div className={`${MAX_CONTENT_WIDTH} w-full mx-auto px-6 lg:px-20`}>
           <BackButton />
         </div>
-        <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
+        <div className={`${MAX_CONTENT_WIDTH} mx-auto px-6`}>
           <div className="bg-[rgba(21,19,27,0.8)] px-3 py-1">
             <h1 className="text-4xl">{`Explore ${category}`}</h1>
           </div>
@@ -53,11 +53,11 @@ const Category = ({
       <div
         className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
       >
-        <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <p className="mb-3 sm:mb-0">{`${sortedTokens?.length} ${category} ${
+        <div className="mb-4 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between">
+          <p>{`${sortedTokens?.length} ${category} ${
             sortedTokens?.length === 1 ? 'token' : 'tokens'
           } listed on Mango`}</p>
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 mb-6 sm:mb-0">
             <CategorySwitcher categories={categoryPages} />
             <TableViewToggle
               showTableView={showTableView}

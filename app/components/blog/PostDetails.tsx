@@ -3,6 +3,7 @@
 import { CalendarIcon, UserCircleIcon } from '@heroicons/react/20/solid'
 import { BlogPost } from '../../../contentful/blogPost'
 import ShareButtonPanel from './ShareButtonPanel'
+import dayjs from 'dayjs'
 
 const PostDetails = ({ post }: { post: BlogPost }) => {
   const {
@@ -34,7 +35,7 @@ const PostDetails = ({ post }: { post: BlogPost }) => {
             <p className="text-th-fgd-2 font-bold">{author}</p>
             <div className="flex items-center space-x-1.5">
               <CalendarIcon className="h-4 w-4 text-th-fgd-4" />
-              <p>{createdAt}</p>
+              <p>{dayjs(createdAt).format('DD MMM YYYY')}</p>
             </div>
           </div>
         </div>

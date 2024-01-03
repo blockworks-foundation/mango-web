@@ -95,9 +95,9 @@ const ExploreTokens = ({
       <div
         className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
       >
-        <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <p className="mb-3 sm:mb-0">{`${tokens?.length} tokens listed on Mango`}</p>
-          <div className="flex space-x-2">
+        <div className="mb-4 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between">
+          <p>{`${tokens?.length} tokens listed on Mango`}</p>
+          <div className="flex space-x-2 mb-6 sm:mb-0">
             <div className="relative w-full lg:mb-0 sm:w-44">
               <Input
                 heightClass="h-10 pl-8"

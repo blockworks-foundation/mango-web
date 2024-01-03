@@ -68,9 +68,9 @@ const ExploreCategories = ({
       <div
         className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
       >
-        <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <p className="mb-3 sm:mb-0">{`${categoryPages?.length} token categories`}</p>
-          <div className="relative w-full lg:mb-0 sm:w-44">
+        <div className="mb-4 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between">
+          <p>{`${categoryPages?.length} token categories`}</p>
+          <div className="relative w-full lg:mb-0 sm:w-44 mb-6 sm:mb-0">
             <Input
               heightClass="h-10 pl-8"
               type="text"
