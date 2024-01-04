@@ -8,6 +8,13 @@ type RichTextProps = {
   document: RichTextDocument | undefined
 }
 
+function renderImage(node) {
+  const { file, title } = node.data.target.fields
+  const imageUrl = `https:${file.url}`
+
+  return <img className="w-full h-auto my-8" src={imageUrl} alt={title} />
+}
+
 function RichText({ document }: RichTextProps) {
   if (!document) {
     return null
@@ -23,7 +30,7 @@ const Bold = ({ children }) => (
 )
 
 const Text = ({ children }) => (
-  <p className="mb-2 text-lg" style={{ lineHeight: '1.8rem' }}>
+  <p className="mb-4 text-lg" style={{ lineHeight: '1.8rem' }}>
     {children}
   </p>
 )
@@ -94,6 +101,7 @@ const options = {
         return <A node={node}>{children}</A>
       }
     },
+    [BLOCKS.EMBEDDED_ASSET]: (node) => renderImage(node),
     [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
     [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
     [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
@@ -106,7 +114,7 @@ const options = {
         },
       })
       return (
-        <li className="font-body text-th-fgd-4 text-lg mb-2 tracking-wider">
+        <li className="font-body text-th-fgd-4 text-lg mb-4 tracking-wider">
           {transformedChildren}
         </li>
       )
