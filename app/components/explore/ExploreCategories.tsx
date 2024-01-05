@@ -1,12 +1,14 @@
 'use client'
 
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { ChangeEvent, useMemo, useState } from 'react'
+import { ChangeEvent, useEffect, useMemo, useState } from 'react'
 import Input from '../forms/Input'
 import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
 import Link from 'next/link'
 import NoResults from './NoResults'
+import PageHeader from './PageHeader'
+import { useTheme } from 'next-themes'
 
 const generateSearchTerm = (item: TokenCategoryPage, searchValue: string) => {
   const normalizedSearchValue = searchValue.toLowerCase()
@@ -54,17 +56,7 @@ const ExploreCategories = ({
 
   return (
     <>
-      <div
-        className={`flex flex-col items-start justify-end h-[264px] bg-[url('/images/new/cube-bg.png')] bg-repeat`}
-      >
-        <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
-          <div className="bg-[rgba(0,0,0,0.8)] px-3 py-1 mb-6 mx-6 sm:mx-0">
-            <h1 className="text-4xl text-center">
-              Explore listed token categories
-            </h1>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="Explore listed token categories" />
       <div
         className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
       >
@@ -84,9 +76,6 @@ const ExploreCategories = ({
           <div className="grid grid-cols-4 gap-6">
             {filteredCategories.map((cat) => {
               const { category, description, slug } = cat
-              const imgSrc = description
-                ? `/images/categories/${slug}-small.png`
-                : '/images/new/cube-bg.png'
               return (
                 <div
                   className="col-span-4 sm:col-span-2 lg:col-span-1 border border-th-bkg-3 rounded-xl group relative"
@@ -94,12 +83,7 @@ const ExploreCategories = ({
                 >
                   <Link href={`/explore/categories/${slug}`}>
                     <div className="overflow-hidden rounded-t-xl">
-                      <div
-                        className={`h-[200px] lg:h-[140px] ${
-                          description ? 'bg-center bg-cover bg-no-repeat' : ''
-                        }  transition-transform transform md:group-hover:scale-105 duration-300`}
-                        style={{ backgroundImage: `url('${imgSrc}')` }}
-                      />
+                      <CardImage description={!!description} slug={slug} />
                     </div>
                     <div className="px-4 py-3">
                       <p className="text-th-fgd-2 font-display">{category}</p>
@@ -118,3 +102,34 @@ const ExploreCategories = ({
 }
 
 export default ExploreCategories
+
+const CardImage = ({
+  description,
+  slug,
+}: {
+  description: boolean
+  slug: string
+}) => {
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const imgSrc = description
+    ? `/images/categories/${slug}-small.png`
+    : theme === 'Dark'
+      ? '/images/new/cube-bg.png'
+      : '/images/new/cube-bg-light.png'
+
+  if (!mounted) return <div className="h-[200px] lg:h-[140px] bg-th-bkg-2" />
+  return (
+    <div
+      className={`h-[200px] lg:h-[140px] ${
+        description ? 'bg-center bg-cover bg-no-repeat' : ''
+      }  transition-transform transform md:group-hover:scale-105 duration-300`}
+      style={{ backgroundImage: `url('${imgSrc}')` }}
+    />
+  )
+}

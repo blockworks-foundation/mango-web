@@ -8,6 +8,7 @@ import Input from '../forms/Input'
 import TokenTable from './TokenTable'
 import TableViewToggle from './TableViewToggle'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
+import PageHeader from './PageHeader'
 
 const generateSearchTerm = (item: TokenPageWithData, searchValue: string) => {
   const normalizedSearchValue = searchValue.toLowerCase()
@@ -83,15 +84,7 @@ const ExploreTokens = ({
 
   return (
     <>
-      <div
-        className={`flex flex-col items-start justify-end h-[264px] bg-[url('/images/new/cube-bg.png')] bg-repeat`}
-      >
-        <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
-          <div className="bg-[rgba(0,0,0,0.8)] px-3 py-1 mb-6 mx-6 sm:mx-0">
-            <h1 className="text-4xl">Explore listed tokens</h1>
-          </div>
-        </div>
-      </div>
+      <PageHeader title="Explore listed tokens" />
       <div
         className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
       >

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import DesktopNavigation from './DesktopNavigation'
 import MobileNavigation from './MobileNavigation'
+import ThemeSwitcher from '../ThemeSwitcher'
 
 const TopNavigation = () => {
   return (
@@ -18,8 +19,11 @@ const TopNavigation = () => {
             </span>
           </div>
         </Link>
-        <DesktopNavigation />
-        <MobileNavigation />
+        <div className="flex items-center space-x-4">
+          <DesktopNavigation />
+          <MobileNavigation />
+          <ThemeSwitcher />
+        </div>
       </div>
     </div>
   )

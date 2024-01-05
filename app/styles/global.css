@@ -74,7 +74,7 @@ th {
 
 /* Theme */
 
-/* [data-theme='Light'] {
+[data-theme='Light'] {
   --active: theme('colors.light-theme.active.DEFAULT');
   --active-dark: theme('colors.light-theme.active.dark');
   --down: theme('colors.light-theme.down.DEFAULT');
@@ -101,9 +101,9 @@ th {
   --error: theme('colors.light-theme.error');
   --success: theme('colors.light-theme.success');
   --warning: theme('colors.light-theme.warning');
-} */
+}
 
-:root {
+[data-theme='Dark'] {
   --active: theme('colors.mango-classic-theme.active.DEFAULT');
   --active-dark: theme('colors.mango-classic-theme.active.dark');
   --down: theme('colors.mango-classic-theme.down.DEFAULT');

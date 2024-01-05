@@ -12,13 +12,23 @@ import IconWithText from '../shared/IconWithText'
 import SectionWrapper from '../shared/SectionWrapper'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useLayoutEffect, useMemo, useRef } from 'react'
+import {
+  HTMLProps,
+  ReactNode,
+  forwardRef,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin'
 import ColorBlur from '../shared/ColorBlur'
 import Ottersec from '../icons/Ottersec'
 import { formatNumericValue, numberCompacter } from '../../utils/numbers'
 import HeroStat from './HeroStat'
 import { AppStatsData } from '../../types/mango'
+import { useTheme } from 'next-themes'
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -215,11 +225,7 @@ const HomePage = ({
             />
           </div>
           <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center">
-            <img
-              className="sphere absolute -top-12 sm:-top-28 xl:-top-40 opacity-60 -left-6 sm:left-6 w-56 h-auto xl:-left-12"
-              src="/images/new/black-sphere.png"
-              alt=""
-            />
+            <BlackSphere />
             <img
               className="w-3/4 lg:w-full absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0 xl:w-[740px]"
               src="/images/new/trade-desktop.png"
@@ -233,7 +239,7 @@ const HomePage = ({
           </div>
         </div>
       </SectionWrapper>
-      <div className="bg-[url('/images/new/cube-bg.png')] bg-repeat py-12 lg:py-16">
+      <HeroStatWrapper>
         <SectionWrapper noPaddingY>
           <div className="grid grid-cols-3 gap-6">
             <HeroStat title="Markets" value={numberOfMarkets.toString()} />
@@ -258,7 +264,7 @@ const HomePage = ({
             />
           </div>
         </SectionWrapper>
-      </div>
+      </HeroStatWrapper>
       <SectionWrapper className="mt-10 md:mt-0">
         <div
           className="grid grid-cols-6 gap-4 md:gap-6 xl:gap-8"
@@ -312,7 +318,7 @@ const HomePage = ({
           />
         </div>
       </SectionWrapper>
-      <div className="bg-[url('/images/new/stage-slice.png')] bg-repeat-x bg-contain">
+      <SwapStageWrapper ref={swapPanel}>
         <SectionWrapper className="relative overflow-hidden">
           <ColorBlur
             className="-top-20 left-0 -rotate-25 opacity-20"
@@ -357,7 +363,7 @@ const HomePage = ({
             width="600px"
           />
         </SectionWrapper>
-      </div>
+      </SwapStageWrapper>
       <SectionWrapper>
         <div className="flex flex-col justify-center" ref={coreFeatures}>
           <div className="h-full xl:px-12">
@@ -454,7 +460,7 @@ const HomePage = ({
           </div>
         </div>
       </SectionWrapper>
-      <div className="bg-[url('/images/new/cube-bg.png')] bg-repeat">
+      <BuildWrapper ref={build}>
         <SectionWrapper className="relative overflow-hidden">
           <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 bg-gradient-to-tl shadow-xl from-th-bkg-1 to-th-bkg-2 h-[600px] w-[600px] md:h-[800px] md:w-[800px] rounded-full" />
           <ColorBlur
@@ -488,9 +494,106 @@ const HomePage = ({
             />
           </div>
         </SectionWrapper>
-      </div>
+      </BuildWrapper>
     </>
   )
 }
 
 export default HomePage
+
+const BlackSphere = () => {
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return <div className="sphere w-56 h-56" />
+  return (
+    <img
+      className={`sphere absolute -top-16 -left-6 sm:left-6 w-56 h-auto xl:-left-12 ${
+        theme === 'Dark' ? '' : 'opacity-0'
+      }`}
+      src="/images/new/black-sphere.png"
+      alt=""
+    />
+  )
+}
+
+const HeroStatWrapper = ({ children }) => {
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted)
+    return <div className="bg-th-bkg-2 py-12 lg:py-16">{children}</div>
+  return (
+    <div
+      className={`${
+        theme === 'Dark'
+          ? `bg-[url('/images/new/cube-bg.png')]`
+          : `bg-[url('/images/new/cube-bg-light.png')]`
+      } bg-repeat py-12 lg:py-16`}
+    >
+      {children}
+    </div>
+  )
+}
+
+interface RefWrapperProps extends HTMLProps<HTMLDivElement> {
+  children: ReactNode
+}
+
+const SwapStageWrapper = forwardRef<HTMLDivElement, RefWrapperProps>(
+  (props, ref) => {
+    const { theme } = useTheme()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+      setMounted(true)
+    }, [])
+
+    if (!mounted) return <div>{props.children}</div>
+    return (
+      <div
+        className={`${
+          theme === 'Dark'
+            ? `bg-[url('/images/new/stage-slice.png')]`
+            : `bg-[url('/images/new/stage-slice-light.png')]`
+        } bg-repeat-x bg-contain`}
+        ref={ref}
+      >
+        {props.children}
+      </div>
+    )
+  },
+)
+
+const BuildWrapper = forwardRef<HTMLDivElement, RefWrapperProps>(
+  (props, ref) => {
+    const { theme } = useTheme()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+      setMounted(true)
+    }, [])
+
+    if (!mounted) return <div className="bg-th-bkg-2">{props.children}</div>
+    return (
+      <div
+        className={`${
+          theme === 'Dark'
+            ? `bg-[url('/images/new/cube-bg.png')]`
+            : `bg-[url('/images/new/cube-bg-light.png')]`
+        } bg-repeat`}
+        ref={ref}
+      >
+        {props.children}
+      </div>
+    )
+  },
+)
