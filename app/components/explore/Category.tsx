@@ -9,7 +9,7 @@ import TokenTable from './TokenTable'
 import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
 import { sortTokens } from './ExploreTokens'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
-import BackButton from '../shared/BackButton'
+import PageHeader from './PageHeader'
 
 const Category = ({
   categoryPages,
@@ -29,27 +29,15 @@ const Category = ({
     return sortTokens(tokensForCategory)
   }, [tokensForCategory])
 
-  const backgroundImageUrl = description
-    ? `/images/categories/${slug}.png`
-    : '/images/new/cube-bg.png'
+  const backgroundImageUrl = description ? `/images/categories/${slug}.png` : ''
 
   return (
     <>
-      <div
-        className={`flex flex-col items-start justify-between h-[264px] py-6 ${
-          description ? 'bg-cover bg-center' : 'bg-repeat'
-        }`}
-        style={{ backgroundImage: `url('${backgroundImageUrl}')` }}
-      >
-        <div className={`${MAX_CONTENT_WIDTH} w-full mx-auto px-6 lg:px-20`}>
-          <BackButton />
-        </div>
-        <div className={`${MAX_CONTENT_WIDTH} mx-auto px-6`}>
-          <div className="bg-[rgba(21,19,27,0.8)] px-3 py-1">
-            <h1 className="text-4xl">{`Explore ${category}`}</h1>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        title={`Explore ${category}`}
+        showBack
+        backgroundImageUrl={backgroundImageUrl}
+      />
       <div
         className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
       >

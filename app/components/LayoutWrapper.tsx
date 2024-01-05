@@ -4,6 +4,7 @@ import PlausibleProvider from 'next-plausible'
 import { ttCommons, ttCommonsExpanded, ttCommonsMono } from '../utils/fonts'
 import TopNavigation from './navigation/TopNavigation'
 import Footer from './footer/Footer'
+import { ThemeProvider } from 'next-themes'
 
 // init react-query
 export const queryClient = new QueryClient({
@@ -27,13 +28,15 @@ function LayoutWrapper({ children }) {
           selfHosted={true}
           trackOutboundLinks={true}
         >
-          <div
-            className={`bg-th-bkg-1 ${ttCommons.variable} ${ttCommonsExpanded.variable} ${ttCommonsMono.variable} font-sans min-h-screen`}
-          >
-            <TopNavigation />
-            {children}
-            <Footer />
-          </div>
+          <ThemeProvider defaultTheme="Dark">
+            <div
+              className={`bg-th-bkg-1 ${ttCommons.variable} ${ttCommonsExpanded.variable} ${ttCommonsMono.variable} font-sans min-h-screen`}
+            >
+              <TopNavigation />
+              {children}
+              <Footer />
+            </div>
+          </ThemeProvider>
         </PlausibleProvider>
       </QueryClientProvider>
     </>
