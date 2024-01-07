@@ -43,16 +43,7 @@ const PageHeader = ({
             <BackButton />
           </div>
         ) : null}
-        <div className={`${MAX_CONTENT_WIDTH} mx-auto flex flex-col`}>
-          {tag ? (
-            <div className="px-2 py-2 border border-th-active rounded-full">
-              <span className="text-th-fgd-1">{tag}</span>
-            </div>
-          ) : null}
-          <div className="bg-th-bkg-1 px-3 py-1 mx-6 sm:mx-0">
-            <h1 className="text-4xl text-center max-w-2xl">{title}</h1>
-          </div>
-        </div>
+        <HeaderContent title={title} tag={tag} />
       </div>
     )
 
@@ -68,13 +59,24 @@ const PageHeader = ({
           <BackButton />
         </div>
       ) : null}
-      <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
-        <div className="bg-th-bkg-1 px-3 py-1 mx-6 sm:mx-0">
-          <h1 className="text-4xl text-center">{title}</h1>
-        </div>
-      </div>
+      <HeaderContent title={title} tag={tag} />
     </div>
   )
 }
 
 export default PageHeader
+
+const HeaderContent = ({ tag, title }: { tag?: string; title: string }) => {
+  return (
+    <div className={`${MAX_CONTENT_WIDTH} mx-auto flex flex-col items-center`}>
+      {tag ? (
+        <div className="px-4 py-1.5 bg-th-bkg-1 rounded-full w-max mb-4">
+          <span className="font-bold text-th-active">{tag}</span>
+        </div>
+      ) : null}
+      <div className="bg-th-bkg-1 px-3 py-1 mx-6 sm:mx-0">
+        <h1 className="text-4xl text-center max-w-2xl">{title}</h1>
+      </div>
+    </div>
+  )
+}
