@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme } from 'next-themes'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
 import { useEffect, useState } from 'react'
@@ -8,10 +10,12 @@ const WRAPPER_CLASSES = 'flex flex-col items-start h-[264px] py-6'
 const PageHeader = ({
   backgroundImageUrl,
   title,
+  tag,
   showBack,
 }: {
   backgroundImageUrl?: string
   title: string
+  tag?: string
   showBack?: boolean
 }) => {
   const { theme } = useTheme()
@@ -39,9 +43,14 @@ const PageHeader = ({
             <BackButton />
           </div>
         ) : null}
-        <div className={`${MAX_CONTENT_WIDTH} mx-auto`}>
+        <div className={`${MAX_CONTENT_WIDTH} mx-auto flex flex-col`}>
+          {tag ? (
+            <div className="px-2 py-2 border border-th-active rounded-full">
+              <span className="text-th-fgd-1">{tag}</span>
+            </div>
+          ) : null}
           <div className="bg-th-bkg-1 px-3 py-1 mx-6 sm:mx-0">
-            <h1 className="text-4xl text-center">{title}</h1>
+            <h1 className="text-4xl text-center max-w-2xl">{title}</h1>
           </div>
         </div>
       </div>

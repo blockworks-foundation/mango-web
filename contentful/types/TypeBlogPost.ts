@@ -10,6 +10,7 @@ export interface TypeBlogPostFields {
   postTitle: EntryFieldTypes.Symbol
   slug: EntryFieldTypes.Symbol
   author?: EntryFieldTypes.Symbol
+  category: EntryFieldTypes.Symbol<'Repost'>
   authorProfileImage?: EntryFieldTypes.AssetLink
   postDescription: EntryFieldTypes.Text
   postContent: EntryFieldTypes.RichText

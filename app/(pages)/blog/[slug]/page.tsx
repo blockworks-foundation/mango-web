@@ -3,8 +3,8 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { fetchBlogPost, fetchBlogPosts } from '../../../../contentful/blogPost'
 import RichText from '../../../components/rich-text/RichText'
-import PostHeader from '../../../components/blog/PostHeader'
 import PostDetails from '../../../components/blog/PostDetails'
+import PageHeader from '../../../components/explore/PageHeader'
 
 interface BlogPostPageParams {
   slug: string
@@ -58,16 +58,11 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
     return notFound()
   }
 
-  const backgroundImageUrl = '/images/new/cube-bg.png'
-
-  const { postTitle, postContent } = blogPost
+  const { category, postTitle, postContent } = blogPost
 
   return (
     <>
-      <PostHeader
-        backgroundImageUrl={backgroundImageUrl}
-        postTitle={postTitle}
-      />
+      <PageHeader title={postTitle} tag={category} showBack />
       <div className="px-6 lg:px-20 pb-10 md:pb-16 max-w-3xl mx-auto">
         <PostDetails post={blogPost} />
         <RichText document={postContent} />
