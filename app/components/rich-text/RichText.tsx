@@ -129,6 +129,19 @@ const options = {
         )
       }
     },
+    [BLOCKS.QUOTE]: (node) => {
+      const transformedChildren = documentToReactComponents(node, {
+        renderNode: {
+          [BLOCKS.PARAGRAPH]: (node, children) => children,
+          [BLOCKS.QUOTE]: (node, children) => children,
+        },
+      })
+      return (
+        <blockquote className="text-sm italic -mt-4 mb-8 text-right font-body text-th-fgd-4 tracking-wider">
+          {transformedChildren}
+        </blockquote>
+      )
+    },
   },
   // renderText: (text) => text.replace('!', '?'),
 }

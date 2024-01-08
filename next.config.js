@@ -6,7 +6,20 @@ const nextConfig = {
   transpilePackages: ['gsap'],
   i18n,
   images: {
-    domains: ['raw.githubusercontent.com', 'arweave.net'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'arweave.net/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.fotofolio.xyz/**',
+      },
+    ],
   },
   reactStrictMode: true,
   async redirects() {
