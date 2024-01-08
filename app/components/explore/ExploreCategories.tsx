@@ -1,14 +1,14 @@
 'use client'
 
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { ChangeEvent, useEffect, useMemo, useState } from 'react'
+import { ChangeEvent, useMemo, useState } from 'react'
 import Input from '../forms/Input'
 import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
 import Link from 'next/link'
 import NoResults from './NoResults'
 import PageHeader from './PageHeader'
-import { useTheme } from 'next-themes'
+import CardImage from '../shared/CardImage'
 
 const generateSearchTerm = (item: TokenCategoryPage, searchValue: string) => {
   const normalizedSearchValue = searchValue.toLowerCase()
@@ -83,7 +83,13 @@ const ExploreCategories = ({
                 >
                   <Link href={`/explore/categories/${slug}`}>
                     <div className="overflow-hidden rounded-t-xl">
-                      <CardImage description={!!description} slug={slug} />
+                      <CardImage
+                        customImagePath={
+                          description
+                            ? `/images/categories/${slug}-small.png`
+                            : ''
+                        }
+                      />
                     </div>
                     <div className="px-4 py-3">
                       <p className="text-th-fgd-2 font-display">{category}</p>
@@ -103,33 +109,33 @@ const ExploreCategories = ({
 
 export default ExploreCategories
 
-const CardImage = ({
-  description,
-  slug,
-}: {
-  description: boolean
-  slug: string
-}) => {
-  const { theme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+// const CardImage = ({
+//   description,
+//   slug,
+// }: {
+//   description: boolean
+//   slug: string
+// }) => {
+//   const { theme } = useTheme()
+//   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+//   useEffect(() => {
+//     setMounted(true)
+//   }, [])
 
-  const imgSrc = description
-    ? `/images/categories/${slug}-small.png`
-    : theme === 'Dark'
-      ? '/images/new/cube-bg.png'
-      : '/images/new/cube-bg-light.png'
+//   const imgSrc = description
+//     ? `/images/categories/${slug}-small.png`
+//     : theme === 'Dark'
+//       ? '/images/new/cube-bg.png'
+//       : '/images/new/cube-bg-light.png'
 
-  if (!mounted) return <div className="h-[200px] lg:h-[140px] bg-th-bkg-2" />
-  return (
-    <div
-      className={`h-[200px] lg:h-[140px] ${
-        description ? 'bg-center bg-cover bg-no-repeat' : ''
-      }  transition-transform transform md:group-hover:scale-105 duration-300`}
-      style={{ backgroundImage: `url('${imgSrc}')` }}
-    />
-  )
-}
+//   if (!mounted) return <div className="h-[200px] lg:h-[140px] bg-th-bkg-2" />
+//   return (
+//     <div
+//       className={`h-[200px] lg:h-[140px] ${
+//         description ? 'bg-center bg-cover bg-no-repeat' : ''
+//       }  transition-transform transform md:group-hover:scale-105 duration-300`}
+//       style={{ backgroundImage: `url('${imgSrc}')` }}
+//     />
+//   )
+// }
