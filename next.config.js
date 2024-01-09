@@ -30,6 +30,12 @@ const nextConfig = {
         // 308 redirect
         permanent: true,
       },
+      {
+        source: '/explore/categories/governanace',
+        destination: '/explore/categories/governance',
+        // 308 redirect
+        permanent: true,
+      },
     ]
   },
   webpack: (config, opts) => {

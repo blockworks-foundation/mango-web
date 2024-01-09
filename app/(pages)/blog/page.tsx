@@ -18,7 +18,9 @@ async function BlogPage() {
         {blogPosts && blogPosts.length ? (
           <div className="grid grid-cols-3 gap-6">
             {blogPosts.map((blogPost) => {
-              return <PostCard blogPost={blogPost} key={blogPost.slug} />
+              return (
+                <PostCard blogPost={blogPost} key={blogPost.slug} type="blog" />
+              )
             })}
           </div>
         ) : (

@@ -18,7 +18,13 @@ async function LearnPage() {
         {learnPosts && learnPosts.length ? (
           <div className="grid grid-cols-3 gap-6">
             {learnPosts.map((learnPost) => {
-              return <PostCard blogPost={learnPost} key={learnPost.slug} />
+              return (
+                <PostCard
+                  blogPost={learnPost}
+                  key={learnPost.slug}
+                  type="learn"
+                />
+              )
             })}
           </div>
         ) : (

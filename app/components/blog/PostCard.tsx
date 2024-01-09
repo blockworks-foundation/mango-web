@@ -5,14 +5,20 @@ import { BlogPost } from '../../../contentful/blogPost'
 import CardImage from '../shared/CardImage'
 import dayjs from 'dayjs'
 
-const PostCard = ({ blogPost }: { blogPost: BlogPost }) => {
+const PostCard = ({
+  blogPost,
+  type,
+}: {
+  blogPost: BlogPost
+  type: 'blog' | 'learn'
+}) => {
   const { author, createdAt, postDescription, postTitle, slug } = blogPost
   return (
     <div
       className="col-span-4 sm:col-span-2 lg:col-span-1 border border-th-bkg-3 rounded-xl group relative"
       key={slug}
     >
-      <Link href={`/learn/${slug}`}>
+      <Link href={`/${type}/${slug}`}>
         <div className="overflow-hidden rounded-t-xl">
           <CardImage />
         </div>
