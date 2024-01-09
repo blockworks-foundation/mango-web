@@ -81,7 +81,13 @@ const InfoAndStats = ({
     <>
       <div className="pb-6 border-b border-th-bkg-3 flex flex-col-reverse md:flex-row md:items-end md:justify-between">
         <div className="flex items-center space-x-3.5 w-full">
-          <Image src={logoPath} alt="Logo" height={56} width={56} />
+          <Image
+            className="rounded-full"
+            src={logoPath}
+            alt="Logo"
+            height={56}
+            width={56}
+          />
           <div className="w-full">
             <h1 className="mb-1 text-4xl">
               {tokenName}{' '}

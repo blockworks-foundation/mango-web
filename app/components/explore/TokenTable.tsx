@@ -208,7 +208,13 @@ const TokenTable = ({
                 <Td>
                   <div className="flex items-center space-x-3">
                     {logoPath ? (
-                      <Image src={logoPath} alt="Logo" height={32} width={32} />
+                      <Image
+                        className="rounded-full"
+                        src={logoPath}
+                        alt="Logo"
+                        height={32}
+                        width={32}
+                      />
                     ) : (
                       <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
                     )}
