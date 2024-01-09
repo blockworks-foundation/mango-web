@@ -41,6 +41,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   usdt: true,
   wbtcpo: true,
   'wbtc (portal)': true,
+  wif: true,
 }
 
 export const DAILY_SECONDS = 86400

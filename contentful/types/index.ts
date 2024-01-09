@@ -3,6 +3,11 @@ export type {
   TypeBlogPostFields,
   TypeBlogPostSkeleton,
 } from './TypeBlogPost'
+export type {
+  TypeLearnPost,
+  TypeLearnPostFields,
+  TypeLearnPostSkeleton,
+} from './TypeLearnPost'
 export type { TypeToken, TypeTokenFields, TypeTokenSkeleton } from './TypeToken'
 export type {
   TypeTokenCallToAction,

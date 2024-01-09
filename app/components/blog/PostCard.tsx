@@ -16,7 +16,7 @@ const PostCard = ({ blogPost }: { blogPost: BlogPost }) => {
         <div className="overflow-hidden rounded-t-xl">
           <CardImage />
         </div>
-        <div className="p-4">
+        <div className="p-6">
           <p className="text-th-fgd-2 text-lg font-display mb-1">{postTitle}</p>
           <p>{postDescription}</p>
           <div className="mt-3">
