@@ -4,6 +4,11 @@ export type {
   TypeBlogPostSkeleton,
 } from './TypeBlogPost'
 export type {
+  TypeInlineTextPrice,
+  TypeInlineTextPriceFields,
+  TypeInlineTextPriceSkeleton,
+} from './TypeInlineTextPrice'
+export type {
   TypeLearnPost,
   TypeLearnPostFields,
   TypeLearnPostSkeleton,

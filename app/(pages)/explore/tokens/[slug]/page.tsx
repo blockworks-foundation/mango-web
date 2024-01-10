@@ -99,7 +99,10 @@ async function TokenPage({ params }: TokenPageProps) {
       {description ? (
         <div className="bg-th-bkg-2 py-10 md:py-16">
           <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto`}>
-            <RichTextDisplay content={description} />
+            <RichTextDisplay
+              content={description}
+              currentPrice={tokenPageData?.birdeyeData?.price}
+            />
           </div>
         </div>
       ) : null}

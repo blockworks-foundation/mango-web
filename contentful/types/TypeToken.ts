@@ -26,7 +26,7 @@ export interface TypeTokenFields {
       | 'Exchange'
       | 'Gambling'
       | 'Gaming'
-      | 'Governanace'
+      | 'Governance'
       | 'Infrastructure'
       | 'Layer 1'
       | 'Liquid Staking'
