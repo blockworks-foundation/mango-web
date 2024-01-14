@@ -15,6 +15,11 @@ import TokenMangoStats from '../../../../components/explore/token-page/TokenMang
 import DataDisclaimer from '../../../../components/explore/DataDisclaimer'
 import InfoAndStats from '../../../../components/explore/token-page/InfoAndStats'
 import { MAX_CONTENT_WIDTH } from '../../../../utils/constants'
+import {
+  NewsArticle,
+  fetchNewsArticles,
+} from '../../../../../contentful/newsArticle'
+import NewsArticleCard from '../../../../components/explore/NewsArticleCard'
 
 interface TokenPageParams {
   slug: string
@@ -62,7 +67,7 @@ async function TokenPage({ params }: TokenPageProps) {
     return notFound()
   }
 
-  const { description, mint, tokenName } = tokenPageData
+  const { description, mint, tokenName, symbol } = tokenPageData
 
   // get mango specific token data
   const mangoTokenDataPromise: Promise<MangoTokenData> =
@@ -72,10 +77,16 @@ async function TokenPage({ params }: TokenPageProps) {
   const mangoMarketsDataPromise: Promise<MangoMarketsData> =
     fetchMangoMarketData()
 
+  const newsArticlesPromise: Promise<NewsArticle[]> = fetchNewsArticles({
+    category: symbol,
+    preview: draftMode().isEnabled,
+  })
+
   // Wait for the promises to resolve
-  const [mangoTokenData, mangoMarketsData] = await Promise.all([
+  const [mangoTokenData, mangoMarketsData, newsArticles] = await Promise.all([
     mangoTokenDataPromise,
     mangoMarketsDataPromise,
+    newsArticlesPromise,
   ])
 
   return (
@@ -95,6 +106,16 @@ async function TokenPage({ params }: TokenPageProps) {
             tokenPageData={tokenPageData}
           />
         </div>
+        {newsArticles?.length ? (
+          <div className="mt-10">
+            <h2 className="mb-4 text-2xl">News</h2>
+            <div className="grid grid-cols-3 gap-6">
+              {newsArticles.map((article) => (
+                <NewsArticleCard article={article} key={article.articleUrl} />
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
       {description ? (
         <div className="bg-th-bkg-2 py-10 md:py-16">
