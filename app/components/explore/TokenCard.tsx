@@ -35,7 +35,13 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
         <div>
           <div className="mb-2 flex-shrink-0">
             {logoPath ? (
-              <Image src={logoPath} alt="Logo" height={32} width={32} />
+              <Image
+                className="rounded-full"
+                src={logoPath}
+                alt="Logo"
+                height={32}
+                width={32}
+              />
             ) : (
               <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
             )}
@@ -90,7 +96,7 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
       </div>
       <Link
         className="flex items-center justify-between border border-th-bkg-4 py-3 px-4 mx-auto w-full rounded-lg text-sm font-display text-th-fgd-2 mt-6"
-        href={`/token/${slug}`}
+        href={`/explore/tokens/${slug}`}
       >
         <span>Stats and info</span>
         <ChevronRightIcon className="h-5 w-5 text-th-fgd-3" />
