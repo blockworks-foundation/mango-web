@@ -75,7 +75,7 @@ const ExploreCategories = ({
         {filteredCategories?.length ? (
           <div className="grid grid-cols-4 gap-6">
             {filteredCategories.map((cat) => {
-              const { category, description, slug } = cat
+              const { category, slug } = cat
               return (
                 <div
                   className="col-span-4 sm:col-span-2 lg:col-span-1 border border-th-bkg-3 rounded-xl group relative"
@@ -84,11 +84,12 @@ const ExploreCategories = ({
                   <Link href={`/explore/categories/${slug}`}>
                     <div className="overflow-hidden rounded-t-xl">
                       <CardImage
-                        customImagePath={
-                          description
-                            ? `/images/categories/${slug}-small.png`
-                            : ''
-                        }
+                        // customImagePath={
+                        //   description
+                        //     ? `/images/categories/${slug}-small.png`
+                        //     : ''
+                        // }
+                        iconPath={`/icons/categories/${slug}.svg`}
                       />
                     </div>
                     <div className="px-4 py-3">

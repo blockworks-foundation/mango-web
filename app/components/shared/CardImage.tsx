@@ -3,7 +3,13 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-const CardImage = ({ customImagePath }: { customImagePath?: string }) => {
+const CardImage = ({
+  customImagePath,
+  iconPath,
+}: {
+  customImagePath?: string
+  iconPath?: string
+}) => {
   const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -22,9 +28,15 @@ const CardImage = ({ customImagePath }: { customImagePath?: string }) => {
     <div
       className={`h-[200px] lg:h-[140px] ${
         customImagePath ? 'bg-center bg-cover bg-no-repeat' : ''
-      }  transition-transform transform md:group-hover:scale-105 duration-300`}
+      }  transition-transform transform md:group-hover:scale-105 duration-300 flex items-center justify-center`}
       style={{ backgroundImage: `url('${imgSrc}')` }}
-    />
+    >
+      {iconPath ? (
+        <div className="h-14 w-14 flex items-center justify-center">
+          <img className="text-th-fgd-1" src={iconPath} />
+        </div>
+      ) : null}
+    </div>
   )
 }
 
