@@ -85,11 +85,7 @@ function RichText({ document, currentPrice }: RichTextProps) {
       [BLOCKS.HR]: () => <Spacer />,
       [INLINES.EMBEDDED_ENTRY]: (node) => {
         if (node.data.target.sys.contentType.sys.id === 'tokenCallToAction') {
-          return (
-            <div>
-              <TokenCallToAction data={node.data.target.fields} />
-            </div>
-          )
+          return <TokenCallToAction data={node.data.target.fields} />
         }
         if (node.data.target.sys.contentType.sys.id === 'inlineTextPrice') {
           const priceType = node.data.target.fields.priceType

@@ -1,7 +1,10 @@
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
-import { fetchTokenPagesForCategory } from '../../../../../contentful/tokenPage'
+import {
+  TokenPageWithData,
+  fetchTokenPagesForCategory,
+} from '../../../../../contentful/tokenPage'
 import {
   fetchTokenCategoryPage,
   fetchTokenCategoryPages,
@@ -11,6 +14,11 @@ import Category from '../../../../components/explore/Category'
 import { MAX_CONTENT_WIDTH } from '../../../../utils/constants'
 import RichTextDisplay from '../../../../components/rich-text/RichTextDisplay'
 import DataDisclaimer from '../../../../components/explore/DataDisclaimer'
+import {
+  NewsArticle,
+  fetchNewsArticles,
+} from '../../../../../contentful/newsArticle'
+import NewsArticleCard from '../../../../components/explore/NewsArticleCard'
 
 interface TokenCategoryPageParams {
   category: string
@@ -65,11 +73,22 @@ async function TokenCategoryPage({ params }: TokenCategoryPageProps) {
 
   const { category, description } = tokenCategoryPageData
 
-  // fetch token pages from contentful where the entry contains the category (tag)
-  const tokensForCategory = await fetchTokenPagesForCategory({
-    category,
+  const newsArticlesPromise: Promise<NewsArticle[]> = fetchNewsArticles({
+    category: category,
     preview: draftMode().isEnabled,
   })
+
+  // fetch token pages from contentful where the entry contains the category (tag)
+  const tokensForCategoryPromise: Promise<TokenPageWithData[]> =
+    fetchTokenPagesForCategory({
+      category,
+      preview: draftMode().isEnabled,
+    })
+
+  const [newsArticles, tokensForCategory] = await Promise.all([
+    newsArticlesPromise,
+    tokensForCategoryPromise,
+  ])
 
   // fetch mango token data for each token page
   const promises = tokensForCategory.map((token) =>
@@ -85,6 +104,20 @@ async function TokenCategoryPage({ params }: TokenCategoryPageProps) {
         tokensForCategory={tokensForCategory}
         mangoTokensData={mangoTokensData}
       />
+      {newsArticles?.length ? (
+        <div className="border-t border-th-bkg-3 pt-10 md:pt-16">
+          <div
+            className={`px-6 lg:px-20 pb-10 md:pb-16 ${MAX_CONTENT_WIDTH} mx-auto`}
+          >
+            <h2 className="mb-4 text-2xl">News</h2>
+            <div className="grid grid-cols-3 gap-6">
+              {newsArticles.map((article) => (
+                <NewsArticleCard article={article} key={article.articleUrl} />
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : null}
       {description ? (
         <div className="bg-th-bkg-2 py-10 md:py-16">
           <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto`}>

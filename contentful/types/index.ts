@@ -13,6 +13,11 @@ export type {
   TypeLearnPostFields,
   TypeLearnPostSkeleton,
 } from './TypeLearnPost'
+export type {
+  TypeNewsArticle,
+  TypeNewsArticleFields,
+  TypeNewsArticleSkeleton,
+} from './TypeNewsArticle'
 export type { TypeToken, TypeTokenFields, TypeTokenSkeleton } from './TypeToken'
 export type {
   TypeTokenCallToAction,
