@@ -106,8 +106,12 @@ async function TokenPage({ params }: TokenPageProps) {
             tokenPageData={tokenPageData}
           />
         </div>
-        {newsArticles?.length ? (
-          <div className="mt-10">
+      </div>
+      {newsArticles?.length ? (
+        <div className="border-t border-th-bkg-3 pt-10 md:pt-16">
+          <div
+            className={`px-6 lg:px-20 pb-10 md:pb-16 ${MAX_CONTENT_WIDTH} mx-auto`}
+          >
             <h2 className="mb-4 text-2xl">News</h2>
             <div className="grid grid-cols-3 gap-6">
               {newsArticles.map((article) => (
@@ -115,8 +119,8 @@ async function TokenPage({ params }: TokenPageProps) {
               ))}
             </div>
           </div>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
       {description ? (
         <div className="bg-th-bkg-2 py-10 md:py-16">
           <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto`}>
