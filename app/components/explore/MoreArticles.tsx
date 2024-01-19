@@ -48,18 +48,21 @@ const MoreArticles = ({ category }: { category: string }) => {
             <NewsArticleCard article={article} key={article.articleUrl} />
           ))
         : null}
-      <div className="mt-4 col-span-3 flex justify-center">
-        {showLoadMore ? (
-          <button
-            className="text-th-fgd-2 md:hover:text-th-fgd-4 font-bold"
-            onClick={handleLoadMore}
-          >
-            Load more
-          </button>
-        ) : (
-          <p className="text-sm">No news to show...</p>
-        )}
-      </div>
+      {(nextArticles?.pageParams && nextArticles.pageParams.length > 1) ||
+      showLoadMore ? (
+        <div className="mt-4 col-span-3 flex justify-center">
+          {showLoadMore ? (
+            <button
+              className="text-th-fgd-2 md:hover:text-th-fgd-4 font-bold"
+              onClick={handleLoadMore}
+            >
+              Load more
+            </button>
+          ) : (
+            <p className="text-sm">No news to show...</p>
+          )}
+        </div>
+      ) : null}
     </>
   )
 }
