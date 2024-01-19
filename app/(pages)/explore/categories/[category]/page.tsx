@@ -11,7 +11,7 @@ import {
 } from '../../../../../contentful/tokenCategoryPage'
 import { fetchMangoTokenData } from '../../../../utils/mango'
 import Category from '../../../../components/explore/Category'
-import { MAX_CONTENT_WIDTH } from '../../../../utils/constants'
+import { ARTICLE_LIMIT, MAX_CONTENT_WIDTH } from '../../../../utils/constants'
 import RichTextDisplay from '../../../../components/rich-text/RichTextDisplay'
 import DataDisclaimer from '../../../../components/explore/DataDisclaimer'
 import {
@@ -19,6 +19,7 @@ import {
   fetchNewsArticles,
 } from '../../../../../contentful/newsArticle'
 import NewsArticleCard from '../../../../components/explore/NewsArticleCard'
+import MoreArticles from '../../../../components/explore/MoreArticles'
 
 interface TokenCategoryPageParams {
   category: string
@@ -76,6 +77,8 @@ async function TokenCategoryPage({ params }: TokenCategoryPageProps) {
   const newsArticlesPromise: Promise<NewsArticle[]> = fetchNewsArticles({
     category: category,
     preview: draftMode().isEnabled,
+    limit: ARTICLE_LIMIT,
+    skip: 0,
   })
 
   // fetch token pages from contentful where the entry contains the category (tag)
@@ -114,6 +117,7 @@ async function TokenCategoryPage({ params }: TokenCategoryPageProps) {
               {newsArticles.map((article) => (
                 <NewsArticleCard article={article} key={article.articleUrl} />
               ))}
+              <MoreArticles category={category} />
             </div>
           </div>
         </div>

@@ -39,10 +39,14 @@ export function parseContentfulNewsArticle(
 interface FetchNewsArticlesOptions {
   preview: boolean
   category: any
+  limit: number
+  skip: number
 }
 export async function fetchNewsArticles({
   preview,
   category,
+  limit,
+  skip,
 }: FetchNewsArticlesOptions): Promise<NewsArticle[]> {
   const contentful = contentfulClient({ preview })
 
@@ -51,6 +55,8 @@ export async function fetchNewsArticles({
       content_type: 'newsArticle',
       include: 2,
       'fields.categories[in]': category,
+      limit: limit,
+      skip: skip,
     })
 
   return newsArticlesResult.items.map(

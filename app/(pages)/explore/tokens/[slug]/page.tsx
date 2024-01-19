@@ -14,12 +14,13 @@ import { MangoMarketsData, MangoTokenData } from '../../../../types/mango'
 import TokenMangoStats from '../../../../components/explore/token-page/TokenMangoStats'
 import DataDisclaimer from '../../../../components/explore/DataDisclaimer'
 import InfoAndStats from '../../../../components/explore/token-page/InfoAndStats'
-import { MAX_CONTENT_WIDTH } from '../../../../utils/constants'
+import { ARTICLE_LIMIT, MAX_CONTENT_WIDTH } from '../../../../utils/constants'
 import {
   NewsArticle,
   fetchNewsArticles,
 } from '../../../../../contentful/newsArticle'
 import NewsArticleCard from '../../../../components/explore/NewsArticleCard'
+import MoreArticles from '../../../../components/explore/MoreArticles'
 
 interface TokenPageParams {
   slug: string
@@ -80,6 +81,8 @@ async function TokenPage({ params }: TokenPageProps) {
   const newsArticlesPromise: Promise<NewsArticle[]> = fetchNewsArticles({
     category: symbol,
     preview: draftMode().isEnabled,
+    limit: ARTICLE_LIMIT,
+    skip: 0,
   })
 
   // Wait for the promises to resolve
@@ -117,6 +120,7 @@ async function TokenPage({ params }: TokenPageProps) {
               {newsArticles.map((article) => (
                 <NewsArticleCard article={article} key={article.articleUrl} />
               ))}
+              <MoreArticles category={symbol} />
             </div>
           </div>
         </div>
