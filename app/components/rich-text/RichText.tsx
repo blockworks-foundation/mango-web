@@ -124,7 +124,7 @@ const Bold = ({ children }) => (
 )
 
 const Text = ({ children }) => (
-  <p className="mb-4 text-lg" style={{ lineHeight: '1.8rem' }}>
+  <p className="mb-4 text-lg text-th-fgd-3" style={{ lineHeight: '1.8rem' }}>
     {children}
   </p>
 )
