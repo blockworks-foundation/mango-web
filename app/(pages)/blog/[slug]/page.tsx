@@ -41,6 +41,21 @@ export async function generateMetadata(
   return {
     title: blogPost?.seoTitle || blogPost.postTitle,
     description: blogPost?.seoDescription || blogPost.postDescription,
+    openGraph: {
+      title: blogPost?.seoTitle || blogPost.postTitle,
+      description: blogPost?.seoDescription || blogPost.postDescription,
+      url: `https://mango.markets/blog/${blogPost.slug}`,
+      siteName: 'Mango Markets',
+      images: [
+        {
+          url: blogPost.metaImageUrl, // Must be an absolute URL
+          width: 800,
+          height: 600,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
   }
 }
 

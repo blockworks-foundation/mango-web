@@ -20,6 +20,7 @@ export interface LearnPost {
   category: string
   seoTitle: string | undefined
   seoDescription: string | undefined
+  metaImageUrl: string
   ctaTitle: string | undefined
   ctaDescription: string | undefined
   ctaUrl: string | undefined
@@ -50,6 +51,7 @@ export function parseContentfulLearnPost(
     category: learnPostEntry.fields.category,
     seoTitle: learnPostEntry.fields.seoTitle,
     seoDescription: learnPostEntry.fields.seoDescription,
+    metaImageUrl: learnPostEntry.fields.metaImageUrl,
     ctaTitle: learnPostEntry.fields.ctaTitle,
     ctaDescription: learnPostEntry.fields.ctaDescription,
     ctaUrl: learnPostEntry.fields.ctaUrl,

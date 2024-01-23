@@ -20,6 +20,7 @@ export interface BlogPost {
   category: string
   seoTitle: string | undefined
   seoDescription: string | undefined
+  metaImageUrl: string
   ctaTitle: string | undefined
   ctaDescription: string | undefined
   ctaUrl: string | undefined
@@ -50,6 +51,7 @@ export function parseContentfulBlogPost(
     category: blogPostEntry.fields.category,
     seoTitle: blogPostEntry.fields.seoTitle,
     seoDescription: blogPostEntry.fields.seoDescription,
+    metaImageUrl: blogPostEntry.fields.metaImageUrl,
     ctaTitle: blogPostEntry.fields.ctaTitle,
     ctaDescription: blogPostEntry.fields.ctaDescription,
     ctaUrl: blogPostEntry.fields.ctaUrl,

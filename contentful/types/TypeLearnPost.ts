@@ -17,6 +17,7 @@ export interface TypeLearnPostFields {
   postHeroImage?: EntryFieldTypes.AssetLink
   seoTitle?: EntryFieldTypes.Symbol
   seoDescription?: EntryFieldTypes.Text
+  metaImageUrl: EntryFieldTypes.Symbol
   ctaTitle?: EntryFieldTypes.Symbol
   ctaDescription?: EntryFieldTypes.Symbol
   ctaUrl?: EntryFieldTypes.Symbol
