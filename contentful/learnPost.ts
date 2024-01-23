@@ -20,6 +20,9 @@ export interface LearnPost {
   category: string
   seoTitle: string | undefined
   seoDescription: string | undefined
+  ctaTitle: string | undefined
+  ctaDescription: string | undefined
+  ctaUrl: string | undefined
 }
 
 // A function to transform a Contentful blog post
@@ -47,6 +50,9 @@ export function parseContentfulLearnPost(
     category: learnPostEntry.fields.category,
     seoTitle: learnPostEntry.fields.seoTitle,
     seoDescription: learnPostEntry.fields.seoDescription,
+    ctaTitle: learnPostEntry.fields.ctaTitle,
+    ctaDescription: learnPostEntry.fields.ctaDescription,
+    ctaUrl: learnPostEntry.fields.ctaUrl,
   }
 }
 

@@ -16,9 +16,7 @@ export interface TypeTokenFields {
     EntryFieldTypes.Symbol<
       | 'AI'
       | 'AMM'
-      | 'Blue Chip'
       | 'Bridged (Portal)'
-      | 'Communication'
       | 'DeFi'
       | 'DePIN'
       | 'Dog Coin'
@@ -29,6 +27,7 @@ export interface TypeTokenFields {
       | 'Governance'
       | 'Infrastructure'
       | 'Layer 1'
+      | 'Layer 2'
       | 'Liquid Staking'
       | 'Meme'
       | 'Options'

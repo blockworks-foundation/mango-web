@@ -8,6 +8,7 @@ import {
 import RichText from '../../../components/rich-text/RichText'
 import PostDetails from '../../../components/blog/PostDetails'
 import PageHeader from '../../../components/explore/PageHeader'
+import AppCallToAction from '../../../components/shared/AppCallToAction'
 
 interface LearnPostPageParams {
   slug: string
@@ -61,7 +62,10 @@ async function LearnPostPage({ params }: LearnPostPageProps) {
     return notFound()
   }
 
-  const { category, postTitle, postContent } = learnPost
+  const { category, postTitle, postContent, ctaTitle, ctaDescription, ctaUrl } =
+    learnPost
+
+  const ctaData = { ctaTitle, ctaDescription, ctaUrl }
 
   return (
     <>
@@ -69,6 +73,11 @@ async function LearnPostPage({ params }: LearnPostPageProps) {
       <div className="px-6 lg:px-20 pb-10 md:pb-16 max-w-3xl mx-auto">
         <PostDetails post={learnPost} />
         <RichText document={postContent} />
+        {ctaData?.ctaUrl ? (
+          <div className="pt-6">
+            <AppCallToAction data={ctaData} />
+          </div>
+        ) : null}
       </div>
     </>
   )

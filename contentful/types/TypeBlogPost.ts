@@ -10,13 +10,16 @@ export interface TypeBlogPostFields {
   postTitle: EntryFieldTypes.Symbol
   slug: EntryFieldTypes.Symbol
   author?: EntryFieldTypes.Symbol
-  category: EntryFieldTypes.Symbol<'Repost'>
+  category: EntryFieldTypes.Symbol<'Meme Coins' | 'Repost'>
   authorProfileImage?: EntryFieldTypes.AssetLink
   postDescription: EntryFieldTypes.Text
   postContent: EntryFieldTypes.RichText
   postHeroImage?: EntryFieldTypes.AssetLink
   seoTitle?: EntryFieldTypes.Symbol
   seoDescription?: EntryFieldTypes.Text
+  ctaTitle?: EntryFieldTypes.Symbol
+  ctaDescription?: EntryFieldTypes.Symbol
+  ctaUrl?: EntryFieldTypes.Symbol
 }
 
 export type TypeBlogPostSkeleton = EntrySkeletonType<

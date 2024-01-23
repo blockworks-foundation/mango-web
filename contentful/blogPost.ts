@@ -20,6 +20,9 @@ export interface BlogPost {
   category: string
   seoTitle: string | undefined
   seoDescription: string | undefined
+  ctaTitle: string | undefined
+  ctaDescription: string | undefined
+  ctaUrl: string | undefined
 }
 
 // A function to transform a Contentful blog post
@@ -47,6 +50,9 @@ export function parseContentfulBlogPost(
     category: blogPostEntry.fields.category,
     seoTitle: blogPostEntry.fields.seoTitle,
     seoDescription: blogPostEntry.fields.seoDescription,
+    ctaTitle: blogPostEntry.fields.ctaTitle,
+    ctaDescription: blogPostEntry.fields.ctaDescription,
+    ctaUrl: blogPostEntry.fields.ctaUrl,
   }
 }
 
