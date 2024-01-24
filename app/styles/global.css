@@ -270,3 +270,7 @@ table p {
     animation-delay: 4s;
   }
 }
+
+p + .inline-image {
+  @apply md:w-1/2 md:inline-block;
+}
