@@ -9,6 +9,7 @@ import {
 import { CUSTOM_TOKEN_ICONS } from '../../utils/constants'
 import Link from 'next/link'
 import { FormattedTableData } from './TokenTable'
+import Solana from '../icons/Solana'
 
 const TokenCard = ({ token }: { token: FormattedTableData }) => {
   const {
@@ -22,6 +23,7 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
     logoURI,
     symbol,
     slug,
+    birdeyeEthData,
   } = token
   const hasCustomIcon = mangoSymbol
     ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
@@ -89,9 +91,14 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
         </div>
         <div>
           <p className="text-xs">FDV</p>
-          <p className="text-th-fgd-1">
-            {fdv ? `$${numberCompacter.format(fdv)}` : '–'}
-          </p>
+          <div className="flex items-center">
+            {birdeyeEthData && !birdeyeEthData?.mc ? (
+              <Solana className="h-3.5 w-3.5 mr-1.5" />
+            ) : null}
+            <p className="text-th-fgd-1">
+              {fdv ? `$${numberCompacter.format(fdv)}` : '–'}
+            </p>
+          </div>
         </div>
       </div>
       <Link

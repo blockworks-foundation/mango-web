@@ -115,7 +115,6 @@ const InfoAndStats = ({
             coingeckoData={coingeckoData}
             loadingCoingeckoData={loadingCoingeckoData}
             tokenPageData={tokenPageData}
-            birdeyeData={birdeyeData}
           />
         </div>
       </div>

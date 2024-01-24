@@ -24,9 +24,13 @@ import { MangoTokenData } from '../../types/mango'
 import { useViewport } from '../../hooks/useViewport'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 import { useRouter } from 'next/navigation'
-import { BirdeyePriceHistoryData } from '../../types/birdeye'
+import {
+  BirdeyeOverviewData,
+  BirdeyePriceHistoryData,
+} from '../../types/birdeye'
 import SheenLoader from '../shared/SheenLoader'
 import NoResults from './NoResults'
+import Solana from '../icons/Solana'
 
 export type FormattedTableData = {
   change: number | undefined
@@ -41,6 +45,7 @@ export type FormattedTableData = {
   symbol: string
   slug: string
   tags: string[]
+  birdeyeEthData: BirdeyeOverviewData | undefined
 }
 
 const goToTokenPage = (slug: string, router: AppRouterInstance) => {
@@ -62,7 +67,15 @@ const TokenTable = ({
   const formattedTableData = useCallback(() => {
     const formatted: FormattedTableData[] = []
     for (const token of tokens) {
-      const { tokenName, slug, symbol, birdeyeData, mint, tags } = token
+      const {
+        tokenName,
+        slug,
+        symbol,
+        birdeyeData,
+        birdeyeEthData,
+        mint,
+        tags,
+      } = token
       const mangoTokenData: MangoTokenData | undefined = mangoTokensData.find(
         (mangoToken) => mangoToken?.mint === mint,
       )
@@ -80,7 +93,12 @@ const TokenTable = ({
         : mangoTokenData?.rolling_24hr_volume
           ? mangoTokenData.rolling_24hr_volume
           : 0
-      const fdv = birdeyeData?.mc ? birdeyeData.mc : 0
+      let fdv = 0
+
+      if (birdeyeData?.mc) {
+        fdv = birdeyeData.mc + (birdeyeEthData?.mc || 0)
+      }
+
       const logoURI = birdeyeData?.logoURI
       const chartData = token.birdeyePrices
 
@@ -105,6 +123,7 @@ const TokenTable = ({
         symbol,
         slug,
         tags,
+        birdeyeEthData,
       }
       formatted.push(data)
     }
@@ -191,6 +210,7 @@ const TokenTable = ({
               logoURI,
               symbol,
               slug,
+              birdeyeEthData,
             } = token
             const hasCustomIcon = mangoSymbol
               ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
@@ -274,9 +294,12 @@ const TokenTable = ({
                   </p>
                 </Td>
                 <Td>
-                  <p className="text-right">
-                    {fdv ? `$${numberCompacter.format(fdv)}` : '–'}
-                  </p>
+                  <div className="flex items-center justify-end">
+                    {birdeyeEthData && !birdeyeEthData?.mc ? (
+                      <Solana className="h-3.5 w-3.5 mr-1.5" />
+                    ) : null}
+                    <p>{fdv ? `$${numberCompacter.format(fdv)}` : '–'}</p>
+                  </div>
                 </Td>
                 <Td>
                   <div className="flex items-center justify-end">

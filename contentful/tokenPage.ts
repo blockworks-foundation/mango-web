@@ -20,6 +20,7 @@ export interface TokenPage {
   websiteUrl?: string
   twitterUrl?: string
   mint: string
+  ethMint: string | undefined
   coingeckoId: string
   seoTitle: string
   seoDescription: string
@@ -30,6 +31,7 @@ export interface TokenPage {
 
 export interface TokenPageWithData extends TokenPage {
   birdeyeData: BirdeyeOverviewData
+  birdeyeEthData?: BirdeyeOverviewData
   birdeyePrices?: BirdeyePriceHistoryData[]
 }
 
@@ -49,6 +51,7 @@ export function parseContentfulTokenPage(
     websiteUrl: tokenPageEntry.fields.websiteUrl || undefined,
     twitterUrl: tokenPageEntry.fields.twitterUrl || undefined,
     mint: tokenPageEntry.fields.mint,
+    ethMint: tokenPageEntry.fields.ethMint || undefined,
     coingeckoId: tokenPageEntry.fields.coingeckoId,
     seoTitle: tokenPageEntry.fields.seoTitle,
     seoDescription: tokenPageEntry.fields.seoDescription,
@@ -61,6 +64,36 @@ export function parseContentfulTokenPage(
 interface FetchTokenPagesOptions {
   preview: boolean
 }
+
+const fetchBirdEyeData = async (address: string, chain?: string) => {
+  const response = await makeApiRequest(
+    `defi/token_overview?address=${address}`,
+    chain,
+  )
+  return response?.success ? response?.data : undefined
+}
+
+async function fetchDataForToken(tokenPage) {
+  // birdeye overview data
+  const birdeyeData = await fetchBirdEyeData(tokenPage.mint)
+  const birdeyeEthData = tokenPage?.ethMint
+    ? await fetchBirdEyeData(tokenPage.ethMint, 'ethereum')
+    : undefined
+
+  // birdeye 24h price data
+  const queryEnd = Math.floor(Date.now() / 1000)
+  const queryStart = queryEnd - DAILY_SECONDS
+  const birdeyeQuery = `defi/history_price?address=${tokenPage.mint}&address_type=token&type=1H&time_from=${queryStart}&time_to=${queryEnd}`
+  const birdeyePricesResponse = await makeApiRequest(birdeyeQuery)
+  const birdeyePrices =
+    birdeyePricesResponse?.data?.items?.map((data) => ({
+      ...data,
+      unixTime: data.unixTime * 1000,
+    })) || []
+
+  return { ...tokenPage, birdeyeData, birdeyePrices, birdeyeEthData }
+}
+
 export async function fetchTokenPages({
   preview,
 }: FetchTokenPagesOptions): Promise<TokenPageWithData[]> {
@@ -75,29 +108,6 @@ export async function fetchTokenPages({
   const parsedTokenPages = tokenPagesResult.items.map(
     (tokenPageEntry) => parseContentfulTokenPage(tokenPageEntry) as TokenPage,
   )
-
-  async function fetchDataForToken(tokenPage) {
-    // birdeye overview data
-    const birdeyeDataResponse = await makeApiRequest(
-      `defi/token_overview?address=${tokenPage.mint}`,
-    )
-    const birdeyeData = birdeyeDataResponse?.success
-      ? birdeyeDataResponse?.data
-      : undefined
-
-    // birdeye 24h price data
-    const queryEnd = Math.floor(Date.now() / 1000)
-    const queryStart = queryEnd - DAILY_SECONDS
-    const birdeyeQuery = `defi/history_price?address=${tokenPage.mint}&address_type=token&type=30m&time_from=${queryStart}&time_to=${queryEnd}`
-    const birdeyePricesResponse = await makeApiRequest(birdeyeQuery)
-    const birdeyePrices =
-      birdeyePricesResponse?.data?.items?.map((data) => ({
-        ...data,
-        unixTime: data.unixTime * 1000,
-      })) || []
-
-    return { ...tokenPage, birdeyeData, birdeyePrices }
-  }
 
   async function fetchAllDataForTokens(parsedTokenPages) {
     const fetchPromises = parsedTokenPages.map((tokenPage) =>
@@ -133,14 +143,12 @@ export async function fetchTokenPage({
   const parsedTokenPage = parseContentfulTokenPage(tokenPageResult.items[0])
 
   if (parsedTokenPage) {
-    const birdeyeDataResponse = await makeApiRequest(
-      `defi/token_overview?address=${parsedTokenPage.mint}`,
-    )
-    const birdeyeData = birdeyeDataResponse?.success
-      ? birdeyeDataResponse?.data
+    const birdeyeData = await fetchBirdEyeData(parsedTokenPage.mint)
+    const birdeyeEthData = parsedTokenPage?.ethMint
+      ? await fetchBirdEyeData(parsedTokenPage.ethMint, 'ethereum')
       : undefined
 
-    return { ...parsedTokenPage, birdeyeData: birdeyeData }
+    return { ...parsedTokenPage, birdeyeData, birdeyeEthData }
   } else return null
 }
 
@@ -165,29 +173,6 @@ export async function fetchTokenPagesForCategory({
     (tokenPageEntry) =>
       parseContentfulTokenPage(tokenPageEntry as TokenPageEntry) as TokenPage,
   )
-
-  async function fetchDataForToken(tokenPage) {
-    // birdeye overview data
-    const birdeyeDataResponse = await makeApiRequest(
-      `defi/token_overview?address=${tokenPage.mint}`,
-    )
-    const birdeyeData = birdeyeDataResponse?.success
-      ? birdeyeDataResponse?.data
-      : undefined
-
-    // birdeye 24h price data
-    const queryEnd = Math.floor(Date.now() / 1000)
-    const queryStart = queryEnd - DAILY_SECONDS
-    const birdeyeQuery = `defi/history_price?address=${tokenPage.mint}&address_type=token&type=1H&time_from=${queryStart}&time_to=${queryEnd}`
-    const birdeyePricesResponse = await makeApiRequest(birdeyeQuery)
-    const birdeyePrices =
-      birdeyePricesResponse?.data?.items?.map((data) => ({
-        ...data,
-        unixTime: data.unixTime * 1000,
-      })) || []
-
-    return { ...tokenPage, birdeyeData, birdeyePrices }
-  }
 
   async function fetchAllDataForTokens(parsedTokenPages) {
     const fetchPromises = parsedTokenPages.map((tokenPage) =>

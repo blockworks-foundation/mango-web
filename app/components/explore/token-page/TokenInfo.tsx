@@ -12,23 +12,27 @@ import {
   DocumentDuplicateIcon,
 } from '@heroicons/react/20/solid'
 import Link from 'next/link'
-import { BirdeyeOverviewData } from '../../../types/birdeye'
 import SheenLoader from '../../shared/SheenLoader'
+import Solana from '../../icons/Solana'
 dayjs.extend(relativeTime)
 
 const TokenInfo = ({
   coingeckoData,
   loadingCoingeckoData,
   tokenPageData,
-  birdeyeData,
 }: {
   coingeckoData: CoingeckoData | undefined
   loadingCoingeckoData: boolean
   tokenPageData: TokenPageWithData
-  birdeyeData: BirdeyeOverviewData | undefined
 }) => {
-  const { mint, tags } = tokenPageData
+  const { mint, tags, birdeyeData, birdeyeEthData } = tokenPageData
   const [copied, setCopied] = useState(false)
+
+  let fdv = 0
+
+  if (birdeyeData?.mc) {
+    fdv = birdeyeData.mc + (birdeyeEthData?.mc || 0)
+  }
 
   const handleCopyMint = (text: string) => {
     copyToClipboard(text)
@@ -48,9 +52,10 @@ const TokenInfo = ({
           value={
             mint ? (
               <button
-                className="flex items-center space-x-2 md:hover:text-th-fgd-3 focus:outline-none"
+                className="flex items-center space-x-1.5 md:hover:text-th-fgd-3 focus:outline-none"
                 onClick={() => handleCopyMint(mint)}
               >
+                <Solana className="h-3.5 w-3.5" />
                 <span>{`${mint.slice(0, 4)}...${mint.slice(-4)}`}</span>
                 {copied ? (
                   <CheckCircleIcon className="h-4 w-4 text-th-up" />
@@ -94,13 +99,20 @@ const TokenInfo = ({
         <KeyValuePair
           label="Fully diluted value"
           value={
-            birdeyeData?.mc
-              ? `$${numberCompacter.format(birdeyeData.mc)}`
-              : coingeckoData?.market_data?.fully_diluted_valuation?.usd
-                ? `$${numberCompacter.format(
-                    coingeckoData.market_data.fully_diluted_valuation.usd,
-                  )}`
-                : '–'
+            fdv ? (
+              <div className="flex items-center">
+                {birdeyeEthData && !birdeyeEthData?.mc ? (
+                  <Solana className="h-3.5 w-3.5 mr-1.5" />
+                ) : null}
+                <span>{`$${numberCompacter.format(fdv)}`}</span>
+              </div>
+            ) : coingeckoData?.market_data?.fully_diluted_valuation?.usd ? (
+              `$${numberCompacter.format(
+                coingeckoData.market_data.fully_diluted_valuation.usd,
+              )}`
+            ) : (
+              '–'
+            )
           }
         />
         <KeyValuePair

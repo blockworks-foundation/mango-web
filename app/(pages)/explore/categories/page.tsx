@@ -1,4 +1,3 @@
-import { fetchTokenPages } from '../../../../contentful/tokenPage'
 import { draftMode } from 'next/headers'
 import { Metadata } from 'next'
 import { Suspense } from 'react'
@@ -18,13 +17,10 @@ function ExploreCategoriesFallback() {
 }
 
 async function ExploreCategoriesPage() {
-  const tokens = await fetchTokenPages({
-    preview: draftMode().isEnabled,
-  })
   const categoryPages = await fetchTokenCategoryPages({
     preview: draftMode().isEnabled,
   })
-  return tokens && tokens?.length ? (
+  return categoryPages && categoryPages?.length ? (
     <Suspense fallback={<ExploreCategoriesFallback />}>
       <ExploreCategories categoryPages={categoryPages} />
       <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto pb-10`}>
