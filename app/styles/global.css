@@ -271,6 +271,6 @@ table p {
   }
 }
 
-p + .inline-image {
+.inline-image + p {
   @apply md:w-1/2 md:inline-block;
 }

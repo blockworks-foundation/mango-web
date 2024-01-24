@@ -17,7 +17,7 @@ function renderImage(node) {
 
   const isInline = height >= width
   const className = isInline
-    ? 'mt-4 w-auto h-full max-h-[348px] md:max-h-[300px] inline align-top md:ml-8 py-6 md:py-0'
+    ? 'mt-4 w-auto h-full max-h-[348px] md:max-h-[300px] inline align-top md:mr-8 py-6 md:py-0 inline-image'
     : 'w-full h-auto py-6'
 
   return <img className={className} src={imageUrl} alt={title} />
@@ -130,10 +130,7 @@ const Bold = ({ children }) => (
 )
 
 const Text = ({ children }) => (
-  <p
-    className="my-2 text-lg text-th-fgd-3 inline-image"
-    style={{ lineHeight: '1.8rem' }}
-  >
+  <p className="my-2 text-lg text-th-fgd-3" style={{ lineHeight: '1.8rem' }}>
     {children}
   </p>
 )
