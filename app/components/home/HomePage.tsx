@@ -5,6 +5,9 @@ import {
   BuildingLibraryIcon,
   CurrencyDollarIcon,
   DevicePhoneMobileIcon,
+  FaceFrownIcon,
+  QuestionMarkCircleIcon,
+  RocketLaunchIcon,
 } from '@heroicons/react/20/solid'
 import LiquidIcon from '../icons/LiquidIcon'
 import ButtonLink from '../shared/ButtonLink'
@@ -27,8 +30,16 @@ import ColorBlur from '../shared/ColorBlur'
 import Ottersec from '../icons/Ottersec'
 import { formatNumericValue, numberCompacter } from '../../utils/numbers'
 import HeroStat from './HeroStat'
-import { AppStatsData } from '../../types/mango'
+import { AppStatsData, FormattedMarketData } from '../../types/mango'
 import { useTheme } from 'next-themes'
+import { TokenPageWithData } from '../../../contentful/tokenPage'
+import { CUSTOM_TOKEN_ICONS } from '../../utils/constants'
+import Image from 'next/image'
+
+type Markets = {
+  perp: FormattedMarketData[]
+  spot: FormattedMarketData[]
+}
 
 gsap.registerPlugin(MotionPathPlugin)
 gsap.registerPlugin(ScrollTrigger)
@@ -53,16 +64,68 @@ const MOBILE_IMAGE_CLASSES =
 
 const HomePage = ({
   appStatsData,
-  numberOfMarkets,
+  markets,
+  tokens,
 }: {
   appStatsData: AppStatsData
-  numberOfMarkets: number
+  markets: Markets
+  tokens: TokenPageWithData[]
 }) => {
   const topSection = useRef<HTMLDivElement>(null)
   const callouts = useRef<HTMLDivElement>(null)
   const swapPanel = useRef<HTMLDivElement>(null)
   const coreFeatures = useRef<HTMLDivElement>(null)
   const build = useRef<HTMLDivElement>(null)
+  const numberOfMarkets =
+    (markets?.spot.length || 0) + (markets?.perp.length || 0)
+
+  const [gainers, losers] = useMemo(() => {
+    if (!tokens?.length) return [[], []]
+    const sortedTokens = tokens.sort((a, b) => {
+      const aChange = a?.birdeyePrices?.length
+        ? ((a.birdeyePrices[a.birdeyePrices.length - 1].value -
+            a.birdeyePrices[0].value) /
+            a.birdeyePrices[0].value) *
+          100
+        : a?.birdeyeData?.priceChange24hPercent
+          ? a.birdeyeData.priceChange24hPercent
+          : 0
+      const bChange = b?.birdeyePrices?.length
+        ? ((b.birdeyePrices[b.birdeyePrices.length - 1].value -
+            b.birdeyePrices[0].value) /
+            b.birdeyePrices[0].value) *
+          100
+        : b?.birdeyeData?.priceChange24hPercent
+          ? b.birdeyeData.priceChange24hPercent
+          : 0
+      return bChange - aChange
+    })
+    const gainers = sortedTokens.slice(0, 5).filter((token) => {
+      const { birdeyeData, birdeyePrices } = token
+      const change = birdeyePrices?.length
+        ? ((birdeyePrices[birdeyePrices.length - 1].value -
+            birdeyePrices[0].value) /
+            birdeyePrices[0].value) *
+          100
+        : birdeyeData?.priceChange24hPercent
+          ? birdeyeData.priceChange24hPercent
+          : 0
+      return change > 0
+    })
+    const losers = sortedTokens.slice(-5).filter((token) => {
+      const { birdeyeData, birdeyePrices } = token
+      const change = birdeyePrices?.length
+        ? ((birdeyePrices[birdeyePrices.length - 1].value -
+            birdeyePrices[0].value) /
+            birdeyePrices[0].value) *
+          100
+        : birdeyeData?.priceChange24hPercent
+          ? birdeyeData.priceChange24hPercent
+          : 0
+      return change < 0
+    })
+    return [gainers, losers.reverse()]
+  }, [tokens])
 
   const formattedAppStatsData = useMemo(() => {
     if (!appStatsData || !Object.keys(appStatsData).length)
@@ -239,37 +302,8 @@ const HomePage = ({
           </div>
         </div>
       </SectionWrapper>
-      <HeroStatWrapper>
-        <SectionWrapper noPaddingY>
-          <div className="grid grid-cols-3 gap-6">
-            <HeroStat title="Markets" value={numberOfMarkets.toString()} />
-            {/* <HeroStat
-              title="Active Traders"
-              tooltipContent="Weekly active Mango Accounts"
-              value={formatNumericValue(
-                formattedAppStatsData.weeklyActiveTraders,
-              )}
-            /> */}
-            <HeroStat
-              title="Daily Volume"
-              tooltipContent="Volume across spot, swap and perp"
-              value={`$${numberCompacter.format(
-                formattedAppStatsData.totalVol24h,
-              )}`}
-            />
-            <HeroStat
-              title="Daily Trades"
-              tooltipContent="Number of trades across spot, swap and perp"
-              value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
-            />
-          </div>
-        </SectionWrapper>
-      </HeroStatWrapper>
       <SectionWrapper className="mt-10 md:mt-0">
-        <div
-          className="grid grid-cols-6 gap-4 md:gap-6 xl:gap-8"
-          ref={callouts}
-        >
+        <div className="grid grid-cols-6 gap-4 lg:gap-6" ref={callouts}>
           <IconWithText
             desc="Low fees for taker trades and rebates for maker trades. Plus, Solana's extremely low transaction costs."
             icon={
@@ -316,6 +350,38 @@ const HomePage = ({
             title="Trade your way"
             showBackground
           />
+        </div>
+      </SectionWrapper>
+      <SectionWrapper className="-mt-10 pb-12 md:pb-24 lg:pb-32" noPaddingY>
+        <div className="flex items-center justify-between mb-8 md:mb-10">
+          <h2>Markets</h2>
+          <ButtonLink path="/explore/tokens" linkText="Explore" size="large" />
+        </div>
+        <div className="grid grid-cols-3 gap-4 lg:gap-6">
+          <HeroStat title="Markets" value={numberOfMarkets.toString()} />
+          {/* <HeroStat
+              title="Active Traders"
+              tooltipContent="Weekly active Mango Accounts"
+              value={formatNumericValue(
+                formattedAppStatsData.weeklyActiveTraders,
+              )}
+            /> */}
+          <HeroStat
+            title="Daily Volume"
+            tooltipContent="Volume across spot, swap and perp"
+            value={`$${numberCompacter.format(
+              formattedAppStatsData.totalVol24h,
+            )}`}
+          />
+          <HeroStat
+            title="Daily Trades"
+            tooltipContent="Number of trades across spot, swap and perp"
+            value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-4 lg:mt-6">
+          <GainersLosers tokens={gainers} isGainers />
+          <GainersLosers tokens={losers} />
         </div>
       </SectionWrapper>
       <SwapStageWrapper ref={swapPanel}>
@@ -521,29 +587,6 @@ const BlackSphere = () => {
   )
 }
 
-const HeroStatWrapper = ({ children }) => {
-  const { theme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted)
-    return <div className="bg-th-bkg-2 py-12 lg:py-16">{children}</div>
-  return (
-    <div
-      className={`${
-        theme === 'Dark'
-          ? `bg-[url('/images/new/cube-bg.png')]`
-          : `bg-[url('/images/new/cube-bg-light.png')]`
-      } bg-repeat py-12 lg:py-16`}
-    >
-      {children}
-    </div>
-  )
-}
-
 interface RefWrapperProps extends HTMLProps<HTMLDivElement> {
   children: ReactNode
 }
@@ -597,3 +640,97 @@ const BuildWrapper = forwardRef<HTMLDivElement, RefWrapperProps>(
     )
   },
 )
+
+const GainersLosers = ({
+  tokens,
+  isGainers,
+}: {
+  tokens: TokenPageWithData[]
+  isGainers?: boolean
+}) => {
+  return (
+    <div className="border border-th-bkg-3 rounded-xl p-8 col-span-2 lg:col-span-1">
+      <h3 className="mb-3">{isGainers ? 'Gainers' : 'Losers'}</h3>
+      {tokens.length ? (
+        tokens.map((token) => {
+          const {
+            birdeyeData,
+            birdeyePrices,
+            symbol,
+            slug,
+            spotSymbol,
+            tokenName,
+          } = token
+          const hasCustomIcon = symbol
+            ? CUSTOM_TOKEN_ICONS[symbol.toLowerCase()]
+            : false
+          const logoPath = hasCustomIcon
+            ? `/icons/tokens/${symbol?.toLowerCase()}.svg`
+            : birdeyeData?.logoURI
+
+          const change = birdeyePrices?.length
+            ? ((birdeyePrices[birdeyePrices.length - 1].value -
+                birdeyePrices[0].value) /
+                birdeyePrices[0].value) *
+              100
+            : birdeyeData?.priceChange24hPercent
+              ? birdeyeData.priceChange24hPercent
+              : 0
+          return (
+            <div key={slug} className="flex items-center justify-between pt-4">
+              <div className="flex items-center space-x-3">
+                {logoPath ? (
+                  <Image
+                    className="rounded-full"
+                    src={logoPath}
+                    alt="Logo"
+                    height={32}
+                    width={32}
+                  />
+                ) : (
+                  <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
+                )}
+                <div>
+                  <p className="font-bold text-th-fgd-1">{symbol}</p>
+                  <p className="text-sm">{tokenName}</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-6">
+                <div>
+                  <p className="text-right text-th-fgd-1">
+                    {birdeyeData?.price
+                      ? `$${formatNumericValue(birdeyeData.price)}`
+                      : '–'}
+                  </p>
+                  <p
+                    className={`text-right ${
+                      isGainers ? 'text-th-up' : 'text-th-down'
+                    }`}
+                  >
+                    {`${change.toFixed(2)}%`}
+                  </p>
+                </div>
+                <ButtonLink
+                  path={`https://app.mango.markets/trade?name=${spotSymbol}/USDC`}
+                  linkText="Trade"
+                  secondary
+                />
+              </div>
+            </div>
+          )
+        })
+      ) : (
+        <div className="flex items-center justify-center h-full -mt-8">
+          <div className="flex flex-col items-center py-10">
+            {isGainers ? (
+              <FaceFrownIcon className="mb-2 h-8 w-8 text-th-active" />
+            ) : (
+              <RocketLaunchIcon className="mb-2 h-8 w-8 text-th-active" />
+            )}
+            <p>{`No ${isGainers ? 'gainers' : 'losers'}`}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}

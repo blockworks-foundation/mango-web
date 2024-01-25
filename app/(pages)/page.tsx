@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import HomePage from '../components/home/HomePage'
 import { fetchAppStatsData, fetchMangoMarketData } from '../utils/mango'
+import { fetchTokenPages } from '../../contentful/tokenPage'
+import { draftMode } from 'next/headers'
 
 const metaTitle = 'Mango Markets | Safer. Smarter. Faster.'
 const metaDescription =
@@ -28,12 +30,19 @@ export const metadata: Metadata = {
 }
 
 async function Page() {
-  const appStatsData = await fetchAppStatsData()
-  const markets = await fetchMangoMarketData()
-  const numberOfMarkets =
-    (markets?.spot.length || 0) + (markets?.perp.length || 0)
+  const appStatsDataPromise = fetchAppStatsData()
+  const marketsPromise = fetchMangoMarketData()
+  const tokensPromise = fetchTokenPages({
+    preview: draftMode().isEnabled,
+  })
+  const [appStatsData, markets, tokens] = await Promise.all([
+    appStatsDataPromise,
+    marketsPromise,
+    tokensPromise,
+  ])
+
   return (
-    <HomePage appStatsData={appStatsData} numberOfMarkets={numberOfMarkets} />
+    <HomePage appStatsData={appStatsData} markets={markets} tokens={tokens} />
   )
 }
 
