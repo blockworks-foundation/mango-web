@@ -36,6 +36,60 @@ const nextConfig = {
         // 308 redirect
         permanent: true,
       },
+      {
+        source: '/explore/categories/perps',
+        destination: '/explore/categories/derivatives',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/oracle',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/tokenized-asset',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/yield-bearing',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/options',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/layer-2',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/dog-coin',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/amm',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/gambling',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
     ]
   },
   webpack: (config, opts) => {
