@@ -15,29 +15,20 @@ export interface TypeTokenFields {
   tags: EntryFieldTypes.Array<
     EntryFieldTypes.Symbol<
       | 'AI'
-      | 'AMM'
       | 'Bridged (Portal)'
       | 'DeFi'
       | 'DePIN'
-      | 'Dog Coin'
+      | 'Derivatives'
       | 'Domains'
       | 'Exchange'
-      | 'Gambling'
       | 'Gaming'
       | 'Governance'
-      | 'Infrastructure'
       | 'Layer 1'
-      | 'Layer 2'
       | 'Liquid Staking'
       | 'Meme'
-      | 'Options'
-      | 'Oracle'
       | 'Payments'
-      | 'Perps'
       | 'Social'
       | 'Stablecoin'
-      | 'Tokenized Asset'
-      | 'Yield Bearing'
     >
   >
   websiteUrl?: EntryFieldTypes.Symbol
