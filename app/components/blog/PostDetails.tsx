@@ -21,7 +21,7 @@ const PostDetails = ({ post }: { post: BlogPost }) => {
     <div className="pb-10">
       <p className="text-xl text-th-fgd-3 my-8">{postDescription}</p>
       {author ? (
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-3">
           {authorProfileImage?.src ? (
             <img
               className="rounded-full w-12 h-12"

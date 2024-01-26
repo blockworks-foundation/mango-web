@@ -17,7 +17,7 @@ function renderImage(node) {
 
   const isInline = height >= width
   const className = isInline
-    ? 'mt-4 w-auto h-full max-h-[348px] md:max-h-[300px] inline align-top md:mr-8 py-6 md:py-0 inline-image'
+    ? 'lg:-ml-16 md:my-4 h-auto w-full max-w-[348px] md:max-w-[320px] inline align-top md:mr-8 py-6 md:py-0 inline-image'
     : 'w-full h-auto py-6'
 
   return <img className={className} src={imageUrl} alt={title} />
