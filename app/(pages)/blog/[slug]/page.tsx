@@ -74,14 +74,28 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
     return notFound()
   }
 
-  const { category, postTitle, postContent, ctaTitle, ctaDescription, ctaUrl } =
-    blogPost
+  const {
+    category,
+    postTitle,
+    postContent,
+    ctaTitle,
+    ctaDescription,
+    ctaUrl,
+    slug,
+  } = blogPost
 
   const ctaData = { ctaTitle, ctaDescription, ctaUrl }
 
+  const headerImageUrl = `/images/blog/${slug}.png`
+
   return (
     <>
-      <PageHeader title={postTitle} tag={category} showBack />
+      <PageHeader
+        title={postTitle}
+        tag={category}
+        backgroundImageUrl={headerImageUrl}
+        showBack
+      />
       <div className="px-6 lg:px-20 pb-10 md:pb-16 max-w-3xl mx-auto">
         <PostDetails post={blogPost} />
         <RichText document={postContent} />

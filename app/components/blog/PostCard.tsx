@@ -13,6 +13,7 @@ const PostCard = ({
   type: 'blog' | 'learn'
 }) => {
   const { author, createdAt, postDescription, postTitle, slug } = blogPost
+  const customImagePath = `/images/blog/${slug}-small.png`
   return (
     <div
       className="col-span-4 sm:col-span-2 lg:col-span-1 border border-th-bkg-3 rounded-xl group relative"
@@ -20,7 +21,7 @@ const PostCard = ({
     >
       <Link href={`/${type}/${slug}`}>
         <div className="overflow-hidden rounded-t-xl">
-          <CardImage />
+          <CardImage customImagePath={customImagePath} />
         </div>
         <div className="p-6">
           <p className="text-th-fgd-2 text-lg font-display mb-1">{postTitle}</p>
