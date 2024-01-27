@@ -20,7 +20,7 @@ const CardImage = ({ customImagePath }: { customImagePath?: string }) => {
   if (!mounted) return <div className="h-[200px] lg:h-[140px] bg-th-bkg-2" />
   return (
     <div
-      className={`h-[200px] lg:h-[140px] ${
+      className={`h-[200px] lg:h-[180px] ${
         customImagePath ? 'bg-center bg-cover bg-no-repeat' : ''
       }  transition-transform transform md:group-hover:scale-105 duration-300`}
       style={{ backgroundImage: `url('${imgSrc}')` }}

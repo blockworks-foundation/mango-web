@@ -5,6 +5,7 @@ import { Transition } from '@headlessui/react'
 import NavigationItemLink from './NavigationItemLink'
 import Twitter from '../icons/Twitter'
 import Discord from '../icons/Discord'
+import { NavigationLink } from './DesktopNavigation'
 
 const MobileNavigation = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -58,6 +59,9 @@ const MenuPanel = ({
               onClick={closeOnClick}
               title="Token categories"
             />
+          </div>
+          <div className="px-4">
+            <NavigationLink path="/blog" text="Blog" />
           </div>
           <div>
             <h4 className="px-4 mb-2">Developers</h4>
