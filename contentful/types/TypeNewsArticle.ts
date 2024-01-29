@@ -29,6 +29,7 @@ export interface TypeNewsArticleFields {
       | 'Domains'
       | 'ETH (Portal)'
       | 'Exchange'
+      | 'GECKO'
       | 'GUAC'
       | 'Gaming'
       | 'Governance'

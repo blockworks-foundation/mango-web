@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { fetchTokenPages } from '../contentful/tokenPage'
 import { fetchTokenCategoryPages } from '../contentful/tokenCategoryPage'
+import { fetchBlogPosts } from '../contentful/blogPost'
 
 type Sitemap = {
   url: string
@@ -24,6 +25,14 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
       updated: page.lastModified,
     }))
   }
+  const getBlogSlugs = async () => {
+    const blogPosts = await fetchBlogPosts({ preview: false })
+
+    return blogPosts.map((page) => ({
+      slug: page.slug,
+      updated: page.lastModified,
+    }))
+  }
   const sitemap: Sitemap[] = []
   // Generate URLs and add them to the sitemap
   const tokenPageSlugs = await getTokenSlugs()
@@ -38,6 +47,15 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const categoryPageSlugs = await getCategorySlugs()
   categoryPageSlugs.map((page) => {
     const url = `https://mango.markets/explore/categories/${page.slug}`
+    const lastModified = new Date(page.updated)
+    sitemap.push({
+      url,
+      lastModified,
+    })
+  })
+  const blogPostSlugs = await getBlogSlugs()
+  blogPostSlugs.map((page) => {
+    const url = `https://mango.markets/blog/${page.slug}`
     const lastModified = new Date(page.updated)
     sitemap.push({
       url,
@@ -79,6 +97,10 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: 'https://mango.markets/explore/categories',
+      lastModified: new Date(lastUpdate),
+    },
+    {
+      url: 'https://mango.markets/explore/blog',
       lastModified: new Date(lastUpdate),
     },
   )
