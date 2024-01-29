@@ -1,5 +1,3 @@
-import { fetchBirdEyeData } from '../../contentful/tokenPage'
-
 const BN = require('bn.js')
 
 const fetchEtherscanData = async (mint: string) => {
@@ -27,17 +25,12 @@ const calculateCirculatingSupply = (nativeSupply: string, decimals: number) => {
   return circSupply.toNumber()
 }
 
-export const fetchEthCircSupply = async (mint: string) => {
+export const fetchEthCircSupply = async (mint: string, decimals: number) => {
   try {
-    const birdeyeEthData = await fetchBirdEyeData(mint, 'ethereum')
     const etherscanData = await fetchEtherscanData(mint)
-
-    if (etherscanData?.message === 'OK' && birdeyeEthData?.decimals) {
+    if (etherscanData?.message === 'OK') {
       const nativeSupply = etherscanData.result
-      const circSupply = calculateCirculatingSupply(
-        nativeSupply,
-        birdeyeEthData.decimals,
-      )
+      const circSupply = calculateCirculatingSupply(nativeSupply, decimals)
       return circSupply
     } else {
       console.error('invalid data received from api')

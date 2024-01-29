@@ -28,6 +28,7 @@ export interface TokenPage {
   perpSymbol: string | undefined
   spotSymbol: string
   lastModified: string
+  erc20TokenDecimals: number | undefined
 }
 
 export interface TokenPageWithData extends TokenPage {
@@ -59,6 +60,7 @@ export function parseContentfulTokenPage(
     perpSymbol: tokenPageEntry.fields.perpSymbol || undefined,
     spotSymbol: tokenPageEntry.fields.spotSymbol,
     lastModified: tokenPageEntry.sys.updatedAt,
+    erc20TokenDecimals: tokenPageEntry.fields.erc20TokenDecimals || undefined,
   }
 }
 
@@ -77,9 +79,13 @@ export const fetchBirdEyeData = async (address: string, chain?: string) => {
 async function fetchDataForToken(tokenPage) {
   // birdeye overview data
   const birdeyeData = await fetchBirdEyeData(tokenPage.mint)
-  const ethCircSupply = tokenPage?.ethMint
-    ? await fetchEthCircSupply(tokenPage.ethMint)
-    : undefined
+  const ethCircSupply =
+    tokenPage?.ethMint && tokenPage?.erc20TokenDecimals
+      ? await fetchEthCircSupply(
+          tokenPage.ethMint,
+          tokenPage.erc20TokenDecimals,
+        )
+      : undefined
 
   // birdeye 24h price data
   const queryEnd = Math.floor(Date.now() / 1000)
@@ -145,9 +151,13 @@ export async function fetchTokenPage({
 
   if (parsedTokenPage) {
     const birdeyeData = await fetchBirdEyeData(parsedTokenPage.mint)
-    const ethCircSupply = parsedTokenPage?.ethMint
-      ? await fetchEthCircSupply(parsedTokenPage.ethMint)
-      : undefined
+    const ethCircSupply =
+      parsedTokenPage?.ethMint && parsedTokenPage?.erc20TokenDecimals
+        ? await fetchEthCircSupply(
+            parsedTokenPage.ethMint,
+            parsedTokenPage.erc20TokenDecimals,
+          )
+        : undefined
 
     return { ...parsedTokenPage, birdeyeData, ethCircSupply }
   } else return null

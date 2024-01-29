@@ -40,6 +40,7 @@ export interface TypeTokenFields {
   spotSymbol: EntryFieldTypes.Symbol
   perpSymbol?: EntryFieldTypes.Symbol
   ethMint?: EntryFieldTypes.Symbol
+  erc20TokenDecimals?: EntryFieldTypes.Integer
 }
 
 export type TypeTokenSkeleton = EntrySkeletonType<TypeTokenFields, 'token'>

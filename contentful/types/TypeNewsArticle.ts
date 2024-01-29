@@ -60,6 +60,7 @@ export interface TypeNewsArticleFields {
       | 'USDC'
       | 'USDH'
       | 'USDT'
+      | 'WEN'
       | 'WIF'
       | 'bSOL'
       | 'mSOL'
