@@ -25,13 +25,19 @@ const TokenInfo = ({
   loadingCoingeckoData: boolean
   tokenPageData: TokenPageWithData
 }) => {
-  const { mint, tags, birdeyeData, birdeyeEthData } = tokenPageData
+  const { mint, tags, birdeyeData, ethCircSupply, ethMint } = tokenPageData
   const [copied, setCopied] = useState(false)
 
   let fdv = 0
 
   if (birdeyeData?.mc) {
-    fdv = birdeyeData.mc + (birdeyeEthData?.mc || 0)
+    const price = birdeyeData?.price
+      ? birdeyeData.price
+      : coingeckoData?.market_data?.current_price?.usd
+        ? coingeckoData.market_data.current_price.usd
+        : 1
+
+    fdv = birdeyeData.mc + (ethCircSupply || 0) * price
   }
 
   const handleCopyMint = (text: string) => {
@@ -101,7 +107,7 @@ const TokenInfo = ({
           value={
             fdv ? (
               <div className="flex items-center">
-                {birdeyeEthData && !birdeyeEthData?.mc ? (
+                {ethMint && !ethCircSupply ? (
                   <Solana className="h-3.5 w-3.5 mr-1.5" />
                 ) : null}
                 <span>{`$${numberCompacter.format(fdv)}`}</span>

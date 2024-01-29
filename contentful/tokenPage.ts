@@ -8,6 +8,7 @@ import {
   BirdeyePriceHistoryData,
 } from '../app/types/birdeye'
 import { DAILY_SECONDS } from '../app/utils/constants'
+import { fetchEthCircSupply } from '../app/utils/etherscan'
 
 type TokenPageEntry = Entry<TypeTokenSkeleton, undefined, string>
 
@@ -31,7 +32,7 @@ export interface TokenPage {
 
 export interface TokenPageWithData extends TokenPage {
   birdeyeData: BirdeyeOverviewData
-  birdeyeEthData?: BirdeyeOverviewData
+  ethCircSupply?: number | undefined
   birdeyePrices?: BirdeyePriceHistoryData[]
 }
 
@@ -65,7 +66,7 @@ interface FetchTokenPagesOptions {
   preview: boolean
 }
 
-const fetchBirdEyeData = async (address: string, chain?: string) => {
+export const fetchBirdEyeData = async (address: string, chain?: string) => {
   const response = await makeApiRequest(
     `defi/token_overview?address=${address}`,
     chain,
@@ -76,8 +77,8 @@ const fetchBirdEyeData = async (address: string, chain?: string) => {
 async function fetchDataForToken(tokenPage) {
   // birdeye overview data
   const birdeyeData = await fetchBirdEyeData(tokenPage.mint)
-  const birdeyeEthData = tokenPage?.ethMint
-    ? await fetchBirdEyeData(tokenPage.ethMint, 'ethereum')
+  const ethCircSupply = tokenPage?.ethMint
+    ? await fetchEthCircSupply(tokenPage.ethMint)
     : undefined
 
   // birdeye 24h price data
@@ -91,7 +92,7 @@ async function fetchDataForToken(tokenPage) {
       unixTime: data.unixTime * 1000,
     })) || []
 
-  return { ...tokenPage, birdeyeData, birdeyePrices, birdeyeEthData }
+  return { ...tokenPage, birdeyeData, birdeyePrices, ethCircSupply }
 }
 
 export async function fetchTokenPages({
@@ -144,11 +145,11 @@ export async function fetchTokenPage({
 
   if (parsedTokenPage) {
     const birdeyeData = await fetchBirdEyeData(parsedTokenPage.mint)
-    const birdeyeEthData = parsedTokenPage?.ethMint
-      ? await fetchBirdEyeData(parsedTokenPage.ethMint, 'ethereum')
+    const ethCircSupply = parsedTokenPage?.ethMint
+      ? await fetchEthCircSupply(parsedTokenPage.ethMint)
       : undefined
 
-    return { ...parsedTokenPage, birdeyeData, birdeyeEthData }
+    return { ...parsedTokenPage, birdeyeData, ethCircSupply }
   } else return null
 }
 

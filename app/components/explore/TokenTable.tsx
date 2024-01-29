@@ -24,10 +24,7 @@ import { MangoTokenData } from '../../types/mango'
 import { useViewport } from '../../hooks/useViewport'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 import { useRouter } from 'next/navigation'
-import {
-  BirdeyeOverviewData,
-  BirdeyePriceHistoryData,
-} from '../../types/birdeye'
+import { BirdeyePriceHistoryData } from '../../types/birdeye'
 import SheenLoader from '../shared/SheenLoader'
 import NoResults from './NoResults'
 import Solana from '../icons/Solana'
@@ -42,10 +39,11 @@ export type FormattedTableData = {
   volume: number
   mangoSymbol: string | undefined
   mint: string
+  ethMint: string | undefined
   symbol: string
   slug: string
   tags: string[]
-  birdeyeEthData: BirdeyeOverviewData | undefined
+  ethCircSupply: number | undefined
 }
 
 const goToTokenPage = (slug: string, router: AppRouterInstance) => {
@@ -72,8 +70,9 @@ const TokenTable = ({
         slug,
         symbol,
         birdeyeData,
-        birdeyeEthData,
+        ethCircSupply,
         mint,
+        ethMint,
         tags,
       } = token
       const mangoTokenData: MangoTokenData | undefined = mangoTokensData.find(
@@ -96,7 +95,7 @@ const TokenTable = ({
       let fdv = 0
 
       if (birdeyeData?.mc) {
-        fdv = birdeyeData.mc + (birdeyeEthData?.mc || 0)
+        fdv = birdeyeData.mc + (ethCircSupply || 0) * price
       }
 
       const logoURI = birdeyeData?.logoURI
@@ -120,10 +119,11 @@ const TokenTable = ({
         logoURI,
         mangoSymbol,
         mint,
+        ethMint,
         symbol,
         slug,
         tags,
-        birdeyeEthData,
+        ethCircSupply,
       }
       formatted.push(data)
     }
@@ -210,7 +210,8 @@ const TokenTable = ({
               logoURI,
               symbol,
               slug,
-              birdeyeEthData,
+              ethCircSupply,
+              ethMint,
             } = token
             const hasCustomIcon = mangoSymbol
               ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
@@ -295,7 +296,7 @@ const TokenTable = ({
                 </Td>
                 <Td>
                   <div className="flex items-center justify-end">
-                    {birdeyeEthData && !birdeyeEthData?.mc ? (
+                    {ethMint && !ethCircSupply ? (
                       <Solana className="h-3.5 w-3.5 mr-1.5" />
                     ) : null}
                     <p>{fdv ? `$${numberCompacter.format(fdv)}` : '–'}</p>

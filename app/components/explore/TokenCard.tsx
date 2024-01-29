@@ -23,7 +23,8 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
     logoURI,
     symbol,
     slug,
-    birdeyeEthData,
+    ethCircSupply,
+    ethMint,
   } = token
   const hasCustomIcon = mangoSymbol
     ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
@@ -92,7 +93,7 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
         <div>
           <p className="text-xs">FDV</p>
           <div className="flex items-center">
-            {birdeyeEthData && !birdeyeEthData?.mc ? (
+            {ethMint && !ethCircSupply ? (
               <Solana className="h-3.5 w-3.5 mr-1.5" />
             ) : null}
             <p className="text-th-fgd-1">
