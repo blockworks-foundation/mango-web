@@ -41,13 +41,13 @@ const TokenCallToAction = ({ data }: { data: CtaData }) => {
       </span>
       <span className="flex space-x-2 md:pl-4 pt-4 md:pt-0">
         <ButtonLink
-          linkText={`Swap ${bankName}`}
+          linkText={`Swap ${bankName.split(' ')[0]}`}
           path={`https://app.mango.markets/swap?in=USDC&out=${bankName}`}
           size="small"
           target="_blank"
         />
         <ButtonLink
-          linkText={`Trade ${bankName}`}
+          linkText={`Trade ${bankName.split(' ')[0]}`}
           path={`https://app.mango.markets/trade?name=${spotMarketName}`}
           size="small"
           target="_blank"

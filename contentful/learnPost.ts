@@ -24,6 +24,7 @@ export interface LearnPost {
   ctaTitle: string | undefined
   ctaDescription: string | undefined
   ctaUrl: string | undefined
+  lastModified: string
 }
 
 // A function to transform a Contentful blog post
@@ -55,6 +56,7 @@ export function parseContentfulLearnPost(
     ctaTitle: learnPostEntry.fields.ctaTitle,
     ctaDescription: learnPostEntry.fields.ctaDescription,
     ctaUrl: learnPostEntry.fields.ctaUrl,
+    lastModified: learnPostEntry.sys.updatedAt,
   }
 }
 

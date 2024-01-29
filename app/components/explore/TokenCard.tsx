@@ -38,13 +38,7 @@ const TokenCard = ({ token }: { token: FormattedTableData }) => {
         <div>
           <div className="mb-2 flex-shrink-0">
             {logoPath ? (
-              <Image
-                className="rounded-full"
-                src={logoPath}
-                alt="Logo"
-                height={32}
-                width={32}
-              />
+              <Image src={logoPath} alt="Logo" height={32} width={32} />
             ) : (
               <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
             )}
