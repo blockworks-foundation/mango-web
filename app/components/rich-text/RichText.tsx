@@ -75,6 +75,7 @@ function RichText({ document, currentPrice }: RichTextProps) {
       [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
       [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
       [BLOCKS.UL_LIST]: (node, children) => <Ul>{children}</Ul>,
+      [BLOCKS.OL_LIST]: (node, children) => <Ol>{children}</Ol>,
       [BLOCKS.LIST_ITEM]: (node) => {
         const transformedChildren = documentToReactComponents(node, {
           renderNode: {
@@ -83,7 +84,7 @@ function RichText({ document, currentPrice }: RichTextProps) {
           },
         })
         return (
-          <li className="font-body text-th-fgd-4 text-lg mb-4 tracking-wider">
+          <li className="font-body text-th-fgd-3 text-lg mb-4 tracking-wider">
             {transformedChildren}
           </li>
         )
@@ -140,6 +141,11 @@ const H3 = ({ children }) => <h3 className="mb-2 text-xl">{children}</h3>
 const H4 = ({ children }) => <h3 className="mb-1.5 text-lg">{children}</h3>
 const Ul = ({ children }) => (
   <ul style={{ listStyle: 'outside disc', marginLeft: '16px' }}>{children}</ul>
+)
+const Ol = ({ children }) => (
+  <ol style={{ listStyle: 'outside number', marginLeft: '20px' }}>
+    {children}
+  </ol>
 )
 const mangoUrl = 'https://mango.markets'
 const A = ({ node, children }) => {
