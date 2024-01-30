@@ -27,7 +27,7 @@ const DesktopNavigation = () => {
         </NavigationItemPanel>
       </NavigationItem>
       <NavigationLink path="/blog" text="Blog" />
-      {/* <NavigationLink path="/learn" text="Learn" /> */}
+      <NavigationLink path="/learn" text="Learn" />
       <NavigationItem title="Developers">
         <NavigationItemPanel>
           <NavigationItemLink

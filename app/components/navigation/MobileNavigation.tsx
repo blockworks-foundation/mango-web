@@ -63,6 +63,9 @@ const MenuPanel = ({
           <div className="px-4">
             <NavigationLink path="/blog" text="Blog" />
           </div>
+          <div className="px-4">
+            <NavigationLink path="/learn" text="Learn" />
+          </div>
           <div>
             <h4 className="px-4 mb-2">Developers</h4>
             <NavigationItemLink
