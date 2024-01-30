@@ -75,7 +75,7 @@ const ExploreCategories = ({
         {filteredCategories?.length ? (
           <div className="grid grid-cols-4 gap-6">
             {filteredCategories.map((cat) => {
-              const { category, description, slug } = cat
+              const { category, slug } = cat
               return (
                 <div
                   className="col-span-4 sm:col-span-2 lg:col-span-1 border border-th-bkg-3 rounded-xl group relative"
@@ -84,11 +84,7 @@ const ExploreCategories = ({
                   <Link href={`/explore/categories/${slug}`}>
                     <div className="overflow-hidden rounded-t-xl">
                       <CardImage
-                        customImagePath={
-                          description
-                            ? `/images/categories/${slug}-small.png`
-                            : ''
-                        }
+                        customImagePath={`/images/categories/${slug}-small.png`}
                       />
                     </div>
                     <div className="px-4 py-3">
@@ -108,34 +104,3 @@ const ExploreCategories = ({
 }
 
 export default ExploreCategories
-
-// const CardImage = ({
-//   description,
-//   slug,
-// }: {
-//   description: boolean
-//   slug: string
-// }) => {
-//   const { theme } = useTheme()
-//   const [mounted, setMounted] = useState(false)
-
-//   useEffect(() => {
-//     setMounted(true)
-//   }, [])
-
-//   const imgSrc = description
-//     ? `/images/categories/${slug}-small.png`
-//     : theme === 'Dark'
-//       ? '/images/new/cube-bg.png'
-//       : '/images/new/cube-bg-light.png'
-
-//   if (!mounted) return <div className="h-[200px] lg:h-[140px] bg-th-bkg-2" />
-//   return (
-//     <div
-//       className={`h-[200px] lg:h-[140px] ${
-//         description ? 'bg-center bg-cover bg-no-repeat' : ''
-//       }  transition-transform transform md:group-hover:scale-105 duration-300`}
-//       style={{ backgroundImage: `url('${imgSrc}')` }}
-//     />
-//   )
-// }

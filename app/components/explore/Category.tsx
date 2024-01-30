@@ -23,13 +23,13 @@ const Category = ({
   mangoTokensData: MangoTokenData[]
 }) => {
   const [showTableView, setShowTableView] = useState(true)
-  const { category, description, slug } = categoryPageData
+  const { category, slug } = categoryPageData
 
   const sortedTokens = useMemo(() => {
     return sortTokens(tokensForCategory)
   }, [tokensForCategory])
 
-  const backgroundImageUrl = description ? `/images/categories/${slug}.png` : ''
+  const backgroundImageUrl = `/images/categories/${slug}.png`
 
   return (
     <>

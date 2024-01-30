@@ -90,6 +90,18 @@ const nextConfig = {
         // 308 redirect
         permanent: true,
       },
+      {
+        source: '/explore/categories/domains',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
+      {
+        source: '/explore/categories/social',
+        destination: '/explore/categories',
+        // 308 redirect
+        permanent: true,
+      },
     ]
   },
   webpack: (config, opts) => {
