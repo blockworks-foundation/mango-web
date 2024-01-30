@@ -4,18 +4,29 @@ import { CalendarIcon, UserCircleIcon } from '@heroicons/react/20/solid'
 import { BlogPost } from '../../../contentful/blogPost'
 import ShareButtonPanel from './ShareButtonPanel'
 import dayjs from 'dayjs'
+import { LearnPost } from '../../../contentful/learnPost'
 
-const PostDetails = ({ post }: { post: BlogPost }) => {
+const PostDetails = ({
+  post,
+  isLearn,
+}: {
+  post: BlogPost | LearnPost
+  isLearn?: boolean
+}) => {
   const {
     author,
     authorProfileImage,
     createdAt,
     postDescription,
     postTitle,
+    seoTitle,
+    seoDescription,
     slug,
   } = post
 
-  const shareUrl = `https://mango.markets/blog/${slug}`
+  const shareUrl = isLearn
+    ? `https://mango.markets/learn/${slug}`
+    : `https://mango.markets/blog/${slug}`
 
   return (
     <div className="pb-10">
@@ -41,8 +52,8 @@ const PostDetails = ({ post }: { post: BlogPost }) => {
         </div>
       ) : null}
       <ShareButtonPanel
-        description={postDescription}
-        title={postTitle}
+        description={seoDescription || postDescription}
+        title={seoTitle || postTitle}
         url={shareUrl}
       />
     </div>

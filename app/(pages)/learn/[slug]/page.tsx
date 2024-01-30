@@ -71,7 +71,7 @@ async function LearnPostPage({ params }: LearnPostPageProps) {
     <>
       <PageHeader title={postTitle} tag={category} showBack />
       <div className="px-6 lg:px-20 pb-10 md:pb-16 max-w-3xl mx-auto">
-        <PostDetails post={learnPost} />
+        <PostDetails post={learnPost} isLearn />
         <RichText document={postContent} />
         {ctaData?.ctaUrl ? (
           <div className="pt-6">
