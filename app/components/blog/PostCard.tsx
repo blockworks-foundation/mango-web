@@ -4,16 +4,20 @@ import Link from 'next/link'
 import { BlogPost } from '../../../contentful/blogPost'
 import CardImage from '../shared/CardImage'
 import dayjs from 'dayjs'
+import { LearnPost } from '../../../contentful/learnPost'
 
 const PostCard = ({
   blogPost,
   type,
 }: {
-  blogPost: BlogPost
+  blogPost: BlogPost | LearnPost
   type: 'blog' | 'learn'
 }) => {
   const { author, createdAt, postDescription, postTitle, slug } = blogPost
-  const customImagePath = `/images/blog/${slug}-small.png`
+  const customImagePath =
+    type === 'blog'
+      ? `/images/blog/${slug}-small.png`
+      : `/images/learn/${slug}-small.png`
   return (
     <div
       className="col-span-4 sm:col-span-2 lg:col-span-1 border border-th-bkg-3 rounded-xl group relative"
