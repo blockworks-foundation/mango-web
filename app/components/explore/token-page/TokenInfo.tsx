@@ -14,6 +14,7 @@ import {
 import Link from 'next/link'
 import SheenLoader from '../../shared/SheenLoader'
 import Solana from '../../icons/Solana'
+import Ethereum from '../../icons/Ethereum'
 dayjs.extend(relativeTime)
 
 const TokenInfo = ({
@@ -29,15 +30,16 @@ const TokenInfo = ({
   const [copied, setCopied] = useState(false)
 
   let fdv = 0
-
   if (birdeyeData?.mc) {
+    fdv = birdeyeData.mc
+  }
+  if (ethCircSupply) {
     const price = birdeyeData?.price
       ? birdeyeData.price
       : coingeckoData?.market_data?.current_price?.usd
         ? coingeckoData.market_data.current_price.usd
         : 1
-
-    fdv = birdeyeData.mc + (ethCircSupply || 0) * price
+    fdv = fdv + ethCircSupply * price
   }
 
   const handleCopyMint = (text: string) => {
@@ -109,6 +111,8 @@ const TokenInfo = ({
               <div className="flex items-center">
                 {ethMint && !ethCircSupply ? (
                   <Solana className="h-3.5 w-3.5 mr-1.5" />
+                ) : !birdeyeData?.mc ? (
+                  <Ethereum className="h-3.5 w-3.5 mr-1.5" />
                 ) : null}
                 <span>{`$${numberCompacter.format(fdv)}`}</span>
               </div>

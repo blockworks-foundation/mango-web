@@ -8,7 +8,7 @@ import {
   BirdeyePriceHistoryData,
 } from '../app/types/birdeye'
 import { DAILY_SECONDS } from '../app/utils/constants'
-import { fetchEthCircSupply } from '../app/utils/etherscan'
+import { fetchEthCircSupply, fetchEthSupply } from '../app/utils/etherscan'
 
 type TokenPageEntry = Entry<TypeTokenSkeleton, undefined, string>
 
@@ -79,13 +79,18 @@ export const fetchBirdEyeData = async (address: string, chain?: string) => {
 async function fetchDataForToken(tokenPage) {
   // birdeye overview data
   const birdeyeData = await fetchBirdEyeData(tokenPage.mint)
-  const ethCircSupply =
-    tokenPage?.ethMint && tokenPage?.erc20TokenDecimals
-      ? await fetchEthCircSupply(
-          tokenPage.ethMint,
-          tokenPage.erc20TokenDecimals,
-        )
-      : undefined
+  let ethCircSupply
+
+  if (tokenPage?.ethMint && tokenPage?.erc20TokenDecimals) {
+    ethCircSupply = await fetchEthCircSupply(
+      tokenPage.ethMint,
+      tokenPage.erc20TokenDecimals,
+    )
+  } else if (tokenPage?.slug === 'wrapped-ethereum') {
+    ethCircSupply = await fetchEthSupply()
+  } else {
+    ethCircSupply = undefined
+  }
 
   // birdeye 24h price data
   const queryEnd = Math.floor(Date.now() / 1000)
@@ -101,9 +106,40 @@ async function fetchDataForToken(tokenPage) {
   return { ...tokenPage, birdeyeData, birdeyePrices, ethCircSupply }
 }
 
-export async function fetchTokenPages({
-  preview,
-}: FetchTokenPagesOptions): Promise<TokenPageWithData[]> {
+async function fetchAllDataForTokens(parsedTokenPages) {
+  const rateLimit = 5
+  const delayBetweenRequests = 1000 / rateLimit
+
+  const tokenPagesWithData: TokenPageWithData[] = []
+
+  async function fetchAndDelay(tokenPage) {
+    try {
+      const tokenData = await fetchDataForToken(tokenPage)
+      tokenPagesWithData.push(tokenData)
+    } catch (error) {
+      console.error(`failed to fetch data for token ${tokenPage.mint}`, error)
+    }
+    // introduce a delay between requests to respect the rate limit
+    await new Promise((resolve) => setTimeout(resolve, delayBetweenRequests))
+  }
+
+  // use Promise.all for concurrent execution
+  await Promise.all(parsedTokenPages.map((page) => fetchAndDelay(page)))
+
+  return tokenPagesWithData
+}
+
+// async function fetchAllDataForTokens(parsedTokenPages) {
+//   const fetchPromises = parsedTokenPages.map((tokenPage) =>
+//     fetchDataForToken(tokenPage),
+//   )
+
+//   const tokenPagesWithData = await Promise.all(fetchPromises)
+
+//   return tokenPagesWithData
+// }
+
+export async function fetchContentfulTokenPages({ preview }) {
   const contentful = contentfulClient({ preview })
 
   const tokenPagesResult = await contentful.getEntries<TypeTokenSkeleton>({
@@ -112,20 +148,15 @@ export async function fetchTokenPages({
     order: ['fields.tokenName'],
   })
 
-  const parsedTokenPages = tokenPagesResult.items.map(
+  return tokenPagesResult.items.map(
     (tokenPageEntry) => parseContentfulTokenPage(tokenPageEntry) as TokenPage,
   )
+}
 
-  async function fetchAllDataForTokens(parsedTokenPages) {
-    const fetchPromises = parsedTokenPages.map((tokenPage) =>
-      fetchDataForToken(tokenPage),
-    )
-
-    const tokenPagesWithData = await Promise.all(fetchPromises)
-
-    return tokenPagesWithData
-  }
-
+export async function fetchTokenPages({
+  preview,
+}: FetchTokenPagesOptions): Promise<TokenPageWithData[]> {
+  const parsedTokenPages = await fetchContentfulTokenPages({ preview })
   const tokenPagesWithData = await fetchAllDataForTokens(parsedTokenPages)
 
   return tokenPagesWithData
@@ -151,13 +182,18 @@ export async function fetchTokenPage({
 
   if (parsedTokenPage) {
     const birdeyeData = await fetchBirdEyeData(parsedTokenPage.mint)
-    const ethCircSupply =
-      parsedTokenPage?.ethMint && parsedTokenPage?.erc20TokenDecimals
-        ? await fetchEthCircSupply(
-            parsedTokenPage.ethMint,
-            parsedTokenPage.erc20TokenDecimals,
-          )
-        : undefined
+    let ethCircSupply
+
+    if (parsedTokenPage?.ethMint && parsedTokenPage?.erc20TokenDecimals) {
+      ethCircSupply = await fetchEthCircSupply(
+        parsedTokenPage.ethMint,
+        parsedTokenPage.erc20TokenDecimals,
+      )
+    } else if (parsedTokenPage?.slug === 'wrapped-ethereum') {
+      ethCircSupply = await fetchEthSupply()
+    } else {
+      ethCircSupply = undefined
+    }
 
     return { ...parsedTokenPage, birdeyeData, ethCircSupply }
   } else return null
@@ -184,16 +220,6 @@ export async function fetchTokenPagesForCategory({
     (tokenPageEntry) =>
       parseContentfulTokenPage(tokenPageEntry as TokenPageEntry) as TokenPage,
   )
-
-  async function fetchAllDataForTokens(parsedTokenPages) {
-    const fetchPromises = parsedTokenPages.map((tokenPage) =>
-      fetchDataForToken(tokenPage),
-    )
-
-    const tokenPagesWithData = await Promise.all(fetchPromises)
-
-    return tokenPagesWithData
-  }
 
   const tokenPagesWithData = await fetchAllDataForTokens(parsedTokenPages)
 

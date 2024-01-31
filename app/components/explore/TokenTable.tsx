@@ -82,20 +82,25 @@ const TokenTable = ({
       if (mangoTokenData) {
         mangoSymbol = mangoTokenData.symbol
       }
+
       const price = birdeyeData?.price
         ? birdeyeData.price
         : mangoTokenData?.price
           ? mangoTokenData.price
           : 0
+
       const volume = birdeyeData?.v24hUSD
         ? birdeyeData.v24hUSD
         : mangoTokenData?.rolling_24hr_volume
           ? mangoTokenData.rolling_24hr_volume
           : 0
-      let fdv = 0
 
+      let fdv = 0
       if (birdeyeData?.mc) {
-        fdv = birdeyeData.mc + (ethCircSupply || 0) * price
+        fdv = birdeyeData.mc
+      }
+      if (ethCircSupply) {
+        fdv = fdv + ethCircSupply * price
       }
 
       const logoURI = birdeyeData?.logoURI

@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import {
+  fetchContentfulTokenPages,
   fetchTokenPage,
-  fetchTokenPages,
 } from '../../../../../contentful/tokenPage'
 import RichTextDisplay from '../../../../components/rich-text/RichTextDisplay'
 import {
@@ -33,7 +33,7 @@ interface TokenPageProps {
 // Tell Next.js about all our token pages so
 // they can be statically generated at build time.
 export async function generateStaticParams(): Promise<TokenPageParams[]> {
-  const tokenPages = await fetchTokenPages({ preview: false })
+  const tokenPages = await fetchContentfulTokenPages({ preview: false })
 
   return tokenPages.map((page) => ({ slug: page.slug }))
 }
