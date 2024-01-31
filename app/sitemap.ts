@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { fetchTokenPages } from '../contentful/tokenPage'
 import { fetchTokenCategoryPages } from '../contentful/tokenCategoryPage'
 import { fetchBlogPosts } from '../contentful/blogPost'
+import { fetchLearnPosts } from '../contentful/learnPost'
 
 type Sitemap = {
   url: string
@@ -33,9 +34,27 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
       updated: page.lastModified,
     }))
   }
+  const getLearnSlugs = async () => {
+    const learnPosts = await fetchLearnPosts({ preview: false })
+
+    return learnPosts.map((page) => ({
+      slug: page.slug,
+      updated: page.lastModified,
+    }))
+  }
   const sitemap: Sitemap[] = []
   // Generate URLs and add them to the sitemap
-  const tokenPageSlugs = await getTokenSlugs()
+  const tokenPageSlugsPromise = getTokenSlugs()
+  const categoryPageSlugsPromise = getCategorySlugs()
+  const blogPostSlugsPromise = getBlogSlugs()
+  const learnPostSlugsPromise = getLearnSlugs()
+  const [tokenPageSlugs, categoryPageSlugs, blogPostSlugs, learnPostSlugs] =
+    await Promise.all([
+      tokenPageSlugsPromise,
+      categoryPageSlugsPromise,
+      blogPostSlugsPromise,
+      learnPostSlugsPromise,
+    ])
   tokenPageSlugs.map((page) => {
     const url = `https://mango.markets/explore/tokens/${page.slug}`
     const lastModified = new Date(page.updated)
@@ -44,7 +63,6 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified,
     })
   })
-  const categoryPageSlugs = await getCategorySlugs()
   categoryPageSlugs.map((page) => {
     const url = `https://mango.markets/explore/categories/${page.slug}`
     const lastModified = new Date(page.updated)
@@ -53,9 +71,16 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified,
     })
   })
-  const blogPostSlugs = await getBlogSlugs()
   blogPostSlugs.map((page) => {
     const url = `https://mango.markets/blog/${page.slug}`
+    const lastModified = new Date(page.updated)
+    sitemap.push({
+      url,
+      lastModified,
+    })
+  })
+  learnPostSlugs.map((page) => {
+    const url = `https://mango.markets/learn/${page.slug}`
     const lastModified = new Date(page.updated)
     sitemap.push({
       url,
@@ -101,6 +126,10 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: 'https://mango.markets/explore/blog',
+      lastModified: new Date(lastUpdate),
+    },
+    {
+      url: 'https://mango.markets/explore/learn',
       lastModified: new Date(lastUpdate),
     },
   )
