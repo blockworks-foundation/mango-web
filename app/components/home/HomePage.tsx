@@ -3,9 +3,11 @@ import {
   ArrowPathRoundedSquareIcon,
   BoltIcon,
   BuildingLibraryIcon,
+  ChevronRightIcon,
   CurrencyDollarIcon,
   DevicePhoneMobileIcon,
   FaceFrownIcon,
+  NoSymbolIcon,
   QuestionMarkCircleIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/20/solid'
@@ -35,6 +37,13 @@ import { useTheme } from 'next-themes'
 import { TokenPageWithData } from '../../../contentful/tokenPage'
 import { CUSTOM_TOKEN_ICONS } from '../../utils/constants'
 import Image from 'next/image'
+import { useQuery } from '@tanstack/react-query'
+import { fetchMangoTokensData } from '../../utils/mango'
+import Link from 'next/link'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import SheenLoader from '../shared/SheenLoader'
+dayjs.extend(relativeTime)
 
 type Markets = {
   perp: FormattedMarketData[]
@@ -379,7 +388,8 @@ const HomePage = ({
             value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
           />
         </div>
-        <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-4 lg:mt-6">
+        <div className="grid grid-cols-3 gap-4 lg:gap-6 mt-4 lg:mt-6">
+          <RecentlyListed tokens={tokens} />
           <GainersLosers tokens={gainers} isGainers />
           <GainersLosers tokens={losers} />
         </div>
@@ -641,6 +651,112 @@ const BuildWrapper = forwardRef<HTMLDivElement, RefWrapperProps>(
   },
 )
 
+const RecentlyListed = ({ tokens }: { tokens: TokenPageWithData[] }) => {
+  const { data: mangoTokensData, isLoading: loadingMangoTokensData } = useQuery(
+    {
+      queryKey: ['recently-listed-data'],
+      queryFn: () => fetchMangoTokensData(),
+    },
+  )
+  const recentlyListed = useMemo(() => {
+    if (!mangoTokensData?.length) return []
+    return mangoTokensData
+      .sort((a, b) => {
+        const dateA = a?.listing_time
+          ? new Date(a.listing_time).getTime()
+          : -Infinity
+        const dateB = b?.listing_time
+          ? new Date(b.listing_time).getTime()
+          : -Infinity
+
+        return dateB - dateA
+      })
+      .slice(0, 5)
+  }, [mangoTokensData])
+
+  return (
+    <div className="border border-th-bkg-3 rounded-xl p-8 col-span-3 lg:col-span-1">
+      <h3 className="mb-3 text-lg">Recently Listed</h3>
+      {loadingMangoTokensData ? (
+        <div className="space-y-1 mt-2">
+          {[...Array(5)].map((x, i) => (
+            <SheenLoader className="flex flex-1" key={i}>
+              <div className="h-14 w-full bg-th-bkg-2" />
+            </SheenLoader>
+          ))}
+        </div>
+      ) : recentlyListed.length ? (
+        recentlyListed.map((token) => {
+          const { listing_time, symbol } = token
+          const tokenPageData = tokens?.find(
+            (tkn) => tkn?.symbol?.toLowerCase() === symbol?.toLowerCase(),
+          )
+          const hasCustomIcon = symbol
+            ? CUSTOM_TOKEN_ICONS[symbol.toLowerCase()]
+            : false
+          const logoPath = hasCustomIcon
+            ? `/icons/tokens/${symbol?.toLowerCase()}.svg`
+            : ''
+          return (
+            <Link
+              href={
+                tokenPageData?.slug
+                  ? `/explore/tokens/${tokenPageData.slug}`
+                  : '/explore/tokens'
+              }
+              key={symbol}
+              className="flex items-center justify-between py-2 md:hover:bg-th-bkg-2 -mx-3 rounded-lg"
+              shallow
+            >
+              <div className="flex items-center space-x-3 pl-3">
+                {logoPath ? (
+                  <Image
+                    className="rounded-full"
+                    src={logoPath}
+                    alt="Logo"
+                    height={32}
+                    width={32}
+                  />
+                ) : (
+                  <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
+                )}
+                <div>
+                  <p className="font-bold text-th-fgd-1">{symbol}</p>
+                  {tokenPageData?.tokenName ? (
+                    <p className="text-sm">{tokenPageData.tokenName}</p>
+                  ) : null}
+                </div>
+              </div>
+              <div className="flex items-center space-x-3 pr-2">
+                <div>
+                  {listing_time ? (
+                    <p className="text-right text-xs text-th-fgd-3">
+                      {dayjs().to(listing_time)}
+                    </p>
+                  ) : null}
+                </div>
+                <ChevronRightIcon className="h-6 w-6 text-th-fgd-4" />
+                {/* <ButtonLink
+                    path={`https://app.mango.markets/trade?name=${symbol}/USDC`}
+                    linkText="Trade"
+                    secondary
+                  /> */}
+              </div>
+            </Link>
+          )
+        })
+      ) : (
+        <div className="flex items-center justify-center h-full -mt-8">
+          <div className="flex flex-col items-center py-10">
+            <NoSymbolIcon className="mb-2 h-8 w-8 text-th-down" />
+            <p>Failed to fetch recently listed tokens</p>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 const GainersLosers = ({
   tokens,
   isGainers,
@@ -649,8 +765,8 @@ const GainersLosers = ({
   isGainers?: boolean
 }) => {
   return (
-    <div className="border border-th-bkg-3 rounded-xl p-8 col-span-2 lg:col-span-1">
-      <h3 className="mb-3">{isGainers ? 'Gainers' : 'Losers'}</h3>
+    <div className="border border-th-bkg-3 rounded-xl p-8 col-span-3 lg:col-span-1">
+      <h3 className="mb-3 text-lg">{isGainers ? 'Gainers' : 'Losers'}</h3>
       {tokens.length ? (
         tokens.map((token) => {
           const {
@@ -658,7 +774,7 @@ const GainersLosers = ({
             birdeyePrices,
             symbol,
             slug,
-            spotSymbol,
+            // spotSymbol,
             tokenName,
           } = token
           const hasCustomIcon = symbol
@@ -677,8 +793,13 @@ const GainersLosers = ({
               ? birdeyeData.priceChange24hPercent
               : 0
           return (
-            <div key={slug} className="flex items-center justify-between pt-4">
-              <div className="flex items-center space-x-3">
+            <Link
+              href={`/explore/tokens/${slug}`}
+              key={slug}
+              className="flex items-center justify-between py-2 md:hover:bg-th-bkg-2 -mx-3 rounded-lg"
+              shallow
+            >
+              <div className="flex items-center space-x-3 pl-3">
                 {logoPath ? (
                   <Image
                     className="rounded-full"
@@ -695,13 +816,8 @@ const GainersLosers = ({
                   <p className="text-sm">{tokenName}</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-3 pr-2">
                 <div>
-                  <p className="text-right text-th-fgd-1">
-                    {birdeyeData?.price
-                      ? `$${formatNumericValue(birdeyeData.price)}`
-                      : '–'}
-                  </p>
                   <p
                     className={`text-right ${
                       isGainers ? 'text-th-up' : 'text-th-down'
@@ -709,14 +825,20 @@ const GainersLosers = ({
                   >
                     {`${change.toFixed(2)}%`}
                   </p>
+                  <p className="text-right text-th-fgd-1 text-sm">
+                    {birdeyeData?.price
+                      ? `$${formatNumericValue(birdeyeData.price)}`
+                      : '–'}
+                  </p>
                 </div>
-                <ButtonLink
+                <ChevronRightIcon className="h-6 w-6 text-th-fgd-4" />
+                {/* <ButtonLink
                   path={`https://app.mango.markets/trade?name=${spotSymbol}/USDC`}
                   linkText="Trade"
                   secondary
-                />
+                /> */}
               </div>
-            </div>
+            </Link>
           )
         })
       ) : (
