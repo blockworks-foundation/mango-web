@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { fetchTokenPages } from '../contentful/tokenPage'
+import { fetchContentfulTokenPages } from '../contentful/tokenPage'
 import { fetchTokenCategoryPages } from '../contentful/tokenCategoryPage'
 import { fetchBlogPosts } from '../contentful/blogPost'
 import { fetchLearnPosts } from '../contentful/learnPost'
@@ -19,7 +19,7 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   }
   const getTokenSlugs = async () => {
-    const tokenPages = await fetchTokenPages({ preview: false })
+    const tokenPages = await fetchContentfulTokenPages({ preview: false })
 
     return tokenPages.map((page) => ({
       slug: page.slug,
