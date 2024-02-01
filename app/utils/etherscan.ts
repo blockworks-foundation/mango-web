@@ -48,7 +48,6 @@ export const fetchEthCircSupply = async (mint: string, decimals: number) => {
     const etherscanData = await fetchEtherscanData(mint)
     if (etherscanData?.message === 'OK') {
       const nativeSupply = etherscanData.result
-      console.log(nativeSupply)
       const circSupply = calculateCirculatingSupply(nativeSupply, decimals)
       return circSupply
     } else {

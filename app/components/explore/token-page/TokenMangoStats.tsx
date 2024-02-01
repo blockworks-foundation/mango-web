@@ -66,7 +66,11 @@ const TokenMangoStats = ({
       (market) => market.name.split('/')[1] === 'USDC',
     )
   }
-  return (
+  return Object.keys(mangoData)?.length === 0 ? (
+    <div className="p-6 border border-th-bkg-3 rounded-xl flex items-center justify-center">
+      <p>{`${tokenPageData?.tokenName} will be listed on Mango soon.`}</p>
+    </div>
+  ) : (
     <>
       <div className="grid grid-cols-3 gap-6">
         <div className="col-span-3 sm:col-span-1">
@@ -105,7 +109,7 @@ const TokenMangoStats = ({
           <KeyValuePairDisplay
             label="Available"
             value={
-              <span>
+              <span className={isNaN(+available) ? 'text-th-fgd-4' : ''}>
                 {available}{' '}
                 <span className="text-sm text-th-fgd-4">${availableValue}</span>
               </span>
