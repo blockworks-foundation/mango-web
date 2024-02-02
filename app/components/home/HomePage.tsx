@@ -278,7 +278,10 @@ const HomePage = ({
 
   return (
     <>
-      <SectionWrapper className="overflow-hidden h-[760px] lg:h-auto">
+      <SectionWrapper
+        className="overflow-hidden h-[760px] lg:h-[500px]"
+        noPaddingY
+      >
         <div className="grid grid-cols-12" ref={topSection}>
           <div className="col-span-12 lg:col-span-5 mb-12 lg:mb-0 relative z-10">
             <h1 className="mb-6 text-center lg:text-left">
@@ -296,10 +299,10 @@ const HomePage = ({
               size="large"
             />
           </div>
-          <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center">
+          <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center lg:-bottom-12">
             <BlackSphere />
             <img
-              className="w-3/4 lg:w-full absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0 xl:w-[740px]"
+              className="w-3/4 lg:w-[740px] absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0"
               src="/images/new/trade-desktop.png"
               alt=""
             />
@@ -588,7 +591,7 @@ const BlackSphere = () => {
   if (!mounted) return <div className="sphere w-56 h-56" />
   return (
     <img
-      className={`sphere absolute -top-16 -left-6 sm:left-6 w-56 h-auto xl:-left-12 ${
+      className={`sphere absolute -left-6 sm:left-6 w-56 h-auto xl:-left-12 ${
         theme === 'Dark' ? '' : 'opacity-0'
       }`}
       src="/images/new/black-sphere.png"

@@ -3,6 +3,9 @@ import HomePage from '../components/home/HomePage'
 import { fetchAppStatsData, fetchMangoMarketData } from '../utils/mango'
 import { fetchTokenPages } from '../../contentful/tokenPage'
 import { draftMode } from 'next/headers'
+import { fetchHomePageAnnouncements } from '../../contentful/homePageAnnouncement'
+import SectionWrapper from '../components/shared/SectionWrapper'
+import Announcement from '../components/home/Announcement'
 
 const metaTitle = 'Mango Markets | Safer. Smarter. Faster.'
 const metaDescription =
@@ -35,14 +38,28 @@ async function Page() {
   const tokensPromise = fetchTokenPages({
     preview: draftMode().isEnabled,
   })
-  const [appStatsData, markets, tokens] = await Promise.all([
+  const announcementsPromise = fetchHomePageAnnouncements({
+    preview: draftMode().isEnabled,
+  })
+  const [appStatsData, markets, tokens, announcements] = await Promise.all([
     appStatsDataPromise,
     marketsPromise,
     tokensPromise,
+    announcementsPromise,
   ])
 
   return (
-    <HomePage appStatsData={appStatsData} markets={markets} tokens={tokens} />
+    <div>
+      {announcements?.length ? (
+        <SectionWrapper className="flex justify-center pt-4 pb-10" noPaddingY>
+          {announcements.map((announcement, i) => (
+            <Announcement key={announcement.title + i} data={announcement} />
+          ))}
+        </SectionWrapper>
+      ) : null}
+
+      <HomePage appStatsData={appStatsData} markets={markets} tokens={tokens} />
+    </div>
   )
 }
 
