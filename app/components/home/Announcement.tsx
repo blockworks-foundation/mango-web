@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { HomePageAnnouncement } from '../../../contentful/homePageAnnouncement'
-import { ChevronRightIcon } from '@heroicons/react/20/solid'
+// import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { ReactNode } from 'react'
 import Link from 'next/link'
 
@@ -14,7 +14,7 @@ const AnnouncementWrapper = ({
   path: string
 }) => {
   const classNames =
-    'mx-2 bg-th-bkg-2 py-3 px-4 rounded-lg flex items-center justify-between'
+    'border border-th-bkg-4 py-3 px-4 rounded-lg flex items-center justify-between'
   return isExternal ? (
     <a className={classNames} href={path} rel="noopener noreferrer">
       {children}
@@ -27,7 +27,7 @@ const AnnouncementWrapper = ({
 }
 
 const Announcement = ({ data }: { data: HomePageAnnouncement }) => {
-  const { linkPath, description, image, title } = data
+  const { category, linkPath, description, image, title } = data
   const imageSrc = image?.src
   const imageAlt = image?.alt || 'CTA Image'
   const isExtenalLink = linkPath.includes('http')
@@ -39,18 +39,17 @@ const Announcement = ({ data }: { data: HomePageAnnouncement }) => {
             className="flex-shrink-0 rounded-full"
             src={`https:${imageSrc}`}
             alt={imageAlt}
-            height={40}
-            width={40}
+            height={48}
+            width={48}
           />
         ) : null}
-        <span>
-          <span className="text-th-fgd-2 text-sm block font-display">
-            {title}
-          </span>
-          <span className="text-sm block text-th-fgd-3">{description}</span>
-        </span>
+        <div>
+          <p className="mb-1 text-xs text-th-active leading-none">{category}</p>
+          <p className="text-th-fgd-2 text-sm block font-display">{title}</p>
+          <p className="text-sm block text-th-fgd-3">{description}</p>
+        </div>
       </span>
-      <ChevronRightIcon className="ml-3 h-6 w-6 text-th-fgd-4 flex-shrink-0" />
+      {/* <ChevronRightIcon className="ml-3 h-6 w-6 text-th-fgd-4 flex-shrink-0" /> */}
     </AnnouncementWrapper>
   )
 }

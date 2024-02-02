@@ -7,6 +7,7 @@ import {
   CurrencyDollarIcon,
   DevicePhoneMobileIcon,
   FaceFrownIcon,
+  MegaphoneIcon,
   NoSymbolIcon,
   QuestionMarkCircleIcon,
   RocketLaunchIcon,
@@ -43,6 +44,9 @@ import Link from 'next/link'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import SheenLoader from '../shared/SheenLoader'
+import { HomePageAnnouncement } from '../../../contentful/homePageAnnouncement'
+import Announcement from './Announcement'
+import Slider from 'react-slick'
 dayjs.extend(relativeTime)
 
 type Markets = {
@@ -72,10 +76,12 @@ const MOBILE_IMAGE_CLASSES =
   'core-image h-[240px] w-[240px] sm:h-[300px] sm:w-[300px] md:h-[480px] md:w-[480px] mb-6 lg:mb-0'
 
 const HomePage = ({
+  announcements,
   appStatsData,
   markets,
   tokens,
 }: {
+  announcements: HomePageAnnouncement[]
   appStatsData: AppStatsData
   markets: Markets
   tokens: TokenPageWithData[]
@@ -276,10 +282,37 @@ const HomePage = ({
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
+  const sliderSettings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 15000,
+    autoplaySpeed: 15000,
+    cssEase: 'linear',
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  }
+
   return (
     <>
       <SectionWrapper
-        className="overflow-hidden h-[760px] lg:h-[500px]"
+        className="overflow-hidden h-[760px] lg:h-[600px] lg:flex lg:items-center py-12 lg:py-0"
         noPaddingY
       >
         <div className="grid grid-cols-12" ref={topSection}>
@@ -299,10 +332,10 @@ const HomePage = ({
               size="large"
             />
           </div>
-          <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center lg:-bottom-12">
+          <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center">
             <BlackSphere />
             <img
-              className="w-3/4 lg:w-[740px] absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0"
+              className="w-3/4 absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0 lg:w-full xl:w-[740px]"
               src="/images/new/trade-desktop.png"
               alt=""
             />
@@ -314,6 +347,28 @@ const HomePage = ({
           </div>
         </div>
       </SectionWrapper>
+      {announcements?.length ? (
+        <SectionWrapper
+          className="mt-0 lg:mt-6 py-6 bg-th-bkg-2 pl-6 md:pl-12 lg:pl-20 xl:rounded-xl"
+          noPaddingY
+          noPaddingX
+        >
+          <div className="flex items-center">
+            <div className="hidden mr-4 sm:flex items-center justify-center w-12 h-12 bg-th-active rounded-full">
+              <MegaphoneIcon className="w-6 h-6 text-th-bkg-1 -rotate-[30deg]" />
+            </div>
+            <div className="w-full sm:w-[calc(100%-64px)]">
+              <Slider {...sliderSettings}>
+                {announcements.map((announcement, i) => (
+                  <div className="px-2" key={announcement.title + i}>
+                    <Announcement data={announcement} />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+        </SectionWrapper>
+      ) : null}
       <SectionWrapper className="mt-10 md:mt-0">
         <div className="grid grid-cols-6 gap-4 lg:gap-6" ref={callouts}>
           <IconWithText

@@ -1,4 +1,6 @@
 import './styles/global.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import LayoutWrapper from './components/LayoutWrapper'
 import ExitDraftModeLink from './components/ExitDraftModeLink'
 import { draftMode } from 'next/headers'
