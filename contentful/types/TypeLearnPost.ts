@@ -10,7 +10,7 @@ export interface TypeLearnPostFields {
   postTitle: EntryFieldTypes.Symbol
   slug: EntryFieldTypes.Symbol
   author?: EntryFieldTypes.Symbol
-  category: EntryFieldTypes.Symbol<'Repost'>
+  category: EntryFieldTypes.Symbol<'Repost' | 'Spot Trading'>
   authorProfileImage?: EntryFieldTypes.AssetLink
   postDescription: EntryFieldTypes.Text
   postContent: EntryFieldTypes.RichText

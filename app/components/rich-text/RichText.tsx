@@ -4,6 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Link from 'next/link'
 import TokenCallToAction from './TokenCallToAction'
 import { formatNumericValue } from '../../utils/numbers'
+import CallToAction from './CallToAction'
 
 type RichTextProps = {
   document: RichTextDocument | undefined
@@ -93,6 +94,9 @@ function RichText({ document, currentPrice }: RichTextProps) {
       [INLINES.EMBEDDED_ENTRY]: (node) => {
         if (node.data.target.sys.contentType.sys.id === 'tokenCallToAction') {
           return <TokenCallToAction data={node.data.target.fields} />
+        }
+        if (node.data.target.sys.contentType.sys.id === 'callToAction') {
+          return <CallToAction data={node.data.target.fields} />
         }
         if (node.data.target.sys.contentType.sys.id === 'inlineTextPrice') {
           const priceType = node.data.target.fields.priceType

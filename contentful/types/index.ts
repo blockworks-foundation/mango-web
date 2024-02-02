@@ -4,6 +4,11 @@ export type {
   TypeBlogPostSkeleton,
 } from './TypeBlogPost'
 export type {
+  TypeCallToAction,
+  TypeCallToActionFields,
+  TypeCallToActionSkeleton,
+} from './TypeCallToAction'
+export type {
   TypeInlineTextPrice,
   TypeInlineTextPriceFields,
   TypeInlineTextPriceSkeleton,

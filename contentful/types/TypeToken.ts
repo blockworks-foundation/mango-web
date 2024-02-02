@@ -23,6 +23,7 @@ export interface TypeTokenFields {
       | 'Exchange'
       | 'Gaming'
       | 'Governance'
+      | 'Infrastructure'
       | 'Layer 1'
       | 'Liquid Staking'
       | 'Meme'

@@ -19,6 +19,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'img.fotofolio.xyz/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net/**',
+      },
     ],
   },
   reactStrictMode: true,
