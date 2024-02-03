@@ -3,6 +3,7 @@ import {
   ArrowPathRoundedSquareIcon,
   BoltIcon,
   BuildingLibraryIcon,
+  ChevronLeftIcon,
   ChevronRightIcon,
   CurrencyDollarIcon,
   DevicePhoneMobileIcon,
@@ -47,6 +48,7 @@ import SheenLoader from '../shared/SheenLoader'
 import { HomePageAnnouncement } from '../../../contentful/homePageAnnouncement'
 import Announcement from './Announcement'
 import Slider from 'react-slick'
+import { breakpoints, useViewport } from '../../hooks/useViewport'
 dayjs.extend(relativeTime)
 
 type Markets = {
@@ -91,6 +93,7 @@ const HomePage = ({
   const swapPanel = useRef<HTMLDivElement>(null)
   const coreFeatures = useRef<HTMLDivElement>(null)
   const build = useRef<HTMLDivElement>(null)
+  const { width } = useViewport()
   const numberOfMarkets =
     (markets?.spot.length || 0) + (markets?.perp.length || 0)
 
@@ -288,26 +291,41 @@ const HomePage = ({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 15000,
-    autoplaySpeed: 15000,
     cssEase: 'linear',
-    pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: breakpoints.xl,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: breakpoints.lg,
         settings: {
           slidesToShow: 1,
         },
       },
     ],
   }
+
+  const sliderRef = useRef<Slider | null>(null)
+
+  const nextSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext()
+    }
+  }
+
+  const prevSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev()
+    }
+  }
+
+  const slides = width >= breakpoints.xl ? 3 : width >= breakpoints.lg ? 2 : 1
+  const showArrows = announcements?.length
+    ? slides < announcements.length
+    : false
 
   return (
     <>
@@ -349,23 +367,53 @@ const HomePage = ({
       </SectionWrapper>
       {announcements?.length ? (
         <SectionWrapper
-          className="mt-0 lg:mt-6 py-6 bg-th-bkg-2 pl-6 md:pl-12 lg:pl-20 xl:rounded-xl"
+          className="mt-0 lg:mt-6 py-6 bg-th-bkg-2 xl:rounded-xl px-6"
           noPaddingY
-          noPaddingX
+          noPaddingX={showArrows}
         >
-          <div className="flex items-center">
-            <div className="hidden mr-4 sm:flex items-center justify-center w-12 h-12 bg-th-active rounded-full">
-              <MegaphoneIcon className="w-6 h-6 text-th-bkg-1 -rotate-[30deg]" />
+          <div
+            className={`mb-6 flex items-center justify-center ${
+              showArrows ? 'md:px-6 lg:px-14' : ''
+            }`}
+          >
+            <div className="mr-3 flex items-center justify-center w-7 h-7 bg-th-active rounded-full">
+              <MegaphoneIcon className="w-4 h-4 text-th-bkg-1 -rotate-[30deg]" />
             </div>
-            <div className="w-full sm:w-[calc(100%-64px)]">
-              <Slider {...sliderSettings}>
+            <h2 className="text-xl">Latest news</h2>
+          </div>
+          <div className="flex items-center">
+            {showArrows ? (
+              <button
+                className="mr-4 flex items-center justify-center w-8 h-8 border-2 border-th-bkg-4 rounded-full"
+                onClick={prevSlide}
+              >
+                <ChevronLeftIcon className="w-5 h-5 text-th-fgd-1" />
+              </button>
+            ) : null}
+            <div
+              className={` ${showArrows ? 'w-[calc(100%-88px)]' : 'w-full'}`}
+            >
+              <Slider ref={sliderRef} {...sliderSettings}>
                 {announcements.map((announcement, i) => (
-                  <div className="px-2" key={announcement.title + i}>
+                  <div
+                    className={
+                      i !== announcements.length - 1 ? 'pr-3' : 'pr-[1px]'
+                    }
+                    key={announcement.title + i}
+                  >
                     <Announcement data={announcement} />
                   </div>
                 ))}
               </Slider>
             </div>
+            {showArrows ? (
+              <button
+                className="ml-1 flex items-center justify-center w-8 h-8 border-2 border-th-bkg-4 rounded-full"
+                onClick={nextSlide}
+              >
+                <ChevronRightIcon className="w-5 h-5 text-th-fgd-1" />
+              </button>
+            ) : null}
           </div>
         </SectionWrapper>
       ) : null}

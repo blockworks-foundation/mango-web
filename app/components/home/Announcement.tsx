@@ -14,7 +14,7 @@ const AnnouncementWrapper = ({
   path: string
 }) => {
   const classNames =
-    'border border-th-bkg-4 py-3 px-4 rounded-lg flex items-center justify-between'
+    'border border-th-bkg-4 py-3 px-4 rounded-lg flex items-center justify-between md:hover:bg-th-bkg-3'
   return isExternal ? (
     <a className={classNames} href={path} rel="noopener noreferrer">
       {children}
