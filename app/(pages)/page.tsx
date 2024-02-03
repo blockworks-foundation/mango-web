@@ -3,6 +3,7 @@ import HomePage from '../components/home/HomePage'
 import { fetchAppStatsData, fetchMangoMarketData } from '../utils/mango'
 import { fetchTokenPages } from '../../contentful/tokenPage'
 import { draftMode } from 'next/headers'
+import { fetchHomePageAnnouncements } from '../../contentful/homePageAnnouncement'
 
 const metaTitle = 'Mango Markets | Safer. Smarter. Faster.'
 const metaDescription =
@@ -35,14 +36,25 @@ async function Page() {
   const tokensPromise = fetchTokenPages({
     preview: draftMode().isEnabled,
   })
-  const [appStatsData, markets, tokens] = await Promise.all([
+  const announcementsPromise = fetchHomePageAnnouncements({
+    preview: draftMode().isEnabled,
+  })
+  const [appStatsData, markets, tokens, announcements] = await Promise.all([
     appStatsDataPromise,
     marketsPromise,
     tokensPromise,
+    announcementsPromise,
   ])
 
   return (
-    <HomePage appStatsData={appStatsData} markets={markets} tokens={tokens} />
+    <div>
+      <HomePage
+        announcements={announcements}
+        appStatsData={appStatsData}
+        markets={markets}
+        tokens={tokens}
+      />
+    </div>
   )
 }
 

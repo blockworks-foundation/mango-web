@@ -9,6 +9,11 @@ export type {
   TypeCallToActionSkeleton,
 } from './TypeCallToAction'
 export type {
+  TypeHomePageAnnouncement,
+  TypeHomePageAnnouncementFields,
+  TypeHomePageAnnouncementSkeleton,
+} from './TypeHomePageAnnouncement'
+export type {
   TypeInlineTextPrice,
   TypeInlineTextPriceFields,
   TypeInlineTextPriceSkeleton,

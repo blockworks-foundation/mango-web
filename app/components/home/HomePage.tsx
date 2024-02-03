@@ -3,10 +3,12 @@ import {
   ArrowPathRoundedSquareIcon,
   BoltIcon,
   BuildingLibraryIcon,
+  ChevronLeftIcon,
   ChevronRightIcon,
   CurrencyDollarIcon,
   DevicePhoneMobileIcon,
   FaceFrownIcon,
+  MegaphoneIcon,
   NoSymbolIcon,
   QuestionMarkCircleIcon,
   RocketLaunchIcon,
@@ -43,6 +45,10 @@ import Link from 'next/link'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import SheenLoader from '../shared/SheenLoader'
+import { HomePageAnnouncement } from '../../../contentful/homePageAnnouncement'
+import Announcement from './Announcement'
+import Slider from 'react-slick'
+import { breakpoints, useViewport } from '../../hooks/useViewport'
 dayjs.extend(relativeTime)
 
 type Markets = {
@@ -72,10 +78,12 @@ const MOBILE_IMAGE_CLASSES =
   'core-image h-[240px] w-[240px] sm:h-[300px] sm:w-[300px] md:h-[480px] md:w-[480px] mb-6 lg:mb-0'
 
 const HomePage = ({
+  announcements,
   appStatsData,
   markets,
   tokens,
 }: {
+  announcements: HomePageAnnouncement[]
   appStatsData: AppStatsData
   markets: Markets
   tokens: TokenPageWithData[]
@@ -85,6 +93,7 @@ const HomePage = ({
   const swapPanel = useRef<HTMLDivElement>(null)
   const coreFeatures = useRef<HTMLDivElement>(null)
   const build = useRef<HTMLDivElement>(null)
+  const { width } = useViewport()
   const numberOfMarkets =
     (markets?.spot.length || 0) + (markets?.perp.length || 0)
 
@@ -276,9 +285,54 @@ const HomePage = ({
     return () => ctx.revert() // <- Cleanup!
   }, [])
 
+  const sliderSettings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: breakpoints.xl,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: breakpoints.lg,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  }
+
+  const sliderRef = useRef<Slider | null>(null)
+
+  const nextSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext()
+    }
+  }
+
+  const prevSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev()
+    }
+  }
+
+  const slides = width >= breakpoints.xl ? 3 : width >= breakpoints.lg ? 2 : 1
+  const showArrows = announcements?.length
+    ? slides < announcements.length
+    : false
+
   return (
     <>
-      <SectionWrapper className="overflow-hidden h-[760px] lg:h-auto">
+      <SectionWrapper
+        className="overflow-hidden h-[760px] lg:h-[600px] lg:flex lg:items-center py-12 lg:py-0"
+        noPaddingY
+      >
         <div className="grid grid-cols-12" ref={topSection}>
           <div className="col-span-12 lg:col-span-5 mb-12 lg:mb-0 relative z-10">
             <h1 className="mb-6 text-center lg:text-left">
@@ -299,7 +353,7 @@ const HomePage = ({
           <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center">
             <BlackSphere />
             <img
-              className="w-3/4 lg:w-full absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0 xl:w-[740px]"
+              className="w-3/4 absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0 lg:w-full xl:w-[740px]"
               src="/images/new/trade-desktop.png"
               alt=""
             />
@@ -311,6 +365,58 @@ const HomePage = ({
           </div>
         </div>
       </SectionWrapper>
+      {announcements?.length ? (
+        <SectionWrapper
+          className="mt-0 lg:mt-6 py-6 bg-th-bkg-2 xl:rounded-xl px-6"
+          noPaddingY
+          noPaddingX={showArrows}
+        >
+          <div
+            className={`mb-6 flex items-center justify-center ${
+              showArrows ? 'md:px-6 lg:px-14' : ''
+            }`}
+          >
+            <div className="mr-3 flex items-center justify-center w-7 h-7 bg-th-active rounded-full">
+              <MegaphoneIcon className="w-4 h-4 text-th-bkg-1 -rotate-[30deg]" />
+            </div>
+            <h2 className="text-xl">Latest news</h2>
+          </div>
+          <div className="flex items-center">
+            {showArrows ? (
+              <button
+                className="mr-4 flex items-center justify-center w-8 h-8 border-2 border-th-bkg-4 rounded-full"
+                onClick={prevSlide}
+              >
+                <ChevronLeftIcon className="w-5 h-5 text-th-fgd-1" />
+              </button>
+            ) : null}
+            <div
+              className={` ${showArrows ? 'w-[calc(100%-88px)]' : 'w-full'}`}
+            >
+              <Slider ref={sliderRef} {...sliderSettings}>
+                {announcements.map((announcement, i) => (
+                  <div
+                    className={
+                      i !== announcements.length - 1 ? 'pr-3' : 'pr-[1px]'
+                    }
+                    key={announcement.title + i}
+                  >
+                    <Announcement data={announcement} />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+            {showArrows ? (
+              <button
+                className="ml-1 flex items-center justify-center w-8 h-8 border-2 border-th-bkg-4 rounded-full"
+                onClick={nextSlide}
+              >
+                <ChevronRightIcon className="w-5 h-5 text-th-fgd-1" />
+              </button>
+            ) : null}
+          </div>
+        </SectionWrapper>
+      ) : null}
       <SectionWrapper className="mt-10 md:mt-0">
         <div className="grid grid-cols-6 gap-4 lg:gap-6" ref={callouts}>
           <IconWithText
@@ -588,7 +694,7 @@ const BlackSphere = () => {
   if (!mounted) return <div className="sphere w-56 h-56" />
   return (
     <img
-      className={`sphere absolute -top-16 -left-6 sm:left-6 w-56 h-auto xl:-left-12 ${
+      className={`sphere absolute -left-6 sm:left-6 w-56 h-auto xl:-left-12 ${
         theme === 'Dark' ? '' : 'opacity-0'
       }`}
       src="/images/new/black-sphere.png"
