@@ -140,7 +140,7 @@ const Text = ({ children }) => (
   </p>
 )
 
-const H2 = ({ children }) => <h2 className="text-3xl">{children}</h2>
+const H2 = ({ children }) => <h2 className="text-2xl">{children}</h2>
 const H3 = ({ children }) => <h3 className="mb-2 text-xl">{children}</h3>
 const H4 = ({ children }) => <h3 className="mb-1.5 text-lg">{children}</h3>
 const Ul = ({ children }) => (
@@ -171,5 +171,5 @@ const A = ({ node, children }) => {
 }
 
 const Spacer = () => (
-  <hr style={{ borderColor: 'transparent', marginBottom: '12px' }} />
+  <hr style={{ borderColor: 'transparent', marginBottom: '16px' }} />
 )
