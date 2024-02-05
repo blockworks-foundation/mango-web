@@ -1,3 +1,5 @@
+'use client'
+
 import { usePlausible } from 'next-plausible'
 import { FunctionComponent, ReactNode } from 'react'
 
