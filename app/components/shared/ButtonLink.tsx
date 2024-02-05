@@ -1,3 +1,4 @@
+import { usePlausible } from 'next-plausible'
 import { FunctionComponent, ReactNode } from 'react'
 
 interface ButtonLinkProps {
@@ -17,6 +18,16 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
   size,
   target,
 }) => {
+  const telemetry = usePlausible()
+
+  const trackClick = () => {
+    telemetry('ctaClick', {
+      props: {
+        path: path,
+      },
+    })
+  }
+
   return (
     <a
       className={`flex w-max items-center justify-center rounded-md ${
@@ -33,6 +44,7 @@ const ButtonLink: FunctionComponent<ButtonLinkProps> = ({
       href={path}
       rel="noopener noreferrer"
       target={target ? target : undefined}
+      onClick={trackClick}
     >
       {linkText}
     </a>

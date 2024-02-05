@@ -3,6 +3,10 @@ import { HomePageAnnouncement } from '../../../contentful/homePageAnnouncement'
 // import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { ReactNode } from 'react'
 import Link from 'next/link'
+import { usePlausible } from 'next-plausible'
+
+const classNames =
+  'border border-th-bkg-4 py-3 px-4 rounded-lg flex items-center justify-between md:hover:bg-th-bkg-3'
 
 const AnnouncementWrapper = ({
   children,
@@ -13,14 +17,27 @@ const AnnouncementWrapper = ({
   isExternal: boolean
   path: string
 }) => {
-  const classNames =
-    'border border-th-bkg-4 py-3 px-4 rounded-lg flex items-center justify-between md:hover:bg-th-bkg-3'
+  const telemetry = usePlausible()
+
+  const trackClick = () => {
+    telemetry('homeAnnouncement', {
+      props: {
+        path: path,
+      },
+    })
+  }
+
   return isExternal ? (
-    <a className={classNames} href={path} rel="noopener noreferrer">
+    <a
+      className={classNames}
+      href={path}
+      rel="noopener noreferrer"
+      onClick={trackClick}
+    >
       {children}
     </a>
   ) : (
-    <Link className={classNames} href={path} shallow>
+    <Link className={classNames} href={path} onClick={trackClick} shallow>
       {children}
     </Link>
   )
