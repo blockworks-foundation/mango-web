@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Particles from 'react-tsparticles'
+import { Engine } from 'tsparticles-engine'
 
 const CategoryTokenParticles = ({
   tokenSymbols,
@@ -15,6 +16,9 @@ const CategoryTokenParticles = ({
   if (!mounted) return null
   return (
     <Particles
+      init={async (engine: Engine) => {
+        console.log('particles library initialized:', engine)
+      }}
       id={`tsparticles-${id}`}
       options={{
         fullScreen: false,
@@ -41,6 +45,7 @@ const CategoryTokenParticles = ({
             fill: true,
             life: {
               wait: false,
+              delay: 0.5,
               duration: 1,
             },
             rate: {
