@@ -1,14 +1,17 @@
 'use client'
 
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { ChangeEvent, useMemo, useState } from 'react'
+import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react'
 import Input from '../forms/Input'
 import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
 import Link from 'next/link'
 import NoResults from './NoResults'
 import PageHeader from './PageHeader'
-import CardImage from '../shared/CardImage'
+import { TokenPage } from '../../../contentful/tokenPage'
+import CategoryTokenParticles from './CategoryTokenParticles'
+import { tsParticles } from 'tsparticles-engine'
+import { loadFull } from 'tsparticles'
 
 const generateSearchTerm = (item: TokenCategoryPage, searchValue: string) => {
   const normalizedSearchValue = searchValue.toLowerCase()
@@ -39,8 +42,10 @@ const startSearch = (items: TokenCategoryPage[], searchValue: string) => {
 
 const ExploreCategories = ({
   categoryPages,
+  tokens,
 }: {
   categoryPages: TokenCategoryPage[]
+  tokens: TokenPage[]
 }) => {
   const [searchString, setSearchString] = useState('')
 
@@ -53,6 +58,14 @@ const ExploreCategories = ({
   const handleUpdateSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchString(e.target.value)
   }
+
+  const particlesInit = useCallback(async () => {
+    await loadFull(tsParticles)
+  }, [])
+
+  useEffect(() => {
+    particlesInit()
+  }, [particlesInit])
 
   return (
     <>
@@ -76,19 +89,28 @@ const ExploreCategories = ({
           <div className="grid grid-cols-4 gap-6">
             {filteredCategories.map((cat) => {
               const { category, slug } = cat
+              const categoryTokenSymbols = tokens
+                ?.filter((token) => token.tags.includes(category))
+                .map((t) => t.symbol)
               return (
                 <div
                   className="col-span-4 sm:col-span-2 lg:col-span-1 border border-th-bkg-3 rounded-xl group relative"
                   key={slug}
                 >
                   <Link href={`/explore/categories/${slug}`}>
-                    <div className="overflow-hidden rounded-t-xl">
-                      <CardImage
-                        customImagePath={`/images/categories/${slug}-small.png`}
+                    <div className="overflow-hidden rounded-t-xl bg-[url('/images/categories/placeholder.png')] bg-cover bg-center">
+                      <CategoryTokenParticles
+                        tokenSymbols={categoryTokenSymbols}
+                        id={slug}
                       />
                     </div>
-                    <div className="px-4 py-3">
+                    <div className="px-4 py-3 flex items-center justify-between">
                       <p className="text-th-fgd-2 font-display">{category}</p>
+                      {categoryTokenSymbols?.length ? (
+                        <p className="text-th-fgd-4 text-sm">
+                          {categoryTokenSymbols.length}
+                        </p>
+                      ) : null}
                     </div>
                   </Link>
                 </div>

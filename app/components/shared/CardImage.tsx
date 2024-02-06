@@ -17,7 +17,7 @@ const CardImage = ({ customImagePath }: { customImagePath?: string }) => {
       ? '/images/new/cube-bg.png'
       : '/images/new/cube-bg-light.png'
 
-  if (!mounted) return <div className="h-[200px] lg:h-[140px] bg-th-bkg-2" />
+  if (!mounted) return <div className="h-[200px] lg:h-[180px] bg-th-bkg-2" />
   return (
     <div
       className={`h-[200px] lg:h-[180px] ${
