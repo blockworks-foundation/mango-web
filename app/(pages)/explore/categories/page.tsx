@@ -5,6 +5,7 @@ import { MAX_CONTENT_WIDTH } from '../../../utils/constants'
 import { fetchTokenCategoryPages } from '../../../../contentful/tokenCategoryPage'
 import DataDisclaimer from '../../../components/explore/DataDisclaimer'
 import ExploreCategories from '../../../components/explore/ExploreCategories'
+import { fetchContentfulTokenPages } from '../../../../contentful/tokenPage'
 
 export const metadata: Metadata = {
   title: 'Explore Listed Token Categories on Mango Markets',
@@ -17,12 +18,19 @@ function ExploreCategoriesFallback() {
 }
 
 async function ExploreCategoriesPage() {
-  const categoryPages = await fetchTokenCategoryPages({
+  const categoryPagesPromise = fetchTokenCategoryPages({
     preview: draftMode().isEnabled,
   })
+  const tokensPromise = fetchContentfulTokenPages({
+    preview: draftMode().isEnabled,
+  })
+  const [categoryPages, tokens] = await Promise.all([
+    categoryPagesPromise,
+    tokensPromise,
+  ])
   return categoryPages && categoryPages?.length ? (
     <Suspense fallback={<ExploreCategoriesFallback />}>
-      <ExploreCategories categoryPages={categoryPages} />
+      <ExploreCategories categoryPages={categoryPages} tokens={tokens} />
       <div className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto pb-10`}>
         <DataDisclaimer />
       </div>

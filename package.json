@@ -50,8 +50,10 @@
     "react-flip-numbers": "^3.0.8",
     "react-i18next": "^13.5.0",
     "react-slick": "^0.30.1",
+    "react-tsparticles": "2.2.4",
     "recharts": "^2.10.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tsparticles": "2.2.4"
   },
   "devDependencies": {
     "@testing-library/react": "^14.1.2",
