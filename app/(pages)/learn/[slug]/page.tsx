@@ -77,14 +77,27 @@ async function LearnPostPage({ params }: LearnPostPageProps) {
     return notFound()
   }
 
-  const { category, postTitle, postContent, ctaTitle, ctaDescription, ctaUrl } =
-    learnPost
+  const {
+    category,
+    postTitle,
+    postContent,
+    ctaTitle,
+    ctaDescription,
+    ctaUrl,
+    slug,
+  } = learnPost
 
   const ctaData = { ctaTitle, ctaDescription, ctaUrl }
+  const headerImageUrl = `/images/learn/${slug}.png`
 
   return (
     <>
-      <PageHeader title={postTitle} tag={category} showBack />
+      <PageHeader
+        backgroundImageUrl={headerImageUrl}
+        title={postTitle}
+        tag={category}
+        showBack
+      />
       <div className="px-6 lg:px-20 pb-10 md:pb-16 max-w-3xl mx-auto">
         <PostDetails post={learnPost} isLearn />
         <RichText document={postContent} />
