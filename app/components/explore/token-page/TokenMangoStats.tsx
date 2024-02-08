@@ -109,7 +109,9 @@ const TokenMangoStats = ({
           <KeyValuePairDisplay
             label="Available"
             value={
-              <span className={isNaN(+available) ? 'text-th-fgd-4' : ''}>
+              <span
+                className={isNaN(mangoData?.available) ? 'text-th-fgd-4' : ''}
+              >
                 {available}{' '}
                 <span className="text-sm text-th-fgd-4">${availableValue}</span>
               </span>
