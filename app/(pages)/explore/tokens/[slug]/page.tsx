@@ -55,6 +55,21 @@ export async function generateMetadata(
   return {
     title: tokenPage.seoTitle,
     description: tokenPage.seoDescription,
+    openGraph: {
+      title: tokenPage?.seoTitle || tokenPage.tokenName,
+      description: tokenPage?.seoDescription || tokenPage.symbol,
+      url: `https://mango.markets/explore/tokens/${tokenPage.slug}`,
+      siteName: 'Mango Markets',
+      images: [
+        {
+          url: tokenPage.metaImageUrl, // Must be an absolute URL
+          width: 1200,
+          height: 600,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
   }
 }
 

@@ -25,6 +25,7 @@ export interface TokenPage {
   coingeckoId: string
   seoTitle: string
   seoDescription: string
+  metaImageUrl: string
   perpSymbol: string | undefined
   spotSymbol: string
   lastModified: string
@@ -58,6 +59,7 @@ export function parseContentfulTokenPage(
     seoTitle: tokenPageEntry.fields.seoTitle,
     seoDescription: tokenPageEntry.fields.seoDescription,
     perpSymbol: tokenPageEntry.fields.perpSymbol || undefined,
+    metaImageUrl: tokenPageEntry.fields.metaImageUrl,
     spotSymbol: tokenPageEntry.fields.spotSymbol,
     lastModified: tokenPageEntry.sys.updatedAt,
     erc20TokenDecimals: tokenPageEntry.fields.erc20TokenDecimals || undefined,

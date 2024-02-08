@@ -11,7 +11,13 @@ export interface TypeHomePageAnnouncementFields {
   description?: EntryFieldTypes.Symbol
   linkPath: EntryFieldTypes.Symbol
   image?: EntryFieldTypes.AssetLink
-  category: EntryFieldTypes.Symbol<'Announcement' | 'New Listing' | 'News'>
+  category: EntryFieldTypes.Symbol<
+    | 'Announcement'
+    | 'From the Blog'
+    | 'New Listing'
+    | 'News'
+    | 'So Hot Right Now'
+  >
 }
 
 export type TypeHomePageAnnouncementSkeleton = EntrySkeletonType<
