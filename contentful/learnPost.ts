@@ -73,7 +73,7 @@ export async function fetchLearnPosts({
   const learnPostsResult = await contentful.getEntries<TypeLearnPostSkeleton>({
     content_type: 'learnPost',
     include: 2,
-    order: ['fields.postTitle'],
+    order: ['-sys.createdAt'],
   })
 
   return learnPostsResult.items.map(
