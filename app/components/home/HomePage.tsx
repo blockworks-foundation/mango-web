@@ -367,7 +367,7 @@ const HomePage = ({
       </SectionWrapper>
       {announcements?.length ? (
         <SectionWrapper
-          className="mt-0 lg:mt-6 py-6 bg-th-bkg-2 xl:rounded-xl px-6"
+          className="mt-0 lg:mt-6 py-6 lg:py-12 bg-th-bkg-2 xl:rounded-xl px-6"
           noPaddingY
           noPaddingX={showArrows}
         >
@@ -376,10 +376,10 @@ const HomePage = ({
               showArrows ? 'md:px-6 lg:px-14' : ''
             }`}
           >
-            <div className="mr-3 flex items-center justify-center w-7 h-7 bg-th-active rounded-full">
-              <MegaphoneIcon className="w-4 h-4 text-th-bkg-1 -rotate-[30deg]" />
+            <div className="mr-3 flex items-center justify-center w-10 h-10 bg-th-active rounded-full">
+              <MegaphoneIcon className="w-6 h-6 text-th-bkg-1 -rotate-[30deg]" />
             </div>
-            <h2 className="text-xl">Latest news</h2>
+            <h2 className="text-3xl">Latest news</h2>
           </div>
           <div className="flex items-center">
             {showArrows ? (
@@ -419,6 +419,9 @@ const HomePage = ({
       ) : null}
       <SectionWrapper className="mt-10 md:mt-0">
         <div className="grid grid-cols-6 gap-4 lg:gap-6" ref={callouts}>
+          <div className="-mt-10 mb-12 lg:mb-16 col-span-6">
+            <h2 className="text-center">DeFi maxed</h2>
+          </div>
           <IconWithText
             desc="Low fees for taker trades and rebates for maker trades. Plus, Solana's extremely low transaction costs."
             icon={

@@ -4,9 +4,10 @@ import { HomePageAnnouncement } from '../../../contentful/homePageAnnouncement'
 import { ReactNode } from 'react'
 import Link from 'next/link'
 import { usePlausible } from 'next-plausible'
+import { useViewport } from '../../hooks/useViewport'
 
 const classNames =
-  'border border-th-bkg-4 py-3 px-4 rounded-lg flex items-center justify-between md:hover:bg-th-bkg-3'
+  'border border-th-bkg-4 p-4 rounded-lg lg:h-32 lg:py-0 flex items-center justify-between md:hover:bg-th-bkg-3 lg:py-4'
 
 const AnnouncementWrapper = ({
   children,
@@ -48,6 +49,7 @@ const Announcement = ({ data }: { data: HomePageAnnouncement }) => {
   const imageSrc = image?.src
   const imageAlt = image?.alt || 'CTA Image'
   const isExtenalLink = linkPath.includes('http')
+  const { isDesktop } = useViewport()
   return (
     <AnnouncementWrapper isExternal={isExtenalLink} path={linkPath}>
       <span className="flex items-center space-x-3">
@@ -56,13 +58,13 @@ const Announcement = ({ data }: { data: HomePageAnnouncement }) => {
             className="flex-shrink-0 rounded-full"
             src={`https:${imageSrc}`}
             alt={imageAlt}
-            height={48}
-            width={48}
+            height={isDesktop ? 64 : 48}
+            width={isDesktop ? 64 : 48}
           />
         ) : null}
         <div>
           <p className="mb-1 text-xs text-th-active leading-none">{category}</p>
-          <p className="text-th-fgd-2 text-sm block font-display">{title}</p>
+          <p className="text-th-fgd-2 text-lg block font-display">{title}</p>
           <p className="text-sm block text-th-fgd-3">{description}</p>
         </div>
       </span>
