@@ -24,8 +24,8 @@ const PageHeader = ({
   const imageSrc = backgroundImageUrl
     ? backgroundImageUrl
     : theme === 'Dark'
-      ? '/images/new/cube-bg.png'
-      : '/images/new/cube-bg-light.png'
+      ? '/images/new/cube-bg.webp'
+      : '/images/new/cube-bg-light.webp'
 
   useEffect(() => {
     setMounted(true)

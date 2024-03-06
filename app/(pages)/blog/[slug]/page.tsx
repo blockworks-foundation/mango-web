@@ -86,7 +86,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const ctaData = { ctaTitle, ctaDescription, ctaUrl }
 
-  const headerImageUrl = `/images/blog/${slug}.png`
+  const headerImageUrl = `/images/blog/${slug}.webp`
 
   return (
     <>

@@ -16,8 +16,8 @@ const PostCard = ({
   const { author, createdAt, postDescription, postTitle, slug } = blogPost
   const customImagePath =
     type === 'blog'
-      ? `/images/blog/${slug}-small.png`
-      : `/images/learn/${slug}-small.png`
+      ? `/images/blog/${slug}-small.webp`
+      : `/images/learn/${slug}-small.webp`
   return (
     <div
       className="col-span-4 sm:col-span-2 lg:col-span-1 border border-th-bkg-3 rounded-xl group relative"

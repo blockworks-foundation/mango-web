@@ -88,7 +88,7 @@ async function LearnPostPage({ params }: LearnPostPageProps) {
   } = learnPost
 
   const ctaData = { ctaTitle, ctaDescription, ctaUrl }
-  const headerImageUrl = `/images/learn/${slug}.png`
+  const headerImageUrl = `/images/learn/${slug}.webp`
 
   return (
     <>

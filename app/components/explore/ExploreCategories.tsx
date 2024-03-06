@@ -84,7 +84,7 @@ const ExploreCategories = ({
                   <Link href={`/explore/categories/${slug}`}>
                     <div className="overflow-hidden rounded-t-xl">
                       <CardImage
-                        customImagePath={`/images/categories/${slug}-small.png`}
+                        customImagePath={`/images/categories/${slug}-small.webp`}
                       />
                     </div>
                     <div className="px-4 py-3">

@@ -29,7 +29,7 @@ const Category = ({
     return sortTokens(tokensForCategory)
   }, [tokensForCategory])
 
-  const backgroundImageUrl = `/images/categories/${slug}.png`
+  const backgroundImageUrl = `/images/categories/${slug}.webp`
 
   return (
     <>
