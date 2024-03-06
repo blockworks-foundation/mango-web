@@ -21,7 +21,7 @@ const IconWithText = ({
 }) => {
   return (
     <div
-      className={`highlight-features opacity-0 translate-y-[40px] col-span-6 sm:col-span-3 md:col-span-2 ${
+      className={`highlight-features col-span-6 sm:col-span-3 md:col-span-2 ${
         showBackground ? 'border border-th-bkg-4 rounded-xl p-6 md:p-8' : ''
       }`}
     >
