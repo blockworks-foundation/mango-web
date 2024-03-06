@@ -43,6 +43,7 @@ const Markets = () => {
   const { data: tokens, isLoading: loadingTokens } = useQuery({
     queryKey: ['cms-tokens-data'],
     queryFn: () => fetchTokenPages({ preview: false }),
+    staleTime: 1000 * 60 * 10,
   })
 
   const numberOfMarkets =

@@ -22,18 +22,18 @@ import BlackSphere from './BlackSphere'
 // }
 
 const tokenIcons = [
-  { icon: 'coin-orange.png', x: '10%', y: '20%' },
-  { icon: 'coin-silver.png', x: '2%', y: '10%' },
-  { icon: 'cube-pink.png', x: '90%', y: '23%' },
-  { icon: 'spring-chrome.png', x: '79%', y: '25%' },
-  { icon: 'pyramid-blue.png', x: '95%', y: '80%' },
-  { icon: 'ring-white.png', x: '3%', y: '65%' },
-  { icon: 'ring-white.png', x: '88%', y: '40%' },
-  { icon: 'coin-silver.png', x: '86%', y: '48%' },
-  { icon: 'cube-pink.png', x: '10%', y: '73%' },
-  { icon: 'spring-chrome.png', x: '14%', y: '83%' },
-  { icon: 'pyramid-blue.png', x: '12%', y: '40%' },
-  { icon: 'coin-orange.png', x: '81%', y: '68%' },
+  { icon: 'coin-orange.webp', x: '10%', y: '20%' },
+  { icon: 'coin-silver.webp', x: '2%', y: '10%' },
+  { icon: 'cube-pink.webp', x: '90%', y: '23%' },
+  { icon: 'spring-chrome.webp', x: '79%', y: '25%' },
+  { icon: 'pyramid-blue.webp', x: '95%', y: '80%' },
+  { icon: 'ring-white.webp', x: '3%', y: '65%' },
+  { icon: 'ring-white.webp', x: '88%', y: '40%' },
+  { icon: 'coin-silver.webp', x: '86%', y: '48%' },
+  { icon: 'cube-pink.webp', x: '10%', y: '73%' },
+  { icon: 'spring-chrome.webp', x: '14%', y: '83%' },
+  { icon: 'pyramid-blue.webp', x: '12%', y: '40%' },
+  { icon: 'coin-orange.webp', x: '81%', y: '68%' },
 ]
 
 const MOBILE_IMAGE_CLASSES =
@@ -67,12 +67,12 @@ const HomePage = () => {
             <BlackSphere />
             <img
               className="w-3/4 absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0 lg:w-full xl:w-[740px]"
-              src="/images/new/trade-desktop.png"
+              src="/images/new/trade-desktop.webp"
               alt=""
             />
             <img
               className="sphere absolute lg:-bottom-24 xl:-bottom-40 -right-28 sm:-right-24 md:-right-14 lg:right-0 lg:left-0 xl:-left-16 w-80 h-auto"
-              src="/images/new/orange-sphere.png"
+              src="/images/new/orange-sphere.webp"
               alt=""
             />
           </div>
@@ -158,7 +158,7 @@ const HomePage = () => {
               />
               <img
                 className="shadow-lg mt-12 w-full sm:w-3/4 max-w-[800px] h-auto absolute left-1/2 -translate-x-1/2 bottom-16 md:bottom-10"
-                src="/images/new/swap-desktop.png"
+                src="/images/new/swap-desktop.webp"
                 alt=""
                 id="swap-desktop"
               />
@@ -185,7 +185,7 @@ const HomePage = () => {
             <div className="core-feature flex flex-col lg:flex-row lg:items-center pb-12 lg:pb-24">
               <img
                 className={MOBILE_IMAGE_CLASSES}
-                src="/images/new/trade-favorites.png"
+                src="/images/new/trade-favorites.webp"
               />
               <div className="core-text">
                 <h2 className="mb-4">Leverage trade your favorite markets</h2>
@@ -229,13 +229,13 @@ const HomePage = () => {
               </div>
               <img
                 className={MOBILE_IMAGE_CLASSES}
-                src="/images/new/unparalleled-safety.png"
+                src="/images/new/unparalleled-safety.webp"
               />
             </div>
             <div className="core-feature flex flex-col lg:flex-row lg:items-center py-12 lg:py-24">
               <img
                 className={MOBILE_IMAGE_CLASSES}
-                src="/images/new/token-listings.png"
+                src="/images/new/token-listings.webp"
               />
               <div className="core-text">
                 <h2 className="mb-4 max-w-lg">Permissionless token listings</h2>
@@ -269,7 +269,7 @@ const HomePage = () => {
               </div>
               <img
                 className={MOBILE_IMAGE_CLASSES}
-                src="/images/new/borrow.png"
+                src="/images/new/borrow.webp"
               />
             </div>
           </div>
@@ -287,11 +287,11 @@ const HomePage = () => {
             <div className="relative h-[280px] w-[180px] md:h-[380px] md:w-[300px] mb-4 md:mb-8">
               <img
                 className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 md:w-56 h-auto"
-                src="/images/new/build-hori.png"
+                src="/images/new/build-hori.webp"
               />
               <img
                 className="absolute left-0 h-40 md:h-56 w-auto"
-                src="/images/new/build-vert.png"
+                src="/images/new/build-vert.webp"
                 id="build"
               />
             </div>

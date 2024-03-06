@@ -17,7 +17,7 @@ const BlackSphere = () => {
       className={`sphere absolute -left-6 sm:left-6 w-56 h-auto xl:-left-12 ${
         theme === 'Dark' ? '' : 'opacity-0'
       }`}
-      src="/images/new/black-sphere.png"
+      src="/images/new/black-sphere.webp"
       alt=""
     />
   )
