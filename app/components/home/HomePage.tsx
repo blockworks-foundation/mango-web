@@ -15,6 +15,7 @@ import Markets from './Markets'
 import Announcements from './Announcements'
 import { BuildWrapper, SwapStageWrapper } from './Wrappers'
 import BlackSphere from './BlackSphere'
+import Image from 'next/image'
 
 // type Markets = {
 //   perp: FormattedMarketData[]
@@ -65,15 +66,20 @@ const HomePage = () => {
           </div>
           <div className="col-span-12 lg:col-span-7 relative h-full flex justify-center">
             <BlackSphere />
-            <img
+            <Image
               className="w-3/4 absolute h-auto lg:-right-40 lg:top-1/2 lg:transform lg:-translate-y-1/2 xl:right-0 lg:w-full xl:w-[740px]"
               src="/images/new/trade-desktop.webp"
-              alt=""
+              alt="Trade"
+              width={1266}
+              height={901}
+              priority
             />
-            <img
-              className="sphere absolute lg:-bottom-24 xl:-bottom-40 -right-28 sm:-right-24 md:-right-14 lg:right-0 lg:left-0 xl:-left-16 w-80 h-auto"
+            <Image
+              className="sphere hidden md:block absolute lg:-bottom-24 xl:-bottom-40 -right-28 sm:-right-24 md:-right-14 lg:right-0 lg:left-0 xl:-left-16 w-80 h-auto"
               src="/images/new/orange-sphere.webp"
-              alt=""
+              width={631}
+              height={631}
+              alt="Orange sphere"
             />
           </div>
         </div>
@@ -156,11 +162,13 @@ const HomePage = () => {
                 linkText="Swap Now"
                 size="large"
               />
-              <img
+              <Image
                 className="shadow-lg mt-12 w-full sm:w-3/4 max-w-[800px] h-auto absolute left-1/2 -translate-x-1/2 bottom-16 md:bottom-10"
                 src="/images/new/swap-desktop.webp"
-                alt=""
+                alt="Swap"
                 id="swap-desktop"
+                width={1350}
+                height={620}
               />
             </div>
             {tokenIcons.map((icon, i) => (
