@@ -21,8 +21,8 @@ export const SwapStageWrapper = forwardRef<HTMLDivElement, RefWrapperProps>(
       <div
         className={`${
           theme === 'Dark'
-            ? `bg-[url('/images/new/stage-slice.png')]`
-            : `bg-[url('/images/new/stage-slice-light.png')]`
+            ? `bg-[url('/images/new/stage-slice.webp')]`
+            : `bg-[url('/images/new/stage-slice-light.webp')]`
         } bg-repeat-x bg-contain`}
         ref={ref}
       >
@@ -46,8 +46,8 @@ export const BuildWrapper = forwardRef<HTMLDivElement, RefWrapperProps>(
       <div
         className={`${
           theme === 'Dark'
-            ? `bg-[url('/images/new/cube-bg.png')]`
-            : `bg-[url('/images/new/cube-bg-light.png')]`
+            ? `bg-[url('/images/new/cube-bg.webp')]`
+            : `bg-[url('/images/new/cube-bg-light.webp')]`
         } bg-repeat`}
         ref={ref}
       >
