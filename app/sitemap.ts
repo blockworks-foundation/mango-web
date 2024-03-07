@@ -125,11 +125,11 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(lastUpdate),
     },
     {
-      url: 'https://mango.markets/explore/blog',
+      url: 'https://mango.markets/blog',
       lastModified: new Date(lastUpdate),
     },
     {
-      url: 'https://mango.markets/explore/learn',
+      url: 'https://mango.markets/learn',
       lastModified: new Date(lastUpdate),
     },
   )
