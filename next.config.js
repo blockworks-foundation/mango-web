@@ -26,6 +26,12 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.mango.markets' }],
+        destination: 'https://mango.markets/:path*',
+        permanent: true,
+      },
+      {
         source: '/explore',
         destination: '/explore/tokens',
         // 308 redirect
