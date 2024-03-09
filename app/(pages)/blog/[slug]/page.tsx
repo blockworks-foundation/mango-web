@@ -6,6 +6,7 @@ import RichText from '../../../components/rich-text/RichText'
 import PostDetails from '../../../components/blog/PostDetails'
 import PageHeader from '../../../components/explore/PageHeader'
 import AppCallToAction from '../../../components/shared/AppCallToAction'
+import TableOfContents from '../../../components/shared/TableOfContents'
 
 interface BlogPostPageParams {
   slug: string
@@ -82,6 +83,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
     ctaDescription,
     ctaUrl,
     slug,
+    showTableOfContents,
   } = blogPost
 
   const ctaData = { ctaTitle, ctaDescription, ctaUrl }
@@ -96,14 +98,27 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
         backgroundImageUrl={headerImageUrl}
         showBack
       />
-      <div className="px-6 lg:px-20 pb-10 md:pb-16 max-w-3xl mx-auto">
-        <PostDetails post={blogPost} />
-        <RichText document={postContent} />
-        {ctaData?.ctaUrl ? (
-          <div className="pt-6">
-            <AppCallToAction data={ctaData} />
+      <div
+        className={`px-6 lg:px-20 pb-10 md:pb-16 ${
+          showTableOfContents ? '' : 'max-w-3xl'
+        } mx-auto`}
+      >
+        <div className="flex flex-col md:flex-row md:justify-center">
+          {showTableOfContents ? (
+            <div className="relative">
+              <TableOfContents content={postContent} />
+            </div>
+          ) : null}
+          <div className={showTableOfContents ? 'md:max-w-xl md:ml-10' : ''}>
+            <PostDetails post={blogPost} />
+            <RichText document={postContent} />
+            {ctaData?.ctaUrl ? (
+              <div className="pt-6">
+                <AppCallToAction data={ctaData} />
+              </div>
+            ) : null}
           </div>
-        ) : null}
+        </div>
       </div>
     </>
   )

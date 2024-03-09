@@ -25,6 +25,7 @@ export interface BlogPost {
   ctaDescription: string | undefined
   ctaUrl: string | undefined
   lastModified: string
+  showTableOfContents: boolean | undefined
 }
 
 // A function to transform a Contentful blog post
@@ -57,6 +58,7 @@ export function parseContentfulBlogPost(
     ctaDescription: blogPostEntry.fields.ctaDescription,
     ctaUrl: blogPostEntry.fields.ctaUrl,
     lastModified: blogPostEntry.sys.updatedAt,
+    showTableOfContents: blogPostEntry.fields.showTableOfContents,
   }
 }
 

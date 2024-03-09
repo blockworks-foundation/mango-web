@@ -1,4 +1,9 @@
 export type {
+  TypeAppAnnouncement,
+  TypeAppAnnouncementFields,
+  TypeAppAnnouncementSkeleton,
+} from './TypeAppAnnouncement'
+export type {
   TypeBlogPost,
   TypeBlogPostFields,
   TypeBlogPostSkeleton,

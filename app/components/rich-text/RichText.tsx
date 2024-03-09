@@ -29,6 +29,10 @@ function RichText({ document, currentPrice }: RichTextProps) {
     return null
   }
 
+  const headingTwos = document.content
+    .filter((node) => node.nodeType === 'heading-2')
+    .map((h: any) => h.content[0].value)
+
   const options = {
     renderMark: {
       [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
@@ -72,7 +76,10 @@ function RichText({ document, currentPrice }: RichTextProps) {
         }
       },
       [BLOCKS.EMBEDDED_ASSET]: (node) => renderImage(node),
-      [BLOCKS.HEADING_2]: (node, children) => <H2>{children}</H2>,
+      [BLOCKS.HEADING_2]: (node, children) => {
+        const headingIndex = headingTwos.findIndex((v) => v === children[0])
+        return <H2 id={`anchor-link-${headingIndex}`}>{children}</H2>
+      },
       [BLOCKS.HEADING_3]: (node, children) => <H3>{children}</H3>,
       [BLOCKS.HEADING_4]: (node, children) => <H4>{children}</H4>,
       [BLOCKS.UL_LIST]: (node, children) => <Ul>{children}</Ul>,
@@ -140,7 +147,11 @@ const Text = ({ children }) => (
   </p>
 )
 
-const H2 = ({ children }) => <h2 className="text-2xl">{children}</h2>
+const H2 = ({ children, id }) => (
+  <h2 className="text-2xl" id={id}>
+    {children}
+  </h2>
+)
 const H3 = ({ children }) => <h3 className="mb-2 text-xl">{children}</h3>
 const H4 = ({ children }) => <h3 className="mb-1.5 text-lg">{children}</h3>
 const Ul = ({ children }) => (

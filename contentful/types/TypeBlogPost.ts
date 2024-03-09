@@ -10,9 +10,17 @@ export interface TypeBlogPostFields {
   postTitle: EntryFieldTypes.Symbol
   slug: EntryFieldTypes.Symbol
   author?: EntryFieldTypes.Symbol
-  category: EntryFieldTypes.Symbol<'Markets' | 'Meme Coins' | 'Repost'>
+  category: EntryFieldTypes.Symbol<
+    | 'Announcements'
+    | 'DePIN'
+    | 'Interviews'
+    | 'Markets'
+    | 'Meme Coins'
+    | 'Repost'
+  >
   authorProfileImage?: EntryFieldTypes.AssetLink
   postDescription: EntryFieldTypes.Text
+  showTableOfContents?: EntryFieldTypes.Boolean
   postContent: EntryFieldTypes.RichText
   postHeroImage?: EntryFieldTypes.AssetLink
   seoTitle?: EntryFieldTypes.Symbol
