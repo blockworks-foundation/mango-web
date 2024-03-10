@@ -106,7 +106,7 @@ async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="flex flex-col md:flex-row md:justify-center">
           {showTableOfContents ? (
             <div className="relative">
-              <TableOfContents content={postContent} />
+              <TableOfContents content={postContent} postTitle={postTitle} />
             </div>
           ) : null}
           <div className={showTableOfContents ? 'md:max-w-xl md:ml-10' : ''}>

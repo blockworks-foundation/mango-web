@@ -4,14 +4,16 @@ import { useEffect, useState } from 'react'
 
 const TableOfContents = ({
   content,
+  postTitle,
 }: {
   content: RichTextDocument | undefined
+  postTitle: string
 }) => {
   if (!content) return null
   const headingTwos = content.content
     .filter((node) => node.nodeType === 'heading-2')
     .map((h: any) => h.content[0].value)
-  const [activeSection, setActiveSection] = useState<number | null>(null)
+  const [activeSection, setActiveSection] = useState<number>(0)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +39,8 @@ const TableOfContents = ({
       })
       if (active?.id) {
         setActiveSection(active.id)
+      } else if (window.pageYOffset === 0) {
+        setActiveSection(0)
       }
     }
 
@@ -44,8 +48,23 @@ const TableOfContents = ({
     return () => window.removeEventListener('scroll', handleScroll)
   }, [headingTwos])
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      //   behavior: 'smooth',
+    })
+  }
+
   return (
     <div className="mt-8 p-6 rounded-lg bg-th-bkg-2 space-y-2 h-max md:sticky md:top-8 md:w-64">
+      <button
+        className={`font-normal text-base focus:outline-none ${
+          activeSection === 0 ? 'text-th-active' : 'text-th-fgd-2'
+        }`}
+        onClick={scrollToTop}
+      >
+        {postTitle}
+      </button>
       {headingTwos.map((heading, index) => (
         <a
           className={`block ${
