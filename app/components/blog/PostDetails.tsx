@@ -1,9 +1,6 @@
-'use client'
-
-import { CalendarIcon, UserCircleIcon } from '@heroicons/react/20/solid'
+import { UserCircleIcon } from '@heroicons/react/20/solid'
 import { BlogPost } from '../../../contentful/blogPost'
 import ShareButtonPanel from './ShareButtonPanel'
-import dayjs from 'dayjs'
 import { LearnPost } from '../../../contentful/learnPost'
 
 const PostDetails = ({
@@ -16,7 +13,7 @@ const PostDetails = ({
   const {
     author,
     authorProfileImage,
-    createdAt,
+    // createdAt,
     postDescription,
     postTitle,
     seoTitle,
@@ -44,10 +41,10 @@ const PostDetails = ({
           )}
           <div>
             <p className="text-th-fgd-2 font-bold">{author}</p>
-            <div className="flex items-center space-x-1.5">
+            {/* <div className="flex items-center space-x-1.5">
               <CalendarIcon className="h-4 w-4 text-th-fgd-4" />
               <p>{dayjs(createdAt).format('DD MMM YYYY')}</p>
-            </div>
+            </div> */}
           </div>
         </div>
       ) : null}
