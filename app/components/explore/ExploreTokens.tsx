@@ -1,51 +1,9 @@
-'use client'
-
 import { TokenPageWithData } from '../../../contentful/tokenPage'
 import { MangoTokenData } from '../../types/mango'
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { ChangeEvent, useMemo, useState } from 'react'
-import Input from '../forms/Input'
 import TokenTable from './TokenTable'
-import TableViewToggle from './TableViewToggle'
 import { MAX_CONTENT_WIDTH } from '../../utils/constants'
 import PageHeader from './PageHeader'
-
-const generateSearchTerm = (item: TokenPageWithData, searchValue: string) => {
-  const normalizedSearchValue = searchValue.toLowerCase()
-  const nameValue = item.tokenName.toLowerCase()
-  const symbolValue = item.symbol.toLowerCase()
-
-  const isMatchingName = nameValue.includes(normalizedSearchValue)
-  const isMatchingSymbol = symbolValue.includes(normalizedSearchValue)
-  const matchingNamePercent = isMatchingName
-    ? normalizedSearchValue.length / item.tokenName.length
-    : 0
-  const matchingSymbolPercent = isMatchingSymbol
-    ? normalizedSearchValue.length / item.symbol.length
-    : 0
-
-  const matchingPercent = Math.max(matchingNamePercent, matchingSymbolPercent)
-
-  const matchingIdx =
-    matchingPercent === matchingNamePercent
-      ? nameValue.indexOf(normalizedSearchValue)
-      : symbolValue.indexOf(normalizedSearchValue)
-
-  return {
-    token: item,
-    matchingIdx,
-    matchingPercent,
-  }
-}
-
-const startSearch = (items: TokenPageWithData[], searchValue: string) => {
-  return items
-    .map((item) => generateSearchTerm(item, searchValue))
-    .filter((item) => item.matchingIdx >= 0)
-    .sort((i1, i2) => i1.matchingIdx - i2.matchingIdx)
-    .sort((i1, i2) => i2.matchingPercent - i1.matchingPercent)
-    .map((item) => item.token)
-}
+import TokensFilter from './TokensFilter'
 
 export const sortTokens = (tokens: TokenPageWithData[]) => {
   return tokens.sort((a, b) => {
@@ -71,17 +29,6 @@ const ExploreTokens = ({
   tokens: TokenPageWithData[]
   mangoTokensData: MangoTokenData[]
 }) => {
-  const [showTableView, setShowTableView] = useState(true)
-  const [searchString, setSearchString] = useState('')
-
-  const filteredTokens = useMemo(() => {
-    return searchString ? startSearch(tokens, searchString) : sortTokens(tokens)
-  }, [searchString, tokens])
-
-  const handleUpdateSearch = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchString(e.target.value)
-  }
-
   return (
     <>
       <PageHeader title="Explore listed tokens" />
@@ -91,25 +38,12 @@ const ExploreTokens = ({
         <div className="mb-4 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between">
           <p>{`${tokens?.length} tokens listed on Mango`}</p>
           <div className="flex space-x-2 mb-6 sm:mb-0">
-            <div className="relative w-full lg:mb-0 sm:w-44">
-              <Input
-                heightClass="h-10 pl-8"
-                type="text"
-                value={searchString}
-                onChange={handleUpdateSearch}
-              />
-              <MagnifyingGlassIcon className="absolute left-2 top-3 h-4 w-4 text-th-fgd-3" />
-            </div>
-            <TableViewToggle
-              showTableView={showTableView}
-              setShowTableView={setShowTableView}
-            />
+            <TokensFilter tokens={tokens} />
           </div>
         </div>
         <TokenTable
-          tokens={filteredTokens}
+          tokens={sortTokens(tokens)}
           mangoTokensData={mangoTokensData}
-          showTableView={showTableView}
         />
       </div>
     </>

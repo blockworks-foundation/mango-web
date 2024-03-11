@@ -1,10 +1,6 @@
-'use client'
-
-import { useMemo, useState } from 'react'
 import { TokenPageWithData } from '../../../contentful/tokenPage'
 import { MangoTokenData } from '../../types/mango'
 import CategorySwitcher from './CategorySwitcher'
-import TableViewToggle from './TableViewToggle'
 import TokenTable from './TokenTable'
 import { TokenCategoryPage } from '../../../contentful/tokenCategoryPage'
 import { sortTokens } from './ExploreTokens'
@@ -22,12 +18,12 @@ const Category = ({
   tokensForCategory: TokenPageWithData[]
   mangoTokensData: MangoTokenData[]
 }) => {
-  const [showTableView, setShowTableView] = useState(true)
+  // const [showTableView, setShowTableView] = useState(true)
   const { category, slug } = categoryPageData
 
-  const sortedTokens = useMemo(() => {
-    return sortTokens(tokensForCategory)
-  }, [tokensForCategory])
+  // const sortedTokens = useMemo(() => {
+  //   return sortTokens(tokensForCategory)
+  // }, [tokensForCategory])
 
   const backgroundImageUrl = `/images/categories/${slug}.webp`
 
@@ -42,21 +38,20 @@ const Category = ({
         className={`px-6 lg:px-20 ${MAX_CONTENT_WIDTH} mx-auto py-10 md:py-16`}
       >
         <div className="mb-4 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between">
-          <p>{`${sortedTokens?.length} ${category} ${
-            sortedTokens?.length === 1 ? 'token' : 'tokens'
+          <p>{`${tokensForCategory?.length} ${category} ${
+            tokensForCategory?.length === 1 ? 'token' : 'tokens'
           } listed on Mango`}</p>
           <div className="flex space-x-2 mb-6 sm:mb-0">
             <CategorySwitcher categories={categoryPages} />
-            <TableViewToggle
+            {/* <TableViewToggle
               showTableView={showTableView}
               setShowTableView={setShowTableView}
-            />
+            /> */}
           </div>
         </div>
         <TokenTable
-          tokens={sortedTokens}
+          tokens={sortTokens(tokensForCategory)}
           mangoTokensData={mangoTokensData}
-          showTableView={showTableView}
         />
       </div>
     </>

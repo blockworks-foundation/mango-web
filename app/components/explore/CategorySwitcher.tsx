@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useMemo, useState } from 'react'
 import Select from '../forms/Select'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'

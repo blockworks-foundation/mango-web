@@ -1,33 +1,20 @@
-'use client'
-
 import Image from 'next/image'
 import { CUSTOM_TOKEN_ICONS } from '../../utils/constants'
-import {
-  SortableColumnHeader,
-  Table,
-  Td,
-  Th,
-  TrBody,
-  TrHead,
-} from '../shared/TableElements'
-import TokenCard from './TokenCard'
+import { Table, Td, Th, TrBody, TrHead } from '../shared/TableElements'
 import {
   ChevronRightIcon,
   QuestionMarkCircleIcon,
 } from '@heroicons/react/20/solid'
 import { formatNumericValue, numberCompacter } from '../../utils/numbers'
 import SimpleAreaChart from '../shared/SimpleAreaChart'
-import { useSortableData } from '../../hooks/useSortableData'
 import { TokenPageWithData } from '../../../contentful/tokenPage'
 import { useCallback } from 'react'
 import { MangoTokenData } from '../../types/mango'
-import { useViewport } from '../../hooks/useViewport'
-import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime'
-import { useRouter } from 'next/navigation'
 import { BirdeyePriceHistoryData } from '../../types/birdeye'
-import SheenLoader from '../shared/SheenLoader'
 import NoResults from './NoResults'
 import Solana from '../icons/Solana'
+import Link from 'next/link'
+import TokenCard from './TokenCard'
 
 export type FormattedTableData = {
   change: number | undefined
@@ -46,22 +33,13 @@ export type FormattedTableData = {
   ethCircSupply: number | undefined
 }
 
-const goToTokenPage = (slug: string, router: AppRouterInstance) => {
-  router.push(`/explore/tokens/${slug}`)
-}
-
 const TokenTable = ({
   tokens,
   mangoTokensData,
-  showTableView,
 }: {
   tokens: TokenPageWithData[]
   mangoTokensData: MangoTokenData[]
-  showTableView: boolean
 }) => {
-  const router = useRouter()
-  const { isDesktop, width } = useViewport()
-
   const formattedTableData = useCallback(() => {
     const formatted: FormattedTableData[] = []
     for (const token of tokens) {
@@ -135,189 +113,141 @@ const TokenTable = ({
     return formatted
   }, [tokens, mangoTokensData])
 
-  const {
-    items: tableData,
-    requestSort,
-    sortConfig,
-  } = useSortableData(formattedTableData())
+  return formattedTableData().length ? (
+    <>
+      <div className="hidden lg:block">
+        <Table>
+          <thead>
+            <TrHead>
+              <Th className="text-left">Token</Th>
+              <Th className="text-right">Price</Th>
+              <Th className="text-right">24h chart</Th>
+              <Th className="text-right">24h Change</Th>
+              <Th className="text-right">24h Volume</Th>
+              <Th className="text-right">FDV</Th>
+              <Th />
+            </TrHead>
+          </thead>
+          <tbody>
+            {formattedTableData().map((token) => {
+              const {
+                tokenName,
+                change,
+                chartData,
+                price,
+                volume,
+                fdv,
+                mangoSymbol,
+                logoURI,
+                symbol,
+                slug,
+                ethCircSupply,
+                ethMint,
+              } = token
+              const hasCustomIcon = mangoSymbol
+                ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
+                : false
+              const logoPath = hasCustomIcon
+                ? `/icons/tokens/${mangoSymbol?.toLowerCase()}.svg`
+                : logoURI
 
-  return tableData.length ? (
-    !width ? (
-      <SheenLoader className="flex flex-1">
-        <div className={`h-96 w-full rounded-lg bg-th-bkg-2`} />
-      </SheenLoader>
-    ) : isDesktop && showTableView ? (
-      <Table>
-        <thead>
-          <TrHead>
-            <Th className="text-left">
-              <SortableColumnHeader
-                sortKey="tokenName"
-                sort={() => requestSort('tokenName')}
-                sortConfig={sortConfig}
-                title="Token"
-              />
-            </Th>
-            <Th>
-              <div className="flex justify-end">
-                <SortableColumnHeader
-                  sortKey="price"
-                  sort={() => requestSort('price')}
-                  sortConfig={sortConfig}
-                  title="Price"
-                />
-              </div>
-            </Th>
-            <Th className="text-right">24h chart</Th>
-            <Th>
-              <div className="flex justify-end">
-                <SortableColumnHeader
-                  sortKey="change"
-                  sort={() => requestSort('change')}
-                  sortConfig={sortConfig}
-                  title="24h Change"
-                />
-              </div>
-            </Th>
-            <Th>
-              <div className="flex justify-end">
-                <SortableColumnHeader
-                  sortKey="volume"
-                  sort={() => requestSort('volume')}
-                  sortConfig={sortConfig}
-                  title="24h Volume"
-                />
-              </div>
-            </Th>
-            <Th>
-              <div className="flex justify-end">
-                <SortableColumnHeader
-                  sortKey="fdv"
-                  sort={() => requestSort('fdv')}
-                  sortConfig={sortConfig}
-                  title="FDV"
-                />
-              </div>
-            </Th>
-            <Th />
-          </TrHead>
-        </thead>
-        <tbody>
-          {tableData.map((token) => {
-            const {
-              tokenName,
-              change,
-              chartData,
-              price,
-              volume,
-              fdv,
-              mangoSymbol,
-              logoURI,
-              symbol,
-              slug,
-              ethCircSupply,
-              ethMint,
-            } = token
-            const hasCustomIcon = mangoSymbol
-              ? CUSTOM_TOKEN_ICONS[mangoSymbol.toLowerCase()]
-              : false
-            const logoPath = hasCustomIcon
-              ? `/icons/tokens/${mangoSymbol?.toLowerCase()}.svg`
-              : logoURI
-
-            return (
-              <TrBody
-                key={slug}
-                className="default-transition md:hover:cursor-pointer md:hover:bg-th-bkg-2"
-                onClick={() => goToTokenPage(slug, router)}
-              >
-                <Td>
-                  <div className="flex items-center space-x-3">
-                    {logoPath ? (
-                      <Image src={logoPath} alt="Logo" height={32} width={32} />
-                    ) : (
-                      <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
-                    )}
-                    <div>
-                      <p>{tokenName}</p>
-                      <p className="text-sm text-th-fgd-4">
-                        {symbol || mangoSymbol}
-                      </p>
-                    </div>
-                  </div>
-                </Td>
-                <Td>
-                  <p className="text-right">
-                    {price ? `$${formatNumericValue(price)}` : '–'}
-                  </p>
-                </Td>
-                <Td>
-                  <div className="flex justify-end">
-                    {chartData && chartData.length ? (
-                      <div className="h-9 w-20">
-                        <SimpleAreaChart
-                          color={
-                            chartData[0].value <=
-                            chartData[chartData.length - 1].value
-                              ? 'var(--up)'
-                              : 'var(--down)'
-                          }
-                          data={chartData}
-                          name={tokenName}
-                          xKey="unixTime"
-                          yKey="value"
+              return (
+                <TrBody className="relative hover:bg-th-bkg-2" key={slug}>
+                  <Td>
+                    <div className="flex items-center space-x-3">
+                      {logoPath ? (
+                        <Image
+                          src={logoPath}
+                          alt="Logo"
+                          height={32}
+                          width={32}
                         />
+                      ) : (
+                        <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
+                      )}
+                      <div>
+                        <p>{tokenName}</p>
+                        <p className="text-sm text-th-fgd-4">
+                          {symbol || mangoSymbol}
+                        </p>
                       </div>
-                    ) : (
-                      <p className="text-th-fgd-4">Unavailable</p>
-                    )}
-                  </div>
-                </Td>
-                <Td>
-                  <p
-                    className={`text-right ${
-                      !change
-                        ? 'text-th-fgd-3'
-                        : change > 0
-                          ? 'text-th-up'
-                          : change < 0
-                            ? 'text-th-down'
-                            : 'text-th-fgd-3'
-                    }`}
-                  >
-                    {change ? `${change.toFixed(2)}%` : '–'}
-                  </p>
-                </Td>
-                <Td>
-                  <p className="text-right">
-                    {volume ? `$${numberCompacter.format(volume)}` : '–'}
-                  </p>
-                </Td>
-                <Td>
-                  <div className="flex items-center justify-end">
-                    {ethMint && !ethCircSupply ? (
-                      <Solana className="h-3.5 w-3.5 mr-1.5" />
-                    ) : null}
-                    <p>{fdv ? `$${numberCompacter.format(fdv)}` : '–'}</p>
-                  </div>
-                </Td>
-                <Td>
-                  <div className="flex items-center justify-end">
-                    <ChevronRightIcon className="h-5 w-5 text-th-fgd-4" />
-                  </div>
-                </Td>
-              </TrBody>
-            )
-          })}
-        </tbody>
-      </Table>
-    ) : (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {tableData.map((data) => (
+                    </div>
+                  </Td>
+                  <Td>
+                    <p className="text-right">
+                      {price ? `$${formatNumericValue(price)}` : '–'}
+                    </p>
+                  </Td>
+                  <Td>
+                    <div className="flex justify-end">
+                      {chartData && chartData.length ? (
+                        <div className="h-9 w-20">
+                          <SimpleAreaChart
+                            color={
+                              chartData[0].value <=
+                              chartData[chartData.length - 1].value
+                                ? 'var(--up)'
+                                : 'var(--down)'
+                            }
+                            data={chartData}
+                            name={tokenName}
+                            xKey="unixTime"
+                            yKey="value"
+                          />
+                        </div>
+                      ) : (
+                        <p className="text-th-fgd-4">Unavailable</p>
+                      )}
+                    </div>
+                  </Td>
+                  <Td>
+                    <p
+                      className={`text-right ${
+                        !change
+                          ? 'text-th-fgd-3'
+                          : change > 0
+                            ? 'text-th-up'
+                            : change < 0
+                              ? 'text-th-down'
+                              : 'text-th-fgd-3'
+                      }`}
+                    >
+                      {change ? `${change.toFixed(2)}%` : '–'}
+                    </p>
+                  </Td>
+                  <Td>
+                    <p className="text-right">
+                      {volume ? `$${numberCompacter.format(volume)}` : '–'}
+                    </p>
+                  </Td>
+                  <Td>
+                    <div className="flex items-center justify-end">
+                      {ethMint && !ethCircSupply ? (
+                        <Solana className="h-3.5 w-3.5 mr-1.5" />
+                      ) : null}
+                      <p>{fdv ? `$${numberCompacter.format(fdv)}` : '–'}</p>
+                    </div>
+                  </Td>
+                  <Td className="absolute w-full z-20 h-[69px] left-0 pt-0 pb-0 last:pr-2">
+                    <Link
+                      className="h-[69px] flex items-center justify-end"
+                      href={`/explore/tokens/${slug}`}
+                    >
+                      <ChevronRightIcon className="h-6 w-6 text-th-fgd-4" />
+                    </Link>
+                  </Td>
+                </TrBody>
+              )
+            })}
+          </tbody>
+        </Table>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:hidden">
+        {formattedTableData().map((data) => (
           <TokenCard token={data} key={data.slug} />
         ))}
       </div>
-    )
+    </>
   ) : (
     <NoResults message="No tokens found..." />
   )
