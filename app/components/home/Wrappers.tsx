@@ -46,8 +46,8 @@ export const BuildWrapper = forwardRef<HTMLDivElement, RefWrapperProps>(
       <div
         className={`${
           theme === 'Dark'
-            ? `bg-[url('/images/new/cube-bg.webp')]`
-            : `bg-[url('/images/new/cube-bg-light.webp')]`
+            ? `bg-[url('/images/new/cube-bg.png')]`
+            : `bg-[url('/images/new/cube-bg-light.png')]`
         } bg-repeat`}
         ref={ref}
       >
