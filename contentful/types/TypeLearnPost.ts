@@ -14,6 +14,7 @@ export interface TypeLearnPostFields {
     'Learn to Trade' | 'Listing on Mango' | 'Repost' | 'Spot Trading'
   >
   authorProfileImage?: EntryFieldTypes.AssetLink
+  showTableOfContents?: EntryFieldTypes.Boolean
   postDescription: EntryFieldTypes.Text
   postContent: EntryFieldTypes.RichText
   postHeroImage?: EntryFieldTypes.AssetLink
