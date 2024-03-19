@@ -280,3 +280,7 @@ table p {
 b {
   @apply text-th-fgd-1;
 }
+
+.rich-text-ol a {
+  @apply border-b border-th-active md:hover:border-transparent text-lg text-th-fgd-3;
+}

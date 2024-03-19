@@ -158,7 +158,10 @@ const Ul = ({ children }) => (
   <ul style={{ listStyle: 'outside disc', marginLeft: '16px' }}>{children}</ul>
 )
 const Ol = ({ children }) => (
-  <ol style={{ listStyle: 'outside number', marginLeft: '20px' }}>
+  <ol
+    className="rich-text-ol"
+    style={{ listStyle: 'outside number', marginLeft: '20px' }}
+  >
     {children}
   </ol>
 )
