@@ -32,7 +32,7 @@ const AppCallToAction = ({ data }: { data: CtaData }) => {
             </span>
           ) : null}
           {ctaDescription ? (
-            <span className="text-sm block text-th-fgd-2">
+            <span className="text-sm block text-th-fgd-2 font-body">
               {ctaDescription}
             </span>
           ) : null}
