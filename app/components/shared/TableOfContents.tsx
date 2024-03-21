@@ -56,11 +56,13 @@ const TableOfContents = ({
   }
 
   return (
-    <div className="mt-8 p-6 rounded-lg bg-th-bkg-2 space-y-2 h-max md:sticky md:top-8 md:w-64">
+    <div className="mt-8 p-6 rounded-lg bg-th-bkg-2 space-y-4 h-max md:sticky md:top-8 md:w-64 lg:w-72">
       <h4>Contents</h4>
       <button
         className={`font-normal text-base text-left focus:outline-none ${
-          activeSection === 0 ? 'text-th-active' : 'text-th-fgd-2'
+          activeSection === 0
+            ? 'text-th-active md:hover:text-th-active'
+            : 'text-th-fgd-4 md:hover:text-th-fgd-2'
         }`}
         onClick={scrollToTop}
       >
@@ -70,8 +72,8 @@ const TableOfContents = ({
         <a
           className={`block ${
             activeSection === index + 1
-              ? 'text-th-active'
-              : 'text-th-fgd-2 md:hover:text-th-fgd-4'
+              ? 'text-th-active md:hover:text-th-active'
+              : 'text-th-fgd-4 md:hover:text-th-fgd-2'
           }`}
           href={`#anchor-link-${index}`}
           key={heading}
