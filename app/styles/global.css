@@ -284,3 +284,7 @@ b {
 .rich-text-ol a {
   @apply border-b border-th-active md:hover:border-transparent text-lg text-th-fgd-3;
 }
+
+.rich-text-ul a {
+  @apply border-b border-th-active md:hover:border-transparent text-lg text-th-fgd-3;
+}

@@ -155,7 +155,12 @@ const H2 = ({ children, id }) => (
 const H3 = ({ children }) => <h3 className="mb-2 text-xl">{children}</h3>
 const H4 = ({ children }) => <h3 className="mb-1.5 text-lg">{children}</h3>
 const Ul = ({ children }) => (
-  <ul style={{ listStyle: 'outside disc', marginLeft: '16px' }}>{children}</ul>
+  <ul
+    className="rich-text-ul"
+    style={{ listStyle: 'outside disc', marginLeft: '16px' }}
+  >
+    {children}
+  </ul>
 )
 const Ol = ({ children }) => (
   <ol
