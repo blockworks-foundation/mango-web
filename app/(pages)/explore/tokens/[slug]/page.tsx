@@ -116,14 +116,16 @@ async function TokenPage({ params }: TokenPageProps) {
           tokenPageData={tokenPageData}
           mangoTokenData={mangoTokenData}
         />
-        <div className="mt-6">
-          <h2 className="mb-4 text-2xl">{`${tokenName} on Mango`}</h2>
-          <TokenMangoStats
-            mangoData={mangoTokenData}
-            mangoMarketsData={mangoMarketsData}
-            tokenPageData={tokenPageData}
-          />
-        </div>
+        {mangoTokenData ? (
+          <div className="mt-6">
+            <h2 className="mb-4 text-2xl">{`${tokenName} on Mango`}</h2>
+            <TokenMangoStats
+              mangoData={mangoTokenData}
+              mangoMarketsData={mangoMarketsData}
+              tokenPageData={tokenPageData}
+            />
+          </div>
+        ) : null}
       </div>
       {newsArticles?.length ? (
         <div className="border-t border-th-bkg-3 pt-10 md:pt-16">
