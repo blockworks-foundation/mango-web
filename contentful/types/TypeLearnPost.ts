@@ -11,7 +11,7 @@ export interface TypeLearnPostFields {
   slug: EntryFieldTypes.Symbol
   author?: EntryFieldTypes.Symbol
   category: EntryFieldTypes.Symbol<
-    'Learn to Trade' | 'Listing on Mango' | 'Repost' | 'Spot Trading'
+    'Guides' | 'Learn to Trade' | 'Listing on Mango' | 'Repost' | 'Spot Trading'
   >
   authorProfileImage?: EntryFieldTypes.AssetLink
   showTableOfContents?: EntryFieldTypes.Boolean

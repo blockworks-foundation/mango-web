@@ -9,10 +9,10 @@ import {
 } from 'react'
 import NavigationItemLink from './NavigationItemLink'
 import ButtonLink from '../shared/ButtonLink'
-import Twitter from '../icons/Twitter'
 import Discord from '../icons/Discord'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { XIcon } from '../icons/XIcon'
 
 const DesktopNavigation = () => {
   return (
@@ -26,8 +26,13 @@ const DesktopNavigation = () => {
           />
         </NavigationItemPanel>
       </NavigationItem>
-      <NavigationLink path="/blog" text="Blog" />
-      <NavigationLink path="/learn" text="Learn" />
+      <NavigationItem title="Insights">
+        <NavigationItemPanel>
+          {/* <NavigationItemLink path="/updates" title="Updates" /> */}
+          <NavigationItemLink path="/blog" title="Blog" />
+          <NavigationItemLink path="/learn" title="Learn" />
+        </NavigationItemPanel>
+      </NavigationItem>
       <NavigationItem title="Developers">
         <NavigationItemPanel>
           <NavigationItemLink
@@ -66,15 +71,7 @@ const DesktopNavigation = () => {
           />
         </NavigationItemPanel>
       </NavigationItem>
-      <div className="flex items-center space-x-6">
-        <a
-          className="text-th-fgd-4 hover:text-th-fgd-1"
-          href="https://twitter.com/mangomarkets"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Twitter className="h-5 w-5" />
-        </a>
+      <div className="flex items-center space-x-4">
         <a
           className="text-th-fgd-4 hover:text-th-fgd-1"
           href="https://discord.gg/2uwjsBc5yw"
@@ -82,6 +79,14 @@ const DesktopNavigation = () => {
           rel="noopener noreferrer"
         >
           <Discord className="h-5 w-5" />
+        </a>
+        <a
+          className="text-th-fgd-4 hover:text-th-fgd-1"
+          href="https://x.com/mangomarkets"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <XIcon className="h-5 w-5" />
         </a>
       </div>
       <ButtonLink linkText="Launch App" path="https://app.mango.markets" />

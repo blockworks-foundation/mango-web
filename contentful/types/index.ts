@@ -29,6 +29,11 @@ export type {
   TypeLearnPostSkeleton,
 } from './TypeLearnPost'
 export type {
+  TypeMangoUpdate,
+  TypeMangoUpdateFields,
+  TypeMangoUpdateSkeleton,
+} from './TypeMangoUpdate'
+export type {
   TypeNewsArticle,
   TypeNewsArticleFields,
   TypeNewsArticleSkeleton,

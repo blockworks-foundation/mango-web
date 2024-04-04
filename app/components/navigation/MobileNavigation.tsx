@@ -3,9 +3,6 @@ import { IconButton } from '../shared/Button'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Transition } from '@headlessui/react'
 import NavigationItemLink from './NavigationItemLink'
-import Twitter from '../icons/Twitter'
-import Discord from '../icons/Discord'
-import { NavigationLink } from './DesktopNavigation'
 
 const MobileNavigation = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -60,11 +57,23 @@ const MenuPanel = ({
               title="Token categories"
             />
           </div>
-          <div className="px-4">
-            <NavigationLink path="/blog" text="Blog" />
-          </div>
-          <div className="px-4">
-            <NavigationLink path="/learn" text="Learn" />
+          <div>
+            <h4 className="px-4 mb-2">Insights</h4>
+            {/* <NavigationItemLink
+              path="/updates"
+              onClick={closeOnClick}
+              title="Updates"
+            /> */}
+            <NavigationItemLink
+              path="/blog"
+              onClick={closeOnClick}
+              title="Blog"
+            />
+            <NavigationItemLink
+              path="/learn"
+              onClick={closeOnClick}
+              title="Learn"
+            />
           </div>
           <div>
             <h4 className="px-4 mb-2">Developers</h4>
@@ -106,23 +115,6 @@ const MenuPanel = ({
               onClick={closeOnClick}
               isExternal
               title="Vote"
-            />
-          </div>
-          <div>
-            <h4 className="px-4 mb-2">Social</h4>
-            <NavigationItemLink
-              icon={<Twitter className="h-4 w-4 mr-2" />}
-              path="https://twitter.com/mangomarkets"
-              onClick={closeOnClick}
-              isExternal
-              title="Twitter"
-            />
-            <NavigationItemLink
-              icon={<Discord className="h-4 w-4 mr-2" />}
-              path="https://discord.gg/2uwjsBc5yw"
-              onClick={closeOnClick}
-              isExternal
-              title="Discord"
             />
           </div>
         </div>

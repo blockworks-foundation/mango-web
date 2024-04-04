@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
-import Twitter from '../icons/Twitter'
 import Discord from '../icons/Discord'
+import { XIcon } from '../icons/XIcon'
+import { Github } from '../icons/Github'
 
 const Footer = () => {
   return (
@@ -42,6 +43,11 @@ const Footer = () => {
               <FooterLink path="/explore/tokens" title="Listed tokens" />
               <FooterLink path="/explore/categories" title="Token categories" />
             </FooterLinkColumn>
+            <FooterLinkColumn title="Insights">
+              {/* <FooterLink path="/updates" title="Updates" /> */}
+              <FooterLink path="/blog" title="Blog" />
+              <FooterLink path="/learn" title="Learn" />
+            </FooterLinkColumn>
             <FooterLinkColumn title="Developers">
               <FooterLink
                 path="https://docs.mango.markets"
@@ -76,7 +82,7 @@ const Footer = () => {
                 title="Vote"
               />
             </FooterLinkColumn>
-            <FooterLinkColumn title="Social">
+            {/* <FooterLinkColumn title="Social">
               <FooterLink
                 icon={<Twitter className="h-4 w-4 mr-2" />}
                 path="https://twitter.com/mangomarkets"
@@ -89,13 +95,39 @@ const Footer = () => {
                 isExternal
                 title="Discord"
               />
-            </FooterLinkColumn>
+            </FooterLinkColumn> */}
           </div>
         </div>
-        <div className="border-t border-th-bkg-3 mt-3 lg:mt-12 pt-6">
-          <p className="flex justify-center font-mono text-xs opacity-60">
+        <div className="flex justify-between border-t border-th-bkg-3 mt-3 lg:mt-12 pt-6">
+          <p className="font-mono text-xs opacity-60">
             © Mango DAO 2023. All rights reserved.
           </p>
+          <div className="flex items-center space-x-4">
+            <a
+              className="text-th-fgd-4 hover:text-th-fgd-1"
+              href="https://discord.gg/2uwjsBc5yw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Discord className="h-5 w-5" />
+            </a>
+            <a
+              className="text-th-fgd-4 hover:text-th-fgd-1"
+              href="https://x.com/mangomarkets"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <XIcon className="h-5 w-5" />
+            </a>
+            <a
+              className="text-th-fgd-4 hover:text-th-fgd-1"
+              href="https://github.com/blockworks-foundation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
