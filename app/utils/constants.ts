@@ -53,6 +53,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   wen: true,
   wif: true,
   $wif: true,
+  zeus: true,
 }
 
 export const DAILY_SECONDS = 86400
