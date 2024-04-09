@@ -82,7 +82,7 @@ const TokensFilter = ({ tokens }: { tokens: TokenPageWithData[] }) => {
       />
       <MagnifyingGlassIcon className="absolute left-2 top-3 h-4 w-4 text-th-fgd-3" />
       {filteredTokens.length && searchString.length > 1 ? (
-        <div className="absolute z-20 top-12 bg-th-bkg-2 rounded-lg p-4 space-y-3 w-full">
+        <div className="absolute z-30 top-12 bg-th-bkg-2 rounded-lg p-4 space-y-3 w-full">
           {filteredTokens.map((token) => (
             <Link
               className="flex items-center justify-between text-th-fgd-2 md:hover:text-th-active"
