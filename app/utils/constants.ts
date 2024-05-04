@@ -26,6 +26,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   jto: true,
   jup: true,
   kin: true,
+  kmno: true,
   ldo: true,
   meta: true,
   mnde: true,
