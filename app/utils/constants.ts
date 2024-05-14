@@ -11,6 +11,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   corn: true,
   crown: true,
   dai: true,
+  drift: true,
   dual: true,
   elon: true,
   eth: true,
