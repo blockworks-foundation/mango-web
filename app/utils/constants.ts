@@ -23,6 +23,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   gofx: true,
   guac: true,
   hnt: true,
+  hubsol: true,
   inf: true,
   jitosol: true,
   jlp: true,
