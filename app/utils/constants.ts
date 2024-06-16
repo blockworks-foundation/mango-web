@@ -8,6 +8,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   bsol: true,
   btc: true,
   chai: true,
+  compasssol: true,
   corn: true,
   crown: true,
   dai: true,
