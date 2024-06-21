@@ -2,6 +2,7 @@ export const MANGO_DATA_API_URL = 'https://api.mngo.cloud/data/v4'
 
 export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   all: true,
+  billy: true,
   blze: true,
   bome: true,
   bonk: true,
