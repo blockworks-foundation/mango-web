@@ -66,6 +66,7 @@ export const CUSTOM_TOKEN_ICONS: { [key: string]: boolean } = {
   usdc: true,
   usdh: true,
   usdt: true,
+  usdy: true,
   w: true,
   wbtcpo: true,
   'wbtc (portal)': true,
