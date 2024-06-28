@@ -27,6 +27,8 @@ import {
 import { formatNumericValue, numberCompacter } from '../../utils/numbers'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
+import PythLogo from '../icons/PythLogo'
+import SwitchboardLogo from '../icons/SwitchboardLogo'
 dayjs.extend(relativeTime)
 
 const Markets = () => {
@@ -148,6 +150,13 @@ const Markets = () => {
         <GainersLosers tokens={gainers} isGainers loading={loadingTokens} />
         <GainersLosers tokens={losers} loading={loadingTokens} />
       </div>
+      <div className="flex justify-center pt-12">
+        <div className="flex items-center">
+          <PythLogo className="h-9 w-auto text-th-fgd-3" />
+          <div className="h-9 w-[1px] bg-th-bkg-4 ml-8 mr-6" />
+          <SwitchboardLogo className="h-9 w-auto text-th-fgd-3" />
+        </div>
+      </div>
     </SectionWrapper>
   )
 }
@@ -217,13 +226,7 @@ const RecentlyListed = ({
             >
               <div className="flex items-center space-x-3 pl-3">
                 {logoPath ? (
-                  <Image
-                    className="rounded-full"
-                    src={logoPath}
-                    alt="Logo"
-                    height={32}
-                    width={32}
-                  />
+                  <Image src={logoPath} alt="Logo" height={32} width={32} />
                 ) : (
                   <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
                 )}
@@ -318,13 +321,7 @@ const GainersLosers = ({
             >
               <div className="flex items-center space-x-3 pl-3">
                 {logoPath ? (
-                  <Image
-                    className="rounded-full"
-                    src={logoPath}
-                    alt="Logo"
-                    height={32}
-                    width={32}
-                  />
+                  <Image src={logoPath} alt="Logo" height={32} width={32} />
                 ) : (
                   <QuestionMarkCircleIcon className="h-8 w-8 text-th-fgd-4" />
                 )}

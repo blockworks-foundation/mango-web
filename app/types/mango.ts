@@ -51,4 +51,5 @@ export type MangoTokenData = {
   borrow_rate: number
   deposit_rate: number
   price_history: PriceHistoryData[]
+  listing_time: string
 }

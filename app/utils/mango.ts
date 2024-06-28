@@ -1,4 +1,4 @@
-import { FormattedMarketData, MarketData } from '../types/mango'
+import { FormattedMarketData, MangoTokenData, MarketData } from '../types/mango'
 import { MANGO_DATA_API_URL } from './constants'
 
 export const fetchAppStatsData = async () => {
@@ -24,7 +24,12 @@ export const fetchMangoTokensData = async () => {
     })
     const data = await response.json()
     if (data && data?.length) {
-      return data
+      const uniqueTokens: MangoTokenData[] = Array.from(
+        data
+          .reduce((map, token) => map.set(token.symbol, token), new Map())
+          .values(),
+      )
+      return uniqueTokens
     } else return []
   } catch (e) {
     console.error('Failed to fetch mango token data', e)
