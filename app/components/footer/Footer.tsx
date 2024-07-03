@@ -28,7 +28,7 @@ const Footer = () => {
               Transparency and integrity are core values in our mission to
               create products that empower individual financial freedom.
             </p>
-            <div className="space-y-2">
+            <div className="flex flex-col items-center lg:items-start space-y-2">
               <a
                 className="text-th-fgd-2 text-sm whitespace-nowrap md:hover:text-th-fgd-4 block"
                 href="/mango-brand-assets.zip"
