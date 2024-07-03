@@ -178,7 +178,7 @@ h2 {
 }
 
 h3 {
-  @apply text-xl lg:text-2xl;
+  @apply text-lg lg:text-xl;
 }
 
 h4 {
