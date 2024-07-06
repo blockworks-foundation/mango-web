@@ -10,6 +10,7 @@ import IconWithText from './shared/IconWithText'
 import { Disclosure } from '@headlessui/react'
 import { FunctionComponent } from 'react'
 import Image from 'next/image'
+import useMango from '../hooks/useMango'
 
 const HERO_P_CLASSES = 'text-lg md:text-2xl text-th-fgd-1 text-center max-w-3xl'
 const H2_CLASSES = 'font-display text-center mb-6 text-4xl'
@@ -31,6 +32,9 @@ const FAQS = [
 
 const MangoSolPage = () => {
   // const [days, hours, minutes, seconds] = useCountdown(Date.now())
+  const { group } = useMango()
+
+  console.log(group)
 
   // const showCountdown =
   //   !isNaN(days) && !isNaN(hours) && !isNaN(minutes) && !isNaN(seconds)

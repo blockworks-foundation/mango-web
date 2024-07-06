@@ -26,9 +26,13 @@
     ]
   },
   "dependencies": {
+    "@blockworks-foundation/mango-v4": "^0.31.4",
     "@contentful/rich-text-react-renderer": "^15.19.0",
+    "@coral-xyz/anchor": "^0.30.1",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/web3.js": "^1.94.0",
     "@tanstack/react-query": "^5.8.4",
     "@tippyjs/react": "^4.2.6",
     "bn.js": "^5.2.1",
