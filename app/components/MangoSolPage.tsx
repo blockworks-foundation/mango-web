@@ -8,33 +8,91 @@ import {
 import SectionWrapper from './shared/SectionWrapper'
 import IconWithText from './shared/IconWithText'
 import { Disclosure } from '@headlessui/react'
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useEffect, useMemo } from 'react'
 import Image from 'next/image'
-import useMango from '../hooks/useMango'
+import store from '../store/store'
+import { floorToDecimal, numberCompacter } from '../utils/numbers'
+import { getStakePoolAccount } from '@solana/spl-stake-pool'
+import { Connection, PublicKey } from '@solana/web3.js'
+import { useQuery } from '@tanstack/react-query'
 
 const HERO_P_CLASSES = 'text-lg md:text-2xl text-th-fgd-1 text-center max-w-3xl'
 const H2_CLASSES = 'font-display text-center mb-6 text-4xl'
 
+const actions = store.getState().actions
+
 const FAQS = [
   {
     q: 'What is liquid staking?',
-    a: 'Liquid staking allows you to participate in staking without locking up your tokens. When you mint or buy a liquid staking token (LST) like mangoSOL it is representative of the underlying staked SOL. The price of the LST increases vs the underlying asset (SOL) as the staking rewards increase the value.',
+    a: 'Liquid staking allows you to participate in staking without locking up your tokens. When you mint or buy a liquid staking token (LST) like mangoSOL it is representative of the underlying staked SOL. The price of the LST increases vs the underlying asset (SOL) as the staking rewards contribute to the value.',
   },
   {
     q: 'What is mangoSOL?',
-    a: "mangoSOL is Mango's liquid staking token. The underlying SOL is staked to Mango's validator.",
+    a: "mangoSOL is Mango's liquid staking token. The underlying SOL is staked to Mango's validator. Holding mangoSOL has exclusive benefits on Mango helps to support the project.",
   },
   {
     q: 'Where does the yield come from?',
+    a: 'Staking rewards. Validators earn SOL rewards for validating transactions. These rewards are passed on and accrue to the value of mangoSOL. This increases its value vs SOL over time.',
+  },
+  {
+    q: 'Is mangoSOL safe?',
+    a: 'mangoSOL was created via Sanctum. Sanctum LSTs use a version of the SPL stake pool program 4. Multiple security firms have audited this program. So far it controls $1B+ of value for more than two years, with no exploits. Of course, just because a contract has not been exploited in the past does not mean it will never ever be exploited in the future.',
+  },
+  {
+    q: 'How can I get mangoSOL?',
     a: "mangoSOL is Mango's liquid staking token. The underlying SOL is staked to Mango's validator.",
   },
 ]
 
+const MANGOSOL_STAKE_POOL = '9jWbABPXfc75wseAbLEkBCb1NRaX9EbJZJTDQnbtpzc1'
+const MANGOSOL_DECIMALS = 9
+const fetchStakePool = async (conn: Connection) => {
+  try {
+    const stakePool = await getStakePoolAccount(
+      conn,
+      new PublicKey(MANGOSOL_STAKE_POOL),
+    )
+    const nativeSupply = stakePool?.account?.data?.poolTokenSupply
+    if (nativeSupply) {
+      return nativeSupply.toNumber() / Math.pow(10, MANGOSOL_DECIMALS)
+    }
+
+    return 0
+  } catch (e) {
+    console.log('failed to fetch mangoSOL stake pool', e)
+    return 0
+  }
+}
+
 const MangoSolPage = () => {
   // const [days, hours, minutes, seconds] = useCountdown(Date.now())
-  const { group } = useMango()
+  const group = store((s) => s.group)
+  const connection = store((s) => s.connection)
+  const { data: mangoSolSupply } = useQuery({
+    queryKey: ['coingecko-data'],
+    queryFn: () => fetchStakePool(connection),
+    enabled: !!connection,
+  })
 
-  console.log(group)
+  useEffect(() => {
+    actions.fetchGroup()
+  }, [])
+
+  const leverage = useMemo(() => {
+    if (!group) return 0
+    const bank = group.banksMapByName.get('mangoSOL')?.[0]
+    if (!bank) return 0
+    const weight = bank.scaledInitAssetWeight(bank.price)
+    const leverageFactor = 1 / (1 - weight.toNumber())
+    return floorToDecimal(leverageFactor, 1).toNumber()
+  }, [group])
+
+  const solPrice = useMemo(() => {
+    if (!group) return 0
+    const bank = group.banksMapByName.get('SOL')?.[0]
+    if (!bank) return 0
+    return bank?.uiPrice
+  }, [group])
 
   // const showCountdown =
   //   !isNaN(days) && !isNaN(hours) && !isNaN(minutes) && !isNaN(seconds)
@@ -90,15 +148,20 @@ const MangoSolPage = () => {
         <div className="grid grid-cols-3 gap-6 py-12">
           <div>
             <p>APY</p>
-            <GradientText>9.21%</GradientText>
+            <GradientText>?</GradientText>
           </div>
           <div>
             <p>Total stake</p>
-            <GradientText>109.4k</GradientText>
+            <GradientText>
+              $
+              {mangoSolSupply && solPrice
+                ? numberCompacter.format(mangoSolSupply * solPrice)
+                : '–'}
+            </GradientText>
           </div>
           <div>
             <p>Leverage</p>
-            <GradientText>3.44k</GradientText>
+            <GradientText>{leverage.toFixed(0)}x</GradientText>
           </div>
         </div>
       </SectionWrapper>
