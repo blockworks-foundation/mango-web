@@ -46,6 +46,7 @@ const FAQS = [
 
 const MANGOSOL_STAKE_POOL = '9jWbABPXfc75wseAbLEkBCb1NRaX9EbJZJTDQnbtpzc1'
 const MANGOSOL_DECIMALS = 9
+const MANGOSOL_MINT = 'MangmsBgFqJhW4cLUR9LxfVgMboY1xAoP8UUBiWwwuY'
 const fetchStakePool = async (conn: Connection) => {
   try {
     const stakePool = await getStakePoolAccount(
@@ -64,14 +65,31 @@ const fetchStakePool = async (conn: Connection) => {
   }
 }
 
+async function fetchApyToSol() {
+  const resp = await fetch(
+    'https://api.mngo.cloud/data/boost/stats/monthly-sol-price',
+  )
+  const json: { data: { mint: string; monthly_price_change: number }[] } =
+    await resp.json()
+  const tokenToApy: { [key: string]: number } = {}
+  const record = json.data.find((x) => x.mint === MANGOSOL_MINT)
+  const apy = (1 + (record?.monthly_price_change || 0)) ** 12 - 1
+  tokenToApy['mangosol'] = apy
+  return tokenToApy?.mangosol ? tokenToApy.mangosol * 100 : 0
+}
+
 const MangoSolPage = () => {
   // const [days, hours, minutes, seconds] = useCountdown(Date.now())
   const group = store((s) => s.group)
   const connection = store((s) => s.connection)
   const { data: mangoSolSupply } = useQuery({
-    queryKey: ['coingecko-data'],
+    queryKey: ['mangosol-supply-data'],
     queryFn: () => fetchStakePool(connection),
     enabled: !!connection,
+  })
+  const { data: mangoSolApy } = useQuery({
+    queryKey: ['mangosol-apy'],
+    queryFn: () => fetchApyToSol(),
   })
 
   useEffect(() => {
@@ -148,20 +166,23 @@ const MangoSolPage = () => {
         <div className="grid grid-cols-3 gap-6 py-12">
           <div>
             <p>APY</p>
-            <GradientText>?</GradientText>
+            <GradientText>
+              {mangoSolApy ? `${mangoSolApy.toFixed(1)}%` : '–'}
+            </GradientText>
           </div>
           <div>
             <p>Total stake</p>
             <GradientText>
-              $
               {mangoSolSupply && solPrice
-                ? numberCompacter.format(mangoSolSupply * solPrice)
+                ? `$${numberCompacter.format(mangoSolSupply * solPrice)}`
                 : '–'}
             </GradientText>
           </div>
           <div>
             <p>Leverage</p>
-            <GradientText>{leverage.toFixed(0)}x</GradientText>
+            <GradientText>
+              {leverage ? `${leverage.toFixed(0)}x` : '–'}
+            </GradientText>
           </div>
         </div>
       </SectionWrapper>
