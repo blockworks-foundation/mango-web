@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import MangoSolPage from '../../components/MangoSolPage'
+import MangoSolPage from '../../components/mangosol/MangoSolPage'
 
 const metaTitle = 'Mango Markets | Safer. Smarter. Faster.'
 const metaDescription =
