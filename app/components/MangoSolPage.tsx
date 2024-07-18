@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     q: 'How can I get mangoSOL?',
-    a: "mangoSOL is Mango's liquid staking token. The underlying SOL is staked to Mango's validator.",
+    a: 'You can get mangoSOL on Mango, Jupiter or Sanctum.',
   },
 ]
 
@@ -118,7 +118,7 @@ const MangoSolPage = () => {
     <>
       <SectionWrapper
         noPaddingY
-        className="bg-th-bkg-2 bg-cover bg-no-repeat border-t border-th-bkg-2 py-20"
+        className="bg-[url('/images/mangosol-bg.webp')] bg-center bg-cover bg-no-repeat border-t border-th-bkg-2 py-20"
       >
         <div className="flex flex-col items-center">
           <Image
@@ -139,7 +139,7 @@ const MangoSolPage = () => {
           <LandingPageButton
             className="mt-8 mx-auto lg:mx-0"
             linkText="Get mangoSOL"
-            path="https://app.mango.markets"
+            path="https://app.mango.markets/swap?in=SOL&out=mangoSOL"
           />
           {/* {showCountdown ? (
             <>
@@ -190,7 +190,7 @@ const MangoSolPage = () => {
         <h2 className={H2_CLASSES}>Yield.</h2>
         <p className={`${HERO_P_CLASSES}`}>
           All block rewards from the Mango validator are passed on to mangoSOL
-          holders to maximize your yield.
+          holders to maximize yield.
         </p>
       </SectionWrapper>
       <SectionWrapper>
@@ -239,8 +239,9 @@ const MangoSolPage = () => {
       <SectionWrapper className="bg-th-bkg-2 flex flex-col items-center">
         <h2 className={H2_CLASSES}>Rewards.</h2>
         <p className={`${HERO_P_CLASSES}`}>
-          Holding at least 1 mangoSOL in your Mango Account earns you automatic
-          eligibility to participate in Mango&apos;s weekly rewards program.
+          Holding at least one mangoSOL in your Mango Account earns you
+          automatic eligibility to participate in Mango&apos;s weekly rewards
+          program.
         </p>
       </SectionWrapper>
       <SectionWrapper className="border-b border-th-bkg-2">
@@ -271,6 +272,11 @@ const MangoSolPage = () => {
               </Disclosure>
             ))}
           </div>
+          <LandingPageButton
+            className="mt-8 mx-auto"
+            linkText="Get mangoSOL"
+            path="https://app.mango.markets/swap?in=SOL&out=mangoSOL"
+          />
         </div>
       </SectionWrapper>
     </>
