@@ -49,6 +49,7 @@ const Footer = () => {
             <FooterLinkColumn title="Explore">
               <FooterLink path="/explore/tokens" title="Listed tokens" />
               <FooterLink path="/explore/categories" title="Token categories" />
+              <FooterLink path="/mangosol" title="mangoSOL" />
             </FooterLinkColumn>
             <FooterLinkColumn title="Insights">
               {/* <FooterLink path="/updates" title="Updates" /> */}

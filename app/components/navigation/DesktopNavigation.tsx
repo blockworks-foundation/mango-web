@@ -24,6 +24,7 @@ const DesktopNavigation = () => {
             path="/explore/categories"
             title="Token categories"
           />
+          <NavigationItemLink path="/mangosol" title="mangoSOL" />
         </NavigationItemPanel>
       </NavigationItem>
       <NavigationItem title="Insights">

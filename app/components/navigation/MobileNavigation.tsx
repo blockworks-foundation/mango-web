@@ -56,6 +56,11 @@ const MenuPanel = ({
               onClick={closeOnClick}
               title="Token categories"
             />
+            <NavigationItemLink
+              path="/mangosol"
+              onClick={closeOnClick}
+              title="mangoSOL"
+            />
           </div>
           <div>
             <h4 className="px-4 mb-2">Insights</h4>
