@@ -6,12 +6,7 @@ import {
 } from '../../../contentful/tokenPage'
 import ButtonLink from '../shared/ButtonLink'
 import SectionWrapper from '../shared/SectionWrapper'
-import HeroStat from './HeroStat'
-import {
-  fetchAppStatsData,
-  fetchMangoMarketData,
-  fetchMangoTokensData,
-} from '../../utils/mango'
+import { fetchMangoTokensData } from '../../utils/mango'
 import { useMemo } from 'react'
 import SheenLoader from '../shared/SheenLoader'
 import { CUSTOM_TOKEN_ICONS } from '../../utils/constants'
@@ -24,7 +19,7 @@ import {
   QuestionMarkCircleIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/20/solid'
-import { formatNumericValue, numberCompacter } from '../../utils/numbers'
+import { formatNumericValue } from '../../utils/numbers'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import PythLogo from '../icons/PythLogo'
@@ -32,15 +27,15 @@ import SwitchboardLogo from '../icons/SwitchboardLogo'
 dayjs.extend(relativeTime)
 
 const Markets = () => {
-  const { data: markets, isLoading: loadingMarkets } = useQuery({
-    queryKey: ['markets-data'],
-    queryFn: () => fetchMangoMarketData(),
-  })
+  // const { data: markets, isLoading: loadingMarkets } = useQuery({
+  //   queryKey: ['markets-data'],
+  //   queryFn: () => fetchMangoMarketData(),
+  // })
 
-  const { data: appStatsData, isLoading: loadingAppStatsData } = useQuery({
-    queryKey: ['app-stats-data'],
-    queryFn: () => fetchAppStatsData(),
-  })
+  // const { data: appStatsData, isLoading: loadingAppStatsData } = useQuery({
+  //   queryKey: ['app-stats-data'],
+  //   queryFn: () => fetchAppStatsData(),
+  // })
 
   const { data: tokens, isLoading: loadingTokens } = useQuery({
     queryKey: ['cms-tokens-data'],
@@ -48,8 +43,8 @@ const Markets = () => {
     staleTime: 1000 * 60 * 10,
   })
 
-  const numberOfMarkets =
-    (markets?.spot.length || 0) + (markets?.perp.length || 0)
+  // const numberOfMarkets =
+  //   (markets?.spot.length || 0) + (markets?.perp.length || 0)
 
   const [gainers, losers] = useMemo(() => {
     if (!tokens?.length) return [[], []]
@@ -99,32 +94,32 @@ const Markets = () => {
     return [gainers, losers.reverse()]
   }, [tokens])
 
-  const formattedAppStatsData = useMemo(() => {
-    if (!appStatsData || !Object.keys(appStatsData).length)
-      return { totalVol24h: 0, totalTrades24h: 0, weeklyActiveTraders: 0 }
-    // volume
-    const spotVol24h = appStatsData?.openbook_volume_usd_24h || 0
-    const perpVol24h = appStatsData?.perp_volume_usd_24h || 0
-    const swapVol24h = appStatsData?.swap_volume_usd_24h || 0
-    const totalVol24h = spotVol24h + perpVol24h + swapVol24h
+  // const formattedAppStatsData = useMemo(() => {
+  //   if (!appStatsData || !Object.keys(appStatsData).length)
+  //     return { totalVol24h: 0, totalTrades24h: 0, weeklyActiveTraders: 0 }
+  //   // volume
+  //   const spotVol24h = appStatsData?.openbook_volume_usd_24h || 0
+  //   const perpVol24h = appStatsData?.perp_volume_usd_24h || 0
+  //   const swapVol24h = appStatsData?.swap_volume_usd_24h || 0
+  //   const totalVol24h = spotVol24h + perpVol24h + swapVol24h
 
-    // number of trades
-    const spotTrades24h = appStatsData?.num_openbook_fills_24h || 0
-    const perpTrades24h = appStatsData?.num_perp_fills_24h || 0
-    const swapTrades24h = appStatsData?.num_swaps_24h || 0
-    const totalTrades24h = spotTrades24h + perpTrades24h + swapTrades24h
+  //   // number of trades
+  //   const spotTrades24h = appStatsData?.num_openbook_fills_24h || 0
+  //   const perpTrades24h = appStatsData?.num_perp_fills_24h || 0
+  //   const swapTrades24h = appStatsData?.num_swaps_24h || 0
+  //   const totalTrades24h = spotTrades24h + perpTrades24h + swapTrades24h
 
-    const weeklyActiveTraders = appStatsData?.weekly_active_mango_accounts || 0
+  //   const weeklyActiveTraders = appStatsData?.weekly_active_mango_accounts || 0
 
-    return { totalVol24h, totalTrades24h, weeklyActiveTraders }
-  }, [appStatsData])
+  //   return { totalVol24h, totalTrades24h, weeklyActiveTraders }
+  // }, [appStatsData])
   return (
     <SectionWrapper className="pb-12 md:pb-24 lg:pb-32" noPaddingY>
       <div className="flex items-center justify-between mb-8 md:mb-10">
         <h2>Markets</h2>
         <ButtonLink path="/explore/tokens" linkText="Explore" size="large" />
       </div>
-      <div className="grid grid-cols-3 gap-4 lg:gap-6">
+      {/* <div className="grid grid-cols-3 gap-4 lg:gap-6">
         <HeroStat
           title="Markets"
           value={numberOfMarkets.toString()}
@@ -144,7 +139,7 @@ const Markets = () => {
           value={formatNumericValue(formattedAppStatsData.totalTrades24h)}
           loading={loadingAppStatsData}
         />
-      </div>
+      </div> */}
       <div className="grid grid-cols-3 gap-4 lg:gap-6 mt-4 lg:mt-6">
         <RecentlyListed tokens={tokens} />
         <GainersLosers tokens={gainers} isGainers loading={loadingTokens} />
