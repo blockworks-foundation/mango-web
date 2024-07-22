@@ -1,9 +1,8 @@
 import { Metadata } from 'next'
 import MangoSolPage from '../../components/mangosol/MangoSolPage'
 
-const metaTitle = 'Mango Markets | Safer. Smarter. Faster.'
-const metaDescription =
-  'A magical DeFi experience powered by flashloans. Cross-margin trading with multi-collateral and groudbreaking safety features.'
+const metaTitle = 'mangoSOL | Mango Markets'
+const metaDescription = 'mangoSOL is staked SOL fit for a king (of fruits).'
 
 export const metadata: Metadata = {
   title: metaTitle,
@@ -11,13 +10,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: metaTitle,
     description: metaDescription,
-    url: 'https://mango.markets',
+    url: 'https://mango.markets/mangosol',
     siteName: 'Mango Markets',
     images: [
       {
-        url: 'https://mango.markets/twitter-card.png',
+        url: 'https://mango.markets/images/mangosol-share-image.png',
         width: 1200,
-        height: 600,
+        height: 675,
         alt: metaTitle,
       },
     ],
